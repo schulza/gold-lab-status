@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-09-30 23:11:50 UTC",
+"generated_at": "2026-09-30 23:17:46 UTC",
 "host": {
-"cpu_pct": 6.6,
-"gpu_pct": 0,
-"free_gb": 221.1,
-"uptime": "up 1 day,  7:57, 2 users, load averages: 2.94 7.81 13.25",
-"load": "{ 2.94 7.81 13.25 }"
+"cpu_pct": 76.3,
+"gpu_pct": 82,
+"free_gb": 140.0,
+"uptime": "up 1 day,  8:03, 2 users, load averages: 28.01 17.25 15.55",
+"load": "{ 28.01 17.25 15.55 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-01T01:05:43",
-"it": 15610,
+"ts": "2026-10-01T01:17:06",
+"it": 15800,
 "bar": "1h",
 "batch": 410,
 "passed": 0,
-"bench": 6.73,
-"pbo": 0.39,
+"bench": 6.72,
+"pbo": 0.07,
 "best_family": "gated",
-"best_pm": 1.84,
-"best_params": "{'base': 'sliced_flow_decay', 'base_params': {'k': 3.01, 'mult': 3, 'n': 54, 'rel': 0.5, 'sign': -1}, 'mode': 'htf_against', 'htf': '1h', 'sma_n': 63, 'g2_mode'",
+"best_pm": 6.37,
+"best_params": "{'base': 'trapped_fader_squeeze', 'base_params': {'confirm': 2, 'hold': 828, 'lookback': 726, 'pen': 0.797, 'sign': -1, 'trap': 8}, 'mode': 'htf_against', 'htf'",
 "mix": "gat410",
 "queue_s": 410.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-01T01:04:35",
-"it": 11800,
+"ts": "2026-10-01T01:17:45",
+"it": 11873,
 "bar": "30s",
 "batch": 31,
 "passed": 0,
-"bench": 6.73,
-"pbo": 0.21,
+"bench": 6.72,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 0.82,
-"best_params": "{'base': 'fx_fix_passthrough', 'base_params': {'hold': 106, 'k': 2.62, 'pre': 54, 'sign': -1}, 'mode': 'tick_above', 'vol_window': 60, 'vol_pct': 0.7}",
+"best_pm": 1.28,
+"best_params": "{'base': 'fix_flow_reversal', 'base_params': {'fix': 'pm', 'hold': 109, 'k': 1.4, 'pre': 407, 'sign': -1}, 'mode': 'htf_against', 'htf': '4h', 'sma_n': 200, 'g2",
 "mix": "gat31",
 "queue_s": 31.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 23215207,
-"last_5m": 31,
-"last_1h": 443140,
-"last_24h": 12798089,
-"distinct_ideas": 19773656,
-"dsr_bar": 6.73,
+"total": 23272381,
+"last_5m": 60914,
+"last_1h": 448412,
+"last_24h": 12810988,
+"distinct_ideas": 19832548,
+"dsr_bar": 6.72,
 "sharpe_std": 1.24,
 "families": [
 {
 "family": "gated",
-"n": 14148349,
+"n": 14203837,
 "pos_rate": 0.306,
 "best_pm": 2.97,
 "best_dsr": 0.611,
@@ -264,6 +264,15 @@
 "since": "2026-09-30"
 },
 {
+"family": "option_cut_pin",
+"n": 1686,
+"pos_rate": 0.044,
+"best_pm": 0.28,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-09-30"
+},
+{
 "family": "grind_vs_burst",
 "n": 1648,
 "pos_rate": 0.18,
@@ -412,35 +421,35 @@
 {
 "family": "atr_impulse",
 "bar": "15m",
-"n": 4929,
+"n": 4898,
 "best_pm": 0.61,
 "pos_rate": 0.007
 },
 {
 "family": "atr_impulse",
 "bar": "1h",
-"n": 17267,
+"n": 17013,
 "best_pm": 1.03,
 "pos_rate": 0.132
 },
 {
 "family": "atr_impulse",
 "bar": "1m",
-"n": 120568,
+"n": 119443,
 "best_pm": -0.03,
 "pos_rate": 0.0
 },
 {
 "family": "atr_impulse",
 "bar": "30s",
-"n": 19929,
+"n": 19805,
 "best_pm": -0.26,
 "pos_rate": 0
 },
 {
 "family": "atr_impulse",
 "bar": "5m",
-"n": 33768,
+"n": 33398,
 "best_pm": 0.55,
 "pos_rate": 0.001
 },
@@ -559,37 +568,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 2081326,
+"n": 2085020,
 "best_pm": 1.45,
-"pos_rate": 0.289
+"pos_rate": 0.29
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 5319146,
+"n": 5338432,
 "best_pm": 2.85,
-"pos_rate": 0.368
+"pos_rate": 0.369
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 593202,
+"n": 597471,
 "best_pm": 1.56,
-"pos_rate": 0.142
+"pos_rate": 0.144
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 123611,
+"n": 124074,
 "best_pm": 1.53,
-"pos_rate": 0.134
+"pos_rate": 0.135
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 1257216,
+"n": 1260975,
 "best_pm": 1.6,
-"pos_rate": 0.275
+"pos_rate": 0.276
 },
 {
 "family": "grind_vs_burst",
@@ -758,6 +767,20 @@
 "n": 195,
 "best_pm": 0.19,
 "pos_rate": 0.518
+},
+{
+"family": "option_cut_pin",
+"bar": "1m",
+"n": 838,
+"best_pm": 0.28,
+"pos_rate": 0.044
+},
+{
+"family": "option_cut_pin",
+"bar": "5m",
+"n": 848,
+"best_pm": 0.28,
+"pos_rate": 0.045
 },
 {
 "family": "payer_portfolio",
@@ -1070,21 +1093,21 @@
 {
 "family": "wf_ridge",
 "bar": "15m",
-"n": 534104,
+"n": 530859,
 "best_pm": 1.25,
 "pos_rate": 0.019
 },
 {
 "family": "wf_ridge",
 "bar": "1h",
-"n": 1765464,
+"n": 1751891,
 "best_pm": 1.36,
 "pos_rate": 0.027
 },
 {
 "family": "wf_ridge",
 "bar": "5m",
-"n": 171012,
+"n": 169507,
 "best_pm": 1.03,
 "pos_rate": 0.016
 },
@@ -2595,6 +2618,17 @@
 "dsr_bar": 6.73,
 "best_pm_1h": 2.49,
 "distinct": 19773656
+},
+{
+"t": 1790810266.011136,
+"total": 23272381,
+"per_min": 12183.0,
+"cpu": 76.3,
+"gpu": 82,
+"free_gb": 140.0,
+"dsr_bar": 6.72,
+"best_pm_1h": 2.49,
+"distinct": 19832548
 }
 ],
 "data": {
