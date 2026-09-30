@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-09-30 14:16:40 UTC",
+"generated_at": "2026-09-30 14:22:36 UTC",
 "host": {
-"cpu_pct": 41.1,
-"gpu_pct": 89,
-"free_gb": 157.0,
-"uptime": "up 23:02, 2 users, load averages: 17.95 18.27 17.70",
-"load": "{ 17.95 18.27 17.70 }"
+"cpu_pct": 86.4,
+"gpu_pct": 92,
+"free_gb": 154.6,
+"uptime": "up 23:08, 2 users, load averages: 25.43 18.48 17.71",
+"load": "{ 25.43 18.48 17.71 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-09-30T16:15:58",
-"it": 6400,
+"ts": "2026-09-30T16:22:33",
+"it": 6538,
 "bar": "1h",
 "batch": 410,
 "passed": 0,
-"bench": 7.05,
-"pbo": 0.04,
+"bench": 7.04,
+"pbo": 0.07,
 "best_family": "gated",
-"best_pm": 2.56,
-"best_params": "{'base': 'trapped_fader_squeeze', 'base_params': {'confirm': 2, 'hold': 781, 'lookback': 726, 'pen': 0.784, 'sign': -1, 'trap': 7}, 'mode': 'spread_below', 'vol",
+"best_pm": 2.85,
+"best_params": "{'base': 'liquidity_hole_fade', 'base_params': {'hold': 13, 'k': 0.0117, 'sign': 1, 'span': 24, 'src': 'spread', 'window': 1370, 'z_in': 2.23}, 'mode': 'vol_abo",
 "mix": "gat410",
-"queue_s": 400.0
+"queue_s": 397.0
 },
 "events": []
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-09-30T16:16:39",
-"it": 4340,
-"bar": "5m",
-"batch": 313,
+"ts": "2026-09-30T16:22:34",
+"it": 4452,
+"bar": "15m",
+"batch": 410,
 "passed": 0,
-"bench": 7.05,
-"pbo": 0.18,
+"bench": 7.04,
+"pbo": 0.14,
 "best_family": "gated",
-"best_pm": 7.45,
-"best_params": "{'base': 'liquidity_hole_fade', 'base_params': {'hold': 12, 'k': 0.934, 'sign': 1, 'span': 24, 'src': 'spread', 'window': 1370, 'z_in': 2.23}, 'mode': 'htf_with",
-"mix": "gat313",
-"queue_s": 302.0
+"best_pm": 4.22,
+"best_params": "{'base': 'release_overshoot', 'base_params': {'ev': 'fomc', 'hold': 388, 'k': 2.02, 'sign': 1, 'win': 7}, 'mode': 'tick_above', 'vol_window': 524, 'vol_pct': 0.",
+"mix": "gat410",
+"queue_s": 397.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 19140512,
-"last_5m": 69098,
-"last_1h": 533318,
-"last_24h": 16661904,
-"distinct_ideas": 15699985,
+"total": 19193648,
+"last_5m": 52448,
+"last_1h": 525261,
+"last_24h": 16563859,
+"distinct_ideas": 15755541,
 "dsr_bar": 7.05,
 "sharpe_std": 1.31,
 "families": [
 {
 "family": "gated",
-"n": 10095189,
+"n": 10148324,
 "pos_rate": 0.268,
 "best_pm": 10.29,
 "best_dsr": 0.681,
@@ -220,8 +220,8 @@
 },
 {
 "family": "portfolio",
-"n": 5,
-"pos_rate": 0.8,
+"n": 6,
+"pos_rate": 0.833,
 "best_pm": 1.73,
 "best_dsr": 0.0,
 "passed": 0,
@@ -374,37 +374,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 2337057,
+"n": 2313490,
 "best_pm": 4.19,
-"pos_rate": 0.234
+"pos_rate": 0.23
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 5241285,
+"n": 5266297,
 "best_pm": 6.2,
-"pos_rate": 0.29
+"pos_rate": 0.291
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 917174,
+"n": 916872,
 "best_pm": 4.37,
 "pos_rate": 0.197
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 68393,
+"n": 69540,
 "best_pm": 1.1,
-"pos_rate": 0.04
+"pos_rate": 0.041
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 1431060,
+"n": 1404196,
 "best_pm": 10.29,
-"pos_rate": 0.285
+"pos_rate": 0.278
 },
 {
 "family": "ladder_revert",
@@ -479,21 +479,21 @@
 {
 "family": "mean_reversion_band",
 "bar": "15m",
-"n": 225051,
+"n": 198283,
 "best_pm": 1.56,
-"pos_rate": 0.064
+"pos_rate": 0.063
 },
 {
 "family": "mean_reversion_band",
 "bar": "1h",
-"n": 190974,
+"n": 184490,
 "best_pm": 1.28,
 "pos_rate": 0.146
 },
 {
 "family": "mean_reversion_band",
 "bar": "1m",
-"n": 192695,
+"n": 180719,
 "best_pm": 2.63,
 "pos_rate": 0.03
 },
@@ -507,28 +507,28 @@
 {
 "family": "mean_reversion_band",
 "bar": "5m",
-"n": 223803,
+"n": 195833,
 "best_pm": 2.21,
-"pos_rate": 0.035
+"pos_rate": 0.034
 },
 {
 "family": "momentum_breakout",
 "bar": "15m",
-"n": 46,
+"n": 15,
 "best_pm": 0,
 "pos_rate": 1.0
 },
 {
 "family": "momentum_breakout",
 "bar": "1h",
-"n": 351,
+"n": 281,
 "best_pm": 0,
-"pos_rate": 0.792
+"pos_rate": 0.786
 },
 {
 "family": "momentum_breakout",
 "bar": "1m",
-"n": 383,
+"n": 245,
 "best_pm": 1.9,
 "pos_rate": 1.0
 },
@@ -542,7 +542,7 @@
 {
 "family": "momentum_breakout",
 "bar": "5m",
-"n": 46,
+"n": 12,
 "best_pm": 0,
 "pos_rate": 1.0
 },
@@ -1268,6 +1268,17 @@
 "dsr_bar": 7.05,
 "best_pm_1h": 1.8,
 "distinct": 15699985
+},
+{
+"t": 1790778156.3993669,
+"total": 19193648,
+"per_min": 10490.0,
+"cpu": 86.4,
+"gpu": 92,
+"free_gb": 154.6,
+"dsr_bar": 7.05,
+"best_pm_1h": 1.8,
+"distinct": 15755541
 }
 ],
 "data": {
