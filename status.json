@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-09-30 14:22:36 UTC",
+"generated_at": "2026-09-30 14:28:27 UTC",
 "host": {
-"cpu_pct": 86.4,
-"gpu_pct": 92,
-"free_gb": 154.6,
-"uptime": "up 23:08, 2 users, load averages: 25.43 18.48 17.71",
-"load": "{ 25.43 18.48 17.71 }"
+"cpu_pct": 41.1,
+"gpu_pct": 0,
+"free_gb": 166.6,
+"uptime": "up 23:14, 2 users, load averages: 16.33 19.90 19.00",
+"load": "{ 16.33 19.90 19.00 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-09-30T16:22:33",
-"it": 6538,
+"ts": "2026-09-30T16:28:26",
+"it": 6622,
 "bar": "1h",
 "batch": 410,
 "passed": 0,
 "bench": 7.04,
-"pbo": 0.07,
+"pbo": 0.14,
 "best_family": "gated",
-"best_pm": 2.85,
-"best_params": "{'base': 'liquidity_hole_fade', 'base_params': {'hold': 13, 'k': 0.0117, 'sign': 1, 'span': 24, 'src': 'spread', 'window': 1370, 'z_in': 2.23}, 'mode': 'vol_abo",
+"best_pm": 2.54,
+"best_params": "{'base': 'trapped_fader_squeeze', 'base_params': {'confirm': 2, 'hold': 317, 'lookback': 1124, 'pen': 0.743, 'sign': -1, 'trap': 5}, 'mode': 'session', 'start_h",
 "mix": "gat410",
-"queue_s": 397.0
+"queue_s": 401.0
 },
 "events": []
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-09-30T16:22:34",
-"it": 4452,
-"bar": "15m",
-"batch": 410,
+"ts": "2026-09-30T16:27:14",
+"it": 4600,
+"bar": "30s",
+"batch": 31,
 "passed": 0,
 "bench": 7.04,
-"pbo": 0.14,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 4.22,
-"best_params": "{'base': 'release_overshoot', 'base_params': {'ev': 'fomc', 'hold': 388, 'k': 2.02, 'sign': 1, 'win': 7}, 'mode': 'tick_above', 'vol_window': 524, 'vol_pct': 0.",
-"mix": "gat410",
-"queue_s": 397.0
+"best_pm": 0.65,
+"best_params": "{'base': 'fix_flow_reversal', 'base_params': {'fix': 'pm', 'hold': 83, 'k': 1.85, 'pre': 433, 'sign': -1}, 'mode': 'vol_above', 'vol_window': 296, 'vol_pct': 0.",
+"mix": "gat31",
+"queue_s": 29.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 19193648,
-"last_5m": 52448,
-"last_1h": 525261,
-"last_24h": 16563859,
-"distinct_ideas": 15755541,
-"dsr_bar": 7.05,
+"total": 19258179,
+"last_5m": 51168,
+"last_1h": 573340,
+"last_24h": 16001838,
+"distinct_ideas": 15817651,
+"dsr_bar": 7.04,
 "sharpe_std": 1.31,
 "families": [
 {
 "family": "gated",
-"n": 10148324,
+"n": 10212855,
 "pos_rate": 0.268,
 "best_pm": 10.29,
 "best_dsr": 0.681,
@@ -374,37 +374,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 2313490,
+"n": 2246782,
 "best_pm": 4.19,
-"pos_rate": 0.23
+"pos_rate": 0.222
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 5266297,
+"n": 5191108,
 "best_pm": 6.2,
-"pos_rate": 0.291
+"pos_rate": 0.292
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 916872,
+"n": 829704,
 "best_pm": 4.37,
-"pos_rate": 0.197
+"pos_rate": 0.193
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 69540,
-"best_pm": 1.1,
-"pos_rate": 0.041
+"n": 71183,
+"best_pm": 1.17,
+"pos_rate": 0.044
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 1404196,
+"n": 1327769,
 "best_pm": 10.29,
-"pos_rate": 0.278
+"pos_rate": 0.259
 },
 {
 "family": "ladder_revert",
@@ -479,23 +479,23 @@
 {
 "family": "mean_reversion_band",
 "bar": "15m",
-"n": 198283,
+"n": 138393,
 "best_pm": 1.56,
-"pos_rate": 0.063
+"pos_rate": 0.064
 },
 {
 "family": "mean_reversion_band",
 "bar": "1h",
-"n": 184490,
+"n": 113330,
 "best_pm": 1.28,
-"pos_rate": 0.146
+"pos_rate": 0.143
 },
 {
 "family": "mean_reversion_band",
 "bar": "1m",
-"n": 180719,
+"n": 115074,
 "best_pm": 2.63,
-"pos_rate": 0.03
+"pos_rate": 0.031
 },
 {
 "family": "mean_reversion_band",
@@ -507,28 +507,28 @@
 {
 "family": "mean_reversion_band",
 "bar": "5m",
-"n": 195833,
+"n": 134875,
 "best_pm": 2.21,
-"pos_rate": 0.034
+"pos_rate": 0.035
 },
 {
 "family": "momentum_breakout",
 "bar": "15m",
-"n": 15,
+"n": 5,
 "best_pm": 0,
 "pos_rate": 1.0
 },
 {
 "family": "momentum_breakout",
 "bar": "1h",
-"n": 281,
+"n": 10,
 "best_pm": 0,
-"pos_rate": 0.786
+"pos_rate": 0.3
 },
 {
 "family": "momentum_breakout",
 "bar": "1m",
-"n": 245,
+"n": 14,
 "best_pm": 1.9,
 "pos_rate": 1.0
 },
@@ -542,7 +542,7 @@
 {
 "family": "momentum_breakout",
 "bar": "5m",
-"n": 12,
+"n": 5,
 "best_pm": 0,
 "pos_rate": 1.0
 },
@@ -1279,6 +1279,17 @@
 "dsr_bar": 7.05,
 "best_pm_1h": 1.8,
 "distinct": 15755541
+},
+{
+"t": 1790778507.237313,
+"total": 19258179,
+"per_min": 10234.0,
+"cpu": 41.1,
+"gpu": 0,
+"free_gb": 166.6,
+"dsr_bar": 7.04,
+"best_pm_1h": 1.8,
+"distinct": 15817651
 }
 ],
 "data": {
