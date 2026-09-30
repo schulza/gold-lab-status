@@ -1,28 +1,28 @@
 {
-"generated_at": "2026-09-30 10:20:58 UTC",
+"generated_at": "2026-09-30 10:26:32 UTC",
 "host": {
-"cpu_pct": 57.3,
-"free_gb": 95.6,
-"uptime": "up 19:06, 4 users, load averages: 32.58 36.60 37.96",
-"load": "{ 32.58 36.60 37.96 }"
+"cpu_pct": 65.8,
+"free_gb": 112.9,
+"uptime": "up 19:12, 4 users, load averages: 32.95 35.29 37.05",
+"load": "{ 32.95 35.29 37.05 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-09-30T12:20:32",
-"it": 4200,
+"ts": "2026-09-30T12:26:21",
+"it": 4222,
 "bar": "1h",
 "batch": 4096,
 "passed": 0,
 "bench": 7.14,
-"pbo": 0.11,
+"pbo": 0.18,
 "best_family": "gated",
-"best_pm": 5.1,
-"best_params": "{'base': 'round_level_break', 'base_params': {'fresh': 433, 'hold': 5, 'offset': 0.37, 'sign': -1, 'step': 50}, 'mode': 'vol_above', 'vol_window': 58, 'vol_pct'",
-"mix": "atr7/gat2457/mea1/rou8/swe583/wf_1040",
-"queue_s": 2322.0
+"best_pm": 2.87,
+"best_params": "{'base': 'sweep_reversal', 'base_params': {'hold': 107, 'lookback': 21, 'pen': 1.5, 'reclaim': 1, 'sign': -1}, 'mode': 'vol_above', 'vol_window': 646, 'vol_pct'",
+"mix": "atr9/gat2381/liq894/rou4/swe242/wf_566",
+"queue_s": 1313.0
 },
 "events": []
 },
@@ -30,35 +30,35 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-09-30T12:20:02",
-"it": 3112,
-"bar": "5m",
-"batch": 1563,
+"ts": "2026-09-30T12:24:45",
+"it": 3117,
+"bar": "30s",
+"batch": 156,
 "passed": 0,
 "bench": 7.14,
-"pbo": 0.04,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 2.76,
-"best_params": "{'base': 'round_level_break', 'base_params': {'fresh': 1120, 'hold': 27, 'offset': 0.37, 'sign': -1, 'step': 50}, 'mode': 'vol_above', 'vol_window': 33, 'vol_pc",
-"mix": "atr40/gat933/rou177/swe202/wf_211",
-"queue_s": 868.0
+"best_pm": 0.16,
+"best_params": "{'base': 'round_level_break', 'base_params': {'fresh': 1223, 'hold': 21, 'offset': 0.37, 'sign': -1, 'step': 50}, 'mode': 'htf_against', 'htf': '1h', 'sma_n': 1",
+"mix": "atr11/gat93/mea10/rou16/swe26",
+"queue_s": 81.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 16368235,
-"last_5m": 43581,
-"last_1h": 627575,
-"last_24h": 16372643,
-"distinct_ideas": 12929840,
+"total": 16426790,
+"last_5m": 54147,
+"last_1h": 633421,
+"last_24h": 16431198,
+"distinct_ideas": 12988083,
 "dsr_bar": 7.14,
 "sharpe_std": 1.33,
 "families": [
 {
 "family": "gated",
-"n": 8293908,
-"pos_rate": 0.24,
+"n": 8328992,
+"pos_rate": 0.241,
 "best_pm": 10.29,
 "best_dsr": 0.681,
 "passed": 0,
@@ -66,7 +66,7 @@
 },
 {
 "family": "mean_reversion_band",
-"n": 3199484,
+"n": 3199503,
 "pos_rate": 0.299,
 "best_pm": 2.63,
 "best_dsr": 0.124,
@@ -75,7 +75,7 @@
 },
 {
 "family": "wf_ridge",
-"n": 3138333,
+"n": 3151558,
 "pos_rate": 0.025,
 "best_pm": 6.24,
 "best_dsr": 0.0,
@@ -84,7 +84,7 @@
 },
 {
 "family": "atr_impulse",
-"n": 1618316,
+"n": 1618792,
 "pos_rate": 0.037,
 "best_pm": 1.52,
 "best_dsr": 0.0,
@@ -93,8 +93,8 @@
 },
 {
 "family": "sweep_reversal",
-"n": 71199,
-"pos_rate": 0.064,
+"n": 79599,
+"pos_rate": 0.063,
 "best_pm": 1.07,
 "best_dsr": 0.0,
 "passed": 0,
@@ -102,8 +102,8 @@
 },
 {
 "family": "round_level_break",
-"n": 30156,
-"pos_rate": 0.207,
+"n": 31506,
+"pos_rate": 0.205,
 "best_pm": 1.06,
 "best_dsr": 0.0,
 "passed": 0,
@@ -129,7 +129,7 @@
 },
 {
 "family": "open_drive",
-"n": 1372,
+"n": 1373,
 "pos_rate": 0.001,
 "best_pm": 0.1,
 "best_dsr": 0.0,
@@ -217,6 +217,13 @@
 },
 "generated": [
 {
+"ts": "2026-09-30T10:22",
+"name": "liquidity_hole_fade",
+"status": "accepted",
+"rationale": "PAYER = forced takers (stop-outs, margin liquidations, news algos) who hit a thin book while market makers have pulled quotes: they pay impact that is a liquidity premium, not information, and the displacement decays once quotes are replenished.\nEntry only on the bar liquidity RE",
+"note": "{\"name\": \"liquidity_hole_fade\", \"grid\": 128, \"sec_per_param\": 0.0, \"active_frac\": 0.2643625}"
+},
+{
 "ts": "2026-09-30T09:47",
 "name": "sweep_reversal",
 "status": "accepted",
@@ -259,6 +266,13 @@
 "per_min": 8716.0,
 "cpu": 57.3,
 "free_gb": 95.6
+},
+{
+"t": 1790763992.750051,
+"total": 16426790,
+"per_min": 10829.0,
+"cpu": 65.8,
+"free_gb": 112.9
 }
 ],
 "data": {
