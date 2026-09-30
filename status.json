@@ -1,28 +1,28 @@
 {
-"generated_at": "2026-09-30 11:42:32 UTC",
+"generated_at": "2026-09-30 11:48:25 UTC",
 "host": {
-"cpu_pct": 97.7,
-"free_gb": 137.1,
-"uptime": "up 20:28, 4 users, load averages: 36.91 30.23 30.95",
-"load": "{ 36.91 30.23 30.95 }"
+"cpu_pct": 49.2,
+"free_gb": 112.2,
+"uptime": "up 20:34, 4 users, load averages: 28.54 30.22 30.82",
+"load": "{ 28.54 30.22 30.82 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-09-30T13:42:29",
-"it": 4628,
+"ts": "2026-09-30T13:48:13",
+"it": 4662,
 "bar": "1h",
 "batch": 2048,
 "passed": 0,
 "bench": 7.1,
 "pbo": 0.14,
 "best_family": "gated",
-"best_pm": 2.6,
-"best_params": "{'base': 'mean_reversion_band', 'base_params': {'lookback': 30, 'z_entry': 4.44, 'z_exit': 1.48}, 'mode': 'tick_above', 'vol_window': 93, 'vol_pct': 0.446, 'g2_",
-"mix": "atr2/gat1229/liq371/swe90/wf_356",
-"queue_s": 1179.0
+"best_pm": 5.1,
+"best_params": "{'base': 'round_level_break', 'base_params': {'fresh': 433, 'hold': 5, 'offset': 0.37, 'sign': -1, 'step': 50}, 'mode': 'vol_above', 'vol_window': 87, 'vol_pct'",
+"mix": "gat2047/liq1",
+"queue_s": 1354.0
 },
 "events": []
 },
@@ -30,34 +30,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-09-30T13:41:09",
-"it": 3260,
-"bar": "5m",
-"batch": 1563,
+"ts": "2026-09-30T13:48:20",
+"it": 3270,
+"bar": "15m",
+"batch": 2048,
 "passed": 0,
 "bench": 7.1,
-"pbo": 0.07,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 8.13,
-"best_params": "{'base': 'liquidity_hole_fade', 'base_params': {'hold': 13, 'k': 0.0649, 'sign': 1, 'span': 24, 'src': 'spread', 'window': 1370, 'z_in': 2.23}, 'mode': 'session",
-"mix": "atr26/fix147/gat938/liq125/rou68/swe121/wf_138",
-"queue_s": 677.0
+"best_pm": 5.2,
+"best_params": "{'base': 'round_level_break', 'base_params': {'fresh': 898, 'hold': 21, 'offset': 0.37, 'sign': -1, 'step': 50}, 'mode': 'vol_below', 'vol_window': 30, 'vol_pct",
+"mix": "atr3/fix234/gat1224/liq209/rou14/swe131/wf_233",
+"queue_s": 1161.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 17550490,
-"last_5m": 50624,
-"last_1h": 850792,
-"last_24h": 17559930,
-"distinct_ideas": 14111555,
+"total": 17607428,
+"last_5m": 47013,
+"last_1h": 815349,
+"last_24h": 17613399,
+"distinct_ideas": 14170026,
 "dsr_bar": 7.1,
 "sharpe_std": 1.32,
 "families": [
 {
 "family": "gated",
-"n": 8995992,
+"n": 9029642,
 "pos_rate": 0.256,
 "best_pm": 10.29,
 "best_dsr": 0.681,
@@ -66,7 +66,7 @@
 },
 {
 "family": "wf_ridge",
-"n": 3309249,
+"n": 3317062,
 "pos_rate": 0.025,
 "best_pm": 6.24,
 "best_dsr": 0.0,
@@ -75,7 +75,7 @@
 },
 {
 "family": "mean_reversion_band",
-"n": 3199544,
+"n": 3199569,
 "pos_rate": 0.299,
 "best_pm": 2.63,
 "best_dsr": 0.124,
@@ -84,7 +84,7 @@
 },
 {
 "family": "atr_impulse",
-"n": 1625762,
+"n": 1626222,
 "pos_rate": 0.037,
 "best_pm": 1.52,
 "best_dsr": 0.0,
@@ -93,7 +93,7 @@
 },
 {
 "family": "liquidity_hole_fade",
-"n": 196210,
+"n": 205659,
 "pos_rate": 0.227,
 "best_pm": 1.45,
 "best_dsr": 0.0,
@@ -102,7 +102,7 @@
 },
 {
 "family": "sweep_reversal",
-"n": 159655,
+"n": 162633,
 "pos_rate": 0.047,
 "best_pm": 1.07,
 "best_dsr": 0.0,
@@ -111,8 +111,8 @@
 },
 {
 "family": "round_level_break",
-"n": 45039,
-"pos_rate": 0.191,
+"n": 45433,
+"pos_rate": 0.19,
 "best_pm": 1.06,
 "best_dsr": 0.0,
 "passed": 0,
@@ -128,6 +128,15 @@
 "since": "2026-09-29"
 },
 {
+"family": "fix_flow_reversal",
+"n": 4367,
+"pos_rate": 0.221,
+"best_pm": 1.09,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-09-30"
+},
+{
 "family": "session_bias",
 "n": 3002,
 "pos_rate": 0.333,
@@ -135,15 +144,6 @@
 "best_dsr": 0.276,
 "passed": 0,
 "since": "2026-09-29"
-},
-{
-"family": "fix_flow_reversal",
-"n": 2198,
-"pos_rate": 0.16,
-"best_pm": 0.96,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-09-30"
 },
 {
 "family": "open_drive",
@@ -234,6 +234,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-09-30T11:45",
+"name": "release_overshoot",
+"status": "accepted",
+"rationale": "PAYER = hedgers and stop-driven accounts buying immediacy in the first minutes after scheduled US releases (08:30 New York data: NFP/CPI/PPI/claims/GDP; 14:00 New York Wednesday: FOMC statement/minutes). Market makers pull quotes into the print, so forced flow crosses a thin book",
+"note": "{\"name\": \"release_overshoot\", \"grid\": 108, \"sec_per_param\": 0.007, \"active_frac\": 0.044625}"
+},
 {
 "ts": "2026-09-30T11:34",
 "name": "fix_flow_reversal",
@@ -396,6 +403,13 @@
 "per_min": 10125.0,
 "cpu": 97.7,
 "free_gb": 137.1
+},
+{
+"t": 1790768905.609248,
+"total": 17607428,
+"per_min": 9403.0,
+"cpu": 49.2,
+"free_gb": 112.2
 }
 ],
 "data": {
