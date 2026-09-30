@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-09-30 14:28:27 UTC",
+"generated_at": "2026-09-30 14:33:59 UTC",
 "host": {
-"cpu_pct": 41.1,
+"cpu_pct": 12.1,
 "gpu_pct": 0,
-"free_gb": 166.6,
-"uptime": "up 23:14, 2 users, load averages: 16.33 19.90 19.00",
-"load": "{ 16.33 19.90 19.00 }"
+"free_gb": 225.1,
+"uptime": "up 23:20, 2 users, load averages: 5.19 14.34 17.20",
+"load": "{ 5.19 14.34 17.20 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-09-30T16:28:26",
-"it": 6622,
+"ts": "2026-09-30T16:30:44",
+"it": 6730,
 "bar": "1h",
 "batch": 410,
 "passed": 0,
 "bench": 7.04,
-"pbo": 0.14,
+"pbo": 0.29,
 "best_family": "gated",
-"best_pm": 2.54,
-"best_params": "{'base': 'trapped_fader_squeeze', 'base_params': {'confirm': 2, 'hold': 317, 'lookback': 1124, 'pen': 0.743, 'sign': -1, 'trap': 5}, 'mode': 'session', 'start_h",
+"best_pm": 1.87,
+"best_params": "{'base': 'fix_flow_reversal', 'base_params': {'fix': 'pm', 'hold': 86, 'k': 1.97, 'pre': 352, 'sign': -1}, 'mode': 'htf_against', 'htf': '1h', 'sma_n': 49, 'g2_",
 "mix": "gat410",
 "queue_s": 401.0
 },
@@ -31,35 +31,35 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-09-30T16:27:14",
-"it": 4600,
-"bar": "30s",
-"batch": 31,
+"ts": "2026-09-30T16:30:42",
+"it": 4610,
+"bar": "5m",
+"batch": 313,
 "passed": 0,
 "bench": 7.04,
-"pbo": 0.0,
+"pbo": 0.14,
 "best_family": "gated",
-"best_pm": 0.65,
-"best_params": "{'base': 'fix_flow_reversal', 'base_params': {'fix': 'pm', 'hold': 83, 'k': 1.85, 'pre': 433, 'sign': -1}, 'mode': 'vol_above', 'vol_window': 296, 'vol_pct': 0.",
-"mix": "gat31",
-"queue_s": 29.0
+"best_pm": 6.57,
+"best_params": "{'base': 'liquidity_hole_fade', 'base_params': {'hold': 12, 'k': 0.871, 'sign': 1, 'span': 24, 'src': 'spread', 'window': 1370, 'z_in': 2.23}, 'mode': 'spread_b",
+"mix": "gat313",
+"queue_s": 302.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 19258179,
-"last_5m": 51168,
-"last_1h": 573340,
-"last_24h": 16001838,
-"distinct_ideas": 15817651,
+"total": 19291059,
+"last_5m": 26744,
+"last_1h": 568970,
+"last_24h": 14918246,
+"distinct_ideas": 15850531,
 "dsr_bar": 7.04,
 "sharpe_std": 1.31,
 "families": [
 {
 "family": "gated",
-"n": 10212855,
-"pos_rate": 0.268,
+"n": 10245735,
+"pos_rate": 0.269,
 "best_pm": 10.29,
 "best_dsr": 0.681,
 "passed": 0,
@@ -374,37 +374,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 2246782,
+"n": 2061242,
 "best_pm": 4.19,
-"pos_rate": 0.222
+"pos_rate": 0.2
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 5191108,
+"n": 5067445,
 "best_pm": 6.2,
-"pos_rate": 0.292
+"pos_rate": 0.295
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 829704,
+"n": 680946,
 "best_pm": 4.37,
-"pos_rate": 0.193
+"pos_rate": 0.186
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 71183,
+"n": 71276,
 "best_pm": 1.17,
 "pos_rate": 0.044
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 1327769,
+"n": 1146854,
 "best_pm": 10.29,
-"pos_rate": 0.259
+"pos_rate": 0.213
 },
 {
 "family": "ladder_revert",
@@ -479,23 +479,23 @@
 {
 "family": "mean_reversion_band",
 "bar": "15m",
-"n": 138393,
-"best_pm": 1.56,
-"pos_rate": 0.064
+"n": 14749,
+"best_pm": 0.47,
+"pos_rate": 0.084
 },
 {
 "family": "mean_reversion_band",
 "bar": "1h",
-"n": 113330,
-"best_pm": 1.28,
-"pos_rate": 0.143
+"n": 15018,
+"best_pm": 0.45,
+"pos_rate": 0.127
 },
 {
 "family": "mean_reversion_band",
 "bar": "1m",
-"n": 115074,
-"best_pm": 2.63,
-"pos_rate": 0.031
+"n": 13485,
+"best_pm": 1.68,
+"pos_rate": 0.023
 },
 {
 "family": "mean_reversion_band",
@@ -507,9 +507,9 @@
 {
 "family": "mean_reversion_band",
 "bar": "5m",
-"n": 134875,
+"n": 13625,
 "best_pm": 2.21,
-"pos_rate": 0.035
+"pos_rate": 0.049
 },
 {
 "family": "momentum_breakout",
@@ -521,14 +521,14 @@
 {
 "family": "momentum_breakout",
 "bar": "1h",
-"n": 10,
+"n": 5,
 "best_pm": 0,
-"pos_rate": 0.3
+"pos_rate": 0
 },
 {
 "family": "momentum_breakout",
 "bar": "1m",
-"n": 14,
+"n": 5,
 "best_pm": 1.9,
 "pos_rate": 1.0
 },
@@ -836,6 +836,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-09-30T14:30",
+"name": "settle_hedge_momentum",
+"status": "accepted",
+"rationale": "PAYER = holders of daily-reset leveraged/inverse gold ETPs and dealers running short-gamma COMEX option books. Both must trade in the direction of the day's move before the 13:30 New York settlement, in size proportional to that move and regardless of price, so they buy high and ",
+"note": "{\"name\": \"settle_hedge_momentum\", \"grid\": 54, \"sec_per_param\": 0.001, \"active_frac\": 0.021}"
+},
 {
 "ts": "2026-09-30T13:55",
 "name": "shfe_reopen_catchup",
@@ -1290,6 +1297,17 @@
 "dsr_bar": 7.04,
 "best_pm_1h": 1.8,
 "distinct": 15817651
+},
+{
+"t": 1790778839.7667131,
+"total": 19291059,
+"per_min": 5349.0,
+"cpu": 12.1,
+"gpu": 0,
+"free_gb": 225.1,
+"dsr_bar": 7.04,
+"best_pm_1h": 1.8,
+"distinct": 15850531
 }
 ],
 "data": {
