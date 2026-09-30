@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-09-30 13:53:44 UTC",
+"generated_at": "2026-09-30 13:59:14 UTC",
 "host": {
-"cpu_pct": 95.3,
-"gpu_pct": 88,
-"free_gb": 155.6,
-"uptime": "up 22:39, 2 users, load averages: 25.61 21.48 20.32",
-"load": "{ 25.61 21.48 20.32 }"
+"cpu_pct": 11.4,
+"gpu_pct": 0,
+"free_gb": 225.8,
+"uptime": "up 22:45, 2 users, load averages: 4.50 11.27 15.97",
+"load": "{ 4.50 11.27 15.97 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-09-30T15:53:44",
-"it": 5964,
+"ts": "2026-09-30T15:56:55",
+"it": 6010,
 "bar": "1m",
 "batch": 62,
 "passed": 0,
 "bench": 7.06,
-"pbo": 0.0,
+"pbo": 0.07,
 "best_family": "gated",
-"best_pm": 0.82,
-"best_params": "{'base': 'fix_flow_reversal', 'base_params': {'fix': 'pm', 'hold': 81, 'k': 1.85, 'pre': 407, 'sign': -1}, 'mode': 'vol_above', 'vol_window': 24, 'vol_pct': 0.2",
+"best_pm": 0.61,
+"best_params": "{'base': 'fix_flow_reversal', 'base_params': {'fix': 'pm', 'hold': 109, 'k': 1.85, 'pre': 440, 'sign': -1}, 'mode': 'session', 'start_hour': 15, 'hold_hours': 5",
 "mix": "gat62",
-"queue_s": 60.0
+"queue_s": 58.0
 },
 "events": []
 },
@@ -31,35 +31,35 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-09-30T15:53:00",
-"it": 4000,
-"bar": "5m",
-"batch": 313,
+"ts": "2026-09-30T15:55:55",
+"it": 4010,
+"bar": "15m",
+"batch": 410,
 "passed": 0,
 "bench": 7.06,
-"pbo": 0.11,
+"pbo": 0.07,
 "best_family": "gated",
-"best_pm": 5.52,
-"best_params": "{'base': 'trapped_fader_squeeze', 'base_params': {'confirm': 2, 'hold': 1083, 'lookback': 1071, 'pen': 0.879, 'sign': -1, 'trap': 7}, 'mode': 'htf_with', 'htf':",
-"mix": "gat313",
-"queue_s": 302.0
+"best_pm": 3.93,
+"best_params": "{'base': 'fix_flow_reversal', 'base_params': {'fix': 'pm', 'hold': 86, 'k': 1.97, 'pre': 389, 'sign': -1}, 'mode': 'vol_below', 'vol_window': 25, 'vol_pct': 0.5",
+"mix": "gat410",
+"queue_s": 396.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 18948396,
-"last_5m": 55630,
-"last_1h": 636456,
-"last_24h": 18747039,
-"distinct_ideas": 15509319,
+"total": 18968594,
+"last_5m": 12174,
+"last_1h": 578253,
+"last_24h": 18591429,
+"distinct_ideas": 15528163,
 "dsr_bar": 7.06,
 "sharpe_std": 1.31,
 "families": [
 {
 "family": "gated",
-"n": 9904817,
-"pos_rate": 0.266,
+"n": 9925015,
+"pos_rate": 0.267,
 "best_pm": 10.29,
 "best_dsr": 0.681,
 "passed": 0,
@@ -365,35 +365,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 2334312,
+"n": 2335542,
 "best_pm": 4.19,
 "pos_rate": 0.237
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 5161321,
+"n": 5172801,
 "best_pm": 6.2,
-"pos_rate": 0.287
+"pos_rate": 0.288
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 915048,
+"n": 916846,
 "best_pm": 4.37,
 "pos_rate": 0.198
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 64983,
+"n": 65076,
 "best_pm": 1.1,
 "pos_rate": 0.034
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 1433811,
+"n": 1434750,
 "best_pm": 10.29,
 "pos_rate": 0.292
 },
@@ -470,23 +470,23 @@
 {
 "family": "mean_reversion_band",
 "bar": "15m",
-"n": 833155,
+"n": 794243,
 "best_pm": 1.56,
-"pos_rate": 0.509
+"pos_rate": 0.498
 },
 {
 "family": "mean_reversion_band",
 "bar": "1h",
-"n": 658216,
+"n": 619304,
 "best_pm": 1.28,
 "pos_rate": 0.129
 },
 {
 "family": "mean_reversion_band",
 "bar": "1m",
-"n": 673939,
+"n": 622739,
 "best_pm": 2.63,
-"pos_rate": 0.206
+"pos_rate": 0.198
 },
 {
 "family": "mean_reversion_band",
@@ -498,9 +498,9 @@
 {
 "family": "mean_reversion_band",
 "bar": "5m",
-"n": 828746,
+"n": 786620,
 "best_pm": 2.21,
-"pos_rate": 0.275
+"pos_rate": 0.268
 },
 {
 "family": "momentum_breakout",
@@ -841,6 +841,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-09-30T13:55",
+"name": "shfe_reopen_catchup",
+"status": "accepted",
+"rationale": "PAYER = onshore SHFE/SGE gold participants who are locked out while Shanghai is shut (02:30\u201309:00 and 15:00\u201321:00 Beijing) and must act at the reopen regardless of price: margin calls and stop-outs on wrong-side positions, plus the onshore/offshore arbitrage that carries this flo",
+"note": "{\"name\": \"shfe_reopen_catchup\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.036}"
+},
 {
 "ts": "2026-09-30T12:23",
 "name": "trapped_fader_squeeze",
@@ -1222,6 +1229,17 @@
 "dsr_bar": 7.06,
 "best_pm_1h": 1.8,
 "distinct": 15509319
+},
+{
+"t": 1790776754.479625,
+"total": 18968594,
+"per_min": 2435.0,
+"cpu": 11.4,
+"gpu": 0,
+"free_gb": 225.8,
+"dsr_bar": 7.06,
+"best_pm_1h": 1.8,
+"distinct": 15528163
 }
 ],
 "data": {
