@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gold-Lab Status</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:oklch(0.985 0.003 85);--ink:oklch(0.18 0.005 85);--mute:oklch(0.5 0.01 85);--line:oklch(0.85 0.006 85);
+--ok:oklch(0.55 0.12 150);--warn:oklch(0.65 0.15 70);--bad:oklch(0.55 0.16 25);--acc:oklch(0.5 0.1 230)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:oklch(0.16 0.005 85);--ink:oklch(0.93 0.004 85);--mute:oklch(0.62 0.01 85);--line:oklch(0.3 0.006 85)}}
+:root[data-theme="dark"]{--bg:oklch(0.16 0.005 85);--ink:oklch(0.93 0.004 85);--mute:oklch(0.62 0.01 85);--line:oklch(0.3 0.006 85)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 "IBM Plex Mono",ui-monospace,monospace;padding:16px}
+main{max-width:1180px;margin:0 auto}h1{font-size:18px;font-weight:600;margin:0 0 2px}h2{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:28px 0 8px;border-bottom:1px solid var(--line);padding-bottom:4px}
+.sub{color:var(--mute);font-size:12px}.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:14px}
+.kpi{padding:12px 10px;border-right:1px solid var(--line)}.kpi:last-child{border-right:0}.kpi b{display:block;font-size:22px;font-weight:600;line-height:1.1}.kpi span{color:var(--mute);font-size:11px}
+table{width:100%;border-collapse:collapse;font-size:12.5px}th{text-align:left;color:var(--mute);font-weight:500;padding:6px 8px 6px 0;border-bottom:1px solid var(--line);white-space:nowrap}td{padding:6px 8px 6px 0;border-bottom:1px solid var(--line);vertical-align:top}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}.ok{color:var(--ok)}.warn{color:var(--warn)}.bad{color:var(--bad)}.mute{color:var(--mute)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}.card{border:1px solid var(--line);padding:12px}.card h3{margin:0 0 6px;font-size:13px;font-weight:600}
+.card dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:2px 12px;font-size:12px}.card dt{color:var(--mute)}.card dd{margin:0;overflow-wrap:anywhere}
+canvas{width:100%;height:110px;display:block}.small{font-size:11.5px}.pill{display:inline-block;border:1px solid var(--line);padding:0 6px;font-size:11px;border-radius:2px}
+details summary{cursor:pointer;color:var(--mute);font-size:12px}pre{white-space:pre-wrap;font-size:11px;color:var(--mute);margin:6px 0 0}
+.bar{position:relative;height:6px;background:var(--line);margin-top:4px}.bar i{position:absolute;left:0;top:0;bottom:0;background:var(--acc)}
+@media(max-width:600px){.kpi b{font-size:18px}td,th{padding:5px 6px 5px 0}}
+</style>
+</head>
+<body>
+<main>
+<h1>Gold-Lab · XAUUSD Strategie-Suche</h1>
+<div class="sub" id="meta">lade …</div>
+
+<div class="kpis" id="kpis"></div>
+
+<h2>Was gerade läuft</h2>
+<div class="cards" id="instances"></div>
+
+<h2>Durchsatz · 48 h</h2>
+<canvas id="spark" height="110"></canvas>
+<div class="sub small" id="sparkinfo"></div>
+
+<h2>Familien</h2>
+<table id="families"><thead><tr><th>Familie</th><th class="num">Versuche</th><th class="num">positive Pfade</th><th class="num">bester Pfad-Median</th><th class="num">bester DSR</th><th>seit</th></tr></thead><tbody></tbody></table>
+
+<h2>Shortlist</h2>
+<div id="shortlist" class="small"></div>
+
+<h2>Ideengeber · letzte Vorschläge</h2>
+<div id="generated" class="small"></div>
+
+<h2>Wie das Sieb urteilt</h2>
+<div class="small" id="rules"></div>
+</main>
+<script>
+const fmt=n=>n==null?"–":Number(n).toLocaleString("de-DE");
+const pct=x=>x==null?"–":(x*100).toFixed(0)+" %";
+function cls(v,good,warn){return v>=good?"ok":v>=warn?"warn":"bad"}
+async function load(){
+  const r=await fetch("status.json?"+Date.now(),{cache:"no-store"}); const s=await r.json();
+  const reg=s.registry, h=s.host;
+  const age=(Date.now()-Date.parse(s.generated_at.replace(" UTC","Z").replace(" ","T")))/60000;
+  document.getElementById("meta").innerHTML=`Stand ${s.generated_at} · <span class="${age<12?"ok":"bad"}">${age<12?"live":"veraltet, "+age.toFixed(0)+" min"}</span> · ${s.data.source} · Holdout: ${s.data.holdout}`;
+  const running=s.instances.filter(i=>i.state==="running").length;
+  document.getElementById("kpis").innerHTML=[
+    [fmt(reg.total),"Versuche gesamt"],[fmt(reg.last_1h),"letzte Stunde"],[fmt(reg.distinct_ideas),"eigenständige Ideen"],
+    [reg.dsr_bar??"–","Latte (erw. Max-Sharpe des Rauschens)"],
+    [`<span class="${running===2?"ok":"bad"}">${running}/2</span>`,"Instanzen laufen"],
+    [`${h.cpu_pct??"–"} %`,"CPU"],[`${h.free_gb} GB`,"frei"],
+    [reg.shortlist.filter(x=>x.status==="watch"||x.status==="candidate").length,"Watch / Kandidaten"],
+  ].map(([v,l])=>`<div class="kpi"><b>${v}</b><span>${l}</span></div>`).join("");
+  document.getElementById("instances").innerHTML=s.instances.map(i=>{
+    const L=i.last||{};
+    return `<div class="card"><h3>Instanz ${i.name} <span class="pill ${i.state==="running"?"ok":"bad"}">${i.state}</span></h3>
+    <dl><dt>zuletzt</dt><dd>${L.ts||"–"}</dd><dt>Bars</dt><dd>${L.bar||"–"} · Batch ${fmt(L.batch)} · Warteschlange ${L.queue_s??"–"} s</dd>
+    <dt>Mix</dt><dd>${(L.mix||"–").replaceAll("/"," · ")}</dd><dt>Bester im Batch</dt><dd>${L.best_family||"–"} ${L.best_pm??""} <span class="mute">${L.best_params||""}</span></dd>
+    <dt>PBO Batch</dt><dd>${L.pbo??"–"}</dd></dl>
+    ${(i.events||[]).length?`<details><summary>Ereignisse</summary><pre>${i.events.join("\n")}</pre></details>`:""}</div>`}).join("");
+  // sparkline
+  const c=document.getElementById("spark"),ctx=c.getContext("2d");const W=c.width=c.clientWidth*2,H=c.height=220;ctx.scale(1,1);
+  const hs=s.history.filter(p=>p.per_min!=null);if(hs.length>1){const xs=hs.map(p=>p.t),ys=hs.map(p=>p.per_min);const x0=xs[0],x1=xs[xs.length-1],ym=Math.max(...ys,1);
+    ctx.clearRect(0,0,W,H);ctx.strokeStyle=getComputedStyle(document.documentElement).getPropertyValue("--line");ctx.lineWidth=1;
+    [0.25,0.5,0.75].forEach(f=>{ctx.beginPath();ctx.moveTo(0,H*(1-f));ctx.lineTo(W,H*(1-f));ctx.stroke()});
+    ctx.strokeStyle=getComputedStyle(document.documentElement).getPropertyValue("--acc");ctx.lineWidth=2;ctx.beginPath();
+    hs.forEach((p,i)=>{const x=(p.t-x0)/(x1-x0||1)*W,y=H-(p.per_min/ym)*H*0.9-4;i?ctx.lineTo(x,y):ctx.moveTo(x,y)});ctx.stroke();
+    document.getElementById("sparkinfo").textContent=`Versuche pro Minute, Spitze ${fmt(ym)}, aktuell ${fmt(ys[ys.length-1])} · ${hs.length} Messpunkte`;}
+  document.querySelector("#families tbody").innerHTML=reg.families.map(f=>`<tr><td>${f.family}</td><td class="num">${fmt(f.n)}</td>
+    <td class="num ${cls(f.pos_rate,0.5,0.25)}">${pct(f.pos_rate)}</td><td class="num">${f.best_pm}</td><td class="num">${f.best_dsr}</td><td class="mute">${f.since}</td></tr>`).join("");
+  document.getElementById("shortlist").innerHTML=reg.shortlist.length?`<table><thead><tr><th>#</th><th>Status</th><th>Familie</th><th>Bars</th><th class="num">Pfad-Median</th><th class="num">DSR</th><th class="num">PBO</th><th class="num">Rechecks</th><th>Parameter</th></tr></thead><tbody>`+
+    reg.shortlist.map(x=>`<tr><td>${x.id}</td><td class="${x.status==="confirmed"?"ok":x.status==="dead"?"bad":"warn"}">${x.status}</td><td>${x.family}</td><td>${x.bar}</td><td class="num">${x.last_pm}</td><td class="num">${x.dsr}</td><td class="num">${x.pbo}</td><td class="num">${x.rechecks}</td><td class="mute">${x.params}</td></tr>`).join("")+"</tbody></table>"
+    :`<span class="mute">leer. Nichts hat bisher Watch-Stufe (DSR &gt; 0,5, PBO &lt; 0,2, alle CPCV-Pfade positiv, ≥ 100 Trades) auf 2015–2024 erreicht.</span>`;
+  document.getElementById("generated").innerHTML=s.generated.length?s.generated.map(g=>`<div style="margin:0 0 10px"><span class="pill ${g.status==="accepted"?"ok":"bad"}">${g.status}</span> <b>${g.name||"–"}</b> <span class="mute">${g.ts}</span><br><span class="mute">${g.rationale||g.note}</span></div>`).join(""):`<span class="mute">noch keine Vorschläge</span>`;
+  document.getElementById("rules").innerHTML=`Jeder Versuch zählt. Latte = erwarteter bester Sharpe von ${fmt(reg.distinct_ideas)} Zufallsstrategien bei Streuung ${reg.sharpe_std}: <b>${reg.dsr_bar}</b>. Bestätigt wird nur, was mit Wahrscheinlichkeit &gt; 95 % darüber liegt (Deflated Sharpe), zusätzlich PBO &lt; 0,5, Netto nach Kosten &gt; 0, alle 28 CPCV-Pfade stabil. Watch-Stufe: DSR &gt; 0,5, PBO &lt; 0,2, kein negativer Pfad. Kosten stecken im Backtest (halber Spread + Slippage aus der Bar-Range + Haltekosten je Positionswechsel). Das jüngste Viertel der Daten sieht die Suche nie.`;
+}
+load();setInterval(load,60000);
+</script>
+</body>
+</html>
