@@ -1,28 +1,28 @@
 {
-"generated_at": "2026-09-30 12:37:53 UTC",
+"generated_at": "2026-09-30 12:43:43 UTC",
 "host": {
-"cpu_pct": 77.3,
-"free_gb": 132.1,
-"uptime": "up 21:23, 2 users, load averages: 34.92 32.52 30.18",
-"load": "{ 34.92 32.52 30.18 }"
+"cpu_pct": 68.4,
+"free_gb": 151.4,
+"uptime": "up 21:29, 2 users, load averages: 31.53 32.15 30.81",
+"load": "{ 31.53 32.15 30.81 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-09-30T14:37:42",
-"it": 4980,
-"bar": "1m",
-"batch": 312,
+"ts": "2026-09-30T14:43:40",
+"it": 5035,
+"bar": "1h",
+"batch": 2048,
 "passed": 0,
-"bench": 7.09,
+"bench": 7.08,
 "pbo": 0.0,
-"best_family": "release_overshoot",
-"best_pm": 12.88,
-"best_params": "{'ev': 'data', 'win': 15, 'k': 5.17, 'hold': 29, 'sign': 1}",
-"mix": "atr15/fix26/gat187/liq36/rel26/swe22",
-"queue_s": 173.0
+"best_family": "gated",
+"best_pm": 11.92,
+"best_params": "{'base': 'trapped_fader_squeeze', 'base_params': {'confirm': 2, 'hold': 887, 'lookback': 804, 'pen': 0.784, 'sign': -1, 'trap': 9}, 'mode': 'vol_above', 'vol_wi",
+"mix": "atr3/gat1229/liq375/swe76/wf_365",
+"queue_s": 1198.0
 },
 "events": []
 },
@@ -30,35 +30,35 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-09-30T14:37:39",
-"it": 3367,
-"bar": "30s",
-"batch": 156,
+"ts": "2026-09-30T14:43:43",
+"it": 3380,
+"bar": "5m",
+"batch": 1563,
 "passed": 0,
 "bench": 7.09,
-"pbo": 0.0,
+"pbo": 0.07,
 "best_family": "gated",
-"best_pm": 0.68,
-"best_params": "{'base': 'fix_flow_reversal', 'base_params': {'fix': 'pm', 'hold': 109, 'k': 1.49, 'pre': 329, 'sign': -1}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 29, 'g2_mo",
-"mix": "atr13/gat92/liq14/mea6/rou13/swe18",
-"queue_s": 91.0
+"best_pm": 6.66,
+"best_params": "{'base': 'liquidity_hole_fade', 'base_params': {'hold': 12, 'k': 0.75, 'sign': 1, 'span': 24, 'src': 'spread', 'window': 1370, 'z_in': 2.23}, 'mode': 'session',",
+"mix": "atr20/fix87/gat912/liq105/rel78/rou35/swe87/tra139/wf_100",
+"queue_s": 907.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 18106978,
-"last_5m": 68239,
-"last_1h": 604908,
-"last_24h": 18111542,
-"distinct_ideas": 14669566,
-"dsr_bar": 7.09,
+"total": 18179795,
+"last_5m": 76272,
+"last_1h": 618444,
+"last_24h": 18188282,
+"distinct_ideas": 14744258,
+"dsr_bar": 7.08,
 "sharpe_std": 1.32,
 "families": [
 {
 "family": "gated",
-"n": 9333950,
-"pos_rate": 0.26,
+"n": 9377179,
+"pos_rate": 0.261,
 "best_pm": 10.29,
 "best_dsr": 0.681,
 "passed": 0,
@@ -66,7 +66,7 @@
 },
 {
 "family": "wf_ridge",
-"n": 3379685,
+"n": 3389724,
 "pos_rate": 0.025,
 "best_pm": 6.24,
 "best_dsr": 0.0,
@@ -75,7 +75,7 @@
 },
 {
 "family": "mean_reversion_band",
-"n": 3199678,
+"n": 3199684,
 "pos_rate": 0.299,
 "best_pm": 2.63,
 "best_dsr": 0.124,
@@ -84,7 +84,7 @@
 },
 {
 "family": "atr_impulse",
-"n": 1629900,
+"n": 1630479,
 "pos_rate": 0.037,
 "best_pm": 1.52,
 "best_dsr": 0.0,
@@ -93,8 +93,8 @@
 },
 {
 "family": "liquidity_hole_fade",
-"n": 281930,
-"pos_rate": 0.226,
+"n": 293935,
+"pos_rate": 0.227,
 "best_pm": 1.45,
 "best_dsr": 0.0,
 "passed": 0,
@@ -102,7 +102,7 @@
 },
 {
 "family": "sweep_reversal",
-"n": 187574,
+"n": 190892,
 "pos_rate": 0.043,
 "best_pm": 1.07,
 "best_dsr": 0.0,
@@ -111,7 +111,7 @@
 },
 {
 "family": "round_level_break",
-"n": 47697,
+"n": 47866,
 "pos_rate": 0.188,
 "best_pm": 1.06,
 "best_dsr": 0.0,
@@ -120,8 +120,8 @@
 },
 {
 "family": "fix_flow_reversal",
-"n": 18563,
-"pos_rate": 0.156,
+"n": 19876,
+"pos_rate": 0.154,
 "best_pm": 1.09,
 "best_dsr": 0.0,
 "passed": 0,
@@ -138,9 +138,18 @@
 },
 {
 "family": "release_overshoot",
-"n": 8770,
-"pos_rate": 0.34,
+"n": 9524,
+"pos_rate": 0.335,
 "best_pm": 0.65,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-09-30"
+},
+{
+"family": "trapped_fader_squeeze",
+"n": 3795,
+"pos_rate": 0.118,
+"best_pm": 0.69,
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-09-30"
@@ -153,15 +162,6 @@
 "best_dsr": 0.276,
 "passed": 0,
 "since": "2026-09-29"
-},
-{
-"family": "trapped_fader_squeeze",
-"n": 2390,
-"pos_rate": 0.096,
-"best_pm": 0.69,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-09-30"
 },
 {
 "family": "open_drive",
@@ -498,6 +498,13 @@
 "per_min": 13648.0,
 "cpu": 77.3,
 "free_gb": 132.1
+},
+{
+"t": 1790772223.982371,
+"total": 18179795,
+"per_min": 15254.0,
+"cpu": 68.4,
+"free_gb": 151.4
 }
 ],
 "data": {
