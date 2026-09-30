@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-09-30 13:59:14 UTC",
+"generated_at": "2026-09-30 14:05:12 UTC",
 "host": {
-"cpu_pct": 11.4,
-"gpu_pct": 0,
-"free_gb": 225.8,
-"uptime": "up 22:45, 2 users, load averages: 4.50 11.27 15.97",
-"load": "{ 4.50 11.27 15.97 }"
+"cpu_pct": 59.6,
+"gpu_pct": 87,
+"free_gb": 165.0,
+"uptime": "up 22:50, 2 users, load averages: 26.14 16.29 16.22",
+"load": "{ 26.14 16.29 16.22 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-09-30T15:56:55",
-"it": 6010,
-"bar": "1m",
-"batch": 62,
+"ts": "2026-09-30T16:05:08",
+"it": 6100,
+"bar": "1h",
+"batch": 410,
 "passed": 0,
 "bench": 7.06,
-"pbo": 0.07,
+"pbo": 0.18,
 "best_family": "gated",
-"best_pm": 0.61,
-"best_params": "{'base': 'fix_flow_reversal', 'base_params': {'fix': 'pm', 'hold': 109, 'k': 1.85, 'pre': 440, 'sign': -1}, 'mode': 'session', 'start_hour': 15, 'hold_hours': 5",
-"mix": "gat62",
-"queue_s": 58.0
+"best_pm": 1.97,
+"best_params": "{'base': 'trapped_fader_squeeze', 'base_params': {'confirm': 2, 'hold': 882, 'lookback': 970, 'pen': 0.743, 'sign': -1, 'trap': 5}, 'mode': 'spread_below', 'vol",
+"mix": "gat410",
+"queue_s": 399.0
 },
 "events": []
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-09-30T15:55:55",
-"it": 4010,
+"ts": "2026-09-30T16:05:11",
+"it": 4134,
 "bar": "15m",
 "batch": 410,
 "passed": 0,
 "bench": 7.06,
-"pbo": 0.07,
+"pbo": 0.32,
 "best_family": "gated",
-"best_pm": 3.93,
-"best_params": "{'base': 'fix_flow_reversal', 'base_params': {'fix': 'pm', 'hold': 86, 'k': 1.97, 'pre': 389, 'sign': -1}, 'mode': 'vol_below', 'vol_window': 25, 'vol_pct': 0.5",
+"best_pm": 3.32,
+"best_params": "{'base': 'fix_flow_reversal', 'base_params': {'fix': 'pm', 'hold': 109, 'k': 1.85, 'pre': 440, 'sign': -1}, 'mode': 'spread_below', 'vol_window': 714, 'vol_pct'",
 "mix": "gat410",
-"queue_s": 396.0
+"queue_s": 400.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 18968594,
-"last_5m": 12174,
-"last_1h": 578253,
-"last_24h": 18591429,
-"distinct_ideas": 15528163,
+"total": 19010765,
+"last_5m": 45880,
+"last_1h": 547052,
+"last_24h": 17910863,
+"distinct_ideas": 15571525,
 "dsr_bar": 7.06,
 "sharpe_std": 1.31,
 "families": [
 {
 "family": "gated",
-"n": 9925015,
+"n": 9965442,
 "pos_rate": 0.267,
 "best_pm": 10.29,
 "best_dsr": 0.681,
@@ -181,6 +181,15 @@
 "best_dsr": 0.276,
 "passed": 0,
 "since": "2026-09-29"
+},
+{
+"family": "shfe_reopen_catchup",
+"n": 1744,
+"pos_rate": 0.088,
+"best_pm": 0.55,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-09-30"
 },
 {
 "family": "open_drive",
@@ -365,37 +374,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 2335542,
+"n": 2351532,
 "best_pm": 4.19,
-"pos_rate": 0.237
+"pos_rate": 0.238
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 5172801,
+"n": 5189611,
 "best_pm": 6.2,
 "pos_rate": 0.288
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 916846,
+"n": 919450,
 "best_pm": 4.37,
 "pos_rate": 0.198
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 65076,
+"n": 66254,
 "best_pm": 1.1,
-"pos_rate": 0.034
+"pos_rate": 0.036
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 1434750,
+"n": 1446644,
 "best_pm": 10.29,
-"pos_rate": 0.292
+"pos_rate": 0.291
 },
 {
 "family": "ladder_revert",
@@ -470,23 +479,23 @@
 {
 "family": "mean_reversion_band",
 "bar": "15m",
-"n": 794243,
+"n": 657027,
 "best_pm": 1.56,
-"pos_rate": 0.498
+"pos_rate": 0.446
 },
 {
 "family": "mean_reversion_band",
 "bar": "1h",
-"n": 619304,
+"n": 389928,
 "best_pm": 1.28,
-"pos_rate": 0.129
+"pos_rate": 0.134
 },
 {
 "family": "mean_reversion_band",
 "bar": "1m",
-"n": 622739,
+"n": 393363,
 "best_pm": 2.63,
-"pos_rate": 0.198
+"pos_rate": 0.141
 },
 {
 "family": "mean_reversion_band",
@@ -498,9 +507,9 @@
 {
 "family": "mean_reversion_band",
 "bar": "5m",
-"n": 786620,
+"n": 651802,
 "best_pm": 2.21,
-"pos_rate": 0.268
+"pos_rate": 0.24
 },
 {
 "family": "momentum_breakout",
@@ -718,6 +727,20 @@
 "n": 18,
 "best_pm": 0,
 "pos_rate": 0
+},
+{
+"family": "shfe_reopen_catchup",
+"bar": "15m",
+"n": 872,
+"best_pm": 0.35,
+"pos_rate": 0.086
+},
+{
+"family": "shfe_reopen_catchup",
+"bar": "5m",
+"n": 872,
+"best_pm": 0.55,
+"pos_rate": 0.091
 },
 {
 "family": "sweep_reversal",
@@ -1240,6 +1263,17 @@
 "dsr_bar": 7.06,
 "best_pm_1h": 1.8,
 "distinct": 15528163
+},
+{
+"t": 1790777112.644862,
+"total": 19010765,
+"per_min": 9176.0,
+"cpu": 59.6,
+"gpu": 87,
+"free_gb": 165.0,
+"dsr_bar": 7.06,
+"best_pm_1h": 1.8,
+"distinct": 15571525
 }
 ],
 "data": {
