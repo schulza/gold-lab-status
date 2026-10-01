@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-01 17:16:24 UTC",
+"generated_at": "2026-10-01 17:21:56 UTC",
 "host": {
-"cpu_pct": 6.9,
+"cpu_pct": 9.1,
 "gpu_pct": 0,
-"free_gb": 141.8,
-"uptime": "up 2 days,  2:02, 2 users, load averages: 5.95 4.94 4.58",
-"load": "{ 5.95 4.94 4.58 }"
+"free_gb": 222.1,
+"uptime": "up 2 days,  2:08, 2 users, load averages: 6.20 5.03 4.68",
+"load": "{ 6.20 5.03 4.68 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-01T19:16:23",
-"it": 35344,
+"ts": "2026-10-01T19:20:51",
+"it": 35410,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.5,
 "pbo": 0.68,
 "best_family": "gated",
-"best_pm": 0.35,
-"best_params": "{'base': 'loss_limit_reset', 'base_params': {'hold': 1, 'k': 0.5, 'mode': 'reset', 'period': 'month', 'sign': -1}, 'mode': 'vol_above', 'vol_window': 60, 'vol_p",
+"best_pm": 0.72,
+"best_params": "{'base': 'cta_pnl_stopout', 'base_params': {'hold': 1, 'k': 1.5, 'n': 3, 'sign': -1}, 'mode': 'tick_above', 'vol_window': 240, 'vol_pct': 0.7}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-01T19:15:41",
-"it": 27000,
-"bar": "30s",
+"ts": "2026-10-01T19:20:49",
+"it": 27100,
+"bar": "5m",
 "batch": 8,
 "passed": 0,
 "bench": 6.5,
-"pbo": 0.29,
+"pbo": 0.39,
 "best_family": "gated",
-"best_pm": 0.13,
-"best_params": "{'base': 'news_flow_split', 'base_params': {'days': 8, 'k': 1.81, 'mode': 'split', 'sign': -1, 'win': 47}, 'mode': 'tick_above', 'vol_window': 240, 'vol_pct': 0",
+"best_pm": 0.45,
+"best_params": "{'base': 'loss_limit_reset', 'base_params': {'hold': 3, 'k': 0.3, 'mode': 'cut', 'period': 'month', 'sign': 1}, 'mode': 'tick_above', 'vol_window': 535, 'vol_pc",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 26752142,
-"last_5m": 5018,
-"last_1h": 24726,
-"last_24h": 6420963,
-"distinct_ideas": 23305261,
+"total": 26753807,
+"last_5m": 1241,
+"last_1h": 22968,
+"last_24h": 6368817,
+"distinct_ideas": 23306790,
 "dsr_bar": 6.5,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17512973,
+"n": 17514637,
 "pos_rate": 0.326,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -526,7 +526,7 @@
 },
 {
 "family": "calendar_rebalance_flow",
-"n": 1509,
+"n": 1510,
 "pos_rate": 0.326,
 "best_pm": 1.59,
 "best_dsr": 0.0,
@@ -830,7 +830,7 @@
 {
 "family": "calendar_rebalance_flow",
 "bar": "15m",
-"n": 1509,
+"n": 1510,
 "best_pm": 1.59,
 "pos_rate": 0.326
 },
@@ -1103,35 +1103,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 1489848,
+"n": 1475376,
 "best_pm": 1.57,
-"pos_rate": 0.445
+"pos_rate": 0.446
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 2733047,
+"n": 2710367,
 "best_pm": 1.89,
-"pos_rate": 0.431
+"pos_rate": 0.43
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 651374,
+"n": 648236,
 "best_pm": 16.85,
-"pos_rate": 0.282
+"pos_rate": 0.283
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 178497,
+"n": 177645,
 "best_pm": 1.4,
-"pos_rate": 0.226
+"pos_rate": 0.227
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 1181172,
+"n": 1170168,
 "best_pm": 1.56,
 "pos_rate": 0.426
 },
@@ -1383,7 +1383,7 @@
 {
 "family": "portfolio",
 "bar": "30s",
-"n": 16,
+"n": 15,
 "best_pm": 2.94,
 "pos_rate": 1.0
 },
@@ -1755,6 +1755,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-01T17:20",
+"name": "impact_asymmetry_refund",
+"status": "accepted",
+"rationale": "PAYER = impatient one-sided demanders who cross the book while dealers' inventory is skewed. A dealer who is long shades quotes down, so down-moves cost little activity per dollar and up-moves cost a lot; whoever must sell into that thin bid pays the inventory premium, which is r",
+"note": "{\"name\": \"impact_asymmetry_refund\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.5776125}"
+},
+{
 "ts": "2026-10-01T17:02",
 "name": "spread_excess_refund",
 "status": "accepted",
@@ -1830,13 +1837,6 @@
 "status": "accepted",
 "rationale": "PAYER = Western macro/fair-value desks who lean against moves sponsored by Asian physical and Shanghai speculative buyers (\"hot\" mode), and Western momentum longs whose move has no physical sponsor behind it (\"cold\" mode).\nThe measured quantity is the Asia-hours (01\u201307 UTC) share",
 "note": "{\"name\": \"asia_participation_shift\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.0569375}"
-},
-{
-"ts": "2026-10-01T13:37",
-"name": "wide_spread_concession",
-"status": "rejected",
-"rationale": "Payer = urgent liquidity demanders (forced hedgers, margin-driven accounts, allocators with a deadline) who move gold on days when dealers quote abnormally wide spreads: they pay an inventory concession on top of the spread, and dealers hand it back over the following 1\u20134 session",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
@@ -5323,6 +5323,17 @@
 "dsr_bar": 6.5,
 "best_pm_1h": 2.44,
 "distinct": 23305261
+},
+{
+"t": 1790875316.628997,
+"total": 26753807,
+"per_min": 248.0,
+"cpu": 9.1,
+"gpu": 0,
+"free_gb": 222.1,
+"dsr_bar": 6.5,
+"best_pm_1h": 2.44,
+"distinct": 23306790
 }
 ],
 "instrument": "XAUUSD",
