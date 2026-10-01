@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-01 15:13:06 UTC",
+"generated_at": "2026-10-01 15:18:35 UTC",
 "host": {
-"cpu_pct": 17.2,
-"gpu_pct": 94,
-"free_gb": 145.9,
-"uptime": "up 1 day, 23:59, 2 users, load averages: 5.72 5.57 5.24",
-"load": "{ 5.72 5.57 5.24 }"
+"cpu_pct": 6.8,
+"gpu_pct": 0,
+"free_gb": 220.6,
+"uptime": "up 2 days, 4 mins, 2 users, load averages: 4.51 5.50 5.36",
+"load": "{ 4.51 5.50 5.36 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-01T17:12:48",
-"it": 32600,
+"ts": "2026-10-01T17:16:29",
+"it": 32610,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.5,
-"pbo": 0.82,
+"pbo": 0.39,
 "best_family": "gated",
-"best_pm": 0.3,
-"best_params": "{'base': 'clientele_tug_of_war', 'base_params': {'k': 1.0, 'lead': 'asia', 'mode': 'solo', 'n': 5, 'sign': 1}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 353, 'v",
+"best_pm": 0.63,
+"best_params": "{'base': 'rebalance_size', 'base_params': {'exit': 0, 'k': 0.0049, 'lead': 2, 'period': 'week', 'sign': -1}, 'mode': 'tick_above', 'vol_window': 240, 'vol_pct':",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-01T17:09:59",
-"it": 24800,
-"bar": "5m",
-"batch": 9,
+"ts": "2026-10-01T17:13:29",
+"it": 24810,
+"bar": "15m",
+"batch": 8,
 "passed": 0,
 "bench": 6.5,
-"pbo": 0.04,
+"pbo": 0.57,
 "best_family": "gated",
-"best_pm": 0.53,
-"best_params": "{'base': 'forced_flat_reentry', 'base_params': {'hold': 900, 'k': 1.01, 'sign': 1, 'theta': 0.0038, 'unw': 29}, 'mode': 'spread_below', 'vol_window': 240, 'vol_",
-"mix": "etf1/gat8",
+"best_pm": 0.62,
+"best_params": "{'base': 'shfe_reopen_catchup', 'base_params': {'entry': 75, 'hold': 111, 'k': 2.79, 'sess': 'night', 'sign': 1}, 'mode': 'session', 'start_hour': 11, 'hold_hou",
+"mix": "gat8",
 "queue_s": 8.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 26696672,
-"last_5m": 4309,
-"last_1h": 38745,
-"last_24h": 7369757,
-"distinct_ideas": 23250421,
+"total": 26697004,
+"last_5m": 146,
+"last_1h": 33725,
+"last_24h": 7369903,
+"distinct_ideas": 23250721,
 "dsr_bar": 6.5,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17473328,
+"n": 17473656,
 "pos_rate": 0.326,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -310,7 +310,7 @@
 },
 {
 "family": "open_drive",
-"n": 4458,
+"n": 4462,
 "pos_rate": 0.075,
 "best_pm": 0.55,
 "best_dsr": 0.0,
@@ -1044,35 +1044,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 1719621,
+"n": 1719645,
 "best_pm": 1.57,
 "pos_rate": 0.438
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 3213983,
+"n": 3214023,
 "best_pm": 2.56,
 "pos_rate": 0.433
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 714810,
+"n": 714842,
 "best_pm": 16.85,
 "pos_rate": 0.275
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 190387,
+"n": 190411,
 "best_pm": 1.36,
 "pos_rate": 0.22
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 1354642,
+"n": 1354666,
 "best_pm": 1.6,
 "pos_rate": 0.417
 },
@@ -1240,7 +1240,7 @@
 {
 "family": "open_drive",
 "bar": "5m",
-"n": 592,
+"n": 594,
 "best_pm": 0.04,
 "pos_rate": 0.012
 },
@@ -1689,6 +1689,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-01T15:13",
+"name": "vol_window_rolloff",
+"status": "accepted",
+"rationale": "PAYER = vol-target / risk-control funds that size gold off an equal-weighted rolling-window volatility (20d/60d). When a shock day leaves that window, their estimate falls on a date known `window` days in advance, for no economic reason, and they must re-lever at whatever price; ",
+"note": "{\"name\": \"vol_window_rolloff\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.46475}"
+},
+{
 "ts": "2026-10-01T14:52",
 "name": "weekend_gap_repricing",
 "status": "accepted",
@@ -1764,13 +1771,6 @@
 "status": "rejected",
 "rationale": "`weekend_gap_inventory` \u2014 the payers are weekend-news traders and resting stop orders that get filled at the Sunday reopen, the thinnest liquidity of the week; dealers mark the price through them and earn the reversion (sign=-1). The opposite payer (sign=+1) is slow allocators wh",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-01T10:51",
-"name": "absorbed_flow_release",
-"status": "accepted",
-"rationale": "PAYER = impatient liquidity takers (momentum chasers, hedgers on a deadline) whose multi-day one-sided aggression is absorbed by a larger patient resting order (producer hedge or official-sector programme, allocator working a limit). They pay impact for days, get no price progres",
-"note": "{\"name\": \"absorbed_flow_release\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.043575}"
 }
 ],
 "history": [
@@ -5015,6 +5015,17 @@
 "dsr_bar": 6.5,
 "best_pm_1h": 2.54,
 "distinct": 23250421
+},
+{
+"t": 1790867915.453502,
+"total": 26697004,
+"per_min": 29.0,
+"cpu": 6.8,
+"gpu": 0,
+"free_gb": 220.6,
+"dsr_bar": 6.5,
+"best_pm_1h": 2.54,
+"distinct": 23250721
 }
 ],
 "instrument": "XAUUSD",
