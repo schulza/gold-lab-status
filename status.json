@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-01 03:28:56 UTC",
+"generated_at": "2026-10-01 03:34:27 UTC",
 "host": {
 "cpu_pct": 8.2,
 "gpu_pct": 0,
-"free_gb": 225.2,
-"uptime": "up 1 day, 12:15, 2 users, load averages: 3.37 10.61 14.33",
-"load": "{ 3.37 10.61 14.33 }"
+"free_gb": 178.5,
+"uptime": "up 1 day, 12:20, 2 users, load averages: 11.36 9.00 12.09",
+"load": "{ 11.36 9.00 12.09 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-01T05:24:32",
-"it": 20140,
+"ts": "2026-10-01T05:33:39",
+"it": 20200,
 "bar": "1h",
 "batch": 410,
 "passed": 0,
 "bench": 6.58,
-"pbo": 0.18,
+"pbo": 0.07,
 "best_family": "gated",
-"best_pm": 1.6,
-"best_params": "{'base': 'breakeven_retest', 'base_params': {'ext': 8.45, 'hold': 25, 'lookback': 41, 'sign': -1}, 'mode': 'spread_below', 'vol_window': 51, 'vol_pct': 0.514}",
+"best_pm": 2.9,
+"best_params": "{'base': 'release_overshoot', 'base_params': {'ev': 'fomc', 'hold': 480, 'k': 1.58, 'sign': 1, 'win': 11}, 'mode': 'tick_above', 'vol_window': 582, 'vol_pct': 0",
 "mix": "gat410",
-"queue_s": 410.0
+"queue_s": 375.0
 },
 "events": []
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 25219490,
-"last_5m": 13688,
-"last_1h": 446968,
-"last_24h": 12498310,
-"distinct_ideas": 21777478,
+"total": 25234595,
+"last_5m": 15105,
+"last_1h": 416870,
+"last_24h": 12464958,
+"distinct_ideas": 21792529,
 "dsr_bar": 6.58,
 "sharpe_std": 1.21,
 "families": [
 {
 "family": "gated",
-"n": 16142371,
+"n": 16156593,
 "pos_rate": 0.318,
 "best_pm": 3.22,
 "best_dsr": 0.611,
@@ -336,6 +336,15 @@
 "since": "2026-09-30"
 },
 {
+"family": "treasury_auction_concession",
+"n": 882,
+"pos_rate": 0.205,
+"best_pm": 0.87,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-01"
+},
+{
 "family": "calendar_rebalance_flow",
 "n": 848,
 "pos_rate": 0.394,
@@ -382,8 +391,8 @@
 },
 {
 "family": "portfolio",
-"n": 17,
-"pos_rate": 0.941,
+"n": 18,
+"pos_rate": 0.944,
 "best_pm": 2.17,
 "best_dsr": 0.0,
 "passed": 0,
@@ -466,35 +475,35 @@
 {
 "family": "atr_impulse",
 "bar": "15m",
-"n": 2887,
+"n": 2853,
 "best_pm": 0.61,
 "pos_rate": 0.006
 },
 {
 "family": "atr_impulse",
 "bar": "1h",
-"n": 9193,
+"n": 9065,
 "best_pm": 0.97,
-"pos_rate": 0.137
+"pos_rate": 0.138
 },
 {
 "family": "atr_impulse",
 "bar": "1m",
-"n": 75068,
+"n": 74068,
 "best_pm": -0.03,
 "pos_rate": 0.0
 },
 {
 "family": "atr_impulse",
 "bar": "30s",
-"n": 12426,
+"n": 12302,
 "best_pm": -0.26,
 "pos_rate": 0
 },
 {
 "family": "atr_impulse",
 "bar": "5m",
-"n": 20435,
+"n": 20126,
 "best_pm": 0.37,
 "pos_rate": 0.001
 },
@@ -669,37 +678,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 2287388,
+"n": 2282472,
 "best_pm": 1.57,
-"pos_rate": 0.345
+"pos_rate": 0.346
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 5355542,
+"n": 5348178,
 "best_pm": 3.22,
 "pos_rate": 0.398
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 665564,
+"n": 665990,
 "best_pm": 1.56,
-"pos_rate": 0.187
+"pos_rate": 0.188
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 150244,
+"n": 150056,
 "best_pm": 1.54,
 "pos_rate": 0.169
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 1527143,
+"n": 1524329,
 "best_pm": 1.6,
-"pos_rate": 0.333
+"pos_rate": 0.334
 },
 {
 "family": "grind_vs_burst",
@@ -914,7 +923,7 @@
 {
 "family": "portfolio",
 "bar": "1h",
-"n": 3,
+"n": 4,
 "best_pm": 2.17,
 "pos_rate": 1.0
 },
@@ -1171,6 +1180,13 @@
 "pos_rate": 0.084
 },
 {
+"family": "treasury_auction_concession",
+"bar": "1m",
+"n": 882,
+"best_pm": 0.87,
+"pos_rate": 0.205
+},
+{
 "family": "weekday_bias",
 "bar": "15m",
 "n": 1,
@@ -1208,21 +1224,21 @@
 {
 "family": "wf_ridge",
 "bar": "15m",
-"n": 337948,
+"n": 334706,
 "best_pm": 1.11,
 "pos_rate": 0.019
 },
 {
 "family": "wf_ridge",
 "bar": "1h",
-"n": 1178944,
+"n": 1165968,
 "best_pm": 1.36,
 "pos_rate": 0.027
 },
 {
 "family": "wf_ridge",
 "bar": "5m",
-"n": 108720,
+"n": 107154,
 "best_pm": 1.03,
 "pos_rate": 0.016
 },
@@ -3217,6 +3233,17 @@
 "dsr_bar": 6.58,
 "best_pm_1h": 3.22,
 "distinct": 21777478
+},
+{
+"t": 1790825667.572761,
+"total": 25234595,
+"per_min": 3021.0,
+"cpu": 8.2,
+"gpu": 0,
+"free_gb": 178.5,
+"dsr_bar": 6.58,
+"best_pm_1h": 3.22,
+"distinct": 21792529
 }
 ],
 "data": {
