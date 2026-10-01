@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-01 18:34:24 UTC",
+"generated_at": "2026-10-01 18:39:55 UTC",
 "host": {
-"cpu_pct": 8.8,
+"cpu_pct": 6.1,
 "gpu_pct": 0,
-"free_gb": 146.6,
-"uptime": "up 2 days,  3:20, 2 users, load averages: 5.41 4.52 4.40",
-"load": "{ 5.41 4.52 4.40 }"
+"free_gb": 187.7,
+"uptime": "up 2 days,  3:26, 2 users, load averages: 3.34 4.34 4.43",
+"load": "{ 3.34 4.34 4.43 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-01T20:31:28",
-"it": 36800,
+"ts": "2026-10-01T20:36:59",
+"it": 37000,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.5,
-"pbo": 0.25,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 0.54,
-"best_params": "{'base': 'cta_pnl_stopout', 'base_params': {'hold': 6, 'k': 0.767, 'n': 21, 'sign': 1}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 241, 'g2_mode': 'tick_above', ",
+"best_pm": 1.18,
+"best_params": "{'base': 'calendar_rebalance_flow', 'base_params': {'k': 0.103, 'period': 'month', 'phase': 'pre', 'sign': -1, 'span': 2}, 'mode': 'session', 'start_hour': 13, ",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-01T20:34:23",
-"it": 28180,
+"ts": "2026-10-01T20:38:08",
+"it": 28210,
 "bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.5,
-"pbo": 0.43,
+"pbo": 0.75,
 "best_family": "gated",
-"best_pm": 0.27,
-"best_params": "{'base': 'inventory_vacuum', 'base_params': {'band': 0.481, 'd': 4, 'rel': 1.46, 'sign': 1, 'theta': 0.495}, 'mode': 'spread_below', 'vol_window': 240, 'vol_pct",
+"best_pm": 0.45,
+"best_params": "{'base': 'vol_target_rebalance', 'base_params': {'f': 3, 'hold': 5, 'k': 1.5, 'side': 'relever', 'sign': 1}, 'mode': 'vol_above', 'vol_window': 914, 'vol_pct': ",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 26790571,
-"last_5m": 7560,
-"last_1h": 30731,
-"last_24h": 5772811,
-"distinct_ideas": 23343141,
+"total": 26792723,
+"last_5m": 1832,
+"last_1h": 29999,
+"last_24h": 5730145,
+"distinct_ideas": 23345221,
 "dsr_bar": 6.5,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17534482,
+"n": 17536634,
 "pos_rate": 0.326,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -1139,37 +1139,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 1318525,
+"n": 1301819,
 "best_pm": 1.6,
-"pos_rate": 0.451
+"pos_rate": 0.452
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 2422944,
+"n": 2411886,
 "best_pm": 1.89,
 "pos_rate": 0.429
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 609404,
+"n": 608406,
 "best_pm": 16.85,
 "pos_rate": 0.29
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 168411,
+"n": 167236,
 "best_pm": 1.4,
-"pos_rate": 0.233
+"pos_rate": 0.234
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 1051280,
+"n": 1038551,
 "best_pm": 1.56,
-"pos_rate": 0.434
+"pos_rate": 0.435
 },
 {
 "family": "grind_vs_burst",
@@ -1854,6 +1854,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-01T18:37",
+"name": "signed_jump_asymmetry",
+"status": "accepted",
+"rationale": "PAYER = lottery-seeking leveraged retail/CFD buyers and headline-chasing fast money, who overpay after a week whose variance came from a few large up-bars, and crash-averse holders and risk managers, who dump at a concession after a week whose variance came from large down-bars.\n",
+"note": "{\"name\": \"signed_jump_asymmetry\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.4936625}"
+},
+{
 "ts": "2026-10-01T18:19",
 "name": "stale_high_time_stop",
 "status": "accepted",
@@ -1929,13 +1936,6 @@
 "status": "accepted",
 "rationale": "PAYER = vol-target / risk-control funds that size gold off an equal-weighted rolling-window volatility (20d/60d). When a shock day leaves that window, their estimate falls on a date known `window` days in advance, for no economic reason, and they must re-lever at whatever price; ",
 "note": "{\"name\": \"vol_window_rolloff\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.46475}"
-},
-{
-"ts": "2026-10-01T14:52",
-"name": "weekend_gap_repricing",
-"status": "accepted",
-"rationale": "PAYER = holders of resting stop orders and margin-called accounts that are executed in the Sunday-reopen vacuum (sign -1: the thin-book overshoot is refunded once London/NY depth returns), or dealers who shade the reopen quote toward Friday's close and hand the rest of the weeken",
-"note": "{\"name\": \"weekend_gap_repricing\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.124}"
 }
 ],
 "history": [
@@ -5576,6 +5576,17 @@
 "dsr_bar": 6.5,
 "best_pm_1h": 2.63,
 "distinct": 23343141
+},
+{
+"t": 1790879995.243426,
+"total": 26792723,
+"per_min": 366.0,
+"cpu": 6.1,
+"gpu": 0,
+"free_gb": 187.7,
+"dsr_bar": 6.5,
+"best_pm_1h": 2.63,
+"distinct": 23345221
 }
 ],
 "instrument": "XAUUSD",
