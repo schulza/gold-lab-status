@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-01 22:46:17 UTC",
+"generated_at": "2026-10-01 22:52:04 UTC",
 "host": {
-"cpu_pct": 19.8,
-"gpu_pct": 95,
-"free_gb": 148.2,
-"uptime": "up 2 days,  7:32, 2 users, load averages: 4.30 5.48 5.73",
-"load": "{ 4.30 5.48 5.73 }"
+"cpu_pct": 9.2,
+"gpu_pct": 0,
+"free_gb": 154.7,
+"uptime": "up 2 days,  7:37, 2 users, load averages: 5.04 6.04 5.95",
+"load": "{ 5.04 6.04 5.95 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-02T00:46:16",
-"it": 42691,
-"bar": "1h",
-"batch": 8,
+"ts": "2026-10-02T00:51:58",
+"it": 42820,
+"bar": "1m",
+"batch": 312,
 "passed": 0,
 "bench": 6.49,
-"pbo": 0.64,
+"pbo": 0.11,
 "best_family": "gated",
-"best_pm": 0.59,
-"best_params": "{'base': 'drawdown_derisk_flow', 'base_params': {'d': 11, 'hold': 6, 'k': 1.11, 'side': 'down', 'sign': 1}, 'mode': 'vol_below', 'vol_window': 510, 'vol_pct': 0",
-"mix": "gat8",
-"queue_s": 8.0
+"best_pm": 0.81,
+"best_params": "{'base': 'round_level_break', 'base_params': {'fresh': 291, 'hold': 24, 'offset': 0.37, 'sign': -1, 'step': 50}, 'mode': 'vol_above', 'vol_window': 60, 'vol_pct",
+"mix": "att286/gat26",
+"queue_s": 30.0
 },
 "events": []
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-02T00:43:12",
-"it": 32600,
-"bar": "30s",
-"batch": 8,
+"ts": "2026-10-02T00:49:54",
+"it": 32800,
+"bar": "15m",
+"batch": 409,
 "passed": 0,
 "bench": 6.49,
-"pbo": 0.21,
+"pbo": 0.14,
 "best_family": "gated",
-"best_pm": 0.48,
-"best_params": "{'base': 'settle_hedge_momentum', 'base_params': {'entry': 5, 'hold': 63, 'k': 2.25, 'sign': -1}, 'mode': 'htf_against', 'htf': '1h', 'sma_n': 20, 'vol_scale': ",
-"mix": "gat8",
-"queue_s": 8.0
+"best_pm": 2.64,
+"best_params": "{'base': 'unexited_leg_turnover', 'base_params': {'d': 8.57, 'k': 2.71, 'rho': 1.06, 'sign': 1, 'theta': 0.692}, 'mode': 'spread_below', 'vol_window': 240, 'vol",
+"mix": "att343/gat66",
+"queue_s": 228.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 26934247,
-"last_5m": 4584,
-"last_1h": 48201,
-"last_24h": 3914800,
-"distinct_ideas": 23485373,
+"total": 26938286,
+"last_5m": 4188,
+"last_1h": 43845,
+"last_24h": 3850098,
+"distinct_ideas": 23489849,
 "dsr_bar": 6.49,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17618948,
+"n": 17621954,
 "pos_rate": 0.327,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -327,6 +327,15 @@
 "since": "2026-10-01"
 },
 {
+"family": "attention_decay_unwind",
+"n": 5250,
+"pos_rate": 0.43,
+"best_pm": 1.05,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-01"
+},
+{
 "family": "accumulator_knockout_flow",
 "n": 4853,
 "pos_rate": 0.472,
@@ -430,15 +439,6 @@
 "n": 4235,
 "pos_rate": 0.382,
 "best_pm": 1.12,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-01"
-},
-{
-"family": "attention_decay_unwind",
-"n": 4228,
-"pos_rate": 0.393,
-"best_pm": 0.91,
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-01"
@@ -643,8 +643,8 @@
 },
 {
 "family": "calendar_rebalance_flow",
-"n": 1639,
-"pos_rate": 0.325,
+"n": 1641,
+"pos_rate": 0.324,
 "best_pm": 1.59,
 "best_dsr": 0.0,
 "passed": 0,
@@ -670,7 +670,7 @@
 },
 {
 "family": "rebalance_size",
-"n": 798,
+"n": 799,
 "pos_rate": 0.39,
 "best_pm": 0.45,
 "best_dsr": 0.0,
@@ -891,37 +891,37 @@
 {
 "family": "attention_decay_unwind",
 "bar": "15m",
-"n": 848,
-"best_pm": 0.82,
-"pos_rate": 0.428
+"n": 1265,
+"best_pm": 1.05,
+"pos_rate": 0.468
 },
 {
 "family": "attention_decay_unwind",
 "bar": "1h",
-"n": 845,
-"best_pm": 0.72,
-"pos_rate": 0.374
+"n": 2219,
+"best_pm": 1.13,
+"pos_rate": 0.417
 },
 {
 "family": "attention_decay_unwind",
 "bar": "1m",
-"n": 845,
-"best_pm": 0.89,
-"pos_rate": 0.341
+"n": 2034,
+"best_pm": 1.05,
+"pos_rate": 0.416
 },
 {
 "family": "attention_decay_unwind",
 "bar": "30s",
-"n": 846,
+"n": 1108,
 "best_pm": 0.91,
-"pos_rate": 0.418
+"pos_rate": 0.458
 },
 {
 "family": "attention_decay_unwind",
 "bar": "5m",
-"n": 844,
-"best_pm": 0.78,
-"pos_rate": 0.405
+"n": 1187,
+"best_pm": 1.05,
+"pos_rate": 0.465
 },
 {
 "family": "average_price_benchmark_pull",
@@ -996,9 +996,9 @@
 {
 "family": "calendar_rebalance_flow",
 "bar": "15m",
-"n": 1639,
+"n": 1641,
 "best_pm": 1.59,
-"pos_rate": 0.325
+"pos_rate": 0.324
 },
 {
 "family": "candle_close_herd",
@@ -1269,37 +1269,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 821322,
+"n": 806336,
 "best_pm": 1.65,
 "pos_rate": 0.461
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 1533258,
+"n": 1496771,
 "best_pm": 1.89,
-"pos_rate": 0.425
+"pos_rate": 0.426
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 495021,
+"n": 490096,
 "best_pm": 16.85,
-"pos_rate": 0.307
+"pos_rate": 0.308
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 141854,
+"n": 141270,
 "best_pm": 14.49,
 "pos_rate": 0.252
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 674895,
+"n": 663587,
 "best_pm": 1.56,
-"pos_rate": 0.455
+"pos_rate": 0.456
 },
 {
 "family": "grind_vs_burst",
@@ -1612,7 +1612,7 @@
 {
 "family": "rebalance_size",
 "bar": "15m",
-"n": 798,
+"n": 799,
 "best_pm": 0.45,
 "pos_rate": 0.39
 },
@@ -2131,6 +2131,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-01T22:48",
+"name": null,
+"status": "rejected",
+"rationale": "PAYER = institutions slicing a multi-day parent order. Their child orders make q-hour returns positively autocorrelated, so the trailing variance ratio VR(q) rises above 1, and whoever follows the last q-hour leg earns the impact of the slices still to come.\nThe mirror payer is i",
+"note": "ast: import not allowed: from __future__"
+},
+{
 "ts": "2026-10-01T22:30",
 "name": "attention_decay_unwind",
 "status": "accepted",
@@ -2206,13 +2213,6 @@
 "status": "accepted",
 "rationale": "PAYER = shorts who sold into a multi-day decline (mirror: longs who chased a rally). Once price retraces a share `theta` of the leg, that share of the cohort is under water; if the retrace runs faster than the leg was built (`speed` > 1), they have less time to cover than they to",
 "note": "{\"name\": \"retrace_speed_squeeze\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.392}"
-},
-{
-"ts": "2026-10-01T19:10",
-"name": "retrace_speed_squeeze",
-"status": "rejected",
-"rationale": "PAYER = late trend entrants who built positions over a slow multi-day leg (shorts into a slow decline, longs into a slow rally). When `theta` of that leg is retraced in a fraction of the time it took, their average entry is offside faster than their risk process can cut, and the ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
@@ -6348,6 +6348,17 @@
 "dsr_bar": 6.49,
 "best_pm_1h": 14.49,
 "distinct": 23485373
+},
+{
+"t": 1790895124.452172,
+"total": 26938286,
+"per_min": 838.0,
+"cpu": 9.2,
+"gpu": 0,
+"free_gb": 154.7,
+"dsr_bar": 6.49,
+"best_pm_1h": 14.49,
+"distinct": 23489849
 }
 ],
 "instrument": "XAUUSD",
