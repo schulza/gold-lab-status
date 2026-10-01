@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-01 10:18:55 UTC",
+"generated_at": "2026-10-01 10:24:26 UTC",
 "host": {
-"cpu_pct": 53.1,
-"gpu_pct": 100,
-"free_gb": 127.8,
-"uptime": "up 1 day, 19:04, 2 users, load averages: 17.51 17.86 15.47",
-"load": "{ 17.51 17.86 15.47 }"
+"cpu_pct": 9.2,
+"gpu_pct": 0,
+"free_gb": 220.7,
+"uptime": "up 1 day, 19:10, 2 users, load averages: 4.24 9.44 12.26",
+"load": "{ 4.24 9.44 12.26 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-01T12:18:44",
-"it": 27800,
+"ts": "2026-10-01T12:22:28",
+"it": 27810,
 "bar": "1h",
 "batch": 82,
 "passed": 0,
 "bench": 6.53,
-"pbo": 0.5,
+"pbo": 0.11,
 "best_family": "gated",
-"best_pm": 0.8,
-"best_params": "{'base': 'lookback_rolloff_flow', 'base_params': {'k': 2.3, 'lead': 6, 'lookback': 68, 'mode': 'any', 'sign': 1}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 238,",
+"best_pm": 1.14,
+"best_params": "{'base': 'drawdown_derisk_flow', 'base_params': {'d': 1, 'hold': 5, 'k': 2.75, 'side': 'both', 'sign': -1}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 97, 'g2_mo",
 "mix": "gat82",
 "queue_s": 82.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-01T12:16:42",
-"it": 21200,
-"bar": "15m",
-"batch": 82,
+"ts": "2026-10-01T12:20:56",
+"it": 21210,
+"bar": "30s",
+"batch": 31,
 "passed": 0,
 "bench": 6.53,
-"pbo": 0.07,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 1.51,
-"best_params": "{'base': 'vol_target_rebalance', 'base_params': {'f': 8, 'hold': 5, 'k': 1.52, 'side': 'relever', 'sign': 1}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 376, 'vo",
-"mix": "gat82",
-"queue_s": 82.0
+"best_pm": 1.08,
+"best_params": "{'base': 'dealer_gamma_hedge_flow', 'base_params': {'hold': 5, 'mode': 'both', 'n': 26, 'sign': -1, 'theta': 0.219}, 'mode': 'htf_against', 'htf': '1h', 'sma_n'",
+"mix": "gat31",
+"queue_s": 31.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 26325315,
-"last_5m": 20763,
-"last_1h": 152802,
-"last_24h": 9964467,
-"distinct_ideas": 22882051,
+"total": 26328862,
+"last_5m": 1243,
+"last_1h": 137006,
+"last_24h": 9916547,
+"distinct_ideas": 22884940,
 "dsr_bar": 6.53,
 "sharpe_std": 1.2,
 "families": [
 {
 "family": "gated",
-"n": 17223223,
+"n": 17226770,
 "pos_rate": 0.325,
 "best_pm": 13.63,
 "best_dsr": 0.611,
@@ -565,21 +565,21 @@
 {
 "family": "atr_impulse",
 "bar": "15m",
-"n": 293,
+"n": 288,
 "best_pm": -0.12,
 "pos_rate": 0
 },
 {
 "family": "atr_impulse",
 "bar": "1h",
-"n": 1455,
+"n": 1397,
 "best_pm": 0.94,
-"pos_rate": 0.13
+"pos_rate": 0.132
 },
 {
 "family": "atr_impulse",
 "bar": "1m",
-"n": 10337,
+"n": 10032,
 "best_pm": 0,
 "pos_rate": 0
 },
@@ -593,7 +593,7 @@
 {
 "family": "atr_impulse",
 "bar": "5m",
-"n": 2679,
+"n": 2639,
 "best_pm": 0.37,
 "pos_rate": 0.001
 },
@@ -845,35 +845,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 2041075,
+"n": 2038875,
 "best_pm": 1.57,
 "pos_rate": 0.411
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 4364324,
+"n": 4339418,
 "best_pm": 3.22,
 "pos_rate": 0.444
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 796324,
+"n": 794715,
 "best_pm": 13.63,
 "pos_rate": 0.249
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 192712,
+"n": 192805,
 "best_pm": 1.54,
 "pos_rate": 0.211
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 1541314,
+"n": 1540627,
 "best_pm": 4.7,
 "pos_rate": 0.384
 },
@@ -1013,7 +1013,7 @@
 {
 "family": "mean_reversion_band",
 "bar": "1h",
-"n": 4,
+"n": 3,
 "best_pm": -0.02,
 "pos_rate": 0
 },
@@ -1160,21 +1160,21 @@
 {
 "family": "round_level_break",
 "bar": "15m",
-"n": 5553,
+"n": 5222,
 "best_pm": 0.98,
-"pos_rate": 0.234
+"pos_rate": 0.23
 },
 {
 "family": "round_level_break",
 "bar": "1h",
-"n": 196,
+"n": 140,
 "best_pm": 0.56,
-"pos_rate": 0.26
+"pos_rate": 0.207
 },
 {
 "family": "round_level_break",
 "bar": "1m",
-"n": 5358,
+"n": 4950,
 "best_pm": 0.96,
 "pos_rate": 0.181
 },
@@ -1188,9 +1188,9 @@
 {
 "family": "round_level_break",
 "bar": "5m",
-"n": 6819,
+"n": 6642,
 "best_pm": 1.06,
-"pos_rate": 0.269
+"pos_rate": 0.267
 },
 {
 "family": "same_clock_flow",
@@ -1342,21 +1342,21 @@
 {
 "family": "sweep_reversal",
 "bar": "15m",
-"n": 28999,
+"n": 28393,
 "best_pm": 0.77,
-"pos_rate": 0.048
+"pos_rate": 0.047
 },
 {
 "family": "sweep_reversal",
 "bar": "1h",
-"n": 79664,
+"n": 74123,
 "best_pm": 0.83,
-"pos_rate": 0.048
+"pos_rate": 0.046
 },
 {
 "family": "sweep_reversal",
 "bar": "1m",
-"n": 18454,
+"n": 17904,
 "best_pm": 0,
 "pos_rate": 0.0
 },
@@ -1370,7 +1370,7 @@
 {
 "family": "sweep_reversal",
 "bar": "5m",
-"n": 13982,
+"n": 13780,
 "best_pm": 0.39,
 "pos_rate": 0.013
 },
@@ -1531,21 +1531,21 @@
 {
 "family": "wf_ridge",
 "bar": "15m",
-"n": 39875,
+"n": 39167,
 "best_pm": 1.11,
 "pos_rate": 0.02
 },
 {
 "family": "wf_ridge",
 "bar": "1h",
-"n": 265088,
+"n": 255676,
 "best_pm": 1.09,
 "pos_rate": 0.027
 },
 {
 "family": "wf_ridge",
 "bar": "5m",
-"n": 16223,
+"n": 16012,
 "best_pm": 0.94,
 "pos_rate": 0.017
 },
@@ -1566,6 +1566,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-10-01T10:20",
+"name": "band_rebalance_flow",
+"status": "accepted",
+"rationale": "PAYER = tolerance-band rebalancers (multi-asset mandates, model portfolios and endowments that hold gold at a target weight and must trade back when the weight drifts out of a fixed band, whatever the date). Their order is forced, price-insensitive and against the move, so they p",
+"note": "{\"name\": \"band_rebalance_flow\", \"grid\": 36, \"sec_per_param\": 0.0, \"active_frac\": 0.8718}"
+},
 {
 "ts": "2026-10-01T09:46",
 "name": "weekend_margin_derisk",
@@ -1642,13 +1649,6 @@
 "status": "rejected",
 "rationale": "PAYER = slow allocators (asset-allocation committees, CTAs with daily rebalancing, ETF creation baskets, physical/central-bank desks) who can only adjust gold exposure over 1\u20133 days after a large macro surprise, so their follow-through orders execute at prices that lag the first-",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-01T03:58",
-"name": "trailing_stop_flush",
-"status": "accepted",
-"rationale": "PAYER = trend followers (CTA sleeves, retail EAs) running ATR trailing stops of the Chandelier type (22-bar ATR, 2\u20133 ATR below the leg's highest high); their stop is a price-insensitive market order at a level that is known in advance, so the first pullback through it forces them",
-"note": "{\"name\": \"trailing_stop_flush\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.37345}"
 }
 ],
 "history": [
@@ -4321,6 +4321,17 @@
 "dsr_bar": 6.53,
 "best_pm_1h": 2.51,
 "distinct": 22882051
+},
+{
+"t": 1790850266.064231,
+"total": 26328862,
+"per_min": 249.0,
+"cpu": 9.2,
+"gpu": 0,
+"free_gb": 220.7,
+"dsr_bar": 6.53,
+"best_pm_1h": 2.51,
+"distinct": 22884940
 }
 ],
 "data": {
