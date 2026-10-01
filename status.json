@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-01 21:55:34 UTC",
+"generated_at": "2026-10-01 22:01:04 UTC",
 "host": {
-"cpu_pct": 8.3,
+"cpu_pct": 9.0,
 "gpu_pct": 0,
-"free_gb": 147.6,
-"uptime": "up 2 days,  6:41, 2 users, load averages: 3.10 5.17 5.53",
-"load": "{ 3.10 5.17 5.53 }"
+"free_gb": 219.0,
+"uptime": "up 2 days,  6:47, 2 users, load averages: 3.37 4.58 5.24",
+"load": "{ 3.37 4.58 5.24 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-01T23:55:32",
-"it": 41620,
+"ts": "2026-10-01T23:55:57",
+"it": 41650,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.5,
-"pbo": 0.46,
+"pbo": 0.14,
 "best_family": "gated",
-"best_pm": 13.86,
-"best_params": "{'base': 'fix_flow_reversal', 'base_params': {'fix': 'am', 'hold': 82, 'k': 1.76, 'pre': 17, 'sign': -1}, 'mode': 'vol_above', 'vol_window': 474, 'vol_pct': 0.8",
+"best_pm": 0.55,
+"best_params": "{'base': 'drawdown_derisk_flow', 'base_params': {'d': 11, 'hold': 4, 'k': 1.24, 'side': 'down', 'sign': 1}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 100}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-01T23:55:34",
-"it": 31811,
-"bar": "5m",
+"ts": "2026-10-01T23:55:54",
+"it": 31830,
+"bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.5,
-"pbo": 0.82,
+"pbo": 0.79,
 "best_family": "gated",
-"best_pm": 0.4,
-"best_params": "{'base': 'treasury_auction_concession', 'base_params': {'dom': 'mid', 'hold': 181, 'k': 1.42, 'pre': 95, 'sign': -1}, 'mode': 'vol_above', 'vol_window': 125, 'v",
+"best_pm": 0.75,
+"best_params": "{'base': 'drawdown_derisk_flow', 'base_params': {'d': 11, 'hold': 5, 'k': 1.14, 'side': 'down', 'sign': 1}, 'mode': 'spread_below', 'vol_window': 518, 'vol_pct'",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 26896504,
-"last_5m": 1440,
-"last_1h": 39576,
-"last_24h": 4229262,
-"distinct_ideas": 23447814,
+"total": 26897128,
+"last_5m": 360,
+"last_1h": 33744,
+"last_24h": 4219646,
+"distinct_ideas": 23448438,
 "dsr_bar": 6.5,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17603195,
+"n": 17603819,
 "pos_rate": 0.327,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -1104,9 +1104,9 @@
 {
 "family": "etf_lag_flow",
 "bar": "15m",
-"n": 996,
-"best_pm": 0.37,
-"pos_rate": 0.035
+"n": 142,
+"best_pm": 0,
+"pos_rate": 0
 },
 {
 "family": "etf_lag_flow",
@@ -1118,9 +1118,9 @@
 {
 "family": "etf_lag_flow",
 "bar": "5m",
-"n": 994,
-"best_pm": 0.43,
-"pos_rate": 0.048
+"n": 140,
+"best_pm": 0,
+"pos_rate": 0
 },
 {
 "family": "event_drift",
@@ -1216,35 +1216,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 905925,
+"n": 901889,
 "best_pm": 1.65,
 "pos_rate": 0.458
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 1691513,
+"n": 1690879,
 "best_pm": 1.89,
 "pos_rate": 0.424
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 515170,
+"n": 515244,
 "best_pm": 16.85,
 "pos_rate": 0.304
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 146166,
+"n": 145920,
 "best_pm": 1.45,
 "pos_rate": 0.249
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 738917,
+"n": 735851,
 "best_pm": 1.56,
 "pos_rate": 0.45
 },
@@ -2043,6 +2043,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-01T21:55",
+"name": "unexited_leg_turnover",
+"status": "accepted",
+"rationale": "Payer = late entrants of a crowded leg who are trapped after the turn: a leg of at least `k` sigma over `d` days was built on a measured amount of turnover (tick volume), price has since given back `theta` of it, but the turnover since the extreme is only a fraction `rho` of the ",
+"note": "{\"name\": \"unexited_leg_turnover\", \"grid\": 48, \"sec_per_param\": 0.001, \"active_frac\": 0.048775}"
+},
+{
 "ts": "2026-10-01T21:37",
 "name": "restock_capitulation",
 "status": "accepted",
@@ -2118,13 +2125,6 @@
 "status": "accepted",
 "rationale": "PAYER = lottery-seeking leveraged retail/CFD buyers and headline-chasing fast money, who overpay after a week whose variance came from a few large up-bars, and crash-averse holders and risk managers, who dump at a concession after a week whose variance came from large down-bars.\n",
 "note": "{\"name\": \"signed_jump_asymmetry\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.4936625}"
-},
-{
-"ts": "2026-10-01T18:19",
-"name": "stale_high_time_stop",
-"status": "accepted",
-"rationale": "PAYER = longs who bought a breakout to a new high on a time stop, and buyers of 2\u20134-week calls whose delta decays as the high goes stale; dealers hedging those calls sell delta day after day (charm), and time-stop desks cut what \"has not worked in n days\". Both sell on elapsed ti",
-"note": "{\"name\": \"stale_high_time_stop\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.287}"
 }
 ],
 "history": [
@@ -6161,6 +6161,17 @@
 "dsr_bar": 6.5,
 "best_pm_1h": 1.59,
 "distinct": 23447814
+},
+{
+"t": 1790892064.144362,
+"total": 26897128,
+"per_min": 72.0,
+"cpu": 9.0,
+"gpu": 0,
+"free_gb": 219.0,
+"dsr_bar": 6.5,
+"best_pm_1h": 1.59,
+"distinct": 23448438
 }
 ],
 "instrument": "XAUUSD",
