@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-01 21:33:15 UTC",
+"generated_at": "2026-10-01 21:38:46 UTC",
 "host": {
-"cpu_pct": 16.8,
-"gpu_pct": 96,
-"free_gb": 149.1,
-"uptime": "up 2 days,  6:19, 2 users, load averages: 10.73 8.01 6.16",
-"load": "{ 10.73 8.01 6.16 }"
+"cpu_pct": 9.1,
+"gpu_pct": 0,
+"free_gb": 192.5,
+"uptime": "up 2 days,  6:24, 2 users, load averages: 6.21 6.30 5.90",
+"load": "{ 6.21 6.30 5.90 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-01T23:30:33",
-"it": 41200,
+"ts": "2026-10-01T23:36:32",
+"it": 41400,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.5,
-"pbo": 0.0,
+"pbo": 0.25,
 "best_family": "gated",
-"best_pm": 0.77,
-"best_params": "{'base': 'levered_etf_close_rebalance', 'base_params': {'k': 2.28, 'post': 52, 'pre': 19, 'sign': 1}, 'mode': 'vol_below', 'vol_window': 240, 'vol_pct': 0.7}",
+"best_pm": 0.15,
+"best_params": "{'base': 'vol_window_rolloff', 'base_params': {'drop': 0.0379, 'hold': 1, 'lead': 1, 'mode': 'long', 'sign': 1, 'window': 8}, 'mode': 'session', 'start_hour': 1",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-01T23:33:15",
-"it": 31524,
+"ts": "2026-10-01T23:37:56",
+"it": 31620,
 "bar": "5m",
 "batch": 8,
 "passed": 0,
 "bench": 6.5,
-"pbo": 0.04,
+"pbo": 0.14,
 "best_family": "gated",
-"best_pm": 1.04,
-"best_params": "{'base': 'calendar_rebalance_flow', 'base_params': {'k': 0.108, 'period': 'month', 'phase': 'pre', 'sign': -1, 'span': 1}, 'mode': 'session', 'start_hour': 13, ",
+"best_pm": 0.95,
+"best_params": "{'base': 'calendar_rebalance_flow', 'base_params': {'k': 0.043, 'period': 'month', 'phase': 'pre', 'sign': -1, 'span': 2}, 'mode': 'htf_with', 'htf': '1h', 'sma",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 26883620,
-"last_5m": 9508,
-"last_1h": 36742,
-"last_24h": 4405036,
-"distinct_ideas": 23435220,
+"total": 26886222,
+"last_5m": 2312,
+"last_1h": 34864,
+"last_24h": 4374719,
+"distinct_ideas": 23437772,
 "dsr_bar": 6.5,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17597334,
+"n": 17599934,
 "pos_rate": 0.327,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -616,7 +616,7 @@
 },
 {
 "family": "calendar_rebalance_flow",
-"n": 1615,
+"n": 1617,
 "pos_rate": 0.323,
 "best_pm": 1.59,
 "best_dsr": 0.0,
@@ -782,7 +782,7 @@
 "pbo": 0.04
 }
 ],
-"best_pm_1h": 2.57,
+"best_pm_1h": 1.59,
 "heat": [
 {
 "family": "absorbed_flow_release",
@@ -1207,37 +1207,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 955576,
+"n": 950510,
 "best_pm": 1.65,
 "pos_rate": 0.457
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 1773060,
+"n": 1754180,
 "best_pm": 1.89,
 "pos_rate": 0.425
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 526014,
+"n": 523900,
 "best_pm": 16.85,
 "pos_rate": 0.303
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 149203,
+"n": 149064,
 "best_pm": 1.45,
-"pos_rate": 0.247
+"pos_rate": 0.248
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 776633,
+"n": 772515,
 "best_pm": 1.56,
-"pos_rate": 0.448
+"pos_rate": 0.449
 },
 {
 "family": "grind_vs_burst",
@@ -1999,6 +1999,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-01T21:37",
+"name": "restock_capitulation",
+"status": "accepted",
+"rationale": "Payer = price-elastic physical buyers (jewellery fabricators, bar dealers, hand-to-mouth industrial users) who defer purchases after a jump and wait for a dip; once their inventory cover runs out without a retrace they must restock at the new level regardless of price (mirror: sc",
+"note": "{\"name\": \"restock_capitulation\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.7172375}"
+},
+{
 "ts": "2026-10-01T21:18",
 "name": "trend_breadth_flow",
 "status": "accepted",
@@ -2074,13 +2081,6 @@
 "status": "accepted",
 "rationale": "PAYER = longs who bought a breakout to a new high on a time stop, and buyers of 2\u20134-week calls whose delta decays as the high goes stale; dealers hedging those calls sell delta day after day (charm), and time-stop desks cut what \"has not worked in n days\". Both sell on elapsed ti",
 "note": "{\"name\": \"stale_high_time_stop\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.287}"
-},
-{
-"ts": "2026-10-01T18:00",
-"name": "record_attention",
-"status": "accepted",
-"rationale": "PAYER = attention-driven buyers and sellers (retail coin/ETF/CFD accounts, wealth-desk clients) who act only after a \"gold hits N-month high/low\" headline and arrive 1\u20135 days late through slow channels (bank transfers, ETF creations, dealer premiums); they pay impact to whoever i",
-"note": "{\"name\": \"record_attention\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.2335}"
 }
 ],
 "history": [
@@ -6073,6 +6073,17 @@
 "dsr_bar": 6.5,
 "best_pm_1h": 2.57,
 "distinct": 23435220
+},
+{
+"t": 1790890726.5293498,
+"total": 26886222,
+"per_min": 462.0,
+"cpu": 9.1,
+"gpu": 0,
+"free_gb": 192.5,
+"dsr_bar": 6.5,
+"best_pm_1h": 1.59,
+"distinct": 23437772
 }
 ],
 "instrument": "XAUUSD",
