@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-01 01:43:30 UTC",
+"generated_at": "2026-10-01 01:49:32 UTC",
 "host": {
-"cpu_pct": 74.3,
-"gpu_pct": 94,
-"free_gb": 163.8,
-"uptime": "up 1 day, 10:29, 2 users, load averages: 19.22 19.54 18.12",
-"load": "{ 19.22 19.54 18.12 }"
+"cpu_pct": 63.0,
+"gpu_pct": 87,
+"free_gb": 151.7,
+"uptime": "up 1 day, 10:35, 2 users, load averages: 26.21 20.16 18.60",
+"load": "{ 26.21 20.16 18.60 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-01T03:43:29",
-"it": 18399,
-"bar": "1m",
-"batch": 62,
+"ts": "2026-10-01T03:49:24",
+"it": 18480,
+"bar": "1h",
+"batch": 410,
 "passed": 0,
-"bench": 6.64,
-"pbo": 0.14,
+"bench": 6.63,
+"pbo": 0.18,
 "best_family": "gated",
-"best_pm": 0.77,
-"best_params": "{'base': 'fix_flow_reversal', 'base_params': {'fix': 'pm', 'hold': 86, 'k': 1.62, 'pre': 446, 'sign': -1}, 'mode': 'spread_below', 'vol_window': 112, 'vol_pct':",
-"mix": "gat62",
-"queue_s": 62.0
+"best_pm": 1.88,
+"best_params": "{'base': 'wick_absorption', 'base_params': {'k': 2.35, 'n': 277, 'net': 'any', 'sign': -1, 'span': 6}, 'mode': 'spread_below', 'vol_window': 240, 'vol_pct': 0.3",
+"mix": "gat410",
+"queue_s": 410.0
 },
 "events": []
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-01T03:43:29",
-"it": 14034,
+"ts": "2026-10-01T03:49:31",
+"it": 14160,
 "bar": "15m",
 "batch": 410,
 "passed": 0,
-"bench": 6.64,
-"pbo": 0.18,
+"bench": 6.63,
+"pbo": 0.21,
 "best_family": "gated",
-"best_pm": 3.36,
-"best_params": "{'base': 'candle_close_herd', 'base_params': {'hold': 39, 'k': 2.87, 'm': 8, 'sign': -1, 'span': 1, 'theta': 0.675}, 'mode': 'session', 'start_hour': 0, 'hold_h",
+"best_pm": 4.21,
+"best_params": "{'base': 'settle_hedge_momentum', 'base_params': {'entry': 5, 'hold': 182, 'k': 1.94, 'sign': -1}, 'mode': 'vol_above', 'vol_window': 403, 'vol_pct': 0.632, 'g2",
 "mix": "gat410",
 "queue_s": 410.0
 },
@@ -48,18 +48,18 @@
 }
 ],
 "registry": {
-"total": 24428814,
-"last_5m": 53380,
-"last_1h": 439577,
-"last_24h": 12659067,
-"distinct_ideas": 20989831,
+"total": 24481661,
+"last_5m": 43916,
+"last_1h": 490122,
+"last_24h": 12664267,
+"distinct_ideas": 21041386,
 "dsr_bar": 6.64,
 "sharpe_std": 1.22,
 "families": [
 {
 "family": "gated",
-"n": 15355094,
-"pos_rate": 0.313,
+"n": 15408002,
+"pos_rate": 0.314,
 "best_pm": 2.97,
 "best_dsr": 0.611,
 "passed": 0,
@@ -364,8 +364,8 @@
 },
 {
 "family": "portfolio",
-"n": 16,
-"pos_rate": 0.938,
+"n": 17,
+"pos_rate": 0.941,
 "best_pm": 2.17,
 "best_dsr": 0.0,
 "passed": 0,
@@ -422,7 +422,7 @@
 "pbo": 0.04
 }
 ],
-"best_pm_1h": 1.88,
+"best_pm_1h": 1.92,
 "heat": [
 {
 "family": "asia_thin_move_fade",
@@ -448,35 +448,35 @@
 {
 "family": "atr_impulse",
 "bar": "15m",
-"n": 3704,
+"n": 3668,
 "best_pm": 0.61,
-"pos_rate": 0.006
+"pos_rate": 0.007
 },
 {
 "family": "atr_impulse",
 "bar": "1h",
-"n": 12106,
+"n": 11989,
 "best_pm": 1.03,
 "pos_rate": 0.137
 },
 {
 "family": "atr_impulse",
 "bar": "1m",
-"n": 93568,
+"n": 92568,
 "best_pm": -0.03,
 "pos_rate": 0.0
 },
 {
 "family": "atr_impulse",
 "bar": "30s",
-"n": 15527,
+"n": 15403,
 "best_pm": -0.26,
 "pos_rate": 0
 },
 {
 "family": "atr_impulse",
 "bar": "5m",
-"n": 25811,
+"n": 25501,
 "best_pm": 0.55,
 "pos_rate": 0.001
 },
@@ -623,37 +623,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 2211848,
+"n": 2224152,
 "best_pm": 1.45,
-"pos_rate": 0.323
+"pos_rate": 0.324
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 5360828,
+"n": 5358542,
 "best_pm": 2.85,
-"pos_rate": 0.386
+"pos_rate": 0.387
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 639052,
+"n": 640222,
 "best_pm": 1.56,
-"pos_rate": 0.17
+"pos_rate": 0.171
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 139908,
+"n": 141022,
 "best_pm": 1.53,
-"pos_rate": 0.155
+"pos_rate": 0.156
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 1422864,
+"n": 1433502,
 "best_pm": 1.6,
-"pos_rate": 0.311
+"pos_rate": 0.312
 },
 {
 "family": "grind_vs_burst",
@@ -875,7 +875,7 @@
 {
 "family": "portfolio",
 "bar": "30s",
-"n": 9,
+"n": 10,
 "best_pm": 2.17,
 "pos_rate": 1.0
 },
@@ -1162,21 +1162,21 @@
 {
 "family": "wf_ridge",
 "bar": "15m",
-"n": 419031,
+"n": 415791,
 "best_pm": 1.11,
 "pos_rate": 0.019
 },
 {
 "family": "wf_ridge",
 "bar": "1h",
-"n": 1416817,
+"n": 1405468,
 "best_pm": 1.36,
 "pos_rate": 0.027
 },
 {
 "family": "wf_ridge",
 "bar": "5m",
-"n": 134594,
+"n": 133029,
 "best_pm": 1.03,
 "pos_rate": 0.016
 },
@@ -1197,6 +1197,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-10-01T01:44",
+"name": "weekend_gap_stopout",
+"status": "rejected",
+"rationale": "PAYER = weekend position holders whose resting stops and broker margin close-outs are executed at the first available price when the market reopens Sunday 18:00 New York, the thinnest and widest-spread hour of the week, so their forced fills push the reopen move past what the wee",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
 {
 "ts": "2026-10-01T01:13",
 "name": "levered_etf_close_rebalance",
@@ -1273,13 +1280,6 @@
 "status": "accepted",
 "rationale": "PAYER = WM/Reuters 4pm London FX-fix benchmark participants (passive FX hedgers of non-USD gold and equity holdings, index trackers, corporate month-end conversions) and the dealers pre-hedging their net USD imbalance: their flow moves the dollar in the 15:57:30\u201316:02:30 London w",
 "note": "{\"name\": \"fx_fix_passthrough\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.00525}"
-},
-{
-"ts": "2026-09-30T18:42",
-"name": "late_participation",
-"status": "accepted",
-"rationale": "PAYER = late chasers and stop cascades, the reactive takers whose activity arrives at the END of a move they did not start (they trade the move after it is visible, pay impact into a book the initiator has already emptied, and have no follow-on flow); the initiator's activity is ",
-"note": "{\"name\": \"late_participation\", \"grid\": 48, \"sec_per_param\": 0.001, \"active_frac\": 0.0346875}"
 }
 ],
 "history": [
@@ -2973,6 +2973,17 @@
 "dsr_bar": 6.64,
 "best_pm_1h": 1.88,
 "distinct": 20989831
+},
+{
+"t": 1790819372.994366,
+"total": 24481661,
+"per_min": 8783.0,
+"cpu": 63.0,
+"gpu": 87,
+"free_gb": 151.7,
+"dsr_bar": 6.64,
+"best_pm_1h": 1.92,
+"distinct": 21041386
 }
 ],
 "data": {
