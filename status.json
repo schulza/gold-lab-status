@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-01 13:54:38 UTC",
+"generated_at": "2026-10-01 14:00:07 UTC",
 "host": {
-"cpu_pct": 6.1,
+"cpu_pct": 9.3,
 "gpu_pct": 0,
-"free_gb": 146.0,
-"uptime": "up 1 day, 22:40, 2 users, load averages: 4.64 6.42 7.01",
-"load": "{ 4.64 6.42 7.01 }"
+"free_gb": 223.5,
+"uptime": "up 1 day, 22:46, 2 users, load averages: 3.95 5.99 6.68",
+"load": "{ 3.95 5.99 6.68 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-01T15:53:39",
-"it": 30800,
+"ts": "2026-10-01T15:57:11",
+"it": 30810,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.51,
-"pbo": 0.57,
+"pbo": 0.11,
 "best_family": "gated",
-"best_pm": 0.97,
-"best_params": "{'base': 'trailing_stop_flush', 'base_params': {'hold': 70, 'k': 3.64, 'leg': 6.65, 'n': 11, 'sign': -1}, 'mode': 'vol_above', 'vol_window': 169, 'vol_pct': 0.3",
+"best_pm": 0.8,
+"best_params": "{'base': 'cot_positioning', 'base_params': {'exit': 0.0, 'feature': 'cot_net_chg4z', 'hold': 249, 'sign': -1, 'thr': 0.524}, 'mode': 'session', 'start_hour': 5,",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-01T15:51:30",
-"it": 23400,
+"ts": "2026-10-01T15:56:36",
+"it": 23520,
 "bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.51,
-"pbo": 0.11,
+"pbo": 0.57,
 "best_family": "gated",
-"best_pm": 0.76,
-"best_params": "{'base': 'news_flow_split', 'base_params': {'days': 8, 'k': 1.19, 'mode': 'flow', 'sign': -1, 'win': 126}, 'mode': 'spread_below', 'vol_window': 475, 'vol_pct':",
+"best_pm": 0.11,
+"best_params": "{'base': 'etf_lag_flow', 'base_params': {'hold': 6, 'k': 2.37, 'pre': 0, 'sign': 1}, 'mode': 'spread_below', 'vol_window': 740, 'vol_pct': 0.229, 'vol_scale': 0",
 "mix": "gat8",
-"queue_s": 8.0
+"queue_s": 7.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 26650791,
-"last_5m": 3660,
-"last_1h": 60709,
-"last_24h": 7690185,
-"distinct_ideas": 23204932,
+"total": 26651815,
+"last_5m": 1024,
+"last_1h": 61733,
+"last_24h": 7683221,
+"distinct_ideas": 23205956,
 "dsr_bar": 6.51,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17447074,
+"n": 17448098,
 "pos_rate": 0.326,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -996,37 +996,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 1808686,
+"n": 1807776,
 "best_pm": 1.57,
 "pos_rate": 0.432
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 3373355,
+"n": 3368475,
 "best_pm": 2.56,
 "pos_rate": 0.432
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 732968,
+"n": 732194,
 "best_pm": 16.85,
 "pos_rate": 0.271
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 193665,
+"n": 193884,
 "best_pm": 1.27,
 "pos_rate": 0.217
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 1421373,
+"n": 1420754,
 "best_pm": 1.6,
-"pos_rate": 0.407
+"pos_rate": 0.408
 },
 {
 "family": "grind_vs_burst",
@@ -1599,6 +1599,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-01T13:56",
+"name": "asia_participation_shift",
+"status": "accepted",
+"rationale": "PAYER = Western macro/fair-value desks who lean against moves sponsored by Asian physical and Shanghai speculative buyers (\"hot\" mode), and Western momentum longs whose move has no physical sponsor behind it (\"cold\" mode).\nThe measured quantity is the Asia-hours (01\u201307 UTC) share",
+"note": "{\"name\": \"asia_participation_shift\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.0569375}"
+},
+{
 "ts": "2026-10-01T13:37",
 "name": "wide_spread_concession",
 "status": "rejected",
@@ -1674,13 +1681,6 @@
 "status": "rejected",
 "rationale": "Payer = liquidity-motivated sellers and buyers (redemptions, margin sellers, hedgers closing a book) who need size done within a day or two. Risk-averse market makers absorb them only at a price concession and earn it back as the price reverts over the next 1\u20133 days (Campbell-Gro",
 "note": "ast: name not allowed: getattr"
-},
-{
-"ts": "2026-10-01T08:43",
-"name": "dealer_gamma_hedge_flow",
-"status": "accepted",
-"rationale": "Payer = option dealers who are net short gamma after customers buy gold options: they must delta-hedge by buying after rallies and selling after declines (and the reverse when long gamma), a mechanical, price-insensitive flow that persists for days until the options expire or rol",
-"note": "{\"name\": \"dealer_gamma_hedge_flow\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.3136}"
 }
 ],
 "history": [
@@ -4771,6 +4771,17 @@
 "dsr_bar": 6.51,
 "best_pm_1h": 2.5,
 "distinct": 23204932
+},
+{
+"t": 1790863207.927946,
+"total": 26651815,
+"per_min": 205.0,
+"cpu": 9.3,
+"gpu": 0,
+"free_gb": 223.5,
+"dsr_bar": 6.51,
+"best_pm_1h": 2.5,
+"distinct": 23205956
 }
 ],
 "instrument": "XAUUSD",
