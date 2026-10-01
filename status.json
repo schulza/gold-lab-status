@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-01 22:24:06 UTC",
+"generated_at": "2026-10-01 22:29:36 UTC",
 "host": {
-"cpu_pct": 19.5,
-"gpu_pct": 97,
-"free_gb": 144.7,
-"uptime": "up 2 days,  7:09, 2 users, load averages: 5.32 6.63 6.97",
-"load": "{ 5.32 6.63 6.97 }"
+"cpu_pct": 8.9,
+"gpu_pct": 0,
+"free_gb": 144.8,
+"uptime": "up 2 days,  7:15, 2 users, load averages: 3.27 5.20 6.28",
+"load": "{ 3.27 5.20 6.28 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-02T00:24:01",
-"it": 42240,
+"ts": "2026-10-02T00:26:09",
+"it": 42400,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.49,
-"pbo": 0.43,
+"pbo": 0.71,
 "best_family": "gated",
-"best_pm": -0.14,
-"best_params": "{'base': 'settle_hedge_momentum', 'base_params': {'entry': -71, 'hold': 60, 'k': 2.44, 'sign': 1}, 'mode': 'spread_below', 'vol_window': 60, 'vol_pct': 0.3, 'g2",
+"best_pm": 0.94,
+"best_params": "{'base': 'unexited_leg_turnover', 'base_params': {'d': 9.95, 'k': 2.87, 'rho': 1.09, 'sign': 1, 'theta': 0.632}, 'mode': 'tick_above', 'vol_window': 60, 'vol_pc",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-02T00:24:06",
-"it": 32312,
-"bar": "15m",
+"ts": "2026-10-02T00:29:36",
+"it": 32409,
+"bar": "30s",
 "batch": 8,
 "passed": 0,
 "bench": 6.49,
-"pbo": 0.54,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 0.76,
-"best_params": "{'base': 'fx_fix_passthrough', 'base_params': {'hold': 127, 'k': 2.93, 'pre': 6, 'sign': 1}, 'mode': 'vol_below', 'vol_window': 834, 'vol_pct': 0.417, 'g2_mode'",
+"best_pm": 0.72,
+"best_params": "{'base': 'candle_close_herd', 'base_params': {'hold': 55, 'k': 2.84, 'm': 4, 'sign': -1, 'span': 1, 'theta': 1.72}, 'mode': 'vol_above', 'vol_window': 300, 'vol",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 26923681,
-"last_5m": 2145,
-"last_1h": 49815,
-"last_24h": 4032837,
-"distinct_ideas": 23474975,
+"total": 26926404,
+"last_5m": 2051,
+"last_1h": 49933,
+"last_24h": 4003582,
+"distinct_ideas": 23477594,
 "dsr_bar": 6.49,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17612744,
+"n": 17615344,
 "pos_rate": 0.327,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -193,7 +193,7 @@
 },
 {
 "family": "unexited_leg_turnover",
-"n": 11087,
+"n": 11162,
 "pos_rate": 0.437,
 "best_pm": 14.19,
 "best_dsr": 0.0,
@@ -211,7 +211,7 @@
 },
 {
 "family": "restock_capitulation",
-"n": 10573,
+"n": 10606,
 "pos_rate": 0.398,
 "best_pm": 1.02,
 "best_dsr": 0.0,
@@ -229,7 +229,7 @@
 },
 {
 "family": "trend_breadth_flow",
-"n": 10059,
+"n": 10074,
 "pos_rate": 0.365,
 "best_pm": 0.96,
 "best_dsr": 0.0,
@@ -800,7 +800,7 @@
 "pbo": 0.04
 }
 ],
-"best_pm_1h": 14.19,
+"best_pm_1h": 14.49,
 "heat": [
 {
 "family": "absorbed_flow_release",
@@ -861,9 +861,9 @@
 {
 "family": "asia_thin_move_fade",
 "bar": "15m",
-"n": 928,
-"best_pm": 0.55,
-"pos_rate": 0.205
+"n": 904,
+"best_pm": 0.47,
+"pos_rate": 0.2
 },
 {
 "family": "asia_thin_move_fade",
@@ -1225,37 +1225,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 852517,
+"n": 847853,
 "best_pm": 1.65,
-"pos_rate": 0.459
+"pos_rate": 0.46
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 1589611,
+"n": 1571077,
 "best_pm": 1.89,
 "pos_rate": 0.425
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 502046,
+"n": 499834,
 "best_pm": 16.85,
 "pos_rate": 0.306
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 143504,
-"best_pm": 1.6,
+"n": 143365,
+"best_pm": 14.49,
 "pos_rate": 0.251
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 698520,
+"n": 694715,
 "best_pm": 1.56,
-"pos_rate": 0.453
+"pos_rate": 0.454
 },
 {
 "family": "grind_vs_burst",
@@ -1589,9 +1589,9 @@
 {
 "family": "restock_capitulation",
 "bar": "15m",
-"n": 2111,
+"n": 2122,
 "best_pm": 1.02,
-"pos_rate": 0.397
+"pos_rate": 0.398
 },
 {
 "family": "restock_capitulation",
@@ -1610,16 +1610,16 @@
 {
 "family": "restock_capitulation",
 "bar": "30s",
-"n": 2111,
+"n": 2122,
 "best_pm": 0.86,
 "pos_rate": 0.412
 },
 {
 "family": "restock_capitulation",
 "bar": "5m",
-"n": 2111,
+"n": 2122,
 "best_pm": 0.96,
-"pos_rate": 0.393
+"pos_rate": 0.392
 },
 {
 "family": "retrace_speed_squeeze",
@@ -1848,9 +1848,9 @@
 {
 "family": "trend_breadth_flow",
 "bar": "15m",
-"n": 2010,
+"n": 2015,
 "best_pm": 0.96,
-"pos_rate": 0.37
+"pos_rate": 0.371
 },
 {
 "family": "trend_breadth_flow",
@@ -1869,23 +1869,23 @@
 {
 "family": "trend_breadth_flow",
 "bar": "30s",
-"n": 2010,
+"n": 2015,
 "best_pm": 0.7,
-"pos_rate": 0.362
+"pos_rate": 0.363
 },
 {
 "family": "trend_breadth_flow",
 "bar": "5m",
-"n": 2011,
+"n": 2016,
 "best_pm": 0.81,
-"pos_rate": 0.387
+"pos_rate": 0.388
 },
 {
 "family": "unexited_leg_turnover",
 "bar": "15m",
-"n": 2208,
+"n": 2233,
 "best_pm": 1.15,
-"pos_rate": 0.433
+"pos_rate": 0.432
 },
 {
 "family": "unexited_leg_turnover",
@@ -1904,14 +1904,14 @@
 {
 "family": "unexited_leg_turnover",
 "bar": "30s",
-"n": 2204,
+"n": 2229,
 "best_pm": 14.19,
-"pos_rate": 0.452
+"pos_rate": 0.451
 },
 {
 "family": "unexited_leg_turnover",
 "bar": "5m",
-"n": 2208,
+"n": 2233,
 "best_pm": 1.17,
 "pos_rate": 0.457
 },
@@ -6260,6 +6260,17 @@
 "dsr_bar": 6.49,
 "best_pm_1h": 14.19,
 "distinct": 23474975
+},
+{
+"t": 1790893776.1817641,
+"total": 26926404,
+"per_min": 410.0,
+"cpu": 8.9,
+"gpu": 0,
+"free_gb": 144.8,
+"dsr_bar": 6.49,
+"best_pm_1h": 14.49,
+"distinct": 23477594
 }
 ],
 "instrument": "XAUUSD",
