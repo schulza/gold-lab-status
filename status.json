@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-01 20:04:11 UTC",
+"generated_at": "2026-10-01 20:09:39 UTC",
 "host": {
-"cpu_pct": 8.7,
+"cpu_pct": 8.4,
 "gpu_pct": 0,
-"free_gb": 131.4,
-"uptime": "up 2 days,  4:50, 2 users, load averages: 3.32 4.25 4.47",
-"load": "{ 3.32 4.25 4.47 }"
+"free_gb": 146.2,
+"uptime": "up 2 days,  4:55, 2 users, load averages: 3.84 4.96 4.81",
+"load": "{ 3.84 4.96 4.81 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-01T22:04:10",
-"it": 39001,
-"bar": "1h",
+"ts": "2026-10-01T22:06:29",
+"it": 39200,
+"bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.5,
-"pbo": 0.61,
+"pbo": 0.39,
 "best_family": "gated",
-"best_pm": 0.26,
-"best_params": "{'base': 'mean_reversion_band', 'base_params': {'lookback': 165, 'z_entry': 3.45, 'z_exit': 0.000335}, 'mode': 'tick_above', 'vol_window': 186, 'vol_pct': 0.112",
+"best_pm": 0.17,
+"best_params": "{'base': 'event_drift', 'base_params': {'atr_window': 352, 'hold': 22, 'pre_bars': 2, 'sign': 1, 'thr_atr': 3.57}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 57,",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-01T22:03:35",
-"it": 29801,
-"bar": "30s",
+"ts": "2026-10-01T22:08:14",
+"it": 30000,
+"bar": "5m",
 "batch": 8,
 "passed": 0,
 "bench": 6.5,
-"pbo": 0.0,
+"pbo": 0.5,
 "best_family": "gated",
-"best_pm": 0.78,
-"best_params": "{'base': 'round_level_break', 'base_params': {'fresh': 291, 'hold': 23, 'offset': 0.37, 'sign': -1, 'step': 50}, 'mode': 'tick_above', 'vol_window': 758, 'vol_p",
+"best_pm": 0.54,
+"best_params": "{'base': 'rebalance_size', 'base_params': {'exit': 0, 'k': 0.000222, 'lead': 2, 'period': 'week', 'sign': -1}, 'mode': 'session', 'start_hour': 9, 'hold_hours':",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 26834178,
-"last_5m": 2368,
-"last_1h": 27873,
-"last_24h": 5103793,
-"distinct_ideas": 23386216,
+"total": 26838725,
+"last_5m": 4483,
+"last_1h": 29594,
+"last_24h": 5093375,
+"distinct_ideas": 23390763,
 "dsr_bar": 6.5,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17565716,
+"n": 17568972,
 "pos_rate": 0.327,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -372,9 +372,18 @@
 "since": "2026-10-01"
 },
 {
+"family": "streak_fallacy_squeeze",
+"n": 4220,
+"pos_rate": 0.386,
+"best_pm": 0.59,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-01"
+},
+{
 "family": "retrace_speed_squeeze",
-"n": 4109,
-"pos_rate": 0.379,
+"n": 4165,
+"pos_rate": 0.38,
 "best_pm": 1.12,
 "best_dsr": 0.0,
 "passed": 0,
@@ -469,15 +478,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-09-30"
-},
-{
-"family": "streak_fallacy_squeeze",
-"n": 2987,
-"pos_rate": 0.385,
-"best_pm": 0.59,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-01"
 },
 {
 "family": "wick_absorption",
@@ -589,7 +589,7 @@
 },
 {
 "family": "calendar_rebalance_flow",
-"n": 1586,
+"n": 1588,
 "pos_rate": 0.326,
 "best_pm": 1.59,
 "best_dsr": 0.0,
@@ -893,7 +893,7 @@
 {
 "family": "calendar_rebalance_flow",
 "bar": "15m",
-"n": 1586,
+"n": 1588,
 "best_pm": 1.59,
 "pos_rate": 0.326
 },
@@ -1166,35 +1166,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 1141779,
+"n": 1141141,
 "best_pm": 1.65,
 "pos_rate": 0.455
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 2106468,
+"n": 2097018,
 "best_pm": 1.89,
 "pos_rate": 0.427
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 569038,
+"n": 568226,
 "best_pm": 16.85,
 "pos_rate": 0.297
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 159087,
+"n": 159522,
 "best_pm": 1.4,
 "pos_rate": 0.241
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 917896,
+"n": 917493,
 "best_pm": 1.56,
 "pos_rate": 0.442
 },
@@ -1530,9 +1530,9 @@
 {
 "family": "retrace_speed_squeeze",
 "bar": "15m",
-"n": 2051,
-"best_pm": 0.9,
-"pos_rate": 0.381
+"n": 2107,
+"best_pm": 0.98,
+"pos_rate": 0.384
 },
 {
 "family": "retrace_speed_squeeze",
@@ -1600,9 +1600,9 @@
 {
 "family": "sge_benchmark_flow",
 "bar": "1m",
-"n": 1911,
-"best_pm": 0.57,
-"pos_rate": 0.281
+"n": 1070,
+"best_pm": 0.55,
+"pos_rate": 0.303
 },
 {
 "family": "sge_benchmark_flow",
@@ -1670,9 +1670,9 @@
 {
 "family": "streak_fallacy_squeeze",
 "bar": "15m",
-"n": 901,
+"n": 2134,
 "best_pm": 0.59,
-"pos_rate": 0.362
+"pos_rate": 0.376
 },
 {
 "family": "streak_fallacy_squeeze",
@@ -1923,6 +1923,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-01T20:05",
+"name": "conditioned_dip_buyers",
+"status": "rejected",
+"rationale": "PAYER = whoever is on the wrong side of a conditioned reflex. When fading the last M shock days has paid, dip buyers (rip sellers) are reinforced and step in fast, so impatient or forced sellers on the next shock day hand them the concession. When it has lost, the burned faders a",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-10-01T19:47",
 "name": "streak_fallacy_squeeze",
 "status": "accepted",
@@ -1998,13 +2005,6 @@
 "status": "accepted",
 "rationale": "PAYER = liquidity demanders who must move size in one day (forced sellers and buyers, block hedgers, liquidations). Risk-averse dealers absorb them only at a price concession, and that concession is refunded over the next 1\u20133 days once the inventory is redistributed (Campbell\u2013Gro",
 "note": "{\"name\": \"heavy_day_concession\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.4887125}"
-},
-{
-"ts": "2026-10-01T16:22",
-"name": "loss_limit_reset",
-"status": "accepted",
-"rationale": "PAYER = discretionary macro pods and prop desks whose loss limits are measured from the first print of the week or month. Once the period-to-date loss on the position they carried in exceeds `k` period-sigmas, they must cut whatever the price, and they rebuild only when the budge",
-"note": "{\"name\": \"loss_limit_reset\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.002175}"
 }
 ],
 "history": [
@@ -5821,6 +5821,17 @@
 "dsr_bar": 6.5,
 "best_pm_1h": 2.58,
 "distinct": 23386216
+},
+{
+"t": 1790885379.7875469,
+"total": 26838725,
+"per_min": 897.0,
+"cpu": 8.4,
+"gpu": 0,
+"free_gb": 146.2,
+"dsr_bar": 6.5,
+"best_pm_1h": 2.58,
+"distinct": 23390763
 }
 ],
 "instrument": "XAUUSD",
