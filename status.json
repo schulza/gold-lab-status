@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-01 04:27:25 UTC",
+"generated_at": "2026-10-01 04:33:06 UTC",
 "host": {
-"cpu_pct": 42.2,
-"gpu_pct": 91,
-"free_gb": 132.3,
-"uptime": "up 1 day, 13:13, 2 users, load averages: 12.26 14.16 14.61",
-"load": "{ 12.26 14.16 14.61 }"
+"cpu_pct": 63.0,
+"gpu_pct": 90,
+"free_gb": 134.2,
+"uptime": "up 1 day, 13:19, 2 users, load averages: 21.95 17.63 16.03",
+"load": "{ 21.95 17.63 16.03 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-01T06:24:22",
-"it": 21200,
+"ts": "2026-10-01T06:32:35",
+"it": 21400,
 "bar": "1h",
 "batch": 82,
 "passed": 0,
 "bench": 6.57,
-"pbo": 0.36,
+"pbo": 0.04,
 "best_family": "gated",
-"best_pm": 1.32,
-"best_params": "{'base': 'trailing_stop_flush', 'base_params': {'hold': 66, 'k': 2.33, 'leg': 9.35, 'n': 19, 'sign': -1}, 'mode': 'vol_below', 'vol_window': 85, 'vol_pct': 0.38",
+"best_pm": 1.37,
+"best_params": "{'base': 'liquidity_hole_fade', 'base_params': {'hold': 13, 'k': 0.0563, 'sign': 1, 'span': 24, 'src': 'spread', 'window': 1370, 'z_in': 2.23}, 'mode': 'vol_abo",
 "mix": "gat82",
 "queue_s": 82.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-01T06:27:25",
-"it": 16313,
+"ts": "2026-10-01T06:29:17",
+"it": 16400,
 "bar": "15m",
 "batch": 82,
 "passed": 0,
 "bench": 6.57,
-"pbo": 0.07,
+"pbo": 0.43,
 "best_family": "gated",
-"best_pm": 1.0,
-"best_params": "{'base': 'treasury_auction_concession', 'base_params': {'dom': 'mid', 'hold': 60, 'k': 1.5, 'pre': 23, 'sign': -1}, 'mode': 'htf_against', 'htf': '1h', 'sma_n':",
+"best_pm": 0.97,
+"best_params": "{'base': 'calendar_rebalance_flow', 'base_params': {'k': 0.204, 'period': 'month', 'phase': 'post', 'sign': 1, 'span': 4}, 'mode': 'htf_with', 'htf': '4h', 'sma",
 "mix": "gat82",
 "queue_s": 82.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 25512243,
-"last_5m": 17452,
-"last_1h": 293759,
-"last_24h": 12272404,
-"distinct_ideas": 22070031,
+"total": 25533836,
+"last_5m": 19860,
+"last_1h": 309382,
+"last_24h": 12236465,
+"distinct_ideas": 22092231,
 "dsr_bar": 6.57,
 "sharpe_std": 1.21,
 "families": [
 {
 "family": "gated",
-"n": 16430742,
+"n": 16452397,
 "pos_rate": 0.32,
 "best_pm": 4.7,
 "best_dsr": 0.611,
@@ -484,35 +484,35 @@
 {
 "family": "atr_impulse",
 "bar": "15m",
-"n": 2430,
+"n": 2372,
 "best_pm": 0.61,
 "pos_rate": 0.006
 },
 {
 "family": "atr_impulse",
 "bar": "1h",
-"n": 7839,
+"n": 7705,
 "best_pm": 0.97,
 "pos_rate": 0.139
 },
 {
 "family": "atr_impulse",
 "bar": "1m",
-"n": 64818,
+"n": 63818,
 "best_pm": -0.03,
 "pos_rate": 0.0
 },
 {
 "family": "atr_impulse",
 "bar": "30s",
-"n": 10752,
+"n": 10566,
 "best_pm": -0.26,
 "pos_rate": 0
 },
 {
 "family": "atr_impulse",
 "bar": "5m",
-"n": 17479,
+"n": 17160,
 "best_pm": 0.37,
 "pos_rate": 0.001
 },
@@ -687,37 +687,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 2287524,
+"n": 2282856,
 "best_pm": 1.57,
-"pos_rate": 0.356
+"pos_rate": 0.357
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 5282726,
+"n": 5268804,
 "best_pm": 3.22,
-"pos_rate": 0.404
+"pos_rate": 0.405
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 683152,
+"n": 687856,
 "best_pm": 1.56,
-"pos_rate": 0.198
+"pos_rate": 0.199
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 156169,
+"n": 156941,
 "best_pm": 1.54,
 "pos_rate": 0.177
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 1553988,
+"n": 1553880,
 "best_pm": 4.7,
-"pos_rate": 0.343
+"pos_rate": 0.344
 },
 {
 "family": "grind_vs_burst",
@@ -1268,21 +1268,21 @@
 {
 "family": "wf_ridge",
 "bar": "15m",
-"n": 294179,
+"n": 289323,
 "best_pm": 1.11,
 "pos_rate": 0.019
 },
 {
 "family": "wf_ridge",
 "bar": "1h",
-"n": 1045982,
+"n": 1031374,
 "best_pm": 1.36,
 "pos_rate": 0.027
 },
 {
 "family": "wf_ridge",
 "bar": "5m",
-"n": 94176,
+"n": 92620,
 "best_pm": 1.03,
 "pos_rate": 0.016
 },
@@ -1303,6 +1303,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-10-01T04:29",
+"name": "post_release_drift",
+"status": "rejected",
+"rationale": "PAYER = slow allocators (asset-allocation committees, CTAs with daily rebalancing, ETF creation baskets, physical/central-bank desks) who can only adjust gold exposure over 1\u20133 days after a large macro surprise, so their follow-through orders execute at prices that lag the first-",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
 {
 "ts": "2026-10-01T03:58",
 "name": "trailing_stop_flush",
@@ -1379,13 +1386,6 @@
 "status": "accepted",
 "rationale": "PAYER = Asian-session price-insensitive flow (Japanese retail margin platforms, Chinese SGE/SHFE premium chasers, regional physical hedgers) that trades on its own clock while interbank gold depth is a fraction of London's, paying temporary price impact; once London market makers",
 "note": "{\"name\": \"asia_thin_move_fade\", \"grid\": 54, \"sec_per_param\": 0.001, \"active_frac\": 0.036}"
-},
-{
-"ts": "2026-09-30T21:53",
-"name": "etf_lag_flow",
-"status": "accepted",
-"rationale": "PAYER = performance-chasing investors in physically backed gold ETFs (GLD/IAU/European ETCs): the shares they buy or sell during the US session after the NAV strike are turned into creation/redemption baskets that the authorised participants must settle at the NEXT day's LBMA PM ",
-"note": "{\"name\": \"etf_lag_flow\", \"grid\": 54, \"sec_per_param\": 0.001, \"active_frac\": 0.072}"
 }
 ],
 "history": [
@@ -3387,6 +3387,17 @@
 "dsr_bar": 6.57,
 "best_pm_1h": 4.7,
 "distinct": 22070031
+},
+{
+"t": 1790829186.650849,
+"total": 25533836,
+"per_min": 3972.0,
+"cpu": 63.0,
+"gpu": 90,
+"free_gb": 134.2,
+"dsr_bar": 6.57,
+"best_pm_1h": 4.7,
+"distinct": 22092231
 }
 ],
 "data": {
