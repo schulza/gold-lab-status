@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-01 19:47:23 UTC",
+"generated_at": "2026-10-01 19:52:56 UTC",
 "host": {
-"cpu_pct": 7.7,
-"gpu_pct": 93,
-"free_gb": 144.0,
-"uptime": "up 2 days,  4:33, 2 users, load averages: 5.44 5.13 4.96",
-"load": "{ 5.44 5.13 4.96 }"
+"cpu_pct": 9.0,
+"gpu_pct": 0,
+"free_gb": 218.9,
+"uptime": "up 2 days,  4:39, 2 users, load averages: 3.21 4.19 4.57",
+"load": "{ 3.21 4.19 4.57 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-01T21:46:51",
-"it": 38800,
+"ts": "2026-10-01T21:49:52",
+"it": 38810,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.5,
-"pbo": 0.36,
+"pbo": 0.32,
 "best_family": "gated",
-"best_pm": 0.52,
-"best_params": "{'base': 'levered_etf_close_rebalance', 'base_params': {'k': 2.32, 'post': 18, 'pre': 25, 'sign': 1}, 'mode': 'tick_above', 'vol_window': 240, 'vol_pct': 0.5, '",
+"best_pm": 0.7,
+"best_params": "{'base': 'heavy_day_concession', 'base_params': {'base': 5, 'hold': 2, 'k': 0.942, 'sign': 1, 'theta': 1.18}, 'mode': 'spread_below', 'vol_window': 228, 'vol_pc",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-01T21:47:06",
-"it": 29601,
+"ts": "2026-10-01T21:48:48",
+"it": 29610,
 "bar": "30s",
 "batch": 8,
 "passed": 0,
 "bench": 6.5,
-"pbo": 0.0,
+"pbo": 0.29,
 "best_family": "gated",
-"best_pm": 0.6,
-"best_params": "{'base': 'levered_etf_close_rebalance', 'base_params': {'k': 2.28, 'post': 51, 'pre': 17, 'sign': 1}, 'mode': 'tick_above', 'vol_window': 240, 'vol_pct': 0.3}",
+"best_pm": 0.21,
+"best_params": "{'base': 'session_range', 'base_params': {'exit_hour': 20, 'range_end': 14, 'sign': 1}, 'mode': 'htf_against', 'htf': '1h', 'sma_n': 103}",
 "mix": "gat8",
-"queue_s": 7.0
+"queue_s": 8.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 26826642,
-"last_5m": 3150,
-"last_1h": 33847,
-"last_24h": 5239360,
-"distinct_ideas": 23378863,
+"total": 26826787,
+"last_5m": 145,
+"last_1h": 26698,
+"last_24h": 5186291,
+"distinct_ideas": 23379008,
 "dsr_bar": 6.5,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17562412,
+"n": 17562556,
 "pos_rate": 0.327,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -688,8 +688,8 @@
 },
 {
 "family": "portfolio",
-"n": 35,
-"pos_rate": 0.971,
+"n": 36,
+"pos_rate": 0.972,
 "best_pm": 2.94,
 "best_dsr": 0.0,
 "passed": 0,
@@ -1157,37 +1157,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 1176903,
+"n": 1167497,
 "best_pm": 1.65,
 "pos_rate": 0.454
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 2173224,
+"n": 2142096,
 "best_pm": 1.89,
-"pos_rate": 0.428
+"pos_rate": 0.427
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 578406,
+"n": 573734,
 "best_pm": 16.85,
 "pos_rate": 0.296
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 161248,
+"n": 160559,
 "best_pm": 1.4,
-"pos_rate": 0.239
+"pos_rate": 0.24
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 944286,
+"n": 937111,
 "best_pm": 1.56,
-"pos_rate": 0.44
+"pos_rate": 0.441
 },
 {
 "family": "grind_vs_burst",
@@ -1458,7 +1458,7 @@
 {
 "family": "portfolio",
 "bar": "30s",
-"n": 17,
+"n": 18,
 "best_pm": 2.94,
 "pos_rate": 1.0
 },
@@ -1900,6 +1900,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-01T19:47",
+"name": "streak_fallacy_squeeze",
+"status": "accepted",
+"rationale": "PAYER = retail CFD counter-trend traders acting on the gambler's fallacy. After k consecutive daily closes in one direction they fade the run (\"it is due to turn\"), add to the loser, and are closed out by margin over the next 1\u20135 days; that forced cover pays whoever holds with th",
+"note": "{\"name\": \"streak_fallacy_squeeze\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.09}"
+},
+{
 "ts": "2026-10-01T19:29",
 "name": "retrace_speed_squeeze",
 "status": "accepted",
@@ -1975,13 +1982,6 @@
 "status": "accepted",
 "rationale": "PAYER = discretionary macro pods and prop desks whose loss limits are measured from the first print of the week or month. Once the period-to-date loss on the position they carried in exceeds `k` period-sigmas, they must cut whatever the price, and they rebuild only when the budge",
 "note": "{\"name\": \"loss_limit_reset\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.002175}"
-},
-{
-"ts": "2026-10-01T16:05",
-"name": null,
-"status": "rejected",
-"rationale": "PAYER = leveraged speculators (CFTC non-commercials) who are crowded on one side of gold when the 10y real yield moves against them; their risk limits and margin force them to cut over the following days, and they pay impact to whoever is positioned first.\nMeasured quantity: the ",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
@@ -5765,6 +5765,17 @@
 "dsr_bar": 6.5,
 "best_pm_1h": 2.58,
 "distinct": 23378863
+},
+{
+"t": 1790884376.576174,
+"total": 26826787,
+"per_min": 29.0,
+"cpu": 9.0,
+"gpu": 0,
+"free_gb": 218.9,
+"dsr_bar": 6.5,
+"best_pm_1h": 2.58,
+"distinct": 23379008
 }
 ],
 "instrument": "XAUUSD",
