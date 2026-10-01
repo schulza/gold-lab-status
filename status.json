@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-01 16:20:40 UTC",
+"generated_at": "2026-10-01 16:26:09 UTC",
 "host": {
-"cpu_pct": 8.8,
+"cpu_pct": 10.4,
 "gpu_pct": 0,
-"free_gb": 149.7,
-"uptime": "up 2 days,  1:06, 2 users, load averages: 5.37 5.31 5.22",
-"load": "{ 5.37 5.31 5.22 }"
+"free_gb": 227.0,
+"uptime": "up 2 days,  1:12, 2 users, load averages: 4.14 5.69 5.48",
+"load": "{ 4.14 5.69 5.48 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-01T18:17:33",
-"it": 34200,
+"ts": "2026-10-01T18:22:39",
+"it": 34350,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.5,
-"pbo": 0.43,
+"pbo": 0.18,
 "best_family": "gated",
-"best_pm": 1.53,
-"best_params": "{'base': 'event_drift', 'base_params': {'atr_window': 352, 'hold': 22, 'pre_bars': 2, 'sign': 1, 'thr_atr': 3.57}, 'mode': 'htf_against', 'htf': '4h', 'sma_n': ",
+"best_pm": 0.96,
+"best_params": "{'base': 'vol_target_rebalance', 'base_params': {'f': 5, 'hold': 8, 'k': 1.52, 'side': 'relever', 'sign': 1}, 'mode': 'vol_below', 'vol_window': 816, 'vol_pct':",
 "mix": "gat8",
 "queue_s": 7.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-01T18:19:57",
-"it": 26200,
-"bar": "15m",
+"ts": "2026-10-01T18:23:33",
+"it": 26210,
+"bar": "30s",
 "batch": 8,
 "passed": 0,
 "bench": 6.5,
-"pbo": 0.43,
+"pbo": 0.07,
 "best_family": "gated",
-"best_pm": 0.66,
-"best_params": "{'base': 'average_price_benchmark_pull', 'base_params': {'exit': 'touch', 'k': 2.5, 'period': 'week', 'phase': 0.438, 'sign': 1, 'vol_days': 7}, 'mode': 'vol_be",
+"best_pm": 0.15,
+"best_params": "{'base': 'post_release_drift', 'base_params': {'hold': 4, 'k': 1.92, 'sign': 1, 'slot': '1400', 'win': 22}, 'mode': 'htf_against', 'htf': '1h', 'sma_n': 435}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 26730519,
-"last_5m": 3216,
-"last_1h": 33515,
-"last_24h": 6884862,
-"distinct_ideas": 23283998,
+"total": 26731783,
+"last_5m": 1264,
+"last_1h": 26979,
+"last_24h": 6847331,
+"distinct_ideas": 23285262,
 "dsr_bar": 6.5,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17497721,
+"n": 17498985,
 "pos_rate": 0.326,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -1076,35 +1076,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 1602940,
+"n": 1597224,
 "best_pm": 1.57,
-"pos_rate": 0.441
+"pos_rate": 0.442
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 2964214,
+"n": 2941034,
 "best_pm": 2.56,
 "pos_rate": 0.431
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 682522,
+"n": 679518,
 "best_pm": 16.85,
-"pos_rate": 0.278
+"pos_rate": 0.279
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 185040,
+"n": 184630,
 "best_pm": 1.4,
 "pos_rate": 0.224
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 1266666,
+"n": 1262621,
 "best_pm": 1.56,
 "pos_rate": 0.421
 },
@@ -1352,20 +1352,6 @@
 "n": 777,
 "best_pm": 0.45,
 "pos_rate": 0.39
-},
-{
-"family": "same_clock_flow",
-"bar": "15m",
-"n": 588,
-"best_pm": 0.36,
-"pos_rate": 0.02
-},
-{
-"family": "same_clock_flow",
-"bar": "5m",
-"n": 588,
-"best_pm": 0.38,
-"pos_rate": 0.031
 },
 {
 "family": "session_range",
@@ -1679,6 +1665,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-01T16:22",
+"name": "loss_limit_reset",
+"status": "accepted",
+"rationale": "PAYER = discretionary macro pods and prop desks whose loss limits are measured from the first print of the week or month. Once the period-to-date loss on the position they carried in exceeds `k` period-sigmas, they must cut whatever the price, and they rebuild only when the budge",
+"note": "{\"name\": \"loss_limit_reset\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.002175}"
+},
+{
 "ts": "2026-10-01T16:05",
 "name": null,
 "status": "rejected",
@@ -1754,13 +1747,6 @@
 "status": "rejected",
 "rationale": "PAYER = levered non-commercial futures specs (CTAs/managed money on margin with stop and VaR limits) who, when CFTC positioning is already crowded and price breaks the multi-day extreme against them, must liquidate over 1\u20135 days regardless of price; we trade with that forced flow",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-10-01T12:44",
-"name": "average_price_benchmark_pull",
-"status": "accepted",
-"rationale": "Payer = momentum and stop-driven traders who push spot away from the month-to-date (or week-to-date) average late in the pricing period. Miners, refiners and fabricators on average-price contracts can lock in a certain gain against a mostly-fixed benchmark, so sellers accelerate ",
-"note": "{\"name\": \"average_price_benchmark_pull\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.496}"
 }
 ],
 "history": [
@@ -5137,6 +5123,17 @@
 "dsr_bar": 6.5,
 "best_pm_1h": 1.64,
 "distinct": 23283998
+},
+{
+"t": 1790871969.490319,
+"total": 26731783,
+"per_min": 253.0,
+"cpu": 10.4,
+"gpu": 0,
+"free_gb": 227.0,
+"dsr_bar": 6.5,
+"best_pm_1h": 1.64,
+"distinct": 23285262
 }
 ],
 "instrument": "XAUUSD",
