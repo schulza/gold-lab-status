@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-01 22:07:00 UTC",
+"generated_at": "2026-10-01 22:12:35 UTC",
 "host": {
-"cpu_pct": 14.7,
-"gpu_pct": 92,
-"free_gb": 182.4,
-"uptime": "up 2 days,  6:52, 2 users, load averages: 9.18 6.08 5.54",
-"load": "{ 9.18 6.08 5.54 }"
+"cpu_pct": 8.9,
+"gpu_pct": 93,
+"free_gb": 143.3,
+"uptime": "up 2 days,  6:58, 2 users, load averages: 4.65 6.88 6.42",
+"load": "{ 4.65 6.88 6.42 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-02T00:07:00",
-"it": 41768,
-"bar": "1m",
+"ts": "2026-10-02T00:12:35",
+"it": 41921,
+"bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.49,
-"pbo": 0.5,
+"pbo": 0.68,
 "best_family": "gated",
-"best_pm": 0.63,
-"best_params": "{'base': 'weekend_margin_derisk', 'base_params': {'entry': 15, 'hold': 57, 'k': 0.4, 'mode': 'prop', 'sign': 1}, 'mode': 'session', 'start_hour': 17, 'hold_hour",
+"best_pm": 1.31,
+"best_params": "{'base': 'event_drift', 'base_params': {'atr_window': 401, 'hold': 30, 'pre_bars': 2, 'sign': 1, 'thr_atr': 3.57}, 'mode': 'vol_above', 'vol_window': 170, 'vol_",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-02T00:06:58",
-"it": 31841,
+"ts": "2026-10-02T00:10:08",
+"it": 32000,
 "bar": "15m",
-"batch": 147,
+"batch": 8,
 "passed": 0,
 "bench": 6.49,
-"pbo": 0.5,
-"best_family": "unexited_leg_turnover",
-"best_pm": 3.09,
-"best_params": "{'d': 8.29, 'k': 3.48, 'theta': 0.553, 'rho': 0.63, 'sign': 1}",
-"mix": "gat13/res67/une67",
-"queue_s": 22.0
+"pbo": 0.11,
+"best_family": "gated",
+"best_pm": 0.92,
+"best_params": "{'base': 'vol_target_rebalance', 'base_params': {'f': 5, 'hold': 6, 'k': 1.61, 'side': 'relever', 'sign': 1}, 'mode': 'vol_above', 'vol_window': 68, 'vol_pct': ",
+"mix": "gat8",
+"queue_s": 7.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 26901912,
-"last_5m": 5409,
-"last_1h": 35334,
-"last_24h": 4177972,
-"distinct_ideas": 23453302,
+"total": 26910858,
+"last_5m": 6395,
+"last_1h": 40265,
+"last_24h": 4129870,
+"distinct_ideas": 23462176,
 "dsr_bar": 6.49,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17604540,
+"n": 17607389,
 "pos_rate": 0.327,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -210,18 +210,27 @@
 "since": "2026-10-01"
 },
 {
-"family": "drawdown_derisk_flow",
-"n": 9912,
-"pos_rate": 0.417,
+"family": "trend_breadth_flow",
+"n": 10051,
+"pos_rate": 0.365,
 "best_pm": 0.96,
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-01"
 },
 {
-"family": "trend_breadth_flow",
-"n": 9883,
-"pos_rate": 0.364,
+"family": "restock_capitulation",
+"n": 10030,
+"pos_rate": 0.395,
+"best_pm": 0.99,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-01"
+},
+{
+"family": "drawdown_derisk_flow",
+"n": 9912,
+"pos_rate": 0.417,
 "best_pm": 0.96,
 "best_dsr": 0.0,
 "passed": 0,
@@ -241,15 +250,6 @@
 "n": 7034,
 "pos_rate": 0.466,
 "best_pm": 0.79,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-01"
-},
-{
-"family": "restock_capitulation",
-"n": 6607,
-"pos_rate": 0.382,
-"best_pm": 0.99,
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-01"
@@ -421,6 +421,15 @@
 "n": 4235,
 "pos_rate": 0.382,
 "best_pm": 1.12,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-01"
+},
+{
+"family": "unexited_leg_turnover",
+"n": 4171,
+"pos_rate": 0.43,
+"best_pm": 1.32,
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-01"
@@ -624,17 +633,8 @@
 "since": "2026-10-01"
 },
 {
-"family": "unexited_leg_turnover",
-"n": 1673,
-"pos_rate": 0.395,
-"best_pm": 1.32,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-01"
-},
-{
 "family": "calendar_rebalance_flow",
-"n": 1622,
+"n": 1630,
 "pos_rate": 0.324,
 "best_pm": 1.59,
 "best_dsr": 0.0,
@@ -952,7 +952,7 @@
 {
 "family": "calendar_rebalance_flow",
 "bar": "15m",
-"n": 1622,
+"n": 1630,
 "best_pm": 1.59,
 "pos_rate": 0.324
 },
@@ -1225,37 +1225,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 900423,
+"n": 876168,
 "best_pm": 1.65,
-"pos_rate": 0.458
+"pos_rate": 0.459
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 1652448,
+"n": 1644856,
 "best_pm": 1.89,
 "pos_rate": 0.425
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 509860,
+"n": 509198,
 "best_pm": 16.85,
 "pos_rate": 0.305
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 145844,
+"n": 144439,
 "best_pm": 1.45,
-"pos_rate": 0.249
+"pos_rate": 0.25
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 734665,
+"n": 716038,
 "best_pm": 1.56,
-"pos_rate": 0.45
+"pos_rate": 0.452
 },
 {
 "family": "grind_vs_burst",
@@ -1589,9 +1589,9 @@
 {
 "family": "restock_capitulation",
 "bar": "15m",
-"n": 1150,
-"best_pm": 0.7,
-"pos_rate": 0.392
+"n": 2006,
+"best_pm": 0.89,
+"pos_rate": 0.398
 },
 {
 "family": "restock_capitulation",
@@ -1610,16 +1610,16 @@
 {
 "family": "restock_capitulation",
 "bar": "30s",
-"n": 1030,
-"best_pm": 0.67,
-"pos_rate": 0.37
+"n": 2006,
+"best_pm": 0.76,
+"pos_rate": 0.402
 },
 {
 "family": "restock_capitulation",
 "bar": "5m",
-"n": 1155,
-"best_pm": 0.71,
-"pos_rate": 0.372
+"n": 2006,
+"best_pm": 0.9,
+"pos_rate": 0.389
 },
 {
 "family": "retrace_speed_squeeze",
@@ -1883,9 +1883,9 @@
 {
 "family": "unexited_leg_turnover",
 "bar": "15m",
-"n": 268,
-"best_pm": 0.54,
-"pos_rate": 0.354
+"n": 834,
+"best_pm": 0.99,
+"pos_rate": 0.447
 },
 {
 "family": "unexited_leg_turnover",
@@ -1904,16 +1904,16 @@
 {
 "family": "unexited_leg_turnover",
 "bar": "30s",
-"n": 158,
-"best_pm": 0.61,
-"pos_rate": 0.361
+"n": 830,
+"best_pm": 0.84,
+"pos_rate": 0.473
 },
 {
 "family": "unexited_leg_turnover",
 "bar": "5m",
-"n": 324,
-"best_pm": 0.75,
-"pos_rate": 0.367
+"n": 834,
+"best_pm": 0.97,
+"pos_rate": 0.439
 },
 {
 "family": "var_breach_deleverage",
@@ -2087,6 +2087,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-01T22:12",
+"name": null,
+"status": "rejected",
+"rationale": "PAYER: rate-blind gold holders (momentum and retail longs or shorts) whose position sits on the wrong side of a measured gap between gold's h-day move and the published h-day change in 10y real yields; they pay when rate-anchored macro allocators close that gap over days (sign +1",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-10-01T21:55",
 "name": "unexited_leg_turnover",
 "status": "accepted",
@@ -2162,13 +2169,6 @@
 "status": "rejected",
 "rationale": "PAYER = crowded speculators (CFTC non-commercials) whose risk desks force them to cut gross exposure ahead of scheduled NFP/FOMC risk and who rebuild it once the event has passed; they pay the concession twice, selling into the event and buying back after.\nMeasured quantity: publ",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-10-01T18:37",
-"name": "signed_jump_asymmetry",
-"status": "accepted",
-"rationale": "PAYER = lottery-seeking leveraged retail/CFD buyers and headline-chasing fast money, who overpay after a week whose variance came from a few large up-bars, and crash-averse holders and risk managers, who dump at a concession after a week whose variance came from large down-bars.\n",
-"note": "{\"name\": \"signed_jump_asymmetry\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.4936625}"
 }
 ],
 "history": [
@@ -6227,6 +6227,17 @@
 "dsr_bar": 6.49,
 "best_pm_1h": 1.59,
 "distinct": 23453302
+},
+{
+"t": 1790892755.9017391,
+"total": 26910858,
+"per_min": 1279.0,
+"cpu": 8.9,
+"gpu": 93,
+"free_gb": 143.3,
+"dsr_bar": 6.49,
+"best_pm_1h": 1.59,
+"distinct": 23462176
 }
 ],
 "instrument": "XAUUSD",
