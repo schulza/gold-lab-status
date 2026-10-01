@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-01 11:21:45 UTC",
+"generated_at": "2026-10-01 11:27:33 UTC",
 "host": {
-"cpu_pct": 9.0,
-"gpu_pct": 0,
-"free_gb": 153.5,
-"uptime": "up 1 day, 20:07, 2 users, load averages: 9.24 14.02 14.00",
-"load": "{ 9.24 14.02 14.00 }"
+"cpu_pct": 54.5,
+"gpu_pct": 92,
+"free_gb": 145.3,
+"uptime": "up 1 day, 20:13, 2 users, load averages: 16.98 15.30 14.48",
+"load": "{ 16.98 15.30 14.48 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-01T13:18:08",
-"it": 28800,
+"ts": "2026-10-01T13:25:44",
+"it": 29000,
 "bar": "1h",
 "batch": 82,
 "passed": 0,
 "bench": 6.52,
-"pbo": 0.0,
+"pbo": 0.25,
 "best_family": "gated",
-"best_pm": 1.4,
-"best_params": "{'base': 'drawdown_derisk_flow', 'base_params': {'d': 12, 'hold': 3, 'k': 1.09, 'side': 'down', 'sign': 1}, 'mode': 'vol_below', 'vol_window': 422, 'vol_pct': 0",
+"best_pm": 1.03,
+"best_params": "{'base': 'trailing_stop_flush', 'base_params': {'hold': 55, 'k': 2.97, 'leg': 6.65, 'n': 11, 'sign': -1}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 321, 'g2_mod",
 "mix": "gat82",
 "queue_s": 82.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-01T13:20:58",
-"it": 22000,
-"bar": "30s",
-"batch": 31,
+"ts": "2026-10-01T13:27:33",
+"it": 22079,
+"bar": "5m",
+"batch": 82,
 "passed": 0,
 "bench": 6.52,
-"pbo": 0.07,
+"pbo": 0.29,
 "best_family": "gated",
-"best_pm": 0.91,
-"best_params": "{'base': 'fx_fix_passthrough', 'base_params': {'hold': 130, 'k': 2.66, 'pre': 55, 'sign': -1}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 100, 'g2_mode': 'tick_a",
-"mix": "gat31",
-"queue_s": 31.0
+"best_pm": 0.92,
+"best_params": "{'base': 'fix_flow_reversal', 'base_params': {'fix': 'pm', 'hold': 17, 'k': 2.2, 'pre': 286, 'sign': -1}, 'mode': 'tick_above', 'vol_window': 240, 'vol_pct': 0.",
+"mix": "gat82",
+"queue_s": 82.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 26454593,
-"last_5m": 11006,
-"last_1h": 126389,
-"last_24h": 9122311,
-"distinct_ideas": 23010483,
+"total": 26472227,
+"last_5m": 18219,
+"last_1h": 144032,
+"last_24h": 9077645,
+"distinct_ideas": 23028476,
 "dsr_bar": 6.52,
 "sharpe_std": 1.2,
 "families": [
 {
 "family": "gated",
-"n": 17349561,
+"n": 17367194,
 "pos_rate": 0.326,
 "best_pm": 13.63,
 "best_dsr": 0.611,
@@ -436,7 +436,7 @@
 },
 {
 "family": "rebalance_size",
-"n": 745,
+"n": 746,
 "pos_rate": 0.302,
 "best_pm": 0.5,
 "best_dsr": 0.0,
@@ -604,35 +604,35 @@
 {
 "family": "atr_impulse",
 "bar": "15m",
-"n": 140,
+"n": 123,
 "best_pm": -0.52,
 "pos_rate": 0
 },
 {
 "family": "atr_impulse",
 "bar": "1h",
-"n": 784,
+"n": 741,
 "best_pm": 0.9,
-"pos_rate": 0.134
+"pos_rate": 0.132
 },
 {
 "family": "atr_impulse",
 "bar": "1m",
-"n": 6823,
+"n": 6585,
 "best_pm": 0,
 "pos_rate": 0
 },
 {
 "family": "atr_impulse",
 "bar": "30s",
-"n": 1138,
+"n": 1086,
 "best_pm": 0,
 "pos_rate": 0
 },
 {
 "family": "atr_impulse",
 "bar": "5m",
-"n": 1577,
+"n": 1460,
 "best_pm": -0.14,
 "pos_rate": 0
 },
@@ -898,37 +898,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 1969122,
+"n": 1963716,
 "best_pm": 1.57,
-"pos_rate": 0.42
+"pos_rate": 0.421
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 3991581,
+"n": 3975201,
 "best_pm": 3.22,
 "pos_rate": 0.434
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 798181,
+"n": 802326,
 "best_pm": 13.63,
-"pos_rate": 0.258
+"pos_rate": 0.259
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 198588,
+"n": 198943,
 "best_pm": 1.54,
-"pos_rate": 0.215
+"pos_rate": 0.216
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 1529518,
+"n": 1527659,
 "best_pm": 4.7,
-"pos_rate": 0.392
+"pos_rate": 0.393
 },
 {
 "family": "grind_vs_burst",
@@ -1017,37 +1017,37 @@
 {
 "family": "liquidity_hole_fade",
 "bar": "15m",
-"n": 18895,
-"best_pm": 1.19,
+"n": 17029,
+"best_pm": 1.08,
 "pos_rate": 0.16
 },
 {
 "family": "liquidity_hole_fade",
 "bar": "1h",
-"n": 171362,
+"n": 163811,
 "best_pm": 1.33,
-"pos_rate": 0.262
+"pos_rate": 0.263
 },
 {
 "family": "liquidity_hole_fade",
 "bar": "1m",
-"n": 14926,
+"n": 14406,
 "best_pm": 1.11,
 "pos_rate": 0.015
 },
 {
 "family": "liquidity_hole_fade",
 "bar": "30s",
-"n": 1227,
-"best_pm": -0.03,
+"n": 1130,
+"best_pm": -0.22,
 "pos_rate": 0
 },
 {
 "family": "liquidity_hole_fade",
 "bar": "5m",
-"n": 9444,
+"n": 8725,
 "best_pm": 0.99,
-"pos_rate": 0.145
+"pos_rate": 0.148
 },
 {
 "family": "lookback_rolloff_flow",
@@ -1192,7 +1192,7 @@
 {
 "family": "rebalance_size",
 "bar": "15m",
-"n": 745,
+"n": 746,
 "best_pm": 0.5,
 "pos_rate": 0.302
 },
@@ -1213,37 +1213,37 @@
 {
 "family": "round_level_break",
 "bar": "15m",
-"n": 868,
+"n": 724,
 "best_pm": 0.96,
-"pos_rate": 0.235
+"pos_rate": 0.246
 },
 {
 "family": "round_level_break",
 "bar": "1h",
-"n": 14,
+"n": 13,
 "best_pm": 0.42,
-"pos_rate": 0.143
+"pos_rate": 0.154
 },
 {
 "family": "round_level_break",
 "bar": "1m",
-"n": 1476,
+"n": 1292,
 "best_pm": 0.96,
 "pos_rate": 0.169
 },
 {
 "family": "round_level_break",
 "bar": "30s",
-"n": 1023,
+"n": 974,
 "best_pm": 1.02,
-"pos_rate": 0.151
+"pos_rate": 0.149
 },
 {
 "family": "round_level_break",
 "bar": "5m",
-"n": 3023,
+"n": 2709,
 "best_pm": 1.01,
-"pos_rate": 0.265
+"pos_rate": 0.262
 },
 {
 "family": "same_clock_flow",
@@ -1395,37 +1395,37 @@
 {
 "family": "sweep_reversal",
 "bar": "15m",
-"n": 11899,
+"n": 10701,
 "best_pm": 0.73,
 "pos_rate": 0.045
 },
 {
 "family": "sweep_reversal",
 "bar": "1h",
-"n": 34514,
+"n": 32550,
 "best_pm": 0.82,
 "pos_rate": 0.038
 },
 {
 "family": "sweep_reversal",
 "bar": "1m",
-"n": 11735,
+"n": 11300,
 "best_pm": 0,
 "pos_rate": 0
 },
 {
 "family": "sweep_reversal",
 "bar": "30s",
-"n": 1174,
+"n": 1106,
 "best_pm": 0,
 "pos_rate": 0
 },
 {
 "family": "sweep_reversal",
 "bar": "5m",
-"n": 7898,
-"best_pm": 0.39,
-"pos_rate": 0.013
+"n": 7253,
+"best_pm": 0.37,
+"pos_rate": 0.012
 },
 {
 "family": "trailing_stop_flush",
@@ -1584,21 +1584,21 @@
 {
 "family": "wf_ridge",
 "bar": "15m",
-"n": 18439,
+"n": 16672,
 "best_pm": 1.11,
 "pos_rate": 0.019
 },
 {
 "family": "wf_ridge",
 "bar": "1h",
-"n": 152137,
+"n": 145316,
 "best_pm": 1.09,
 "pos_rate": 0.027
 },
 {
 "family": "wf_ridge",
 "bar": "5m",
-"n": 9518,
+"n": 8806,
 "best_pm": 0.76,
 "pos_rate": 0.015
 },
@@ -1619,6 +1619,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-10-01T11:23",
+"name": "weekend_gap_inventory",
+"status": "rejected",
+"rationale": "`weekend_gap_inventory` \u2014 the payers are weekend-news traders and resting stop orders that get filled at the Sunday reopen, the thinnest liquidity of the week; dealers mark the price through them and earn the reversion (sign=-1). The opposite payer (sign=+1) is slow allocators wh",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
 {
 "ts": "2026-10-01T10:51",
 "name": "absorbed_flow_release",
@@ -1695,13 +1702,6 @@
 "status": "accepted",
 "rationale": "PAYER = fixed-weight mandates (60/40-style multi-asset funds, risk-parity and index products holding gold at a target weight) that must trade back to target into the week-/month-end close; the bigger gold's period move, the bigger their forced, price-insensitive order against it,",
 "note": "{\"name\": \"rebalance_size\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.324525}"
-},
-{
-"ts": "2026-10-01T05:01",
-"name": "post_release_drift",
-"status": "accepted",
-"rationale": "PAYER = slow allocators (investment committees, CTAs with daily-close signals, wealth-desk model portfolios) who can only adjust their gold weight over 1\u20133 days after a large macro surprise, so their orders trail the first-hour repricing and pay whoever is positioned before them.",
-"note": "{\"name\": \"post_release_drift\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.43425}"
 }
 ],
 "history": [
@@ -4495,6 +4495,17 @@
 "dsr_bar": 6.52,
 "best_pm_1h": 2.94,
 "distinct": 23010483
+},
+{
+"t": 1790854053.446939,
+"total": 26472227,
+"per_min": 3644.0,
+"cpu": 54.5,
+"gpu": 92,
+"free_gb": 145.3,
+"dsr_bar": 6.52,
+"best_pm_1h": 2.94,
+"distinct": 23028476
 }
 ],
 "data": {
