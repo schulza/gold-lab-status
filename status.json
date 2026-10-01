@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-01 20:20:50 UTC",
+"generated_at": "2026-10-01 20:26:19 UTC",
 "host": {
-"cpu_pct": 16.4,
-"gpu_pct": 93,
-"free_gb": 157.1,
-"uptime": "up 2 days,  5:06, 2 users, load averages: 3.71 4.83 4.95",
-"load": "{ 3.71 4.83 4.95 }"
+"cpu_pct": 8.9,
+"gpu_pct": 0,
+"free_gb": 148.5,
+"uptime": "up 2 days,  5:12, 2 users, load averages: 3.75 5.11 5.16",
+"load": "{ 3.75 5.11 5.16 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-01T22:18:31",
-"it": 39600,
+"ts": "2026-10-01T22:23:58",
+"it": 39800,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.5,
-"pbo": 0.25,
+"pbo": 0.5,
 "best_family": "gated",
-"best_pm": 0.4,
-"best_params": "{'base': 'drawdown_derisk_flow', 'base_params': {'d': 11, 'hold': 2, 'k': 1.0, 'side': 'down', 'sign': 1}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 20}",
+"best_pm": 0.26,
+"best_params": "{'base': 'var_breach_deleverage', 'base_params': {'cnt': 1, 'hold': 4, 'q': 0.973, 'sign': 1, 'window': 71}, 'mode': 'session', 'start_hour': 17, 'hold_hours': ",
 "mix": "gat8",
-"queue_s": 7.0
+"queue_s": 8.0
 },
 "events": []
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-01T22:20:50",
-"it": 30272,
-"bar": "30s",
+"ts": "2026-10-01T22:22:54",
+"it": 30400,
+"bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.5,
-"pbo": 0.18,
+"pbo": 0.5,
 "best_family": "gated",
-"best_pm": 0.39,
-"best_params": "{'base': 'fix_flow_reversal', 'base_params': {'fix': 'am', 'hold': 187, 'k': 1.69, 'pre': 13, 'sign': -1}, 'mode': 'vol_below', 'vol_window': 366, 'vol_pct': 0.",
+"best_pm": 0.57,
+"best_params": "{'base': 'grind_vs_burst', 'base_params': {'k': 1.18, 'n': 532, 'sign': -1, 'theta': 1.59}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 20}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 26843999,
-"last_5m": 2056,
-"last_1h": 29253,
-"last_24h": 4997347,
-"distinct_ideas": 23396085,
+"total": 26846888,
+"last_5m": 2601,
+"last_1h": 29976,
+"last_24h": 4946360,
+"distinct_ideas": 23398926,
 "dsr_bar": 6.5,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17574094,
+"n": 17576974,
 "pos_rate": 0.327,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -382,7 +382,7 @@
 },
 {
 "family": "retrace_speed_squeeze",
-"n": 4230,
+"n": 4235,
 "pos_rate": 0.382,
 "best_pm": 1.12,
 "best_dsr": 0.0,
@@ -490,7 +490,7 @@
 },
 {
 "family": "asia_thin_move_fade",
-"n": 2775,
+"n": 2776,
 "pos_rate": 0.191,
 "best_pm": 0.62,
 "best_dsr": 0.0,
@@ -589,7 +589,7 @@
 },
 {
 "family": "calendar_rebalance_flow",
-"n": 1592,
+"n": 1595,
 "pos_rate": 0.325,
 "best_pm": 1.59,
 "best_dsr": 0.0,
@@ -809,7 +809,7 @@
 {
 "family": "asia_thin_move_fade",
 "bar": "1m",
-"n": 922,
+"n": 923,
 "best_pm": 0.56,
 "pos_rate": 0.178
 },
@@ -893,7 +893,7 @@
 {
 "family": "calendar_rebalance_flow",
 "bar": "15m",
-"n": 1592,
+"n": 1595,
 "best_pm": 1.59,
 "pos_rate": 0.325
 },
@@ -1166,37 +1166,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 1115983,
+"n": 1094645,
 "best_pm": 1.65,
 "pos_rate": 0.455
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 2053520,
+"n": 2042020,
 "best_pm": 1.89,
 "pos_rate": 0.427
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 563006,
+"n": 562008,
 "best_pm": 16.85,
 "pos_rate": 0.298
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 158242,
-"best_pm": 1.4,
+"n": 156998,
+"best_pm": 1.45,
 "pos_rate": 0.242
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 898165,
+"n": 882249,
 "best_pm": 1.56,
-"pos_rate": 0.442
+"pos_rate": 0.443
 },
 {
 "family": "grind_vs_burst",
@@ -1537,7 +1537,7 @@
 {
 "family": "retrace_speed_squeeze",
 "bar": "1h",
-"n": 2112,
+"n": 2117,
 "best_pm": 1.12,
 "pos_rate": 0.38
 },
@@ -1923,6 +1923,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-01T20:25",
+"name": "fade_reward_memory",
+"status": "accepted",
+"rationale": "PAYER = the discretionary/retail contrarian crowd in gold (dip buyers, rip sellers) who size their next fade by whether the last few fades paid. After rewarded fades they pre-empt each other and overpay for the next one; after burned fades they stay away and the move finds no opp",
+"note": "{\"name\": \"fade_reward_memory\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.257475}"
+},
+{
 "ts": "2026-10-01T20:05",
 "name": "conditioned_dip_buyers",
 "status": "rejected",
@@ -1998,13 +2005,6 @@
 "status": "accepted",
 "rationale": "PAYER = liquidity demanders (date-bound hedgers, stop and margin flow, allocators on a deadline) who must trade while dealers ration balance sheet; they pay a concession on the multi-day move they cause, and it is refunded over the next 1\u20133 days once dealer capacity returns (sign",
 "note": "{\"name\": \"spread_excess_refund\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.0655875}"
-},
-{
-"ts": "2026-10-01T16:42",
-"name": "heavy_day_concession",
-"status": "accepted",
-"rationale": "PAYER = liquidity demanders who must move size in one day (forced sellers and buyers, block hedgers, liquidations). Risk-averse dealers absorb them only at a price concession, and that concession is refunded over the next 1\u20133 days once the inventory is redistributed (Campbell\u2013Gro",
-"note": "{\"name\": \"heavy_day_concession\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.4887125}"
 }
 ],
 "history": [
@@ -5854,6 +5854,17 @@
 "dsr_bar": 6.5,
 "best_pm_1h": 2.58,
 "distinct": 23396085
+},
+{
+"t": 1790886379.079995,
+"total": 26846888,
+"per_min": 520.0,
+"cpu": 8.9,
+"gpu": 0,
+"free_gb": 148.5,
+"dsr_bar": 6.5,
+"best_pm_1h": 2.58,
+"distinct": 23398926
 }
 ],
 "instrument": "XAUUSD",
