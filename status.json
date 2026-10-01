@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-01 21:16:40 UTC",
+"generated_at": "2026-10-01 21:22:08 UTC",
 "host": {
-"cpu_pct": 34.3,
-"gpu_pct": 94,
-"free_gb": 150.6,
-"uptime": "up 2 days,  6:02, 2 users, load averages: 9.06 6.15 5.30",
-"load": "{ 9.06 6.15 5.30 }"
+"cpu_pct": 10.9,
+"gpu_pct": 0,
+"free_gb": 226.1,
+"uptime": "up 2 days,  6:08, 2 users, load averages: 5.91 5.49 5.21",
+"load": "{ 5.91 5.49 5.21 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-01T23:16:07",
-"it": 41000,
+"ts": "2026-10-01T23:20:02",
+"it": 41010,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.5,
-"pbo": 0.39,
+"pbo": 0.04,
 "best_family": "gated",
-"best_pm": 0.3,
-"best_params": "{'base': 'thin_day_impact_refund', 'base_params': {'base': 9, 'hold': 2, 'k': 1.01, 'sign': 1, 'theta': 0.829}, 'mode': 'spread_below', 'vol_window': 580, 'vol_",
+"best_pm": 0.6,
+"best_params": "{'base': 'thin_day_impact_refund', 'base_params': {'base': 3, 'hold': 3, 'k': 0.931, 'sign': 1, 'theta': 0.771}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 50}",
 "mix": "gat8",
-"queue_s": 8.0
+"queue_s": 7.0
 },
 "events": []
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-01T23:16:40",
-"it": 31359,
+"ts": "2026-10-01T23:20:57",
+"it": 31410,
 "bar": "30s",
 "batch": 8,
 "passed": 0,
 "bench": 6.5,
-"pbo": 0.46,
+"pbo": 0.32,
 "best_family": "gated",
-"best_pm": 0.05,
-"best_params": "{'base': 'open_drive', 'base_params': {'drive_bars': 8, 'exit_hour': 40, 'k': 0.98, 'sign': 1}, 'mode': 'tick_above', 'vol_window': 197, 'vol_pct': 0.847, 'g2_m",
+"best_pm": 0.56,
+"best_params": "{'base': 'average_price_benchmark_pull', 'base_params': {'exit': 'end', 'k': 2.16, 'period': 'week', 'phase': 0.882, 'sign': -1, 'vol_days': 20}, 'mode': 'tick_",
 "mix": "gat8",
-"queue_s": 7.0
+"queue_s": 8.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 26873462,
-"last_5m": 2800,
-"last_1h": 31594,
-"last_24h": 4545729,
-"distinct_ideas": 23425376,
+"total": 26874242,
+"last_5m": 464,
+"last_1h": 29437,
+"last_24h": 4504653,
+"distinct_ideas": 23426033,
 "dsr_bar": 6.5,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17594277,
+"n": 17595045,
 "pos_rate": 0.327,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -607,8 +607,8 @@
 },
 {
 "family": "calendar_rebalance_flow",
-"n": 1608,
-"pos_rate": 0.324,
+"n": 1612,
+"pos_rate": 0.323,
 "best_pm": 1.59,
 "best_dsr": 0.0,
 "passed": 0,
@@ -1161,20 +1161,6 @@
 "pos_rate": 0.221
 },
 {
-"family": "fcm_margin_liquidation",
-"bar": "15m",
-"n": 132,
-"best_pm": 0.77,
-"pos_rate": 0.129
-},
-{
-"family": "fcm_margin_liquidation",
-"bar": "5m",
-"n": 132,
-"best_pm": 0.52,
-"pos_rate": 0.197
-},
-{
 "family": "forced_flat_reentry",
 "bar": "1m",
 "n": 2157,
@@ -1212,37 +1198,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 992030,
+"n": 982736,
 "best_pm": 1.65,
-"pos_rate": 0.456
+"pos_rate": 0.457
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 1844002,
+"n": 1823534,
 "best_pm": 1.89,
 "pos_rate": 0.425
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 536070,
+"n": 532996,
 "best_pm": 16.85,
 "pos_rate": 0.302
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 151552,
+"n": 150952,
 "best_pm": 1.45,
-"pos_rate": 0.246
+"pos_rate": 0.247
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 804352,
+"n": 796976,
 "best_pm": 1.56,
-"pos_rate": 0.447
+"pos_rate": 0.448
 },
 {
 "family": "grind_vs_burst",
@@ -1969,6 +1955,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-01T21:18",
+"name": "trend_breadth_flow",
+"status": "accepted",
+"rationale": "Payer = multi-horizon trend followers (CTAs) who scale positions in slices over days after their own signals flip; their remaining flow is computable from price as the recent *change* in signal breadth across horizons, and they pay impact on it.\nThe signal trades only while bread",
+"note": "{\"name\": \"trend_breadth_flow\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.8426375}"
+},
+{
 "ts": "2026-10-01T21:00",
 "name": null,
 "status": "rejected",
@@ -2044,13 +2037,6 @@
 "status": "accepted",
 "rationale": "PAYER = attention-driven buyers and sellers (retail coin/ETF/CFD accounts, wealth-desk clients) who act only after a \"gold hits N-month high/low\" headline and arrive 1\u20135 days late through slow channels (bank transfers, ETF creations, dealer premiums); they pay impact to whoever i",
 "note": "{\"name\": \"record_attention\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.2335}"
-},
-{
-"ts": "2026-10-01T17:38",
-"name": "var_breach_deleverage",
-"status": "accepted",
-"rationale": "PAYER = bank desks and funds run under historical-simulation VaR limits. A daily move beyond their own trailing q-quantile is a backtesting exception; it enters the VaR window, shrinks the allowed position and forces the losing side to cut over the next 1\u20135 days whatever the pric",
-"note": "{\"name\": \"var_breach_deleverage\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.162}"
 }
 ],
 "history": [
@@ -6010,6 +5996,17 @@
 "dsr_bar": 6.5,
 "best_pm_1h": 2.57,
 "distinct": 23425376
+},
+{
+"t": 1790889728.652504,
+"total": 26874242,
+"per_min": 93.0,
+"cpu": 10.9,
+"gpu": 0,
+"free_gb": 226.1,
+"dsr_bar": 6.5,
+"best_pm_1h": 2.57,
+"distinct": 23426033
 }
 ],
 "instrument": "XAUUSD",
