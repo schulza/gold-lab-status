@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-01 00:39:21 UTC",
+"generated_at": "2026-10-01 00:44:54 UTC",
 "host": {
-"cpu_pct": 37.9,
-"gpu_pct": 87,
-"free_gb": 139.1,
-"uptime": "up 1 day,  9:25, 2 users, load averages: 25.96 22.15 18.71",
-"load": "{ 25.96 22.15 18.71 }"
+"cpu_pct": 8.9,
+"gpu_pct": 0,
+"free_gb": 220.7,
+"uptime": "up 1 day,  9:30, 2 users, load averages: 5.83 13.06 15.76",
+"load": "{ 5.83 13.06 15.76 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-01T02:39:15",
-"it": 17340,
+"ts": "2026-10-01T02:43:54",
+"it": 17410,
 "bar": "1h",
 "batch": 410,
 "passed": 0,
 "bench": 6.67,
-"pbo": 0.11,
+"pbo": 0.25,
 "best_family": "gated",
-"best_pm": 1.72,
-"best_params": "{'base': 'sweep_reversal', 'base_params': {'hold': 107, 'lookback': 21, 'pen': 1.5, 'reclaim': 1, 'sign': -1}, 'mode': 'vol_above', 'vol_window': 383, 'vol_pct'",
+"best_pm": 2.63,
+"best_params": "{'base': 'settle_hedge_momentum', 'base_params': {'entry': -82, 'hold': 155, 'k': 2.39, 'sign': 1}, 'mode': 'htf_against', 'htf': '1h', 'sma_n': 50, 'g2_mode': ",
 "mix": "gat410",
 "queue_s": 410.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-01T02:38:25",
-"it": 13200,
-"bar": "5m",
-"batch": 313,
+"ts": "2026-10-01T02:42:29",
+"it": 13210,
+"bar": "15m",
+"batch": 410,
 "passed": 0,
 "bench": 6.67,
-"pbo": 0.21,
+"pbo": 0.11,
 "best_family": "gated",
-"best_pm": 6.98,
-"best_params": "{'base': 'fix_flow_reversal', 'base_params': {'fix': 'pm', 'hold': 338, 'k': 2.0, 'pre': 63, 'sign': -1}, 'mode': 'vol_below', 'vol_window': 37, 'vol_pct': 0.36",
-"mix": "gat313",
-"queue_s": 313.0
+"best_pm": 4.17,
+"best_params": "{'base': 'sliced_flow_decay', 'base_params': {'k': 3.46, 'mult': 3, 'n': 42, 'rel': 0.5, 'sign': -1}, 'mode': 'htf_against', 'htf': '4h', 'sma_n': 320, 'vol_sca",
+"mix": "gat410",
+"queue_s": 410.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 23971490,
-"last_5m": 62250,
-"last_1h": 509524,
-"last_24h": 12770528,
-"distinct_ideas": 20531704,
+"total": 23997762,
+"last_5m": 17776,
+"last_1h": 467871,
+"last_24h": 12738489,
+"distinct_ideas": 20556088,
 "dsr_bar": 6.67,
 "sharpe_std": 1.23,
 "families": [
 {
 "family": "gated",
-"n": 14901257,
+"n": 14927529,
 "pos_rate": 0.311,
 "best_pm": 2.97,
 "best_dsr": 0.611,
@@ -430,35 +430,35 @@
 {
 "family": "atr_impulse",
 "bar": "15m",
-"n": 4198,
+"n": 4155,
 "best_pm": 0.61,
 "pos_rate": 0.006
 },
 {
 "family": "atr_impulse",
 "bar": "1h",
-"n": 14064,
+"n": 13864,
 "best_pm": 1.03,
 "pos_rate": 0.136
 },
 {
 "family": "atr_impulse",
 "bar": "1m",
-"n": 104818,
+"n": 103943,
 "best_pm": -0.03,
 "pos_rate": 0.0
 },
 {
 "family": "atr_impulse",
 "bar": "30s",
-"n": 17387,
+"n": 17201,
 "best_pm": -0.26,
 "pos_rate": 0
 },
 {
 "family": "atr_impulse",
 "bar": "5m",
-"n": 29110,
+"n": 28796,
 "best_pm": 0.55,
 "pos_rate": 0.001
 },
@@ -591,35 +591,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 2172018,
+"n": 2165874,
 "best_pm": 1.45,
-"pos_rate": 0.31
+"pos_rate": 0.311
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 5365726,
+"n": 5361232,
 "best_pm": 2.85,
-"pos_rate": 0.38
+"pos_rate": 0.381
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 623146,
+"n": 624131,
 "best_pm": 1.56,
-"pos_rate": 0.158
+"pos_rate": 0.159
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 134203,
+"n": 134014,
 "best_pm": 1.53,
-"pos_rate": 0.146
+"pos_rate": 0.147
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 1364929,
+"n": 1363054,
 "best_pm": 1.6,
 "pos_rate": 0.297
 },
@@ -1116,21 +1116,21 @@
 {
 "family": "wf_ridge",
 "bar": "15m",
-"n": 467677,
+"n": 462806,
 "best_pm": 1.11,
 "pos_rate": 0.019
 },
 {
 "family": "wf_ridge",
 "bar": "1h",
-"n": 1563285,
+"n": 1551013,
 "best_pm": 1.36,
 "pos_rate": 0.027
 },
 {
 "family": "wf_ridge",
 "bar": "5m",
-"n": 150045,
+"n": 148484,
 "best_pm": 1.03,
 "pos_rate": 0.016
 },
@@ -1151,6 +1151,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-10-01T00:41",
+"name": "candle_close_herd",
+"status": "accepted",
+"rationale": "PAYER = retail/prop-firm expert advisors on MT4/MT5 that evaluate their rules only when an H1/H4 candle closes on broker server time: after a large candle they all send market orders in the same first minutes of the new candle, in the candle's direction and regardless of price, s",
+"note": "{\"name\": \"candle_close_herd\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.051}"
+},
 {
 "ts": "2026-10-01T00:08",
 "name": "forced_flat_reentry",
@@ -1227,13 +1234,6 @@
 "status": "rejected",
 "rationale": "Spot gold at the broker stops trading for the daily break (17:00\u201318:00 New York) and over the weekend; orders that accumulate while the venue is closed (stops breached by the futures/OTC move, pending entries, retail market orders queued overnight) all execute at the reopen again",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-09-30T17:32",
-"name": "wick_absorption",
-"status": "accepted",
-"rationale": "PAYER = impatient takers (stop-outs, liquidations, chasers) hitting a resting order that refills: they sell the low, the candle closes back up, and the lower wick is the round trip they paid; price leaves on the absorber's side once they stop.\nSignal = (lower minus upper wicks)/r",
-"note": "{\"name\": \"wick_absorption\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.2076}"
 }
 ],
 "history": [
@@ -2806,6 +2806,17 @@
 "dsr_bar": 6.67,
 "best_pm_1h": 2.27,
 "distinct": 20531704
+},
+{
+"t": 1790815494.926678,
+"total": 23997762,
+"per_min": 3555.0,
+"cpu": 8.9,
+"gpu": 0,
+"free_gb": 220.7,
+"dsr_bar": 6.67,
+"best_pm_1h": 2.27,
+"distinct": 20556088
 }
 ],
 "data": {
