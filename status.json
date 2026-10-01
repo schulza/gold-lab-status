@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-01 15:46:34 UTC",
+"generated_at": "2026-10-01 15:52:13 UTC",
 "host": {
-"cpu_pct": 7.3,
-"gpu_pct": 93,
-"free_gb": 151.6,
-"uptime": "up 2 days, 32 mins, 2 users, load averages: 5.19 4.95 4.93",
-"load": "{ 5.19 4.95 4.93 }"
+"cpu_pct": 16.1,
+"gpu_pct": 90,
+"free_gb": 148.5,
+"uptime": "up 2 days, 38 mins, 2 users, load averages: 4.86 5.15 5.09",
+"load": "{ 4.86 5.15 5.09 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-01T17:46:34",
-"it": 33148,
+"ts": "2026-10-01T17:52:13",
+"it": 33338,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.5,
-"pbo": 0.32,
+"pbo": 0.57,
 "best_family": "gated",
-"best_pm": 0.48,
-"best_params": "{'base': 'asia_thin_move_fade', 'base_params': {'hold': 1, 'k': 0.54, 'sign': 1, 'theta': 0.779}, 'mode': 'vol_below', 'vol_window': 240, 'vol_pct': 0.7}",
+"best_pm": 0.85,
+"best_params": "{'base': 'dealer_gamma_hedge_flow', 'base_params': {'hold': 5, 'mode': 'both', 'n': 31, 'sign': -1, 'theta': 0.135}, 'mode': 'spread_below', 'vol_window': 444, ",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-01T17:43:11",
-"it": 25200,
-"bar": "5m",
-"batch": 9,
+"ts": "2026-10-01T17:49:35",
+"it": 25400,
+"bar": "30s",
+"batch": 8,
 "passed": 0,
 "bench": 6.5,
-"pbo": 0.07,
+"pbo": 0.11,
 "best_family": "gated",
-"best_pm": 0.99,
-"best_params": "{'base': 'vol_target_rebalance', 'base_params': {'f': 5, 'hold': 6, 'k': 1.61, 'side': 'relever', 'sign': 1}, 'mode': 'spread_below', 'vol_window': 83, 'vol_pct",
-"mix": "asi1/gat8",
+"best_pm": 0.78,
+"best_params": "{'base': 'treasury_auction_concession', 'base_params': {'dom': 'mid', 'hold': 181, 'k': 1.42, 'pre': 95, 'sign': -1}, 'mode': 'vol_above', 'vol_window': 617, 'v",
+"mix": "gat8",
 "queue_s": 8.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 26712797,
-"last_5m": 4475,
-"last_1h": 32106,
-"last_24h": 7161493,
-"distinct_ideas": 23266396,
+"total": 26716352,
+"last_5m": 3306,
+"last_1h": 33647,
+"last_24h": 7122470,
+"distinct_ideas": 23269903,
 "dsr_bar": 6.5,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17480872,
+"n": 17484020,
 "pos_rate": 0.326,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -274,7 +274,7 @@
 },
 {
 "family": "vol_target_rebalance",
-"n": 5484,
+"n": 5486,
 "pos_rate": 0.456,
 "best_pm": 1.42,
 "best_dsr": 0.0,
@@ -301,7 +301,7 @@
 },
 {
 "family": "open_drive",
-"n": 4603,
+"n": 4607,
 "pos_rate": 0.079,
 "best_pm": 0.55,
 "best_dsr": 0.0,
@@ -426,6 +426,15 @@
 "since": "2026-09-30"
 },
 {
+"family": "asia_thin_move_fade",
+"n": 2742,
+"pos_rate": 0.193,
+"best_pm": 0.62,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-09-30"
+},
+{
 "family": "cot_positioning",
 "n": 2740,
 "pos_rate": 0.453,
@@ -433,15 +442,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-01"
-},
-{
-"family": "asia_thin_move_fade",
-"n": 2739,
-"pos_rate": 0.194,
-"best_pm": 0.62,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-09-30"
 },
 {
 "family": "settle_hedge_momentum",
@@ -471,6 +471,15 @@
 "since": "2026-09-30"
 },
 {
+"family": "cta_pnl_stopout",
+"n": 2098,
+"pos_rate": 0.379,
+"best_pm": 1.13,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-01"
+},
+{
 "family": "lookback_rolloff_flow",
 "n": 2009,
 "pos_rate": 0.357,
@@ -498,18 +507,9 @@
 "since": "2026-10-01"
 },
 {
-"family": "cta_pnl_stopout",
-"n": 1706,
-"pos_rate": 0.368,
-"best_pm": 1.13,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-01"
-},
-{
 "family": "calendar_rebalance_flow",
-"n": 1428,
-"pos_rate": 0.328,
+"n": 1432,
+"pos_rate": 0.327,
 "best_pm": 1.59,
 "best_dsr": 0.0,
 "passed": 0,
@@ -589,7 +589,7 @@
 },
 {
 "family": "real_yield_trend",
-"n": 170,
+"n": 172,
 "pos_rate": 0.547,
 "best_pm": 0.49,
 "best_dsr": 0.0,
@@ -726,9 +726,9 @@
 {
 "family": "asia_thin_move_fade",
 "bar": "5m",
-"n": 908,
+"n": 911,
 "best_pm": 0.62,
-"pos_rate": 0.194
+"pos_rate": 0.193
 },
 {
 "family": "average_price_benchmark_pull",
@@ -803,9 +803,9 @@
 {
 "family": "calendar_rebalance_flow",
 "bar": "15m",
-"n": 1428,
+"n": 1432,
 "best_pm": 1.59,
-"pos_rate": 0.328
+"pos_rate": 0.327
 },
 {
 "family": "candle_close_herd",
@@ -852,9 +852,9 @@
 {
 "family": "cta_pnl_stopout",
 "bar": "1h",
-"n": 852,
-"best_pm": 1.02,
-"pos_rate": 0.353
+"n": 1244,
+"best_pm": 1.05,
+"pos_rate": 0.377
 },
 {
 "family": "dealer_gamma_hedge_flow",
@@ -1076,35 +1076,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 1671587,
+"n": 1669655,
 "best_pm": 1.57,
 "pos_rate": 0.439
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 3101396,
+"n": 3068958,
 "best_pm": 2.56,
 "pos_rate": 0.431
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 699610,
+"n": 695378,
 "best_pm": 16.85,
-"pos_rate": 0.276
+"pos_rate": 0.277
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 187731,
+"n": 188081,
 "best_pm": 1.36,
 "pos_rate": 0.221
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 1318151,
+"n": 1317122,
 "best_pm": 1.56,
 "pos_rate": 0.418
 },
@@ -1244,7 +1244,7 @@
 {
 "family": "open_drive",
 "bar": "15m",
-"n": 501,
+"n": 495,
 "best_pm": -0.4,
 "pos_rate": 0
 },
@@ -1265,14 +1265,14 @@
 {
 "family": "open_drive",
 "bar": "30s",
-"n": 509,
+"n": 506,
 "best_pm": 0.55,
-"pos_rate": 0.668
+"pos_rate": 0.674
 },
 {
 "family": "open_drive",
 "bar": "5m",
-"n": 489,
+"n": 486,
 "best_pm": 0.04,
 "pos_rate": 0.014
 },
@@ -1289,13 +1289,6 @@
 "n": 1013,
 "best_pm": 0.27,
 "pos_rate": 0.058
-},
-{
-"family": "payer_portfolio",
-"bar": "5m",
-"n": 132,
-"best_pm": 0,
-"pos_rate": 0
 },
 {
 "family": "portfolio",
@@ -1349,9 +1342,9 @@
 {
 "family": "real_yield_trend",
 "bar": "1h",
-"n": 171,
+"n": 172,
 "best_pm": 0.49,
-"pos_rate": 0.55
+"pos_rate": 0.547
 },
 {
 "family": "rebalance_size",
@@ -1552,16 +1545,16 @@
 {
 "family": "vol_target_rebalance",
 "bar": "30s",
-"n": 1088,
+"n": 1089,
 "best_pm": 1.17,
-"pos_rate": 0.515
+"pos_rate": 0.514
 },
 {
 "family": "vol_target_rebalance",
 "bar": "5m",
-"n": 1102,
+"n": 1103,
 "best_pm": 1.42,
-"pos_rate": 0.472
+"pos_rate": 0.471
 },
 {
 "family": "vol_window_rolloff",
@@ -1686,6 +1679,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-01T15:48",
+"name": "heavy_day_concession",
+"status": "rejected",
+"rationale": "PAYER = liquidity-motivated traders (hedgers, redeeming ETF holders, margin-driven sellers) who must trade size on one day without information. Their concession shows up as a large daily move on abnormally heavy activity and is refunded over the next 1\u20134 days to whoever absorbed ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-10-01T15:31",
 "name": "cta_pnl_stopout",
 "status": "accepted",
@@ -1761,13 +1761,6 @@
 "status": "accepted",
 "rationale": "Payer = disposition-prone holders (retail CFD/ETF longs, discretionary desks) who sell winners as soon as price clears their cost basis and sit on losers below it; their price-insensitive supply/withheld supply makes price underreact, and they pay the continuation drift over the ",
 "note": "{\"name\": \"disposition_overhang\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.50919375}"
-},
-{
-"ts": "2026-10-01T11:55",
-"name": "thin_day_impact_refund",
-"status": "accepted",
-"rationale": "Payer = participants who must trade on a thin day (stop and margin flows, date-bound hedgers, skeleton-staffed dealer books on holidays and pre-holidays): they pay excess impact per ounce, which is refunded when full depth returns over the next 1\u20133 days.\nThinness is measured, not",
-"note": "{\"name\": \"thin_day_impact_refund\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.597675}"
 }
 ],
 "history": [
@@ -5078,6 +5071,17 @@
 "dsr_bar": 6.5,
 "best_pm_1h": 1.47,
 "distinct": 23266396
+},
+{
+"t": 1790869933.5750232,
+"total": 26716352,
+"per_min": 661.0,
+"cpu": 16.1,
+"gpu": 90,
+"free_gb": 148.5,
+"dsr_bar": 6.5,
+"best_pm_1h": 1.47,
+"distinct": 23269903
 }
 ],
 "instrument": "XAUUSD",
