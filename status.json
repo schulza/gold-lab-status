@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-10-02 04:35:19 UTC",
+"generated_at": "2026-10-02 04:40:43 UTC",
 "host": {
-"cpu_pct": 1.4,
+"cpu_pct": 1.2,
 "gpu_pct": 0,
-"free_gb": 121.9,
-"uptime": "up 2 days, 13:21, 2 users, load averages: 2.17 5.30 5.33",
-"load": "{ 2.17 5.30 5.33 }"
+"free_gb": 121.4,
+"uptime": "up 2 days, 13:26, 2 users, load averages: 2.26 3.33 4.35",
+"load": "{ 2.26 3.33 4.35 }"
 },
 "instances": [
 {
@@ -49,9 +49,9 @@
 ],
 "registry": {
 "total": 27129772,
-"last_5m": 5367,
-"last_1h": 24914,
-"last_24h": 1589951,
+"last_5m": 0,
+"last_1h": 23650,
+"last_24h": 1569338,
 "distinct_ideas": 23678025,
 "dsr_bar": 6.48,
 "sharpe_std": 1.19,
@@ -1522,37 +1522,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 208365,
+"n": 205659,
 "best_pm": 1.67,
-"pos_rate": 0.539
+"pos_rate": 0.54
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 413037,
-"best_pm": 1.78,
-"pos_rate": 0.504
+"n": 404915,
+"best_pm": 1.74,
+"pos_rate": 0.506
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 332199,
+"n": 326061,
 "best_pm": 16.85,
-"pos_rate": 0.32
+"pos_rate": 0.321
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 104812,
+"n": 103789,
 "best_pm": 32.84,
 "pos_rate": 0.267
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 207990,
+"n": 205366,
 "best_pm": 2.05,
-"pos_rate": 0.503
+"pos_rate": 0.504
 },
 {
 "family": "grind_vs_burst",
@@ -2559,6 +2559,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-02T04:37",
+"name": "shakeout_reclaim",
+"status": "accepted",
+"rationale": "PAYER = longs shaken out of a multi-day high: stopped-out holders and disposition sellers who dumped into a k-sigma daily-scale drop and are flat (or short) below a level the market then reclaims within days. They must rebuy above their own exit, and that forced re-entry pays the",
+"note": "{\"name\": \"shakeout_reclaim\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.2192}"
+},
+{
 "ts": "2026-10-02T04:21",
 "name": "continuation_sleeve_book",
 "status": "accepted",
@@ -2634,13 +2641,6 @@
 "status": "accepted",
 "rationale": "Payer = speculative COMEX gold futures holders who cannot make or take delivery and must be out of the expiring contract before first notice day (FND). Those sitting on a losing cycle close outright instead of rolling, and that forced, deadline-bound flow reaches spot through EFP",
 "note": "{\"name\": \"notice_day_nonroller_exit\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.104}"
-},
-{
-"ts": "2026-10-02T00:57",
-"name": null,
-"status": "rejected",
-"rationale": "PAYER = macro fair-value desks and yield-driven model funds that price gold off the 10y real yield and short it (or buy it) whenever TIPS yields move; when gold has moved the *same* direction as real yields over the window (`defy`), a price-insensitive flow (official-sector/physi",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
@@ -7466,6 +7466,17 @@
 "cpu": 1.4,
 "gpu": 0,
 "free_gb": 121.9,
+"dsr_bar": 6.48,
+"best_pm_1h": 32.84,
+"distinct": 23678025
+},
+{
+"t": 1790916043.820106,
+"total": 27129772,
+"per_min": 0.0,
+"cpu": 1.2,
+"gpu": 0,
+"free_gb": 121.4,
 "dsr_bar": 6.48,
 "best_pm_1h": 32.84,
 "distinct": 23678025
