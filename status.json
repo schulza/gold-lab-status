@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-02 04:18:53 UTC",
+"generated_at": "2026-10-02 04:24:19 UTC",
 "host": {
-"cpu_pct": 5.5,
+"cpu_pct": 6.5,
 "gpu_pct": 0,
-"free_gb": 154.6,
-"uptime": "up 2 days, 13:05, 2 users, load averages: 4.25 5.82 5.27",
-"load": "{ 4.25 5.82 5.27 }"
+"free_gb": 219.9,
+"uptime": "up 2 days, 13:10, 2 users, load averages: 3.81 5.24 5.18",
+"load": "{ 3.81 5.24 5.18 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-02T06:16:40",
-"it": 49800,
+"ts": "2026-10-02T06:21:24",
+"it": 49860,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.48,
 "pbo": 0.57,
 "best_family": "gated",
-"best_pm": 0.19,
-"best_params": "{'base': 'average_price_benchmark_pull', 'base_params': {'exit': 'touch', 'k': 2.5, 'period': 'week', 'phase': 0.353, 'sign': 1, 'vol_days': 6}, 'mode': 'vol_ab",
+"best_pm": 0.61,
+"best_params": "{'base': 'stale_high_time_stop', 'base_params': {'hold': 12, 'k': 1.83, 'lookback': 16, 'sign': -1, 'stall': 16}, 'mode': 'spread_below', 'vol_window': 866, 'vo",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-02T06:16:43",
-"it": 38200,
-"bar": "30s",
-"batch": 8,
+"ts": "2026-10-02T06:21:29",
+"it": 38250,
+"bar": "15m",
+"batch": 9,
 "passed": 0,
 "bench": 6.48,
-"pbo": 0.29,
+"pbo": 0.5,
 "best_family": "gated",
-"best_pm": 0.26,
-"best_params": "{'base': 'var_breach_deleverage', 'base_params': {'cnt': 1, 'hold': 6, 'q': 0.972, 'sign': 1, 'window': 60}, 'mode': 'spread_below', 'vol_window': 240, 'vol_pct",
-"mix": "gat8",
+"best_pm": 0.51,
+"best_params": "{'base': 'impact_asymmetry_refund', 'base_params': {'base': 5, 'd': 2, 'hold': 5, 'sign': 1, 'theta': 1.83}, 'mode': 'vol_below', 'vol_window': 240, 'vol_pct': ",
+"mix": "cal1/gat8",
 "queue_s": 8.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 27123539,
-"last_5m": 6970,
-"last_1h": 38296,
-"last_24h": 1631433,
-"distinct_ideas": 23671813,
+"total": 27124405,
+"last_5m": 866,
+"last_1h": 35784,
+"last_24h": 1619392,
+"distinct_ideas": 23672679,
 "dsr_bar": 6.48,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17723113,
+"n": 17723977,
 "pos_rate": 0.328,
 "best_pm": 32.84,
 "best_dsr": 0.611,
@@ -733,8 +733,8 @@
 },
 {
 "family": "calendar_rebalance_flow",
-"n": 1704,
-"pos_rate": 0.323,
+"n": 1706,
+"pos_rate": 0.324,
 "best_pm": 1.59,
 "best_dsr": 0.0,
 "passed": 0,
@@ -1121,7 +1121,7 @@
 {
 "family": "calendar_rebalance_flow",
 "bar": "15m",
-"n": 856,
+"n": 858,
 "best_pm": 1.59,
 "pos_rate": 0.304
 },
@@ -1478,35 +1478,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 216166,
+"n": 216056,
 "best_pm": 1.67,
 "pos_rate": 0.537
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 428843,
+"n": 422023,
 "best_pm": 1.78,
-"pos_rate": 0.501
+"pos_rate": 0.502
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 344020,
+"n": 338990,
 "best_pm": 16.85,
 "pos_rate": 0.32
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 107681,
+"n": 107716,
 "best_pm": 32.84,
 "pos_rate": 0.267
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 215798,
+"n": 215680,
 "best_pm": 2.05,
 "pos_rate": 0.502
 },
@@ -2515,6 +2515,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-02T04:21",
+"name": "continuation_sleeve_book",
+"status": "accepted",
+"rationale": "Payer = holders anchored to their entry price and slow allocators who sell into strength and underreact; this book holds the four continuation sleeves that are above a coin flip (channel breakout, disposition overhang, real-yield trend, thin-day move), each frozen at its grid cen",
+"note": "{\"name\": \"continuation_sleeve_book\", \"grid\": 48, \"sec_per_param\": 0.153, \"active_frac\": 0.56035}"
+},
+{
 "ts": "2026-10-02T04:04",
 "name": "anchor_absorbed_continuation",
 "status": "accepted",
@@ -2590,13 +2597,6 @@
 "status": "rejected",
 "rationale": "PAYER = macro fair-value desks and yield-driven model funds that price gold off the 10y real yield and short it (or buy it) whenever TIPS yields move; when gold has moved the *same* direction as real yields over the window (`defy`), a price-insensitive flow (official-sector/physi",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-10-02T00:40",
-"name": "delivery_notice_exit",
-"status": "rejected",
-"rationale": "Payer = speculative COMEX futures holders who cannot make or take delivery and must be out before First Notice Day (last business day before the delivery month). After a long run-up the spec-long crowd is large, so those who exit rather than roll sell outright into the last 2\u20135 b",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
@@ -7392,6 +7392,17 @@
 "dsr_bar": 6.48,
 "best_pm_1h": 32.84,
 "distinct": 23671813
+},
+{
+"t": 1790915059.40918,
+"total": 27124405,
+"per_min": 173.0,
+"cpu": 6.5,
+"gpu": 0,
+"free_gb": 219.9,
+"dsr_bar": 6.48,
+"best_pm_1h": 32.84,
+"distinct": 23672679
 }
 ],
 "instrument": "XAUUSD",
