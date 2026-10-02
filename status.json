@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-02 01:49:31 UTC",
+"generated_at": "2026-10-02 01:55:00 UTC",
 "host": {
-"cpu_pct": 8.2,
+"cpu_pct": 5.9,
 "gpu_pct": 0,
-"free_gb": 149.0,
-"uptime": "up 2 days, 10:35, 2 users, load averages: 3.00 4.94 5.15",
-"load": "{ 3.00 4.94 5.15 }"
+"free_gb": 169.0,
+"uptime": "up 2 days, 10:41, 2 users, load averages: 5.42 5.97 5.61",
+"load": "{ 5.42 5.97 5.61 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-02T03:49:31",
-"it": 46209,
-"bar": "1h",
+"ts": "2026-10-02T03:51:50",
+"it": 46400,
+"bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.49,
-"pbo": 0.14,
+"pbo": 0.29,
 "best_family": "gated",
-"best_pm": 1.26,
-"best_params": "{'base': 'loss_limit_reset', 'base_params': {'hold': 1, 'k': 0.5, 'mode': 'reset', 'period': 'month', 'sign': -1}, 'mode': 'session', 'start_hour': 1, 'hold_hou",
+"best_pm": 0.82,
+"best_params": "{'base': 'calendar_rebalance_flow', 'base_params': {'k': 0.043, 'period': 'month', 'phase': 'pre', 'sign': -1, 'span': 2}, 'mode': 'htf_against', 'htf': '1h', '",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-02T03:48:57",
-"it": 35401,
-"bar": "5m",
+"ts": "2026-10-02T03:54:05",
+"it": 35600,
+"bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.49,
-"pbo": 0.43,
+"pbo": 0.36,
 "best_family": "gated",
-"best_pm": 0.4,
-"best_params": "{'base': 'drawdown_derisk_flow', 'base_params': {'d': 11, 'hold': 4, 'k': 1.24, 'side': 'down', 'sign': 1}, 'mode': 'vol_above', 'vol_window': 66, 'vol_pct': 0.",
+"best_pm": 0.33,
+"best_params": "{'base': 'option_cut_pin', 'base_params': {'d': 4.63, 'mode': 'release', 'pre': 167, 'sign': 1, 'step': 50}, 'mode': 'vol_above', 'vol_window': 70, 'vol_pct': 0",
 "mix": "gat8",
-"queue_s": 7.0
+"queue_s": 8.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 27035005,
-"last_5m": 2992,
-"last_1h": 37965,
-"last_24h": 2547434,
-"distinct_ideas": 23584845,
+"total": 27042634,
+"last_5m": 7517,
+"last_1h": 42674,
+"last_24h": 2511252,
+"distinct_ideas": 23592474,
 "dsr_bar": 6.49,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17670995,
+"n": 17674501,
 "pos_rate": 0.328,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -201,6 +201,15 @@
 "since": "2026-10-01"
 },
 {
+"family": "period_end_mark_reversal",
+"n": 11200,
+"pos_rate": 0.441,
+"best_pm": 1.01,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-02"
+},
+{
 "family": "news_flow_split",
 "n": 11194,
 "pos_rate": 0.425,
@@ -289,15 +298,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-01"
-},
-{
-"family": "period_end_mark_reversal",
-"n": 7078,
-"pos_rate": 0.43,
-"best_pm": 1.01,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-02"
 },
 {
 "family": "inventory_vacuum",
@@ -715,8 +715,8 @@
 },
 {
 "family": "rebalance_size",
-"n": 809,
-"pos_rate": 0.392,
+"n": 810,
+"pos_rate": 0.391,
 "best_pm": 0.45,
 "best_dsr": 0.0,
 "passed": 0,
@@ -1328,37 +1328,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 453919,
+"n": 447604,
 "best_pm": 1.67,
-"pos_rate": 0.49
+"pos_rate": 0.492
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 877213,
+"n": 851355,
 "best_pm": 1.78,
-"pos_rate": 0.445
+"pos_rate": 0.447
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 407975,
+"n": 404729,
 "best_pm": 16.85,
 "pos_rate": 0.316
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 121174,
+"n": 121249,
 "best_pm": 14.49,
 "pos_rate": 0.262
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 396864,
+"n": 391903,
 "best_pm": 1.56,
-"pos_rate": 0.48
+"pos_rate": 0.481
 },
 {
 "family": "grind_vs_burst",
@@ -1650,9 +1650,9 @@
 {
 "family": "period_end_mark_reversal",
 "bar": "15m",
-"n": 879,
-"best_pm": 0.76,
-"pos_rate": 0.405
+"n": 2253,
+"best_pm": 0.93,
+"pos_rate": 0.435
 },
 {
 "family": "period_end_mark_reversal",
@@ -1671,16 +1671,16 @@
 {
 "family": "period_end_mark_reversal",
 "bar": "30s",
-"n": 877,
-"best_pm": 0.64,
-"pos_rate": 0.407
+"n": 2251,
+"best_pm": 0.9,
+"pos_rate": 0.45
 },
 {
 "family": "period_end_mark_reversal",
 "bar": "5m",
-"n": 879,
-"best_pm": 0.78,
-"pos_rate": 0.432
+"n": 2253,
+"best_pm": 0.95,
+"pos_rate": 0.441
 },
 {
 "family": "portfolio",
@@ -1741,9 +1741,9 @@
 {
 "family": "rebalance_size",
 "bar": "15m",
-"n": 809,
+"n": 810,
 "best_pm": 0.45,
-"pos_rate": 0.392
+"pos_rate": 0.391
 },
 {
 "family": "record_attention",
@@ -2330,6 +2330,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-02T01:50",
+"name": null,
+"status": "rejected",
+"rationale": "PAYER = the cohort that accepted a new value area: after gold migrates and at least `rho` of the 2m-day tick volume is done at the new level, that inventory is all marked near one price. When the close falls back through the midpoint between old and new area, the whole cohort is ",
+"note": "ast: name not allowed: getattr"
+},
+{
 "ts": "2026-10-02T01:32",
 "name": "period_end_mark_reversal",
 "status": "accepted",
@@ -2405,13 +2412,6 @@
 "status": "accepted",
 "rationale": "Payer = attention-driven late entrants (retail and tourist macro money) who pile in while participation is abnormally high and the price is moving; once participation falls back below its own norm there is no follow-on flow behind them and their positions are unwound over the nex",
 "note": "{\"name\": \"attention_decay_unwind\", \"grid\": 64, \"sec_per_param\": 0.0, \"active_frac\": 0.6306875}"
-},
-{
-"ts": "2026-10-01T22:12",
-"name": null,
-"status": "rejected",
-"rationale": "PAYER: rate-blind gold holders (momentum and retail longs or shorts) whose position sits on the wrong side of a measured gap between gold's h-day move and the published h-day change in 10y real yields; they pay when rate-anchored macro allocators close that gap over days (sign +1",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
@@ -6910,6 +6910,17 @@
 "dsr_bar": 6.49,
 "best_pm_1h": 3.03,
 "distinct": 23584845
+},
+{
+"t": 1790906100.917985,
+"total": 27042634,
+"per_min": 1503.0,
+"cpu": 5.9,
+"gpu": 0,
+"free_gb": 169.0,
+"dsr_bar": 6.49,
+"best_pm_1h": 3.03,
+"distinct": 23592474
 }
 ],
 "instrument": "XAUUSD",
