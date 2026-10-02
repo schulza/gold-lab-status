@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-02 00:03:50 UTC",
+"generated_at": "2026-10-02 00:09:17 UTC",
 "host": {
-"cpu_pct": 7.3,
+"cpu_pct": 8.9,
 "gpu_pct": 0,
-"free_gb": 143.5,
-"uptime": "up 2 days,  8:49, 2 users, load averages: 4.54 5.10 5.07",
-"load": "{ 4.54 5.10 5.07 }"
+"free_gb": 220.3,
+"uptime": "up 2 days,  8:55, 2 users, load averages: 3.48 4.24 4.67",
+"load": "{ 3.48 4.24 4.67 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-02T02:00:54",
-"it": 43800,
+"ts": "2026-10-02T02:04:34",
+"it": 43810,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.49,
-"pbo": 0.79,
+"pbo": 0.14,
 "best_family": "gated",
-"best_pm": 1.13,
-"best_params": "{'base': 'unexited_leg_turnover', 'base_params': {'d': 9.95, 'k': 2.87, 'rho': 0.994, 'sign': 1, 'theta': 0.632}, 'mode': 'session', 'start_hour': 7, 'hold_hour",
+"best_pm": 0.98,
+"best_params": "{'base': 'calendar_rebalance_flow', 'base_params': {'k': 0.432, 'period': 'month', 'phase': 'pre', 'sign': -1, 'span': 2}, 'mode': 'vol_above', 'vol_window': 60",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-02T02:02:49",
-"it": 33600,
-"bar": "15m",
-"batch": 9,
+"ts": "2026-10-02T02:06:33",
+"it": 33610,
+"bar": "30s",
+"batch": 8,
 "passed": 0,
 "bench": 6.49,
-"pbo": 0.5,
+"pbo": 0.29,
 "best_family": "gated",
-"best_pm": 3.89,
-"best_params": "{'base': 'fcm_margin_liquidation', 'base_params': {'entry': 'reopen', 'hold': 5, 'k': 2.3, 'sign': -1}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 50, 'vol_scale",
-"mix": "cal1/gat8",
+"best_pm": 0.12,
+"best_params": "{'base': 'cot_positioning', 'base_params': {'exit': 0.5, 'feature': 'cot_net_chg4z', 'hold': 203, 'sign': -1, 'thr': 0.705}, 'mode': 'vol_below', 'vol_window': ",
+"mix": "gat8",
 "queue_s": 8.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 26970813,
-"last_5m": 3161,
-"last_1h": 25697,
-"last_24h": 3273440,
-"distinct_ideas": 23521451,
+"total": 26970957,
+"last_5m": 144,
+"last_1h": 25841,
+"last_24h": 3221735,
+"distinct_ideas": 23521595,
 "dsr_bar": 6.49,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17637010,
+"n": 17637154,
 "pos_rate": 0.327,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -1278,37 +1278,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 657335,
+"n": 633989,
 "best_pm": 1.65,
-"pos_rate": 0.468
+"pos_rate": 0.469
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 1217250,
+"n": 1209910,
 "best_pm": 1.89,
 "pos_rate": 0.426
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 451217,
+"n": 450071,
 "best_pm": 16.85,
 "pos_rate": 0.312
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 131987,
+"n": 130244,
 "best_pm": 14.49,
-"pos_rate": 0.257
+"pos_rate": 0.258
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 550393,
+"n": 532263,
 "best_pm": 1.56,
-"pos_rate": 0.465
+"pos_rate": 0.467
 },
 {
 "family": "grind_vs_burst",
@@ -2175,6 +2175,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-02T00:03",
+"name": "cot_snapshot_trap",
+"status": "accepted",
+"rationale": "PAYER = speculators whose position build is fixed in the Tuesday COT snapshot and published Friday 15:30 ET, plus the headline readers who act on that three-day-old report; when price has moved against the build between Tuesday and Friday, the report advertises fresh positions th",
+"note": "{\"name\": \"cot_snapshot_trap\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.05175}"
+},
+{
 "ts": "2026-10-01T23:41",
 "name": null,
 "status": "rejected",
@@ -2250,13 +2257,6 @@
 "status": "accepted",
 "rationale": "PAYER = holders of gold accumulators/decumulators (Asian private-bank structured notes) and the dealers hedging them: each note is struck at issuance with a fixed knock-out barrier, and when spot first touches it the note dies, the dealer dumps the residual hedge and the client r",
 "note": "{\"name\": \"accumulator_knockout_flow\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.737075}"
-},
-{
-"ts": "2026-10-01T20:25",
-"name": "fade_reward_memory",
-"status": "accepted",
-"rationale": "PAYER = the discretionary/retail contrarian crowd in gold (dip buyers, rip sellers) who size their next fade by whether the last few fades paid. After rewarded fades they pre-empt each other and overpay for the next one; after burned fades they stay away and the move finds no opp",
-"note": "{\"name\": \"fade_reward_memory\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.257475}"
 }
 ],
 "history": [
@@ -6546,6 +6546,17 @@
 "dsr_bar": 6.49,
 "best_pm_1h": 8.52,
 "distinct": 23521451
+},
+{
+"t": 1790899757.35401,
+"total": 26970957,
+"per_min": 29.0,
+"cpu": 8.9,
+"gpu": 0,
+"free_gb": 220.3,
+"dsr_bar": 6.49,
+"best_pm_1h": 8.52,
+"distinct": 23521595
 }
 ],
 "instrument": "XAUUSD",
