@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-02 03:07:10 UTC",
+"generated_at": "2026-10-02 03:12:38 UTC",
 "host": {
-"cpu_pct": 19.1,
-"gpu_pct": 95,
-"free_gb": 148.1,
-"uptime": "up 2 days, 11:53, 2 users, load averages: 5.31 4.84 5.33",
-"load": "{ 5.31 4.84 5.33 }"
+"cpu_pct": 77.1,
+"gpu_pct": 0,
+"free_gb": 186.5,
+"uptime": "up 2 days, 11:58, 2 users, load averages: 7.55 5.74 5.56",
+"load": "{ 7.55 5.74 5.56 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-02T05:07:10",
-"it": 48263,
-"bar": "1h",
-"batch": 144,
+"ts": "2026-10-02T05:12:06",
+"it": 48410,
+"bar": "1m",
+"batch": 8,
 "passed": 0,
 "bench": 6.49,
-"pbo": 0.36,
-"best_family": "intermediation_rent",
-"best_pm": 1.16,
-"best_params": "{'d': 19, 'theta': 2.66, 'k': 0.707, 'mode': 'split', 'hold': 2, 'sign': -1}",
-"mix": "gat9/int135",
-"queue_s": 15.0
+"pbo": 0.04,
+"best_family": "gated",
+"best_pm": 0.71,
+"best_params": "{'base': 'treasury_auction_concession', 'base_params': {'dom': 'mid', 'hold': 135, 'k': 1.04, 'pre': 50, 'sign': -1}, 'mode': 'tick_above', 'vol_window': 240, '",
+"mix": "gat8",
+"queue_s": 8.0
 },
 "events": []
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-02T05:03:48",
-"it": 37000,
-"bar": "30s",
-"batch": 65,
+"ts": "2026-10-02T05:11:36",
+"it": 37200,
+"bar": "15m",
+"batch": 8,
 "passed": 0,
 "bench": 6.49,
-"pbo": 0.04,
-"best_family": "stepped_bid_accumulation",
-"best_pm": 24.03,
-"best_params": "{'n': 7, 'k': 2.15, 'rho': 0.509, 'hold': 1, 'sign': -1}",
-"mix": "gat8/ste57",
-"queue_s": 9.0
+"pbo": 0.43,
+"best_family": "gated",
+"best_pm": 0.87,
+"best_params": "{'base': 'fix_flow_reversal', 'base_params': {'fix': 'am', 'hold': 172, 'k': 1.59, 'pre': 15, 'sign': -1}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 20, 'vol_sc",
+"mix": "gat8",
+"queue_s": 7.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 27080408,
-"last_5m": 3732,
-"last_1h": 33256,
-"last_24h": 2012740,
-"distinct_ideas": 23630615,
+"total": 27085171,
+"last_5m": 2935,
+"last_1h": 34217,
+"last_24h": 1981248,
+"distinct_ideas": 23634672,
 "dsr_bar": 6.49,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17700639,
+"n": 17703704,
 "pos_rate": 0.328,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -283,7 +283,7 @@
 },
 {
 "family": "stepped_bid_accumulation",
-"n": 9760,
+"n": 9791,
 "pos_rate": 0.351,
 "best_pm": 0.86,
 "best_dsr": 0.0,
@@ -561,6 +561,15 @@
 "since": "2026-10-01"
 },
 {
+"family": "intermediation_rent",
+"n": 3183,
+"pos_rate": 0.445,
+"best_pm": 1.15,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-02"
+},
+{
 "family": "session_bias",
 "n": 3029,
 "pos_rate": 0.206,
@@ -705,15 +714,6 @@
 "since": "2026-10-01"
 },
 {
-"family": "intermediation_rent",
-"n": 1518,
-"pos_rate": 0.428,
-"best_pm": 0.81,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-02"
-},
-{
 "family": "same_clock_flow",
 "n": 1176,
 "pos_rate": 0.026,
@@ -733,7 +733,7 @@
 },
 {
 "family": "rebalance_size",
-"n": 815,
+"n": 817,
 "pos_rate": 0.39,
 "best_pm": 0.45,
 "best_dsr": 0.0,
@@ -1346,37 +1346,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 314513,
+"n": 302749,
 "best_pm": 1.67,
-"pos_rate": 0.517
+"pos_rate": 0.519
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 612833,
+"n": 603176,
 "best_pm": 1.78,
-"pos_rate": 0.472
+"pos_rate": 0.473
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 374977,
+"n": 374027,
 "best_pm": 16.85,
 "pos_rate": 0.319
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 114674,
+"n": 114280,
 "best_pm": 15.19,
-"pos_rate": 0.265
+"pos_rate": 0.266
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 291843,
+"n": 282668,
 "best_pm": 1.56,
-"pos_rate": 0.494
+"pos_rate": 0.495
 },
 {
 "family": "grind_vs_burst",
@@ -1451,16 +1451,16 @@
 {
 "family": "intermediation_rent",
 "bar": "15m",
-"n": 704,
-"best_pm": 0.81,
-"pos_rate": 0.423
+"n": 894,
+"best_pm": 1.15,
+"pos_rate": 0.438
 },
 {
 "family": "intermediation_rent",
 "bar": "1h",
-"n": 2064,
+"n": 2289,
 "best_pm": 0.91,
-"pos_rate": 0.443
+"pos_rate": 0.447
 },
 {
 "family": "inventory_vacuum",
@@ -1773,7 +1773,7 @@
 {
 "family": "rebalance_size",
 "bar": "15m",
-"n": 815,
+"n": 817,
 "best_pm": 0.45,
 "pos_rate": 0.39
 },
@@ -2060,7 +2060,7 @@
 {
 "family": "stepped_bid_accumulation",
 "bar": "30s",
-"n": 1927,
+"n": 1958,
 "best_pm": 0.84,
 "pos_rate": 0.362
 },
@@ -2397,6 +2397,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-02T03:11",
+"name": "fresh_budget_deploy",
+"status": "accepted",
+"rationale": "Payer = allocators who receive a fresh risk/cash budget at the start of a week, month or quarter and deploy it in slices over days. Their first days of trading reveal the direction of the remaining order, and those who drip in later pay a worse price to whoever front-ran the rest",
+"note": "{\"name\": \"fresh_budget_deploy\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.198}"
+},
+{
 "ts": "2026-10-02T02:54",
 "name": "intermediation_rent",
 "status": "accepted",
@@ -2472,13 +2479,6 @@
 "status": "rejected",
 "rationale": "Payer = crowded leveraged speculators (CFTC non-commercials): when net positioning is extreme and price moves against the crowd by k daily-vols over d days, margin and risk limits force them to cut, and the position is large relative to daily liquidity, so the liquidation runs fo",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-10-01T23:25",
-"name": "statement_chaser_inflow",
-"status": "accepted",
-"rationale": "Payer = return-chasing allocators (retail, advisors, ETF buyers) who act on the period-end statement or headline (\"best week/month since\u2026\") and buy in the first days of the next period at already-moved prices, paying impact to whoever was positioned before the turn; `sign=-1` tes",
-"note": "{\"name\": \"statement_chaser_inflow\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.245975}"
 }
 ],
 "history": [
@@ -7131,6 +7131,17 @@
 "dsr_bar": 6.49,
 "best_pm_1h": 15.19,
 "distinct": 23630615
+},
+{
+"t": 1790910758.598134,
+"total": 27085171,
+"per_min": 587.0,
+"cpu": 77.1,
+"gpu": 0,
+"free_gb": 186.5,
+"dsr_bar": 6.49,
+"best_pm_1h": 15.19,
+"distinct": 23634672
 }
 ],
 "instrument": "XAUUSD",
