@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-02 02:45:09 UTC",
+"generated_at": "2026-10-02 02:50:39 UTC",
 "host": {
-"cpu_pct": 19.8,
-"gpu_pct": 90,
-"free_gb": 168.7,
-"uptime": "up 2 days, 11:31, 2 users, load averages: 12.30 6.39 5.40",
-"load": "{ 12.30 6.39 5.40 }"
+"cpu_pct": 9.7,
+"gpu_pct": 0,
+"free_gb": 148.8,
+"uptime": "up 2 days, 11:36, 2 users, load averages: 3.93 6.75 6.18",
+"load": "{ 3.93 6.75 6.18 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-02T04:37:23",
-"it": 47810,
+"ts": "2026-10-02T04:48:26",
+"it": 48000,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.49,
-"pbo": 0.36,
+"pbo": 0.07,
 "best_family": "gated",
-"best_pm": 0.5,
-"best_params": "{'base': 'release_overshoot', 'base_params': {'ev': 'fomc', 'hold': 103, 'k': 2.13, 'sign': -1, 'win': 6}, 'mode': 'tick_above', 'vol_window': 827, 'vol_pct': 0",
+"best_pm": 0.93,
+"best_params": "{'base': 'candle_close_herd', 'base_params': {'hold': 45, 'k': 2.7, 'm': 6, 'sign': -1, 'span': 1, 'theta': 0.926}, 'mode': 'tick_above', 'vol_window': 190, 'vo",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-02T04:45:07",
-"it": 36720,
+"ts": "2026-10-02T04:49:58",
+"it": 36801,
 "bar": "5m",
 "batch": 8,
 "passed": 0,
 "bench": 6.49,
-"pbo": 0.57,
+"pbo": 0.36,
 "best_family": "gated",
-"best_pm": 0.91,
-"best_params": "{'base': 'fade_reward_memory', 'base_params': {'d': 9, 'hold': 6, 'k': 1.02, 'm': 5, 'mode': 'rewarded', 'side': 'both', 'sign': -1}, 'mode': 'spread_below', 'v",
+"best_pm": 4.91,
+"best_params": "{'base': 'levered_etf_close_rebalance', 'base_params': {'k': 2.28, 'post': 51, 'pre': 15, 'sign': 1}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 41, 'g2_mode': '",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 27065423,
-"last_5m": 2979,
-"last_1h": 31797,
-"last_24h": 2140113,
-"distinct_ideas": 23615307,
+"total": 27071585,
+"last_5m": 5807,
+"last_1h": 36020,
+"last_24h": 2094585,
+"distinct_ideas": 23621240,
 "dsr_bar": 6.49,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17694513,
+"n": 17696920,
 "pos_rate": 0.328,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -307,6 +307,15 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-01"
+},
+{
+"family": "stepped_bid_accumulation",
+"n": 6178,
+"pos_rate": 0.323,
+"best_pm": 0.86,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-02"
 },
 {
 "family": "impact_asymmetry_refund",
@@ -622,15 +631,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-01"
-},
-{
-"family": "stepped_bid_accumulation",
-"n": 2423,
-"pos_rate": 0.294,
-"best_pm": 0.8,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-02"
 },
 {
 "family": "settle_hedge_momentum",
@@ -1337,37 +1337,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 344350,
+"n": 338054,
 "best_pm": 1.67,
-"pos_rate": 0.511
+"pos_rate": 0.513
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 686431,
+"n": 652766,
 "best_pm": 1.78,
-"pos_rate": 0.464
+"pos_rate": 0.469
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 384577,
+"n": 380137,
 "best_pm": 16.85,
-"pos_rate": 0.318
+"pos_rate": 0.319
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 116165,
+"n": 115885,
 "best_pm": 15.19,
-"pos_rate": 0.264
+"pos_rate": 0.265
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 313820,
+"n": 309349,
 "best_pm": 1.56,
-"pos_rate": 0.491
+"pos_rate": 0.492
 },
 {
 "family": "grind_vs_burst",
@@ -2019,6 +2019,20 @@
 "n": 849,
 "best_pm": 0.77,
 "pos_rate": 0.29
+},
+{
+"family": "stepped_bid_accumulation",
+"bar": "1h",
+"n": 1813,
+"best_pm": 0.86,
+"pos_rate": 0.336
+},
+{
+"family": "stepped_bid_accumulation",
+"bar": "1m",
+"n": 1811,
+"best_pm": 0.85,
+"pos_rate": 0.349
 },
 {
 "family": "stepped_bid_accumulation",
@@ -7050,6 +7064,17 @@
 "dsr_bar": 6.49,
 "best_pm_1h": 15.19,
 "distinct": 23615307
+},
+{
+"t": 1790909439.280173,
+"total": 27071585,
+"per_min": 1161.0,
+"cpu": 9.7,
+"gpu": 0,
+"free_gb": 148.8,
+"dsr_bar": 6.49,
+"best_pm_1h": 15.19,
+"distinct": 23621240
 }
 ],
 "instrument": "XAUUSD",
