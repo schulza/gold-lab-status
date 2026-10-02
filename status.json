@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-02 02:34:07 UTC",
+"generated_at": "2026-10-02 02:39:34 UTC",
 "host": {
-"cpu_pct": 6.0,
-"gpu_pct": 93,
-"free_gb": 149.9,
-"uptime": "up 2 days, 11:20, 2 users, load averages: 4.74 5.10 5.22",
-"load": "{ 4.74 5.10 5.22 }"
+"cpu_pct": 6.4,
+"gpu_pct": 0,
+"free_gb": 222.6,
+"uptime": "up 2 days, 11:25, 2 users, load averages: 3.39 4.41 4.89",
+"load": "{ 3.39 4.41 4.89 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-02T04:34:01",
-"it": 47780,
+"ts": "2026-10-02T04:37:23",
+"it": 47810,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.49,
-"pbo": 0.07,
+"pbo": 0.36,
 "best_family": "gated",
-"best_pm": 0.73,
-"best_params": "{'base': 'treasury_auction_concession', 'base_params': {'dom': 'mid', 'hold': 189, 'k': 0.83, 'pre': 174, 'sign': -1}, 'mode': 'vol_above', 'vol_window': 154, '",
+"best_pm": 0.5,
+"best_params": "{'base': 'release_overshoot', 'base_params': {'ev': 'fomc', 'hold': 103, 'k': 2.13, 'sign': -1, 'win': 6}, 'mode': 'tick_above', 'vol_window': 827, 'vol_pct': 0",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-02T04:34:07",
-"it": 36634,
-"bar": "5m",
+"ts": "2026-10-02T04:35:42",
+"it": 36650,
+"bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.49,
-"pbo": 0.5,
+"pbo": 0.25,
 "best_family": "gated",
-"best_pm": 0.41,
-"best_params": "{'base': 'heavy_day_concession', 'base_params': {'base': 5, 'hold': 3, 'k': 0.942, 'sign': 1, 'theta': 1.18}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 100}",
+"best_pm": 0.69,
+"best_params": "{'base': 'stale_high_time_stop', 'base_params': {'hold': 11, 'k': 1.82, 'lookback': 16, 'sign': -1, 'stall': 20}, 'mode': 'vol_above', 'vol_window': 240, 'vol_p",
 "mix": "gat8",
-"queue_s": 7.0
+"queue_s": 8.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 27061711,
-"last_5m": 2436,
-"last_1h": 39847,
-"last_24h": 2246376,
-"distinct_ideas": 23611631,
+"total": 27062655,
+"last_5m": 288,
+"last_1h": 40295,
+"last_24h": 2188651,
+"distinct_ideas": 23612495,
 "dsr_bar": 6.49,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17693225,
+"n": 17694169,
 "pos_rate": 0.328,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -1328,35 +1328,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 374000,
+"n": 367994,
 "best_pm": 1.67,
-"pos_rate": 0.506
+"pos_rate": 0.507
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 733879,
+"n": 692991,
 "best_pm": 1.78,
-"pos_rate": 0.459
+"pos_rate": 0.463
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 391649,
+"n": 385569,
 "best_pm": 16.85,
 "pos_rate": 0.318
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 118196,
+"n": 117779,
 "best_pm": 15.19,
 "pos_rate": 0.264
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 336437,
+"n": 332103,
 "best_pm": 1.56,
 "pos_rate": 0.489
 },
@@ -2330,6 +2330,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-02T02:35",
+"name": "stepped_bid_accumulation",
+"status": "accepted",
+"rationale": "PAYER = the capped side of a multi-day standoff. A patient accumulator (official-sector or physical desk working a price-limited order) lifts its bid day after day, while range sellers, producer offers and barrier defenders keep supplying at an unchanged ceiling; their finite inv",
+"note": "{\"name\": \"stepped_bid_accumulation\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.339675}"
+},
+{
 "ts": "2026-10-02T02:06",
 "name": null,
 "status": "rejected",
@@ -2405,13 +2412,6 @@
 "status": "rejected",
 "rationale": "Payer = statement-driven return chasers (wealth platforms, model-portfolio committees, retail ETF buyers) who only see gold's move on the month-end factsheet or weekend review, then buy or sell price-insensitively in the first days of the new period and pay the impact.\nMeasured q",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-01T22:48",
-"name": null,
-"status": "rejected",
-"rationale": "PAYER = institutions slicing a multi-day parent order. Their child orders make q-hour returns positively autocorrelated, so the trailing variance ratio VR(q) rises above 1, and whoever follows the last q-hour leg earns the impact of the slices still to come.\nThe mirror payer is i",
-"note": "ast: import not allowed: from __future__"
 }
 ],
 "history": [
@@ -6998,6 +6998,17 @@
 "dsr_bar": 6.49,
 "best_pm_1h": 15.19,
 "distinct": 23611631
+},
+{
+"t": 1790908774.356226,
+"total": 27062655,
+"per_min": 58.0,
+"cpu": 6.4,
+"gpu": 0,
+"free_gb": 222.6,
+"dsr_bar": 6.49,
+"best_pm_1h": 15.19,
+"distinct": 23612495
 }
 ],
 "instrument": "XAUUSD",
