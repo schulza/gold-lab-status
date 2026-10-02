@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-10-02 05:23:55 UTC",
+"generated_at": "2026-10-02 05:29:18 UTC",
 "host": {
-"cpu_pct": 3.4,
+"cpu_pct": 0.5,
 "gpu_pct": 0,
-"free_gb": 120.5,
-"uptime": "up 2 days, 14:10, 2 users, load averages: 1.78 1.60 1.67",
-"load": "{ 1.78 1.60 1.67 }"
+"free_gb": 120.3,
+"uptime": "up 2 days, 14:15, 2 users, load averages: 1.43 1.52 1.60",
+"load": "{ 1.43 1.52 1.60 }"
 },
 "instances": [
 {
@@ -51,7 +51,7 @@
 "total": 27129772,
 "last_5m": 0,
 "last_1h": 5367,
-"last_24h": 1466120,
+"last_24h": 1445479,
 "distinct_ideas": 23678025,
 "dsr_bar": 6.48,
 "sharpe_std": 1.19,
@@ -1522,37 +1522,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 187209,
+"n": 184585,
 "best_pm": 1.67,
-"pos_rate": 0.546
+"pos_rate": 0.547
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 372232,
+"n": 364032,
 "best_pm": 1.74,
-"pos_rate": 0.512
+"pos_rate": 0.514
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 301199,
+"n": 294999,
 "best_pm": 16.85,
 "pos_rate": 0.321
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 96814,
+"n": 95822,
 "best_pm": 32.84,
 "pos_rate": 0.268
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 186834,
+"n": 184210,
 "best_pm": 2.05,
-"pos_rate": 0.507
+"pos_rate": 0.508
 },
 {
 "family": "grind_vs_burst",
@@ -1900,7 +1900,7 @@
 {
 "family": "portfolio",
 "bar": "30s",
-"n": 22,
+"n": 21,
 "best_pm": 3.03,
 "pos_rate": 1.0
 },
@@ -2559,6 +2559,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-02T05:27",
+"name": "unfilled_dip_bid_chase",
+"status": "rejected",
+"rationale": "Payer = dip-waiting allocators (and profit-takers who sold the leg and want back in): after a real multi-day leg they park resting bids deeper in the retracement; when the pause after the high stays shallow for `w` days, those bids are measurably unfilled and they have to chase a",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-10-02T05:11",
 "name": "overhead_supply_clearance",
 "status": "accepted",
@@ -2634,13 +2641,6 @@
 "status": "rejected",
 "rationale": "Payer = crowded COT speculators (levered CTAs/macro funds) whose risk limits force them to cut gross exposure ahead of scheduled NFP/FOMC risk and rebuild it afterwards; they pay impact on both legs, and the size of that flow scales with a measured quantity, net positioning z-sco",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-10-02T01:50",
-"name": null,
-"status": "rejected",
-"rationale": "PAYER = the cohort that accepted a new value area: after gold migrates and at least `rho` of the 2m-day tick volume is done at the new level, that inventory is all marked near one price. When the close falls back through the midpoint between old and new area, the whole cohort is ",
-"note": "ast: name not allowed: getattr"
 }
 ],
 "history": [
@@ -7565,6 +7565,17 @@
 "cpu": 3.4,
 "gpu": 0,
 "free_gb": 120.5,
+"dsr_bar": 6.48,
+"best_pm_1h": 1.58,
+"distinct": 23678025
+},
+{
+"t": 1790918958.599411,
+"total": 27129772,
+"per_min": 0.0,
+"cpu": 0.5,
+"gpu": 0,
+"free_gb": 120.3,
 "dsr_bar": 6.48,
 "best_pm_1h": 1.58,
 "distinct": 23678025
