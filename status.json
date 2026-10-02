@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-10-02 06:01:51 UTC",
+"generated_at": "2026-10-02 06:07:14 UTC",
 "host": {
-"cpu_pct": 6.2,
+"cpu_pct": 1.5,
 "gpu_pct": 0,
-"free_gb": 111.9,
-"uptime": "up 2 days, 14:48, 2 users, load averages: 2.31 1.70 1.60",
-"load": "{ 2.31 1.70 1.60 }"
+"free_gb": 120.0,
+"uptime": "up 2 days, 14:53, 2 users, load averages: 1.51 1.54 1.55",
+"load": "{ 1.51 1.54 1.55 }"
 },
 "instances": [
 {
@@ -51,7 +51,7 @@
 "total": 27129772,
 "last_5m": 0,
 "last_1h": 0,
-"last_24h": 1372455,
+"last_24h": 1359962,
 "distinct_ideas": 23678025,
 "dsr_bar": 6.48,
 "sharpe_std": 1.19,
@@ -1522,37 +1522,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 172367,
+"n": 168267,
 "best_pm": 1.67,
-"pos_rate": 0.551
+"pos_rate": 0.553
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 339432,
+"n": 337792,
 "best_pm": 1.74,
 "pos_rate": 0.519
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 276399,
+"n": 275221,
 "best_pm": 16.85,
 "pos_rate": 0.322
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 91203,
+"n": 89653,
 "best_pm": 32.84,
 "pos_rate": 0.269
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 171910,
+"n": 167892,
 "best_pm": 2.05,
-"pos_rate": 0.51
+"pos_rate": 0.511
 },
 {
 "family": "grind_vs_burst",
@@ -1935,9 +1935,9 @@
 {
 "family": "rebalance_size",
 "bar": "15m",
-"n": 133,
+"n": 126,
 "best_pm": 0.45,
-"pos_rate": 0.474
+"pos_rate": 0.468
 },
 {
 "family": "record_attention",
@@ -2559,6 +2559,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-02T06:03",
+"name": "unfilled_dip_bid_chase",
+"status": "accepted",
+"rationale": "Payer = under-invested dip bidders: allocators who want gold but anchor on a \"better\" price and rest limit bids below the market after a new multi-day high. When the pause after that high stays shallower than a random walk of the same length would normally reach, those bids never",
+"note": "{\"name\": \"unfilled_dip_bid_chase\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.27935}"
+},
+{
 "ts": "2026-10-02T05:46",
 "name": "unrefunded_move_drift",
 "status": "accepted",
@@ -2634,13 +2641,6 @@
 "status": "accepted",
 "rationale": "PAYER (`rent`) = impatient liquidity takers (hedgers, stop-driven and margin-driven traders) whose pushes are absorbed and reverted hour after hour. Abnormally negative serial covariance of hourly returns over d days is the footprint of intermediaries collecting a round-trip conc",
 "note": "{\"name\": \"intermediation_rent\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.079575}"
-},
-{
-"ts": "2026-10-02T02:35",
-"name": "stepped_bid_accumulation",
-"status": "accepted",
-"rationale": "PAYER = the capped side of a multi-day standoff. A patient accumulator (official-sector or physical desk working a price-limited order) lifts its bid day after day, while range sellers, producer offers and barrier defenders keep supplying at an unchanged ceiling; their finite inv",
-"note": "{\"name\": \"stepped_bid_accumulation\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.339675}"
 }
 ],
 "history": [
@@ -7642,6 +7642,17 @@
 "cpu": 6.2,
 "gpu": 0,
 "free_gb": 111.9,
+"dsr_bar": 6.48,
+"best_pm_1h": null,
+"distinct": 23678025
+},
+{
+"t": 1790921234.780312,
+"total": 27129772,
+"per_min": 0.0,
+"cpu": 1.5,
+"gpu": 0,
+"free_gb": 120.0,
 "dsr_bar": 6.48,
 "best_pm_1h": null,
 "distinct": 23678025
