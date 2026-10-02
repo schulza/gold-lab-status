@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-10-02 05:45:37 UTC",
+"generated_at": "2026-10-02 05:51:02 UTC",
 "host": {
-"cpu_pct": 5.2,
+"cpu_pct": 4.4,
 "gpu_pct": 0,
-"free_gb": 119.4,
-"uptime": "up 2 days, 14:31, 2 users, load averages: 1.40 1.50 1.55",
-"load": "{ 1.40 1.50 1.55 }"
+"free_gb": 121.1,
+"uptime": "up 2 days, 14:37, 2 users, load averages: 1.64 1.64 1.61",
+"load": "{ 1.64 1.64 1.61 }"
 },
 "instances": [
 {
@@ -51,7 +51,7 @@
 "total": 27129772,
 "last_5m": 0,
 "last_1h": 0,
-"last_24h": 1418171,
+"last_24h": 1404462,
 "distinct_ideas": 23678025,
 "dsr_bar": 6.48,
 "sharpe_std": 1.19,
@@ -1522,35 +1522,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 179419,
+"n": 177205,
 "best_pm": 1.67,
-"pos_rate": 0.549
+"pos_rate": 0.55
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 355832,
+"n": 350994,
 "best_pm": 1.74,
-"pos_rate": 0.516
+"pos_rate": 0.517
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 288799,
+"n": 285203,
 "best_pm": 16.85,
 "pos_rate": 0.322
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 93900,
+"n": 93063,
 "best_pm": 32.84,
 "pos_rate": 0.268
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 179044,
+"n": 176830,
 "best_pm": 2.05,
 "pos_rate": 0.509
 },
@@ -1935,9 +1935,9 @@
 {
 "family": "rebalance_size",
 "bar": "15m",
-"n": 165,
+"n": 155,
 "best_pm": 0.45,
-"pos_rate": 0.509
+"pos_rate": 0.503
 },
 {
 "family": "record_attention",
@@ -2559,6 +2559,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-02T05:46",
+"name": "unrefunded_move_drift",
+"status": "accepted",
+"rationale": "PAYER = intermediaries and faders (dealers, concession harvesters, fair-value desks, sell-into-strength allocators) who took the other side of a k-sigma multi-day move expecting the usual 1\u20133 day refund. Their inventory is against the move and has a risk/time limit, so when the r",
+"note": "{\"name\": \"unrefunded_move_drift\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.614325}"
+},
+{
 "ts": "2026-10-02T05:27",
 "name": "unfilled_dip_bid_chase",
 "status": "rejected",
@@ -2634,13 +2641,6 @@
 "status": "accepted",
 "rationale": "PAYER = the capped side of a multi-day standoff. A patient accumulator (official-sector or physical desk working a price-limited order) lifts its bid day after day, while range sellers, producer offers and barrier defenders keep supplying at an unchanged ceiling; their finite inv",
 "note": "{\"name\": \"stepped_bid_accumulation\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.339675}"
-},
-{
-"ts": "2026-10-02T02:06",
-"name": null,
-"status": "rejected",
-"rationale": "Payer = crowded COT speculators (levered CTAs/macro funds) whose risk limits force them to cut gross exposure ahead of scheduled NFP/FOMC risk and rebuild it afterwards; they pay impact on both legs, and the size of that flow scales with a measured quantity, net positioning z-sco",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
@@ -7609,6 +7609,17 @@
 "cpu": 5.2,
 "gpu": 0,
 "free_gb": 119.4,
+"dsr_bar": 6.48,
+"best_pm_1h": null,
+"distinct": 23678025
+},
+{
+"t": 1790920262.1139462,
+"total": 27129772,
+"per_min": 0.0,
+"cpu": 4.4,
+"gpu": 0,
+"free_gb": 121.1,
 "dsr_bar": 6.48,
 "best_pm_1h": null,
 "distinct": 23678025
