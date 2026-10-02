@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-02 03:45:56 UTC",
+"generated_at": "2026-10-02 03:51:21 UTC",
 "host": {
-"cpu_pct": 5.4,
+"cpu_pct": 9.1,
 "gpu_pct": 0,
-"free_gb": 142.9,
-"uptime": "up 2 days, 12:32, 2 users, load averages: 3.77 4.95 5.26",
-"load": "{ 3.77 4.95 5.26 }"
+"free_gb": 186.1,
+"uptime": "up 2 days, 12:37, 2 users, load averages: 3.87 5.01 5.23",
+"load": "{ 3.87 5.01 5.23 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-02T05:45:55",
-"it": 49219,
-"bar": "1h",
+"ts": "2026-10-02T05:48:01",
+"it": 49400,
+"bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.48,
-"pbo": 0.64,
+"pbo": 0.04,
 "best_family": "gated",
-"best_pm": 0.25,
-"best_params": "{'base': 'retrace_speed_squeeze', 'base_params': {'hold': 23, 'k': 1.26, 'lookback': 13, 'sign': -1, 'speed': 1.96, 'theta': 0.427}, 'mode': 'vol_above', 'vol_w",
+"best_pm": 0.5,
+"best_params": "{'base': 'var_breach_deleverage', 'base_params': {'cnt': 1, 'hold': 6, 'q': 0.972, 'sign': 1, 'window': 75}, 'mode': 'session', 'start_hour': 13, 'hold_hours': ",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-02T05:44:01",
-"it": 37800,
+"ts": "2026-10-02T05:48:52",
+"it": 37890,
 "bar": "30s",
 "batch": 8,
 "passed": 0,
 "bench": 6.48,
-"pbo": 0.04,
+"pbo": 0.43,
 "best_family": "gated",
-"best_pm": 0.73,
-"best_params": "{'base': 'candle_close_herd', 'base_params': {'hold': 48, 'k': 2.55, 'm': 4, 'sign': -1, 'span': 1, 'theta': 2.0}, 'mode': 'vol_above', 'vol_window': 240, 'vol_",
+"best_pm": 0.49,
+"best_params": "{'base': 'intermediation_rent', 'base_params': {'d': 19, 'hold': 1, 'k': 0.0868, 'mode': 'rent', 'sign': -1, 'theta': 2.05}, 'mode': 'session', 'start_hour': 7,",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 27108846,
-"last_5m": 2724,
-"last_1h": 42972,
-"last_24h": 1770750,
-"distinct_ideas": 23657846,
+"total": 27111165,
+"last_5m": 2153,
+"last_1h": 39580,
+"last_24h": 1719529,
+"distinct_ideas": 23660165,
 "dsr_bar": 6.48,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17715063,
+"n": 17717375,
 "pos_rate": 0.328,
 "best_pm": 32.84,
 "best_dsr": 0.611,
@@ -238,7 +238,7 @@
 },
 {
 "family": "fresh_budget_deploy",
-"n": 10861,
+"n": 10867,
 "pos_rate": 0.387,
 "best_pm": 0.77,
 "best_dsr": 0.0,
@@ -616,7 +616,7 @@
 },
 {
 "family": "asia_thin_move_fade",
-"n": 2778,
+"n": 2779,
 "pos_rate": 0.191,
 "best_pm": 0.62,
 "best_dsr": 0.0,
@@ -956,9 +956,9 @@
 {
 "family": "asia_thin_move_fade",
 "bar": "5m",
-"n": 72,
+"n": 73,
 "best_pm": 0.34,
-"pos_rate": 0.181
+"pos_rate": 0.178
 },
 {
 "family": "attention_decay_unwind",
@@ -1341,7 +1341,7 @@
 {
 "family": "fresh_budget_deploy",
 "bar": "1h",
-"n": 2151,
+"n": 2152,
 "best_pm": 0.77,
 "pos_rate": 0.379
 },
@@ -1390,37 +1390,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 248216,
+"n": 234926,
 "best_pm": 1.67,
-"pos_rate": 0.529
+"pos_rate": 0.531
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 493717,
+"n": 469861,
 "best_pm": 1.78,
-"pos_rate": 0.489
+"pos_rate": 0.493
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 360269,
+"n": 357355,
 "best_pm": 16.85,
 "pos_rate": 0.319
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 111662,
+"n": 110879,
 "best_pm": 32.84,
 "pos_rate": 0.266
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 242005,
+"n": 231625,
 "best_pm": 2.05,
-"pos_rate": 0.499
+"pos_rate": 0.5
 },
 {
 "family": "grind_vs_burst",
@@ -2434,6 +2434,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-02T03:48",
+"name": "frame_consensus_catchup",
+"status": "accepted",
+"rationale": "Payer = benchmark-relative managers who are underweight gold while every reporting frame they are reviewed on (week-, month-, quarter-, year-to-date) shows the same significant move. Each review forces a catch-up order, so they buy late and pay whoever was positioned when the fra",
+"note": "{\"name\": \"frame_consensus_catchup\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.572}"
+},
+{
 "ts": "2026-10-02T03:28",
 "name": "weekly_close_confirm_flow",
 "status": "rejected",
@@ -2509,13 +2516,6 @@
 "status": "accepted",
 "rationale": "Payer = a large real-money programme (central bank, sovereign or allocator order) worked around the clock by desks in every time zone; it pays impact for days and is the only flow that pushes Asia, London and New York the same way on the same day, whereas speculative flow is sess",
 "note": "{\"name\": \"round_the_clock_order\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.108}"
-},
-{
-"ts": "2026-10-02T00:03",
-"name": "cot_snapshot_trap",
-"status": "accepted",
-"rationale": "PAYER = speculators whose position build is fixed in the Tuesday COT snapshot and published Friday 15:30 ET, plus the headline readers who act on that three-day-old report; when price has moved against the build between Tuesday and Friday, the report advertises fresh positions th",
-"note": "{\"name\": \"cot_snapshot_trap\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.05175}"
 }
 ],
 "history": [
@@ -7245,6 +7245,17 @@
 "dsr_bar": 6.48,
 "best_pm_1h": 32.84,
 "distinct": 23657846
+},
+{
+"t": 1790913081.93291,
+"total": 27111165,
+"per_min": 431.0,
+"cpu": 9.1,
+"gpu": 0,
+"free_gb": 186.1,
+"dsr_bar": 6.48,
+"best_pm_1h": 32.84,
+"distinct": 23660165
 }
 ],
 "instrument": "XAUUSD",
