@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-02 00:20:30 UTC",
+"generated_at": "2026-10-02 00:25:58 UTC",
 "host": {
-"cpu_pct": 17.2,
-"gpu_pct": 93,
-"free_gb": 150.5,
-"uptime": "up 2 days,  9:06, 2 users, load averages: 5.97 5.27 4.87",
-"load": "{ 5.97 5.27 4.87 }"
+"cpu_pct": 8.8,
+"gpu_pct": 0,
+"free_gb": 218.8,
+"uptime": "up 2 days,  9:12, 2 users, load averages: 3.79 4.94 4.86",
+"load": "{ 3.79 4.94 4.86 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-02T02:20:29",
-"it": 44196,
+"ts": "2026-10-02T02:24:06",
+"it": 44210,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.49,
-"pbo": 0.0,
+"pbo": 0.29,
 "best_family": "gated",
-"best_pm": 1.04,
-"best_params": "{'base': 'vol_window_rolloff', 'base_params': {'drop': 0.136, 'hold': 4, 'lead': 4, 'mode': 'long', 'sign': 1, 'window': 12}, 'mode': 'vol_below', 'vol_window':",
+"best_pm": 0.61,
+"best_params": "{'base': 'restock_capitulation', 'base_params': {'d': 0.769, 'hold': 1.29, 'k': 2.5, 'm': 3, 'rho': 0.119, 'sign': 1}, 'mode': 'spread_below', 'vol_window': 126",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-02T02:18:40",
-"it": 33800,
-"bar": "15m",
+"ts": "2026-10-02T02:23:12",
+"it": 33870,
+"bar": "30s",
 "batch": 8,
 "passed": 0,
 "bench": 6.49,
-"pbo": 0.11,
+"pbo": 0.07,
 "best_family": "gated",
-"best_pm": 0.87,
-"best_params": "{'base': 'attention_decay_unwind', 'base_params': {'base': 7, 'hold': 3.9, 'k': 0.332, 'sign': -1, 'theta': 1.47, 'w': 4.65}, 'mode': 'spread_below', 'vol_windo",
+"best_pm": 0.67,
+"best_params": "{'base': 'candle_close_herd', 'base_params': {'hold': 45, 'k': 3.0, 'm': 6, 'sign': -1, 'span': 1, 'theta': 0.926}, 'mode': 'spread_below', 'vol_window': 143, '",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 26978361,
-"last_5m": 5247,
-"last_1h": 33429,
-"last_24h": 3185711,
-"distinct_ideas": 23528929,
+"total": 26979329,
+"last_5m": 624,
+"last_1h": 34213,
+"last_24h": 3139431,
+"distinct_ideas": 23529865,
 "dsr_bar": 6.49,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17641494,
+"n": 17642462,
 "pos_rate": 0.327,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -1301,37 +1301,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 632068,
+"n": 612982,
 "best_pm": 1.65,
-"pos_rate": 0.469
+"pos_rate": 0.471
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 1178631,
+"n": 1168871,
 "best_pm": 1.89,
 "pos_rate": 0.427
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 446631,
+"n": 445285,
 "best_pm": 16.85,
 "pos_rate": 0.313
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 130570,
+"n": 129297,
 "best_pm": 14.49,
 "pos_rate": 0.258
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 531177,
+"n": 516362,
 "best_pm": 1.56,
-"pos_rate": 0.468
+"pos_rate": 0.469
 },
 {
 "family": "grind_vs_burst",
@@ -2198,6 +2198,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-02T00:23",
+"name": "round_the_clock_order",
+"status": "accepted",
+"rationale": "Payer = a large real-money programme (central bank, sovereign or allocator order) worked around the clock by desks in every time zone; it pays impact for days and is the only flow that pushes Asia, London and New York the same way on the same day, whereas speculative flow is sess",
+"note": "{\"name\": \"round_the_clock_order\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.108}"
+},
+{
 "ts": "2026-10-02T00:03",
 "name": "cot_snapshot_trap",
 "status": "accepted",
@@ -2273,13 +2280,6 @@
 "status": "rejected",
 "rationale": "Payer = crowded leveraged speculators (CFTC non-commercials) whose net position sits on one side of its 52-week norm and who are then hit by a multi-day move against that position; margin and risk limits force them to cut over days, and they pay the price impact of their own liqu",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-10-01T20:44",
-"name": "accumulator_knockout_flow",
-"status": "accepted",
-"rationale": "PAYER = holders of gold accumulators/decumulators (Asian private-bank structured notes) and the dealers hedging them: each note is struck at issuance with a fixed knock-out barrier, and when spot first touches it the note dies, the dealer dumps the residual hedge and the client r",
-"note": "{\"name\": \"accumulator_knockout_flow\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.737075}"
 }
 ],
 "history": [
@@ -6602,6 +6602,17 @@
 "dsr_bar": 6.49,
 "best_pm_1h": 8.52,
 "distinct": 23528929
+},
+{
+"t": 1790900758.4334059,
+"total": 26979329,
+"per_min": 125.0,
+"cpu": 8.8,
+"gpu": 0,
+"free_gb": 218.8,
+"dsr_bar": 6.49,
+"best_pm_1h": 8.52,
+"distinct": 23529865
 }
 ],
 "instrument": "XAUUSD",
