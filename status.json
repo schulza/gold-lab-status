@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-02 03:23:33 UTC",
+"generated_at": "2026-10-02 03:29:03 UTC",
 "host": {
-"cpu_pct": 5.6,
-"gpu_pct": 0,
-"free_gb": 187.9,
-"uptime": "up 2 days, 12:09, 2 users, load averages: 4.53 4.63 4.83",
-"load": "{ 4.53 4.63 4.83 }"
+"cpu_pct": 9.7,
+"gpu_pct": 93,
+"free_gb": 148.2,
+"uptime": "up 2 days, 12:15, 2 users, load averages: 6.87 7.06 5.98",
+"load": "{ 6.87 7.06 5.98 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-02T05:22:35",
-"it": 48600,
+"ts": "2026-10-02T05:28:34",
+"it": 48800,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
-"bench": 6.49,
+"bench": 6.48,
 "pbo": 0.14,
 "best_family": "gated",
-"best_pm": 0.77,
-"best_params": "{'base': 'fcm_margin_liquidation', 'base_params': {'entry': 'morning', 'hold': 2, 'k': 2.37, 'sign': 1}, 'mode': 'vol_above', 'vol_window': 322, 'vol_pct': 0.77",
+"best_pm": 0.25,
+"best_params": "{'base': 'fx_fix_passthrough', 'base_params': {'hold': 179, 'k': 2.61, 'pre': 8, 'sign': 1}, 'mode': 'tick_above', 'vol_window': 304, 'vol_pct': 0.546}",
 "mix": "gat8",
-"queue_s": 8.0
+"queue_s": 7.0
 },
 "events": []
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-02T05:15:23",
-"it": 37210,
-"bar": "30s",
+"ts": "2026-10-02T05:28:25",
+"it": 37400,
+"bar": "15m",
 "batch": 8,
 "passed": 0,
-"bench": 6.49,
-"pbo": 0.21,
+"bench": 6.48,
+"pbo": 0.11,
 "best_family": "gated",
-"best_pm": 0.27,
-"best_params": "{'base': 'lookback_rolloff_flow', 'base_params': {'k': 1.43, 'lead': 7, 'lookback': 22, 'mode': 'flip', 'sign': 1}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 20",
+"best_pm": 1.16,
+"best_params": "{'base': 'calendar_rebalance_flow', 'base_params': {'k': 0.281, 'period': 'month', 'phase': 'pre', 'sign': -1, 'span': 1}, 'mode': 'spread_below', 'vol_window':",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 27088621,
-"last_5m": 3378,
-"last_1h": 31561,
-"last_24h": 1884707,
-"distinct_ideas": 23637936,
-"dsr_bar": 6.49,
+"total": 27099770,
+"last_5m": 11149,
+"last_1h": 40110,
+"last_24h": 1880280,
+"distinct_ideas": 23648770,
+"dsr_bar": 6.48,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17705313,
+"n": 17708529,
 "pos_rate": 0.328,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -291,6 +291,15 @@
 "since": "2026-10-02"
 },
 {
+"family": "fresh_budget_deploy",
+"n": 8356,
+"pos_rate": 0.387,
+"best_pm": 0.77,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-02"
+},
+{
 "family": "round_the_clock_order",
 "n": 8186,
 "pos_rate": 0.251,
@@ -415,6 +424,15 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-09-29"
+},
+{
+"family": "intermediation_rent",
+"n": 4597,
+"pos_rate": 0.449,
+"best_pm": 1.28,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-02"
 },
 {
 "family": "late_participation",
@@ -550,15 +568,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-09-30"
-},
-{
-"family": "intermediation_rent",
-"n": 3195,
-"pos_rate": 0.444,
-"best_pm": 1.15,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-02"
 },
 {
 "family": "candle_close_herd",
@@ -703,15 +712,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-01"
-},
-{
-"family": "fresh_budget_deploy",
-"n": 1825,
-"pos_rate": 0.385,
-"best_pm": 0.77,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-02"
 },
 {
 "family": "calendar_rebalance_flow",
@@ -1333,6 +1333,13 @@
 },
 {
 "family": "fresh_budget_deploy",
+"bar": "15m",
+"n": 2175,
+"best_pm": 0.76,
+"pos_rate": 0.386
+},
+{
+"family": "fresh_budget_deploy",
 "bar": "1h",
 "n": 913,
 "best_pm": 0.77,
@@ -1344,6 +1351,20 @@
 "n": 912,
 "best_pm": 0.57,
 "pos_rate": 0.387
+},
+{
+"family": "fresh_budget_deploy",
+"bar": "30s",
+"n": 2177,
+"best_pm": 0.64,
+"pos_rate": 0.379
+},
+{
+"family": "fresh_budget_deploy",
+"bar": "5m",
+"n": 2179,
+"best_pm": 0.73,
+"pos_rate": 0.397
 },
 {
 "family": "fx_fix_passthrough",
@@ -1369,35 +1390,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 276943,
+"n": 277492,
 "best_pm": 1.67,
 "pos_rate": 0.524
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 558030,
+"n": 545300,
 "best_pm": 1.78,
-"pos_rate": 0.478
+"pos_rate": 0.48
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 367908,
+"n": 366662,
 "best_pm": 16.85,
 "pos_rate": 0.319
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 112351,
+"n": 112892,
 "best_pm": 15.19,
 "pos_rate": 0.266
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 263286,
+"n": 263812,
 "best_pm": 1.56,
 "pos_rate": 0.496
 },
@@ -1474,9 +1495,9 @@
 {
 "family": "intermediation_rent",
 "bar": "15m",
-"n": 894,
-"best_pm": 1.15,
-"pos_rate": 0.438
+"n": 2296,
+"best_pm": 1.28,
+"pos_rate": 0.453
 },
 {
 "family": "intermediation_rent",
@@ -2420,6 +2441,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-02T03:28",
+"name": "weekly_close_confirm_flow",
+"status": "rejected",
+"rationale": "Payer = weekly-bar systems and \"weekly close above/below\" rule followers (slow managed-futures sleeves, discretionary allocators, technically triggered structured-product desks) who may only act once the Friday close confirms a break of the N-week closing channel, so their orders",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-10-02T03:11",
 "name": "fresh_budget_deploy",
 "status": "accepted",
@@ -2495,13 +2523,6 @@
 "status": "accepted",
 "rationale": "PAYER = speculators whose position build is fixed in the Tuesday COT snapshot and published Friday 15:30 ET, plus the headline readers who act on that three-day-old report; when price has moved against the build between Tuesday and Friday, the report advertises fresh positions th",
 "note": "{\"name\": \"cot_snapshot_trap\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.05175}"
-},
-{
-"ts": "2026-10-01T23:41",
-"name": null,
-"status": "rejected",
-"rationale": "Payer = crowded leveraged speculators (CFTC non-commercials): when net positioning is extreme and price moves against the crowd by k daily-vols over d days, margin and risk limits force them to cut, and the position is large relative to daily liquidity, so the liquidation runs fo",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
@@ -7187,6 +7208,17 @@
 "dsr_bar": 6.49,
 "best_pm_1h": 13.65,
 "distinct": 23637936
+},
+{
+"t": 1790911743.583511,
+"total": 27099770,
+"per_min": 2230.0,
+"cpu": 9.7,
+"gpu": 93,
+"free_gb": 148.2,
+"dsr_bar": 6.48,
+"best_pm_1h": 13.65,
+"distinct": 23648770
 }
 ],
 "instrument": "XAUUSD",
