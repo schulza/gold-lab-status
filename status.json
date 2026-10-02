@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-02 01:10:39 UTC",
+"generated_at": "2026-10-02 01:16:12 UTC",
 "host": {
-"cpu_pct": 18.0,
-"gpu_pct": 89,
-"free_gb": 145.0,
-"uptime": "up 2 days,  9:56, 2 users, load averages: 5.79 4.91 5.00",
-"load": "{ 5.79 4.91 5.00 }"
+"cpu_pct": 11.6,
+"gpu_pct": 0,
+"free_gb": 176.1,
+"uptime": "up 2 days, 10:02, 2 users, load averages: 6.62 5.31 5.19",
+"load": "{ 6.62 5.31 5.19 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-02T03:10:37",
-"it": 45520,
+"ts": "2026-10-02T03:15:27",
+"it": 45610,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.49,
-"pbo": 0.14,
+"pbo": 0.89,
 "best_family": "gated",
-"best_pm": 1.12,
-"best_params": "{'base': 'event_drift', 'base_params': {'atr_window': 22, 'hold': 14, 'pre_bars': 4, 'sign': 1, 'thr_atr': 1.3}, 'mode': 'vol_below', 'vol_window': 306, 'vol_pc",
+"best_pm": 0.21,
+"best_params": "{'base': 'average_price_benchmark_pull', 'base_params': {'exit': 'touch', 'k': 2.0, 'period': 'week', 'phase': 0.9, 'sign': -1, 'vol_days': 20}, 'mode': 'vol_ab",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-02T03:10:35",
-"it": 34900,
+"ts": "2026-10-02T03:16:10",
+"it": 35008,
 "bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.49,
-"pbo": 0.14,
+"pbo": 0.36,
 "best_family": "gated",
-"best_pm": 0.8,
-"best_params": "{'base': 'news_flow_split', 'base_params': {'days': 8, 'k': 1.19, 'mode': 'flow', 'sign': -1, 'win': 126}, 'mode': 'htf_against', 'htf': '1h', 'sma_n': 100}",
+"best_pm": 3.53,
+"best_params": "{'base': 'event_drift', 'base_params': {'atr_window': 303, 'hold': 22, 'pre_bars': 2, 'sign': 1, 'thr_atr': 3.57}, 'mode': 'vol_below', 'vol_window': 53, 'vol_p",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 27007234,
-"last_5m": 1512,
-"last_1h": 36661,
-"last_24h": 2817620,
-"distinct_ideas": 23557809,
+"total": 27009366,
+"last_5m": 1516,
+"last_1h": 36028,
+"last_24h": 2785980,
+"distinct_ideas": 23559773,
 "dsr_bar": 6.49,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17660824,
+"n": 17662952,
 "pos_rate": 0.328,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -670,7 +670,7 @@
 },
 {
 "family": "calendar_rebalance_flow",
-"n": 1658,
+"n": 1661,
 "pos_rate": 0.325,
 "best_pm": 1.59,
 "best_dsr": 0.0,
@@ -697,8 +697,8 @@
 },
 {
 "family": "rebalance_size",
-"n": 806,
-"pos_rate": 0.391,
+"n": 807,
+"pos_rate": 0.392,
 "best_pm": 0.45,
 "best_dsr": 0.0,
 "passed": 0,
@@ -1023,7 +1023,7 @@
 {
 "family": "calendar_rebalance_flow",
 "bar": "15m",
-"n": 1658,
+"n": 1661,
 "best_pm": 1.59,
 "pos_rate": 0.325
 },
@@ -1310,37 +1310,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 527615,
+"n": 522565,
 "best_pm": 1.67,
-"pos_rate": 0.48
+"pos_rate": 0.481
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 1011672,
+"n": 991660,
 "best_pm": 1.78,
-"pos_rate": 0.434
+"pos_rate": 0.435
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 425977,
+"n": 423299,
 "best_pm": 16.85,
 "pos_rate": 0.315
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 125471,
+"n": 125356,
 "best_pm": 14.49,
 "pos_rate": 0.261
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 452500,
+"n": 448719,
 "best_pm": 1.56,
-"pos_rate": 0.475
+"pos_rate": 0.476
 },
 {
 "family": "grind_vs_burst",
@@ -1478,9 +1478,9 @@
 {
 "family": "levered_etf_close_rebalance",
 "bar": "1m",
-"n": 1675,
+"n": 1667,
 "best_pm": 0.82,
-"pos_rate": 0.245
+"pos_rate": 0.246
 },
 {
 "family": "levered_etf_close_rebalance",
@@ -1653,9 +1653,9 @@
 {
 "family": "rebalance_size",
 "bar": "15m",
-"n": 806,
+"n": 807,
 "best_pm": 0.45,
-"pos_rate": 0.391
+"pos_rate": 0.392
 },
 {
 "family": "record_attention",
@@ -2242,6 +2242,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-02T01:14",
+"name": "notice_day_nonroller_exit",
+"status": "accepted",
+"rationale": "Payer = speculative COMEX gold futures holders who cannot make or take delivery and must be out of the expiring contract before first notice day (FND). Those sitting on a losing cycle close outright instead of rolling, and that forced, deadline-bound flow reaches spot through EFP",
+"note": "{\"name\": \"notice_day_nonroller_exit\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.104}"
+},
+{
 "ts": "2026-10-02T00:57",
 "name": null,
 "status": "rejected",
@@ -2317,13 +2324,6 @@
 "status": "accepted",
 "rationale": "Payer = late entrants of a crowded leg who are trapped after the turn: a leg of at least `k` sigma over `d` days was built on a measured amount of turnover (tick volume), price has since given back `theta` of it, but the turnover since the extreme is only a fraction `rho` of the ",
 "note": "{\"name\": \"unexited_leg_turnover\", \"grid\": 48, \"sec_per_param\": 0.001, \"active_frac\": 0.048775}"
-},
-{
-"ts": "2026-10-01T21:37",
-"name": "restock_capitulation",
-"status": "accepted",
-"rationale": "Payer = price-elastic physical buyers (jewellery fabricators, bar dealers, hand-to-mouth industrial users) who defer purchases after a jump and wait for a dip; once their inventory cover runs out without a retrace they must restock at the new level regardless of price (mirror: sc",
-"note": "{\"name\": \"restock_capitulation\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.7172375}"
 }
 ],
 "history": [
@@ -6745,6 +6745,17 @@
 "dsr_bar": 6.49,
 "best_pm_1h": 3.03,
 "distinct": 23557809
+},
+{
+"t": 1790903772.469814,
+"total": 27009366,
+"per_min": 303.0,
+"cpu": 11.6,
+"gpu": 0,
+"free_gb": 176.1,
+"dsr_bar": 6.49,
+"best_pm_1h": 3.03,
+"distinct": 23559773
 }
 ],
 "instrument": "XAUUSD",
