@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-02 03:01:35 UTC",
+"generated_at": "2026-10-02 03:07:10 UTC",
 "host": {
-"cpu_pct": 6.8,
-"gpu_pct": 0,
-"free_gb": 219.7,
-"uptime": "up 2 days, 11:47, 2 users, load averages: 3.02 4.63 5.53",
-"load": "{ 3.02 4.63 5.53 }"
+"cpu_pct": 19.1,
+"gpu_pct": 95,
+"free_gb": 148.1,
+"uptime": "up 2 days, 11:53, 2 users, load averages: 5.31 4.84 5.33",
+"load": "{ 5.31 4.84 5.33 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-02T04:58:08",
-"it": 48210,
-"bar": "1m",
-"batch": 8,
+"ts": "2026-10-02T05:07:10",
+"it": 48263,
+"bar": "1h",
+"batch": 144,
 "passed": 0,
 "bench": 6.49,
-"pbo": 0.86,
-"best_family": "gated",
-"best_pm": 0.53,
-"best_params": "{'base': 'shfe_reopen_catchup', 'base_params': {'entry': 90, 'hold': 168, 'k': 1.83, 'sess': 'night', 'sign': 1}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 305}",
-"mix": "gat8",
-"queue_s": 8.0
+"pbo": 0.36,
+"best_family": "intermediation_rent",
+"best_pm": 1.16,
+"best_params": "{'d': 19, 'theta': 2.66, 'k': 0.707, 'mode': 'split', 'hold': 2, 'sign': -1}",
+"mix": "gat9/int135",
+"queue_s": 15.0
 },
 "events": []
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-02T04:55:15",
-"it": 36970,
-"bar": "15m",
-"batch": 8,
+"ts": "2026-10-02T05:03:48",
+"it": 37000,
+"bar": "30s",
+"batch": 65,
 "passed": 0,
 "bench": 6.49,
 "pbo": 0.04,
-"best_family": "gated",
-"best_pm": 0.57,
-"best_params": "{'base': 'cot_snapshot_trap', 'base_params': {'hold': 2, 'k': 1.3, 'mode': 'chase', 'r': 0.0163, 'sign': -1}, 'mode': 'vol_above', 'vol_window': 732, 'vol_pct':",
-"mix": "gat8",
-"queue_s": 7.0
+"best_family": "stepped_bid_accumulation",
+"best_pm": 24.03,
+"best_params": "{'n': 7, 'k': 2.15, 'rho': 0.509, 'hold': 1, 'sign': -1}",
+"mix": "gat8/ste57",
+"queue_s": 9.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 27077636,
-"last_5m": 72,
-"last_1h": 31599,
-"last_24h": 2070812,
-"distinct_ideas": 23627291,
+"total": 27080408,
+"last_5m": 3732,
+"last_1h": 33256,
+"last_24h": 2012740,
+"distinct_ideas": 23630615,
 "dsr_bar": 6.49,
 "sharpe_std": 1.19,
 "families": [
 {
 "family": "gated",
-"n": 17700222,
+"n": 17700639,
 "pos_rate": 0.328,
 "best_pm": 16.85,
 "best_dsr": 0.611,
@@ -283,7 +283,7 @@
 },
 {
 "family": "stepped_bid_accumulation",
-"n": 8923,
+"n": 9760,
 "pos_rate": 0.351,
 "best_pm": 0.86,
 "best_dsr": 0.0,
@@ -703,6 +703,15 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-01"
+},
+{
+"family": "intermediation_rent",
+"n": 1518,
+"pos_rate": 0.428,
+"best_pm": 0.81,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-02"
 },
 {
 "family": "same_clock_flow",
@@ -1337,35 +1346,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 325497,
+"n": 314513,
 "best_pm": 1.67,
-"pos_rate": 0.515
+"pos_rate": 0.517
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 649088,
+"n": 612833,
 "best_pm": 1.78,
-"pos_rate": 0.469
+"pos_rate": 0.472
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 380295,
+"n": 374977,
 "best_pm": 16.85,
 "pos_rate": 0.319
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 115431,
+"n": 114674,
 "best_pm": 15.19,
 "pos_rate": 0.265
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 300206,
+"n": 291843,
 "best_pm": 1.56,
 "pos_rate": 0.494
 },
@@ -1438,6 +1447,20 @@
 "n": 2003,
 "best_pm": 0.95,
 "pos_rate": 0.412
+},
+{
+"family": "intermediation_rent",
+"bar": "15m",
+"n": 704,
+"best_pm": 0.81,
+"pos_rate": 0.423
+},
+{
+"family": "intermediation_rent",
+"bar": "1h",
+"n": 2064,
+"best_pm": 0.91,
+"pos_rate": 0.443
 },
 {
 "family": "inventory_vacuum",
@@ -2016,37 +2039,37 @@
 {
 "family": "stepped_bid_accumulation",
 "bar": "15m",
-"n": 1881,
+"n": 1959,
 "best_pm": 0.84,
 "pos_rate": 0.349
 },
 {
 "family": "stepped_bid_accumulation",
 "bar": "1h",
-"n": 1813,
+"n": 1957,
 "best_pm": 0.86,
-"pos_rate": 0.336
+"pos_rate": 0.335
 },
 {
 "family": "stepped_bid_accumulation",
 "bar": "1m",
-"n": 1811,
+"n": 1959,
 "best_pm": 0.85,
-"pos_rate": 0.349
+"pos_rate": 0.353
 },
 {
 "family": "stepped_bid_accumulation",
 "bar": "30s",
-"n": 1531,
+"n": 1927,
 "best_pm": 0.84,
-"pos_rate": 0.372
+"pos_rate": 0.362
 },
 {
 "family": "stepped_bid_accumulation",
 "bar": "5m",
-"n": 1887,
+"n": 1958,
 "best_pm": 0.86,
-"pos_rate": 0.351
+"pos_rate": 0.354
 },
 {
 "family": "streak_fallacy_squeeze",
@@ -7097,6 +7120,17 @@
 "dsr_bar": 6.49,
 "best_pm_1h": 15.19,
 "distinct": 23627291
+},
+{
+"t": 1790910430.849528,
+"total": 27080408,
+"per_min": 746.0,
+"cpu": 19.1,
+"gpu": 95,
+"free_gb": 148.1,
+"dsr_bar": 6.49,
+"best_pm_1h": 15.19,
+"distinct": 23630615
 }
 ],
 "instrument": "XAUUSD",
