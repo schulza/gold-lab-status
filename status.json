@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-04 19:34:33 UTC",
+"generated_at": "2026-10-04 19:40:21 UTC",
 "host": {
-"cpu_pct": 3.3,
-"gpu_pct": 0,
-"free_gb": 116.0,
-"uptime": "up 5 days,  4:20, 2 users, load averages: 3.87 11.14 12.85",
-"load": "{ 3.87 11.14 12.85 }"
+"cpu_pct": 27.6,
+"gpu_pct": 92,
+"free_gb": 133.1,
+"uptime": "up 5 days,  4:26, 2 users, load averages: 12.01 9.30 11.10",
+"load": "{ 12.01 9.30 11.10 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-04T21:32:37",
-"it": 132450,
+"ts": "2026-10-04T21:40:12",
+"it": 132600,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.04,
+"pbo": 0.14,
 "best_family": "gated",
-"best_pm": 0.23,
-"best_params": "{'base': 'frame_consensus_catchup', 'base_params': {'exit': 'flip', 'frames': 'wm', 'k': 1.3, 'lead': 3, 'sign': 1}, 'mode': 'session', 'start_hour': 12, 'hold_",
+"best_pm": 0.67,
+"best_params": "{'base': 'news_flow_split', 'base_params': {'days': 8, 'k': 1.81, 'mode': 'split', 'sign': -1, 'win': 47}, 'mode': 'tick_above', 'vol_window': 240, 'vol_pct': 0",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-04T21:32:37",
-"it": 107362,
-"bar": "30s",
+"ts": "2026-10-04T21:38:22",
+"it": 107400,
+"bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.18,
+"pbo": 0.04,
 "best_family": "gated",
-"best_pm": 0.16,
-"best_params": "{'base': 'stepped_bid_accumulation', 'base_params': {'hold': 1, 'k': 0.263, 'n': 10, 'rho': 0.101, 'sign': 1}, 'mode': 'vol_above', 'vol_window': 761, 'vol_pct'",
+"best_pm": 0.8,
+"best_params": "{'base': 'anchor_absorbed_continuation', 'base_params': {'days': 4, 'hold': 5, 'k': 0.5, 'rho': 0.25, 'side': 'long', 'sign': 1}, 'mode': 'htf_with', 'htf': '1h",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 28529813,
-"last_5m": 1864,
-"last_1h": 30902,
-"last_24h": 422957,
-"distinct_ideas": 25074955,
+"total": 28531085,
+"last_5m": 1402,
+"last_1h": 32368,
+"last_24h": 421911,
+"distinct_ideas": 25076324,
 "dsr_bar": 6.44,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 18947002,
+"n": 18948266,
 "pos_rate": 0.339,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -373,7 +373,7 @@
 },
 {
 "family": "range_expansion_hold",
-"n": 10213,
+"n": 10215,
 "pos_rate": 0.957,
 "best_pm": 1.06,
 "best_dsr": 0.0,
@@ -409,7 +409,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 9175,
+"n": 9181,
 "pos_rate": 0.898,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1144,35 +1144,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 51101,
+"n": 50885,
 "best_pm": 1.92,
-"pos_rate": 0.641
+"pos_rate": 0.642
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 85808,
+"n": 85616,
 "best_pm": 1.88,
-"pos_rate": 0.618
+"pos_rate": 0.619
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 85605,
+"n": 85405,
 "best_pm": 15.11,
 "pos_rate": 0.357
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 51015,
+"n": 50791,
 "best_pm": 27.91,
 "pos_rate": 0.292
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 51060,
+"n": 50836,
 "best_pm": 1.74,
 "pos_rate": 0.574
 },
@@ -1186,14 +1186,14 @@
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 1951,
+"n": 1957,
 "best_pm": 0.71,
 "pos_rate": 0.897
 },
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 1819,
+"n": 1821,
 "best_pm": 0.67,
 "pos_rate": 0.893
 },
@@ -1333,7 +1333,7 @@
 {
 "family": "range_expansion_hold",
 "bar": "1h",
-"n": 2097,
+"n": 2099,
 "best_pm": 1.06,
 "pos_rate": 0.935
 },
@@ -1461,17 +1461,6 @@
 }
 ],
 "history": [
-{
-"t": 1790969904.311608,
-"total": 27466160,
-"per_min": 517.0,
-"cpu": 14.9,
-"gpu": 94,
-"free_gb": 155.4,
-"dsr_bar": 6.47,
-"best_pm_1h": 11.16,
-"distinct": 24012563
-},
 {
 "t": 1790970238.370398,
 "total": 27468376,
@@ -7081,6 +7070,17 @@
 "dsr_bar": 6.44,
 "best_pm_1h": 8.45,
 "distinct": 25074955
+},
+{
+"t": 1791142821.27359,
+"total": 28531085,
+"per_min": 280.0,
+"cpu": 27.6,
+"gpu": 92,
+"free_gb": 133.1,
+"dsr_bar": 6.44,
+"best_pm_1h": 8.45,
+"distinct": 25076324
 }
 ],
 "instrument": "XAUUSD",
