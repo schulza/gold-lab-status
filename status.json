@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-04 18:26:18 UTC",
+"generated_at": "2026-10-04 18:31:56 UTC",
 "host": {
-"cpu_pct": 33.9,
-"gpu_pct": 0,
-"free_gb": 128.7,
-"uptime": "up 5 days,  3:12, 2 users, load averages: 11.17 9.85 9.54",
-"load": "{ 11.17 9.85 9.54 }"
+"cpu_pct": 26.6,
+"gpu_pct": 80,
+"free_gb": 184.9,
+"uptime": "up 5 days,  3:17, 2 users, load averages: 11.96 10.80 10.04",
+"load": "{ 11.96 10.80 10.04 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-04T20:20:18",
-"it": 131800,
+"ts": "2026-10-04T20:27:42",
+"it": 131810,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.57,
+"pbo": 0.29,
 "best_family": "gated",
-"best_pm": 0.33,
-"best_params": "{'base': 'range_expansion_hold', 'base_params': {'days': 2, 'exit': 0.368, 'hi': 0.74, 'k': 1.23}, 'mode': 'spread_below', 'vol_window': 240, 'vol_pct': 0.5}",
+"best_pm": 0.37,
+"best_params": "{'base': 'cta_pnl_stopout', 'base_params': {'hold': 3, 'k': 1.78, 'n': 6, 'sign': -1}, 'mode': 'spread_below', 'vol_window': 837, 'vol_pct': 0.843}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-04T20:22:59",
-"it": 106800,
-"bar": "5m",
+"ts": "2026-10-04T20:30:23",
+"it": 106810,
+"bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.61,
+"pbo": 0.29,
 "best_family": "gated",
-"best_pm": 0.56,
-"best_params": "{'base': 'levered_etf_close_rebalance', 'base_params': {'k': 2.32, 'post': 17, 'pre': 29, 'sign': 1}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 153, 'vol_scale'",
+"best_pm": 1.0,
+"best_params": "{'base': 'attention_decay_unwind', 'base_params': {'base': 7, 'hold': 4.16, 'k': 0.411, 'sign': -1, 'theta': 1.71, 'w': 4.63}, 'mode': 'session', 'start_hour': ",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 28498765,
-"last_5m": 979,
-"last_1h": 22630,
-"last_24h": 421334,
-"distinct_ideas": 25044043,
+"total": 28498911,
+"last_5m": 146,
+"last_1h": 22702,
+"last_24h": 419248,
+"distinct_ideas": 25044189,
 "dsr_bar": 6.44,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 18936497,
+"n": 18936641,
 "pos_rate": 0.339,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -400,7 +400,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 9112,
+"n": 9114,
 "pos_rate": 0.898,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1091,49 +1091,49 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 53800,
+"n": 53544,
 "best_pm": 1.92,
 "pos_rate": 0.641
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 91142,
+"n": 90470,
 "best_pm": 1.88,
 "pos_rate": 0.617
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 90945,
+"n": 90281,
 "best_pm": 15.11,
 "pos_rate": 0.356
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 53816,
+"n": 53568,
 "best_pm": 27.91,
 "pos_rate": 0.291
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 53805,
+"n": 53557,
 "best_pm": 1.74,
 "pos_rate": 0.574
 },
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 1879,
+"n": 1880,
 "best_pm": 0.72,
 "pos_rate": 0.901
 },
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 1933,
+"n": 1934,
 "best_pm": 0.71,
 "pos_rate": 0.896
 },
@@ -1288,6 +1288,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-04T18:26",
+"name": "cleared_overhang_donchian",
+"status": "accepted",
+"rationale": "The payer is disposition sellers and slow allocators. They sell into strength at their break-even and underreact, so a close above the prior N-day high that also sits above the volume-weighted cost basis shows the overhang has cleared.\nRATIONALE: This is a long-only asymmetric Do",
+"note": "{\"name\": \"cleared_overhang_donchian\", \"grid\": 30, \"sec_per_param\": 0.001, \"active_frac\": 0.43515}"
+},
+{
 "ts": "2026-10-04T17:55",
 "name": "continuation_sleeve_corr_book",
 "status": "rejected",
@@ -1363,27 +1370,9 @@
 "status": "rejected",
 "rationale": "Payer is the disposition sellers. They are holders waiting to exit near their entry price, so they sell into strength until the volume-weighted cost basis has traded through. Once price has spent real turnover at the anchor and then leaves it by k sigma, the overhang is absorbed ",
 "note": "sandbox: AssertionError: zu speicherhungrig: 41 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-10-02T06:36",
-"name": "news_overhang_underreaction",
-"status": "accepted",
-"rationale": "Payer = disposition holders at the moment news arrives (Frazzini's \"disposition effect and underreaction to news\"): when a one-day shock hits in the direction of holders' existing unrealised P&L, longs sitting on gains sell into good news and holders sitting on losses refuse to s",
-"note": "{\"name\": \"news_overhang_underreaction\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.58845}"
 }
 ],
 "history": [
-{
-"t": 1790965874.501523,
-"total": 27436080,
-"per_min": 455.0,
-"cpu": 15.7,
-"gpu": 95,
-"free_gb": 158.6,
-"dsr_bar": 6.47,
-"best_pm_1h": 2.41,
-"distinct": 23982427
-},
 {
 "t": 1790966219.117277,
 "total": 27438456,
@@ -6993,6 +6982,17 @@
 "dsr_bar": 6.44,
 "best_pm_1h": 1.4,
 "distinct": 25044043
+},
+{
+"t": 1791138716.110358,
+"total": 28498911,
+"per_min": 29.0,
+"cpu": 26.6,
+"gpu": 80,
+"free_gb": 184.9,
+"dsr_bar": 6.44,
+"best_pm_1h": 1.4,
+"distinct": 25044189
 }
 ],
 "instrument": "XAUUSD",
