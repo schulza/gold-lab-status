@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-04 14:18:02 UTC",
+"generated_at": "2026-10-04 14:23:27 UTC",
 "host": {
-"cpu_pct": 63.4,
-"gpu_pct": 89,
-"free_gb": 105.5,
-"uptime": "up 4 days, 23:03, 2 users, load averages: 7.42 7.44 9.23",
-"load": "{ 7.42 7.44 9.23 }"
+"cpu_pct": 4.9,
+"gpu_pct": 0,
+"free_gb": 117.1,
+"uptime": "up 4 days, 23:09, 2 users, load averages: 2.18 5.42 7.92",
+"load": "{ 2.18 5.42 7.92 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-04T16:18:02",
-"it": 129425,
+"ts": "2026-10-04T16:19:12",
+"it": 129455,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.45,
-"pbo": 0.64,
+"pbo": 0.43,
 "best_family": "gated",
-"best_pm": 0.14,
-"best_params": "{'base': 'forced_flat_reentry', 'base_params': {'hold': 105, 'k': 0.822, 'sign': 1, 'theta': 0.187, 'unw': 78}, 'mode': 'session', 'start_hour': 22, 'hold_hours",
+"best_pm": 0.7,
+"best_params": "{'base': 'frame_consensus_catchup', 'base_params': {'exit': 'below', 'frames': 'wm', 'k': 1.49, 'lead': 2, 'sign': 1}, 'mode': 'tick_above', 'vol_window': 59, '",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-04T16:17:59",
-"it": 104700,
-"bar": "15m",
-"batch": 362,
+"ts": "2026-10-04T16:19:25",
+"it": 104719,
+"bar": "30s",
+"batch": 156,
 "passed": 0,
 "bench": 6.45,
-"pbo": 0.54,
+"pbo": 0.46,
 "best_family": "gated",
-"best_pm": 1.17,
-"best_params": "{'base': 'shakeout_reclaim', 'base_params': {'hold': 1, 'k': 0.967, 'r': 8, 'side': 'long', 'sign': 1, 'span': 9}, 'mode': 'spread_below', 'vol_window': 862, 'v",
-"mix": "anc274/gat25/ran63",
-"queue_s": 33.0
+"best_pm": 0.94,
+"best_params": "{'base': 'unfilled_dip_bid_chase', 'base_params': {'hold': 1, 'lookback': 2, 'rho': 2.0, 'side': 'long', 'sign': 1, 'wait': 0.586}, 'mode': 'htf_with', 'htf': '",
+"mix": "anc109/gat12/ran35",
+"queue_s": 12.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 28400197,
-"last_5m": 1377,
-"last_1h": 23663,
-"last_24h": 434495,
-"distinct_ideas": 24947108,
+"total": 28406685,
+"last_5m": 3113,
+"last_1h": 27419,
+"last_24h": 436502,
+"distinct_ideas": 24952776,
 "dsr_bar": 6.45,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 18898080,
+"n": 18898934,
 "pos_rate": 0.339,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -147,6 +147,15 @@
 "since": "2026-09-30"
 },
 {
+"family": "anchor_absorbed_hold",
+"n": 17372,
+"pos_rate": 0.925,
+"best_pm": 1.16,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-04"
+},
+{
 "family": "disposition_overhang",
 "n": 14784,
 "pos_rate": 0.64,
@@ -163,15 +172,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-09-30"
-},
-{
-"family": "anchor_absorbed_hold",
-"n": 13485,
-"pos_rate": 0.924,
-"best_pm": 1.16,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-04"
 },
 {
 "family": "trapped_fader_squeeze",
@@ -435,6 +435,15 @@
 "since": "2026-09-30"
 },
 {
+"family": "range_expansion_hold",
+"n": 5926,
+"pos_rate": 0.969,
+"best_pm": 1.06,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-04"
+},
+{
 "family": "weekend_gap_repricing",
 "n": 5906,
 "pos_rate": 0.351,
@@ -595,15 +604,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-01"
-},
-{
-"family": "range_expansion_hold",
-"n": 4179,
-"pos_rate": 0.972,
-"best_pm": 1.06,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-04"
 },
 {
 "family": "spread_excess_refund",
@@ -985,9 +985,9 @@
 {
 "family": "anchor_absorbed_hold",
 "bar": "15m",
-"n": 3167,
+"n": 3771,
 "best_pm": 1.08,
-"pos_rate": 0.954
+"pos_rate": 0.952
 },
 {
 "family": "anchor_absorbed_hold",
@@ -1006,58 +1006,51 @@
 {
 "family": "anchor_absorbed_hold",
 "bar": "30s",
-"n": 1524,
+"n": 2289,
 "best_pm": 1.09,
-"pos_rate": 0.887
+"pos_rate": 0.889
 },
 {
 "family": "anchor_absorbed_hold",
 "bar": "5m",
-"n": 3487,
+"n": 3770,
 "best_pm": 1.15,
-"pos_rate": 0.934
-},
-{
-"family": "asia_thin_move_fade",
-"bar": "15m",
-"n": 1,
-"best_pm": 0,
-"pos_rate": 0
+"pos_rate": 0.933
 },
 {
 "family": "gated",
 "bar": "15m",
-"n": 64515,
+"n": 64437,
 "best_pm": 1.92,
 "pos_rate": 0.642
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 110231,
+"n": 109951,
 "best_pm": 1.88,
 "pos_rate": 0.617
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 110190,
+"n": 109918,
 "best_pm": 15.2,
 "pos_rate": 0.357
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 64467,
+"n": 64399,
 "best_pm": 27.91,
 "pos_rate": 0.293
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 64521,
+"n": 64440,
 "best_pm": 1.74,
-"pos_rate": 0.573
+"pos_rate": 0.572
 },
 {
 "family": "portfolio",
@@ -1069,9 +1062,9 @@
 {
 "family": "range_expansion_hold",
 "bar": "15m",
-"n": 1148,
+"n": 1511,
 "best_pm": 1.0,
-"pos_rate": 0.972
+"pos_rate": 0.966
 },
 {
 "family": "range_expansion_hold",
@@ -1090,16 +1083,16 @@
 {
 "family": "range_expansion_hold",
 "bar": "30s",
-"n": 740,
+"n": 975,
 "best_pm": 0.96,
-"pos_rate": 0.969
+"pos_rate": 0.959
 },
 {
 "family": "range_expansion_hold",
 "bar": "5m",
-"n": 1213,
+"n": 1750,
 "best_pm": 1.06,
-"pos_rate": 0.984
+"pos_rate": 0.979
 },
 {
 "family": "real_yield_trend",
@@ -1118,6 +1111,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-10-04T14:21",
+"name": "efficient_drift_hold",
+"status": "rejected",
+"rationale": "Payer is slow allocators and trend-following mandates who scale into a move over days and underreact when it is path-efficient, which means steady and not a spike. They are still adding after the entry, so the move continues. Entry needs both a multi-day move large in volatility ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
 {
 "ts": "2026-10-04T13:50",
 "name": "range_expansion_hold",
@@ -1194,27 +1194,9 @@
 "status": "accepted",
 "rationale": "PAYER = longs shaken out of a multi-day high: stopped-out holders and disposition sellers who dumped into a k-sigma daily-scale drop and are flat (or short) below a level the market then reclaims within days. They must rebuy above their own exit, and that forced re-entry pays the",
 "note": "{\"name\": \"shakeout_reclaim\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.2192}"
-},
-{
-"ts": "2026-10-02T04:21",
-"name": "continuation_sleeve_book",
-"status": "accepted",
-"rationale": "Payer = holders anchored to their entry price and slow allocators who sell into strength and underreact; this book holds the four continuation sleeves that are above a coin flip (channel breakout, disposition overhang, real-yield trend, thin-day move), each frozen at its grid cen",
-"note": "{\"name\": \"continuation_sleeve_book\", \"grid\": 48, \"sec_per_param\": 0.153, \"active_frac\": 0.56035}"
 }
 ],
 "history": [
-{
-"t": 1790950812.9226508,
-"total": 27331623,
-"per_min": 611.0,
-"cpu": 8.2,
-"gpu": 0,
-"free_gb": 157.7,
-"dsr_bar": 6.48,
-"best_pm_1h": 17.13,
-"distinct": 23877818
-},
 {
 "t": 1790951151.174168,
 "total": 27334346,
@@ -6835,6 +6817,17 @@
 "dsr_bar": 6.45,
 "best_pm_1h": 1.64,
 "distinct": 24947108
+},
+{
+"t": 1791123807.7669,
+"total": 28406685,
+"per_min": 623.0,
+"cpu": 4.9,
+"gpu": 0,
+"free_gb": 117.1,
+"dsr_bar": 6.45,
+"best_pm_1h": 1.64,
+"distinct": 24952776
 }
 ],
 "instrument": "XAUUSD",
