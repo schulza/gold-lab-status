@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-04 22:30:15 UTC",
+"generated_at": "2026-10-04 22:36:15 UTC",
 "host": {
-"cpu_pct": 4.2,
-"gpu_pct": 0,
-"free_gb": 122.8,
-"uptime": "up 5 days,  7:16, 2 users, load averages: 4.14 9.64 11.20",
-"load": "{ 4.14 9.64 11.20 }"
+"cpu_pct": 36.3,
+"gpu_pct": 62,
+"free_gb": 129.8,
+"uptime": "up 5 days,  7:21, 2 users, load averages: 7.65 7.47 9.49",
+"load": "{ 7.65 7.47 9.49 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-05T00:30:00",
-"it": 134001,
-"bar": "1m",
+"ts": "2026-10-05T00:36:08",
+"it": 134080,
+"bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.25,
+"pbo": 0.21,
 "best_family": "gated",
-"best_pm": 0.57,
-"best_params": "{'base': 'restock_capitulation', 'base_params': {'d': 0.769, 'hold': 1.12, 'k': 2.23, 'm': 3, 'rho': 0.1, 'sign': 1}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': ",
+"best_pm": 0.76,
+"best_params": "{'base': 'round_the_clock_order', 'base_params': {'days': 3, 'hold': 2, 'k': 0.0962, 'need': 2, 'sign': -1}, 'mode': 'vol_above', 'vol_window': 366, 'vol_pct': ",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-05T00:28:28",
-"it": 108612,
-"bar": "30s",
-"batch": 156,
+"ts": "2026-10-05T00:36:06",
+"it": 108650,
+"bar": "15m",
+"batch": 8,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.07,
-"best_family": "basis_migration_hold",
-"best_pm": 1.08,
-"best_params": "{'days': 3, 'ex': 0.586, 'k': 0.391, 'sl': 0.434}",
-"mix": "bas131/gat25",
-"queue_s": 86.0
+"pbo": 0.71,
+"best_family": "gated",
+"best_pm": 0.63,
+"best_params": "{'base': 'asia_participation_shift', 'base_params': {'d': 4, 'k': 1.66, 'mode': 'cold', 'mult': 17, 'sign': 1}, 'mode': 'vol_above', 'vol_window': 285, 'vol_pct",
+"mix": "gat8",
+"queue_s": 8.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 28598557,
-"last_5m": 1608,
-"last_1h": 32376,
-"last_24h": 457780,
-"distinct_ideas": 25143542,
+"total": 28605128,
+"last_5m": 6839,
+"last_1h": 39510,
+"last_24h": 462879,
+"distinct_ideas": 25150373,
 "dsr_bar": 6.44,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 18970683,
+"n": 18971844,
 "pos_rate": 0.339,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -172,6 +172,15 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-09-30"
+},
+{
+"family": "basis_migration_hold",
+"n": 16272,
+"pos_rate": 0.849,
+"best_pm": 1.16,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-04"
 },
 {
 "family": "smooth_drift_hold",
@@ -352,15 +361,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-02"
-},
-{
-"family": "basis_migration_hold",
-"n": 10854,
-"pos_rate": 0.842,
-"best_pm": 1.16,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-04"
 },
 {
 "family": "restock_capitulation",
@@ -1110,37 +1110,37 @@
 {
 "family": "basis_migration_hold",
 "bar": "15m",
-"n": 1372,
+"n": 3513,
 "best_pm": 1.16,
-"pos_rate": 0.857
+"pos_rate": 0.853
 },
 {
 "family": "basis_migration_hold",
 "bar": "1h",
-"n": 3568,
+"n": 3577,
 "best_pm": 1.06,
 "pos_rate": 0.812
 },
 {
 "family": "basis_migration_hold",
 "bar": "1m",
-"n": 3568,
+"n": 3577,
 "best_pm": 1.1,
 "pos_rate": 0.85
 },
 {
 "family": "basis_migration_hold",
 "bar": "30s",
-"n": 973,
+"n": 2665,
 "best_pm": 1.08,
-"pos_rate": 0.851
+"pos_rate": 0.864
 },
 {
 "family": "basis_migration_hold",
 "bar": "5m",
-"n": 1373,
+"n": 3514,
 "best_pm": 1.14,
-"pos_rate": 0.875
+"pos_rate": 0.87
 },
 {
 "family": "broad_flow_drift",
@@ -1215,37 +1215,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 49429,
+"n": 49189,
 "best_pm": 1.92,
 "pos_rate": 0.643
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 83180,
+"n": 83148,
 "best_pm": 1.88,
 "pos_rate": 0.62
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 82853,
+"n": 82813,
 "best_pm": 15.11,
-"pos_rate": 0.357
+"pos_rate": 0.358
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 49401,
+"n": 49061,
 "best_pm": 27.91,
 "pos_rate": 0.293
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 49487,
+"n": 49246,
 "best_pm": 1.74,
-"pos_rate": 0.575
+"pos_rate": 0.576
 },
 {
 "family": "higher_low_staircase",
@@ -1552,6 +1552,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-04T22:31",
+"name": null,
+"status": "rejected",
+"rationale": "The payer is profit-takers and dip-fading shorts in an uptrend. A pullback on thin activity (ticks below baseline) means nobody is selling into it, and the slow allocators who underreact to the trend haven't re-added yet. A close above the recent high after that quiet stretch squ",
+"note": "ast: name not allowed: getattr"
+},
+{
 "ts": "2026-10-04T22:01",
 "name": "basis_migration_hold",
 "status": "accepted",
@@ -1627,27 +1634,9 @@
 "status": "rejected",
 "rationale": "Payer is slow gold allocators who reprice only gradually when real yields move. Price drifts the same way for days after a yield move, and anchored holders then sell into strength or cover into weakness.\nThe trade needs two independent confirmations: a yield move beyond a thresho",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-10-04T16:23",
-"name": "horizon_agreement_hold",
-"status": "accepted",
-"rationale": "The payer is slow allocators and trend-lagging holders who underreact to a move and add only after several horizons agree. They sell too early into strength, and this hold of days takes the other side of that.\nEach horizon is a separate sleeve, scaled by its own vol. The position",
-"note": "{\"name\": \"horizon_agreement_hold\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.6689125}"
 }
 ],
 "history": [
-{
-"t": 1790980289.0822668,
-"total": 27542739,
-"per_min": 464.0,
-"cpu": 17.5,
-"gpu": 87,
-"free_gb": 154.7,
-"dsr_bar": 6.47,
-"best_pm_1h": 12.42,
-"distinct": 24089038
-},
 {
 "t": 1790980622.610493,
 "total": 27544699,
@@ -7257,6 +7246,17 @@
 "dsr_bar": 6.44,
 "best_pm_1h": 13.63,
 "distinct": 25143542
+},
+{
+"t": 1791153375.89302,
+"total": 28605128,
+"per_min": 1368.0,
+"cpu": 36.3,
+"gpu": 62,
+"free_gb": 129.8,
+"dsr_bar": 6.44,
+"best_pm_1h": 13.63,
+"distinct": 25150373
 }
 ],
 "instrument": "XAUUSD",
