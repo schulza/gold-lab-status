@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-04 16:49:57 UTC",
+"generated_at": "2026-10-04 16:55:30 UTC",
 "host": {
-"cpu_pct": 20.8,
-"gpu_pct": 1,
-"free_gb": 99.0,
-"uptime": "up 5 days,  1:36, 2 users, load averages: 14.92 12.71 11.49",
-"load": "{ 14.92 12.71 11.49 }"
+"cpu_pct": 56.5,
+"gpu_pct": 100,
+"free_gb": 111.4,
+"uptime": "up 5 days,  1:41, 2 users, load averages: 5.54 6.44 8.74",
+"load": "{ 5.54 6.44 8.74 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-04T18:49:39",
-"it": 130821,
+"ts": "2026-10-04T18:55:21",
+"it": 130827,
 "bar": "1m",
-"batch": 8,
+"batch": 312,
 "passed": 0,
 "bench": 6.45,
-"pbo": 0.0,
-"best_family": "gated",
-"best_pm": 0.52,
-"best_params": "{'base': 'release_overshoot', 'base_params': {'ev': 'fomc', 'hold': 151, 'k': 1.32, 'sign': -1, 'win': 6}, 'mode': 'spread_below', 'vol_window': 691, 'vol_pct':",
-"mix": "gat8",
-"queue_s": 7.0
+"pbo": 0.61,
+"best_family": "horizon_agreement_hold",
+"best_pm": 0.83,
+"best_params": "{'exit': 0.0521, 'lb': 6, 'n': 4, 'side': 1, 'thr': 0.4}",
+"mix": "gat44/hor268",
+"queue_s": 136.0
 },
 "events": []
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-04T18:49:35",
-"it": 105898,
+"ts": "2026-10-04T18:55:20",
+"it": 105904,
 "bar": "30s",
 "batch": 156,
 "passed": 0,
 "bench": 6.45,
-"pbo": 0.32,
+"pbo": 0.39,
 "best_family": "horizon_agreement_hold",
-"best_pm": 0.8,
-"best_params": "{'lb': 6, 'n': 4, 'thr': 0.41, 'exit': 0.0402, 'side': 1}",
-"mix": "gat12/hor144",
-"queue_s": 12.0
+"best_pm": 0.79,
+"best_params": "{'exit': 0.0521, 'lb': 6, 'n': 4, 'side': 1, 'thr': 0.4}",
+"mix": "gat14/hor142",
+"queue_s": 23.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 28462046,
-"last_5m": 10420,
-"last_1h": 29318,
-"last_24h": 426535,
-"distinct_ideas": 25007578,
+"total": 28463098,
+"last_5m": 1978,
+"last_1h": 26812,
+"last_24h": 426897,
+"distinct_ideas": 25009088,
 "dsr_bar": 6.45,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 18920305,
+"n": 18920453,
 "pos_rate": 0.339,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -219,6 +219,15 @@
 "since": "2026-09-29"
 },
 {
+"family": "horizon_agreement_hold",
+"n": 11823,
+"pos_rate": 0.908,
+"best_pm": 0.91,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-04"
+},
+{
 "family": "sold_strength_closeout",
 "n": 11538,
 "pos_rate": 0.444,
@@ -298,15 +307,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-01"
-},
-{
-"family": "horizon_agreement_hold",
-"n": 10922,
-"pos_rate": 0.907,
-"best_pm": 0.91,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-04"
 },
 {
 "family": "fresh_budget_deploy",
@@ -391,7 +391,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 9010,
+"n": 9013,
 "pos_rate": 0.898,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1082,35 +1082,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 57694,
+"n": 57552,
 "best_pm": 1.92,
 "pos_rate": 0.642
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 98038,
+"n": 97638,
 "best_pm": 1.88,
 "pos_rate": 0.617
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 97900,
+"n": 97472,
 "best_pm": 15.11,
 "pos_rate": 0.356
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 57687,
+"n": 57507,
 "best_pm": 27.91,
 "pos_rate": 0.291
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 57769,
+"n": 57569,
 "best_pm": 1.74,
 "pos_rate": 0.573
 },
@@ -1124,14 +1124,14 @@
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 1901,
+"n": 1903,
 "best_pm": 0.71,
 "pos_rate": 0.896
 },
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 1771,
+"n": 1772,
 "best_pm": 0.67,
 "pos_rate": 0.893
 },
@@ -1152,30 +1152,30 @@
 {
 "family": "horizon_agreement_hold",
 "bar": "15m",
-"n": 3388,
+"n": 3707,
 "best_pm": 0.91,
-"pos_rate": 0.904
+"pos_rate": 0.905
 },
 {
 "family": "horizon_agreement_hold",
 "bar": "1h",
-"n": 861,
-"best_pm": 0.72,
-"pos_rate": 0.859
+"n": 1403,
+"best_pm": 0.94,
+"pos_rate": 0.88
 },
 {
 "family": "horizon_agreement_hold",
 "bar": "1m",
-"n": 867,
-"best_pm": 0.76,
-"pos_rate": 0.899
+"n": 1439,
+"best_pm": 0.83,
+"pos_rate": 0.917
 },
 {
 "family": "horizon_agreement_hold",
 "bar": "30s",
-"n": 2242,
-"best_pm": 0.8,
-"pos_rate": 0.897
+"n": 2518,
+"best_pm": 0.87,
+"pos_rate": 0.899
 },
 {
 "family": "horizon_agreement_hold",
@@ -1243,6 +1243,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-10-04T16:54",
+"name": null,
+"status": "rejected",
+"rationale": "Payer is slow gold allocators who reprice only gradually when real yields move. Price drifts the same way for days after a yield move, and anchored holders then sell into strength or cover into weakness.\nThe trade needs two independent confirmations: a yield move beyond a thresho",
+"note": "ast: import not allowed: from goldlab.external"
+},
 {
 "ts": "2026-10-04T16:23",
 "name": "horizon_agreement_hold",
@@ -1319,27 +1326,9 @@
 "status": "accepted",
 "rationale": "Payer = under-invested dip bidders: allocators who want gold but anchor on a \"better\" price and rest limit bids below the market after a new multi-day high. When the pause after that high stays shallower than a random walk of the same length would normally reach, those bids never",
 "note": "{\"name\": \"unfilled_dip_bid_chase\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.27935}"
-},
-{
-"ts": "2026-10-02T05:46",
-"name": "unrefunded_move_drift",
-"status": "accepted",
-"rationale": "PAYER = intermediaries and faders (dealers, concession harvesters, fair-value desks, sell-into-strength allocators) who took the other side of a k-sigma multi-day move expecting the usual 1\u20133 day refund. Their inventory is against the move and has a risk/time limit, so when the r",
-"note": "{\"name\": \"unrefunded_move_drift\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.614325}"
 }
 ],
 "history": [
-{
-"t": 1790959853.834393,
-"total": 27391266,
-"per_min": 403.0,
-"cpu": 17.3,
-"gpu": 95,
-"free_gb": 160.1,
-"dsr_bar": 6.47,
-"best_pm_1h": 11.35,
-"distinct": 23937533
-},
 {
 "t": 1790960179.920287,
 "total": 27394068,
@@ -6960,6 +6949,17 @@
 "dsr_bar": 6.45,
 "best_pm_1h": 1.8,
 "distinct": 25007578
+},
+{
+"t": 1791132930.864083,
+"total": 28463098,
+"per_min": 396.0,
+"cpu": 56.5,
+"gpu": 100,
+"free_gb": 111.4,
+"dsr_bar": 6.45,
+"best_pm_1h": 1.8,
+"distinct": 25009088
 }
 ],
 "instrument": "XAUUSD",
