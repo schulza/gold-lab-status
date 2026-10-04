@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-10-04 20:59:06 UTC",
+"generated_at": "2026-10-04 21:04:38 UTC",
 "host": {
-"cpu_pct": 3.7,
-"gpu_pct": 0,
-"free_gb": 109.3,
-"uptime": "up 5 days,  5:45, 2 users, load averages: 3.06 6.76 7.55",
-"load": "{ 3.06 6.76 7.55 }"
+"cpu_pct": 27.2,
+"gpu_pct": 91,
+"free_gb": 183.6,
+"uptime": "up 5 days,  5:50, 2 users, load averages: 11.41 8.85 8.15",
+"load": "{ 11.41 8.85 8.15 }"
 },
 "instances": [
 {
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-04T22:57:19",
-"it": 108047,
+"ts": "2026-10-04T22:59:45",
+"it": 108050,
 "bar": "30s",
 "batch": 8,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.0,
+"pbo": 0.25,
 "best_family": "gated",
-"best_pm": 0.15,
-"best_params": "{'base': 'round_the_clock_order', 'base_params': {'days': 3, 'hold': 2, 'k': 0.0812, 'need': 2, 'sign': -1}, 'mode': 'spread_below', 'vol_window': 240, 'vol_pct",
+"best_pm": 0.6,
+"best_params": "{'base': 'vol_target_rebalance', 'base_params': {'f': 3, 'hold': 4, 'k': 1.72, 'side': 'relever', 'sign': 1}, 'mode': 'tick_above', 'vol_window': 758, 'vol_pct'",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 28558627,
-"last_5m": 1256,
-"last_1h": 24053,
-"last_24h": 433475,
-"distinct_ideas": 25103715,
+"total": 28558651,
+"last_5m": 24,
+"last_1h": 23932,
+"last_24h": 433091,
+"distinct_ideas": 25103739,
 "dsr_bar": 6.44,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 18959997,
+"n": 18960021,
 "pos_rate": 0.339,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -1153,35 +1153,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 50512,
+"n": 50480,
 "best_pm": 1.92,
 "pos_rate": 0.643
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 83999,
+"n": 83855,
 "best_pm": 1.88,
 "pos_rate": 0.62
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 83744,
+"n": 83608,
 "best_pm": 15.11,
-"pos_rate": 0.358
+"pos_rate": 0.357
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 50492,
+"n": 50452,
 "best_pm": 27.91,
 "pos_rate": 0.292
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 50541,
+"n": 50509,
 "best_pm": 1.74,
 "pos_rate": 0.574
 },
@@ -1420,6 +1420,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-04T20:59",
+"name": "sleeve_vote_hold",
+"status": "accepted",
+"rationale": "The payer is disposition sellers and slow allocators, who sell at break-even into strength and underreact. This is the director's sleeve portfolio without the sleeve matrix that was rejected for memory: three continuation sleeves vote, and exposure scales with how many agree.\nRAT",
+"note": "{\"name\": \"sleeve_vote_hold\", \"grid\": 45, \"sec_per_param\": 0.001, \"active_frac\": 0.6002}"
+},
+{
 "ts": "2026-10-04T20:29",
 "name": "quiet_breakout_hold",
 "status": "rejected",
@@ -1495,27 +1502,9 @@
 "status": "accepted",
 "rationale": "The payer is dip-fading shorts and range traders. They sell each pullback in a staircase of rising block lows, so their stops cluster just under the last low and are hit as the staircase continues. Slow allocators underreact to the same sequence of higher lows.\nRATIONALE: This is",
 "note": "{\"name\": \"higher_low_staircase\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.305275}"
-},
-{
-"ts": "2026-10-04T14:51",
-"name": "broad_flow_drift",
-"status": "accepted",
-"rationale": "Payer is slow allocators who scale into a position over several days. They buy after a move that came on broad participation (rising tick activity against the trailing base), so the drift continues until their scaling is done.\nThe signal is a multi-day return z-score gated by rel",
-"note": "{\"name\": \"broad_flow_drift\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.052875}"
 }
 ],
 "history": [
-{
-"t": 1790974923.8847518,
-"total": 27503060,
-"per_min": 544.0,
-"cpu": 8.7,
-"gpu": 95,
-"free_gb": 156.2,
-"dsr_bar": 6.47,
-"best_pm_1h": 1.69,
-"distinct": 24049431
-},
 {
 "t": 1790975267.084646,
 "total": 27505236,
@@ -7125,6 +7114,17 @@
 "dsr_bar": 6.44,
 "best_pm_1h": 1.7,
 "distinct": 25103715
+},
+{
+"t": 1791147878.6629171,
+"total": 28558651,
+"per_min": 5.0,
+"cpu": 27.2,
+"gpu": 91,
+"free_gb": 183.6,
+"dsr_bar": 6.44,
+"best_pm_1h": 1.7,
+"distinct": 25103739
 }
 ],
 "instrument": "XAUUSD",
