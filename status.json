@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-04 19:57:12 UTC",
+"generated_at": "2026-10-04 20:03:04 UTC",
 "host": {
-"cpu_pct": 21.7,
-"gpu_pct": 100,
-"free_gb": 130.9,
-"uptime": "up 5 days,  4:43, 2 users, load averages: 9.69 8.03 9.16",
-"load": "{ 9.69 8.03 9.16 }"
+"cpu_pct": 35.3,
+"gpu_pct": 93,
+"free_gb": 132.0,
+"uptime": "up 5 days,  4:48, 2 users, load averages: 9.76 9.21 9.37",
+"load": "{ 9.76 9.21 9.37 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-04T21:54:41",
-"it": 132800,
+"ts": "2026-10-04T22:02:47",
+"it": 132810,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.11,
+"pbo": 0.25,
 "best_family": "gated",
-"best_pm": 0.83,
-"best_params": "{'base': 'range_expansion_hold', 'base_params': {'days': 2, 'exit': 0.301, 'hi': 0.7, 'k': 1.27}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 200}",
+"best_pm": 0.36,
+"best_params": "{'base': 'levered_etf_close_rebalance', 'base_params': {'k': 2.29, 'post': 27, 'pre': 29, 'sign': 1}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 11, 'g2_mode': '",
 "mix": "gat8",
-"queue_s": 7.0
+"queue_s": 8.0
 },
 "events": []
 },
@@ -31,17 +31,17 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-04T21:54:35",
-"it": 107600,
-"bar": "5m",
-"batch": 9,
+"ts": "2026-10-04T22:02:14",
+"it": 107601,
+"bar": "15m",
+"batch": 8,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.29,
+"pbo": 0.43,
 "best_family": "gated",
-"best_pm": 0.94,
-"best_params": "{'base': 'unfilled_dip_bid_chase', 'base_params': {'hold': 1, 'lookback': 2, 'rho': 2.0, 'side': 'long', 'sign': 1, 'wait': 0.586}, 'mode': 'tick_above', 'vol_w",
-"mix": "gat8/hig1",
+"best_pm": 0.77,
+"best_params": "{'base': 'fade_reward_memory', 'base_params': {'d': 9, 'hold': 6, 'k': 1.02, 'm': 5, 'mode': 'rewarded', 'side': 'both', 'sign': -1}, 'mode': 'vol_below', 'vol_",
+"mix": "gat8",
 "queue_s": 8.0
 },
 "events": []
@@ -49,9 +49,9 @@
 ],
 "registry": {
 "total": 28534574,
-"last_5m": 1128,
-"last_1h": 29728,
-"last_24h": 418646,
+"last_5m": 49,
+"last_1h": 29580,
+"last_24h": 416519,
 "distinct_ideas": 25079716,
 "dsr_bar": 6.44,
 "sharpe_std": 1.18,
@@ -1144,35 +1144,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 50349,
+"n": 49981,
 "best_pm": 1.92,
 "pos_rate": 0.642
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 84768,
+"n": 84264,
 "best_pm": 1.88,
 "pos_rate": 0.619
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 84557,
+"n": 84053,
 "best_pm": 15.11,
 "pos_rate": 0.357
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 50255,
+"n": 49879,
 "best_pm": 27.91,
 "pos_rate": 0.292
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 50308,
+"n": 49932,
 "best_pm": 1.74,
 "pos_rate": 0.574
 },
@@ -1193,7 +1193,7 @@
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 1830,
+"n": 1831,
 "best_pm": 0.67,
 "pos_rate": 0.893
 },
@@ -1376,6 +1376,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-04T19:58",
+"name": "smooth_drift_hold",
+"status": "accepted",
+"rationale": "The payer is slow allocators and benchmark-constrained managers. They scale into a trend only after it has proven smooth, so a steady drift (a high t-stat of mean return) is filled over days. They also sell into strength and underreact to it.\nRATIONALE: The signal is the t-statis",
+"note": "{\"name\": \"smooth_drift_hold\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.2103}"
+},
+{
 "ts": "2026-10-04T19:27",
 "name": "instalment_path_hold",
 "status": "rejected",
@@ -1451,27 +1458,9 @@
 "status": "rejected",
 "rationale": "Payer is slow allocators and trend-following mandates who scale into a move over days and underreact when it is path-efficient, which means steady and not a spike. They are still adding after the entry, so the move continues. Entry needs both a multi-day move large in volatility ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-04T13:50",
-"name": "range_expansion_hold",
-"status": "accepted",
-"rationale": "The payer is slow allocators and stop-sellers who fade a range-expanding advance. Their selling is absorbed when price holds in the upper part of a range that is wider than the previous window's, so the demand behind the move is not yet fully priced.\nRATIONALE: This is long-only ",
-"note": "{\"name\": \"range_expansion_hold\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.29845625}"
 }
 ],
 "history": [
-{
-"t": 1790971230.278589,
-"total": 27476208,
-"per_min": 459.0,
-"cpu": 26.6,
-"gpu": 76,
-"free_gb": 156.9,
-"dsr_bar": 6.47,
-"best_pm_1h": 14.09,
-"distinct": 24022531
-},
 {
 "t": 1790971574.069707,
 "total": 27478416,
@@ -7078,6 +7067,17 @@
 "cpu": 21.7,
 "gpu": 100,
 "free_gb": 130.9,
+"dsr_bar": 6.44,
+"best_pm_1h": 16.56,
+"distinct": 25079716
+},
+{
+"t": 1791144184.699046,
+"total": 28534574,
+"per_min": 10.0,
+"cpu": 35.3,
+"gpu": 93,
+"free_gb": 132.0,
 "dsr_bar": 6.44,
 "best_pm_1h": 16.56,
 "distinct": 25079716
