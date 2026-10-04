@@ -1,28 +1,28 @@
 {
-"generated_at": "2026-10-04 23:32:32 UTC",
+"generated_at": "2026-10-04 23:38:07 UTC",
 "host": {
-"cpu_pct": 25.6,
-"gpu_pct": 63,
-"free_gb": 132.9,
-"uptime": "up 5 days,  8:18, 2 users, load averages: 9.69 9.79 9.07",
-"load": "{ 9.69 9.79 9.07 }"
+"cpu_pct": 22.9,
+"gpu_pct": 94,
+"free_gb": 188.0,
+"uptime": "up 5 days,  8:24, 2 users, load averages: 10.38 10.48 9.67",
+"load": "{ 10.38 10.48 9.67 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-05T01:27:09",
-"it": 134800,
+"ts": "2026-10-05T01:34:06",
+"it": 134810,
 "bar": "1h",
-"batch": 8,
+"batch": 9,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.18,
+"pbo": 0.79,
 "best_family": "gated",
-"best_pm": 0.63,
-"best_params": "{'base': 'sleeve_vote_hold', 'base_params': {'days': 3, 'frac': 0.685, 'need': 3}, 'mode': 'vol_above', 'vol_window': 60, 'vol_pct': 0.3}",
-"mix": "gat8",
+"best_pm": 0.73,
+"best_params": "{'base': 'asia_thin_move_fade', 'base_params': {'hold': 4, 'k': 0.5, 'sign': 1, 'theta': 0.8}, 'mode': 'spread_below', 'vol_window': 356, 'vol_pct': 0.849}",
+"mix": "gat8/hig1",
 "queue_s": 8.0
 },
 "events": []
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-05T01:31:50",
-"it": 109206,
-"bar": "30s",
+"ts": "2026-10-05T01:33:12",
+"it": 109210,
+"bar": "5m",
 "batch": 8,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.61,
+"pbo": 0.25,
 "best_family": "gated",
-"best_pm": -0.01,
-"best_params": "{'base': 'vol_target_rebalance', 'base_params': {'f': 5, 'hold': 8, 'k': 1.54, 'side': 'relever', 'sign': 1}, 'mode': 'session', 'start_hour': 23, 'hold_hours':",
+"best_pm": 0.94,
+"best_params": "{'base': 'event_drift', 'base_params': {'atr_window': 365, 'hold': 20, 'pre_bars': 2, 'sign': 1, 'thr_atr': 3.57}, 'mode': 'spread_below', 'vol_window': 179, 'v",
 "mix": "gat8",
-"queue_s": 8.0
+"queue_s": 7.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 28617307,
-"last_5m": 341,
-"last_1h": 18790,
-"last_24h": 459802,
-"distinct_ideas": 25162332,
+"total": 28617453,
+"last_5m": 106,
+"last_1h": 10245,
+"last_24h": 459500,
+"distinct_ideas": 25162438,
 "dsr_bar": 6.44,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 18982261,
+"n": 18982405,
 "pos_rate": 0.34,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -436,7 +436,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 9343,
+"n": 9345,
 "pos_rate": 0.898,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1215,35 +1215,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 48383,
+"n": 48335,
 "best_pm": 1.92,
 "pos_rate": 0.643
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 82212,
+"n": 82132,
 "best_pm": 1.88,
 "pos_rate": 0.62
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 81893,
+"n": 81797,
 "best_pm": 15.11,
-"pos_rate": 0.359
+"pos_rate": 0.358
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 48280,
+"n": 48232,
 "best_pm": 27.91,
 "pos_rate": 0.295
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 48432,
+"n": 48400,
 "best_pm": 1.74,
 "pos_rate": 0.576
 },
@@ -1257,7 +1257,7 @@
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 2009,
+"n": 2010,
 "best_pm": 0.71,
 "pos_rate": 0.895
 },
@@ -1278,7 +1278,7 @@
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 1948,
+"n": 1949,
 "best_pm": 0.7,
 "pos_rate": 0.906
 },
@@ -1552,6 +1552,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-04T23:33",
+"name": "vwap_dwell_hold",
+"status": "accepted",
+"rationale": "The payer is holders and allocators who sell into strength and underreact. Dwell is the share of bars over days that closed above a tick-weighted short VWAP. High dwell means buyers kept winning every small pullback, so the move is being filled slowly. Drift t-stat, channel highs",
+"note": "{\"name\": \"vwap_dwell_hold\", \"grid\": 90, \"sec_per_param\": 0.0, \"active_frac\": 0.3937375}"
+},
+{
 "ts": "2026-10-04T23:02",
 "name": "median_gap_hold",
 "status": "rejected",
@@ -1627,27 +1634,9 @@
 "status": "rejected",
 "rationale": "The payer is slow allocators and cost-basis holders who sell into strength and underreact. Three continuation sleeves express that: channel breakout, price above a tick-weighted cost basis, and a higher-low staircase. They are combined with weights from trailing inverse correlati",
 "note": "sandbox: AssertionError: zu speicherhungrig: 77 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-10-04T17:25",
-"name": "pullback_resume_hold",
-"status": "accepted",
-"rationale": "The payer is counter-trend sellers who short a shallow pullback inside a strong multi-day leg. Their stops sit just above the pullback high, so the resumption breakout forces them to cover into the move. Slow allocators underreact to the same leg.\nRATIONALE: This is long-only con",
-"note": "{\"name\": \"pullback_resume_hold\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.04681875}"
 }
 ],
 "history": [
-{
-"t": 1790983959.488161,
-"total": 27570658,
-"per_min": 455.0,
-"cpu": 14.9,
-"gpu": 95,
-"free_gb": 150.9,
-"dsr_bar": 6.47,
-"best_pm_1h": 1.72,
-"distinct": 24116950
-},
 {
 "t": 1790984303.769249,
 "total": 27572797,
@@ -7257,6 +7246,17 @@
 "dsr_bar": 6.44,
 "best_pm_1h": 1.59,
 "distinct": 25162332
+},
+{
+"t": 1791157087.3642838,
+"total": 28617453,
+"per_min": 21.0,
+"cpu": 22.9,
+"gpu": 94,
+"free_gb": 188.0,
+"dsr_bar": 6.44,
+"best_pm_1h": 1.59,
+"distinct": 25162438
 }
 ],
 "instrument": "XAUUSD",
