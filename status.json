@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-04 19:23:23 UTC",
+"generated_at": "2026-10-04 19:29:09 UTC",
 "host": {
-"cpu_pct": 38.7,
-"gpu_pct": 98,
-"free_gb": 129.0,
-"uptime": "up 5 days,  4:09, 2 users, load averages: 20.36 15.94 13.36",
-"load": "{ 20.36 15.94 13.36 }"
+"cpu_pct": 52.6,
+"gpu_pct": 91,
+"free_gb": 130.5,
+"uptime": "up 5 days,  4:15, 2 users, load averages: 22.95 17.85 14.81",
+"load": "{ 22.95 17.85 14.81 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-04T21:23:22",
-"it": 132335,
-"bar": "1h",
+"ts": "2026-10-04T21:24:25",
+"it": 132400,
+"bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.36,
+"pbo": 0.43,
 "best_family": "gated",
-"best_pm": 2.13,
-"best_params": "{'base': 'breakeven_retest', 'base_params': {'ext': 10.0, 'hold': 24, 'lookback': 32, 'sign': -1}, 'mode': 'spread_below', 'vol_window': 971, 'vol_pct': 0.42, '",
+"best_pm": 0.15,
+"best_params": "{'base': 'unfilled_dip_bid_chase', 'base_params': {'hold': 1, 'lookback': 4, 'rho': 1.85, 'side': 'long', 'sign': 1, 'wait': 0.396}, 'mode': 'session', 'start_h",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-04T21:18:37",
-"it": 107200,
+"ts": "2026-10-04T21:28:40",
+"it": 107260,
 "bar": "30s",
-"batch": 8,
+"batch": 156,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.43,
+"pbo": 0.39,
 "best_family": "gated",
-"best_pm": 0.15,
-"best_params": "{'base': 'overhead_supply_clearance', 'base_params': {'clear': 0.0372, 'days': 3, 'hold': 1, 'load': 0.452, 'side': 'long', 'sign': 1}, 'mode': 'tick_above', 'v",
-"mix": "gat8",
-"queue_s": 8.0
+"best_pm": 0.95,
+"best_params": "{'base': 'candle_close_herd', 'base_params': {'hold': 45, 'k': 2.7, 'm': 6, 'sign': -1, 'span': 1, 'theta': 0.926}, 'mode': 'vol_above', 'vol_window': 226, 'vol",
+"mix": "gat13/ove143",
+"queue_s": 14.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 28517757,
-"last_5m": 9115,
-"last_1h": 19326,
-"last_24h": 416525,
-"distinct_ideas": 25062931,
+"total": 28527621,
+"last_5m": 9864,
+"last_1h": 29111,
+"last_24h": 423725,
+"distinct_ideas": 25072935,
 "dsr_bar": 6.44,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 18943838,
+"n": 18945732,
 "pos_rate": 0.339,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -151,6 +151,15 @@
 "n": 18840,
 "pos_rate": 0.921,
 "best_pm": 1.16,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-04"
+},
+{
+"family": "overhang_absorbed_release",
+"n": 18168,
+"pos_rate": 0.924,
+"best_pm": 0.96,
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-04"
@@ -364,18 +373,9 @@
 },
 {
 "family": "range_expansion_hold",
-"n": 10212,
+"n": 10213,
 "pos_rate": 0.957,
 "best_pm": 1.06,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-04"
-},
-{
-"family": "overhang_absorbed_release",
-"n": 10199,
-"pos_rate": 0.92,
-"best_pm": 0.94,
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-04"
@@ -1144,35 +1144,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 51134,
+"n": 51173,
 "best_pm": 1.92,
 "pos_rate": 0.641
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 86912,
+"n": 86416,
 "best_pm": 1.88,
 "pos_rate": 0.618
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 86701,
+"n": 86205,
 "best_pm": 15.11,
 "pos_rate": 0.357
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 51152,
+"n": 51067,
 "best_pm": 27.91,
 "pos_rate": 0.292
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 51150,
+"n": 51132,
 "best_pm": 1.74,
 "pos_rate": 0.574
 },
@@ -1249,9 +1249,9 @@
 {
 "family": "overhang_absorbed_release",
 "bar": "15m",
-"n": 860,
-"best_pm": 0.84,
-"pos_rate": 0.994
+"n": 3803,
+"best_pm": 0.87,
+"pos_rate": 0.996
 },
 {
 "family": "overhang_absorbed_release",
@@ -1270,16 +1270,16 @@
 {
 "family": "overhang_absorbed_release",
 "bar": "30s",
-"n": 857,
+"n": 3226,
 "best_pm": 0.86,
-"pos_rate": 0.768
+"pos_rate": 0.775
 },
 {
 "family": "overhang_absorbed_release",
 "bar": "5m",
-"n": 866,
-"best_pm": 0.94,
-"pos_rate": 0.96
+"n": 3809,
+"best_pm": 0.96,
+"pos_rate": 0.969
 },
 {
 "family": "portfolio",
@@ -1326,7 +1326,7 @@
 {
 "family": "range_expansion_hold",
 "bar": "15m",
-"n": 2069,
+"n": 2070,
 "best_pm": 1.0,
 "pos_rate": 0.962
 },
@@ -1375,6 +1375,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-10-04T19:27",
+"name": "instalment_path_hold",
+"status": "rejected",
+"rationale": "The payer is slow allocators who scale into gold in instalments over days. Their orders arrive as a clean, low-reversal path, and the market underreacts to that stream. A staged buyer sits behind the path and pays up as the move proceeds.\nRATIONALE: The signal is path efficiency ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
 {
 "ts": "2026-10-04T18:57",
 "name": "overhang_absorbed_release",
@@ -1451,27 +1458,9 @@
 "status": "accepted",
 "rationale": "The payer is slow allocators and stop-sellers who fade a range-expanding advance. Their selling is absorbed when price holds in the upper part of a range that is wider than the previous window's, so the demand behind the move is not yet fully priced.\nRATIONALE: This is long-only ",
 "note": "{\"name\": \"range_expansion_hold\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.29845625}"
-},
-{
-"ts": "2026-10-04T13:20",
-"name": "anchor_absorbed_hold",
-"status": "accepted",
-"rationale": "The payer is disposition sellers, who sell into strength at their break-even cost basis and leave price underreacting. Entry needs price above a volume-weighted cost basis and enough of the recent volume traded at that basis, which means the overhang has been absorbed. The positi",
-"note": "{\"name\": \"anchor_absorbed_hold\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.1818}"
 }
 ],
 "history": [
-{
-"t": 1790969229.910199,
-"total": 27460784,
-"per_min": 507.0,
-"cpu": 18.1,
-"gpu": 93,
-"free_gb": 151.4,
-"dsr_bar": 6.47,
-"best_pm_1h": 11.16,
-"distinct": 24007011
-},
 {
 "t": 1790969564.475123,
 "total": 27463536,
@@ -7081,6 +7070,17 @@
 "dsr_bar": 6.44,
 "best_pm_1h": 8.45,
 "distinct": 25062931
+},
+{
+"t": 1791142149.6414552,
+"total": 28527621,
+"per_min": 1973.0,
+"cpu": 52.6,
+"gpu": 91,
+"free_gb": 130.5,
+"dsr_bar": 6.44,
+"best_pm_1h": 8.45,
+"distinct": 25072935
 }
 ],
 "instrument": "XAUUSD",
