@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-04 12:47:06 UTC",
+"generated_at": "2026-10-04 12:52:55 UTC",
 "host": {
-"cpu_pct": 33.8,
-"gpu_pct": 90,
-"free_gb": 131.5,
-"uptime": "up 4 days, 21:32, 2 users, load averages: 11.54 11.82 11.56",
-"load": "{ 11.54 11.82 11.56 }"
+"cpu_pct": 41.7,
+"gpu_pct": 97,
+"free_gb": 137.5,
+"uptime": "up 4 days, 21:38, 2 users, load averages: 12.46 11.56 11.49",
+"load": "{ 12.46 11.56 11.49 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-04T14:47:06",
-"it": 128563,
-"bar": "1h",
+"ts": "2026-10-04T14:47:35",
+"it": 128600,
+"bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.45,
-"pbo": 0.46,
+"pbo": 0.32,
 "best_family": "gated",
-"best_pm": 0.89,
-"best_params": "{'base': 'sold_strength_closeout', 'base_params': {'d': 11, 'hold': 5, 'k': 0.7, 'side': 'long', 'sign': 1, 'theta': 0.154}, 'mode': 'spread_below', 'vol_window",
+"best_pm": 0.49,
+"best_params": "{'base': 'fix_flow_reversal', 'base_params': {'fix': 'am', 'hold': 175, 'k': 1.95, 'pre': 12, 'sign': -1}, 'mode': 'vol_above', 'vol_window': 83, 'vol_pct': 0.1",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-04T14:44:14",
-"it": 104000,
-"bar": "30s",
+"ts": "2026-10-04T14:52:53",
+"it": 104086,
+"bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.45,
-"pbo": 0.11,
+"pbo": 0.43,
 "best_family": "gated",
-"best_pm": -0.1,
-"best_params": "{'base': 'disposition_overhang', 'base_params': {'days': 3, 'exit': 0.333, 'k': 0.818, 'side': 'long', 'sign': 1}, 'mode': 'vol_above', 'vol_window': 60, 'vol_p",
+"best_pm": 0.5,
+"best_params": "{'base': 'var_breach_deleverage', 'base_params': {'cnt': 1, 'hold': 4, 'q': 0.973, 'sign': 1, 'window': 71}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 88}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 28369650,
-"last_5m": 2408,
-"last_1h": 17216,
-"last_24h": 442079,
-"distinct_ideas": 24915941,
+"total": 28370706,
+"last_5m": 840,
+"last_1h": 17368,
+"last_24h": 441655,
+"distinct_ideas": 24916925,
 "dsr_bar": 6.45,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 18885205,
+"n": 18886253,
 "pos_rate": 0.339,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -974,35 +974,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 68872,
+"n": 68968,
 "best_pm": 1.92,
 "pos_rate": 0.643
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 117704,
+"n": 117360,
 "best_pm": 1.88,
 "pos_rate": 0.616
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 117696,
+"n": 117352,
 "best_pm": 15.2,
 "pos_rate": 0.358
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 68872,
+"n": 68952,
 "best_pm": 27.91,
 "pos_rate": 0.293
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 68872,
+"n": 68960,
 "best_pm": 1.74,
 "pos_rate": 0.572
 },
@@ -1030,6 +1030,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-10-04T12:49",
+"name": "anchor_distance_continuation",
+"status": "rejected",
+"rationale": "Payer is the disposition sellers. They are holders waiting to exit near their entry price, so they sell into strength until the volume-weighted cost basis has traded through. Once price has spent real turnover at the anchor and then leaves it by k sigma, the overhang is absorbed ",
+"note": "sandbox: AssertionError: zu speicherhungrig: 41 B je Bar und Parameter (max 40)"
+},
 {
 "ts": "2026-10-02T06:36",
 "name": "news_overhang_underreaction",
@@ -1106,27 +1113,9 @@
 "status": "accepted",
 "rationale": "Payer = benchmark-relative managers who are underweight gold while every reporting frame they are reviewed on (week-, month-, quarter-, year-to-date) shows the same significant move. Each review forces a catch-up order, so they buy late and pay whoever was positioned when the fra",
 "note": "{\"name\": \"frame_consensus_catchup\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.572}"
-},
-{
-"ts": "2026-10-02T03:28",
-"name": "weekly_close_confirm_flow",
-"status": "rejected",
-"rationale": "Payer = weekly-bar systems and \"weekly close above/below\" rule followers (slow managed-futures sleeves, discretionary allocators, technically triggered structured-product desks) who may only act once the Friday close confirms a break of the N-week closing channel, so their orders",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1790945439.007325,
-"total": 27289978,
-"per_min": 569.0,
-"cpu": 5.9,
-"gpu": 0,
-"free_gb": 159.9,
-"dsr_bar": 6.48,
-"best_pm_1h": 67.99,
-"distinct": 23836173
-},
 {
 "t": 1790945774.170002,
 "total": 27292885,
@@ -6747,6 +6736,17 @@
 "dsr_bar": 6.45,
 "best_pm_1h": 15.11,
 "distinct": 24915941
+},
+{
+"t": 1791118375.009616,
+"total": 28370706,
+"per_min": 168.0,
+"cpu": 41.7,
+"gpu": 97,
+"free_gb": 137.5,
+"dsr_bar": 6.45,
+"best_pm_1h": 15.11,
+"distinct": 24916925
 }
 ],
 "instrument": "XAUUSD",
