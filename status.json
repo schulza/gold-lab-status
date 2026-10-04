@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-04 17:23:31 UTC",
+"generated_at": "2026-10-04 17:29:07 UTC",
 "host": {
-"cpu_pct": 1.7,
-"gpu_pct": 0,
-"free_gb": 115.0,
-"uptime": "up 5 days,  2:09, 2 users, load averages: 1.57 5.37 7.36",
-"load": "{ 1.57 5.37 7.36 }"
+"cpu_pct": 20.5,
+"gpu_pct": 93,
+"free_gb": 122.0,
+"uptime": "up 5 days,  2:15, 2 users, load averages: 10.64 7.63 7.66",
+"load": "{ 10.64 7.63 7.66 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-04T19:19:16",
-"it": 131181,
-"bar": "1m",
+"ts": "2026-10-04T19:23:53",
+"it": 131200,
+"bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.45,
-"pbo": 0.04,
+"pbo": 0.54,
 "best_family": "gated",
-"best_pm": 0.91,
-"best_params": "{'base': 'shfe_reopen_catchup', 'base_params': {'entry': 75, 'hold': 111, 'k': 2.79, 'sess': 'night', 'sign': 1}, 'mode': 'session', 'start_hour': 13, 'hold_hou",
+"best_pm": 0.29,
+"best_params": "{'base': 'intermediation_rent', 'base_params': {'d': 10, 'hold': 1, 'k': 0.166, 'mode': 'rent', 'sign': 1, 'theta': 1.97}, 'mode': 'htf_with', 'htf': '1h', 'sma",
 "mix": "gat8",
-"queue_s": 8.0
+"queue_s": 7.0
 },
 "events": []
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-04T19:19:13",
-"it": 106144,
-"bar": "30s",
+"ts": "2026-10-04T19:25:02",
+"it": 106200,
+"bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.45,
-"pbo": 0.18,
+"pbo": 0.43,
 "best_family": "gated",
-"best_pm": 0.72,
-"best_params": "{'base': 'shfe_reopen_catchup', 'base_params': {'entry': 78, 'hold': 57, 'k': 2.77, 'sess': 'night', 'sign': 1}, 'mode': 'spread_below', 'vol_window': 240, 'vol",
+"best_pm": 0.42,
+"best_params": "{'base': 'lookback_rolloff_flow', 'base_params': {'k': 1.0, 'lead': 3, 'lookback': 63, 'mode': 'any', 'sign': 1}, 'mode': 'htf_against', 'htf': '4h', 'sma_n': 2",
 "mix": "gat8",
-"queue_s": 8.0
+"queue_s": 7.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 28475517,
-"last_5m": 628,
-"last_1h": 26835,
-"last_24h": 425290,
-"distinct_ideas": 25020893,
+"total": 28476135,
+"last_5m": 618,
+"last_1h": 27136,
+"last_24h": 423667,
+"distinct_ideas": 25021511,
 "dsr_bar": 6.45,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 18925732,
+"n": 18926348,
 "pos_rate": 0.339,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -391,7 +391,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 9027,
+"n": 9029,
 "pos_rate": 0.898,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1082,35 +1082,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 56227,
+"n": 55955,
 "best_pm": 1.92,
 "pos_rate": 0.642
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 95724,
+"n": 95324,
 "best_pm": 1.88,
 "pos_rate": 0.617
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 95522,
+"n": 95122,
 "best_pm": 15.11,
-"pos_rate": 0.357
+"pos_rate": 0.356
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 56218,
+"n": 55946,
 "best_pm": 27.91,
-"pos_rate": 0.291
+"pos_rate": 0.292
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 56252,
+"n": 55972,
 "best_pm": 1.74,
 "pos_rate": 0.573
 },
@@ -1124,14 +1124,14 @@
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 1911,
+"n": 1912,
 "best_pm": 0.71,
 "pos_rate": 0.896
 },
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 1778,
+"n": 1779,
 "best_pm": 0.67,
 "pos_rate": 0.892
 },
@@ -1236,13 +1236,20 @@
 {
 "family": "rebalance_size",
 "bar": "15m",
-"n": 17,
+"n": 16,
 "best_pm": 0.04,
-"pos_rate": 0.412
+"pos_rate": 0.438
 }
 ]
 },
 "generated": [
+{
+"ts": "2026-10-04T17:25",
+"name": "pullback_resume_hold",
+"status": "accepted",
+"rationale": "The payer is counter-trend sellers who short a shallow pullback inside a strong multi-day leg. Their stops sit just above the pullback high, so the resumption breakout forces them to cover into the move. Slow allocators underreact to the same leg.\nRATIONALE: This is long-only con",
+"note": "{\"name\": \"pullback_resume_hold\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.04681875}"
+},
 {
 "ts": "2026-10-04T16:54",
 "name": null,
@@ -1319,27 +1326,9 @@
 "status": "accepted",
 "rationale": "Payer = intraday sellers into strength (disposition holders taking profit at their entry anchor, plus day faders). When a multi-day advance keeps closing in the top of each daily range, their supply was absorbed every session and they must rebuy higher over the following days, wi",
 "note": "{\"name\": \"sold_strength_closeout\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.3225}"
-},
-{
-"ts": "2026-10-02T06:03",
-"name": "unfilled_dip_bid_chase",
-"status": "accepted",
-"rationale": "Payer = under-invested dip bidders: allocators who want gold but anchor on a \"better\" price and rest limit bids below the market after a new multi-day high. When the pause after that high stays shallower than a random walk of the same length would normally reach, those bids never",
-"note": "{\"name\": \"unfilled_dip_bid_chase\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.27935}"
 }
 ],
 "history": [
-{
-"t": 1790961854.59746,
-"total": 27407141,
-"per_min": 522.0,
-"cpu": 20.2,
-"gpu": 93,
-"free_gb": 154.8,
-"dsr_bar": 6.47,
-"best_pm_1h": 37.06,
-"distinct": 23953392
-},
 {
 "t": 1790962199.541155,
 "total": 27409945,
@@ -6960,6 +6949,17 @@
 "dsr_bar": 6.45,
 "best_pm_1h": 12.01,
 "distinct": 25020893
+},
+{
+"t": 1791134947.6174421,
+"total": 28476135,
+"per_min": 124.0,
+"cpu": 20.5,
+"gpu": 93,
+"free_gb": 122.0,
+"dsr_bar": 6.45,
+"best_pm_1h": 12.01,
+"distinct": 25021511
 }
 ],
 "instrument": "XAUUSD",
