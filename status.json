@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-04 13:15:44 UTC",
+"generated_at": "2026-10-04 13:21:24 UTC",
 "host": {
-"cpu_pct": 27.3,
-"gpu_pct": 95,
-"free_gb": 117.6,
-"uptime": "up 4 days, 22:01, 2 users, load averages: 9.55 10.06 10.51",
-"load": "{ 9.55 10.06 10.51 }"
+"cpu_pct": 34.4,
+"gpu_pct": 92,
+"free_gb": 187.9,
+"uptime": "up 4 days, 22:07, 2 users, load averages: 15.98 12.07 11.18",
+"load": "{ 15.98 12.07 11.18 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-04T15:09:19",
-"it": 129000,
+"ts": "2026-10-04T15:20:11",
+"it": 129130,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.45,
-"pbo": 0.29,
+"pbo": 0.21,
 "best_family": "gated",
-"best_pm": 0.69,
-"best_params": "{'base': 'unfilled_dip_bid_chase', 'base_params': {'hold': 1, 'lookback': 4, 'rho': 1.85, 'side': 'long', 'sign': 1, 'wait': 0.76}, 'mode': 'spread_below', 'vol",
+"best_pm": 0.48,
+"best_params": "{'base': 'vol_window_rolloff', 'base_params': {'drop': 0.0715, 'hold': 1, 'lead': 1, 'mode': 'long', 'sign': 1, 'window': 8}, 'mode': 'spread_below', 'vol_windo",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-04T15:15:43",
-"it": 104420,
+"ts": "2026-10-04T15:20:14",
+"it": 104600,
 "bar": "30s",
 "batch": 8,
 "passed": 0,
 "bench": 6.45,
-"pbo": 0.0,
+"pbo": 0.04,
 "best_family": "gated",
-"best_pm": 0.92,
-"best_params": "{'base': 'calendar_rebalance_flow', 'base_params': {'k': 0.043, 'period': 'month', 'phase': 'pre', 'sign': -1, 'span': 2}, 'mode': 'htf_against', 'htf': '1h', '",
+"best_pm": -0.12,
+"best_params": "{'base': 'event_drift', 'base_params': {'atr_window': 401, 'hold': 33, 'pre_bars': 2, 'sign': 1, 'thr_atr': 3.57}, 'mode': 'tick_above', 'vol_window': 300, 'vol",
 "mix": "gat8",
-"queue_s": 6.0
+"queue_s": 7.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 28376642,
-"last_5m": 48,
-"last_1h": 16544,
-"last_24h": 436798,
-"distinct_ideas": 24922837,
+"total": 28379266,
+"last_5m": 2464,
+"last_1h": 17544,
+"last_24h": 436285,
+"distinct_ideas": 24925461,
 "dsr_bar": 6.45,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 18892189,
+"n": 18894813,
 "pos_rate": 0.339,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -974,35 +974,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 68256,
+"n": 68272,
 "best_pm": 1.92,
 "pos_rate": 0.643
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 116000,
+"n": 115712,
 "best_pm": 1.88,
 "pos_rate": 0.616
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 116000,
+"n": 115720,
 "best_pm": 15.2,
 "pos_rate": 0.357
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 68240,
+"n": 68264,
 "best_pm": 27.91,
 "pos_rate": 0.293
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 68240,
+"n": 68256,
 "best_pm": 1.74,
 "pos_rate": 0.573
 },
@@ -1016,8 +1016,8 @@
 {
 "family": "real_yield_trend",
 "bar": "1h",
-"n": 2,
-"best_pm": 0.37,
+"n": 1,
+"best_pm": 0.18,
 "pos_rate": 1.0
 },
 {
@@ -1030,6 +1030,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-10-04T13:20",
+"name": "anchor_absorbed_hold",
+"status": "accepted",
+"rationale": "The payer is disposition sellers, who sell into strength at their break-even cost basis and leave price underreacting. Entry needs price above a volume-weighted cost basis and enough of the recent volume traded at that basis, which means the overhang has been absorbed. The positi",
+"note": "{\"name\": \"anchor_absorbed_hold\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.1818}"
+},
 {
 "ts": "2026-10-04T12:49",
 "name": "anchor_distance_continuation",
@@ -1106,27 +1113,9 @@
 "status": "accepted",
 "rationale": "Payer = disposition sellers anchored to their entry price: holders who bought inside the trailing window sell as soon as price clears the tick-weighted cost basis (and withhold supply below it), so their price-insensitive flow caps the move while it lasts and they pay the continu",
 "note": "{\"name\": \"anchor_absorbed_continuation\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.2649}"
-},
-{
-"ts": "2026-10-02T03:48",
-"name": "frame_consensus_catchup",
-"status": "accepted",
-"rationale": "Payer = benchmark-relative managers who are underweight gold while every reporting frame they are reviewed on (week-, month-, quarter-, year-to-date) shows the same significant move. Each review forces a catch-up order, so they buy late and pay whoever was positioned when the fra",
-"note": "{\"name\": \"frame_consensus_catchup\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.572}"
 }
 ],
 "history": [
-{
-"t": 1790947127.305145,
-"total": 27302949,
-"per_min": 513.0,
-"cpu": 19.5,
-"gpu": 68,
-"free_gb": 153.1,
-"dsr_bar": 6.48,
-"best_pm_1h": 67.99,
-"distinct": 23849248
-},
 {
 "t": 1790947466.2997792,
 "total": 27305038,
@@ -6747,6 +6736,17 @@
 "dsr_bar": 6.45,
 "best_pm_1h": 1.45,
 "distinct": 24922837
+},
+{
+"t": 1791120084.462431,
+"total": 28379266,
+"per_min": 493.0,
+"cpu": 34.4,
+"gpu": 92,
+"free_gb": 187.9,
+"dsr_bar": 6.45,
+"best_pm_1h": 1.45,
+"distinct": 24925461
 }
 ],
 "instrument": "XAUUSD",
