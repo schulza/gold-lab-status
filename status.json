@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-05 02:34:31 UTC",
+"generated_at": "2026-10-05 02:40:13 UTC",
 "host": {
-"cpu_pct": 35.9,
-"gpu_pct": 0,
-"free_gb": 136.9,
-"uptime": "up 5 days, 11:20, 2 users, load averages: 9.89 10.96 11.12",
-"load": "{ 9.89 10.96 11.12 }"
+"cpu_pct": 55.4,
+"gpu_pct": 76,
+"free_gb": 188.6,
+"uptime": "up 5 days, 11:26, 2 users, load averages: 10.07 10.28 10.72",
+"load": "{ 10.07 10.28 10.72 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-05T04:31:07",
-"it": 136600,
+"ts": "2026-10-05T04:39:01",
+"it": 136610,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.04,
+"pbo": 0.54,
 "best_family": "gated",
-"best_pm": 0.52,
-"best_params": "{'base': 'basis_migration_hold', 'base_params': {'days': 3, 'ex': 0.474, 'k': 0.391, 'sl': 0.429}, 'mode': 'htf_against', 'htf': '1h', 'sma_n': 50}",
+"best_pm": 8.06,
+"best_params": "{'base': 'calendar_rebalance_flow', 'base_params': {'k': 0.146, 'period': 'month', 'phase': 'pre', 'sign': -1, 'span': 2}, 'mode': 'session', 'start_hour': 23, ",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-05T04:32:05",
-"it": 111000,
-"bar": "30s",
+"ts": "2026-10-05T04:39:26",
+"it": 111010,
+"bar": "5m",
 "batch": 8,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.25,
+"pbo": 0.14,
 "best_family": "gated",
-"best_pm": 0.04,
-"best_params": "{'base': 'calendar_rebalance_flow', 'base_params': {'k': 0.33, 'period': 'month', 'phase': 'pre', 'sign': -1, 'span': 1}, 'mode': 'spread_below', 'vol_window': ",
+"best_pm": 0.62,
+"best_params": "{'base': 'horizon_agreement_hold', 'base_params': {'exit': 0.0435, 'lb': 5, 'n': 4, 'side': 1, 'thr': 0.479}, 'mode': 'vol_above', 'vol_window': 240, 'vol_pct':",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 28693900,
-"last_5m": 1903,
-"last_1h": 32870,
-"last_24h": 493266,
-"distinct_ideas": 25238842,
+"total": 28694045,
+"last_5m": 145,
+"last_1h": 32029,
+"last_24h": 491075,
+"distinct_ideas": 25238987,
 "dsr_bar": 6.44,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 19012904,
+"n": 19013048,
 "pos_rate": 0.34,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -463,7 +463,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 9517,
+"n": 9518,
 "pos_rate": 0.898,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1242,35 +1242,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 46898,
+"n": 46674,
 "best_pm": 1.92,
 "pos_rate": 0.645
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 78351,
+"n": 77583,
 "best_pm": 1.88,
 "pos_rate": 0.623
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 77907,
+"n": 77147,
 "best_pm": 15.11,
 "pos_rate": 0.361
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 46574,
+"n": 46358,
 "best_pm": 27.91,
 "pos_rate": 0.294
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 46985,
+"n": 46761,
 "best_pm": 5.37,
 "pos_rate": 0.577
 },
@@ -1291,7 +1291,7 @@
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 1914,
+"n": 1915,
 "best_pm": 0.67,
 "pos_rate": 0.893
 },
@@ -1684,6 +1684,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-05T02:36",
+"name": "compression_break_hold",
+"status": "accepted",
+"rationale": "Payer is range-fading and short-vol sellers, plus stop orders clustered outside a compressed multi-day box. They are forced to cover into the first clean break from compression, and slow allocators add late.\nEntry happens once, when the close breaks the prior box high after the b",
+"note": "{\"name\": \"compression_break_hold\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.0758625}"
+},
+{
 "ts": "2026-10-05T02:06",
 "name": "flow_imbalance_hold",
 "status": "rejected",
@@ -1759,27 +1766,9 @@
 "status": "accepted",
 "rationale": "The payer is disposition sellers and slow allocators, who sell at break-even into strength and underreact. This is the director's sleeve portfolio without the sleeve matrix that was rejected for memory: three continuation sleeves vote, and exposure scales with how many agree.\nRAT",
 "note": "{\"name\": \"sleeve_vote_hold\", \"grid\": 45, \"sec_per_param\": 0.001, \"active_frac\": 0.6002}"
-},
-{
-"ts": "2026-10-04T20:29",
-"name": "quiet_breakout_hold",
-"status": "rejected",
-"rationale": "The payer is the supply that normally caps a breakout: holders waiting to sell at breakeven and shorts defending the old high. A close above the prior N-day high on below-normal activity means that supply never showed up, so it is not being absorbed at a loss. Late sellers and sh",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1790994993.649795,
-"total": 27652892,
-"per_min": 576.0,
-"cpu": 16.7,
-"gpu": 93,
-"free_gb": 152.7,
-"dsr_bar": 6.47,
-"best_pm_1h": 16.27,
-"distinct": 24199135
-},
 {
 "t": 1790995328.2367518,
 "total": 27655574,
@@ -7378,6 +7367,17 @@
 "dsr_bar": 6.44,
 "best_pm_1h": 1.46,
 "distinct": 25238842
+},
+{
+"t": 1791168013.9024909,
+"total": 28694045,
+"per_min": 29.0,
+"cpu": 55.4,
+"gpu": 76,
+"free_gb": 188.6,
+"dsr_bar": 6.44,
+"best_pm_1h": 1.46,
+"distinct": 25238987
 }
 ],
 "instrument": "XAUUSD",
