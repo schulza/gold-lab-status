@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-05 14:48:15 UTC",
+"generated_at": "2026-10-05 14:54:02 UTC",
 "host": {
-"cpu_pct": 36.5,
-"gpu_pct": 0,
-"free_gb": 128.5,
-"uptime": "up 5 days, 23:34, 2 users, load averages: 9.89 10.00 10.10",
-"load": "{ 9.89 10.00 10.10 }"
+"cpu_pct": 83.6,
+"gpu_pct": 93,
+"free_gb": 201.7,
+"uptime": "up 5 days, 23:39, 2 users, load averages: 14.99 11.45 10.61",
+"load": "{ 14.99 11.45 10.61 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-05T16:42:48",
-"it": 145400,
+"ts": "2026-10-05T16:52:47",
+"it": 145530,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.43,
-"pbo": 0.29,
+"pbo": 0.36,
 "best_family": "gated",
-"best_pm": 0.23,
-"best_params": "{'base': 'dealer_gamma_hedge_flow', 'base_params': {'hold': 1, 'mode': 'both', 'n': 38, 'sign': -1, 'theta': 0.0793}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': ",
+"best_pm": 0.32,
+"best_params": "{'base': 'news_overhang_underreaction', 'base_params': {'days': 9, 'hold': 6, 'k': 2.49, 'mode': 'opposed', 'sign': 1, 'theta': 0.366}, 'mode': 'session', 'star",
 "mix": "gat8",
-"queue_s": 7.0
+"queue_s": 8.0
 },
 "events": []
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-05T16:43:25",
-"it": 118400,
+"ts": "2026-10-05T16:53:00",
+"it": 118430,
 "bar": "5m",
 "batch": 8,
 "passed": 0,
 "bench": 6.43,
-"pbo": 0.25,
+"pbo": 0.36,
 "best_family": "gated",
-"best_pm": 0.7,
-"best_params": "{'base': 'shakeout_reclaim', 'base_params': {'hold': 1, 'k': 0.843, 'r': 9, 'side': 'long', 'sign': 1, 'span': 5}, 'mode': 'session', 'start_hour': 17, 'hold_ho",
+"best_pm": 0.88,
+"best_params": "{'base': 'two_sided_squeeze_book', 'base_params': {'c': 0.261, 'days': 10, 'ex': 0.795, 'lm': 11, 'mdays': 9, 'mintr': 8}, 'mode': 'htf_with', 'htf': '4h', 'sma",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 28967155,
-"last_5m": 368,
-"last_1h": 19353,
-"last_24h": 552137,
-"distinct_ideas": 25511797,
+"total": 28968428,
+"last_5m": 1273,
+"last_1h": 19112,
+"last_24h": 552498,
+"distinct_ideas": 25513070,
 "dsr_bar": 6.43,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 19147448,
+"n": 19148712,
 "pos_rate": 0.341,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -481,7 +481,7 @@
 },
 {
 "family": "range_expansion_hold",
-"n": 10415,
+"n": 10416,
 "pos_rate": 0.956,
 "best_pm": 1.06,
 "best_dsr": 0.0,
@@ -508,7 +508,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 9941,
+"n": 9944,
 "pos_rate": 0.899,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -535,7 +535,7 @@
 },
 {
 "family": "boxbreak_matched",
-"n": 9623,
+"n": 9627,
 "pos_rate": 0.276,
 "best_pm": 0.82,
 "best_dsr": 0.0,
@@ -805,7 +805,7 @@
 },
 {
 "family": "sleeve_vote_hold",
-"n": 3909,
+"n": 3910,
 "pos_rate": 0.708,
 "best_pm": 0.93,
 "best_dsr": 0.0,
@@ -1243,14 +1243,14 @@
 {
 "family": "boxbreak_matched",
 "bar": "1h",
-"n": 1728,
+"n": 1730,
 "best_pm": 0.78,
 "pos_rate": 0.837
 },
 {
 "family": "boxbreak_matched",
 "bar": "1m",
-"n": 1726,
+"n": 1728,
 "best_pm": 0,
 "pos_rate": 0
 },
@@ -1481,35 +1481,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 38355,
+"n": 38307,
 "best_pm": 1.7,
 "pos_rate": 0.663
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 65543,
+"n": 65831,
 "best_pm": 1.71,
 "pos_rate": 0.641
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 65022,
+"n": 65318,
 "best_pm": 17.06,
 "pos_rate": 0.375
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 38296,
+"n": 38256,
 "best_pm": 31.87,
 "pos_rate": 0.3
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 38491,
+"n": 38451,
 "best_pm": 5.37,
 "pos_rate": 0.595
 },
@@ -1530,9 +1530,9 @@
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 2038,
+"n": 2041,
 "best_pm": 0.67,
-"pos_rate": 0.895
+"pos_rate": 0.896
 },
 {
 "family": "higher_low_staircase",
@@ -1761,37 +1761,37 @@
 {
 "family": "range_expansion_hold",
 "bar": "15m",
-"n": 70,
-"best_pm": 0.81,
-"pos_rate": 0.871
+"n": 43,
+"best_pm": 0.66,
+"pos_rate": 0.884
 },
 {
 "family": "range_expansion_hold",
 "bar": "1h",
-"n": 54,
+"n": 53,
 "best_pm": 0.65,
-"pos_rate": 0.815
+"pos_rate": 0.83
 },
 {
 "family": "range_expansion_hold",
 "bar": "1m",
-"n": 77,
+"n": 76,
 "best_pm": 0.72,
-"pos_rate": 0.896
+"pos_rate": 0.895
 },
 {
 "family": "range_expansion_hold",
 "bar": "30s",
-"n": 178,
+"n": 127,
 "best_pm": 0.74,
-"pos_rate": 0.91
+"pos_rate": 0.921
 },
 {
 "family": "range_expansion_hold",
 "bar": "5m",
-"n": 52,
-"best_pm": 0.65,
-"pos_rate": 0.942
+"n": 29,
+"best_pm": 0.61,
+"pos_rate": 0.931
 },
 {
 "family": "real_yield_trend",
@@ -1810,7 +1810,7 @@
 {
 "family": "sleeve_vote_hold",
 "bar": "15m",
-"n": 778,
+"n": 779,
 "best_pm": 0.71,
 "pos_rate": 0.973
 },
@@ -2126,6 +2126,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-05T14:52",
+"name": "expanding_break_matched",
+"status": "accepted",
+"rationale": "Payer is range-top sellers and short-vol faders who cover when a compressed box breaks up, and range-bottom buyers stopped out on a down-break. Raw sleeve is two-sided with a weighted short leg. I subtract its expanding (whole-history) mean exposure, so a constant long earns zero",
+"note": "{\"name\": \"expanding_break_matched\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.75775}"
+},
+{
 "ts": "2026-10-05T14:22",
 "name": "orthogonal_break_book",
 "status": "rejected",
@@ -2201,27 +2208,9 @@
 "status": "accepted",
 "rationale": "The payer is range-top sellers and short-vol faders who cover into a clean break from compression, and, on the short side, range-bottom buyers who are forced out. Each sleeve is a two-sided break state minus its own trailing mean exposure, so constant long or short beta earns zer",
 "note": "{\"name\": \"horizon_demeaned_book\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.14405}"
-},
-{
-"ts": "2026-10-05T08:44",
-"name": null,
-"status": "rejected",
-"rationale": "The payer is range-top sellers and short-vol faders who cover into a break out of compression. The second payer is gold holders who are repriced when the 20-day real-yield change is large and moving against them. The first leg exists as `exposure_matched_break`, so this family is",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1791039206.710371,
-"total": 27983623,
-"per_min": 525.0,
-"cpu": 6.5,
-"gpu": 0,
-"free_gb": 140.3,
-"dsr_bar": 6.46,
-"best_pm_1h": 17.93,
-"distinct": 24529914
-},
 {
 "t": 1791039552.555912,
 "total": 27985583,
@@ -7787,6 +7776,17 @@
 "dsr_bar": 6.43,
 "best_pm_1h": 28.3,
 "distinct": 25511797
+},
+{
+"t": 1791212042.796041,
+"total": 28968428,
+"per_min": 255.0,
+"cpu": 83.6,
+"gpu": 93,
+"free_gb": 201.7,
+"dsr_bar": 6.43,
+"best_pm_1h": 28.3,
+"distinct": 25513070
 }
 ],
 "instrument": "XAUUSD",
