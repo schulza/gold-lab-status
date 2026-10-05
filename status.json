@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-05 01:31:23 UTC",
+"generated_at": "2026-10-05 01:37:20 UTC",
 "host": {
-"cpu_pct": 20.4,
-"gpu_pct": 93,
-"free_gb": 134.9,
-"uptime": "up 5 days, 10:17, 2 users, load averages: 9.87 8.20 9.03",
-"load": "{ 9.87 8.20 9.03 }"
+"cpu_pct": 22.7,
+"gpu_pct": 87,
+"free_gb": 125.6,
+"uptime": "up 5 days, 10:23, 2 users, load averages: 9.79 9.17 9.20",
+"load": "{ 9.79 9.17 9.20 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-05T03:29:06",
-"it": 136200,
+"ts": "2026-10-05T03:37:05",
+"it": 136210,
 "bar": "1h",
-"batch": 8,
+"batch": 614,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.64,
-"best_family": "gated",
-"best_pm": 0.5,
-"best_params": "{'base': 'inventory_vacuum', 'base_params': {'band': 0.296, 'd': 6, 'rel': 0.861, 'sign': 1, 'theta': 0.165}, 'mode': 'vol_below', 'vol_window': 766, 'vol_pct':",
-"mix": "gat8",
-"queue_s": 8.0
+"pbo": 0.04,
+"best_family": "v_recovery_hold",
+"best_pm": 1.81,
+"best_params": "{'days': 8.65, 'mf': 0.287, 'k': 4.33, 'rec': 0.608, 'ex': 0.232}",
+"mix": "gat8/v_r606",
+"queue_s": 25.0
 },
 "events": []
 },
@@ -31,27 +31,27 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-05T03:28:22",
-"it": 110400,
-"bar": "30s",
-"batch": 41,
+"ts": "2026-10-05T03:37:16",
+"it": 110410,
+"bar": "5m",
+"batch": 107,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.04,
+"pbo": 0.0,
 "best_family": "v_recovery_hold",
-"best_pm": 10.76,
-"best_params": "{'days': 3.2, 'mf': 0.59, 'k': 4.36, 'rec': 0.506, 'ex': 0.418}",
-"mix": "gat8/v_r33",
-"queue_s": 11.0
+"best_pm": 6.32,
+"best_params": "{'days': 4.86, 'mf': 0.515, 'k': 4.23, 'rec': 0.855, 'ex': 0.251}",
+"mix": "gat10/v_r97",
+"queue_s": 30.0
 },
 "events": []
 }
 ],
 "registry": {
 "total": 28661030,
-"last_5m": 550,
-"last_1h": 15572,
-"last_24h": 475156,
+"last_5m": 130,
+"last_1h": 14767,
+"last_24h": 474025,
 "distinct_ideas": 25205996,
 "dsr_bar": 6.44,
 "sharpe_std": 1.18,
@@ -1233,49 +1233,49 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 47297,
+"n": 47145,
 "best_pm": 1.92,
 "pos_rate": 0.644
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 80669,
+"n": 79909,
 "best_pm": 1.88,
 "pos_rate": 0.622
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 80287,
+"n": 79519,
 "best_pm": 15.11,
 "pos_rate": 0.36
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 47073,
+"n": 46924,
 "best_pm": 27.91,
 "pos_rate": 0.294
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 47360,
+"n": 47218,
 "best_pm": 5.37,
 "pos_rate": 0.577
 },
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 1920,
+"n": 1921,
 "best_pm": 0.72,
 "pos_rate": 0.902
 },
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 2037,
+"n": 2038,
 "best_pm": 0.71,
 "pos_rate": 0.896
 },
@@ -1513,7 +1513,7 @@
 {
 "family": "sleeve_vote_hold",
 "bar": "1m",
-"n": 784,
+"n": 785,
 "best_pm": 0.74,
 "pos_rate": 0.386
 },
@@ -1576,9 +1576,9 @@
 {
 "family": "v_recovery_hold",
 "bar": "1h",
-"n": 877,
+"n": 1483,
 "best_pm": 0.85,
-"pos_rate": 0.395
+"pos_rate": 0.394
 },
 {
 "family": "v_recovery_hold",
@@ -1590,15 +1590,15 @@
 {
 "family": "v_recovery_hold",
 "bar": "30s",
-"n": 658,
-"best_pm": 1.01,
-"pos_rate": 0.464
+"n": 792,
+"best_pm": 1.05,
+"pos_rate": 0.477
 },
 {
 "family": "v_recovery_hold",
 "bar": "5m",
-"n": 892,
-"best_pm": 1.08,
+"n": 989,
+"best_pm": 1.15,
 "pos_rate": 0.472
 },
 {
@@ -1639,6 +1639,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-10-05T01:35",
+"name": "trailing_peak_hold",
+"status": "accepted",
+"rationale": "Payer is slow allocators and anchored holders who sell into strength and re-enter late. A fresh multi-day high is entered only once, and the position is held until price gives back k ATR from the recent peak. It is a position state with a trailing-stop exit rather than a fixed-ho",
+"note": "{\"name\": \"trailing_peak_hold\", \"grid\": 64, \"sec_per_param\": 0.0, \"active_frac\": 0.0079875}"
+},
 {
 "ts": "2026-10-05T01:05",
 "name": "v_recovery_hold",
@@ -1715,27 +1722,9 @@
 "status": "accepted",
 "rationale": "The payer is slow allocators and benchmark-constrained managers. They scale into a trend only after it has proven smooth, so a steady drift (a high t-stat of mean return) is filled over days. They also sell into strength and underreact to it.\nRATIONALE: The signal is the t-statis",
 "note": "{\"name\": \"smooth_drift_hold\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.2103}"
-},
-{
-"ts": "2026-10-04T19:27",
-"name": "instalment_path_hold",
-"status": "rejected",
-"rationale": "The payer is slow allocators who scale into gold in instalments over days. Their orders arrive as a clean, low-reversal path, and the market underreacts to that stream. A staged buyer sits behind the path and pays up as the move proceeds.\nRATIONALE: The signal is path efficiency ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1790991326.9794052,
-"total": 27624832,
-"per_min": 447.0,
-"cpu": 23.7,
-"gpu": 96,
-"free_gb": 163.2,
-"dsr_bar": 6.47,
-"best_pm_1h": 9.26,
-"distinct": 24171203
-},
 {
 "t": 1790991669.4920902,
 "total": 27626768,
@@ -7331,6 +7320,17 @@
 "cpu": 20.4,
 "gpu": 93,
 "free_gb": 134.9,
+"dsr_bar": 6.44,
+"best_pm_1h": 24.13,
+"distinct": 25205996
+},
+{
+"t": 1791164240.9292219,
+"total": 28661030,
+"per_min": 26.0,
+"cpu": 22.7,
+"gpu": 87,
+"free_gb": 125.6,
 "dsr_bar": 6.44,
 "best_pm_1h": 24.13,
 "distinct": 25205996
