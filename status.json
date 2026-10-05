@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-05 23:33:20 UTC",
+"generated_at": "2026-10-05 23:39:04 UTC",
 "host": {
-"cpu_pct": 68.3,
-"gpu_pct": 100,
-"free_gb": 129.5,
-"uptime": "up 6 days,  8:19, 2 users, load averages: 18.37 14.90 13.24",
-"load": "{ 18.37 14.90 13.24 }"
+"cpu_pct": 36.6,
+"gpu_pct": 74,
+"free_gb": 210.4,
+"uptime": "up 6 days,  8:24, 2 users, load averages: 9.95 8.23 10.35",
+"load": "{ 9.95 8.23 10.35 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-06T01:33:03",
-"it": 150161,
-"bar": "1m",
+"ts": "2026-10-06T01:38:14",
+"it": 150170,
+"bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.43,
-"pbo": 0.29,
+"pbo": 0.5,
 "best_family": "gated",
-"best_pm": -0.09,
-"best_params": "{'base': 'heavy_day_concession', 'base_params': {'base': 5, 'hold': 3, 'k': 0.549, 'sign': 1, 'theta': 1.44}, 'mode': 'vol_above', 'vol_window': 240, 'vol_pct':",
+"best_pm": 0.81,
+"best_params": "{'base': 'cta_pnl_stopout', 'base_params': {'hold': 7, 'k': 1.97, 'n': 8, 'sign': -1}, 'mode': 'vol_below', 'vol_window': 317, 'vol_pct': 0.686, 'vol_scale': 0.",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-06T01:33:03",
-"it": 122432,
-"bar": "30s",
-"batch": 156,
+"ts": "2026-10-06T01:38:22",
+"it": 122440,
+"bar": "15m",
+"batch": 193,
 "passed": 0,
 "bench": 6.43,
-"pbo": 0.0,
+"pbo": 0.32,
 "best_family": "choppy_break_demeaned",
-"best_pm": 21.37,
-"best_params": "{'days': 9, 'ex': 0.589, 'mdays': 20, 'mintr': 5, 'thr': 0.123}",
-"mix": "cho61/clo80/gat15",
-"queue_s": 44.0
+"best_pm": 2.22,
+"best_params": "{'days': 14, 'thr': 0.395, 'ex': 0.54, 'mdays': 52, 'mintr': 6}",
+"mix": "cho85/clo93/gat15",
+"queue_s": 31.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 29177517,
-"last_5m": 8106,
-"last_1h": 25579,
-"last_24h": 560518,
-"distinct_ideas": 25721630,
+"total": 29179569,
+"last_5m": 1704,
+"last_1h": 25361,
+"last_24h": 562116,
+"distinct_ideas": 25723489,
 "dsr_bar": 6.43,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19220653,
+"n": 19220948,
 "pos_rate": 0.342,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -561,6 +561,15 @@
 "since": "2026-10-01"
 },
 {
+"family": "close_channel_retrace_demeaned",
+"n": 10204,
+"pos_rate": 0.687,
+"best_pm": 1.13,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-05"
+},
+{
 "family": "trend_breadth_flow",
 "n": 10078,
 "pos_rate": 0.365,
@@ -577,6 +586,15 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-04"
+},
+{
+"family": "choppy_break_demeaned",
+"n": 9989,
+"pos_rate": 0.46,
+"best_pm": 1.36,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-05"
 },
 {
 "family": "drawdown_derisk_flow",
@@ -601,24 +619,6 @@
 "n": 9627,
 "pos_rate": 0.276,
 "best_pm": 0.82,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-05"
-},
-{
-"family": "close_channel_retrace_demeaned",
-"n": 9294,
-"pos_rate": 0.681,
-"best_pm": 1.06,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-05"
-},
-{
-"family": "choppy_break_demeaned",
-"n": 9150,
-"pos_rate": 0.463,
-"best_pm": 1.36,
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-05"
@@ -1326,9 +1326,9 @@
 {
 "family": "choppy_break_demeaned",
 "bar": "15m",
-"n": 1779,
+"n": 2049,
 "best_pm": 1.13,
-"pos_rate": 0.448
+"pos_rate": 0.44
 },
 {
 "family": "choppy_break_demeaned",
@@ -1347,16 +1347,16 @@
 {
 "family": "choppy_break_demeaned",
 "bar": "30s",
-"n": 1031,
+"n": 1155,
 "best_pm": 1.24,
-"pos_rate": 0.53
+"pos_rate": 0.541
 },
 {
 "family": "choppy_break_demeaned",
 "bar": "5m",
-"n": 1884,
+"n": 2207,
 "best_pm": 1.36,
-"pos_rate": 0.485
+"pos_rate": 0.476
 },
 {
 "family": "cleared_overhang_donchian",
@@ -1382,9 +1382,9 @@
 {
 "family": "close_channel_retrace_demeaned",
 "bar": "15m",
-"n": 1207,
-"best_pm": 0.84,
-"pos_rate": 0.873
+"n": 1487,
+"best_pm": 0.86,
+"pos_rate": 0.876
 },
 {
 "family": "close_channel_retrace_demeaned",
@@ -1403,16 +1403,16 @@
 {
 "family": "close_channel_retrace_demeaned",
 "bar": "30s",
-"n": 1027,
+"n": 1165,
 "best_pm": 0.94,
-"pos_rate": 0.402
+"pos_rate": 0.412
 },
 {
 "family": "close_channel_retrace_demeaned",
 "bar": "5m",
-"n": 1199,
-"best_pm": 1.06,
-"pos_rate": 0.754
+"n": 1544,
+"best_pm": 1.13,
+"pos_rate": 0.762
 },
 {
 "family": "compression_break_demeaned",
@@ -1627,7 +1627,7 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 36875,
+"n": 36912,
 "best_pm": 1.7,
 "pos_rate": 0.667
 },
@@ -1648,14 +1648,14 @@
 {
 "family": "gated",
 "bar": "30s",
-"n": 37145,
+"n": 37187,
 "best_pm": 31.87,
 "pos_rate": 0.3
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 37141,
+"n": 37182,
 "best_pm": 5.37,
 "pos_rate": 0.605
 },
@@ -1704,9 +1704,9 @@
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 143,
+"n": 142,
 "best_pm": 0.67,
-"pos_rate": 0.909
+"pos_rate": 0.908
 },
 {
 "family": "higher_low_staircase",
@@ -1725,9 +1725,9 @@
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 103,
+"n": 102,
 "best_pm": 0.64,
-"pos_rate": 0.913
+"pos_rate": 0.922
 },
 {
 "family": "horizon_demeaned_book",
@@ -2335,6 +2335,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-05T23:33",
+"name": "fast_vs_slow_break",
+"status": "accepted",
+"rationale": "Payer is short-vol faders and range-top sellers who are forced to cover on a fresh short-horizon break that the longer horizon has not yet confirmed. Their covering is the late leg of the move.\nRATIONALE: Position is the fast break state minus the slow break state (window = days ",
+"note": "{\"name\": \"fast_vs_slow_break\", \"grid\": 72, \"sec_per_param\": 0.002, \"active_frac\": 0.0986}"
+},
+{
 "ts": "2026-10-05T23:03",
 "name": "close_channel_retrace_demeaned",
 "status": "accepted",
@@ -2410,27 +2417,9 @@
 "status": "accepted",
 "rationale": "The payer is range-top sellers and short-vol faders. They are forced to cover when a range break arrives with short-horizon realised vol already above its long-run level. Each side exits only when price falls back into the broken channel, so the position is two-sided and the trai",
 "note": "{\"name\": \"volburst_break_matched\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.99149375}"
-},
-{
-"ts": "2026-10-05T17:26",
-"name": "closeloc_break_demeaned",
-"status": "rejected",
-"rationale": "Payer: range-top sellers and short-vol faders who must cover when price closes above a multi-day high with the bar closing near its top. On a down-break, range-bottom buyers get stopped out.\nRATIONALE: The raw two-sided break position has its own trailing mean exposure subtracted",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1791070446.368791,
-"total": 28157545,
-"per_min": 171.0,
-"cpu": 3.8,
-"gpu": 0,
-"free_gb": 114.6,
-"dsr_bar": 6.45,
-"best_pm_1h": 1.72,
-"distinct": 24703740
-},
 {
 "t": 1791070772.2593129,
 "total": 28157953,
@@ -7996,6 +7985,17 @@
 "dsr_bar": 6.43,
 "best_pm_1h": 10.5,
 "distinct": 25721630
+},
+{
+"t": 1791243544.533973,
+"total": 29179569,
+"per_min": 341.0,
+"cpu": 36.6,
+"gpu": 74,
+"free_gb": 210.4,
+"dsr_bar": 6.43,
+"best_pm_1h": 10.5,
+"distinct": 25723489
 }
 ],
 "instrument": "XAUUSD",
