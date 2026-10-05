@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-05 05:36:25 UTC",
+"generated_at": "2026-10-05 05:42:03 UTC",
 "host": {
-"cpu_pct": 3.6,
-"gpu_pct": 0,
-"free_gb": 117.8,
-"uptime": "up 5 days, 14:22, 2 users, load averages: 12.24 10.95 9.41",
-"load": "{ 12.24 10.95 9.41 }"
+"cpu_pct": 28.8,
+"gpu_pct": 86,
+"free_gb": 132.6,
+"uptime": "up 5 days, 14:28, 2 users, load averages: 10.26 11.03 10.06",
+"load": "{ 10.26 11.03 10.06 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-05T07:36:25",
-"it": 138361,
-"bar": "1h",
+"ts": "2026-10-05T07:36:58",
+"it": 138400,
+"bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.46,
+"pbo": 0.71,
 "best_family": "gated",
-"best_pm": 0.62,
-"best_params": "{'base': 'lookback_rolloff_flow', 'base_params': {'k': 2.11, 'lead': 4, 'lookback': 106, 'mode': 'any', 'sign': -1}, 'mode': 'vol_below', 'vol_window': 87, 'vol",
+"best_pm": 0.01,
+"best_params": "{'base': 'range_expansion_hold', 'base_params': {'days': 2, 'exit': 0.375, 'hi': 0.7, 'k': 1.27}, 'mode': 'tick_above', 'vol_window': 60, 'vol_pct': 0.3}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-05T07:36:24",
-"it": 112261,
-"bar": "15m",
+"ts": "2026-10-05T07:39:05",
+"it": 112400,
+"bar": "30s",
 "batch": 8,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.21,
+"pbo": 0.25,
 "best_family": "gated",
-"best_pm": 3.11,
-"best_params": "{'base': 'broad_flow_drift', 'base_params': {'base': 10, 'd': 3, 'exit': 0.0393, 'k': 1.19, 'theta': 1.54}, 'mode': 'spread_below', 'vol_window': 60, 'vol_pct':",
+"best_pm": 0.61,
+"best_params": "{'base': 'range_expansion_hold', 'base_params': {'days': 2, 'exit': 0.375, 'hi': 0.7, 'k': 1.27}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 100}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 28761809,
-"last_5m": 1544,
-"last_1h": 23134,
-"last_24h": 512429,
-"distinct_ideas": 25306703,
+"total": 28763701,
+"last_5m": 1366,
+"last_1h": 14406,
+"last_24h": 512346,
+"distinct_ideas": 25308491,
 "dsr_bar": 6.44,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 19038329,
+"n": 19040193,
 "pos_rate": 0.34,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -238,7 +238,7 @@
 },
 {
 "family": "liquid_range_break_hold",
-"n": 14591,
+"n": 14593,
 "pos_rate": 0.804,
 "best_pm": 1.02,
 "best_dsr": 0.0,
@@ -445,7 +445,7 @@
 },
 {
 "family": "range_expansion_hold",
-"n": 10321,
+"n": 10331,
 "pos_rate": 0.956,
 "best_pm": 1.06,
 "best_dsr": 0.0,
@@ -481,7 +481,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 9615,
+"n": 9628,
 "pos_rate": 0.899,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -742,7 +742,7 @@
 },
 {
 "family": "sleeve_vote_hold",
-"n": 3892,
+"n": 3894,
 "pos_rate": 0.708,
 "best_pm": 0.93,
 "best_dsr": 0.0,
@@ -985,7 +985,7 @@
 },
 {
 "family": "rebalance_size",
-"n": 947,
+"n": 948,
 "pos_rate": 0.415,
 "best_pm": 0.45,
 "best_dsr": 0.0,
@@ -1348,49 +1348,49 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 42880,
+"n": 43064,
 "best_pm": 1.92,
-"pos_rate": 0.647
+"pos_rate": 0.648
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 72742,
+"n": 72398,
 "best_pm": 1.88,
-"pos_rate": 0.627
+"pos_rate": 0.628
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 72240,
+"n": 71904,
 "best_pm": 17.06,
 "pos_rate": 0.364
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 42530,
+"n": 42730,
 "best_pm": 27.91,
 "pos_rate": 0.298
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 42996,
+"n": 43188,
 "best_pm": 5.37,
 "pos_rate": 0.58
 },
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 1941,
+"n": 1943,
 "best_pm": 0.72,
 "pos_rate": 0.903
 },
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 2066,
+"n": 2068,
 "best_pm": 0.71,
 "pos_rate": 0.896
 },
@@ -1404,14 +1404,14 @@
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 1673,
+"n": 1677,
 "best_pm": 0.65,
 "pos_rate": 0.894
 },
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 1997,
+"n": 1999,
 "best_pm": 0.7,
 "pos_rate": 0.906
 },
@@ -1474,7 +1474,7 @@
 {
 "family": "liquid_range_break_hold",
 "bar": "30s",
-"n": 2887,
+"n": 2889,
 "best_pm": 1.02,
 "pos_rate": 0.949
 },
@@ -1607,7 +1607,7 @@
 {
 "family": "range_expansion_hold",
 "bar": "1h",
-"n": 2118,
+"n": 2119,
 "best_pm": 1.06,
 "pos_rate": 0.935
 },
@@ -1621,14 +1621,14 @@
 {
 "family": "range_expansion_hold",
 "bar": "30s",
-"n": 1952,
+"n": 1957,
 "best_pm": 0.96,
 "pos_rate": 0.949
 },
 {
 "family": "range_expansion_hold",
 "bar": "5m",
-"n": 2090,
+"n": 2091,
 "best_pm": 1.06,
 "pos_rate": 0.977
 },
@@ -1649,7 +1649,7 @@
 {
 "family": "sleeve_vote_hold",
 "bar": "15m",
-"n": 774,
+"n": 775,
 "best_pm": 0.71,
 "pos_rate": 0.973
 },
@@ -1670,9 +1670,9 @@
 {
 "family": "sleeve_vote_hold",
 "bar": "30s",
-"n": 759,
+"n": 760,
 "best_pm": 0.61,
-"pos_rate": 0.275
+"pos_rate": 0.276
 },
 {
 "family": "sleeve_vote_hold",
@@ -1860,6 +1860,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-05T05:40",
+"name": "demeaned_break_book",
+"status": "accepted",
+"rationale": "Payer is range-top sellers and short-vol faders who cover into a clean break out of compression, and range-bottom buyers who liquidate into a break down. Each leg is a break state minus its own trailing average exposure, so a constant long or short earns zero and only the timing ",
+"note": "{\"name\": \"demeaned_break_book\", \"grid\": 192, \"sec_per_param\": 0.001, \"active_frac\": 0.29778125}"
+},
+{
 "ts": "2026-10-05T05:09",
 "name": "symmetric_compression_break",
 "status": "rejected",
@@ -1935,27 +1942,9 @@
 "status": "rejected",
 "rationale": "The payer is disposition sellers. Holders sitting on gains sell into strength before price has moved far from their cost basis, so price keeps drifting up, but only once heavy turnover has transferred their inventory.\nRATIONALE: The signal is a long-only graded entry on the dista",
 "note": "sandbox: AssertionError: zu speicherhungrig: 41 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-10-04T23:33",
-"name": "vwap_dwell_hold",
-"status": "accepted",
-"rationale": "The payer is holders and allocators who sell into strength and underreact. Dwell is the share of bars over days that closed above a tick-weighted short VWAP. High dwell means buyers kept winning every small pullback, so the move is being filled slowly. Drift t-stat, channel highs",
-"note": "{\"name\": \"vwap_dwell_hold\", \"grid\": 90, \"sec_per_param\": 0.0, \"active_frac\": 0.3937375}"
 }
 ],
 "history": [
-{
-"t": 1791006045.894088,
-"total": 27737378,
-"per_min": 450.0,
-"cpu": 14.1,
-"gpu": 80,
-"free_gb": 152.9,
-"dsr_bar": 6.46,
-"best_pm_1h": 22.07,
-"distinct": 24283685
-},
 {
 "t": 1791006378.88359,
 "total": 27740229,
@@ -7543,6 +7532,17 @@
 "dsr_bar": 6.44,
 "best_pm_1h": 13.89,
 "distinct": 25306703
+},
+{
+"t": 1791178923.358788,
+"total": 28763701,
+"per_min": 273.0,
+"cpu": 28.8,
+"gpu": 86,
+"free_gb": 132.6,
+"dsr_bar": 6.44,
+"best_pm_1h": 13.89,
+"distinct": 25308491
 }
 ],
 "instrument": "XAUUSD",
