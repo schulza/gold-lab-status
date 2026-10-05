@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-05 13:17:08 UTC",
+"generated_at": "2026-10-05 13:23:06 UTC",
 "host": {
-"cpu_pct": 25.0,
+"cpu_pct": 30.6,
 "gpu_pct": 95,
-"free_gb": 144.2,
-"uptime": "up 5 days, 22:03, 2 users, load averages: 14.78 16.64 13.85",
-"load": "{ 14.78 16.64 13.85 }"
+"free_gb": 135.7,
+"uptime": "up 5 days, 22:08, 2 users, load averages: 11.82 14.00 13.54",
+"load": "{ 11.82 14.00 13.54 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-05T15:09:18",
-"it": 144200,
-"bar": "1h",
+"ts": "2026-10-05T15:23:06",
+"it": 144347,
+"bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.43,
 "pbo": 0.39,
 "best_family": "gated",
-"best_pm": 0.46,
-"best_params": "{'base': 'asia_participation_shift', 'base_params': {'d': 5, 'k': 1.36, 'mode': 'cold', 'mult': 20, 'sign': 1}, 'mode': 'vol_above', 'vol_window': 240, 'vol_pct",
+"best_pm": 0.2,
+"best_params": "{'base': 'candle_close_herd', 'base_params': {'hold': 39, 'k': 2.87, 'm': 8, 'sign': -1, 'span': 1, 'theta': 0.675}, 'mode': 'vol_above', 'vol_window': 104, 'vo",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-05T15:15:51",
-"it": 117400,
-"bar": "30s",
+"ts": "2026-10-05T15:23:04",
+"it": 117407,
+"bar": "5m",
 "batch": 8,
 "passed": 0,
 "bench": 6.43,
-"pbo": 0.0,
+"pbo": 0.25,
 "best_family": "gated",
 "best_pm": 1.11,
-"best_params": "{'base': 'v_recovery_hold', 'base_params': {'days': 7.41, 'ex': 0.373, 'k': 1.03, 'mf': 0.15, 'rec': 0.9}, 'mode': 'spread_below', 'vol_window': 867, 'vol_pct':",
+"best_params": "{'base': 'anchor_absorbed_hold', 'base_params': {'days': 20, 'exit': -0.15, 'k': 1.04, 'rho': 0.383}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 50}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 28933247,
-"last_5m": 9714,
-"last_1h": 23891,
-"last_24h": 556173,
-"distinct_ideas": 25478011,
+"total": 28940484,
+"last_5m": 7381,
+"last_1h": 30878,
+"last_24h": 561490,
+"distinct_ideas": 25485352,
 "dsr_bar": 6.43,
-"sharpe_std": 1.18,
+"sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19129144,
+"n": 19130437,
 "pos_rate": 0.341,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -136,6 +136,15 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-09-30"
+},
+{
+"family": "compression_break_demeaned",
+"n": 19425,
+"pos_rate": 0.922,
+"best_pm": 1.04,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-05"
 },
 {
 "family": "compression_break_hold",
@@ -277,15 +286,6 @@
 "n": 13586,
 "pos_rate": 0.588,
 "best_pm": 1.19,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-05"
-},
-{
-"family": "compression_break_demeaned",
-"n": 13481,
-"pos_rate": 0.929,
-"best_pm": 0.97,
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-05"
@@ -1206,9 +1206,9 @@
 {
 "family": "anchor_absorbed_hold",
 "bar": "1m",
-"n": 3770,
+"n": 3695,
 "best_pm": 1.12,
-"pos_rate": 0.902
+"pos_rate": 0.903
 },
 {
 "family": "anchor_absorbed_hold",
@@ -1339,16 +1339,16 @@
 {
 "family": "compression_break_demeaned",
 "bar": "1h",
-"n": 880,
-"best_pm": 0.79,
-"pos_rate": 0.909
+"n": 3852,
+"best_pm": 0.85,
+"pos_rate": 0.888
 },
 {
 "family": "compression_break_demeaned",
 "bar": "1m",
-"n": 880,
-"best_pm": 0.9,
-"pos_rate": 0.943
+"n": 3852,
+"best_pm": 1.04,
+"pos_rate": 0.931
 },
 {
 "family": "compression_break_demeaned",
@@ -1472,35 +1472,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 36813,
+"n": 36445,
 "best_pm": 1.57,
 "pos_rate": 0.661
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 63267,
+"n": 63549,
 "best_pm": 1.71,
 "pos_rate": 0.639
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 62737,
+"n": 63015,
 "best_pm": 17.06,
 "pos_rate": 0.375
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 36739,
+"n": 36363,
 "best_pm": 31.87,
-"pos_rate": 0.299
+"pos_rate": 0.3
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 36967,
+"n": 36599,
 "best_pm": 5.37,
 "pos_rate": 0.593
 },
@@ -2117,6 +2117,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-05T13:20",
+"name": null,
+"status": "rejected",
+"rationale": "The payer is range-top sellers and short-vol faders who are forced to cover when a compression box breaks upward. A second payer is gold holders who are slow to reprice after real yields fall, and each sleeve is demeaned against its own trailing exposure, so a constant long earns",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-10-05T12:49",
 "name": "compression_break_demeaned",
 "status": "accepted",
@@ -2192,27 +2199,9 @@
 "status": "accepted",
 "rationale": "The payer is range-top sellers and short-vol faders who cover into a break out of compression. This extends `exposure_matched_break` and `demeaned_break_book` with one new element, a timing gate. The sleeve's exposure is demeaned against its own trailing average, and it only trad",
 "note": "{\"name\": \"timing_gated_break\", \"grid\": 192, \"sec_per_param\": 0.001, \"active_frac\": 0.0702875}"
-},
-{
-"ts": "2026-10-05T07:12",
-"name": "two_sided_compression_break",
-"status": "rejected",
-"rationale": "The payer is range-edge sellers and short-vol faders who get squeezed when a break follows compression. Longs are paid on upside breaks and shorts on downside breaks. They are held until price returns to the mid-range average.\nThe book is symmetric (long minus short), and mode 1 ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1791033515.4254348,
-"total": 27941420,
-"per_min": 514.0,
-"cpu": 68.1,
-"gpu": 93,
-"free_gb": 142.2,
-"dsr_bar": 6.46,
-"best_pm_1h": 1.75,
-"distinct": 24487823
-},
 {
 "t": 1791033854.679119,
 "total": 27943325,
@@ -7789,6 +7778,17 @@
 "dsr_bar": 6.43,
 "best_pm_1h": 16.97,
 "distinct": 25478011
+},
+{
+"t": 1791206586.9333398,
+"total": 28940484,
+"per_min": 1476.0,
+"cpu": 30.6,
+"gpu": 95,
+"free_gb": 135.7,
+"dsr_bar": 6.43,
+"best_pm_1h": 16.97,
+"distinct": 25485352
 }
 ],
 "instrument": "XAUUSD",
