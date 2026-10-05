@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-05 20:24:51 UTC",
+"generated_at": "2026-10-05 20:30:15 UTC",
 "host": {
-"cpu_pct": 25.5,
-"gpu_pct": 36,
-"free_gb": 115.2,
-"uptime": "up 6 days,  5:10, 2 users, load averages: 13.03 8.17 9.72",
-"load": "{ 13.03 8.17 9.72 }"
+"cpu_pct": 3.7,
+"gpu_pct": 0,
+"free_gb": 119.4,
+"uptime": "up 6 days,  5:16, 2 users, load averages: 1.99 6.75 8.99",
+"load": "{ 1.99 6.75 8.99 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-05T22:24:40",
-"it": 148264,
-"bar": "1h",
-"batch": 37,
+"ts": "2026-10-05T22:26:30",
+"it": 148305,
+"bar": "1m",
+"batch": 104,
 "passed": 0,
 "bench": 6.43,
-"pbo": 0.0,
-"best_family": "gated",
-"best_pm": 1.18,
-"best_params": "{'base': 'vwap_dwell_hold', 'base_params': {'days': 4.27, 'exit': 0.349, 'thr': 0.635, 'vwin_h': 13}, 'mode': 'vol_below', 'vol_window': 255, 'vol_pct': 0.721}",
-"mix": "gat8/mar29",
-"queue_s": 9.0
+"pbo": 0.11,
+"best_family": "margin_break_demeaned",
+"best_pm": 0.71,
+"best_params": "{'days': 4, 'k': 0.446, 'ex': 0.676, 'mdays': 20}",
+"mix": "gat8/mar96",
+"queue_s": 11.0
 },
 "events": []
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-05T22:24:46",
-"it": 120906,
+"ts": "2026-10-05T22:26:30",
+"it": 120936,
 "bar": "30s",
-"batch": 66,
+"batch": 70,
 "passed": 0,
 "bench": 6.43,
-"pbo": 0.11,
-"best_family": "gated",
-"best_pm": 20.86,
-"best_params": "{'base': 'broad_flow_drift', 'base_params': {'base': 10, 'd': 3, 'exit': 0.0594, 'k': 0.961, 'theta': 1.54}, 'mode': 'spread_below', 'vol_window': 89, 'vol_pct'",
-"mix": "gat8/mar25/nar22/thi11",
+"pbo": 0.82,
+"best_family": "narrowest_box_break_matched",
+"best_pm": 0.66,
+"best_params": "{'days': 4, 'hold': 1, 'm': 10, 'mdays': 16}",
+"mix": "gat8/mar23/nar25/thi14",
 "queue_s": 16.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 29093922,
-"last_5m": 3166,
-"last_1h": 25910,
-"last_24h": 551902,
-"distinct_ideas": 25638834,
+"total": 29100027,
+"last_5m": 4042,
+"last_1h": 29702,
+"last_24h": 550211,
+"distinct_ideas": 25644323,
 "dsr_bar": 6.43,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19192449,
+"n": 19193225,
 "pos_rate": 0.342,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -327,6 +327,15 @@
 "since": "2026-10-05"
 },
 {
+"family": "thin_break_timing",
+"n": 13107,
+"pos_rate": 0.796,
+"best_pm": 1.0,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-05"
+},
+{
 "family": "trapped_fader_squeeze",
 "n": 13077,
 "pos_rate": 0.2,
@@ -345,15 +354,6 @@
 "since": "2026-10-02"
 },
 {
-"family": "thin_break_timing",
-"n": 12434,
-"pos_rate": 0.795,
-"best_pm": 1.0,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-05"
-},
-{
 "family": "pullback_resume_hold",
 "n": 12372,
 "pos_rate": 0.501,
@@ -361,6 +361,15 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-04"
+},
+{
+"family": "margin_break_demeaned",
+"n": 12327,
+"pos_rate": 0.606,
+"best_pm": 1.06,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-05"
 },
 {
 "family": "overhead_supply_clearance",
@@ -517,7 +526,7 @@
 },
 {
 "family": "range_expansion_hold",
-"n": 10437,
+"n": 10438,
 "pos_rate": 0.956,
 "best_pm": 1.06,
 "best_dsr": 0.0,
@@ -544,7 +553,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 10022,
+"n": 10024,
 "pos_rate": 0.9,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -574,15 +583,6 @@
 "n": 9627,
 "pos_rate": 0.276,
 "best_pm": 0.82,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-05"
-},
-{
-"family": "margin_break_demeaned",
-"n": 9127,
-"pos_rate": 0.61,
-"best_pm": 1.06,
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-05"
@@ -867,6 +867,15 @@
 "since": "2026-10-04"
 },
 {
+"family": "narrowest_box_break_matched",
+"n": 3762,
+"pos_rate": 0.655,
+"best_pm": 1.02,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-05"
+},
+{
 "family": "signed_jump_asymmetry",
 "n": 3751,
 "pos_rate": 0.318,
@@ -1018,15 +1027,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-09-30"
-},
-{
-"family": "narrowest_box_break_matched",
-"n": 2309,
-"pos_rate": 0.64,
-"best_pm": 1.0,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-05"
 },
 {
 "family": "frame_consensus_catchup",
@@ -1544,35 +1544,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 37125,
+"n": 36875,
 "best_pm": 1.7,
 "pos_rate": 0.668
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 63622,
+"n": 63671,
 "best_pm": 1.69,
 "pos_rate": 0.644
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 63139,
+"n": 63217,
 "best_pm": 17.06,
 "pos_rate": 0.378
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 37258,
+"n": 36946,
 "best_pm": 31.87,
 "pos_rate": 0.301
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 37480,
+"n": 37170,
 "best_pm": 5.37,
 "pos_rate": 0.604
 },
@@ -1628,16 +1628,16 @@
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 231,
+"n": 232,
 "best_pm": 0.61,
-"pos_rate": 0.913
+"pos_rate": 0.914
 },
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 168,
+"n": 169,
 "best_pm": 0.64,
-"pos_rate": 0.946
+"pos_rate": 0.947
 },
 {
 "family": "higher_low_staircase",
@@ -1719,44 +1719,44 @@
 {
 "family": "margin_break_demeaned",
 "bar": "15m",
-"n": 2226,
+"n": 2548,
 "best_pm": 0.95,
-"pos_rate": 0.709
+"pos_rate": 0.71
 },
 {
 "family": "margin_break_demeaned",
 "bar": "1h",
-"n": 2156,
+"n": 2800,
 "best_pm": 0.66,
-"pos_rate": 0.714
+"pos_rate": 0.711
 },
 {
 "family": "margin_break_demeaned",
 "bar": "1m",
-"n": 1837,
-"best_pm": 0.8,
-"pos_rate": 0.439
+"n": 2638,
+"best_pm": 0.85,
+"pos_rate": 0.445
 },
 {
 "family": "margin_break_demeaned",
 "bar": "30s",
-"n": 1444,
+"n": 1645,
 "best_pm": 0.57,
-"pos_rate": 0.369
+"pos_rate": 0.366
 },
 {
 "family": "margin_break_demeaned",
 "bar": "5m",
-"n": 2352,
+"n": 2696,
 "best_pm": 1.06,
-"pos_rate": 0.701
+"pos_rate": 0.704
 },
 {
 "family": "narrowest_box_break_matched",
 "bar": "15m",
-"n": 501,
+"n": 794,
 "best_pm": 0.81,
-"pos_rate": 0.585
+"pos_rate": 0.589
 },
 {
 "family": "narrowest_box_break_matched",
@@ -1775,16 +1775,16 @@
 {
 "family": "narrowest_box_break_matched",
 "bar": "30s",
-"n": 299,
+"n": 507,
 "best_pm": 0.87,
-"pos_rate": 0.759
+"pos_rate": 0.775
 },
 {
 "family": "narrowest_box_break_matched",
 "bar": "5m",
-"n": 469,
+"n": 817,
 "best_pm": 1.02,
-"pos_rate": 0.684
+"pos_rate": 0.677
 },
 {
 "family": "nested_contraction_break_matched",
@@ -1943,37 +1943,37 @@
 {
 "family": "smooth_drift_hold",
 "bar": "15m",
-"n": 1155,
-"best_pm": 0.89,
-"pos_rate": 0.763
+"n": 119,
+"best_pm": 0.73,
+"pos_rate": 0.815
 },
 {
 "family": "smooth_drift_hold",
 "bar": "1h",
-"n": 2321,
-"best_pm": 0.74,
-"pos_rate": 0.699
+"n": 1786,
+"best_pm": 0.73,
+"pos_rate": 0.68
 },
 {
 "family": "smooth_drift_hold",
 "bar": "1m",
-"n": 2321,
-"best_pm": 0.93,
-"pos_rate": 0.684
+"n": 1998,
+"best_pm": 0.81,
+"pos_rate": 0.663
 },
 {
 "family": "smooth_drift_hold",
 "bar": "30s",
-"n": 1906,
-"best_pm": 1.02,
-"pos_rate": 0.698
+"n": 119,
+"best_pm": 1.0,
+"pos_rate": 0.782
 },
 {
 "family": "smooth_drift_hold",
 "bar": "5m",
-"n": 993,
-"best_pm": 0.93,
-"pos_rate": 0.725
+"n": 119,
+"best_pm": 0.66,
+"pos_rate": 0.697
 },
 {
 "family": "tested_top_break",
@@ -2013,7 +2013,7 @@
 {
 "family": "thin_break_timing",
 "bar": "15m",
-"n": 2061,
+"n": 2227,
 "best_pm": 1.0,
 "pos_rate": 0.839
 },
@@ -2034,16 +2034,16 @@
 {
 "family": "thin_break_timing",
 "bar": "30s",
-"n": 1615,
+"n": 1743,
 "best_pm": 0.85,
-"pos_rate": 0.739
+"pos_rate": 0.738
 },
 {
 "family": "thin_break_timing",
 "bar": "5m",
-"n": 2183,
+"n": 2335,
 "best_pm": 0.96,
-"pos_rate": 0.846
+"pos_rate": 0.848
 },
 {
 "family": "timing_gated_break",
@@ -2294,6 +2294,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-05T20:29",
+"name": "decorrelated_break_sleeves",
+"status": "accepted",
+"rationale": "Payer: range-top sellers and short-vol faders who are forced to cover when price closes beyond a multi-day range. A fast break and a slow break are both tied to this one flow, but the slow one carries the long gold beta.\nRATIONALE: Each sleeve is a two-sided break state minus its",
+"note": "{\"name\": \"decorrelated_break_sleeves\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.0775}"
+},
+{
 "ts": "2026-10-05T19:59",
 "name": "narrowest_box_break_matched",
 "status": "accepted",
@@ -2369,27 +2376,9 @@
 "status": "accepted",
 "rationale": "Payer is range-top sellers and short-vol faders who cover when a compressed box breaks up, and range-bottom buyers stopped out on a down-break. Raw sleeve is two-sided with a weighted short leg. I subtract its expanding (whole-history) mean exposure, so a constant long earns zero",
 "note": "{\"name\": \"expanding_break_matched\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.75775}"
-},
-{
-"ts": "2026-10-05T14:22",
-"name": "orthogonal_break_book",
-"status": "rejected",
-"rationale": "The payer is range-top sellers and short-vol faders who cover into a clean break from compression. A second, smooth-trend break only counts while the first sleeve is flat, so the two sleeves overlap as little as possible.\n`exposure_matched_break` (the director's #1) was already g",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1791059403.666112,
-"total": 28120280,
-"per_min": 99.0,
-"cpu": 31.5,
-"gpu": 88,
-"free_gb": 153.4,
-"dsr_bar": 6.45,
-"best_pm_1h": 15.47,
-"distinct": 24666475
-},
 {
 "t": 1791059772.358655,
 "total": 28120632,
@@ -7944,6 +7933,17 @@
 "dsr_bar": 6.43,
 "best_pm_1h": 1.42,
 "distinct": 25638834
+},
+{
+"t": 1791232215.437839,
+"total": 29100027,
+"per_min": 808.0,
+"cpu": 3.7,
+"gpu": 0,
+"free_gb": 119.4,
+"dsr_bar": 6.43,
+"best_pm_1h": 1.42,
+"distinct": 25644323
 }
 ],
 "instrument": "XAUUSD",
