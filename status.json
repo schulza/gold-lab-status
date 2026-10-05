@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-05 09:40:56 UTC",
+"generated_at": "2026-10-05 09:46:42 UTC",
 "host": {
-"cpu_pct": 20.6,
-"gpu_pct": 68,
-"free_gb": 129.6,
-"uptime": "up 5 days, 18:26, 2 users, load averages: 9.80 12.29 12.32",
-"load": "{ 9.80 12.29 12.32 }"
+"cpu_pct": 74.6,
+"gpu_pct": 55,
+"free_gb": 123.0,
+"uptime": "up 5 days, 18:32, 2 users, load averages: 23.10 19.55 15.63",
+"load": "{ 23.10 19.55 15.63 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-05T11:34:00",
-"it": 141400,
+"ts": "2026-10-05T11:46:18",
+"it": 141510,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.43,
-"pbo": 0.04,
+"pbo": 0.64,
 "best_family": "gated",
-"best_pm": 0.94,
-"best_params": "{'base': 'liquid_range_break_hold', 'base_params': {'days': 7, 'exit': 1, 'sdays': 4, 'sp': 1.05}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 50}",
+"best_pm": 0.67,
+"best_params": "{'base': 'drawdown_derisk_flow', 'base_params': {'d': 11, 'hold': 3, 'k': 1.27, 'side': 'down', 'sign': 1}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 13}",
 "mix": "gat8",
-"queue_s": 7.0
+"queue_s": 8.0
 },
 "events": []
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-05T11:35:08",
-"it": 115000,
-"bar": "15m",
-"batch": 63,
+"ts": "2026-10-05T11:46:31",
+"it": 115067,
+"bar": "30s",
+"batch": 156,
 "passed": 0,
 "bench": 6.43,
-"pbo": 0.54,
+"pbo": 0.18,
 "best_family": "horizon_demeaned_book",
-"best_pm": 0.76,
-"best_params": "{'days': 5, 'lm': 12, 'c': 0.454, 'ex': 0.774, 'mdays': 7, 'mintr': 19}",
-"mix": "gat8/hor55",
-"queue_s": 21.0
+"best_pm": 1.08,
+"best_params": "{'c': 0.302, 'days': 6, 'ex': 0.78, 'lm': 12, 'mdays': 5, 'mintr': 14}",
+"mix": "gat25/hor131",
+"queue_s": 87.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 28847354,
-"last_5m": 0,
-"last_1h": 24579,
-"last_24h": 529634,
-"distinct_ideas": 25392141,
+"total": 28857161,
+"last_5m": 10035,
+"last_1h": 24432,
+"last_24h": 538349,
+"distinct_ideas": 25402012,
 "dsr_bar": 6.43,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 19086374,
+"n": 19087989,
 "pos_rate": 0.341,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -238,7 +238,7 @@
 },
 {
 "family": "liquid_range_break_hold",
-"n": 14621,
+"n": 14622,
 "pos_rate": 0.804,
 "best_pm": 1.02,
 "best_dsr": 0.0,
@@ -325,6 +325,15 @@
 "best_dsr": 0.151,
 "passed": 0,
 "since": "2026-09-29"
+},
+{
+"family": "horizon_demeaned_book",
+"n": 11815,
+"pos_rate": 0.805,
+"best_pm": 1.09,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-05"
 },
 {
 "family": "v_recovery_hold",
@@ -499,7 +508,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 9790,
+"n": 9794,
 "pos_rate": 0.899,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -795,15 +804,6 @@
 "since": "2026-10-01"
 },
 {
-"family": "horizon_demeaned_book",
-"n": 3629,
-"pos_rate": 0.796,
-"best_pm": 1.0,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-05"
-},
-{
 "family": "post_release_drift",
 "n": 3605,
 "pos_rate": 0.401,
@@ -1093,8 +1093,8 @@
 },
 {
 "family": "real_yield_trend",
-"n": 220,
-"pos_rate": 0.555,
+"n": 221,
+"pos_rate": 0.552,
 "best_pm": 0.49,
 "best_dsr": 0.0,
 "passed": 0,
@@ -1169,7 +1169,7 @@
 "pbo": 0.04
 }
 ],
-"best_pm_1h": 8.55,
+"best_pm_1h": 19.56,
 "heat": [
 {
 "family": "anchor_absorbed_hold",
@@ -1419,35 +1419,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 39475,
+"n": 39637,
 "best_pm": 1.92,
 "pos_rate": 0.654
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 67751,
+"n": 67687,
 "best_pm": 1.73,
 "pos_rate": 0.631
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 67151,
+"n": 67124,
 "best_pm": 17.06,
 "pos_rate": 0.369
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 39158,
+"n": 39327,
 "best_pm": 31.87,
 "pos_rate": 0.298
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 39570,
+"n": 39722,
 "best_pm": 5.37,
 "pos_rate": 0.589
 },
@@ -1475,7 +1475,7 @@
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 1722,
+"n": 1726,
 "best_pm": 0.65,
 "pos_rate": 0.895
 },
@@ -1524,37 +1524,37 @@
 {
 "family": "horizon_demeaned_book",
 "bar": "15m",
-"n": 748,
-"best_pm": 0.76,
-"pos_rate": 0.738
+"n": 1848,
+"best_pm": 0.83,
+"pos_rate": 0.77
 },
 {
 "family": "horizon_demeaned_book",
 "bar": "1h",
-"n": 852,
-"best_pm": 0.55,
-"pos_rate": 0.7
+"n": 3399,
+"best_pm": 0.71,
+"pos_rate": 0.706
 },
 {
 "family": "horizon_demeaned_book",
 "bar": "1m",
-"n": 859,
-"best_pm": 0.94,
-"pos_rate": 0.832
+"n": 3406,
+"best_pm": 1.09,
+"pos_rate": 0.858
 },
 {
 "family": "horizon_demeaned_book",
 "bar": "30s",
-"n": 457,
-"best_pm": 1.0,
+"n": 1313,
+"best_pm": 1.08,
 "pos_rate": 0.832
 },
 {
 "family": "horizon_demeaned_book",
 "bar": "5m",
-"n": 713,
-"best_pm": 0.93,
-"pos_rate": 0.906
+"n": 1980,
+"best_pm": 1.06,
+"pos_rate": 0.905
 },
 {
 "family": "liquid_range_break_hold",
@@ -1580,7 +1580,7 @@
 {
 "family": "liquid_range_break_hold",
 "bar": "30s",
-"n": 2901,
+"n": 2902,
 "best_pm": 1.02,
 "pos_rate": 0.948
 },
@@ -1734,9 +1734,9 @@
 {
 "family": "real_yield_trend",
 "bar": "1h",
-"n": 2,
+"n": 3,
 "best_pm": 0.1,
-"pos_rate": 0.5
+"pos_rate": 0.333
 },
 {
 "family": "rebalance_size",
@@ -2029,6 +2029,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-05T09:46",
+"name": null,
+"status": "rejected",
+"rationale": "Existing families already cover the exposure-matched break, so this adds a decorrelated two-sleeve book. A range-break sleeve is blended with a real-yield sleeve, each minus its own trailing mean exposure, so a constant long earns zero.\nRATIONALE: Payers are range-top sellers and",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-10-05T09:15",
 "name": "horizon_demeaned_book",
 "status": "accepted",
@@ -2104,38 +2111,9 @@
 "status": "accepted",
 "rationale": "Payer is range-top sellers and short-vol faders who cover into a clean break from compression. The earlier `*_hold` families all earn the long-gold beta on top of that timing.\nPosition is the compression-break state minus its own trailing average exposure, so a constant long earn",
 "note": "{\"name\": \"exposure_matched_break\", \"grid\": 64, \"sec_per_param\": 0.0, \"active_frac\": 0.072025}"
-},
-{
-"ts": "2026-10-05T03:38",
-"name": "participation_break_hold",
-"status": "accepted",
-"rationale": "Payer is the holders and shorts anchored at the top of an N-day range, who sell into the breakout. A breakout that comes with a day of above-normal participation means real allocators are buying, so supply at the range top is being absorbed rather than faded.\nRATIONALE: The posit",
-"note": "{\"name\": \"participation_break_hold\", \"grid\": 48, \"sec_per_param\": 0.001, \"active_frac\": 0.31335}"
 }
 ],
 "history": [
-{
-"t": 1791020464.9627368,
-"total": 27845369,
-"per_min": 507.0,
-"cpu": 6.2,
-"gpu": 0,
-"free_gb": 127.3,
-"dsr_bar": 6.46,
-"best_pm_1h": 1.8,
-"distinct": 24391564
-},
-{
-"t": 1791020801.633078,
-"total": 27848409,
-"per_min": 640.0,
-"cpu": 16.3,
-"gpu": 95,
-"free_gb": 142.9,
-"dsr_bar": 6.46,
-"best_pm_1h": 1.8,
-"distinct": 24394668
-},
 {
 "t": 1791021146.182027,
 "total": 27849753,
@@ -7712,6 +7690,17 @@
 "dsr_bar": 6.43,
 "best_pm_1h": 8.55,
 "distinct": 25392141
+},
+{
+"t": 1791193602.2053728,
+"total": 28857161,
+"per_min": 2007.0,
+"cpu": 74.6,
+"gpu": 55,
+"free_gb": 123.0,
+"dsr_bar": 6.43,
+"best_pm_1h": 19.56,
+"distinct": 25402012
 }
 ],
 "instrument": "XAUUSD",
