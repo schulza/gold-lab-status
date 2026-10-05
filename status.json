@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-05 15:51:12 UTC",
+"generated_at": "2026-10-05 15:56:49 UTC",
 "host": {
-"cpu_pct": 51.5,
-"gpu_pct": 89,
-"free_gb": 152.5,
-"uptime": "up 6 days, 37 mins, 2 users, load averages: 10.34 9.77 9.37",
-"load": "{ 10.34 9.77 9.37 }"
+"cpu_pct": 25.0,
+"gpu_pct": 90,
+"free_gb": 155.0,
+"uptime": "up 6 days, 42 mins, 2 users, load averages: 10.53 11.69 10.5",
+"load": "{ 10.53 11.69 10.57 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-05T17:32:50",
-"it": 145830,
+"ts": "2026-10-05T17:54:22",
+"it": 145850,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.43,
-"pbo": 0.46,
+"pbo": 0.25,
 "best_family": "gated",
-"best_pm": 0.24,
-"best_params": "{'base': 'smooth_drift_hold', 'base_params': {'days': 2.26, 'exit': 0.0397, 'thr': 0.8}, 'mode': 'tick_above', 'vol_window': 240, 'vol_pct': 0.5, 'vol_scale': 0",
+"best_pm": 0.5,
+"best_params": "{'base': 'forced_flat_reentry', 'base_params': {'hold': 77, 'k': 0.822, 'sign': 1, 'theta': 0.204, 'unw': 78}, 'mode': 'tick_above', 'vol_window': 697, 'vol_pct",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-05T17:51:03",
-"it": 118840,
-"bar": "15m",
+"ts": "2026-10-05T17:54:01",
+"it": 119000,
+"bar": "30s",
 "batch": 8,
 "passed": 0,
 "bench": 6.43,
-"pbo": 0.96,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 0.38,
-"best_params": "{'base': 'round_the_clock_order', 'base_params': {'days': 7, 'hold': 2, 'k': 0.19, 'need': 1, 'sign': 1}, 'mode': 'spread_below', 'vol_window': 34, 'vol_pct': 0",
+"best_pm": 0.91,
+"best_params": "{'base': 'liquid_range_break_hold', 'base_params': {'days': 8, 'exit': 1, 'sdays': 9, 'sp': 1.02}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 50}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 28994157,
-"last_5m": 216,
-"last_1h": 27170,
-"last_24h": 561489,
-"distinct_ideas": 25538861,
+"total": 28995823,
+"last_5m": 1402,
+"last_1h": 27395,
+"last_24h": 556164,
+"distinct_ideas": 25540463,
 "dsr_bar": 6.43,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 19155150,
+"n": 19156814,
 "pos_rate": 0.341,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -517,7 +517,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 9947,
+"n": 9949,
 "pos_rate": 0.899,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1490,72 +1490,72 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 38659,
+"n": 38955,
 "best_pm": 1.7,
-"pos_rate": 0.663
+"pos_rate": 0.664
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 65936,
-"best_pm": 1.71,
+"n": 65201,
+"best_pm": 1.69,
 "pos_rate": 0.642
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 65502,
+"n": 64775,
 "best_pm": 17.06,
-"pos_rate": 0.375
+"pos_rate": 0.376
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 38571,
+"n": 38894,
 "best_pm": 31.87,
 "pos_rate": 0.3
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 38808,
+"n": 39114,
 "best_pm": 5.37,
-"pos_rate": 0.597
+"pos_rate": 0.598
 },
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 1129,
-"best_pm": 0.72,
-"pos_rate": 0.928
+"n": 370,
+"best_pm": 0.7,
+"pos_rate": 0.922
 },
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 1755,
-"best_pm": 0.71,
-"pos_rate": 0.912
+"n": 297,
+"best_pm": 0.67,
+"pos_rate": 0.892
 },
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 1741,
-"best_pm": 0.67,
-"pos_rate": 0.907
+"n": 351,
+"best_pm": 0.64,
+"pos_rate": 0.906
 },
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 905,
+"n": 481,
 "best_pm": 0.64,
 "pos_rate": 0.929
 },
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 1185,
-"best_pm": 0.7,
-"pos_rate": 0.932
+"n": 433,
+"best_pm": 0.69,
+"pos_rate": 0.931
 },
 {
 "family": "horizon_agreement_hold",
@@ -1784,16 +1784,16 @@
 {
 "family": "range_expansion_hold",
 "bar": "1m",
-"n": 73,
+"n": 69,
 "best_pm": 0.72,
-"pos_rate": 0.89
+"pos_rate": 0.884
 },
 {
 "family": "range_expansion_hold",
 "bar": "30s",
-"n": 116,
+"n": 115,
 "best_pm": 0.74,
-"pos_rate": 0.914
+"pos_rate": 0.913
 },
 {
 "family": "range_expansion_hold",
@@ -2135,6 +2135,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-05T15:54",
+"name": "nested_contraction_break_matched",
+"status": "accepted",
+"rationale": "The payer is range-top sellers and short-vol faders. They sold a box that had been shrinking (this week's range is a fraction of the prior week's), and they are forced to cover when it breaks. Range-bottom buyers are forced out on the downside break. The sleeve is two-sided and h",
+"note": "{\"name\": \"nested_contraction_break_matched\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.11626875}"
+},
+{
 "ts": "2026-10-05T15:23",
 "name": "range_ratio_break_demeaned",
 "status": "rejected",
@@ -2210,27 +2217,9 @@
 "status": "rejected",
 "rationale": "Payer is range-top sellers who sold at the old high and put stops at that level, plus short-vol faders who must cover once price holds above it. The position is long only while price stays above the broken level minus k\u00b7ATR, minus its own trailing exposure, so a constant long ear",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-05T09:46",
-"name": null,
-"status": "rejected",
-"rationale": "Existing families already cover the exposure-matched break, so this adds a decorrelated two-sleeve book. A range-break sleeve is blended with a real-yield sleeve, each minus its own trailing mean exposure, so a constant long earns zero.\nRATIONALE: Payers are range-top sellers and",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1791042906.1172512,
-"total": 28011386,
-"per_min": 608.0,
-"cpu": 24.5,
-"gpu": 96,
-"free_gb": 137.4,
-"dsr_bar": 6.46,
-"best_pm_1h": 1.85,
-"distinct": 24557749
-},
 {
 "t": 1791043248.220416,
 "total": 28012650,
@@ -7796,6 +7785,17 @@
 "dsr_bar": 6.43,
 "best_pm_1h": 17.11,
 "distinct": 25538861
+},
+{
+"t": 1791215809.77363,
+"total": 28995823,
+"per_min": 280.0,
+"cpu": 25.0,
+"gpu": 90,
+"free_gb": 155.0,
+"dsr_bar": 6.43,
+"best_pm_1h": 17.11,
+"distinct": 25540463
 }
 ],
 "instrument": "XAUUSD",
