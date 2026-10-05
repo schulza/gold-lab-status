@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-05 12:48:49 UTC",
+"generated_at": "2026-10-05 12:54:23 UTC",
 "host": {
-"cpu_pct": 21.2,
-"gpu_pct": 93,
-"free_gb": 137.1,
-"uptime": "up 5 days, 21:34, 2 users, load averages: 9.05 10.03 9.99",
-"load": "{ 9.05 10.03 9.99 }"
+"cpu_pct": 26.9,
+"gpu_pct": 75,
+"free_gb": 188.5,
+"uptime": "up 5 days, 21:40, 2 users, load averages: 9.92 10.12 10.06",
+"load": "{ 9.92 10.12 10.06 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-05T14:42:21",
-"it": 144000,
+"ts": "2026-10-05T14:50:01",
+"it": 144010,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.43,
-"pbo": 0.04,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 1.08,
-"best_params": "{'base': 'compression_break_hold', 'base_params': {'c': 0.438, 'days': 5, 'ex': 0.725, 'lm': 12}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 100}",
+"best_pm": 0.73,
+"best_params": "{'base': 'vwap_dwell_hold', 'base_params': {'days': 4.56, 'exit': 0.349, 'thr': 0.635, 'vwin_h': 16}, 'mode': 'htf_against', 'htf': '1h', 'sma_n': 148}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-05T14:44:47",
-"it": 117200,
-"bar": "15m",
+"ts": "2026-10-05T14:52:30",
+"it": 117210,
+"bar": "30s",
 "batch": 8,
 "passed": 0,
 "bench": 6.43,
-"pbo": 0.25,
+"pbo": 0.07,
 "best_family": "gated",
-"best_pm": 0.56,
-"best_params": "{'base': 'breakeven_retest', 'base_params': {'ext': 8.63, 'hold': 29, 'lookback': 39, 'sign': -1}, 'mode': 'spread_below', 'vol_window': 181, 'vol_pct': 0.145}",
+"best_pm": 0.73,
+"best_params": "{'base': 'shfe_reopen_catchup', 'base_params': {'entry': 73, 'hold': 131, 'k': 2.24, 'sess': 'night', 'sign': 1}, 'mode': 'htf_against', 'htf': '1h', 'sma_n': 2",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 28916275,
-"last_5m": 649,
-"last_1h": 14480,
-"last_24h": 546033,
-"distinct_ideas": 25461061,
+"total": 28916419,
+"last_5m": 144,
+"last_1h": 13245,
+"last_24h": 545081,
+"distinct_ideas": 25461205,
 "dsr_bar": 6.43,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 19125660,
+"n": 19125804,
 "pos_rate": 0.341,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -1428,35 +1428,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 37431,
+"n": 37087,
 "best_pm": 1.52,
 "pos_rate": 0.66
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 64075,
+"n": 64107,
 "best_pm": 1.71,
 "pos_rate": 0.639
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 63529,
+"n": 63569,
 "best_pm": 17.06,
 "pos_rate": 0.374
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 37285,
+"n": 36941,
 "best_pm": 31.87,
-"pos_rate": 0.3
+"pos_rate": 0.299
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 37551,
+"n": 37215,
 "best_pm": 5.37,
 "pos_rate": 0.593
 },
@@ -2073,6 +2073,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-05T12:49",
+"name": "compression_break_demeaned",
+"status": "accepted",
+"rationale": "Payer is range-top sellers and short-vol faders who must cover when a tight box breaks, plus range-bottom buyers forced out on a downside break. The sleeve is two-sided (long on an upside break, short on a downside break) and its own trailing mean exposure is subtracted, so a con",
+"note": "{\"name\": \"compression_break_demeaned\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.11626875}"
+},
+{
 "ts": "2026-10-05T12:19",
 "name": "squeeze_release_demeaned",
 "status": "rejected",
@@ -2148,27 +2155,9 @@
 "status": "rejected",
 "rationale": "The payer is range-edge sellers and short-vol faders who get squeezed when a break follows compression. Longs are paid on upside breaks and shorts on downside breaks. They are held until price returns to the mid-range average.\nThe book is symmetric (long minus short), and mode 1 ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-05T06:41",
-"name": null,
-"status": "rejected",
-"rationale": "Direction item 2, as one self-contained family. A real-yield sleeve and a range-break sleeve are each demeaned by their own trailing exposure, then blended, so constant long exposure earns zero.\nPayer: range-top sellers and short-vol faders forced to cover on breaks, and gold hol",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1791031837.9408169,
-"total": 27928579,
-"per_min": 355.0,
-"cpu": 6.7,
-"gpu": 0,
-"free_gb": 138.8,
-"dsr_bar": 6.46,
-"best_pm_1h": 1.66,
-"distinct": 24474774
-},
 {
 "t": 1791032165.880255,
 "total": 27931779,
@@ -7745,6 +7734,17 @@
 "dsr_bar": 6.43,
 "best_pm_1h": 16.97,
 "distinct": 25461061
+},
+{
+"t": 1791204863.350986,
+"total": 28916419,
+"per_min": 29.0,
+"cpu": 26.9,
+"gpu": 75,
+"free_gb": 188.5,
+"dsr_bar": 6.43,
+"best_pm_1h": 16.97,
+"distinct": 25461205
 }
 ],
 "instrument": "XAUUSD",
