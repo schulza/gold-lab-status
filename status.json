@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-10-05 07:12:33 UTC",
+"generated_at": "2026-10-05 07:18:08 UTC",
 "host": {
-"cpu_pct": 42.2,
-"gpu_pct": 97,
-"free_gb": 123.2,
-"uptime": "up 5 days, 15:58, 2 users, load averages: 7.91 9.77 10.34",
-"load": "{ 7.91 9.77 10.34 }"
+"cpu_pct": 24.9,
+"gpu_pct": 83,
+"free_gb": 131.7,
+"uptime": "up 5 days, 16:04, 2 users, load averages: 10.04 10.25 10.41",
+"load": "{ 10.04 10.25 10.41 }"
 },
 "instances": [
 {
@@ -49,9 +49,9 @@
 ],
 "registry": {
 "total": 28798383,
-"last_5m": 2413,
-"last_1h": 19910,
-"last_24h": 523028,
+"last_5m": 0,
+"last_1h": 15827,
+"last_24h": 520948,
 "distinct_ideas": 25343170,
 "dsr_bar": 6.44,
 "sharpe_std": 1.18,
@@ -1392,35 +1392,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 42473,
+"n": 41945,
 "best_pm": 1.92,
 "pos_rate": 0.65
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 71922,
+"n": 71682,
 "best_pm": 1.73,
 "pos_rate": 0.628
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 71386,
+"n": 71146,
 "best_pm": 17.06,
 "pos_rate": 0.365
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 42195,
+"n": 41659,
 "best_pm": 27.91,
 "pos_rate": 0.299
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 42592,
+"n": 42056,
 "best_pm": 5.37,
 "pos_rate": 0.583
 },
@@ -1904,6 +1904,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-05T07:12",
+"name": "two_sided_compression_break",
+"status": "rejected",
+"rationale": "The payer is range-edge sellers and short-vol faders who get squeezed when a break follows compression. Longs are paid on upside breaks and shorts on downside breaks. They are held until price returns to the mid-range average.\nThe book is symmetric (long minus short), and mode 1 ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-10-05T06:41",
 "name": null,
 "status": "rejected",
@@ -1979,27 +1986,9 @@
 "status": "accepted",
 "rationale": "Payer is slow allocators and anchored holders who sell into strength and re-enter late. A fresh multi-day high is entered only once, and the position is held until price gives back k ATR from the recent peak. It is a position state with a trailing-stop exit rather than a fixed-ho",
 "note": "{\"name\": \"trailing_peak_hold\", \"grid\": 64, \"sec_per_param\": 0.0, \"active_frac\": 0.0079875}"
-},
-{
-"ts": "2026-10-05T01:05",
-"name": "v_recovery_hold",
-"status": "accepted",
-"rationale": "The payer is the stop-loss and capitulation sellers at a V-bottom, plus allocators who wait for confirmation. After a deep, vol-normalised drop, price recovers a large fraction of the leg from its recent low. Those sellers are then underwater and under-hedged, and the slow money ",
-"note": "{\"name\": \"v_recovery_hold\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.250125}"
 }
 ],
 "history": [
-{
-"t": 1791011752.6853492,
-"total": 27781040,
-"per_min": 518.0,
-"cpu": 7.8,
-"gpu": 0,
-"free_gb": 153.3,
-"dsr_bar": 6.46,
-"best_pm_1h": 18.14,
-"distinct": 24327315
-},
 {
 "t": 1791012085.402978,
 "total": 27783224,
@@ -7584,6 +7573,17 @@
 "cpu": 42.2,
 "gpu": 97,
 "free_gb": 123.2,
+"dsr_bar": 6.44,
+"best_pm_1h": 14.35,
+"distinct": 25343170
+},
+{
+"t": 1791184688.609869,
+"total": 28798383,
+"per_min": 0.0,
+"cpu": 24.9,
+"gpu": 83,
+"free_gb": 131.7,
 "dsr_bar": 6.44,
 "best_pm_1h": 14.35,
 "distinct": 25343170
