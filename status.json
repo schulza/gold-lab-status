@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-05 06:38:35 UTC",
+"generated_at": "2026-10-05 06:44:03 UTC",
 "host": {
-"cpu_pct": 26.5,
-"gpu_pct": 6,
-"free_gb": 135.2,
-"uptime": "up 5 days, 15:24, 2 users, load averages: 10.60 11.11 11.53",
-"load": "{ 10.60 11.11 11.53 }"
+"cpu_pct": 7.7,
+"gpu_pct": 0,
+"free_gb": 114.6,
+"uptime": "up 5 days, 15:30, 2 users, load averages: 12.69 11.70 11.61",
+"load": "{ 12.69 11.70 11.61 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-05T08:36:09",
-"it": 139200,
+"ts": "2026-10-05T08:43:37",
+"it": 139238,
 "bar": "1m",
-"batch": 8,
+"batch": 9,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.29,
+"pbo": 0.5,
 "best_family": "gated",
-"best_pm": 0.19,
-"best_params": "{'base': 'intermediation_rent', 'base_params': {'d': 8, 'hold': 2, 'k': 0.469, 'mode': 'rent', 'sign': -1, 'theta': 0.9}, 'mode': 'htf_with', 'htf': '4h', 'sma_",
-"mix": "gat8",
-"queue_s": 7.0
+"best_pm": 0.41,
+"best_params": "{'base': 'heavy_day_concession', 'base_params': {'base': 8, 'hold': 3, 'k': 1.2, 'sign': 1, 'theta': 1.15}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 157}",
+"mix": "gat8/liq1",
+"queue_s": 8.0
 },
 "events": []
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-05T08:31:42",
-"it": 113000,
+"ts": "2026-10-05T08:43:39",
+"it": 113189,
 "bar": "30s",
 "batch": 8,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.07,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 1.1,
-"best_params": "{'base': 'vol_target_rebalance', 'base_params': {'f': 6, 'hold': 8, 'k': 1.61, 'side': 'relever', 'sign': 1}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 30}",
+"best_pm": 0.43,
+"best_params": "{'base': 'accumulator_knockout_flow', 'base_params': {'hold': 9, 'k': 0.352, 'q': 3, 'side': 'up', 'sign': 1, 'tenor': 104}, 'mode': 'vol_below', 'vol_window': ",
 "mix": "gat8",
-"queue_s": 7.0
+"queue_s": 8.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 28788720,
-"last_5m": 1609,
-"last_1h": 25473,
-"last_24h": 522485,
-"distinct_ideas": 25333507,
+"total": 28790530,
+"last_5m": 1810,
+"last_1h": 26829,
+"last_24h": 522055,
+"distinct_ideas": 25335317,
 "dsr_bar": 6.44,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 19051877,
+"n": 19053677,
 "pos_rate": 0.34,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -238,7 +238,7 @@
 },
 {
 "family": "liquid_range_break_hold",
-"n": 14599,
+"n": 14601,
 "pos_rate": 0.804,
 "best_pm": 1.02,
 "best_dsr": 0.0,
@@ -454,7 +454,7 @@
 },
 {
 "family": "range_expansion_hold",
-"n": 10338,
+"n": 10339,
 "pos_rate": 0.956,
 "best_pm": 1.06,
 "best_dsr": 0.0,
@@ -490,7 +490,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 9664,
+"n": 9671,
 "pos_rate": 0.899,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1392,35 +1392,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 42473,
+"n": 42449,
 "best_pm": 1.92,
-"pos_rate": 0.649
+"pos_rate": 0.65
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 71682,
+"n": 71506,
 "best_pm": 1.73,
 "pos_rate": 0.628
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 71146,
+"n": 70978,
 "best_pm": 17.06,
 "pos_rate": 0.364
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 42195,
+"n": 42163,
 "best_pm": 27.91,
 "pos_rate": 0.299
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 42592,
+"n": 42552,
 "best_pm": 5.37,
 "pos_rate": 0.582
 },
@@ -1441,21 +1441,21 @@
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 1953,
+"n": 1956,
 "best_pm": 0.67,
 "pos_rate": 0.894
 },
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 1685,
+"n": 1686,
 "best_pm": 0.65,
 "pos_rate": 0.894
 },
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 2005,
+"n": 2008,
 "best_pm": 0.7,
 "pos_rate": 0.906
 },
@@ -1511,14 +1511,14 @@
 {
 "family": "liquid_range_break_hold",
 "bar": "1m",
-"n": 2914,
+"n": 2915,
 "best_pm": 0.97,
-"pos_rate": 0.862
+"pos_rate": 0.861
 },
 {
 "family": "liquid_range_break_hold",
 "bar": "30s",
-"n": 2890,
+"n": 2891,
 "best_pm": 1.02,
 "pos_rate": 0.949
 },
@@ -1665,7 +1665,7 @@
 {
 "family": "range_expansion_hold",
 "bar": "30s",
-"n": 1960,
+"n": 1961,
 "best_pm": 0.96,
 "pos_rate": 0.948
 },
@@ -1904,6 +1904,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-05T06:41",
+"name": null,
+"status": "rejected",
+"rationale": "Direction item 2, as one self-contained family. A real-yield sleeve and a range-break sleeve are each demeaned by their own trailing exposure, then blended, so constant long exposure earns zero.\nPayer: range-top sellers and short-vol faders forced to cover on breaks, and gold hol",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-10-05T06:11",
 "name": "break_compress_demeaned",
 "status": "rejected",
@@ -1979,27 +1986,9 @@
 "status": "accepted",
 "rationale": "The payer is the stop-loss and capitulation sellers at a V-bottom, plus allocators who wait for confirmation. After a deep, vol-normalised drop, price recovers a large fraction of the leg from its recent low. Those sellers are then underwater and under-hedged, and the slow money ",
 "note": "{\"name\": \"v_recovery_hold\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.250125}"
-},
-{
-"ts": "2026-10-05T00:34",
-"name": "close_pressure_hold",
-"status": "rejected",
-"rationale": "The payer is slow allocators and stop-sellers who unload into strength. A range-weighted close-location average over days shows that bars keep closing near their highs, so supply is being absorbed at each bar's end rather than priced in at once.\nRATIONALE: The signal is where bar",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1791009736.7937422,
-"total": 27765530,
-"per_min": 416.0,
-"cpu": 14.3,
-"gpu": 82,
-"free_gb": 157.6,
-"dsr_bar": 6.46,
-"best_pm_1h": 9.79,
-"distinct": 24311773
-},
 {
 "t": 1791010063.258351,
 "total": 27768554,
@@ -7587,6 +7576,17 @@
 "dsr_bar": 6.44,
 "best_pm_1h": 14.35,
 "distinct": 25333507
+},
+{
+"t": 1791182643.095315,
+"total": 28790530,
+"per_min": 362.0,
+"cpu": 7.7,
+"gpu": 0,
+"free_gb": 114.6,
+"dsr_bar": 6.44,
+"best_pm_1h": 14.35,
+"distinct": 25335317
 }
 ],
 "instrument": "XAUUSD",
