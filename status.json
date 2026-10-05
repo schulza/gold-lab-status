@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-05 04:05:49 UTC",
+"generated_at": "2026-10-05 04:11:22 UTC",
 "host": {
-"cpu_pct": 37.2,
-"gpu_pct": 96,
-"free_gb": 120.0,
-"uptime": "up 5 days, 12:51, 2 users, load averages: 7.95 10.65 11.15",
-"load": "{ 7.95 10.65 11.15 }"
+"cpu_pct": 27.4,
+"gpu_pct": 91,
+"free_gb": 150.7,
+"uptime": "up 5 days, 12:57, 2 users, load averages: 8.87 8.46 9.77",
+"load": "{ 8.87 8.46 9.77 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-05T06:05:30",
-"it": 137316,
+"ts": "2026-10-05T06:08:36",
+"it": 137360,
 "bar": "1m",
-"batch": 9,
+"batch": 8,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.61,
-"best_family": "higher_low_staircase",
-"best_pm": 0.21,
-"best_params": "{'days': 6, 'm': 5, 'k': 0.000251, 'exit': 0}",
-"mix": "gat8/hig1",
-"queue_s": 7.0
+"pbo": 0.46,
+"best_family": "gated",
+"best_pm": 0.77,
+"best_params": "{'base': 'thin_day_impact_refund', 'base_params': {'base': 4, 'hold': 1, 'k': 1.01, 'sign': 1, 'theta': 0.873}, 'mode': 'tick_above', 'vol_window': 89, 'vol_pct",
+"mix": "gat8",
+"queue_s": 8.0
 },
 "events": []
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-05T06:05:30",
-"it": 111574,
-"bar": "30s",
+"ts": "2026-10-05T06:08:25",
+"it": 111600,
+"bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.11,
+"pbo": 0.29,
 "best_family": "gated",
-"best_pm": 0.62,
-"best_params": "{'base': 'stepped_bid_accumulation', 'base_params': {'hold': 1, 'k': 0.263, 'n': 10, 'rho': 0.122, 'sign': 1}, 'mode': 'tick_above', 'vol_window': 319, 'vol_pct",
+"best_pm": 0.58,
+"best_params": "{'base': 'frame_consensus_catchup', 'base_params': {'exit': 'flip', 'frames': 'wm', 'k': 1.24, 'lead': 3, 'sign': 1}, 'mode': 'vol_above', 'vol_window': 60, 'vo",
 "mix": "gat8",
-"queue_s": 8.0
+"queue_s": 7.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 28731464,
-"last_5m": 6664,
-"last_1h": 29277,
-"last_24h": 506815,
-"distinct_ideas": 25276367,
+"total": 28732149,
+"last_5m": 572,
+"last_1h": 20967,
+"last_24h": 504547,
+"distinct_ideas": 25276939,
 "dsr_bar": 6.44,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 19023875,
+"n": 19024547,
 "pos_rate": 0.34,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -472,8 +472,8 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 9571,
-"pos_rate": 0.899,
+"n": 9576,
+"pos_rate": 0.898,
 "best_pm": 0.72,
 "best_dsr": 0.0,
 "passed": 0,
@@ -1304,35 +1304,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 44971,
+"n": 44587,
 "best_pm": 1.92,
 "pos_rate": 0.646
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 74790,
+"n": 74230,
 "best_pm": 1.88,
 "pos_rate": 0.625
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 74345,
+"n": 73785,
 "best_pm": 17.06,
 "pos_rate": 0.363
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 44510,
+"n": 44126,
 "best_pm": 27.91,
 "pos_rate": 0.296
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 45046,
+"n": 44662,
 "best_pm": 5.37,
 "pos_rate": 0.579
 },
@@ -1346,14 +1346,14 @@
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 2049,
+"n": 2052,
 "best_pm": 0.71,
 "pos_rate": 0.896
 },
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 1925,
+"n": 1926,
 "best_pm": 0.67,
 "pos_rate": 0.894
 },
@@ -1816,6 +1816,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-05T04:08",
+"name": "exposure_matched_break",
+"status": "accepted",
+"rationale": "Payer is range-top sellers and short-vol faders who cover into a clean break from compression. The earlier `*_hold` families all earn the long-gold beta on top of that timing.\nPosition is the compression-break state minus its own trailing average exposure, so a constant long earn",
+"note": "{\"name\": \"exposure_matched_break\", \"grid\": 64, \"sec_per_param\": 0.0, \"active_frac\": 0.072025}"
+},
+{
 "ts": "2026-10-05T03:38",
 "name": "participation_break_hold",
 "status": "accepted",
@@ -1891,27 +1898,9 @@
 "status": "rejected",
 "rationale": "The payer is profit-takers and dip-fading shorts in an uptrend. A pullback on thin activity (ticks below baseline) means nobody is selling into it, and the slow allocators who underreact to the trend haven't re-added yet. A close above the recent high after that quiet stretch squ",
 "note": "ast: name not allowed: getattr"
-},
-{
-"ts": "2026-10-04T22:01",
-"name": "basis_migration_hold",
-"status": "accepted",
-"rationale": "The payer is disposition-effect holders and slow allocators who sell at breakeven when price returns to their cost basis. A rising volume-weighted cost basis (VWAP) shows that the average holder is in profit and that new buyers are paying up. The signal is long-only and holds for",
-"note": "{\"name\": \"basis_migration_hold\", \"grid\": 80, \"sec_per_param\": 0.0, \"active_frac\": 0.3473375}"
 }
 ],
 "history": [
-{
-"t": 1791000677.693325,
-"total": 27696634,
-"per_min": 507.0,
-"cpu": 18.2,
-"gpu": 90,
-"free_gb": 141.1,
-"dsr_bar": 6.47,
-"best_pm_1h": 15.08,
-"distinct": 24242893
-},
 {
 "t": 1791001012.252949,
 "total": 27699514,
@@ -7499,6 +7488,17 @@
 "dsr_bar": 6.44,
 "best_pm_1h": 14.39,
 "distinct": 25276367
+},
+{
+"t": 1791173482.620876,
+"total": 28732149,
+"per_min": 114.0,
+"cpu": 27.4,
+"gpu": 91,
+"free_gb": 150.7,
+"dsr_bar": 6.44,
+"best_pm_1h": 14.39,
+"distinct": 25276939
 }
 ],
 "instrument": "XAUUSD",
