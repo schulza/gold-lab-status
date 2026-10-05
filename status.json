@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-05 06:10:16 UTC",
+"generated_at": "2026-10-05 06:16:10 UTC",
 "host": {
-"cpu_pct": 30.2,
-"gpu_pct": 94,
-"free_gb": 143.2,
-"uptime": "up 5 days, 14:56, 2 users, load averages: 12.91 14.31 12.59",
-"load": "{ 12.91 14.31 12.59 }"
+"cpu_pct": 42.4,
+"gpu_pct": 98,
+"free_gb": 146.2,
+"uptime": "up 5 days, 15:01, 2 users, load averages: 14.64 13.50 12.71",
+"load": "{ 14.64 13.50 12.71 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-05T08:03:11",
-"it": 138600,
+"ts": "2026-10-05T08:15:53",
+"it": 138800,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.57,
+"pbo": 0.29,
 "best_family": "gated",
-"best_pm": 0.19,
-"best_params": "{'base': 'accumulator_knockout_flow', 'base_params': {'hold': 9, 'k': 0.277, 'q': 1, 'side': 'up', 'sign': 1, 'tenor': 192}, 'mode': 'tick_above', 'vol_window':",
+"best_pm": 0.91,
+"best_params": "{'base': 'treasury_auction_concession', 'base_params': {'dom': 'mid', 'hold': 172, 'k': 1.09, 'pre': 166, 'sign': -1}, 'mode': 'htf_with', 'htf': '1h', 'sma_n':",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-05T08:08:35",
-"it": 112600,
-"bar": "15m",
-"batch": 8,
+"ts": "2026-10-05T08:15:59",
+"it": 112610,
+"bar": "30s",
+"batch": 156,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.04,
-"best_family": "gated",
-"best_pm": 0.99,
-"best_params": "{'base': 'retrace_speed_squeeze', 'base_params': {'hold': 32, 'k': 0.487, 'lookback': 26, 'sign': 1, 'speed': 1.64, 'theta': 0.843}, 'mode': 'htf_against', 'htf",
-"mix": "gat8",
-"queue_s": 8.0
+"pbo": 0.07,
+"best_family": "demeaned_break_book",
+"best_pm": 1.22,
+"best_params": "{'c': 0.248, 'days': 8, 'ex': 0.8, 'lm': 12, 'mdays': 15, 'mode': 'both'}",
+"mix": "dem131/gat25",
+"queue_s": 87.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 28776245,
-"last_5m": 6130,
-"last_1h": 19053,
-"last_24h": 518010,
-"distinct_ideas": 25321032,
+"total": 28781372,
+"last_5m": 5367,
+"last_1h": 24528,
+"last_24h": 521933,
+"distinct_ideas": 25326231,
 "dsr_bar": 6.44,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 19043504,
+"n": 19045206,
 "pos_rate": 0.34,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -238,7 +238,7 @@
 },
 {
 "family": "liquid_range_break_hold",
-"n": 14594,
+"n": 14595,
 "pos_rate": 0.804,
 "best_pm": 1.02,
 "best_dsr": 0.0,
@@ -271,6 +271,15 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-02"
+},
+{
+"family": "demeaned_break_book",
+"n": 12646,
+"pos_rate": 0.526,
+"best_pm": 1.17,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-05"
 },
 {
 "family": "pullback_resume_hold",
@@ -487,15 +496,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-04"
-},
-{
-"family": "demeaned_break_book",
-"n": 9222,
-"pos_rate": 0.535,
-"best_pm": 1.17,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-05"
 },
 {
 "family": "broad_flow_drift",
@@ -1329,23 +1329,23 @@
 {
 "family": "demeaned_break_book",
 "bar": "1h",
-"n": 899,
-"best_pm": 0.59,
-"pos_rate": 0.405
+"n": 2611,
+"best_pm": 0.97,
+"pos_rate": 0.431
 },
 {
 "family": "demeaned_break_book",
 "bar": "1m",
-"n": 901,
-"best_pm": 0.92,
-"pos_rate": 0.522
+"n": 2613,
+"best_pm": 1.16,
+"pos_rate": 0.545
 },
 {
 "family": "demeaned_break_book",
 "bar": "30s",
-"n": 2474,
-"best_pm": 1.17,
-"pos_rate": 0.569
+"n": 2605,
+"best_pm": 1.22,
+"pos_rate": 0.578
 },
 {
 "family": "demeaned_break_book",
@@ -1392,35 +1392,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 42449,
+"n": 42465,
 "best_pm": 1.92,
 "pos_rate": 0.648
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 71518,
+"n": 71682,
 "best_pm": 1.73,
 "pos_rate": 0.628
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 71024,
+"n": 71146,
 "best_pm": 17.06,
 "pos_rate": 0.364
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 42172,
+"n": 42212,
 "best_pm": 27.91,
 "pos_rate": 0.299
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 42552,
+"n": 42576,
 "best_pm": 5.37,
 "pos_rate": 0.581
 },
@@ -1511,7 +1511,7 @@
 {
 "family": "liquid_range_break_hold",
 "bar": "1m",
-"n": 2911,
+"n": 2912,
 "best_pm": 0.97,
 "pos_rate": 0.862
 },
@@ -1651,7 +1651,7 @@
 {
 "family": "range_expansion_hold",
 "bar": "1h",
-"n": 2120,
+"n": 2121,
 "best_pm": 1.06,
 "pos_rate": 0.934
 },
@@ -1904,6 +1904,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-05T06:11",
+"name": "break_compress_demeaned",
+"status": "rejected",
+"rationale": "This is the director's family 1 with a different construction from `exposure_matched_break`. It averages two break sleeves, any range break and a break out of compression, then subtracts the position's own trailing mean exposure, so an always-long book scores zero.\nRATIONALE: The",
+"note": "sandbox: AssertionError: zu speicherhungrig: 57 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-10-05T05:40",
 "name": "demeaned_break_book",
 "status": "accepted",
@@ -1979,27 +1986,9 @@
 "status": "rejected",
 "rationale": "The payer is slow allocators and stop-sellers who unload into strength. A range-weighted close-location average over days shows that bars keep closing near their highs, so supply is being absorbed at each bar's end rather than priced in at once.\nRATIONALE: The signal is where bar",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-05T00:03",
-"name": "cost_basis_pull_hold",
-"status": "rejected",
-"rationale": "The payer is disposition sellers. Holders sitting on gains sell into strength before price has moved far from their cost basis, so price keeps drifting up, but only once heavy turnover has transferred their inventory.\nRATIONALE: The signal is a long-only graded entry on the dista",
-"note": "sandbox: AssertionError: zu speicherhungrig: 41 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1791008060.213575,
-"total": 27753263,
-"per_min": 527.0,
-"cpu": 22.6,
-"gpu": 94,
-"free_gb": 147.0,
-"dsr_bar": 6.46,
-"best_pm_1h": 17.7,
-"distinct": 24299683
-},
 {
 "t": 1791008394.9021251,
 "total": 27755049,
@@ -7587,6 +7576,17 @@
 "dsr_bar": 6.44,
 "best_pm_1h": 1.58,
 "distinct": 25321032
+},
+{
+"t": 1791180970.01548,
+"total": 28781372,
+"per_min": 1073.0,
+"cpu": 42.4,
+"gpu": 98,
+"free_gb": 146.2,
+"dsr_bar": 6.44,
+"best_pm_1h": 1.58,
+"distinct": 25326231
 }
 ],
 "instrument": "XAUUSD",
