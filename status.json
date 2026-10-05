@@ -1,28 +1,28 @@
 {
-"generated_at": "2026-10-05 10:15:24 UTC",
+"generated_at": "2026-10-05 10:21:17 UTC",
 "host": {
-"cpu_pct": 28.3,
-"gpu_pct": 92,
-"free_gb": 136.5,
-"uptime": "up 5 days, 19:01, 2 users, load averages: 10.69 11.16 11.56",
-"load": "{ 10.69 11.16 11.56 }"
+"cpu_pct": 39.7,
+"gpu_pct": 94,
+"free_gb": 135.8,
+"uptime": "up 5 days, 19:07, 2 users, load averages: 12.30 11.18 11.37",
+"load": "{ 12.30 11.18 11.37 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-05T12:10:14",
-"it": 141800,
+"ts": "2026-10-05T12:20:33",
+"it": 142000,
 "bar": "1m",
-"batch": 9,
+"batch": 8,
 "passed": 0,
 "bench": 6.43,
-"pbo": 0.46,
-"best_family": "higher_low_staircase",
-"best_pm": 0.5,
-"best_params": "{'days': 8, 'm': 4, 'k': 0.00202, 'exit': 0}",
-"mix": "gat8/hig1",
+"pbo": 0.14,
+"best_family": "gated",
+"best_pm": 5.94,
+"best_params": "{'base': 'broad_flow_drift', 'base_params': {'base': 10, 'd': 3, 'exit': 0.0339, 'k': 0.961, 'theta': 1.54}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 100}",
+"mix": "gat8",
 "queue_s": 8.0
 },
 "events": []
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-05T12:13:34",
-"it": 115400,
-"bar": "30s",
+"ts": "2026-10-05T12:21:15",
+"it": 115420,
+"bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.43,
-"pbo": 0.21,
+"pbo": 0.54,
 "best_family": "gated",
-"best_pm": 0.61,
-"best_params": "{'base': 'higher_low_staircase', 'base_params': {'days': 2, 'exit': 1, 'k': 0.00451, 'm': 5}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 100}",
+"best_pm": 0.79,
+"best_params": "{'base': 'calendar_rebalance_flow', 'base_params': {'k': 0.00818, 'period': 'month', 'phase': 'pre', 'sign': -1, 'span': 2}, 'mode': 'vol_above', 'vol_window': ",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 28867969,
-"last_5m": 1732,
-"last_1h": 25332,
-"last_24h": 541175,
-"distinct_ideas": 25412756,
+"total": 28869499,
+"last_5m": 1650,
+"last_1h": 26885,
+"last_24h": 541041,
+"distinct_ideas": 25414366,
 "dsr_bar": 6.43,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 19093333,
+"n": 19094853,
 "pos_rate": 0.341,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -472,7 +472,7 @@
 },
 {
 "family": "range_expansion_hold",
-"n": 10377,
+"n": 10378,
 "pos_rate": 0.956,
 "best_pm": 1.06,
 "best_dsr": 0.0,
@@ -499,7 +499,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 9798,
+"n": 9807,
 "pos_rate": 0.899,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1419,35 +1419,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 39140,
+"n": 39012,
 "best_pm": 1.92,
 "pos_rate": 0.656
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 67128,
-"best_pm": 1.73,
-"pos_rate": 0.631
+"n": 67256,
+"best_pm": 1.71,
+"pos_rate": 0.632
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 66549,
+"n": 66677,
 "best_pm": 17.06,
 "pos_rate": 0.37
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 38912,
+"n": 38776,
 "best_pm": 31.87,
 "pos_rate": 0.298
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 39263,
+"n": 39127,
 "best_pm": 5.37,
 "pos_rate": 0.589
 },
@@ -1461,16 +1461,16 @@
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 2097,
+"n": 2102,
 "best_pm": 0.71,
 "pos_rate": 0.897
 },
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 1990,
+"n": 1994,
 "best_pm": 0.67,
-"pos_rate": 0.894
+"pos_rate": 0.895
 },
 {
 "family": "higher_low_staircase",
@@ -1713,7 +1713,7 @@
 {
 "family": "range_expansion_hold",
 "bar": "1m",
-"n": 2092,
+"n": 2093,
 "best_pm": 1.0,
 "pos_rate": 0.958
 },
@@ -2029,6 +2029,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-05T10:16",
+"name": "held_level_break",
+"status": "rejected",
+"rationale": "Payer is range-top sellers who sold at the old high and put stops at that level, plus short-vol faders who must cover once price holds above it. The position is long only while price stays above the broken level minus k\u00b7ATR, minus its own trailing exposure, so a constant long ear",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-10-05T09:46",
 "name": null,
 "status": "rejected",
@@ -2104,27 +2111,9 @@
 "status": "rejected",
 "rationale": "This is the direction's item 1 and item 2 in a single sleeve pair, and it differs from `exposure_matched_break` by adding a real-yield sleeve. A break-hold sleeve (hold after a close above the prior N-day high, exit under the N-day mean) has its own trailing-average exposure subt",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-10-05T04:08",
-"name": "exposure_matched_break",
-"status": "accepted",
-"rationale": "Payer is range-top sellers and short-vol faders who cover into a clean break from compression. The earlier `*_hold` families all earn the long-gold beta on top of that timing.\nPosition is the compression-break state minus its own trailing average exposure, so a constant long earn",
-"note": "{\"name\": \"exposure_matched_break\", \"grid\": 64, \"sec_per_param\": 0.0, \"active_frac\": 0.072025}"
 }
 ],
 "history": [
-{
-"t": 1791022803.725462,
-"total": 27862746,
-"per_min": 624.0,
-"cpu": 13.3,
-"gpu": 90,
-"free_gb": 130.2,
-"dsr_bar": 6.46,
-"best_pm_1h": 1.8,
-"distinct": 24409005
-},
 {
 "t": 1791023138.4689522,
 "total": 27865370,
@@ -7701,6 +7690,17 @@
 "dsr_bar": 6.43,
 "best_pm_1h": 19.56,
 "distinct": 25412756
+},
+{
+"t": 1791195677.7681322,
+"total": 28869499,
+"per_min": 330.0,
+"cpu": 39.7,
+"gpu": 94,
+"free_gb": 135.8,
+"dsr_bar": 6.43,
+"best_pm_1h": 19.56,
+"distinct": 25414366
 }
 ],
 "instrument": "XAUUSD",
