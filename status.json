@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-05 04:34:32 UTC",
+"generated_at": "2026-10-05 04:40:02 UTC",
 "host": {
-"cpu_pct": 30.5,
-"gpu_pct": 0,
-"free_gb": 154.5,
-"uptime": "up 5 days, 13:19, 2 users, load averages: 11.42 10.22 10.09",
-"load": "{ 11.42 10.22 10.09 }"
+"cpu_pct": 9.3,
+"gpu_pct": 34,
+"free_gb": 124.3,
+"uptime": "up 5 days, 13:26, 2 users, load averages: 17.35 15.70 12.78",
+"load": "{ 17.35 15.70 12.78 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-05T06:34:23",
-"it": 137485,
-"bar": "1h",
+"ts": "2026-10-05T06:38:18",
+"it": 137600,
+"bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.25,
+"pbo": 0.75,
 "best_family": "gated",
-"best_pm": 0.72,
-"best_params": "{'base': 'participation_break_hold', 'base_params': {'days': 8, 'k': 0.701, 'mdays': 1}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 200, 'vol_scale': 0.15, 'vs_w",
+"best_pm": 0.65,
+"best_params": "{'base': 'drawdown_derisk_flow', 'base_params': {'d': 11, 'hold': 5, 'k': 1.14, 'side': 'down', 'sign': 1}, 'mode': 'vol_below', 'vol_window': 936, 'vol_pct': 0",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-05T06:34:20",
-"it": 111620,
+"ts": "2026-10-05T06:39:35",
+"it": 111725,
 "bar": "30s",
-"batch": 36,
+"batch": 156,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.25,
+"pbo": 0.14,
 "best_family": "exposure_matched_break",
-"best_pm": 0.89,
-"best_params": "{'c': 0.544, 'days': 9, 'ex': 0.742, 'lm': 12, 'mdays': 8, 'mintr': 7}",
-"mix": "exp28/gat8",
-"queue_s": 12.0
+"best_pm": 0.96,
+"best_params": "{'c': 0.594, 'days': 5, 'ex': 0.741, 'lm': 8, 'mdays': 24, 'mintr': 11}",
+"mix": "exp141/gat15",
+"queue_s": 28.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 28734706,
-"last_5m": 632,
-"last_1h": 15242,
-"last_24h": 502088,
-"distinct_ideas": 25279528,
+"total": 28748559,
+"last_5m": 12937,
+"last_1h": 27067,
+"last_24h": 513733,
+"distinct_ideas": 25293349,
 "dsr_bar": 6.44,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 19025427,
+"n": 19028085,
 "pos_rate": 0.34,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -229,7 +229,7 @@
 },
 {
 "family": "liquid_range_break_hold",
-"n": 14586,
+"n": 14587,
 "pos_rate": 0.804,
 "best_pm": 1.02,
 "best_dsr": 0.0,
@@ -253,6 +253,15 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-09-30"
+},
+{
+"family": "exposure_matched_break",
+"n": 12863,
+"pos_rate": 0.713,
+"best_pm": 1.08,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-05"
 },
 {
 "family": "shakeout_reclaim",
@@ -436,7 +445,7 @@
 },
 {
 "family": "range_expansion_hold",
-"n": 10309,
+"n": 10311,
 "pos_rate": 0.956,
 "best_pm": 1.06,
 "best_dsr": 0.0,
@@ -472,7 +481,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 9577,
+"n": 9580,
 "pos_rate": 0.899,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -948,15 +957,6 @@
 "since": "2026-10-01"
 },
 {
-"family": "exposure_matched_break",
-"n": 1674,
-"pos_rate": 0.616,
-"best_pm": 0.94,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-05"
-},
-{
 "family": "cleared_overhang_donchian",
 "n": 1381,
 "pos_rate": 1.0,
@@ -1313,77 +1313,77 @@
 {
 "family": "exposure_matched_break",
 "bar": "15m",
-"n": 213,
-"best_pm": 0.93,
-"pos_rate": 0.662
+"n": 2516,
+"best_pm": 1.08,
+"pos_rate": 0.696
 },
 {
 "family": "exposure_matched_break",
 "bar": "1h",
-"n": 835,
-"best_pm": 0.6,
-"pos_rate": 0.519
+"n": 2805,
+"best_pm": 0.85,
+"pos_rate": 0.602
 },
 {
 "family": "exposure_matched_break",
 "bar": "1m",
-"n": 839,
-"best_pm": 0.94,
-"pos_rate": 0.713
+"n": 2809,
+"best_pm": 1.05,
+"pos_rate": 0.77
 },
 {
 "family": "exposure_matched_break",
 "bar": "30s",
-"n": 150,
-"best_pm": 0.91,
-"pos_rate": 0.68
+"n": 1942,
+"best_pm": 1.04,
+"pos_rate": 0.766
 },
 {
 "family": "exposure_matched_break",
 "bar": "5m",
-"n": 273,
-"best_pm": 0.93,
-"pos_rate": 0.744
+"n": 2791,
+"best_pm": 0.99,
+"pos_rate": 0.746
 },
 {
 "family": "gated",
 "bar": "15m",
-"n": 43727,
+"n": 43789,
 "best_pm": 1.92,
 "pos_rate": 0.646
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 73134,
+"n": 73567,
 "best_pm": 1.88,
 "pos_rate": 0.625
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 72681,
+"n": 73084,
 "best_pm": 17.06,
 "pos_rate": 0.363
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 43270,
+"n": 43380,
 "best_pm": 27.91,
 "pos_rate": 0.296
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 43806,
+"n": 43884,
 "best_pm": 5.37,
 "pos_rate": 0.579
 },
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 1936,
+"n": 1937,
 "best_pm": 0.72,
 "pos_rate": 0.902
 },
@@ -1404,9 +1404,9 @@
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 1668,
+"n": 1670,
 "best_pm": 0.65,
-"pos_rate": 0.894
+"pos_rate": 0.895
 },
 {
 "family": "higher_low_staircase",
@@ -1474,7 +1474,7 @@
 {
 "family": "liquid_range_break_hold",
 "bar": "30s",
-"n": 2885,
+"n": 2886,
 "best_pm": 1.02,
 "pos_rate": 0.949
 },
@@ -1621,14 +1621,14 @@
 {
 "family": "range_expansion_hold",
 "bar": "30s",
-"n": 1946,
+"n": 1947,
 "best_pm": 0.96,
 "pos_rate": 0.949
 },
 {
 "family": "range_expansion_hold",
 "bar": "5m",
-"n": 2087,
+"n": 2088,
 "best_pm": 1.06,
 "pos_rate": 0.977
 },
@@ -1860,6 +1860,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-05T04:39",
+"name": null,
+"status": "rejected",
+"rationale": "This is the direction's item 1 and item 2 in a single sleeve pair, and it differs from `exposure_matched_break` by adding a real-yield sleeve. A break-hold sleeve (hold after a close above the prior N-day high, exit under the N-day mean) has its own trailing-average exposure subt",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-10-05T04:08",
 "name": "exposure_matched_break",
 "status": "accepted",
@@ -1935,27 +1942,9 @@
 "status": "rejected",
 "rationale": "Payer is slow allocators and holders anchored to a robust central price. They sell into strength and rebalance back toward the median of recent daily closes, so a close that sits many MADs above that median is still being under-absorbed.\nRATIONALE: The signal is long-only with hy",
 "note": "sandbox: AssertionError: zu speicherhungrig: 45 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-10-04T22:31",
-"name": null,
-"status": "rejected",
-"rationale": "The payer is profit-takers and dip-fading shorts in an uptrend. A pullback on thin activity (ticks below baseline) means nobody is selling into it, and the slow allocators who underreact to the trend haven't re-added yet. A close above the recent high after that quiet stretch squ",
-"note": "ast: name not allowed: getattr"
 }
 ],
 "history": [
-{
-"t": 1791002347.203126,
-"total": 27709341,
-"per_min": 591.0,
-"cpu": 11.2,
-"gpu": 0,
-"free_gb": 153.8,
-"dsr_bar": 6.47,
-"best_pm_1h": 12.06,
-"distinct": 24255536
-},
 {
 "t": 1791002679.713609,
 "total": 27712413,
@@ -7543,6 +7532,17 @@
 "dsr_bar": 6.44,
 "best_pm_1h": 1.72,
 "distinct": 25279528
+},
+{
+"t": 1791175202.4478998,
+"total": 28748559,
+"per_min": 2587.0,
+"cpu": 9.3,
+"gpu": 34,
+"free_gb": 124.3,
+"dsr_bar": 6.44,
+"best_pm_1h": 1.72,
+"distinct": 25293349
 }
 ],
 "instrument": "XAUUSD",
