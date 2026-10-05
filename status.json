@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-10-05 02:06:04 UTC",
+"generated_at": "2026-10-05 02:11:37 UTC",
 "host": {
-"cpu_pct": 32.7,
-"gpu_pct": 87,
-"free_gb": 149.6,
-"uptime": "up 5 days, 10:51, 2 users, load averages: 18.29 13.04 10.96",
-"load": "{ 18.29 13.04 10.96 }"
+"cpu_pct": 24.3,
+"gpu_pct": 93,
+"free_gb": 151.8,
+"uptime": "up 5 days, 10:57, 2 users, load averages: 9.88 11.43 10.95",
+"load": "{ 9.88 11.43 10.95 }"
 },
 "instances": [
 {
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 28683260,
-"last_5m": 10265,
-"last_1h": 28256,
-"last_24h": 488586,
-"distinct_ideas": 25228242,
+"total": 28683460,
+"last_5m": 0,
+"last_1h": 28264,
+"last_24h": 486762,
+"distinct_ideas": 25228402,
 "dsr_bar": 6.44,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 19007395,
+"n": 19007595,
 "pos_rate": 0.34,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -1242,35 +1242,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 46706,
+"n": 46482,
 "best_pm": 1.92,
-"pos_rate": 0.644
+"pos_rate": 0.645
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 78849,
+"n": 78281,
 "best_pm": 1.88,
 "pos_rate": 0.623
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 78436,
+"n": 77860,
 "best_pm": 15.11,
 "pos_rate": 0.36
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 46390,
+"n": 46158,
 "best_pm": 27.91,
 "pos_rate": 0.294
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 46785,
+"n": 46561,
 "best_pm": 5.37,
 "pos_rate": 0.577
 },
@@ -1684,6 +1684,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-05T02:06",
+"name": "flow_imbalance_hold",
+"status": "rejected",
+"rationale": "The payer is slow allocators who work large orders passively over several days. Their footprint is a persistent tick-weighted up-bar imbalance that outlasts any single price break, so later buyers get filled at prices that have not yet caught up. This is a participation-imbalance",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-10-05T01:35",
 "name": "trailing_peak_hold",
 "status": "accepted",
@@ -1759,27 +1766,9 @@
 "status": "rejected",
 "rationale": "The payer is the supply that normally caps a breakout: holders waiting to sell at breakeven and shorts defending the old high. A close above the prior N-day high on below-normal activity means that supply never showed up, so it is not being absorbed at a loss. Late sellers and sh",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-04T19:58",
-"name": "smooth_drift_hold",
-"status": "accepted",
-"rationale": "The payer is slow allocators and benchmark-constrained managers. They scale into a trend only after it has proven smooth, so a steady drift (a high t-stat of mean return) is filled over days. They also sell into strength and underreact to it.\nRATIONALE: The signal is the t-statis",
-"note": "{\"name\": \"smooth_drift_hold\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.2103}"
 }
 ],
 "history": [
-{
-"t": 1790993317.5655801,
-"total": 27640531,
-"per_min": 560.0,
-"cpu": 6.2,
-"gpu": 0,
-"free_gb": 160.6,
-"dsr_bar": 6.47,
-"best_pm_1h": 16.27,
-"distinct": 24186726
-},
 {
 "t": 1790993653.006052,
 "total": 27643484,
@@ -7378,6 +7367,17 @@
 "dsr_bar": 6.44,
 "best_pm_1h": 1.46,
 "distinct": 25228242
+},
+{
+"t": 1791166297.953662,
+"total": 28683460,
+"per_min": 0.0,
+"cpu": 24.3,
+"gpu": 93,
+"free_gb": 151.8,
+"dsr_bar": 6.44,
+"best_pm_1h": 1.46,
+"distinct": 25228402
 }
 ],
 "instrument": "XAUUSD",
