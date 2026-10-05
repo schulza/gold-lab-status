@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-10-05 13:45:55 UTC",
+"generated_at": "2026-10-05 13:51:39 UTC",
 "host": {
-"cpu_pct": 38.3,
-"gpu_pct": 35,
-"free_gb": 148.8,
-"uptime": "up 5 days, 22:31, 2 users, load averages: 12.58 12.26 12.27",
-"load": "{ 12.58 12.26 12.27 }"
+"cpu_pct": 41.0,
+"gpu_pct": 92,
+"free_gb": 131.4,
+"uptime": "up 5 days, 22:37, 2 users, load averages: 12.90 11.90 12.00",
+"load": "{ 12.90 11.90 12.00 }"
 },
 "instances": [
 {
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-05T15:40:10",
-"it": 117800,
-"bar": "5m",
+"ts": "2026-10-05T15:51:07",
+"it": 118000,
+"bar": "30s",
 "batch": 8,
 "passed": 0,
 "bench": 6.43,
-"pbo": 0.32,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 0.6,
-"best_params": "{'base': 'anchor_absorbed_continuation', 'base_params': {'days': 17, 'hold': 7, 'k': 0.362, 'rho': 0.269, 'side': 'long', 'sign': 1}, 'mode': 'htf_with', 'htf':",
+"best_pm": 0.29,
+"best_params": "{'base': 'levered_etf_close_rebalance', 'base_params': {'k': 2.28, 'post': 43, 'pre': 26, 'sign': 1}, 'mode': 'spread_below', 'vol_window': 86, 'vol_pct': 0.322",
 "mix": "gat8",
-"queue_s": 8.0
+"queue_s": 7.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 28947642,
-"last_5m": 1608,
-"last_1h": 31367,
-"last_24h": 565823,
-"distinct_ideas": 25492406,
+"total": 28949179,
+"last_5m": 1602,
+"last_1h": 32897,
+"last_24h": 565034,
+"distinct_ideas": 25494008,
 "dsr_bar": 6.43,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19137581,
+"n": 19139117,
 "pos_rate": 0.341,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -508,7 +508,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 9923,
+"n": 9924,
 "pos_rate": 0.899,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1192,7 +1192,7 @@
 {
 "family": "anchor_absorbed_hold",
 "bar": "15m",
-"n": 3672,
+"n": 2982,
 "best_pm": 1.08,
 "pos_rate": 0.952
 },
@@ -1206,23 +1206,23 @@
 {
 "family": "anchor_absorbed_hold",
 "bar": "1m",
-"n": 2927,
-"best_pm": 1.12,
-"pos_rate": 0.901
+"n": 2665,
+"best_pm": 1.08,
+"pos_rate": 0.9
 },
 {
 "family": "anchor_absorbed_hold",
 "bar": "30s",
-"n": 3706,
+"n": 3333,
 "best_pm": 1.09,
-"pos_rate": 0.885
+"pos_rate": 0.883
 },
 {
 "family": "anchor_absorbed_hold",
 "bar": "5m",
-"n": 3652,
+"n": 2954,
 "best_pm": 1.15,
-"pos_rate": 0.935
+"pos_rate": 0.937
 },
 {
 "family": "basis_migration_hold",
@@ -1472,42 +1472,42 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 37493,
+"n": 37960,
 "best_pm": 1.7,
 "pos_rate": 0.662
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 65079,
+"n": 65007,
 "best_pm": 1.71,
-"pos_rate": 0.639
+"pos_rate": 0.64
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 64555,
+"n": 64441,
 "best_pm": 17.06,
 "pos_rate": 0.375
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 37403,
+"n": 37875,
 "best_pm": 31.87,
 "pos_rate": 0.3
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 37635,
+"n": 38114,
 "best_pm": 5.37,
-"pos_rate": 0.594
+"pos_rate": 0.595
 },
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 1977,
+"n": 1978,
 "best_pm": 0.72,
 "pos_rate": 0.901
 },
@@ -1633,7 +1633,7 @@
 {
 "family": "liquid_range_break_hold",
 "bar": "30s",
-"n": 2908,
+"n": 2909,
 "best_pm": 1.02,
 "pos_rate": 0.948
 },
@@ -2117,6 +2117,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-05T13:51",
+"name": "boxbreak_matched",
+"status": "accepted",
+"rationale": "Payer is range-top and range-bottom sellers and buyers, plus short-vol faders, who are forced to cover when a break comes out of compression. The strategy is two-sided, so a constant long earns zero. Its own trailing average exposure is subtracted as well.\nRATIONALE: The earlier ",
+"note": "{\"name\": \"boxbreak_matched\", \"grid\": 72, \"sec_per_param\": 0.001, \"active_frac\": 0.99315}"
+},
+{
 "ts": "2026-10-05T13:20",
 "name": null,
 "status": "rejected",
@@ -2192,27 +2199,9 @@
 "status": "accepted",
 "rationale": "The payer is range-top sellers and short-vol faders who are forced to cover into a break out of compression. The mirror image is range-bottom buyers and short-vol writers forced to cover on a downside break.\nRATIONALE: The book is two-sided (long up-breaks, short down-breaks) and",
 "note": "{\"name\": \"two_sided_squeeze_book\", \"grid\": 64, \"sec_per_param\": 0.0, \"active_frac\": 0.072025}"
-},
-{
-"ts": "2026-10-05T07:43",
-"name": "timing_gated_break",
-"status": "accepted",
-"rationale": "The payer is range-top sellers and short-vol faders who cover into a break out of compression. This extends `exposure_matched_break` and `demeaned_break_book` with one new element, a timing gate. The sleeve's exposure is demeaned against its own trailing average, and it only trad",
-"note": "{\"name\": \"timing_gated_break\", \"grid\": 192, \"sec_per_param\": 0.001, \"active_frac\": 0.0702875}"
 }
 ],
 "history": [
-{
-"t": 1791035190.172666,
-"total": 27952949,
-"per_min": 325.0,
-"cpu": 20.6,
-"gpu": 93,
-"free_gb": 143.5,
-"dsr_bar": 6.46,
-"best_pm_1h": 1.75,
-"distinct": 24499256
-},
 {
 "t": 1791035519.614335,
 "total": 27955782,
@@ -7789,6 +7778,17 @@
 "dsr_bar": 6.43,
 "best_pm_1h": 31.87,
 "distinct": 25492406
+},
+{
+"t": 1791208299.2851388,
+"total": 28949179,
+"per_min": 320.0,
+"cpu": 41.0,
+"gpu": 92,
+"free_gb": 131.4,
+"dsr_bar": 6.43,
+"best_pm_1h": 31.87,
+"distinct": 25494008
 }
 ],
 "instrument": "XAUUSD",
