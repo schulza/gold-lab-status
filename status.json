@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-05 16:53:27 UTC",
+"generated_at": "2026-10-05 16:59:13 UTC",
 "host": {
-"cpu_pct": 4.3,
-"gpu_pct": 0,
-"free_gb": 113.3,
-"uptime": "up 6 days,  1:39, 2 users, load averages: 4.85 8.63 8.61",
-"load": "{ 4.85 8.63 8.61 }"
+"cpu_pct": 36.2,
+"gpu_pct": 98,
+"free_gb": 132.9,
+"uptime": "up 6 days,  1:45, 2 users, load averages: 11.35 8.86 8.50",
+"load": "{ 11.35 8.86 8.50 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-05T18:51:26",
-"it": 146350,
+"ts": "2026-10-05T18:56:34",
+"it": 146400,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.43,
-"pbo": 0.07,
+"pbo": 0.18,
 "best_family": "gated",
-"best_pm": 0.41,
-"best_params": "{'base': 'retrace_speed_squeeze', 'base_params': {'hold': 42, 'k': 0.487, 'lookback': 29, 'sign': 1, 'speed': 1.34, 'theta': 0.843}, 'mode': 'htf_against', 'htf",
+"best_pm": 0.95,
+"best_params": "{'base': 'anchor_absorbed_hold', 'base_params': {'days': 20, 'exit': -0.234, 'k': 1.04, 'rho': 0.383}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 200}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-05T18:51:28",
-"it": 119225,
-"bar": "30s",
+"ts": "2026-10-05T18:59:13",
+"it": 119400,
+"bar": "5m",
 "batch": 8,
 "passed": 0,
 "bench": 6.43,
-"pbo": 0.21,
+"pbo": 0.18,
 "best_family": "gated",
-"best_pm": 0.28,
-"best_params": "{'base': 'cot_positioning', 'base_params': {'exit': 0.0, 'feature': 'cot_net_chg4z', 'hold': 319, 'sign': -1, 'thr': 0.524}, 'mode': 'vol_above', 'vol_window': ",
+"best_pm": 0.98,
+"best_params": "{'base': 'candle_close_herd', 'base_params': {'hold': 39, 'k': 2.87, 'm': 7, 'sign': -1, 'span': 1, 'theta': 0.675}, 'mode': 'vol_above', 'vol_window': 60, 'vol",
 "mix": "gat8",
-"queue_s": 7.0
+"queue_s": 8.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 29018610,
-"last_5m": 1390,
-"last_1h": 23325,
-"last_24h": 556408,
-"distinct_ideas": 25563240,
+"total": 29020124,
+"last_5m": 1658,
+"last_1h": 24485,
+"last_24h": 556176,
+"distinct_ideas": 25564866,
 "dsr_bar": 6.43,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 19163215,
+"n": 19164727,
 "pos_rate": 0.341,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -526,7 +526,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 9955,
+"n": 9957,
 "pos_rate": 0.899,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1499,35 +1499,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 37798,
+"n": 38188,
 "best_pm": 1.7,
-"pos_rate": 0.665
+"pos_rate": 0.666
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 64929,
+"n": 65049,
 "best_pm": 1.69,
 "pos_rate": 0.642
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 64504,
+"n": 64644,
 "best_pm": 17.06,
 "pos_rate": 0.377
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 37767,
+"n": 38187,
 "best_pm": 31.87,
 "pos_rate": 0.3
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 37900,
+"n": 38340,
 "best_pm": 5.37,
 "pos_rate": 0.599
 },
@@ -1541,9 +1541,9 @@
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 231,
+"n": 230,
 "best_pm": 0.67,
-"pos_rate": 0.892
+"pos_rate": 0.896
 },
 {
 "family": "higher_low_staircase",
@@ -1569,30 +1569,30 @@
 {
 "family": "horizon_agreement_hold",
 "bar": "15m",
-"n": 413,
-"best_pm": 0.85,
-"pos_rate": 0.908
+"n": 94,
+"best_pm": 0.66,
+"pos_rate": 0.872
 },
 {
 "family": "horizon_agreement_hold",
 "bar": "1h",
-"n": 2906,
-"best_pm": 0.94,
-"pos_rate": 0.887
+"n": 2332,
+"best_pm": 0.81,
+"pos_rate": 0.882
 },
 {
 "family": "horizon_agreement_hold",
 "bar": "1m",
-"n": 2906,
-"best_pm": 0.83,
-"pos_rate": 0.914
+"n": 2334,
+"best_pm": 0.82,
+"pos_rate": 0.906
 },
 {
 "family": "horizon_agreement_hold",
 "bar": "30s",
-"n": 1559,
-"best_pm": 0.87,
-"pos_rate": 0.913
+"n": 1283,
+"best_pm": 0.81,
+"pos_rate": 0.914
 },
 {
 "family": "horizon_agreement_hold",
@@ -2179,6 +2179,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-05T16:55",
+"name": "stale_extreme_break_matched",
+"status": "rejected",
+"rationale": "The payer is the holders of stop orders and short positions placed just beyond a stale range extreme, one that has gone untouched for a fraction `a` of the window. A close through a high or low that has been left alone that long forces those orders to cover and chase, while a fre",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-10-05T16:24",
 "name": null,
 "status": "rejected",
@@ -2254,27 +2261,9 @@
 "status": "rejected",
 "rationale": "Payer: faders who sold a range break and are forced to cover only if price stays accepted beyond the old high. The signal is long after a persistent break (a fraction of recent closes above the prior N-day high), and it exits when price falls back below the level by k\u00b7vol.\nRATION",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-05T10:47",
-"name": "tested_top_break",
-"status": "accepted",
-"rationale": "Payer: short-vol faders and range-top sellers who sold repeated tests of the top. Each failed test adds stops above the range, so a close through the top forces them to cover.\nThe position is the repeated-test break (count of near-top touches that closed below it) minus its own t",
-"note": "{\"name\": \"tested_top_break\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.643225}"
 }
 ],
 "history": [
-{
-"t": 1791046594.2448509,
-"total": 28038251,
-"per_min": 523.0,
-"cpu": 26.5,
-"gpu": 0,
-"free_gb": 136.6,
-"dsr_bar": 6.46,
-"best_pm_1h": 15.2,
-"distinct": 24584582
-},
 {
 "t": 1791046928.134627,
 "total": 28039891,
@@ -7840,6 +7829,17 @@
 "dsr_bar": 6.43,
 "best_pm_1h": 6.65,
 "distinct": 25563240
+},
+{
+"t": 1791219553.434932,
+"total": 29020124,
+"per_min": 332.0,
+"cpu": 36.2,
+"gpu": 98,
+"free_gb": 132.9,
+"dsr_bar": 6.43,
+"best_pm_1h": 6.65,
+"distinct": 25564866
 }
 ],
 "instrument": "XAUUSD",
