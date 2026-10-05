@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-05 07:41:15 UTC",
+"generated_at": "2026-10-05 07:46:54 UTC",
 "host": {
-"cpu_pct": 31.9,
-"gpu_pct": 93,
-"free_gb": 127.1,
-"uptime": "up 5 days, 16:27, 2 users, load averages: 10.49 10.61 10.82",
-"load": "{ 10.49 10.61 10.82 }"
+"cpu_pct": 23.6,
+"gpu_pct": 0,
+"free_gb": 191.6,
+"uptime": "up 5 days, 16:32, 2 users, load averages: 10.51 10.91 10.87",
+"load": "{ 10.51 10.91 10.87 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-05T09:35:08",
-"it": 140200,
+"ts": "2026-10-05T09:43:31",
+"it": 140210,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.57,
+"pbo": 0.5,
 "best_family": "gated",
-"best_pm": 0.35,
-"best_params": "{'base': 'participation_break_hold', 'base_params': {'days': 15, 'k': 0.7, 'mdays': 1}, 'mode': 'htf_against', 'htf': '4h', 'sma_n': 50}",
+"best_pm": 0.49,
+"best_params": "{'base': 'option_cut_pin', 'base_params': {'d': 2.03, 'mode': 'release', 'pre': 142, 'sign': 1, 'step': 50}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 24}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-05T09:36:38",
-"it": 114000,
-"bar": "5m",
+"ts": "2026-10-05T09:44:09",
+"it": 114010,
+"bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.44,
-"pbo": 0.0,
+"pbo": 0.39,
 "best_family": "gated",
-"best_pm": 1.08,
-"best_params": "{'base': 'same_clock_flow', 'base_params': {'clock': 'ny', 'days': 24, 'k': 2.98, 'sign': 1, 'slot': 120}, 'mode': 'tick_above', 'vol_window': 240, 'vol_pct': 0",
+"best_pm": 0.97,
+"best_params": "{'base': 'broad_flow_drift', 'base_params': {'base': 11, 'd': 5, 'exit': 0.667, 'k': 0.841, 'theta': 1.29}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 200, 'vol_",
 "mix": "gat8",
-"queue_s": 7.0
+"queue_s": 8.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 28804839,
-"last_5m": 439,
-"last_1h": 15765,
-"last_24h": 520524,
-"distinct_ideas": 25349626,
+"total": 28804983,
+"last_5m": 144,
+"last_1h": 14067,
+"last_24h": 519516,
+"distinct_ideas": 25349770,
 "dsr_bar": 6.44,
 "sharpe_std": 1.18,
 "families": [
 {
 "family": "gated",
-"n": 19067877,
+"n": 19068021,
 "pos_rate": 0.34,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -1392,35 +1392,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 41945,
+"n": 41961,
 "best_pm": 1.92,
 "pos_rate": 0.651
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 71442,
+"n": 70914,
 "best_pm": 1.73,
 "pos_rate": 0.629
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 70906,
+"n": 70386,
 "best_pm": 17.06,
 "pos_rate": 0.366
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 41659,
+"n": 41667,
 "best_pm": 31.87,
 "pos_rate": 0.298
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 42056,
+"n": 42072,
 "best_pm": 5.37,
 "pos_rate": 0.585
 },
@@ -1904,6 +1904,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-05T07:43",
+"name": "timing_gated_break",
+"status": "accepted",
+"rationale": "The payer is range-top sellers and short-vol faders who cover into a break out of compression. This extends `exposure_matched_break` and `demeaned_break_book` with one new element, a timing gate. The sleeve's exposure is demeaned against its own trailing average, and it only trad",
+"note": "{\"name\": \"timing_gated_break\", \"grid\": 192, \"sec_per_param\": 0.001, \"active_frac\": 0.0702875}"
+},
+{
 "ts": "2026-10-05T07:12",
 "name": "two_sided_compression_break",
 "status": "rejected",
@@ -1979,27 +1986,9 @@
 "status": "rejected",
 "rationale": "The payer is slow allocators who work large orders passively over several days. Their footprint is a persistent tick-weighted up-bar imbalance that outlasts any single price break, so later buyers get filled at prices that have not yet caught up. This is a participation-imbalance",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-05T01:35",
-"name": "trailing_peak_hold",
-"status": "accepted",
-"rationale": "Payer is slow allocators and anchored holders who sell into strength and re-enter late. A fresh multi-day high is entered only once, and the position is held until price gives back k ATR from the recent peak. It is a position state with a trailing-stop exit rather than a fixed-ho",
-"note": "{\"name\": \"trailing_peak_hold\", \"grid\": 64, \"sec_per_param\": 0.0, \"active_frac\": 0.0079875}"
 }
 ],
 "history": [
-{
-"t": 1791013427.386035,
-"total": 27792866,
-"per_min": 382.0,
-"cpu": 14.6,
-"gpu": 92,
-"free_gb": 148.2,
-"dsr_bar": 6.46,
-"best_pm_1h": 19.08,
-"distinct": 24339093
-},
 {
 "t": 1791013754.227947,
 "total": 27795762,
@@ -7587,6 +7576,17 @@
 "dsr_bar": 6.44,
 "best_pm_1h": 31.87,
 "distinct": 25349626
+},
+{
+"t": 1791186414.4606159,
+"total": 28804983,
+"per_min": 29.0,
+"cpu": 23.6,
+"gpu": 0,
+"free_gb": 191.6,
+"dsr_bar": 6.44,
+"best_pm_1h": 31.87,
+"distinct": 25349770
 }
 ],
 "instrument": "XAUUSD",
