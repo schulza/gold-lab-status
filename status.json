@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-06 04:36:30 UTC",
+"generated_at": "2026-10-06 04:42:07 UTC",
 "host": {
-"cpu_pct": 37.6,
-"gpu_pct": 92,
-"free_gb": 120.1,
-"uptime": "up 6 days, 13:22, 2 users, load averages: 10.72 10.55 10.50",
-"load": "{ 10.72 10.55 10.50 }"
+"cpu_pct": 8.8,
+"gpu_pct": 93,
+"free_gb": 118.8,
+"uptime": "up 6 days, 13:28, 2 users, load averages: 8.82 9.99 10.28",
+"load": "{ 8.82 9.99 10.28 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-06T06:31:50",
-"it": 154200,
+"ts": "2026-10-06T06:42:00",
+"it": 154300,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.0,
+"pbo": 0.04,
 "best_family": "gated",
-"best_pm": 1.13,
-"best_params": "{'base': 'forced_flat_reentry', 'base_params': {'hold': 85, 'k': 0.731, 'sign': 1, 'theta': 0.173, 'unw': 78}, 'mode': 'tick_above', 'vol_window': 96, 'vol_pct'",
+"best_pm": 0.63,
+"best_params": "{'base': 'compression_break_hold', 'base_params': {'c': 0.6, 'days': 5, 'ex': 0.725, 'lm': 9}, 'mode': 'tick_above', 'vol_window': 240, 'vol_pct': 0.3}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-06T06:30:44",
-"it": 126000,
-"bar": "5m",
+"ts": "2026-10-06T06:42:01",
+"it": 126119,
+"bar": "30s",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.29,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 0.63,
-"best_params": "{'base': 'shakeout_reclaim', 'base_params': {'hold': 1, 'k': 0.967, 'r': 7, 'side': 'long', 'sign': 1, 'span': 9}, 'mode': 'tick_above', 'vol_window': 60, 'vol_",
+"best_pm": 16.9,
+"best_params": "{'base': 'settle_hedge_momentum', 'base_params': {'entry': -1, 'hold': 38, 'k': 2.5, 'sign': -1}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 20, 'g2_mode': 'vol_",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 29285306,
-"last_5m": 482,
-"last_1h": 23535,
-"last_24h": 544928,
-"distinct_ideas": 25829081,
+"total": 29286759,
+"last_5m": 1688,
+"last_1h": 24253,
+"last_24h": 537599,
+"distinct_ideas": 25830640,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19283154,
+"n": 19284610,
 "pos_rate": 0.342,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -580,7 +580,7 @@
 },
 {
 "family": "range_expansion_hold",
-"n": 10474,
+"n": 10475,
 "pos_rate": 0.955,
 "best_pm": 1.06,
 "best_dsr": 0.0,
@@ -598,7 +598,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 10195,
+"n": 10199,
 "pos_rate": 0.9,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1612,37 +1612,37 @@
 {
 "family": "exposure_matched_break",
 "bar": "15m",
-"n": 2670,
-"best_pm": 1.08,
-"pos_rate": 0.694
+"n": 341,
+"best_pm": 0.92,
+"pos_rate": 0.683
 },
 {
 "family": "exposure_matched_break",
 "bar": "1h",
-"n": 538,
+"n": 340,
 "best_pm": 0.86,
-"pos_rate": 0.658
+"pos_rate": 0.706
 },
 {
 "family": "exposure_matched_break",
 "bar": "1m",
-"n": 685,
+"n": 340,
 "best_pm": 1.14,
-"pos_rate": 0.804
+"pos_rate": 0.853
 },
 {
 "family": "exposure_matched_break",
 "bar": "30s",
-"n": 2853,
+"n": 827,
 "best_pm": 1.14,
-"pos_rate": 0.776
+"pos_rate": 0.785
 },
 {
 "family": "exposure_matched_break",
 "bar": "5m",
-"n": 2640,
+"n": 341,
 "best_pm": 1.1,
-"pos_rate": 0.751
+"pos_rate": 0.824
 },
 {
 "family": "fast_vs_slow_break",
@@ -1682,35 +1682,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 39467,
+"n": 39483,
 "best_pm": 1.7,
 "pos_rate": 0.668
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 68842,
+"n": 68778,
 "best_pm": 1.74,
 "pos_rate": 0.644
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 68622,
+"n": 68570,
 "best_pm": 15.82,
 "pos_rate": 0.378
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 40155,
+"n": 40111,
 "best_pm": 40.81,
 "pos_rate": 0.3
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 39729,
+"n": 39738,
 "best_pm": 2.02,
 "pos_rate": 0.609
 },
@@ -1752,37 +1752,37 @@
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 90,
+"n": 89,
 "best_pm": 0.68,
-"pos_rate": 0.911
+"pos_rate": 0.91
 },
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 124,
+"n": 125,
 "best_pm": 0.67,
-"pos_rate": 0.911
+"pos_rate": 0.912
 },
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 187,
+"n": 189,
 "best_pm": 0.61,
-"pos_rate": 0.92
+"pos_rate": 0.921
 },
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 138,
+"n": 137,
 "best_pm": 0.63,
 "pos_rate": 0.949
 },
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 78,
+"n": 81,
 "best_pm": 0.64,
-"pos_rate": 0.949
+"pos_rate": 0.938
 },
 {
 "family": "horizon_demeaned_book",
@@ -1836,9 +1836,9 @@
 {
 "family": "liquid_range_break_hold",
 "bar": "30s",
-"n": 33,
+"n": 32,
 "best_pm": 0.21,
-"pos_rate": 0.697
+"pos_rate": 0.688
 },
 {
 "family": "margin_break_demeaned",
@@ -1955,9 +1955,9 @@
 {
 "family": "range_expansion_hold",
 "bar": "15m",
-"n": 20,
+"n": 21,
 "best_pm": 0.6,
-"pos_rate": 0.9
+"pos_rate": 0.905
 },
 {
 "family": "range_expansion_hold",
@@ -1976,7 +1976,7 @@
 {
 "family": "range_expansion_hold",
 "bar": "30s",
-"n": 76,
+"n": 75,
 "best_pm": 0.74,
 "pos_rate": 0.947
 },
@@ -1985,7 +1985,7 @@
 "bar": "5m",
 "n": 16,
 "best_pm": 0.72,
-"pos_rate": 0.938
+"pos_rate": 1.0
 },
 {
 "family": "real_yield_trend",
@@ -2250,6 +2250,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-06T04:40",
+"name": null,
+"status": "rejected",
+"rationale": "Payer is the rate hedgers and allocators who reprice gold days after 10y TIPS yields move. Gold's own 5/20-day move is scaled against the yield move, and they pay for the part not yet repriced.\nThe position is held until the gap closes, then demeaned against its own trailing expo",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-10-06T04:09",
 "name": "forced_deleverage_refill",
 "status": "rejected",
@@ -2325,27 +2332,9 @@
 "status": "accepted",
 "rationale": "The payer is range-top sellers and short-vol faders. Once the close clears the prior N-day close channel by k times the window's dispersion, they have to cover. The position is a two-sided break state minus its own trailing mean exposure, so a constant long earns zero. That tests",
 "note": "{\"name\": \"close_channel_retrace_demeaned\", \"grid\": 108, \"sec_per_param\": 0.003, \"active_frac\": 0.7511625}"
-},
-{
-"ts": "2026-10-05T22:32",
-"name": "compression_vs_plain_break",
-"status": "rejected",
-"rationale": "Payer: range-top sellers and short-vol faders who are forced to cover when a break comes out of compression. The compression-break leg is long and the uncompressed-break leg is short, with the same hold, so the constant-long beta cancels. Only the value of compression timing is l",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1791088883.744782,
-"total": 28235346,
-"per_min": 317.0,
-"cpu": 36.9,
-"gpu": 96,
-"free_gb": 132.7,
-"dsr_bar": 6.45,
-"best_pm_1h": 1.66,
-"distinct": 24781565
-},
 {
 "t": 1791089229.130306,
 "total": 28237114,
@@ -7900,6 +7889,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 15.82,
 "distinct": 25829081
+},
+{
+"t": 1791261727.767531,
+"total": 29286759,
+"per_min": 338.0,
+"cpu": 8.8,
+"gpu": 93,
+"free_gb": 118.8,
+"dsr_bar": 6.42,
+"best_pm_1h": 15.82,
+"distinct": 25830640
 }
 ],
 "instrument": "XAUUSD",
