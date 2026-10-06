@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-06 08:14:35 UTC",
+"generated_at": "2026-10-06 08:20:12 UTC",
 "host": {
-"cpu_pct": 32.0,
-"gpu_pct": 94,
-"free_gb": 130.2,
-"uptime": "up 6 days, 17 hrs, 2 users, load averages: 9.44 7.67 9.39",
-"load": "{ 9.44 7.67 9.39 }"
+"cpu_pct": 21.2,
+"gpu_pct": 78,
+"free_gb": 139.6,
+"uptime": "up 6 days, 17:06, 2 users, load averages: 9.68 9.85 9.96",
+"load": "{ 9.68 9.85 9.96 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-06T10:14:35",
-"it": 157751,
-"bar": "1h",
+"ts": "2026-10-06T10:15:32",
+"it": 157800,
+"bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.46,
+"pbo": 0.07,
 "best_family": "gated",
-"best_pm": 0.72,
-"best_params": "{'base': 'shfe_reopen_catchup', 'base_params': {'entry': 1, 'hold': 207, 'k': 2.63, 'sess': 'night', 'sign': 1}, 'mode': 'tick_above', 'vol_window': 404, 'vol_p",
+"best_pm": 0.89,
+"best_params": "{'base': 'retrace_speed_squeeze', 'base_params': {'hold': 7, 'k': 1.37, 'lookback': 13, 'sign': -1, 'speed': 2.05, 'theta': 0.234}, 'mode': 'htf_against', 'htf'",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-06T10:14:34",
-"it": 129196,
-"bar": "15m",
+"ts": "2026-10-06T10:14:38",
+"it": 129200,
+"bar": "30s",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.18,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 0.67,
-"best_params": "{'base': 'trapped_fader_squeeze', 'base_params': {'confirm': 2, 'hold': 828, 'lookback': 726, 'pen': 0.797, 'sign': -1, 'trap': 8}, 'mode': 'spread_below', 'vol",
+"best_pm": 0.33,
+"best_params": "{'base': 'rebalance_size', 'base_params': {'exit': 0, 'k': 0.00195, 'lead': 2, 'period': 'week', 'sign': -1}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 17}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 29338925,
-"last_5m": 1696,
-"last_1h": 17047,
-"last_24h": 523525,
-"distinct_ideas": 25882868,
+"total": 29339983,
+"last_5m": 378,
+"last_1h": 15335,
+"last_24h": 523888,
+"distinct_ideas": 25883758,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19336498,
+"n": 19337554,
 "pos_rate": 0.343,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -589,7 +589,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 10414,
+"n": 10415,
 "pos_rate": 0.901,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -922,7 +922,7 @@
 },
 {
 "family": "sleeve_vote_hold",
-"n": 3932,
+"n": 3933,
 "pos_rate": 0.708,
 "best_pm": 0.93,
 "best_dsr": 0.0,
@@ -1619,14 +1619,14 @@
 {
 "family": "gated",
 "bar": "1h",
-"n": 70522,
+"n": 70714,
 "best_pm": 1.74,
 "pos_rate": 0.643
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 70409,
+"n": 70593,
 "best_pm": 15.82,
 "pos_rate": 0.379
 },
@@ -1640,7 +1640,7 @@
 {
 "family": "gated",
 "bar": "5m",
-"n": 41257,
+"n": 41263,
 "best_pm": 2.16,
 "pos_rate": 0.61
 },
@@ -1689,9 +1689,9 @@
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 131,
+"n": 132,
 "best_pm": 0.67,
-"pos_rate": 0.901
+"pos_rate": 0.894
 },
 {
 "family": "higher_low_staircase",
@@ -1948,9 +1948,9 @@
 {
 "family": "sleeve_vote_hold",
 "bar": "1m",
-"n": 2,
+"n": 3,
 "best_pm": 0.41,
-"pos_rate": 0.5
+"pos_rate": 0.667
 },
 {
 "family": "sleeve_vote_hold",
@@ -2074,7 +2074,7 @@
 {
 "family": "timing_gated_break",
 "bar": "30s",
-"n": 59,
+"n": 38,
 "best_pm": 0,
 "pos_rate": 0
 },
@@ -2152,6 +2152,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-06T08:15",
+"name": "forced_deleverage_refill",
+"status": "rejected",
+"rationale": "Payer is vol-target and VaR-constrained funds that sell gold after a vol spike regardless of view. They sell into the spike and leave a price discount once their forced selling is exhausted.\nEntry is long once a sell-off has coincided with a recent fast/slow vol spike and vol has",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-10-06T07:44",
 "name": "forced_deleverage_refill",
 "status": "rejected",
@@ -2227,27 +2234,9 @@
 "status": "rejected",
 "rationale": "The payer is range-top sellers and short-vol faders who are forced to cover when a compressed range breaks upward. That covering is a timing edge, not a constant long.\nRATIONALE: Position is the long compression-break state minus its own trailing mean exposure (mdays window). A c",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-06T02:06",
-"name": "compressed_break_exposure_resid",
-"status": "rejected",
-"rationale": "The payer is range-top sellers and short-vol faders who are forced to cover when a compressed box breaks. Stops and short-vol hedges cluster just outside a tight box, so the covering flow is the late leg of the move.\nRATIONALE: The position is the two-sided break state minus its ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1791101886.621751,
-"total": 28295037,
-"per_min": 421.0,
-"cpu": 27.2,
-"gpu": 93,
-"free_gb": 144.4,
-"dsr_bar": 6.45,
-"best_pm_1h": 27.91,
-"distinct": 24841232
-},
 {
 "t": 1791102249.392737,
 "total": 28295037,
@@ -7802,6 +7791,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 13.37,
 "distinct": 25882868
+},
+{
+"t": 1791274812.960594,
+"total": 29339983,
+"per_min": 76.0,
+"cpu": 21.2,
+"gpu": 78,
+"free_gb": 139.6,
+"dsr_bar": 6.42,
+"best_pm_1h": 13.37,
+"distinct": 25883758
 }
 ],
 "instrument": "XAUUSD",
