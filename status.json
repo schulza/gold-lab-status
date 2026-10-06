@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-06 16:58:21 UTC",
+"generated_at": "2026-10-06 17:04:00 UTC",
 "host": {
-"cpu_pct": 26.2,
-"gpu_pct": 94,
-"free_gb": 132.5,
-"uptime": "up 7 days,  1:44, 2 users, load averages: 9.69 9.00 9.81",
-"load": "{ 9.69 9.00 9.81 }"
+"cpu_pct": 29.3,
+"gpu_pct": 53,
+"free_gb": 187.1,
+"uptime": "up 7 days,  1:49, 2 users, load averages: 10.74 10.24 10.15",
+"load": "{ 10.74 10.24 10.15 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-06T18:54:38",
-"it": 165600,
+"ts": "2026-10-06T19:02:15",
+"it": 165610,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.5,
+"pbo": 0.25,
 "best_family": "gated",
-"best_pm": 8.37,
-"best_params": "{'base': 'sge_benchmark_flow', 'base_params': {'fix': 'am', 'hold': 97, 'k': 1.06, 'pre': 69, 'sign': 1}, 'mode': 'spread_below', 'vol_window': 240, 'vol_pct': ",
+"best_pm": 0.81,
+"best_params": "{'base': 'candle_close_herd', 'base_params': {'hold': 48, 'k': 2.55, 'm': 4, 'sign': -1, 'span': 1, 'theta': 2.0}, 'mode': 'vol_above', 'vol_window': 53, 'vol_p",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-06T18:52:24",
-"it": 136400,
-"bar": "30s",
+"ts": "2026-10-06T18:58:52",
+"it": 136410,
+"bar": "5m",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.0,
+"pbo": 0.32,
 "best_family": "gated",
-"best_pm": 0.88,
-"best_params": "{'base': 'trailing_peak_hold', 'base_params': {'days': 114, 'k': 7.48, 'mdays': 6}, 'mode': 'vol_above', 'vol_window': 240, 'vol_pct': 0.3}",
+"best_pm": 0.49,
+"best_params": "{'base': 'close_channel_retrace_demeaned', 'base_params': {'days': 5, 'f': 0.637, 'k': 0.441, 'mdays': 17}, 'mode': 'spread_below', 'vol_window': 21, 'vol_pct':",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 29460431,
-"last_5m": 1088,
-"last_1h": 16573,
-"last_24h": 440643,
-"distinct_ideas": 26004206,
+"total": 29460575,
+"last_5m": 144,
+"last_1h": 14905,
+"last_24h": 440147,
+"distinct_ideas": 26004350,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19457554,
+"n": 19457698,
 "pos_rate": 0.344,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -1507,35 +1507,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 45970,
+"n": 45778,
 "best_pm": 3.51,
 "pos_rate": 0.666
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 77474,
+"n": 77506,
 "best_pm": 1.74,
 "pos_rate": 0.642
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 77346,
+"n": 77386,
 "best_pm": 16.8,
 "pos_rate": 0.379
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 46243,
+"n": 46059,
 "best_pm": 40.81,
 "pos_rate": 0.298
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 46130,
+"n": 45938,
 "best_pm": 2.16,
 "pos_rate": 0.61
 },
@@ -1893,6 +1893,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-06T16:58",
+"name": "forced_deleverage_refill",
+"status": "accepted",
+"rationale": "Payer: vol-target and VaR-constrained funds that must cut gold after a vol spike regardless of view. The signal buys (or, in `both`, sells) only once vol has peaked and starts to recede, and exits when vol normalises.\nRATIONALE: Earlier attempts came back \"identically zero\" becau",
+"note": "{\"name\": \"forced_deleverage_refill\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.47325}"
+},
+{
 "ts": "2026-10-06T16:27",
 "name": "forced_deleverage_refill",
 "status": "rejected",
@@ -1968,27 +1975,9 @@
 "status": "rejected",
 "rationale": "Payer is vol-target and VaR-constrained funds that must sell after a realised-vol spike regardless of view. I buy once vol has peaked and is falling after a sharp drawdown, then exit when short vol falls back to its long-run level.\nRATIONALE: Windows are scaled so they fit short ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-06T10:49",
-"name": "forced_deleverage_refill",
-"status": "rejected",
-"rationale": "Payer is vol-target and VaR-constrained funds, which must cut gold exposure after a realised-vol spike regardless of their view. They sell into the spike and leave price below fair value, and the refill buyer collects once the vol ratio decays from its peak.\nRATIONALE: Entry need",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1791133259.510634,
-"total": 28468186,
-"per_min": 864.0,
-"cpu": 17.3,
-"gpu": 87,
-"free_gb": 100.1,
-"dsr_bar": 6.45,
-"best_pm_1h": 1.8,
-"distinct": 25013874
-},
 {
 "t": 1791133605.664576,
 "total": 28472914,
@@ -7543,6 +7532,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 16.8,
 "distinct": 26004206
+},
+{
+"t": 1791306240.962307,
+"total": 29460575,
+"per_min": 29.0,
+"cpu": 29.3,
+"gpu": 53,
+"free_gb": 187.1,
+"dsr_bar": 6.42,
+"best_pm_1h": 16.8,
+"distinct": 26004350
 }
 ],
 "instrument": "XAUUSD",
