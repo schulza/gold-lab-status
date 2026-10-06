@@ -1,28 +1,28 @@
 {
-"generated_at": "2026-10-06 05:05:24 UTC",
+"generated_at": "2026-10-06 05:11:03 UTC",
 "host": {
-"cpu_pct": 1.2,
-"gpu_pct": 0,
-"free_gb": 119.3,
-"uptime": "up 6 days, 13:51, 2 users, load averages: 1.30 5.20 7.64",
-"load": "{ 1.30 5.20 7.64 }"
+"cpu_pct": 26.5,
+"gpu_pct": 90,
+"free_gb": 131.7,
+"uptime": "up 6 days, 13:57, 2 users, load averages: 9.50 9.14 8.87",
+"load": "{ 9.50 9.14 8.87 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-06T07:05:23",
-"it": 154580,
+"ts": "2026-10-06T07:05:47",
+"it": 154600,
 "bar": "1m",
-"batch": 8,
+"batch": 9,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.32,
-"best_family": "gated",
-"best_pm": 0.78,
-"best_params": "{'base': 'trailing_peak_hold', 'base_params': {'days': 117, 'k': 7.56, 'mdays': 14}, 'mode': 'vol_above', 'vol_window': 471, 'vol_pct': 0.491, 'g2_mode': 'sprea",
-"mix": "gat8",
+"pbo": 0.61,
+"best_family": "higher_low_staircase",
+"best_pm": 0.25,
+"best_params": "{'days': 3, 'm': 4, 'k': 0.000297, 'exit': 1}",
+"mix": "gat8/hig1",
 "queue_s": 8.0
 },
 "events": []
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-06T07:05:19",
-"it": 126320,
-"bar": "30s",
+"ts": "2026-10-06T07:07:10",
+"it": 126400,
+"bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.61,
+"pbo": 0.36,
 "best_family": "gated",
-"best_pm": 0.42,
-"best_params": "{'base': 'period_end_mark_reversal', 'base_params': {'agree': 1, 'hold': 4, 'k': 0.0377, 'period': 'week', 'sign': -1, 'w': 30}, 'mode': 'session', 'start_hour'",
+"best_pm": 0.86,
+"best_params": "{'base': 'fade_reward_memory', 'base_params': {'d': 9, 'hold': 4, 'k': 1.35, 'm': 2, 'mode': 'rewarded', 'side': 'both', 'sign': -1}, 'mode': 'htf_with', 'htf':",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 29290569,
-"last_5m": 321,
-"last_1h": 23832,
-"last_24h": 534003,
-"distinct_ideas": 25834344,
+"total": 29291736,
+"last_5m": 806,
+"last_1h": 16674,
+"last_24h": 534496,
+"distinct_ideas": 25835511,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19288394,
+"n": 19289554,
 "pos_rate": 0.342,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -310,7 +310,7 @@
 },
 {
 "family": "liquid_range_break_hold",
-"n": 14646,
+"n": 14647,
 "pos_rate": 0.803,
 "best_pm": 1.02,
 "best_dsr": 0.0,
@@ -580,7 +580,7 @@
 },
 {
 "family": "range_expansion_hold",
-"n": 10476,
+"n": 10477,
 "pos_rate": 0.955,
 "best_pm": 1.06,
 "best_dsr": 0.0,
@@ -598,7 +598,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 10216,
+"n": 10221,
 "pos_rate": 0.9,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1647,37 +1647,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 39302,
+"n": 39502,
 "best_pm": 1.7,
 "pos_rate": 0.669
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 68379,
+"n": 68331,
 "best_pm": 1.74,
 "pos_rate": 0.643
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 68182,
+"n": 68126,
 "best_pm": 15.82,
-"pos_rate": 0.378
+"pos_rate": 0.377
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 39879,
+"n": 40079,
 "best_pm": 40.81,
 "pos_rate": 0.3
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 39531,
+"n": 39723,
 "best_pm": 2.02,
-"pos_rate": 0.609
+"pos_rate": 0.61
 },
 {
 "family": "giveback_break_matched",
@@ -1738,16 +1738,16 @@
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 139,
+"n": 140,
 "best_pm": 0.63,
 "pos_rate": 0.95
 },
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 84,
+"n": 86,
 "best_pm": 0.64,
-"pos_rate": 0.94
+"pos_rate": 0.942
 },
 {
 "family": "horizon_demeaned_book",
@@ -1801,9 +1801,9 @@
 {
 "family": "liquid_range_break_hold",
 "bar": "30s",
-"n": 32,
+"n": 33,
 "best_pm": 0.21,
-"pos_rate": 0.688
+"pos_rate": 0.697
 },
 {
 "family": "margin_break_demeaned",
@@ -1941,7 +1941,7 @@
 {
 "family": "range_expansion_hold",
 "bar": "30s",
-"n": 75,
+"n": 76,
 "best_pm": 0.74,
 "pos_rate": 0.947
 },
@@ -2215,6 +2215,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-06T05:10",
+"name": "forced_deleverage_refill",
+"status": "rejected",
+"rationale": "Payer: vol-target and VaR-constrained funds that must sell after a realised-vol spike whatever their view. The price is pushed below fair value while the forced selling lasts.\nRATIONALE: I buy once the vol ratio is decaying from its peak after a net sell-off, and exit when realis",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-10-06T04:40",
 "name": null,
 "status": "rejected",
@@ -2290,27 +2297,9 @@
 "status": "accepted",
 "rationale": "Payer is short-vol faders and range-top sellers who are forced to cover on a fresh short-horizon break that the longer horizon has not yet confirmed. Their covering is the late leg of the move.\nRATIONALE: Position is the fast break state minus the slow break state (window = days ",
 "note": "{\"name\": \"fast_vs_slow_break\", \"grid\": 72, \"sec_per_param\": 0.002, \"active_frac\": 0.0986}"
-},
-{
-"ts": "2026-10-05T23:03",
-"name": "close_channel_retrace_demeaned",
-"status": "accepted",
-"rationale": "The payer is range-top sellers and short-vol faders. Once the close clears the prior N-day close channel by k times the window's dispersion, they have to cover. The position is a two-sided break state minus its own trailing mean exposure, so a constant long earns zero. That tests",
-"note": "{\"name\": \"close_channel_retrace_demeaned\", \"grid\": 108, \"sec_per_param\": 0.003, \"active_frac\": 0.7511625}"
 }
 ],
 "history": [
-{
-"t": 1791090609.58605,
-"total": 28243498,
-"per_min": 277.0,
-"cpu": 36.8,
-"gpu": 94,
-"free_gb": 123.1,
-"dsr_bar": 6.45,
-"best_pm_1h": 17.03,
-"distinct": 24789733
-},
 {
 "t": 1791090942.52228,
 "total": 28245434,
@@ -7865,6 +7854,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 15.82,
 "distinct": 25834344
+},
+{
+"t": 1791263463.057486,
+"total": 29291736,
+"per_min": 161.0,
+"cpu": 26.5,
+"gpu": 90,
+"free_gb": 131.7,
+"dsr_bar": 6.42,
+"best_pm_1h": 15.82,
+"distinct": 25835511
 }
 ],
 "instrument": "XAUUSD",
