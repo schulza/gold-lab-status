@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-06 04:08:03 UTC",
+"generated_at": "2026-10-06 04:13:29 UTC",
 "host": {
-"cpu_pct": 61.5,
-"gpu_pct": 84,
-"free_gb": 139.9,
-"uptime": "up 6 days, 12:53, 2 users, load averages: 16.26 14.03 11.80",
-"load": "{ 16.26 14.03 11.80 }"
+"cpu_pct": 3.6,
+"gpu_pct": 0,
+"free_gb": 117.4,
+"uptime": "up 6 days, 12:59, 2 users, load averages: 2.98 8.71 10.21",
+"load": "{ 2.98 8.71 10.21 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-06T06:03:49",
-"it": 153800,
+"ts": "2026-10-06T06:10:30",
+"it": 153810,
 "bar": "1m",
-"batch": 8,
+"batch": 312,
 "passed": 0,
 "bench": 6.43,
-"pbo": 0.07,
-"best_family": "gated",
-"best_pm": 0.77,
-"best_params": "{'base': 'release_overshoot', 'base_params': {'ev': 'fomc', 'hold': 110, 'k': 1.28, 'sign': -1, 'win': 2}, 'mode': 'spread_below', 'vol_window': 240, 'vol_pct':",
-"mix": "gat8",
-"queue_s": 8.0
+"pbo": 0.32,
+"best_family": "compression_break_matched_exposure",
+"best_pm": 12.81,
+"best_params": "{'days': 16, 'c': 0.508, 'ex': 0.198, 'mdays': 33, 'mintr': 8}",
+"mix": "com304/gat8",
+"queue_s": 18.0
 },
 "events": []
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-06T06:07:52",
-"it": 125711,
+"ts": "2026-10-06T06:10:27",
+"it": 125741,
 "bar": "30s",
-"batch": 156,
+"batch": 9,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.36,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 13.2,
-"best_params": "{'base': 'candle_close_herd', 'base_params': {'hold': 48, 'k': 3.0, 'm': 3, 'sign': -1, 'span': 1, 'theta': 1.61}, 'mode': 'session', 'start_hour': 0, 'hold_hou",
-"mix": "com131/gat25",
-"queue_s": 86.0
+"best_pm": 0.72,
+"best_params": "{'base': 'smooth_drift_hold', 'base_params': {'days': 2.42, 'exit': -0.0601, 'thr': 1.11}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 32}",
+"mix": "com1/gat8",
+"queue_s": 8.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 29273042,
-"last_5m": 8061,
-"last_1h": 19170,
-"last_24h": 541965,
-"distinct_ideas": 25817165,
+"total": 29275374,
+"last_5m": 1832,
+"last_1h": 19786,
+"last_24h": 543225,
+"distinct_ideas": 25819149,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19277007,
+"n": 19277481,
 "pos_rate": 0.342,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -633,6 +633,15 @@
 "since": "2026-10-05"
 },
 {
+"family": "compression_break_matched_exposure",
+"n": 9584,
+"pos_rate": 0.592,
+"best_pm": 1.31,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-06"
+},
+{
 "family": "stale_high_break_demeaned",
 "n": 8761,
 "pos_rate": 0.275,
@@ -667,15 +676,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-05"
-},
-{
-"family": "compression_break_matched_exposure",
-"n": 7727,
-"pos_rate": 0.579,
-"best_pm": 1.31,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-06"
 },
 {
 "family": "event_drift",
@@ -1156,8 +1156,8 @@
 },
 {
 "family": "rebalance_size",
-"n": 952,
-"pos_rate": 0.415,
+"n": 953,
+"pos_rate": 0.414,
 "best_pm": 0.45,
 "best_dsr": 0.0,
 "passed": 0,
@@ -1472,9 +1472,9 @@
 {
 "family": "compression_break_matched_exposure",
 "bar": "15m",
-"n": 2523,
+"n": 2543,
 "best_pm": 1.31,
-"pos_rate": 0.546
+"pos_rate": 0.549
 },
 {
 "family": "compression_break_matched_exposure",
@@ -1486,23 +1486,23 @@
 {
 "family": "compression_break_matched_exposure",
 "bar": "1m",
-"n": 850,
+"n": 1154,
 "best_pm": 1.05,
-"pos_rate": 0.611
+"pos_rate": 0.601
 },
 {
 "family": "compression_break_matched_exposure",
 "bar": "30s",
-"n": 1391,
+"n": 2499,
 "best_pm": 1.3,
-"pos_rate": 0.671
+"pos_rate": 0.652
 },
 {
 "family": "compression_break_matched_exposure",
 "bar": "5m",
-"n": 2521,
+"n": 2541,
 "best_pm": 1.16,
-"pos_rate": 0.626
+"pos_rate": 0.628
 },
 {
 "family": "decorrelated_break_sleeves",
@@ -1682,35 +1682,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 38811,
+"n": 38819,
 "best_pm": 1.7,
 "pos_rate": 0.668
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 67980,
+"n": 67836,
 "best_pm": 1.74,
 "pos_rate": 0.644
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 67789,
+"n": 67653,
 "best_pm": 14.35,
 "pos_rate": 0.378
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 39469,
+"n": 39545,
 "best_pm": 40.81,
 "pos_rate": 0.3
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 39073,
+"n": 39081,
 "best_pm": 2.02,
 "pos_rate": 0.608
 },
@@ -1759,16 +1759,16 @@
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 125,
+"n": 122,
 "best_pm": 0.67,
-"pos_rate": 0.904
+"pos_rate": 0.91
 },
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 189,
+"n": 188,
 "best_pm": 0.61,
-"pos_rate": 0.921
+"pos_rate": 0.92
 },
 {
 "family": "higher_low_staircase",
@@ -2250,6 +2250,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-06T04:09",
+"name": "forced_deleverage_refill",
+"status": "rejected",
+"rationale": "Payer: vol-target and VaR-constrained funds that must cut gross after a volatility spike regardless of view. Once short-window realised vol has peaked and starts to roll over, the forced selling (or short covering) is spent, so I take the other side of it.\nEntry is when vol is al",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-10-06T03:38",
 "name": "compression_break_matched_exposure",
 "status": "accepted",
@@ -2325,27 +2332,9 @@
 "status": "rejected",
 "rationale": "Payer: range-top sellers and short-vol faders who are forced to cover when a break comes out of compression. The compression-break leg is long and the uncompressed-break leg is short, with the same hold, so the constant-long beta cancels. Only the value of compression timing is l",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-05T22:01",
-"name": "midpoint_compression_break",
-"status": "rejected",
-"rationale": "Payer: range-top sellers and short-vol faders who must cover when price closes out of a range that had compressed. The position is held until price falls back through the range midpoint, so the exit is a structural failure of the break and not a fixed hold.\nRATIONALE: The two-sid",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1791087162.349687,
-"total": 28227834,
-"per_min": 406.0,
-"cpu": 30.2,
-"gpu": 93,
-"free_gb": 149.9,
-"dsr_bar": 6.45,
-"best_pm_1h": 17.6,
-"distinct": 24774029
-},
 {
 "t": 1791087505.884353,
 "total": 28228218,
@@ -7900,6 +7889,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 1.52,
 "distinct": 25817165
+},
+{
+"t": 1791260009.040886,
+"total": 29275374,
+"per_min": 366.0,
+"cpu": 3.6,
+"gpu": 0,
+"free_gb": 117.4,
+"dsr_bar": 6.42,
+"best_pm_1h": 1.52,
+"distinct": 25819149
 }
 ],
 "instrument": "XAUUSD",
