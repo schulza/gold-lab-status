@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-06 18:58:00 UTC",
+"generated_at": "2026-10-06 19:03:44 UTC",
 "host": {
-"cpu_pct": 29.7,
-"gpu_pct": 56,
-"free_gb": 142.3,
-"uptime": "up 7 days,  3:43, 2 users, load averages: 10.58 11.07 10.67",
-"load": "{ 10.58 11.07 10.67 }"
+"cpu_pct": 30.9,
+"gpu_pct": 75,
+"free_gb": 128.6,
+"uptime": "up 7 days,  3:49, 2 users, load averages: 12.78 12.09 11.27",
+"load": "{ 12.78 12.09 11.27 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-06T20:51:35",
-"it": 166400,
+"ts": "2026-10-06T21:02:54",
+"it": 166600,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.14,
+"pbo": 0.21,
 "best_family": "gated",
-"best_pm": 1.09,
-"best_params": "{'base': 'trailing_peak_hold', 'base_params': {'days': 117, 'k': 7.56, 'mdays': 14}, 'mode': 'vol_below', 'vol_window': 567, 'vol_pct': 0.839}",
+"best_pm": 1.31,
+"best_params": "{'base': 'average_price_benchmark_pull', 'base_params': {'exit': 'touch', 'k': 2.5, 'period': 'week', 'phase': 0.438, 'sign': 1, 'vol_days': 7}, 'mode': 'spread",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-06T20:55:35",
-"it": 137600,
-"bar": "30s",
-"batch": 9,
+"ts": "2026-10-06T21:03:44",
+"it": 137626,
+"bar": "15m",
+"batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.0,
+"pbo": 0.07,
 "best_family": "gated",
-"best_pm": 0.51,
-"best_params": "{'base': 'heavy_day_concession', 'base_params': {'base': 8, 'hold': 2, 'k': 1.03, 'sign': 1, 'theta': 1.31}, 'mode': 'session', 'start_hour': 10, 'hold_hours': ",
-"mix": "gat8/lag1",
+"best_pm": 0.95,
+"best_params": "{'base': 'disposition_overhang', 'base_params': {'days': 3, 'exit': 0.334, 'k': 0.8, 'side': 'long', 'sign': 1}, 'mode': 'spread_below', 'vol_window': 685, 'vol",
+"mix": "gat8",
 "queue_s": 7.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 29491250,
-"last_5m": 2222,
-"last_1h": 14529,
-"last_24h": 434152,
-"distinct_ideas": 26034522,
+"total": 29493376,
+"last_5m": 2227,
+"last_1h": 15307,
+"last_24h": 434823,
+"distinct_ideas": 26036737,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19473929,
+"n": 19475662,
 "pos_rate": 0.344,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -553,7 +553,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 10791,
+"n": 10795,
 "pos_rate": 0.901,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -571,7 +571,7 @@
 },
 {
 "family": "range_expansion_hold",
-"n": 10583,
+"n": 10584,
 "pos_rate": 0.955,
 "best_pm": 1.06,
 "best_dsr": 0.0,
@@ -786,6 +786,15 @@
 "since": "2026-10-01"
 },
 {
+"family": "lagged_shock_repricing",
+"n": 5436,
+"pos_rate": 0.067,
+"best_pm": 0.76,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-06"
+},
+{
 "family": "absorbed_flow_release",
 "n": 5302,
 "pos_rate": 0.29,
@@ -793,15 +802,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-01"
-},
-{
-"family": "lagged_shock_repricing",
-"n": 5039,
-"pos_rate": 0.062,
-"best_pm": 0.76,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-06"
 },
 {
 "family": "accumulator_knockout_flow",
@@ -1560,51 +1560,51 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 45771,
+"n": 45809,
 "best_pm": 3.51,
 "pos_rate": 0.665
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 75030,
+"n": 75785,
 "best_pm": 1.74,
 "pos_rate": 0.642
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 74904,
+"n": 75703,
 "best_pm": 16.8,
-"pos_rate": 0.38
+"pos_rate": 0.379
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 46032,
+"n": 46057,
 "best_pm": 40.81,
 "pos_rate": 0.297
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 45820,
+"n": 45835,
 "best_pm": 2.16,
 "pos_rate": 0.61
 },
 {
 "family": "giveback_break_matched",
 "bar": "15m",
-"n": 1108,
+"n": 755,
 "best_pm": 0.86,
-"pos_rate": 0.625
+"pos_rate": 0.648
 },
 {
 "family": "giveback_break_matched",
 "bar": "1h",
-"n": 2032,
-"best_pm": 0.88,
-"pos_rate": 0.591
+"n": 1658,
+"best_pm": 0.84,
+"pos_rate": 0.558
 },
 {
 "family": "giveback_break_matched",
@@ -1616,23 +1616,23 @@
 {
 "family": "giveback_break_matched",
 "bar": "30s",
-"n": 1474,
+"n": 1045,
 "best_pm": 1.02,
-"pos_rate": 0.653
+"pos_rate": 0.681
 },
 {
 "family": "giveback_break_matched",
 "bar": "5m",
-"n": 222,
-"best_pm": 0.79,
-"pos_rate": 0.743
+"n": 27,
+"best_pm": 0.77,
+"pos_rate": 0.815
 },
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 173,
+"n": 174,
 "best_pm": 0.6,
-"pos_rate": 0.965
+"pos_rate": 0.966
 },
 {
 "family": "higher_low_staircase",
@@ -1644,9 +1644,9 @@
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 153,
+"n": 156,
 "best_pm": 0.61,
-"pos_rate": 0.889
+"pos_rate": 0.891
 },
 {
 "family": "higher_low_staircase",
@@ -1672,21 +1672,21 @@
 {
 "family": "lagged_shock_repricing",
 "bar": "1h",
-"n": 869,
+"n": 1066,
 "best_pm": 0.75,
-"pos_rate": 0.133
+"pos_rate": 0.143
 },
 {
 "family": "lagged_shock_repricing",
 "bar": "1m",
-"n": 869,
-"best_pm": -0.48,
-"pos_rate": 0.001
+"n": 1066,
+"best_pm": 0.45,
+"pos_rate": 0.019
 },
 {
 "family": "lagged_shock_repricing",
 "bar": "30s",
-"n": 1079,
+"n": 1087,
 "best_pm": 0.39,
 "pos_rate": 0.011
 },
@@ -1798,9 +1798,9 @@
 {
 "family": "range_expansion_hold",
 "bar": "1h",
-"n": 13,
-"best_pm": 0.59,
-"pos_rate": 0.615
+"n": 14,
+"best_pm": 0.66,
+"pos_rate": 0.643
 },
 {
 "family": "range_expansion_hold",
@@ -1924,7 +1924,7 @@
 {
 "family": "thin_break_timing",
 "bar": "1m",
-"n": 3400,
+"n": 3383,
 "best_pm": 0.9,
 "pos_rate": 0.774
 },
@@ -1945,6 +1945,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-10-06T19:01",
+"name": "vol_exhaustion_refill",
+"status": "rejected",
+"rationale": "Payer: vol-target and VaR-constrained funds that must cut gold after a realised-vol spike, whatever their view. We buy the exhaustion of that forced selling (the mirror for forced short-covering in `both` mode) and exit once short-term vol normalises relative to long-term vol.\nTh",
+"note": "sandbox: NameError: name 'FAMILIES' is not defined"
+},
 {
 "ts": "2026-10-06T18:30",
 "name": "lagged_shock_repricing",
@@ -2021,27 +2028,9 @@
 "status": "rejected",
 "rationale": "Payer is vol-target and VaR-constrained funds that must cut gold after a vol spike, whatever their view. They sell into the down-move and leave the price oversold. We buy once fast vol has rolled over from its peak but is still above normal, and exit when realised vol normalises ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-06T12:52",
-"name": "forced_deleverage_refill",
-"status": "rejected",
-"rationale": "Payer is vol-target and VaR-constrained funds that must cut gold exposure mechanically after a realised-vol spike, regardless of view. Their forced selling pushes price below fair value, and once vol rolls over from its peak the pressure is spent. The family buys that exhaustion ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1791140425.552489,
-"total": 28505067,
-"per_min": 209.0,
-"cpu": 25.1,
-"gpu": 92,
-"free_gb": 158.0,
-"dsr_bar": 6.44,
-"best_pm_1h": 8.45,
-"distinct": 25050220
-},
 {
 "t": 1791140772.88973,
 "total": 28505139,
@@ -7596,6 +7585,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 19.34,
 "distinct": 26034522
+},
+{
+"t": 1791313424.704032,
+"total": 29493376,
+"per_min": 445.0,
+"cpu": 30.9,
+"gpu": 75,
+"free_gb": 128.6,
+"dsr_bar": 6.42,
+"best_pm_1h": 19.34,
+"distinct": 26036737
 }
 ],
 "instrument": "XAUUSD",
