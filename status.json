@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-06 20:24:29 UTC",
+"generated_at": "2026-10-06 20:30:07 UTC",
 "host": {
-"cpu_pct": 9.4,
-"gpu_pct": 1,
-"free_gb": 115.1,
-"uptime": "up 7 days,  5:10, 2 users, load averages: 6.50 6.48 7.87",
-"load": "{ 6.50 6.48 7.87 }"
+"cpu_pct": 30.2,
+"gpu_pct": 74,
+"free_gb": 128.1,
+"uptime": "up 7 days,  5:16, 2 users, load averages: 9.83 8.32 8.24",
+"load": "{ 9.83 8.32 8.24 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-06T22:24:14",
-"it": 167760,
+"ts": "2026-10-06T22:25:58",
+"it": 167800,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.29,
+"pbo": 0.71,
 "best_family": "gated",
-"best_pm": 0.88,
-"best_params": "{'base': 'shakeout_reclaim', 'base_params': {'hold': 2, 'k': 0.843, 'r': 7, 'side': 'long', 'sign': 1, 'span': 5}, 'mode': 'vol_above', 'vol_window': 60, 'vol_p",
+"best_pm": 0.53,
+"best_params": "{'base': 'higher_low_staircase', 'base_params': {'days': 2, 'exit': 1, 'k': 0.00299, 'm': 5}, 'mode': 'spread_below', 'vol_window': 240, 'vol_pct': 0.5}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-06T22:24:28",
-"it": 138712,
-"bar": "15m",
+"ts": "2026-10-06T22:27:15",
+"it": 138800,
+"bar": "30s",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.75,
+"pbo": 0.07,
 "best_family": "gated",
-"best_pm": 0.56,
-"best_params": "{'base': 'liquid_range_break_hold', 'base_params': {'days': 8, 'exit': 1, 'sdays': 4, 'sp': 1.07}, 'mode': 'tick_above', 'vol_window': 60, 'vol_pct': 0.3}",
+"best_pm": 0.58,
+"best_params": "{'base': 'spread_excess_refund', 'base_params': {'d': 1, 'hold': 1, 'k': 0.257, 'sign': -1, 'theta': 1.15}, 'mode': 'session', 'start_hour': 16, 'hold_hours': 6",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 29511172,
-"last_5m": 1214,
-"last_1h": 12017,
-"last_24h": 418912,
-"distinct_ideas": 26054439,
+"total": 29512628,
+"last_5m": 1030,
+"last_1h": 12235,
+"last_24h": 412601,
+"distinct_ideas": 26055879,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19493342,
+"n": 19494782,
 "pos_rate": 0.344,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -553,7 +553,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 10832,
+"n": 10840,
 "pos_rate": 0.901,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1560,65 +1560,65 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 48018,
+"n": 48122,
 "best_pm": 3.51,
 "pos_rate": 0.665
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 78545,
+"n": 78464,
 "best_pm": 1.74,
 "pos_rate": 0.642
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 78565,
+"n": 78477,
 "best_pm": 16.8,
 "pos_rate": 0.379
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 48239,
+"n": 48343,
 "best_pm": 40.81,
 "pos_rate": 0.297
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 48040,
+"n": 48151,
 "best_pm": 2.16,
 "pos_rate": 0.61
 },
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 180,
+"n": 182,
 "best_pm": 0.68,
-"pos_rate": 0.961
+"pos_rate": 0.962
 },
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 163,
+"n": 164,
 "best_pm": 0.67,
 "pos_rate": 0.896
 },
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 162,
+"n": 163,
 "best_pm": 0.61,
-"pos_rate": 0.895
+"pos_rate": 0.896
 },
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 162,
+"n": 163,
 "best_pm": 0.6,
-"pos_rate": 0.901
+"pos_rate": 0.902
 },
 {
 "family": "higher_low_staircase",
@@ -1679,72 +1679,65 @@
 {
 "family": "margin_break_demeaned",
 "bar": "15m",
-"n": 782,
-"best_pm": 0.82,
-"pos_rate": 0.71
-},
-{
-"family": "margin_break_demeaned",
-"bar": "1h",
-"n": 1027,
-"best_pm": 0.55,
-"pos_rate": 0.7
+"n": 222,
+"best_pm": 0.75,
+"pos_rate": 0.671
 },
 {
 "family": "margin_break_demeaned",
 "bar": "1m",
-"n": 1342,
-"best_pm": 0.85,
-"pos_rate": 0.456
+"n": 162,
+"best_pm": 0.71,
+"pos_rate": 0.444
 },
 {
 "family": "margin_break_demeaned",
 "bar": "30s",
-"n": 1442,
+"n": 1085,
 "best_pm": 0.5,
-"pos_rate": 0.356
+"pos_rate": 0.355
 },
 {
 "family": "margin_break_demeaned",
 "bar": "5m",
-"n": 683,
-"best_pm": 0.98,
-"pos_rate": 0.707
+"n": 74,
+"best_pm": 0.95,
+"pos_rate": 0.703
 },
 {
 "family": "narrowest_box_break_matched",
 "bar": "15m",
-"n": 2647,
-"best_pm": 0.81,
-"pos_rate": 0.577
+"n": 2076,
+"best_pm": 0.76,
+"pos_rate": 0.566
 },
 {
 "family": "narrowest_box_break_matched",
 "bar": "1h",
-"n": 2241,
+"n": 2049,
 "best_pm": 0.82,
-"pos_rate": 0.499
+"pos_rate": 0.495
 },
 {
 "family": "narrowest_box_break_matched",
 "bar": "1m",
-"n": 2284,
+"n": 2048,
 "best_pm": 0.86,
-"pos_rate": 0.719
+"pos_rate": 0.714
 },
 {
 "family": "narrowest_box_break_matched",
 "bar": "30s",
-"n": 2731,
-"best_pm": 0.87,
-"pos_rate": 0.784
+"n": 2363,
+"best_pm": 0.83,
+"pos_rate": 0.781
 },
 {
 "family": "narrowest_box_break_matched",
 "bar": "5m",
-"n": 2662,
-"best_pm": 1.02,
-"pos_rate": 0.653
+"n": 2054,
+"best_pm": 0.95,
+"pos_rate": 0.646
 },
 {
 "family": "portfolio",
@@ -1770,7 +1763,7 @@
 {
 "family": "range_expansion_hold",
 "bar": "1m",
-"n": 26,
+"n": 25,
 "best_pm": 0.71,
 "pos_rate": 1.0
 },
@@ -1875,23 +1868,23 @@
 {
 "family": "thin_break_timing",
 "bar": "15m",
-"n": 1419,
-"best_pm": 0.78,
-"pos_rate": 0.829
+"n": 1128,
+"best_pm": 0.66,
+"pos_rate": 0.827
 },
 {
 "family": "thin_break_timing",
 "bar": "30s",
-"n": 1811,
+"n": 1609,
 "best_pm": 0.69,
 "pos_rate": 0.705
 },
 {
 "family": "thin_break_timing",
 "bar": "5m",
-"n": 1283,
+"n": 1019,
 "best_pm": 0.83,
-"pos_rate": 0.834
+"pos_rate": 0.829
 }
 ]
 },
@@ -1982,17 +1975,6 @@
 }
 ],
 "history": [
-{
-"t": 1791145562.702177,
-"total": 28547935,
-"per_min": 2204.0,
-"cpu": 17.6,
-"gpu": 0,
-"free_gb": 133.9,
-"dsr_bar": 6.44,
-"best_pm_1h": 16.56,
-"distinct": 25093023
-},
 {
 "t": 1791145902.344954,
 "total": 28552282,
@@ -7547,6 +7529,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 1.58,
 "distinct": 26054439
+},
+{
+"t": 1791318607.168913,
+"total": 29512628,
+"per_min": 206.0,
+"cpu": 30.2,
+"gpu": 74,
+"free_gb": 128.1,
+"dsr_bar": 6.42,
+"best_pm_1h": 1.58,
+"distinct": 26055879
 }
 ],
 "instrument": "XAUUSD",
