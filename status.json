@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-06 23:06:06 UTC",
+"generated_at": "2026-10-06 23:11:59 UTC",
 "host": {
-"cpu_pct": 31.6,
-"gpu_pct": 0,
-"free_gb": 142.2,
-"uptime": "up 7 days,  7:51, 2 users, load averages: 11.44 10.14 9.31",
-"load": "{ 11.44 10.14 9.31 }"
+"cpu_pct": 20.7,
+"gpu_pct": 67,
+"free_gb": 138.5,
+"uptime": "up 7 days,  7:57, 2 users, load averages: 12.22 10.95 9.94",
+"load": "{ 12.22 10.95 9.94 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-07T01:06:05",
-"it": 170138,
+"ts": "2026-10-07T01:07:15",
+"it": 170200,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.79,
+"pbo": 0.32,
 "best_family": "gated",
 "best_pm": 0.75,
-"best_params": "{'base': 'participation_break_hold', 'base_params': {'days': 13, 'k': 0.7, 'mdays': 1}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 20, 'vol_scale': 0.2, 'vs_wind",
+"best_params": "{'base': 'thin_break_timing', 'base_params': {'days': 13, 'ex': 0.712, 'mdays': 17, 'r': 1.51}, 'mode': 'vol_below', 'vol_window': 240, 'vol_pct': 0.7}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-07T01:05:10",
-"it": 140801,
-"bar": "30s",
+"ts": "2026-10-07T01:11:30",
+"it": 141000,
+"bar": "5m",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.61,
+"pbo": 0.39,
 "best_family": "gated",
-"best_pm": 0.44,
-"best_params": "{'base': 'stepped_bid_accumulation', 'base_params': {'hold': 1, 'k': 1.73, 'n': 2, 'rho': 0.395, 'sign': 1}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 146, 'vol",
+"best_pm": 7.02,
+"best_params": "{'base': 'trapped_fader_squeeze', 'base_params': {'confirm': 2, 'hold': 317, 'lookback': 1124, 'pen': 0.743, 'sign': -1, 'trap': 5}, 'mode': 'htf_with', 'htf': ",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 29547136,
-"last_5m": 964,
-"last_1h": 10592,
-"last_24h": 386668,
-"distinct_ideas": 26090428,
+"total": 29549386,
+"last_5m": 2089,
+"last_1h": 12601,
+"last_24h": 388845,
+"distinct_ideas": 26092709,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19529182,
+"n": 19531422,
 "pos_rate": 0.345,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -544,7 +544,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 10929,
+"n": 10939,
 "pos_rate": 0.902,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1392,16 +1392,16 @@
 {
 "family": "close_channel_retrace_demeaned",
 "bar": "1h",
-"n": 3032,
+"n": 3034,
 "best_pm": 0.89,
 "pos_rate": 0.894
 },
 {
 "family": "close_channel_retrace_demeaned",
 "bar": "1m",
-"n": 2979,
+"n": 3033,
 "best_pm": 0.93,
-"pos_rate": 0.452
+"pos_rate": 0.454
 },
 {
 "family": "close_channel_retrace_demeaned",
@@ -1525,51 +1525,51 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 49769,
+"n": 50305,
 "best_pm": 3.51,
 "pos_rate": 0.666
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 81106,
+"n": 81354,
 "best_pm": 1.61,
 "pos_rate": 0.642
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 81072,
+"n": 81336,
 "best_pm": 16.8,
 "pos_rate": 0.378
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 49862,
+"n": 50390,
 "best_pm": 40.81,
 "pos_rate": 0.297
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 49802,
+"n": 50338,
 "best_pm": 2.16,
 "pos_rate": 0.608
 },
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 198,
+"n": 201,
 "best_pm": 0.68,
 "pos_rate": 0.97
 },
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 174,
+"n": 176,
 "best_pm": 0.67,
-"pos_rate": 0.908
+"pos_rate": 0.909
 },
 {
 "family": "higher_low_staircase",
@@ -1581,16 +1581,16 @@
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 170,
+"n": 171,
 "best_pm": 0.6,
-"pos_rate": 0.894
+"pos_rate": 0.895
 },
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 158,
+"n": 161,
 "best_pm": 0.64,
-"pos_rate": 0.968
+"pos_rate": 0.969
 },
 {
 "family": "lagged_shock_repricing",
@@ -1764,6 +1764,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-06T23:08",
+"name": "vol_deleverage_exhaustion",
+"status": "rejected",
+"rationale": "Payer is vol-target and VaR-constrained funds that cut gold exposure mechanically after a short-horizon vol spike, whatever their view. The price impact of that forced selling is non-informational and gets refilled once the selling is exhausted.\nRATIONALE: Long only after a downs",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-10-06T22:37",
 "name": "vol_refill_exhaustion",
 "status": "rejected",
@@ -1839,27 +1846,9 @@
 "status": "rejected",
 "rationale": "Payer: rate hedgers and benchmark-constrained gold allocators who reprice gold only days after 10y TIPS yields move. When gold has not yet followed a large yield move, the late repricing is paid to us. This is one daily family with 108 signatures.\nRATIONALE: Entry needs a yield c",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-10-06T16:58",
-"name": "forced_deleverage_refill",
-"status": "accepted",
-"rationale": "Payer: vol-target and VaR-constrained funds that must cut gold after a vol spike regardless of view. The signal buys (or, in `both`, sells) only once vol has peaked and starts to recede, and exits when vol normalises.\nRATIONALE: Earlier attempts came back \"identically zero\" becau",
-"note": "{\"name\": \"forced_deleverage_refill\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.47325}"
 }
 ],
 "history": [
-{
-"t": 1791155381.066647,
-"total": 28613199,
-"per_min": 222.0,
-"cpu": 34.4,
-"gpu": 91,
-"free_gb": 121.8,
-"dsr_bar": 6.44,
-"best_pm_1h": 1.6,
-"distinct": 25158224
-},
 {
 "t": 1791155727.133631,
 "total": 28614097,
@@ -7403,6 +7392,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 23.3,
 "distinct": 26090428
+},
+{
+"t": 1791328319.435524,
+"total": 29549386,
+"per_min": 418.0,
+"cpu": 20.7,
+"gpu": 67,
+"free_gb": 138.5,
+"dsr_bar": 6.42,
+"best_pm_1h": 23.3,
+"distinct": 26092709
 }
 ],
 "instrument": "XAUUSD",
