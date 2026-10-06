@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-06 20:30:07 UTC",
+"generated_at": "2026-10-06 20:35:53 UTC",
 "host": {
-"cpu_pct": 30.2,
-"gpu_pct": 74,
-"free_gb": 128.1,
-"uptime": "up 7 days,  5:16, 2 users, load averages: 9.83 8.32 8.24",
-"load": "{ 9.83 8.32 8.24 }"
+"cpu_pct": 32.4,
+"gpu_pct": 93,
+"free_gb": 134.9,
+"uptime": "up 7 days,  5:21, 2 users, load averages: 12.39 10.40 9.20",
+"load": "{ 12.39 10.40 9.20 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-06T22:25:58",
-"it": 167800,
-"bar": "1h",
+"ts": "2026-10-06T22:35:28",
+"it": 167923,
+"bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.71,
+"pbo": 0.04,
 "best_family": "gated",
-"best_pm": 0.53,
-"best_params": "{'base': 'higher_low_staircase', 'base_params': {'days': 2, 'exit': 1, 'k': 0.00299, 'm': 5}, 'mode': 'spread_below', 'vol_window': 240, 'vol_pct': 0.5}",
+"best_pm": 0.89,
+"best_params": "{'base': 'heavy_day_concession', 'base_params': {'base': 6, 'hold': 2, 'k': 1.01, 'sign': 1, 'theta': 1.17}, 'mode': 'session', 'start_hour': 8, 'hold_hours': 6",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-06T22:27:15",
-"it": 138800,
-"bar": "30s",
+"ts": "2026-10-06T22:35:52",
+"it": 138802,
+"bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.07,
+"pbo": 0.21,
 "best_family": "gated",
-"best_pm": 0.58,
-"best_params": "{'base': 'spread_excess_refund', 'base_params': {'d': 1, 'hold': 1, 'k': 0.257, 'sign': -1, 'theta': 1.15}, 'mode': 'session', 'start_hour': 16, 'hold_hours': 6",
+"best_pm": 0.81,
+"best_params": "{'base': 'vwap_dwell_hold', 'base_params': {'days': 4.04, 'exit': 0.368, 'thr': 0.642, 'vwin_h': 14}, 'mode': 'spread_below', 'vol_window': 60, 'vol_pct': 0.5}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 29512628,
-"last_5m": 1030,
-"last_1h": 12235,
-"last_24h": 412601,
-"distinct_ideas": 26055879,
+"total": 29513535,
+"last_5m": 979,
+"last_1h": 10778,
+"last_24h": 413092,
+"distinct_ideas": 26056842,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19494782,
+"n": 19495686,
 "pos_rate": 0.344,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -553,7 +553,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 10840,
+"n": 10842,
 "pos_rate": 0.901,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1255,8 +1255,8 @@
 },
 {
 "family": "real_yield_trend",
-"n": 225,
-"pos_rate": 0.551,
+"n": 226,
+"pos_rate": 0.549,
 "best_pm": 0.49,
 "best_dsr": 0.0,
 "passed": 0,
@@ -1560,35 +1560,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 48122,
+"n": 48114,
 "best_pm": 3.51,
 "pos_rate": 0.665
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 78464,
+"n": 78928,
 "best_pm": 1.74,
 "pos_rate": 0.642
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 78477,
+"n": 78945,
 "best_pm": 16.8,
 "pos_rate": 0.379
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 48343,
+"n": 48335,
 "best_pm": 40.81,
 "pos_rate": 0.297
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 48151,
+"n": 48135,
 "best_pm": 2.16,
 "pos_rate": 0.61
 },
@@ -1602,9 +1602,9 @@
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 164,
+"n": 166,
 "best_pm": 0.67,
-"pos_rate": 0.896
+"pos_rate": 0.898
 },
 {
 "family": "higher_low_staircase",
@@ -1679,37 +1679,30 @@
 {
 "family": "margin_break_demeaned",
 "bar": "15m",
-"n": 222,
+"n": 189,
 "best_pm": 0.75,
-"pos_rate": 0.671
-},
-{
-"family": "margin_break_demeaned",
-"bar": "1m",
-"n": 162,
-"best_pm": 0.71,
-"pos_rate": 0.444
+"pos_rate": 0.672
 },
 {
 "family": "margin_break_demeaned",
 "bar": "30s",
-"n": 1085,
+"n": 1065,
 "best_pm": 0.5,
-"pos_rate": 0.355
+"pos_rate": 0.353
 },
 {
 "family": "margin_break_demeaned",
 "bar": "5m",
-"n": 74,
-"best_pm": 0.95,
-"pos_rate": 0.703
+"n": 4,
+"best_pm": 0.18,
+"pos_rate": 1.0
 },
 {
 "family": "narrowest_box_break_matched",
 "bar": "15m",
-"n": 2076,
+"n": 2050,
 "best_pm": 0.76,
-"pos_rate": 0.566
+"pos_rate": 0.565
 },
 {
 "family": "narrowest_box_break_matched",
@@ -1728,7 +1721,7 @@
 {
 "family": "narrowest_box_break_matched",
 "bar": "30s",
-"n": 2363,
+"n": 2332,
 "best_pm": 0.83,
 "pos_rate": 0.781
 },
@@ -1784,9 +1777,9 @@
 {
 "family": "real_yield_trend",
 "bar": "1h",
-"n": 4,
+"n": 5,
 "best_pm": 0.18,
-"pos_rate": 0.5
+"pos_rate": 0.4
 },
 {
 "family": "rebalance_size",
@@ -1868,27 +1861,34 @@
 {
 "family": "thin_break_timing",
 "bar": "15m",
-"n": 1128,
-"best_pm": 0.66,
-"pos_rate": 0.827
+"n": 1110,
+"best_pm": 0.65,
+"pos_rate": 0.825
 },
 {
 "family": "thin_break_timing",
 "bar": "30s",
-"n": 1609,
+"n": 1598,
 "best_pm": 0.69,
 "pos_rate": 0.705
 },
 {
 "family": "thin_break_timing",
 "bar": "5m",
-"n": 1019,
+"n": 978,
 "best_pm": 0.83,
 "pos_rate": 0.829
 }
 ]
 },
 "generated": [
+{
+"ts": "2026-10-06T20:34",
+"name": "vol_target_cut_exhaustion",
+"status": "rejected",
+"rationale": "I can't write the real-yield family. `ALLOWED_MODULES` in `goldlab/evolve.py:46` has no `goldlab.external`, so the AST check rejects the import. This is why both earlier external-data attempts failed with \"import not allowed\", even though the prompt contract allows it.\nRATIONALE:",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
 {
 "ts": "2026-10-06T20:03",
 "name": "vol_collapse_relever",
@@ -1965,27 +1965,9 @@
 "status": "rejected",
 "rationale": "Payer is rate hedgers and allocators who reprice gold only days after 10y TIPS yields move. When the real yield moves and gold has not yet followed by more than f sigma, I take gold in the direction implied by the yield.\nExits when the yield move decays to `exit` times its entry ",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-10-06T14:25",
-"name": "forced_deleverage_refill",
-"status": "rejected",
-"rationale": "Payer is vol-target and VaR-constrained funds. A short/long realised-vol ratio spike forces them to cut size on the losing side regardless of view. The position is a contrarian refill taken once the ratio turns down, and it exits when vol normalises.\nRATIONALE: This is a daily st",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1791145902.344954,
-"total": 28552282,
-"per_min": 949.0,
-"cpu": 53.4,
-"gpu": 90,
-"free_gb": 103.4,
-"dsr_bar": 6.44,
-"best_pm_1h": 16.56,
-"distinct": 25098103
-},
 {
 "t": 1791146228.1632562,
 "total": 28553859,
@@ -7540,6 +7522,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 1.58,
 "distinct": 26055879
+},
+{
+"t": 1791318953.45655,
+"total": 29513535,
+"per_min": 196.0,
+"cpu": 32.4,
+"gpu": 93,
+"free_gb": 134.9,
+"dsr_bar": 6.42,
+"best_pm_1h": 1.58,
+"distinct": 26056842
 }
 ],
 "instrument": "XAUUSD",
