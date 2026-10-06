@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-06 08:42:10 UTC",
+"generated_at": "2026-10-06 08:47:35 UTC",
 "host": {
-"cpu_pct": 28.2,
-"gpu_pct": 87,
-"free_gb": 127.7,
-"uptime": "up 6 days, 17:28, 2 users, load averages: 9.56 8.53 8.01",
-"load": "{ 9.56 8.53 8.01 }"
+"cpu_pct": 0.7,
+"gpu_pct": 0,
+"free_gb": 118.8,
+"uptime": "up 6 days, 17:33, 2 users, load averages: 6.43 9.45 8.78",
+"load": "{ 6.43 9.45 8.78 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-06T10:35:47",
-"it": 158000,
+"ts": "2026-10-06T10:46:20",
+"it": 158180,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.11,
+"pbo": 0.46,
 "best_family": "gated",
-"best_pm": 0.76,
-"best_params": "{'base': 'demeaned_break_book', 'base_params': {'c': 0.211, 'days': 10, 'ex': 0.777, 'lm': 12, 'mdays': 15, 'mode': 'both'}, 'mode': 'tick_above', 'vol_window':",
+"best_pm": 0.53,
+"best_params": "{'base': 'sge_benchmark_flow', 'base_params': {'fix': 'both', 'hold': 259, 'k': 1.51, 'pre': 70, 'sign': 1}, 'mode': 'tick_above', 'vol_window': 232, 'vol_pct':",
 "mix": "gat8",
-"queue_s": 8.0
+"queue_s": 7.0
 },
 "events": []
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-06T10:36:58",
-"it": 129400,
-"bar": "15m",
+"ts": "2026-10-06T10:46:20",
+"it": 129419,
+"bar": "30s",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.21,
+"pbo": 0.04,
 "best_family": "gated",
-"best_pm": 0.54,
-"best_params": "{'base': 'breakeven_retest', 'base_params': {'ext': 9.48, 'hold': 21, 'lookback': 37, 'sign': -1}, 'mode': 'htf_against', 'htf': '1h', 'sma_n': 50}",
+"best_pm": 0.52,
+"best_params": "{'base': 'fix_flow_reversal', 'base_params': {'fix': 'am', 'hold': 172, 'k': 1.59, 'pre': 15, 'sign': -1}, 'mode': 'tick_above', 'vol_window': 240, 'vol_pct': 0",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 29343198,
-"last_5m": 160,
-"last_1h": 12818,
-"last_24h": 516033,
-"distinct_ideas": 25886973,
+"total": 29344778,
+"last_5m": 1580,
+"last_1h": 12667,
+"last_24h": 510617,
+"distinct_ideas": 25888553,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19340754,
+"n": 19342330,
 "pos_rate": 0.343,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -589,7 +589,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 10427,
+"n": 10431,
 "pos_rate": 0.901,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1612,37 +1612,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 41053,
+"n": 40803,
 "best_pm": 1.7,
 "pos_rate": 0.668
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 70670,
+"n": 71046,
 "best_pm": 1.74,
 "pos_rate": 0.643
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 70563,
+"n": 70947,
 "best_pm": 15.82,
 "pos_rate": 0.379
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 41557,
+"n": 41355,
 "best_pm": 40.81,
 "pos_rate": 0.298
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 41279,
+"n": 41037,
 "best_pm": 2.16,
-"pos_rate": 0.611
+"pos_rate": 0.61
 },
 {
 "family": "giveback_break_matched",
@@ -1689,16 +1689,16 @@
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 130,
+"n": 132,
 "best_pm": 0.67,
-"pos_rate": 0.9
+"pos_rate": 0.902
 },
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 178,
+"n": 180,
 "best_pm": 0.61,
-"pos_rate": 0.938
+"pos_rate": 0.939
 },
 {
 "family": "higher_low_staircase",
@@ -2074,9 +2074,9 @@
 {
 "family": "two_sided_squeeze_book",
 "bar": "15m",
-"n": 1881,
-"best_pm": 1.01,
-"pos_rate": 0.528
+"n": 39,
+"best_pm": 0.42,
+"pos_rate": 0.538
 },
 {
 "family": "two_sided_squeeze_book",
@@ -2095,16 +2095,16 @@
 {
 "family": "two_sided_squeeze_book",
 "bar": "30s",
-"n": 1881,
-"best_pm": 1.19,
-"pos_rate": 0.642
+"n": 79,
+"best_pm": 0.51,
+"pos_rate": 0.57
 },
 {
 "family": "two_sided_squeeze_book",
 "bar": "5m",
-"n": 1881,
-"best_pm": 1.13,
-"pos_rate": 0.651
+"n": 39,
+"best_pm": 0.4,
+"pos_rate": 0.615
 },
 {
 "family": "volburst_break_matched",
@@ -2144,6 +2144,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-10-06T08:46",
+"name": "forced_deleverage_refill",
+"status": "rejected",
+"rationale": "Payer is vol-target and VaR-constrained funds. After a realised-vol spike with a price drop, their mandated cut in gold exposure is forced selling regardless of view, so the price overshoots. The strategy buys only after the vol ratio has peaked (exhaustion) and exits when realis",
+"note": "sandbox: NameError: name 'math' is not defined. Did you forget to import 'math'?"
+},
 {
 "ts": "2026-10-06T08:15",
 "name": "forced_deleverage_refill",
@@ -2220,27 +2227,9 @@
 "status": "rejected",
 "rationale": "Payer is range-top sellers and short-vol faders who have sold a compressed range and must cover on the break. On the downside, the payer is range-bottom buyers who have to puke. Compression is the range of the last quarter-window relative to the full window, measured on bars befo",
 "note": "sandbox: AssertionError: zu speicherhungrig: 45 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-10-06T02:37",
-"name": "exposure_matched_compression",
-"status": "rejected",
-"rationale": "The payer is range-top sellers and short-vol faders who are forced to cover when a compressed range breaks upward. That covering is a timing edge, not a constant long.\nRATIONALE: Position is the long compression-break state minus its own trailing mean exposure (mdays window). A c",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1791103595.6385431,
-"total": 28301437,
-"per_min": 32.0,
-"cpu": 24.3,
-"gpu": 89,
-"free_gb": 138.6,
-"dsr_bar": 6.45,
-"best_pm_1h": 27.91,
-"distinct": 24847632
-},
 {
 "t": 1791103946.084893,
 "total": 28303637,
@@ -7795,6 +7784,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 13.37,
 "distinct": 25886973
+},
+{
+"t": 1791276455.572876,
+"total": 29344778,
+"per_min": 316.0,
+"cpu": 0.7,
+"gpu": 0,
+"free_gb": 118.8,
+"dsr_bar": 6.42,
+"best_pm_1h": 13.37,
+"distinct": 25888553
 }
 ],
 "instrument": "XAUUSD",
