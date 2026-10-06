@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-06 12:18:14 UTC",
+"generated_at": "2026-10-06 12:24:11 UTC",
 "host": {
-"cpu_pct": 32.7,
-"gpu_pct": 51,
-"free_gb": 132.8,
-"uptime": "up 6 days, 21:04, 2 users, load averages: 11.55 10.91 12.10",
-"load": "{ 11.55 10.91 12.10 }"
+"cpu_pct": 13.0,
+"gpu_pct": 0,
+"free_gb": 116.6,
+"uptime": "up 6 days, 21:09, 2 users, load averages: 10.11 12.26 12.48",
+"load": "{ 10.11 12.26 12.48 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-06T14:14:11",
-"it": 161400,
+"ts": "2026-10-06T14:24:06",
+"it": 161460,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.0,
+"pbo": 0.29,
 "best_family": "gated",
-"best_pm": 0.92,
-"best_params": "{'base': 'compression_break_hold', 'base_params': {'c': 0.52, 'days': 5, 'ex': 0.726, 'lm': 8}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 20}",
+"best_pm": -0.4,
+"best_params": "{'base': 'dealer_gamma_hedge_flow', 'base_params': {'hold': 2, 'mode': 'long_gamma', 'n': 15, 'sign': -1, 'theta': 0.232}, 'mode': 'spread_below', 'vol_window':",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-06T14:17:24",
-"it": 132401,
-"bar": "30s",
-"batch": 9,
+"ts": "2026-10-06T14:23:43",
+"it": 132600,
+"bar": "5m",
+"batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.43,
+"pbo": 0.36,
 "best_family": "gated",
-"best_pm": 0.3,
-"best_params": "{'base': 'settle_hedge_momentum', 'base_params': {'entry': -1, 'hold': 48, 'k': 2.48, 'sign': -1}, 'mode': 'tick_above', 'vol_window': 240, 'vol_pct': 0.7, 'g2_",
-"mix": "gat8/hig1",
+"best_pm": 0.78,
+"best_params": "{'base': 'drawdown_derisk_flow', 'base_params': {'d': 11, 'hold': 5, 'k': 1.14, 'side': 'down', 'sign': 1}, 'mode': 'htf_against', 'htf': '1h', 'sma_n': 410}",
+"mix": "gat8",
 "queue_s": 8.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 29394597,
-"last_5m": 729,
-"last_1h": 14460,
-"last_24h": 484767,
-"distinct_ideas": 25938372,
+"total": 29396375,
+"last_5m": 1852,
+"last_1h": 15571,
+"last_24h": 486803,
+"distinct_ideas": 25940150,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19391954,
+"n": 19393730,
 "pos_rate": 0.343,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -562,7 +562,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 10584,
+"n": 10586,
 "pos_rate": 0.901,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1313,7 +1313,7 @@
 "pbo": 0.04
 }
 ],
-"best_pm_1h": 1.67,
+"best_pm_1h": 9.8,
 "heat": [
 {
 "family": "boxbreak_matched",
@@ -1612,37 +1612,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 42367,
+"n": 42903,
 "best_pm": 1.7,
 "pos_rate": 0.667
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 72574,
+"n": 72790,
 "best_pm": 1.74,
 "pos_rate": 0.643
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 72421,
+"n": 72637,
 "best_pm": 15.82,
 "pos_rate": 0.378
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 42756,
+"n": 43284,
 "best_pm": 40.81,
 "pos_rate": 0.297
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 42576,
+"n": 43112,
 "best_pm": 2.16,
-"pos_rate": 0.613
+"pos_rate": 0.612
 },
 {
 "family": "giveback_break_matched",
@@ -1682,16 +1682,16 @@
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 140,
+"n": 141,
 "best_pm": 0.68,
-"pos_rate": 0.964
+"pos_rate": 0.965
 },
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 144,
+"n": 145,
 "best_pm": 0.67,
-"pos_rate": 0.875
+"pos_rate": 0.876
 },
 {
 "family": "higher_low_staircase",
@@ -1703,16 +1703,16 @@
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 140,
+"n": 141,
 "best_pm": 0.6,
 "pos_rate": 0.929
 },
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 112,
+"n": 113,
 "best_pm": 0.64,
-"pos_rate": 0.955
+"pos_rate": 0.956
 },
 {
 "family": "liquid_range_break_hold",
@@ -2040,6 +2040,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-06T12:21",
+"name": "forced_deleverage_refill",
+"status": "rejected",
+"rationale": "Payer: vol-target and VaR-limited funds that must cut gold exposure after a realised-vol spike, whatever their view. They sell into the spike and leave the price below its fair level.\nRATIONALE: Entry is a long once short-horizon vol has fallen off its recent peak but is still el",
+"note": "sandbox: NameError: name 'FAMILIES' is not defined"
+},
+{
 "ts": "2026-10-06T11:50",
 "name": "forced_deleverage_refill",
 "status": "rejected",
@@ -2115,38 +2122,9 @@
 "status": "rejected",
 "rationale": "Payer: rate hedgers and allocators who reprice gold days after a 10y real-yield move. They sell or buy gold late, so a gold move that lags a large yield change gets paid up later.\nSignal: the yield move is large, gold has not moved with it (gold z-score over the same window is be",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-10-06T06:12",
-"name": "forced_deleverage_refill",
-"status": "rejected",
-"rationale": "The payer is vol-target and VaR-constrained funds. After a realised-vol spike they must cut gold exposure whatever their view, so they sell into the drop and buy back after the spike.\nRATIONALE: The strategy enters against the spike's direction once short-window vol has fallen fr",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1791116305.318507,
-"total": 28360962,
-"per_min": 416.0,
-"cpu": 37.2,
-"gpu": 100,
-"free_gb": 129.0,
-"dsr_bar": 6.45,
-"best_pm_1h": 15.11,
-"distinct": 24907253
-},
-{
-"t": 1791116641.997538,
-"total": 28362242,
-"per_min": 206.0,
-"cpu": 32.0,
-"gpu": 74,
-"free_gb": 127.8,
-"dsr_bar": 6.45,
-"best_pm_1h": 15.11,
-"distinct": 24908437
-},
 {
 "t": 1791116985.0050921,
 "total": 28363954,
@@ -7701,6 +7679,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 1.67,
 "distinct": 25938372
+},
+{
+"t": 1791289451.066726,
+"total": 29396375,
+"per_min": 370.0,
+"cpu": 13.0,
+"gpu": 0,
+"free_gb": 116.6,
+"dsr_bar": 6.42,
+"best_pm_1h": 9.8,
+"distinct": 25940150
 }
 ],
 "instrument": "XAUUSD",
