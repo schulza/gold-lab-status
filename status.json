@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-06 21:10:43 UTC",
+"generated_at": "2026-10-06 21:16:30 UTC",
 "host": {
-"cpu_pct": 26.7,
-"gpu_pct": 89,
-"free_gb": 136.2,
-"uptime": "up 7 days,  5:56, 2 users, load averages: 11.66 11.52 10.90",
-"load": "{ 11.66 11.52 10.90 }"
+"cpu_pct": 38.6,
+"gpu_pct": 95,
+"free_gb": 130.6,
+"uptime": "up 7 days,  6:02, 2 users, load averages: 12.89 11.61 11.10",
+"load": "{ 12.89 11.61 11.10 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-06T23:10:33",
-"it": 168540,
+"ts": "2026-10-06T23:11:36",
+"it": 168600,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.32,
+"pbo": 0.57,
 "best_family": "gated",
-"best_pm": 0.83,
-"best_params": "{'base': 'v_recovery_hold', 'base_params': {'days': 8.34, 'ex': 0.373, 'k': 1.03, 'mf': 0.15, 'rec': 0.894}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 127, 'g2_",
+"best_pm": 0.62,
+"best_params": "{'base': 'loss_limit_reset', 'base_params': {'hold': 6, 'k': 0.785, 'mode': 'cut', 'period': 'week', 'sign': 1}, 'mode': 'spread_below', 'vol_window': 64, 'vol_",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-06T23:06:25",
-"it": 139400,
+"ts": "2026-10-06T23:16:26",
+"it": 139520,
 "bar": "30s",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.57,
+"pbo": 0.11,
 "best_family": "gated",
-"best_pm": 0.64,
-"best_params": "{'base': 'margin_break_demeaned', 'base_params': {'days': 7, 'ex': 0.523, 'k': 0.392, 'mdays': 18}, 'mode': 'htf_against', 'htf': '4h', 'sma_n': 20}",
+"best_pm": 0.48,
+"best_params": "{'base': 'fresh_budget_deploy', 'base_params': {'hold': 2, 'k': 0.369, 'lead': 2, 'period': 'month', 'sign': 1}, 'mode': 'spread_below', 'vol_window': 976, 'vol",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 29523171,
-"last_5m": 1270,
-"last_1h": 13921,
-"last_24h": 401080,
-"distinct_ideas": 26066478,
+"total": 29524577,
+"last_5m": 1276,
+"last_1h": 15334,
+"last_24h": 399937,
+"distinct_ideas": 26067916,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19505286,
+"n": 19506686,
 "pos_rate": 0.344,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -544,8 +544,8 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 10871,
-"pos_rate": 0.901,
+"n": 10876,
+"pos_rate": 0.902,
 "best_pm": 0.72,
 "best_dsr": 0.0,
 "passed": 0,
@@ -571,7 +571,7 @@
 },
 {
 "family": "range_expansion_hold",
-"n": 10598,
+"n": 10599,
 "pos_rate": 0.955,
 "best_pm": 1.06,
 "best_dsr": 0.0,
@@ -1455,37 +1455,37 @@
 {
 "family": "decorrelated_break_sleeves",
 "bar": "15m",
-"n": 1561,
+"n": 1186,
 "best_pm": 1.0,
-"pos_rate": 0.85
+"pos_rate": 0.847
 },
 {
 "family": "decorrelated_break_sleeves",
 "bar": "1h",
-"n": 30,
-"best_pm": 0.6,
-"pos_rate": 0.767
+"n": 16,
+"best_pm": 0.55,
+"pos_rate": 0.812
 },
 {
 "family": "decorrelated_break_sleeves",
 "bar": "1m",
-"n": 30,
-"best_pm": 0.54,
-"pos_rate": 0.567
+"n": 16,
+"best_pm": 0.52,
+"pos_rate": 0.688
 },
 {
 "family": "decorrelated_break_sleeves",
 "bar": "30s",
-"n": 2228,
-"best_pm": 0.64,
-"pos_rate": 0.494
+"n": 1968,
+"best_pm": 0.6,
+"pos_rate": 0.484
 },
 {
 "family": "decorrelated_break_sleeves",
 "bar": "5m",
-"n": 1404,
+"n": 971,
 "best_pm": 1.1,
-"pos_rate": 0.821
+"pos_rate": 0.813
 },
 {
 "family": "fast_vs_slow_break",
@@ -1560,42 +1560,42 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 49422,
+"n": 49679,
 "best_pm": 3.51,
 "pos_rate": 0.665
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 80246,
+"n": 80302,
 "best_pm": 1.58,
 "pos_rate": 0.642
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 80228,
+"n": 80284,
 "best_pm": 16.8,
 "pos_rate": 0.379
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 49654,
+"n": 49884,
 "best_pm": 40.81,
 "pos_rate": 0.297
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 49460,
+"n": 49714,
 "best_pm": 2.16,
-"pos_rate": 0.609
+"pos_rate": 0.61
 },
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 188,
+"n": 191,
 "best_pm": 0.68,
 "pos_rate": 0.963
 },
@@ -1616,16 +1616,16 @@
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 170,
+"n": 171,
 "best_pm": 0.6,
-"pos_rate": 0.9
+"pos_rate": 0.901
 },
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 148,
+"n": 149,
 "best_pm": 0.64,
-"pos_rate": 0.959
+"pos_rate": 0.96
 },
 {
 "family": "lagged_shock_repricing",
@@ -1679,16 +1679,16 @@
 {
 "family": "margin_break_demeaned",
 "bar": "30s",
-"n": 442,
-"best_pm": 0.5,
-"pos_rate": 0.342
+"n": 283,
+"best_pm": 0.47,
+"pos_rate": 0.311
 },
 {
 "family": "narrowest_box_break_matched",
 "bar": "15m",
-"n": 1300,
-"best_pm": 0.76,
-"pos_rate": 0.568
+"n": 1137,
+"best_pm": 0.66,
+"pos_rate": 0.567
 },
 {
 "family": "narrowest_box_break_matched",
@@ -1707,16 +1707,16 @@
 {
 "family": "narrowest_box_break_matched",
 "bar": "30s",
-"n": 1845,
-"best_pm": 0.83,
-"pos_rate": 0.783
+"n": 1751,
+"best_pm": 0.81,
+"pos_rate": 0.778
 },
 {
 "family": "narrowest_box_break_matched",
 "bar": "5m",
-"n": 1271,
+"n": 1104,
 "best_pm": 0.75,
-"pos_rate": 0.634
+"pos_rate": 0.635
 },
 {
 "family": "portfolio",
@@ -1749,9 +1749,9 @@
 {
 "family": "range_expansion_hold",
 "bar": "30s",
-"n": 65,
+"n": 64,
 "best_pm": 0.73,
-"pos_rate": 0.923
+"pos_rate": 0.922
 },
 {
 "family": "range_expansion_hold",
@@ -1847,23 +1847,23 @@
 {
 "family": "thin_break_timing",
 "bar": "15m",
-"n": 651,
+"n": 526,
 "best_pm": 0.65,
-"pos_rate": 0.826
+"pos_rate": 0.842
 },
 {
 "family": "thin_break_timing",
 "bar": "30s",
-"n": 1248,
-"best_pm": 0.69,
-"pos_rate": 0.704
+"n": 1157,
+"best_pm": 0.63,
+"pos_rate": 0.708
 },
 {
 "family": "thin_break_timing",
 "bar": "5m",
-"n": 528,
+"n": 423,
 "best_pm": 0.77,
-"pos_rate": 0.843
+"pos_rate": 0.853
 }
 ]
 },
@@ -1954,17 +1954,6 @@
 }
 ],
 "history": [
-{
-"t": 1791148579.885437,
-"total": 28558651,
-"per_min": 0.0,
-"cpu": 26.1,
-"gpu": 84,
-"free_gb": 186.1,
-"dsr_bar": 6.44,
-"best_pm_1h": 1.7,
-"distinct": 25103739
-},
 {
 "t": 1791148919.011518,
 "total": 28564431,
@@ -7508,6 +7497,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 22.36,
 "distinct": 26066478
+},
+{
+"t": 1791321390.977827,
+"total": 29524577,
+"per_min": 255.0,
+"cpu": 38.6,
+"gpu": 95,
+"free_gb": 130.6,
+"dsr_bar": 6.42,
+"best_pm_1h": 22.36,
+"distinct": 26067916
 }
 ],
 "instrument": "XAUUSD",
