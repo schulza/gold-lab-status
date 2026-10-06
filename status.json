@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-10-06 17:26:36 UTC",
+"generated_at": "2026-10-06 17:32:32 UTC",
 "host": {
-"cpu_pct": 45.6,
-"gpu_pct": 51,
-"free_gb": 129.3,
-"uptime": "up 7 days,  2:12, 2 users, load averages: 13.34 8.64 9.38",
-"load": "{ 13.34 8.64 9.38 }"
+"cpu_pct": 41.2,
+"gpu_pct": 0,
+"free_gb": 148.7,
+"uptime": "up 7 days,  2:18, 2 users, load averages: 14.93 7.62 8.32",
+"load": "{ 14.93 7.62 8.32 }"
 },
 "instances": [
 {
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-06T19:26:31",
-"it": 136567,
+"ts": "2026-10-06T19:32:19",
+"it": 136600,
 "bar": "30s",
-"batch": 156,
+"batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.18,
-"best_family": "forced_deleverage_refill",
-"best_pm": 0.75,
-"best_params": "{'d': 2, 'gap': 0.261, 'k': 0.859, 'side': 'long', 'sign': -1, 'xz': 0.0188}",
-"mix": "for139/gat17",
-"queue_s": 41.0
+"pbo": 0.46,
+"best_family": "gated",
+"best_pm": 0.17,
+"best_params": "{'base': 'liquid_range_break_hold', 'base_params': {'days': 2, 'exit': 3, 'sdays': 7, 'sp': 0.613}, 'mode': 'htf_against', 'htf': '4h', 'sma_n': 38, 'g2_mode': ",
+"mix": "gat8",
+"queue_s": 8.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 29469051,
-"last_5m": 4710,
-"last_1h": 19154,
-"last_24h": 444121,
-"distinct_ideas": 26013750,
+"total": 29471664,
+"last_5m": 852,
+"last_1h": 18025,
+"last_24h": 443456,
+"distinct_ideas": 26015368,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19459587,
+"n": 19459956,
 "pos_rate": 0.344,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -642,6 +642,15 @@
 "since": "2026-10-05"
 },
 {
+"family": "forced_deleverage_refill",
+"n": 8828,
+"pos_rate": 0.315,
+"best_pm": 0.83,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-06"
+},
+{
 "family": "stale_high_break_demeaned",
 "n": 8761,
 "pos_rate": 0.275,
@@ -712,15 +721,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-05"
-},
-{
-"family": "forced_deleverage_refill",
-"n": 6584,
-"pos_rate": 0.325,
-"best_pm": 0.83,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-06"
 },
 {
 "family": "continuation_sleeve_book",
@@ -1322,7 +1322,7 @@
 "pbo": 0.04
 }
 ],
-"best_pm_1h": 16.8,
+"best_pm_1h": 1.56,
 "heat": [
 {
 "family": "choppy_break_demeaned",
@@ -1537,9 +1537,9 @@
 {
 "family": "forced_deleverage_refill",
 "bar": "30s",
-"n": 1275,
+"n": 1898,
 "best_pm": 0.75,
-"pos_rate": 0.259
+"pos_rate": 0.251
 },
 {
 "family": "forced_deleverage_refill",
@@ -1551,35 +1551,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 45249,
+"n": 45281,
 "best_pm": 3.51,
 "pos_rate": 0.666
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 76116,
+"n": 75396,
 "best_pm": 1.74,
 "pos_rate": 0.642
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 76002,
+"n": 75282,
 "best_pm": 16.8,
-"pos_rate": 0.379
+"pos_rate": 0.378
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 45471,
+"n": 45556,
 "best_pm": 40.81,
 "pos_rate": 0.298
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 45409,
+"n": 45449,
 "best_pm": 2.16,
 "pos_rate": 0.61
 },
@@ -1628,16 +1628,16 @@
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 162,
+"n": 160,
 "best_pm": 0.67,
-"pos_rate": 0.901
+"pos_rate": 0.9
 },
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 165,
+"n": 163,
 "best_pm": 0.61,
-"pos_rate": 0.879
+"pos_rate": 0.883
 },
 {
 "family": "higher_low_staircase",
@@ -1761,7 +1761,7 @@
 {
 "family": "range_expansion_hold",
 "bar": "1m",
-"n": 26,
+"n": 25,
 "best_pm": 0.71,
 "pos_rate": 1.0
 },
@@ -1937,6 +1937,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-06T17:29",
+"name": null,
+"status": "rejected",
+"rationale": "Payer: rate hedgers and benchmark-constrained gold allocators who reprice gold only days after 10y TIPS yields move. When gold has not yet followed a large yield move, the late repricing is paid to us. This is one daily family with 108 signatures.\nRATIONALE: Entry needs a yield c",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-10-06T16:58",
 "name": "forced_deleverage_refill",
 "status": "accepted",
@@ -2012,27 +2019,9 @@
 "status": "rejected",
 "rationale": "Payer: vol-target and VaR-constrained funds that must cut gold after a realised-vol spike regardless of view. Their selling pushes price below fair value, and they stay short of exposure until vol normalises.\nThe module goes long only after the spike has peaked and vol is decayin",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-06T11:20",
-"name": "forced_deleverage_refill",
-"status": "rejected",
-"rationale": "Payer is vol-target and VaR-constrained funds that must sell after a realised-vol spike regardless of view. I buy once vol has peaked and is falling after a sharp drawdown, then exit when short vol falls back to its long-run level.\nRATIONALE: Windows are scaled so they fit short ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1791134947.6174421,
-"total": 28476135,
-"per_min": 124.0,
-"cpu": 20.5,
-"gpu": 93,
-"free_gb": 122.0,
-"dsr_bar": 6.45,
-"best_pm_1h": 12.01,
-"distinct": 25021511
-},
 {
 "t": 1791135280.82714,
 "total": 28476281,
@@ -7587,6 +7576,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 16.8,
 "distinct": 26013750
+},
+{
+"t": 1791307952.176815,
+"total": 29471664,
+"per_min": 170.0,
+"cpu": 41.2,
+"gpu": 0,
+"free_gb": 148.7,
+"dsr_bar": 6.42,
+"best_pm_1h": 1.56,
+"distinct": 26015368
 }
 ],
 "instrument": "XAUUSD",
