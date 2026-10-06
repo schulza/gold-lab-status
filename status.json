@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-06 21:04:57 UTC",
+"generated_at": "2026-10-06 21:10:43 UTC",
 "host": {
-"cpu_pct": 33.9,
-"gpu_pct": 75,
-"free_gb": 133.6,
-"uptime": "up 7 days,  5:50, 2 users, load averages: 13.03 12.15 10.75",
-"load": "{ 13.03 12.15 10.75 }"
+"cpu_pct": 26.7,
+"gpu_pct": 89,
+"free_gb": 136.2,
+"uptime": "up 7 days,  5:56, 2 users, load averages: 11.66 11.52 10.90",
+"load": "{ 11.66 11.52 10.90 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-06T23:01:07",
-"it": 168400,
+"ts": "2026-10-06T23:10:33",
+"it": 168540,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.18,
+"pbo": 0.32,
 "best_family": "gated",
-"best_pm": 0.88,
-"best_params": "{'base': 'fresh_budget_deploy', 'base_params': {'hold': 2, 'k': 0.277, 'lead': 2, 'period': 'month', 'sign': 1}, 'mode': 'tick_above', 'vol_window': 190, 'vol_p",
+"best_pm": 0.83,
+"best_params": "{'base': 'v_recovery_hold', 'base_params': {'days': 8.34, 'ex': 0.373, 'k': 1.03, 'mf': 0.15, 'rec': 0.894}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 127, 'g2_",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-06T23:04:35",
-"it": 139370,
+"ts": "2026-10-06T23:06:25",
+"it": 139400,
 "bar": "30s",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.04,
+"pbo": 0.57,
 "best_family": "gated",
-"best_pm": 0.59,
-"best_params": "{'base': 'nested_contraction_break_matched', 'base_params': {'c': 0.859, 'days': 7, 'ex': 0.796, 'mdays': 5}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 468, 'vo",
+"best_pm": 0.64,
+"best_params": "{'base': 'margin_break_demeaned', 'base_params': {'days': 7, 'ex': 0.523, 'k': 0.392, 'mdays': 18}, 'mode': 'htf_against', 'htf': '4h', 'sma_n': 20}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 29521839,
-"last_5m": 2278,
-"last_1h": 14078,
-"last_24h": 403572,
-"distinct_ideas": 26065194,
+"total": 29523171,
+"last_5m": 1270,
+"last_1h": 13921,
+"last_24h": 401080,
+"distinct_ideas": 26066478,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19503958,
+"n": 19505286,
 "pos_rate": 0.344,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -544,8 +544,8 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 10868,
-"pos_rate": 0.902,
+"n": 10871,
+"pos_rate": 0.901,
 "best_pm": 0.72,
 "best_dsr": 0.0,
 "passed": 0,
@@ -571,7 +571,7 @@
 },
 {
 "family": "range_expansion_hold",
-"n": 10597,
+"n": 10598,
 "pos_rate": 0.955,
 "best_pm": 1.06,
 "best_dsr": 0.0,
@@ -1455,9 +1455,9 @@
 {
 "family": "decorrelated_break_sleeves",
 "bar": "15m",
-"n": 2067,
+"n": 1561,
 "best_pm": 1.0,
-"pos_rate": 0.851
+"pos_rate": 0.85
 },
 {
 "family": "decorrelated_break_sleeves",
@@ -1476,16 +1476,16 @@
 {
 "family": "decorrelated_break_sleeves",
 "bar": "30s",
-"n": 2565,
+"n": 2228,
 "best_pm": 0.64,
-"pos_rate": 0.488
+"pos_rate": 0.494
 },
 {
 "family": "decorrelated_break_sleeves",
 "bar": "5m",
-"n": 2017,
+"n": 1404,
 "best_pm": 1.1,
-"pos_rate": 0.828
+"pos_rate": 0.821
 },
 {
 "family": "fast_vs_slow_break",
@@ -1560,35 +1560,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 49446,
+"n": 49422,
 "best_pm": 3.51,
 "pos_rate": 0.665
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 80054,
-"best_pm": 1.74,
+"n": 80246,
+"best_pm": 1.58,
 "pos_rate": 0.642
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 80028,
+"n": 80228,
 "best_pm": 16.8,
 "pos_rate": 0.379
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 49679,
+"n": 49654,
 "best_pm": 40.81,
 "pos_rate": 0.297
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 49476,
+"n": 49460,
 "best_pm": 2.16,
 "pos_rate": 0.609
 },
@@ -1602,16 +1602,16 @@
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 166,
+"n": 169,
 "best_pm": 0.67,
-"pos_rate": 0.898
+"pos_rate": 0.899
 },
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 168,
+"n": 169,
 "best_pm": 0.61,
-"pos_rate": 0.899
+"pos_rate": 0.893
 },
 {
 "family": "higher_low_staircase",
@@ -1679,16 +1679,16 @@
 {
 "family": "margin_break_demeaned",
 "bar": "30s",
-"n": 647,
+"n": 442,
 "best_pm": 0.5,
-"pos_rate": 0.34
+"pos_rate": 0.342
 },
 {
 "family": "narrowest_box_break_matched",
 "bar": "15m",
-"n": 1541,
+"n": 1300,
 "best_pm": 0.76,
-"pos_rate": 0.565
+"pos_rate": 0.568
 },
 {
 "family": "narrowest_box_break_matched",
@@ -1707,21 +1707,21 @@
 {
 "family": "narrowest_box_break_matched",
 "bar": "30s",
-"n": 2007,
+"n": 1845,
 "best_pm": 0.83,
-"pos_rate": 0.777
+"pos_rate": 0.783
 },
 {
 "family": "narrowest_box_break_matched",
 "bar": "5m",
-"n": 1536,
-"best_pm": 0.8,
-"pos_rate": 0.639
+"n": 1271,
+"best_pm": 0.75,
+"pos_rate": 0.634
 },
 {
 "family": "portfolio",
 "bar": "30s",
-"n": 2,
+"n": 1,
 "best_pm": 2.48,
 "pos_rate": 1.0
 },
@@ -1735,9 +1735,9 @@
 {
 "family": "range_expansion_hold",
 "bar": "1h",
-"n": 14,
+"n": 15,
 "best_pm": 0.66,
-"pos_rate": 0.643
+"pos_rate": 0.667
 },
 {
 "family": "range_expansion_hold",
@@ -1749,9 +1749,9 @@
 {
 "family": "range_expansion_hold",
 "bar": "30s",
-"n": 64,
+"n": 65,
 "best_pm": 0.73,
-"pos_rate": 0.922
+"pos_rate": 0.923
 },
 {
 "family": "range_expansion_hold",
@@ -1847,27 +1847,34 @@
 {
 "family": "thin_break_timing",
 "bar": "15m",
-"n": 835,
+"n": 651,
 "best_pm": 0.65,
-"pos_rate": 0.822
+"pos_rate": 0.826
 },
 {
 "family": "thin_break_timing",
 "bar": "30s",
-"n": 1381,
+"n": 1248,
 "best_pm": 0.69,
-"pos_rate": 0.707
+"pos_rate": 0.704
 },
 {
 "family": "thin_break_timing",
 "bar": "5m",
-"n": 706,
+"n": 528,
 "best_pm": 0.77,
-"pos_rate": 0.834
+"pos_rate": 0.843
 }
 ]
 },
 "generated": [
+{
+"ts": "2026-10-06T21:05",
+"name": "vol_spike_exhaustion",
+"status": "rejected",
+"rationale": "Payer: vol-target and VaR-constrained funds that must cut gold exposure after a vol spike regardless of view. Once short-horizon vol turns down from its peak, the forced selling is spent, so the module buys the exhausted selloff (or sells the exhausted squeeze) and exits when vol",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
 {
 "ts": "2026-10-06T20:34",
 "name": "vol_target_cut_exhaustion",
@@ -1944,27 +1951,9 @@
 "status": "rejected",
 "rationale": "The payer is vol-target and VaR-constrained funds. After a vol spike with a falling price they must cut gold exposure whatever their view, and that selling pushes price below fair value.\nRATIONALE: The strategy buys once short-horizon vol has peaked and starts to decay, because f",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-06T14:55",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is rate hedgers and allocators who reprice gold only days after 10y TIPS yields move. When the real yield moves and gold has not yet followed by more than f sigma, I take gold in the direction implied by the yield.\nExits when the yield move decays to `exit` times its entry ",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1791148214.222157,
-"total": 28558651,
-"per_min": 0.0,
-"cpu": 24.0,
-"gpu": 91,
-"free_gb": 186.8,
-"dsr_bar": 6.44,
-"best_pm_1h": 1.7,
-"distinct": 25103739
-},
 {
 "t": 1791148579.885437,
 "total": 28558651,
@@ -7508,6 +7497,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 22.36,
 "distinct": 26065194
+},
+{
+"t": 1791321043.7395892,
+"total": 29523171,
+"per_min": 254.0,
+"cpu": 26.7,
+"gpu": 89,
+"free_gb": 136.2,
+"dsr_bar": 6.42,
+"best_pm_1h": 22.36,
+"distinct": 26066478
 }
 ],
 "instrument": "XAUUSD",
