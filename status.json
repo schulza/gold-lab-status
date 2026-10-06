@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-06 06:07:58 UTC",
+"generated_at": "2026-10-06 06:13:57 UTC",
 "host": {
-"cpu_pct": 34.3,
-"gpu_pct": 91,
-"free_gb": 132.1,
-"uptime": "up 6 days, 14:53, 2 users, load averages: 10.90 11.82 11.65",
-"load": "{ 10.90 11.82 11.65 }"
+"cpu_pct": 38.8,
+"gpu_pct": 0,
+"free_gb": 135.4,
+"uptime": "up 6 days, 14:59, 2 users, load averages: 12.74 12.03 11.75",
+"load": "{ 12.74 12.03 11.75 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-06T08:06:05",
-"it": 155600,
-"bar": "1m",
+"ts": "2026-10-06T08:13:56",
+"it": 155619,
+"bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
 "pbo": 0.21,
 "best_family": "gated",
-"best_pm": 0.81,
-"best_params": "{'base': 'stale_high_time_stop', 'base_params': {'hold': 4, 'k': 3.61, 'lookback': 22, 'sign': 1, 'stall': 23}, 'mode': 'tick_above', 'vol_window': 57, 'vol_pct",
+"best_pm": 1.35,
+"best_params": "{'base': 'range_expansion_hold', 'base_params': {'days': 2, 'exit': 0.2, 'hi': 0.76, 'k': 1.31}, 'mode': 'vol_below', 'vol_window': 177, 'vol_pct': 0.372, 'vol_",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-06T08:01:05",
-"it": 127200,
-"bar": "5m",
+"ts": "2026-10-06T08:13:10",
+"it": 127400,
+"bar": "30s",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.54,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 3.64,
-"best_params": "{'base': 'calendar_rebalance_flow', 'base_params': {'k': 0.33, 'period': 'month', 'phase': 'pre', 'sign': -1, 'span': 1}, 'mode': 'htf_against', 'htf': '4h', 's",
+"best_pm": 0.24,
+"best_params": "{'base': 'clientele_tug_of_war', 'base_params': {'k': 1.0, 'lead': 'ny', 'mode': 'diverge', 'n': 20, 'sign': 1}, 'mode': 'session', 'start_hour': 13, 'hold_hour",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 29306221,
-"last_5m": 1604,
-"last_1h": 14485,
-"last_24h": 530900,
-"distinct_ideas": 25849996,
+"total": 29307749,
+"last_5m": 1616,
+"last_1h": 16149,
+"last_24h": 527529,
+"distinct_ideas": 25851612,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19303954,
+"n": 19305466,
 "pos_rate": 0.343,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -310,7 +310,7 @@
 },
 {
 "family": "liquid_range_break_hold",
-"n": 14648,
+"n": 14649,
 "pos_rate": 0.803,
 "best_pm": 1.02,
 "best_dsr": 0.0,
@@ -580,7 +580,7 @@
 },
 {
 "family": "range_expansion_hold",
-"n": 10488,
+"n": 10492,
 "pos_rate": 0.955,
 "best_pm": 1.06,
 "best_dsr": 0.0,
@@ -598,7 +598,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 10291,
+"n": 10301,
 "pos_rate": 0.9,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1138,7 +1138,7 @@
 },
 {
 "family": "cleared_overhang_donchian",
-"n": 1384,
+"n": 1385,
 "pos_rate": 1.0,
 "best_pm": 0.85,
 "best_dsr": 0.0,
@@ -1395,7 +1395,7 @@
 {
 "family": "cleared_overhang_donchian",
 "bar": "30s",
-"n": 2,
+"n": 3,
 "best_pm": 0.37,
 "pos_rate": 1.0
 },
@@ -1548,24 +1548,10 @@
 },
 {
 "family": "demeaned_break_book",
-"bar": "1h",
-"n": 1712,
-"best_pm": 0.97,
-"pos_rate": 0.445
-},
-{
-"family": "demeaned_break_book",
-"bar": "1m",
-"n": 1712,
-"best_pm": 1.16,
-"pos_rate": 0.557
-},
-{
-"family": "demeaned_break_book",
 "bar": "30s",
-"n": 590,
+"n": 213,
 "best_pm": 1.22,
-"pos_rate": 0.592
+"pos_rate": 0.634
 },
 {
 "family": "demeaned_break_book",
@@ -1647,37 +1633,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 40197,
+"n": 40549,
 "best_pm": 1.7,
 "pos_rate": 0.669
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 69931,
+"n": 69591,
 "best_pm": 1.74,
 "pos_rate": 0.643
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 69726,
+"n": 69428,
 "best_pm": 15.82,
 "pos_rate": 0.378
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 40720,
+"n": 41061,
 "best_pm": 40.81,
-"pos_rate": 0.298
+"pos_rate": 0.297
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 40423,
+"n": 40783,
 "best_pm": 2.02,
-"pos_rate": 0.609
+"pos_rate": 0.61
 },
 {
 "family": "giveback_break_matched",
@@ -1717,9 +1703,9 @@
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 102,
+"n": 105,
 "best_pm": 0.68,
-"pos_rate": 0.912
+"pos_rate": 0.914
 },
 {
 "family": "higher_low_staircase",
@@ -1738,16 +1724,16 @@
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 148,
+"n": 154,
 "best_pm": 0.63,
-"pos_rate": 0.946
+"pos_rate": 0.942
 },
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 88,
+"n": 89,
 "best_pm": 0.64,
-"pos_rate": 0.943
+"pos_rate": 0.944
 },
 {
 "family": "horizon_demeaned_book",
@@ -1794,16 +1780,16 @@
 {
 "family": "liquid_range_break_hold",
 "bar": "1m",
-"n": 20,
+"n": 19,
 "best_pm": 0,
-"pos_rate": 0.35
+"pos_rate": 0.316
 },
 {
 "family": "liquid_range_break_hold",
 "bar": "30s",
-"n": 31,
+"n": 32,
 "best_pm": 0.21,
-"pos_rate": 0.677
+"pos_rate": 0.688
 },
 {
 "family": "margin_break_demeaned",
@@ -1941,16 +1927,16 @@
 {
 "family": "range_expansion_hold",
 "bar": "30s",
-"n": 71,
+"n": 74,
 "best_pm": 0.74,
-"pos_rate": 0.93
+"pos_rate": 0.932
 },
 {
 "family": "range_expansion_hold",
 "bar": "5m",
-"n": 15,
+"n": 16,
 "best_pm": 0.72,
-"pos_rate": 0.933
+"pos_rate": 0.938
 },
 {
 "family": "real_yield_trend",
@@ -2215,6 +2201,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-06T06:12",
+"name": "forced_deleverage_refill",
+"status": "rejected",
+"rationale": "The payer is vol-target and VaR-constrained funds. After a realised-vol spike they must cut gold exposure whatever their view, so they sell into the drop and buy back after the spike.\nRATIONALE: The strategy enters against the spike's direction once short-window vol has fallen fr",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-10-06T05:41",
 "name": "deleverage_refill_flow",
 "status": "rejected",
@@ -2290,27 +2283,9 @@
 "status": "rejected",
 "rationale": "The payer is short-vol faders and range-top sellers who sold the quiet range. A break out of compression on a surge in tick participation forces them to cover. That cover is urgent, so it should be fast and one-directional.\nRATIONALE: Each side's state is a two-sided break, enter",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-06T00:04",
-"name": null,
-"status": "rejected",
-"rationale": "Two sleeves in one signal. (1) A compression break, long and short, with each side demeaned against its own trailing exposure, so a constant long earns zero. (2) A real-yield 20-day change sleeve, which has little to do with price breaks. The weight `w` blends them, so `w=0` is t",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1791094383.74558,
-"total": 28258771,
-"per_min": 139.0,
-"cpu": 26.0,
-"gpu": 0,
-"free_gb": 134.2,
-"dsr_bar": 6.45,
-"best_pm_1h": 17.99,
-"distinct": 24805070
-},
 {
 "t": 1791094729.207765,
 "total": 28260931,
@@ -7865,6 +7840,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 1.57,
 "distinct": 25849996
+},
+{
+"t": 1791267237.415904,
+"total": 29307749,
+"per_min": 323.0,
+"cpu": 38.8,
+"gpu": 0,
+"free_gb": 135.4,
+"dsr_bar": 6.42,
+"best_pm_1h": 1.57,
+"distinct": 25851612
 }
 ],
 "instrument": "XAUUSD",
