@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-10-06 10:13:18 UTC",
+"generated_at": "2026-10-06 10:19:09 UTC",
 "host": {
-"cpu_pct": 28.3,
-"gpu_pct": 83,
-"free_gb": 136.4,
-"uptime": "up 6 days, 18:59, 2 users, load averages: 10.44 10.27 10.82",
-"load": "{ 10.44 10.27 10.82 }"
+"cpu_pct": 40.6,
+"gpu_pct": 94,
+"free_gb": 129.7,
+"uptime": "up 6 days, 19:04, 2 users, load averages: 11.39 10.67 10.78",
+"load": "{ 11.39 10.67 10.78 }"
 },
 "instances": [
 {
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-06T12:09:39",
-"it": 130800,
-"bar": "5m",
+"ts": "2026-10-06T12:19:03",
+"it": 130900,
+"bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.21,
+"pbo": 0.54,
 "best_family": "gated",
-"best_pm": 0.48,
-"best_params": "{'base': 'horizon_agreement_hold', 'base_params': {'exit': 0.0886, 'lb': 5, 'n': 4, 'side': 1, 'thr': 0.4}, 'mode': 'spread_below', 'vol_window': 111, 'vol_pct'",
+"best_pm": 0.63,
+"best_params": "{'base': 'unrefunded_move_drift', 'base_params': {'d': 2, 'hold': 5, 'k': 0.803, 'rho': 0.87, 'sign': 1, 'wait': 3}, 'mode': 'spread_below', 'vol_window': 647, ",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 29367309,
-"last_5m": 1842,
-"last_1h": 17591,
-"last_24h": 499668,
-"distinct_ideas": 25911084,
+"total": 29367847,
+"last_5m": 650,
+"last_1h": 16108,
+"last_24h": 499725,
+"distinct_ideas": 25911710,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19364754,
+"n": 19365290,
 "pos_rate": 0.343,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -589,7 +589,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 10515,
+"n": 10517,
 "pos_rate": 0.901,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1612,35 +1612,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 42002,
+"n": 42162,
 "best_pm": 1.7,
 "pos_rate": 0.668
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 72593,
+"n": 72386,
 "best_pm": 1.74,
 "pos_rate": 0.643
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 72465,
+"n": 72257,
 "best_pm": 15.82,
 "pos_rate": 0.378
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 42465,
+"n": 42625,
 "best_pm": 40.81,
 "pos_rate": 0.298
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 42224,
+"n": 42376,
 "best_pm": 2.16,
 "pos_rate": 0.611
 },
@@ -1689,30 +1689,30 @@
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 148,
+"n": 146,
 "best_pm": 0.67,
-"pos_rate": 0.892
+"pos_rate": 0.89
 },
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 181,
+"n": 179,
 "best_pm": 0.61,
-"pos_rate": 0.928
+"pos_rate": 0.927
 },
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 144,
+"n": 145,
 "best_pm": 0.6,
-"pos_rate": 0.944
+"pos_rate": 0.938
 },
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 105,
+"n": 108,
 "best_pm": 0.64,
-"pos_rate": 0.952
+"pos_rate": 0.954
 },
 {
 "family": "liquid_range_break_hold",
@@ -2075,6 +2075,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-06T10:18",
+"name": "forced_deleverage_refill",
+"status": "rejected",
+"rationale": "Payer: vol-target and VaR-constrained funds that must cut gold exposure after a realised-vol spike, whatever their view. Their selling pushes price below fair value, and once the vol ratio has peaked and starts to decay, the pressure is exhausted. The strategy buys that exhaustio",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-10-06T09:48",
 "name": "forced_deleverage_refill",
 "status": "rejected",
@@ -2150,27 +2157,9 @@
 "status": "rejected",
 "rationale": "Payer is the rate hedgers and allocators who reprice gold days after 10y TIPS yields move. Gold's own 5/20-day move is scaled against the yield move, and they pay for the part not yet repriced.\nThe position is held until the gap closes, then demeaned against its own trailing expo",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-10-06T04:09",
-"name": "forced_deleverage_refill",
-"status": "rejected",
-"rationale": "Payer: vol-target and VaR-constrained funds that must cut gross after a volatility spike regardless of view. Once short-window realised vol has peaked and starts to roll over, the forced selling (or short covering) is spent, so I take the other side of it.\nEntry is when vol is al",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1791109115.9935849,
-"total": 28328594,
-"per_min": 539.0,
-"cpu": 34.3,
-"gpu": 89,
-"free_gb": 130.7,
-"dsr_bar": 6.45,
-"best_pm_1h": 1.73,
-"distinct": 24874837
-},
 {
 "t": 1791109459.290106,
 "total": 28328642,
@@ -7725,6 +7714,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 1.61,
 "distinct": 25911084
+},
+{
+"t": 1791281949.504239,
+"total": 29367847,
+"per_min": 130.0,
+"cpu": 40.6,
+"gpu": 94,
+"free_gb": 129.7,
+"dsr_bar": 6.42,
+"best_pm_1h": 1.61,
+"distinct": 25911710
 }
 ],
 "instrument": "XAUUSD",
