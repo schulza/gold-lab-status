@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-06 00:02:10 UTC",
+"generated_at": "2026-10-06 00:08:21 UTC",
 "host": {
-"cpu_pct": 71.1,
-"gpu_pct": 88,
-"free_gb": 107.6,
-"uptime": "up 6 days,  8:47, 2 users, load averages: 15.36 16.15 13.45",
-"load": "{ 15.36 16.15 13.45 }"
+"cpu_pct": 43.5,
+"gpu_pct": 0,
+"free_gb": 143.1,
+"uptime": "up 6 days,  8:53, 2 users, load averages: 6.35 7.72 10.22",
+"load": "{ 6.35 7.72 10.22 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-06T01:55:27",
-"it": 150200,
+"ts": "2026-10-06T02:08:20",
+"it": 150246,
 "bar": "1h",
-"batch": 47,
+"batch": 25,
 "passed": 0,
 "bench": 6.43,
-"pbo": 0.57,
+"pbo": 0.5,
 "best_family": "gated",
-"best_pm": 0.72,
-"best_params": "{'base': 'signed_jump_asymmetry', 'base_params': {'d': 18, 'exit': 0.744, 'part': 'all', 'sign': -1, 'theta': 1.67}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 3",
-"mix": "fas39/gat8",
-"queue_s": 8.0
+"best_pm": 0.8,
+"best_params": "{'base': 'attention_decay_unwind', 'base_params': {'base': 7, 'hold': 4.16, 'k': 0.342, 'sign': -1, 'theta': 1.71, 'w': 4.63}, 'mode': 'spread_below', 'vol_wind",
+"mix": "fas17/gat8",
+"queue_s": 10.0
 },
 "events": []
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-06T02:02:03",
-"it": 122589,
-"bar": "30s",
-"batch": 156,
+"ts": "2026-10-06T02:07:36",
+"it": 122600,
+"bar": "15m",
+"batch": 158,
 "passed": 0,
 "bench": 6.43,
-"pbo": 0.32,
-"best_family": "close_channel_retrace_demeaned",
-"best_pm": 14.17,
-"best_params": "{'days': 20, 'k': 1.25, 'f': 0.713, 'mdays': 11}",
-"mix": "clo142/gat14",
-"queue_s": 20.0
+"pbo": 0.43,
+"best_family": "fast_vs_slow_break",
+"best_pm": 0.97,
+"best_params": "{'days': 4, 'ratio': 6, 'k': 0.831, 'ex': 0.982}",
+"mix": "fas146/gat12",
+"queue_s": 28.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 29190464,
-"last_5m": 9457,
-"last_1h": 31449,
-"last_24h": 559173,
-"distinct_ideas": 25734412,
+"total": 29191731,
+"last_5m": 2062,
+"last_1h": 32925,
+"last_24h": 555594,
+"distinct_ideas": 25735933,
 "dsr_bar": 6.43,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19222381,
+"n": 19222636,
 "pos_rate": 0.342,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -291,6 +291,15 @@
 "since": "2026-10-05"
 },
 {
+"family": "close_channel_retrace_demeaned",
+"n": 15168,
+"pos_rate": 0.673,
+"best_pm": 1.13,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-05"
+},
+{
 "family": "disposition_overhang",
 "n": 14784,
 "pos_rate": 0.64,
@@ -316,15 +325,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-09-30"
-},
-{
-"family": "close_channel_retrace_demeaned",
-"n": 14467,
-"pos_rate": 0.688,
-"best_pm": 1.13,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-05"
 },
 {
 "family": "narrowest_box_break_matched",
@@ -894,6 +894,15 @@
 "since": "2026-10-01"
 },
 {
+"family": "fast_vs_slow_break",
+"n": 4086,
+"pos_rate": 0.638,
+"best_pm": 1.08,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-05"
+},
+{
 "family": "sleeve_vote_hold",
 "n": 3915,
 "pos_rate": 0.708,
@@ -901,15 +910,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-04"
-},
-{
-"family": "fast_vs_slow_break",
-"n": 3775,
-"pos_rate": 0.641,
-"best_pm": 1.08,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-05"
 },
 {
 "family": "signed_jump_asymmetry",
@@ -1412,7 +1412,7 @@
 {
 "family": "close_channel_retrace_demeaned",
 "bar": "30s",
-"n": 2900,
+"n": 3034,
 "best_pm": 0.94,
 "pos_rate": 0.378
 },
@@ -1636,70 +1636,70 @@
 {
 "family": "fast_vs_slow_break",
 "bar": "15m",
-"n": 843,
+"n": 989,
 "best_pm": 1.01,
-"pos_rate": 0.631
+"pos_rate": 0.628
 },
 {
 "family": "fast_vs_slow_break",
 "bar": "1h",
-"n": 631,
-"best_pm": 0.75,
-"pos_rate": 0.512
+"n": 1273,
+"best_pm": 0.96,
+"pos_rate": 0.548
 },
 {
 "family": "fast_vs_slow_break",
 "bar": "1m",
-"n": 595,
+"n": 1205,
 "best_pm": 1.0,
-"pos_rate": 0.676
+"pos_rate": 0.692
 },
 {
 "family": "fast_vs_slow_break",
 "bar": "30s",
-"n": 856,
+"n": 1136,
 "best_pm": 0.91,
-"pos_rate": 0.638
+"pos_rate": 0.626
 },
 {
 "family": "fast_vs_slow_break",
 "bar": "5m",
-"n": 850,
-"best_pm": 1.08,
+"n": 1213,
+"best_pm": 1.15,
 "pos_rate": 0.724
 },
 {
 "family": "gated",
 "bar": "15m",
-"n": 36576,
+"n": 36612,
 "best_pm": 1.7,
 "pos_rate": 0.668
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 63131,
+"n": 62787,
 "best_pm": 1.74,
 "pos_rate": 0.645
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 62846,
+"n": 62548,
 "best_pm": 17.06,
 "pos_rate": 0.379
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 37070,
+"n": 37124,
 "best_pm": 40.81,
 "pos_rate": 0.3
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 36827,
+"n": 36897,
 "best_pm": 5.37,
 "pos_rate": 0.605
 },
@@ -1755,9 +1755,9 @@
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 204,
+"n": 203,
 "best_pm": 0.61,
-"pos_rate": 0.922
+"pos_rate": 0.921
 },
 {
 "family": "higher_low_staircase",
@@ -2035,7 +2035,7 @@
 {
 "family": "sleeve_vote_hold",
 "bar": "1h",
-"n": 7,
+"n": 6,
 "best_pm": 0.5,
 "pos_rate": 1.0
 },
@@ -2350,16 +2350,16 @@
 {
 "family": "vwap_dwell_hold",
 "bar": "1h",
-"n": 2638,
-"best_pm": 0.99,
-"pos_rate": 0.803
+"n": 3,
+"best_pm": 0.52,
+"pos_rate": 0.667
 },
 {
 "family": "vwap_dwell_hold",
 "bar": "1m",
-"n": 2638,
-"best_pm": 1.03,
-"pos_rate": 0.846
+"n": 3,
+"best_pm": 0.49,
+"pos_rate": 1.0
 },
 {
 "family": "vwap_dwell_hold",
@@ -2378,6 +2378,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-10-06T00:04",
+"name": null,
+"status": "rejected",
+"rationale": "Two sleeves in one signal. (1) A compression break, long and short, with each side demeaned against its own trailing exposure, so a constant long earns zero. (2) A real-yield 20-day change sleeve, which has little to do with price breaks. The weight `w` blends them, so `w=0` is t",
+"note": "ast: import not allowed: from goldlab.external"
+},
 {
 "ts": "2026-10-05T23:33",
 "name": "fast_vs_slow_break",
@@ -2454,27 +2461,9 @@
 "status": "accepted",
 "rationale": "Payer is range-top sellers and short-vol faders who cover when price clears a multi-day high. A trailing give-back exit, measured in volatility, is tighter than the box-midpoint exits the existing break families use.\nRATIONALE: The raw long-only sleeve minus its own trailing mean",
 "note": "{\"name\": \"giveback_break_matched\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.378875}"
-},
-{
-"ts": "2026-10-05T17:56",
-"name": "volburst_break_matched",
-"status": "accepted",
-"rationale": "The payer is range-top sellers and short-vol faders. They are forced to cover when a range break arrives with short-horizon realised vol already above its long-run level. Each side exits only when price falls back into the broken channel, so the position is two-sided and the trai",
-"note": "{\"name\": \"volburst_break_matched\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.99149375}"
 }
 ],
 "history": [
-{
-"t": 1791072159.7801862,
-"total": 28163513,
-"per_min": 307.0,
-"cpu": 28.7,
-"gpu": 80,
-"free_gb": 144.1,
-"dsr_bar": 6.45,
-"best_pm_1h": 1.61,
-"distinct": 24709804
-},
 {
 "t": 1791072506.305644,
 "total": 28164953,
@@ -8040,6 +8029,17 @@
 "dsr_bar": 6.43,
 "best_pm_1h": 40.81,
 "distinct": 25734412
+},
+{
+"t": 1791245301.3351738,
+"total": 29191731,
+"per_min": 412.0,
+"cpu": 43.5,
+"gpu": 0,
+"free_gb": 143.1,
+"dsr_bar": 6.43,
+"best_pm_1h": 40.81,
+"distinct": 25735933
 }
 ],
 "instrument": "XAUUSD",
