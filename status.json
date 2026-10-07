@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-07 10:20:34 UTC",
+"generated_at": "2026-10-07 10:26:16 UTC",
 "host": {
-"cpu_pct": 17.3,
-"gpu_pct": 0,
-"free_gb": 117.8,
-"uptime": "up 7 days, 19:06, 2 users, load averages: 7.96 7.42 8.25",
-"load": "{ 7.96 7.42 8.25 }"
+"cpu_pct": 24.5,
+"gpu_pct": 91,
+"free_gb": 124.5,
+"uptime": "up 7 days, 19:12, 2 users, load averages: 10.04 9.23 8.84",
+"load": "{ 10.04 9.23 8.84 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-07T12:18:44",
-"it": 177600,
-"bar": "1h",
+"ts": "2026-10-07T12:26:02",
+"it": 177601,
+"bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.07,
+"pbo": 0.29,
 "best_family": "gated",
-"best_pm": 0.82,
-"best_params": "{'base': 'heavy_day_concession', 'base_params': {'base': 8, 'hold': 2, 'k': 1.03, 'sign': 1, 'theta': 1.31}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 26}",
+"best_pm": 0.68,
+"best_params": "{'base': 'news_flow_split', 'base_params': {'days': 6, 'k': 1.91, 'mode': 'split', 'sign': -1, 'win': 47}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 56}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -49,9 +49,9 @@
 ],
 "registry": {
 "total": 29713982,
-"last_5m": 1262,
-"last_1h": 14335,
-"last_24h": 345307,
+"last_5m": 0,
+"last_1h": 12248,
+"last_24h": 343463,
 "distinct_ideas": 26253569,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
@@ -1566,35 +1566,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 44168,
+"n": 44016,
 "best_pm": 3.51,
 "pos_rate": 0.663
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 72204,
+"n": 71516,
 "best_pm": 1.67,
 "pos_rate": 0.644
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 72114,
+"n": 71434,
 "best_pm": 16.8,
 "pos_rate": 0.376
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 44363,
+"n": 44203,
 "best_pm": 31.88,
 "pos_rate": 0.295
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 44084,
+"n": 43924,
 "best_pm": 1.7,
 "pos_rate": 0.605
 },
@@ -1608,30 +1608,30 @@
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 124,
+"n": 123,
 "best_pm": 0.67,
 "pos_rate": 0.911
 },
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 110,
+"n": 109,
 "best_pm": 0.61,
-"pos_rate": 0.864
+"pos_rate": 0.862
 },
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 114,
+"n": 113,
 "best_pm": 0.6,
-"pos_rate": 0.895
+"pos_rate": 0.894
 },
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 123,
+"n": 122,
 "best_pm": 0.64,
-"pos_rate": 0.976
+"pos_rate": 0.975
 },
 {
 "family": "hour_slice_parent",
@@ -2001,6 +2001,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-07T10:25",
+"name": "choppy_move_fade",
+"status": "accepted",
+"rationale": "The director's loss-limit flush already runs as `loss_limit_flush_reentry` (12% positive, best 0.52), so it needs no new module, and I did not propose a variant. This is a new payer, with no vol-cut, refill or exhaustion logic.\nRATIONALE: Payer: breakout-chasing retail and CFD fl",
+"note": "{\"name\": \"choppy_move_fade\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.8334625}"
+},
+{
 "ts": "2026-10-07T09:54",
 "name": "open_distance_level_cross",
 "status": "rejected",
@@ -2076,27 +2083,9 @@
 "status": "accepted",
 "rationale": "The direction's family already exists as `block_loss_flush_reentry` (accepted), which uses fixed UTC blocks. This one is the clock-anchored version the direction describes. Segments end at the London close (16 UTC) or New York close (21 UTC) and open at the next session's liquidi",
 "note": "{\"name\": \"session_loss_flush_reentry\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.496175}"
-},
-{
-"ts": "2026-10-07T04:15",
-"name": "block_loss_flush_reentry",
-"status": "accepted",
-"rationale": "Payer: desks with block loss limits who are forced flat after an adverse move beyond k block-sigmas, and who rebuild long at the next block when the budget resets. The cut is set by P&L, not by price.\nFixed-scale triggers (trailing 1-day bar sigma \u00d7 sqrt(block bars)), long-only r",
-"note": "{\"name\": \"block_loss_flush_reentry\", \"grid\": 90, \"sec_per_param\": 0.0, \"active_frac\": 0.744275}"
 }
 ],
 "history": [
-{
-"t": 1791195677.7681322,
-"total": 28869499,
-"per_min": 330.0,
-"cpu": 39.7,
-"gpu": 94,
-"free_gb": 135.8,
-"dsr_bar": 6.43,
-"best_pm_1h": 19.56,
-"distinct": 25414366
-},
 {
 "t": 1791196017.138164,
 "total": 28871185,
@@ -7637,6 +7626,17 @@
 "cpu": 17.3,
 "gpu": 0,
 "free_gb": 117.8,
+"dsr_bar": 6.42,
+"best_pm_1h": 1.75,
+"distinct": 26253569
+},
+{
+"t": 1791368776.207099,
+"total": 29713982,
+"per_min": 0.0,
+"cpu": 24.5,
+"gpu": 91,
+"free_gb": 124.5,
 "dsr_bar": 6.42,
 "best_pm_1h": 1.75,
 "distinct": 26253569
