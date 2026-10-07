@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-07 19:04:56 UTC",
+"generated_at": "2026-10-07 19:10:35 UTC",
 "host": {
-"cpu_pct": 28.0,
-"gpu_pct": 97,
-"free_gb": 134.2,
-"uptime": "up 8 days,  3:50, 2 users, load averages: 13.05 11.91 10.56",
-"load": "{ 13.05 11.91 10.56 }"
+"cpu_pct": 22.2,
+"gpu_pct": 82,
+"free_gb": 141.2,
+"uptime": "up 8 days,  3:56, 2 users, load averages: 11.30 11.13 10.61",
+"load": "{ 11.30 11.13 10.61 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-07T21:01:49",
-"it": 181200,
+"ts": "2026-10-07T21:10:15",
+"it": 181210,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.07,
+"pbo": 0.54,
 "best_family": "gated",
-"best_pm": 0.48,
-"best_params": "{'base': 'choppy_break_demeaned', 'base_params': {'days': 9, 'ex': 0.563, 'mdays': 30, 'mintr': 3, 'thr': 0.26}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 455}",
+"best_pm": 0.8,
+"best_params": "{'base': 'two_sided_squeeze_book', 'base_params': {'c': 0.261, 'days': 10, 'ex': 0.795, 'lm': 11, 'mdays': 9, 'mintr': 8}, 'mode': 'vol_below', 'vol_window': 60",
 "mix": "gat8",
-"queue_s": 6.0
+"queue_s": 8.0
 },
 "events": []
 },
@@ -49,10 +49,10 @@
 ],
 "registry": {
 "total": 29854478,
-"last_5m": 5742,
-"last_1h": 15416,
-"last_24h": 360725,
-"distinct_ideas": 26387876,
+"last_5m": 148,
+"last_1h": 13185,
+"last_24h": 359535,
+"distinct_ideas": 26387951,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
@@ -1920,35 +1920,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 33893,
+"n": 33501,
 "best_pm": 1.59,
-"pos_rate": 0.652
+"pos_rate": 0.651
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 58866,
+"n": 58842,
 "best_pm": 1.67,
 "pos_rate": 0.634
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 58746,
+"n": 58722,
 "best_pm": 16.82,
 "pos_rate": 0.368
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 34394,
+"n": 34002,
 "best_pm": 31.88,
 "pos_rate": 0.29
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 33719,
+"n": 33335,
 "best_pm": 1.64,
 "pos_rate": 0.594
 },
@@ -1976,9 +1976,9 @@
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 74,
+"n": 73,
 "best_pm": 0.6,
-"pos_rate": 0.919
+"pos_rate": 0.918
 },
 {
 "family": "higher_low_staircase",
@@ -2039,7 +2039,7 @@
 {
 "family": "hourly_limit_flush_stack",
 "bar": "1m",
-"n": 724,
+"n": 800,
 "best_pm": 0.8,
 "pos_rate": 0.38
 },
@@ -2102,21 +2102,21 @@
 {
 "family": "lagged_shock_repricing",
 "bar": "1h",
-"n": 19,
-"best_pm": 0.73,
-"pos_rate": 0.263
+"n": 2,
+"best_pm": 0,
+"pos_rate": 0
 },
 {
 "family": "lagged_shock_repricing",
 "bar": "1m",
-"n": 19,
+"n": 2,
 "best_pm": 0,
-"pos_rate": 0.053
+"pos_rate": 0
 },
 {
 "family": "lagged_shock_repricing",
 "bar": "30s",
-"n": 15,
+"n": 1,
 "best_pm": 0,
 "pos_rate": 0
 },
@@ -2284,7 +2284,7 @@
 {
 "family": "rebalance_size",
 "bar": "15m",
-"n": 5,
+"n": 4,
 "best_pm": 0,
 "pos_rate": 0
 },
@@ -2656,6 +2656,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-07T19:08",
+"name": "late_loaded_block_flush_long",
+"status": "accepted",
+"rationale": "The payer is prop and retail desks with loss limits. Their forced selling arrives late in a block, so the loss is back-loaded, and a later buyer who supplies liquidity is paid for it. Fixed-scale 10\u201320 minute blocks give enough events for the 100-trade minimum. The direction's da",
+"note": "{\"name\": \"late_loaded_block_flush_long\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.5437125}"
+},
+{
 "ts": "2026-10-07T18:37",
 "name": "hourly_limit_flush_stack",
 "status": "accepted",
@@ -2731,38 +2738,9 @@
 "status": "accepted",
 "rationale": "This is the directed loss-limit flush, but the threshold is k \u00d7 session ATR instead of the fixed bps used by `session_flush_long`, `close_limit_flush_reentry` and `loss_limit_flush_reentry`. Session ATR is the trailing mean absolute 1-bar return \u00d7 \u221a(bars in the 9h session). A day",
 "note": "{\"name\": \"atr_loss_limit_flush\", \"grid\": 120, \"sec_per_param\": 0.0, \"active_frac\": 0.0435}"
-},
-{
-"ts": "2026-10-07T12:59",
-"name": "wide_quote_episode_fade",
-"status": "rejected",
-"rationale": "The payer is stop-and-market-order takers who trade while quotes are thin. When dealers widen the spread, the price they print is an inventory-protection quote, not a consensus price. Moves made inside a wide-spread episode are therefore partly quote noise, and the fade is paid o",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1791227101.1986291,
-"total": 29058654,
-"per_min": 162.0,
-"cpu": 31.6,
-"gpu": 27,
-"free_gb": 185.8,
-"dsr_bar": 6.43,
-"best_pm_1h": 21.41,
-"distinct": 25603195
-},
-{
-"t": 1791227435.441142,
-"total": 29058654,
-"per_min": 0.0,
-"cpu": 29.1,
-"gpu": 63,
-"free_gb": 186.6,
-"dsr_bar": 6.43,
-"best_pm_1h": 21.41,
-"distinct": 25603195
-},
 {
 "t": 1791227772.9762619,
 "total": 29058654,
@@ -8295,6 +8273,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 1.35,
 "distinct": 26387876
+},
+{
+"t": 1791400235.8557959,
+"total": 29854478,
+"per_min": 30.0,
+"cpu": 22.2,
+"gpu": 82,
+"free_gb": 141.2,
+"dsr_bar": 6.42,
+"best_pm_1h": 1.35,
+"distinct": 26387951
 }
 ],
 "instrument": "XAUUSD",
