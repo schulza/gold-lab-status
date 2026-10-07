@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-07 00:09:25 UTC",
+"generated_at": "2026-10-07 00:15:06 UTC",
 "host": {
-"cpu_pct": 29.7,
-"gpu_pct": 92,
-"free_gb": 135.9,
-"uptime": "up 7 days,  8:55, 2 users, load averages: 13.75 11.82 11.40",
-"load": "{ 13.75 11.82 11.40 }"
+"cpu_pct": 33.3,
+"gpu_pct": 91,
+"free_gb": 130.0,
+"uptime": "up 7 days,  9:01, 2 users, load averages: 9.07 9.83 10.61",
+"load": "{ 9.07 9.83 10.61 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-07T02:01:47",
-"it": 171200,
+"ts": "2026-10-07T02:14:14",
+"it": 171400,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.79,
+"pbo": 0.46,
 "best_family": "gated",
 "best_pm": 0.55,
-"best_params": "{'base': 'levered_etf_close_rebalance', 'base_params': {'k': 2.28, 'post': 56, 'pre': 26, 'sign': 1}, 'mode': 'vol_below', 'vol_window': 508, 'vol_pct': 0.698}",
+"best_params": "{'base': 'basis_migration_hold', 'base_params': {'days': 3, 'ex': 0.474, 'k': 0.391, 'sl': 0.429}, 'mode': 'tick_above', 'vol_window': 60, 'vol_pct': 0.5, 'vol_",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-07T02:09:24",
-"it": 141940,
+"ts": "2026-10-07T02:12:52",
+"it": 142000,
 "bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.5,
+"pbo": 0.39,
 "best_family": "gated",
-"best_pm": 0.73,
-"best_params": "{'base': 'giveback_break_matched', 'base_params': {'days': 6, 'fr': 0.25, 'k': 0.875, 'mdays': 24}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 200, 'vol_scale': ",
+"best_pm": 0.54,
+"best_params": "{'base': 'two_sided_squeeze_book', 'base_params': {'c': 0.261, 'days': 10, 'ex': 0.795, 'lm': 11, 'mdays': 8, 'mintr': 18}, 'mode': 'vol_above', 'vol_window': 2",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 29564857,
-"last_5m": 994,
-"last_1h": 16682,
-"last_24h": 370734,
-"distinct_ideas": 26108196,
+"total": 29567189,
+"last_5m": 2068,
+"last_1h": 17163,
+"last_24h": 368749,
+"distinct_ideas": 26110440,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19546854,
+"n": 19549182,
 "pos_rate": 0.345,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -535,7 +535,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 10973,
+"n": 10977,
 "pos_rate": 0.902,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1391,20 +1391,6 @@
 },
 {
 "family": "fast_vs_slow_break",
-"bar": "1h",
-"n": 1397,
-"best_pm": 0.73,
-"pos_rate": 0.511
-},
-{
-"family": "fast_vs_slow_break",
-"bar": "1m",
-"n": 1511,
-"best_pm": 0.97,
-"pos_rate": 0.665
-},
-{
-"family": "fast_vs_slow_break",
 "bar": "30s",
 "n": 1694,
 "best_pm": 0.7,
@@ -1455,51 +1441,51 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 51975,
+"n": 52135,
 "best_pm": 3.51,
 "pos_rate": 0.666
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 84039,
+"n": 84260,
 "best_pm": 1.61,
 "pos_rate": 0.643
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 83994,
+"n": 84204,
 "best_pm": 16.8,
-"pos_rate": 0.378
+"pos_rate": 0.379
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 51976,
+"n": 52144,
 "best_pm": 27.12,
 "pos_rate": 0.297
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 51962,
+"n": 52122,
 "best_pm": 2.16,
 "pos_rate": 0.609
 },
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 204,
+"n": 206,
 "best_pm": 0.68,
-"pos_rate": 0.975
+"pos_rate": 0.971
 },
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 178,
+"n": 179,
 "best_pm": 0.67,
-"pos_rate": 0.91
+"pos_rate": 0.911
 },
 {
 "family": "higher_low_staircase",
@@ -1511,7 +1497,7 @@
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 178,
+"n": 179,
 "best_pm": 0.6,
 "pos_rate": 0.888
 },
@@ -1694,6 +1680,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-07T00:09",
+"name": null,
+"status": "rejected",
+"rationale": "The sandbox runs about 20k one-minute bars, roughly 14 days. Every earlier proposal used daily windows or absolute thresholds that never fire there, so the signal came out identically zero. This one uses fixed-scale real-yield z-scores and vol-scaled gold moves over windows cappe",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-10-06T23:38",
 "name": "deleverage_exhaustion_refill",
 "status": "rejected",
@@ -1769,27 +1762,9 @@
 "status": "accepted",
 "rationale": "Payer is slow allocators and rebalancers who reprice gold only after a vol-scaled shock has aged by L windows, so continuing in the shock's direction collects their lagged flow. sign=-1 tests the opposite claim, and the position is demeaned against its own trailing exposure so be",
 "note": "{\"name\": \"lagged_shock_repricing\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.747725}"
-},
-{
-"ts": "2026-10-06T18:00",
-"name": "vol_target_exhaustion_refill",
-"status": "rejected",
-"rationale": "I could only do the forced-deleverage family. The real-yield family needs `goldlab.external`, and `ALLOWED_MODULES` in `goldlab/evolve.py` rejects that import, which is what failed twice before.\nRATIONALE: The payer is vol-target and VaR-constrained funds that sell after a down-s",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1791159101.550981,
-"total": 28639432,
-"per_min": 728.0,
-"cpu": 2.8,
-"gpu": 0,
-"free_gb": 123.7,
-"dsr_bar": 6.44,
-"best_pm_1h": 1.58,
-"distinct": 25184402
-},
 {
 "t": 1791159440.591724,
 "total": 28641437,
@@ -7333,6 +7308,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 14.77,
 "distinct": 26108196
+},
+{
+"t": 1791332106.081693,
+"total": 29567189,
+"per_min": 414.0,
+"cpu": 33.3,
+"gpu": 91,
+"free_gb": 130.0,
+"dsr_bar": 6.42,
+"best_pm_1h": 14.77,
+"distinct": 26110440
 }
 ],
 "instrument": "XAUUSD",
