@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-07 19:39:17 UTC",
+"generated_at": "2026-10-07 19:44:56 UTC",
 "host": {
-"cpu_pct": 32.6,
-"gpu_pct": 93,
-"free_gb": 133.8,
-"uptime": "up 8 days,  4:25, 2 users, load averages: 10.10 11.17 11.17",
-"load": "{ 10.10 11.17 11.17 }"
+"cpu_pct": 25.2,
+"gpu_pct": 90,
+"free_gb": 130.5,
+"uptime": "up 8 days,  4:30, 2 users, load averages: 11.75 11.38 11.27",
+"load": "{ 11.75 11.38 11.27 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-07T21:39:16",
-"it": 181434,
+"ts": "2026-10-07T21:42:56",
+"it": 181600,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.04,
+"pbo": 0.32,
 "best_family": "gated",
-"best_pm": 0.83,
-"best_params": "{'base': 'weekend_gap_repricing', 'base_params': {'hold': 21, 'k': 0.371, 'sign': -1, 'wait': 0}, 'mode': 'tick_above', 'vol_window': 260, 'vol_pct': 0.148}",
+"best_pm": 0.43,
+"best_params": "{'base': 'thin_day_impact_refund', 'base_params': {'base': 9, 'hold': 2, 'k': 0.724, 'sign': 1, 'theta': 0.76}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 61}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-07T21:36:19",
-"it": 150400,
-"bar": "15m",
-"batch": 8,
+"ts": "2026-10-07T21:43:50",
+"it": 150410,
+"bar": "30s",
+"batch": 125,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.25,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 0.86,
-"best_params": "{'base': 'margin_break_demeaned', 'base_params': {'days': 7, 'ex': 0.504, 'k': 0.4, 'mdays': 14}, 'mode': 'spread_below', 'vol_window': 102, 'vol_pct': 0.79}",
-"mix": "gat8",
-"queue_s": 8.0
+"best_pm": 0.41,
+"best_params": "{'base': 'news_overhang_underreaction', 'base_params': {'days': 16, 'hold': 5, 'k': 2.65, 'mode': 'opposed', 'sign': 1, 'theta': 0.179}, 'mode': 'session', 'sta",
+"mix": "cou1/gat13/lat111",
+"queue_s": 14.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 29868038,
-"last_5m": 2929,
-"last_1h": 20355,
-"last_24h": 365881,
-"distinct_ideas": 26401407,
+"total": 29870465,
+"last_5m": 1498,
+"last_1h": 21729,
+"last_24h": 366376,
+"distinct_ideas": 26403481,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19699061,
+"n": 19700721,
 "pos_rate": 0.346,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -526,7 +526,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 11166,
+"n": 11167,
 "pos_rate": 0.902,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -660,6 +660,15 @@
 "since": "2026-10-02"
 },
 {
+"family": "hourly_limit_flush_stack",
+"n": 9638,
+"pos_rate": 0.329,
+"best_pm": 1.36,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-07"
+},
+{
 "family": "boxbreak_matched",
 "n": 9627,
 "pos_rate": 0.276,
@@ -673,15 +682,6 @@
 "n": 9456,
 "pos_rate": 0.293,
 "best_pm": 1.08,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-07"
-},
-{
-"family": "hourly_limit_flush_stack",
-"n": 9446,
-"pos_rate": 0.326,
-"best_pm": 1.36,
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-07"
@@ -894,6 +894,15 @@
 "since": "2026-10-01"
 },
 {
+"family": "late_loaded_block_flush_long",
+"n": 5331,
+"pos_rate": 0.068,
+"best_pm": 1.17,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-07"
+},
+{
 "family": "absorbed_flow_release",
 "n": 5302,
 "pos_rate": 0.29,
@@ -913,7 +922,7 @@
 },
 {
 "family": "counter_drift_chase_fade",
-"n": 4971,
+"n": 4974,
 "pos_rate": 0.02,
 "best_pm": 0.44,
 "best_dsr": 0.0,
@@ -946,15 +955,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-01"
-},
-{
-"family": "late_loaded_block_flush_long",
-"n": 4760,
-"pos_rate": 0.072,
-"best_pm": 1.17,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-07"
 },
 {
 "family": "trailing_stop_flush",
@@ -1880,7 +1880,7 @@
 {
 "family": "counter_drift_chase_fade",
 "bar": "30s",
-"n": 978,
+"n": 981,
 "best_pm": 0.44,
 "pos_rate": 0.044
 },
@@ -1929,51 +1929,51 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 33037,
+"n": 32749,
 "best_pm": 1.59,
 "pos_rate": 0.651
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 57410,
+"n": 58026,
 "best_pm": 1.67,
 "pos_rate": 0.633
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 57299,
+"n": 57923,
 "best_pm": 16.82,
-"pos_rate": 0.367
+"pos_rate": 0.366
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 33525,
+"n": 33242,
 "best_pm": 31.88,
-"pos_rate": 0.289
+"pos_rate": 0.29
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 32799,
+"n": 32511,
 "best_pm": 1.64,
 "pos_rate": 0.593
 },
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 79,
+"n": 77,
 "best_pm": 0.68,
-"pos_rate": 0.949
+"pos_rate": 0.948
 },
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 68,
+"n": 69,
 "best_pm": 0.67,
-"pos_rate": 0.926
+"pos_rate": 0.928
 },
 {
 "family": "higher_low_staircase",
@@ -1985,9 +1985,9 @@
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 69,
+"n": 68,
 "best_pm": 0.6,
-"pos_rate": 0.913
+"pos_rate": 0.912
 },
 {
 "family": "higher_low_staircase",
@@ -2125,7 +2125,7 @@
 {
 "family": "late_loaded_block_flush_long",
 "bar": "30s",
-"n": 975,
+"n": 1088,
 "best_pm": 0,
 "pos_rate": 0
 },
@@ -2665,6 +2665,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-07T19:39",
+"name": "session_flush_next_open",
+"status": "rejected",
+"rationale": "Payer is prop and retail desks with a daily loss limit. They are forced flat into the London close (16:30 UTC) or NY close (21:00 UTC) after a session drawdown beyond k bps. The signal buys the next session's open and holds for `hold` minutes, demeaned against trailing exposure.\n",
+"note": "sandbox: NameError: name 'FAMILIES' is not defined"
+},
+{
 "ts": "2026-10-07T19:08",
 "name": "late_loaded_block_flush_long",
 "status": "accepted",
@@ -2740,27 +2747,9 @@
 "status": "accepted",
 "rationale": "I'm not proposing another loss-limit flush. `atr_loss_limit_flush` and its siblings are already registered and the last one was active only 4% of bars. This is a different payer: takers who hit a stale quote in a thin-tick bar. A move of fixed size (k bps) printed on thin quote t",
 "note": "{\"name\": \"thin_tick_catchup\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.8374125}"
-},
-{
-"ts": "2026-10-07T13:29",
-"name": "atr_loss_limit_flush",
-"status": "accepted",
-"rationale": "This is the directed loss-limit flush, but the threshold is k \u00d7 session ATR instead of the fixed bps used by `session_flush_long`, `close_limit_flush_reentry` and `loss_limit_flush_reentry`. Session ATR is the trailing mean absolute 1-bar return \u00d7 \u221a(bars in the 9h session). A day",
-"note": "{\"name\": \"atr_loss_limit_flush\", \"grid\": 120, \"sec_per_param\": 0.0, \"active_frac\": 0.0435}"
 }
 ],
 "history": [
-{
-"t": 1791229481.842907,
-"total": 29071158,
-"per_min": 0.0,
-"cpu": 36.3,
-"gpu": 91,
-"free_gb": 188.9,
-"dsr_bar": 6.43,
-"best_pm_1h": 21.41,
-"distinct": 25615636
-},
 {
 "t": 1791229832.348663,
 "total": 29077689,
@@ -8293,6 +8282,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 10.34,
 "distinct": 26401407
+},
+{
+"t": 1791402296.9966662,
+"total": 29870465,
+"per_min": 300.0,
+"cpu": 25.2,
+"gpu": 90,
+"free_gb": 130.5,
+"dsr_bar": 6.42,
+"best_pm_1h": 10.34,
+"distinct": 26403481
 }
 ],
 "instrument": "XAUUSD",
