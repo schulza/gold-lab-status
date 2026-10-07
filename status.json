@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-07 12:54:15 UTC",
+"generated_at": "2026-10-07 12:59:54 UTC",
 "host": {
-"cpu_pct": 18.4,
-"gpu_pct": 89,
-"free_gb": 127.7,
-"uptime": "up 7 days, 21:40, 2 users, load averages: 11.68 12.09 11.52",
-"load": "{ 11.68 12.09 11.52 }"
+"cpu_pct": 28.8,
+"gpu_pct": 86,
+"free_gb": 126.9,
+"uptime": "up 7 days, 21:45, 2 users, load averages: 10.84 11.32 11.36",
+"load": "{ 10.84 11.32 11.36 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-07T14:54:07",
-"it": 178720,
+"ts": "2026-10-07T14:55:32",
+"it": 178800,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.25,
+"pbo": 0.04,
 "best_family": "gated",
-"best_pm": 0.8,
-"best_params": "{'base': 'levered_etf_close_rebalance', 'base_params': {'k': 2.29, 'post': 52, 'pre': 29, 'sign': 1}, 'mode': 'spread_below', 'vol_window': 272, 'vol_pct': 0.17",
+"best_pm": 0.95,
+"best_params": "{'base': 'close_limit_flush_reentry', 'base_params': {'close': 21, 'dm': 1, 'hold': 5, 'k': 1.5, 're': 2}, 'mode': 'tick_above', 'vol_window': 240, 'vol_pct': 0",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 29758672,
-"last_5m": 6686,
-"last_1h": 16616,
-"last_24h": 354759,
-"distinct_ideas": 26296297,
+"total": 29759615,
+"last_5m": 616,
+"last_1h": 15064,
+"last_24h": 355391,
+"distinct_ideas": 26297097,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19660166,
+"n": 19661046,
 "pos_rate": 0.346,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -760,8 +760,8 @@
 },
 {
 "family": "rolling_limit_flush_reentry",
-"n": 6349,
-"pos_rate": 0.299,
+"n": 6365,
+"pos_rate": 0.298,
 "best_pm": 0.95,
 "best_dsr": 0.0,
 "passed": 0,
@@ -1688,14 +1688,14 @@
 {
 "family": "gated",
 "bar": "1h",
-"n": 67252,
+"n": 67564,
 "best_pm": 1.67,
 "pos_rate": 0.641
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 67246,
+"n": 67566,
 "best_pm": 16.8,
 "pos_rate": 0.375
 },
@@ -2221,6 +2221,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-07T12:59",
+"name": "wide_quote_episode_fade",
+"status": "rejected",
+"rationale": "The payer is stop-and-market-order takers who trade while quotes are thin. When dealers widen the spread, the price they print is an inventory-protection quote, not a consensus price. Moves made inside a wide-spread episode are therefore partly quote noise, and the fade is paid o",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-10-07T12:28",
 "name": "rolling_limit_flush_reentry",
 "status": "accepted",
@@ -2296,27 +2303,9 @@
 "status": "rejected",
 "rationale": "A loss-limit flush family already exists three times (`block_`, `session_` and `close_pinned_flush_reentry`), so another would be a neighbour that adds no new test. This proposal takes a different payer: passive counterparties of institutional sliced execution (TWAP/VWAP parents)",
 "note": "sandbox: AssertionError: zu speicherhungrig: 57 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-10-07T06:49",
-"name": "tight_spread_informed_flow",
-"status": "accepted",
-"rationale": "The direction's loss-limit flush is already built and accepted as `session_loss_flush_reentry` (clock-anchored London/NY, 72 signatures), so building it again would be a duplicate. This proposal is one different payer, not a refill or deleverage variant.\nRATIONALE: Payer is marke",
-"note": "{\"name\": \"tight_spread_informed_flow\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.136875}"
 }
 ],
 "history": [
-{
-"t": 1791204863.350986,
-"total": 28916419,
-"per_min": 29.0,
-"cpu": 26.9,
-"gpu": 75,
-"free_gb": 188.5,
-"dsr_bar": 6.43,
-"best_pm_1h": 16.97,
-"distinct": 25461205
-},
 {
 "t": 1791205201.821387,
 "total": 28916419,
@@ -7860,6 +7849,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 6.69,
 "distinct": 26296297
+},
+{
+"t": 1791377994.643413,
+"total": 29759615,
+"per_min": 123.0,
+"cpu": 28.8,
+"gpu": 86,
+"free_gb": 126.9,
+"dsr_bar": 6.42,
+"best_pm_1h": 6.69,
+"distinct": 26297097
 }
 ],
 "instrument": "XAUUSD",
