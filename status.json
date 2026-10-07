@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-07 02:38:10 UTC",
+"generated_at": "2026-10-07 02:44:02 UTC",
 "host": {
-"cpu_pct": 22.3,
-"gpu_pct": 94,
-"free_gb": 121.9,
-"uptime": "up 7 days, 11:24, 2 users, load averages: 9.04 10.11 8.89",
-"load": "{ 9.04 10.11 8.89 }"
+"cpu_pct": 30.3,
+"gpu_pct": 5,
+"free_gb": 128.7,
+"uptime": "up 7 days, 11:29, 2 users, load averages: 11.72 10.03 9.11",
+"load": "{ 11.72 10.03 9.11 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-07T04:36:08",
-"it": 173200,
+"ts": "2026-10-07T04:44:01",
+"it": 173348,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.11,
+"pbo": 0.68,
 "best_family": "gated",
-"best_pm": 0.87,
-"best_params": "{'base': 'event_drift', 'base_params': {'atr_window': 26, 'hold': 14, 'pre_bars': 4, 'sign': 1, 'thr_atr': 1.62}, 'mode': 'spread_below', 'vol_window': 240, 'vo",
+"best_pm": 0.46,
+"best_params": "{'base': 'forced_deleverage_refill', 'base_params': {'d': 5, 'gap': 0.935, 'k': 0.75, 'side': 'both', 'sign': -1, 'xz': 0.836}, 'mode': 'vol_above', 'vol_window",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-07T04:38:03",
-"it": 143514,
-"bar": "30s",
+"ts": "2026-10-07T04:39:38",
+"it": 143600,
+"bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.0,
+"pbo": 0.39,
 "best_family": "gated",
-"best_pm": 0.69,
-"best_params": "{'base': 'heavy_day_concession', 'base_params': {'base': 6, 'hold': 2, 'k': 0.648, 'sign': 1, 'theta': 1.18}, 'mode': 'session', 'start_hour': 7, 'hold_hours': ",
+"best_pm": 0.7,
+"best_params": "{'base': 'trapped_fader_squeeze', 'base_params': {'confirm': 1, 'hold': 882, 'lookback': 712, 'pen': 0.743, 'sign': -1, 'trap': 5}, 'mode': 'tick_above', 'vol_w",
 "mix": "gat8",
-"queue_s": 7.0
+"queue_s": 8.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 29603962,
-"last_5m": 2323,
-"last_1h": 13404,
-"last_24h": 359164,
-"distinct_ideas": 26146991,
+"total": 29605728,
+"last_5m": 1775,
+"last_1h": 13794,
+"last_24h": 359173,
+"distinct_ideas": 26148757,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19575899,
+"n": 19577659,
 "pos_rate": 0.345,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -535,7 +535,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 11009,
+"n": 11015,
 "pos_rate": 0.902,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1422,58 +1422,58 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 51083,
+"n": 50875,
 "best_pm": 3.51,
 "pos_rate": 0.667
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 82991,
+"n": 83319,
 "best_pm": 1.61,
 "pos_rate": 0.642
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 82933,
+"n": 83245,
 "best_pm": 16.8,
 "pos_rate": 0.379
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 51254,
+"n": 51046,
 "best_pm": 27.12,
 "pos_rate": 0.296
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 51081,
+"n": 50865,
 "best_pm": 2.16,
 "pos_rate": 0.608
 },
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 204,
+"n": 201,
 "best_pm": 0.68,
-"pos_rate": 0.971
+"pos_rate": 0.97
 },
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 167,
+"n": 169,
 "best_pm": 0.67,
-"pos_rate": 0.91
+"pos_rate": 0.905
 },
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 159,
+"n": 162,
 "best_pm": 0.61,
-"pos_rate": 0.893
+"pos_rate": 0.895
 },
 {
 "family": "higher_low_staircase",
@@ -1485,7 +1485,7 @@
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 166,
+"n": 165,
 "best_pm": 0.64,
 "pos_rate": 0.964
 },
@@ -1654,6 +1654,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-07T02:43",
+"name": null,
+"status": "rejected",
+"rationale": "Payer: rate hedgers and allocators who reprice gold days after 10y TIPS yields move. When the real-yield change is large but gold has not yet moved in the implied direction, the family trades the lagging catch-up.\nRATIONALE: It is a different construct from `real_yield_trend`. It",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-10-07T02:12",
 "name": "deleverage_refill_exit",
 "status": "rejected",
@@ -1729,27 +1736,9 @@
 "status": "rejected",
 "rationale": "Payer: vol-target and VaR-constrained funds that must cut gold exposure after a vol spike regardless of view. Once short-horizon vol turns down from its peak, the forced selling is spent, so the module buys the exhausted selloff (or sells the exhausted squeeze) and exits when vol",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-06T20:34",
-"name": "vol_target_cut_exhaustion",
-"status": "rejected",
-"rationale": "I can't write the real-yield family. `ALLOWED_MODULES` in `goldlab/evolve.py:46` has no `goldlab.external`, so the AST check rejects the import. This is why both earlier external-data attempts failed with \"import not allowed\", even though the prompt contract allows it.\nRATIONALE:",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1791168013.9024909,
-"total": 28694045,
-"per_min": 29.0,
-"cpu": 55.4,
-"gpu": 76,
-"free_gb": 188.6,
-"dsr_bar": 6.44,
-"best_pm_1h": 1.46,
-"distinct": 25238987
-},
 {
 "t": 1791168350.615593,
 "total": 28694045,
@@ -7293,6 +7282,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 11.94,
 "distinct": 26146991
+},
+{
+"t": 1791341042.141471,
+"total": 29605728,
+"per_min": 355.0,
+"cpu": 30.3,
+"gpu": 5,
+"free_gb": 128.7,
+"dsr_bar": 6.42,
+"best_pm_1h": 11.94,
+"distinct": 26148757
 }
 ],
 "instrument": "XAUUSD",
