@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-07 07:18:12 UTC",
+"generated_at": "2026-10-07 07:23:37 UTC",
 "host": {
-"cpu_pct": 22.2,
-"gpu_pct": 94,
-"free_gb": 117.9,
-"uptime": "up 7 days, 16:04, 2 users, load averages: 6.15 8.64 9.88",
-"load": "{ 6.15 8.64 9.88 }"
+"cpu_pct": 2.5,
+"gpu_pct": 0,
+"free_gb": 118.0,
+"uptime": "up 7 days, 16:09, 2 users, load averages: 3.12 6.65 8.67",
+"load": "{ 3.12 6.65 8.67 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-07T09:16:08",
-"it": 175800,
-"bar": "1h",
+"ts": "2026-10-07T09:21:43",
+"it": 175801,
+"bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
 "pbo": 0.64,
 "best_family": "gated",
-"best_pm": 0.87,
-"best_params": "{'base': 'period_end_mark_reversal', 'base_params': {'agree': 1, 'hold': 3, 'k': 0.0733, 'period': 'week', 'sign': -1, 'w': 30}, 'mode': 'tick_above', 'vol_wind",
+"best_pm": 0.35,
+"best_params": "{'base': 'drawdown_derisk_flow', 'base_params': {'d': 11, 'hold': 4, 'k': 1.14, 'side': 'down', 'sign': 1}, 'mode': 'tick_above', 'vol_window': 403, 'vol_pct': ",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-07T09:14:55",
-"it": 145800,
+"ts": "2026-10-07T09:21:17",
+"it": 145812,
 "bar": "30s",
-"batch": 8,
+"batch": 156,
 "passed": 0,
 "bench": 6.42,
 "pbo": 0.0,
-"best_family": "gated",
-"best_pm": 0.69,
-"best_params": "{'base': 'stale_high_break_demeaned', 'base_params': {'days': 3, 'ex': 0.206, 'frac': 0.255, 'mdays': 28, 'mintr': 3}, 'mode': 'htf_with', 'htf': '4h', 'sma_n':",
-"mix": "gat8",
-"queue_s": 8.0
+"best_family": "tight_spread_informed_flow",
+"best_pm": 0.58,
+"best_params": "{'hold': 111, 'k': 2.88, 'n': 6, 'sign': -1, 'sp': 0.718}",
+"mix": "gat25/tig131",
+"queue_s": 87.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 29672807,
-"last_5m": 1917,
-"last_1h": 18624,
-"last_24h": 348812,
-"distinct_ideas": 26213699,
+"total": 29674318,
+"last_5m": 1511,
+"last_1h": 20035,
+"last_24h": 348801,
+"distinct_ideas": 26215210,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19615612,
+"n": 19615826,
 "pos_rate": 0.345,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -714,6 +714,15 @@
 "since": "2026-10-01"
 },
 {
+"family": "tight_spread_informed_flow",
+"n": 7144,
+"pos_rate": 0.193,
+"best_pm": 1.14,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-07"
+},
+{
 "family": "inventory_vacuum",
 "n": 7034,
 "pos_rate": 0.466,
@@ -786,15 +795,6 @@
 "since": "2026-10-01"
 },
 {
-"family": "tight_spread_informed_flow",
-"n": 5855,
-"pos_rate": 0.181,
-"best_pm": 1.13,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-07"
-},
-{
 "family": "sge_benchmark_flow",
 "n": 5734,
 "pos_rate": 0.26,
@@ -832,7 +832,7 @@
 },
 {
 "family": "trailing_drawdown_flush",
-"n": 4933,
+"n": 4941,
 "pos_rate": 0.027,
 "best_pm": 0.73,
 "best_dsr": 0.0,
@@ -1504,70 +1504,70 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 46957,
+"n": 46697,
 "best_pm": 3.51,
 "pos_rate": 0.665
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 76470,
+"n": 76310,
 "best_pm": 1.67,
 "pos_rate": 0.643
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 76394,
+"n": 76234,
 "best_pm": 16.8,
 "pos_rate": 0.378
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 47165,
+"n": 46822,
 "best_pm": 31.88,
 "pos_rate": 0.297
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 46984,
+"n": 46609,
 "best_pm": 2.16,
-"pos_rate": 0.606
+"pos_rate": 0.607
 },
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 170,
+"n": 167,
 "best_pm": 0.68,
-"pos_rate": 0.971
+"pos_rate": 0.97
 },
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 153,
+"n": 152,
 "best_pm": 0.67,
 "pos_rate": 0.895
 },
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 129,
+"n": 128,
 "best_pm": 0.61,
-"pos_rate": 0.876
+"pos_rate": 0.875
 },
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 136,
+"n": 135,
 "best_pm": 0.6,
-"pos_rate": 0.897
+"pos_rate": 0.904
 },
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 153,
+"n": 151,
 "best_pm": 0.64,
 "pos_rate": 0.967
 },
@@ -1658,9 +1658,9 @@
 {
 "family": "range_expansion_hold",
 "bar": "15m",
-"n": 23,
+"n": 22,
 "best_pm": 0.67,
-"pos_rate": 0.913
+"pos_rate": 0.909
 },
 {
 "family": "range_expansion_hold",
@@ -1700,9 +1700,9 @@
 {
 "family": "rebalance_size",
 "bar": "15m",
-"n": 9,
+"n": 8,
 "best_pm": -0.24,
-"pos_rate": 0.111
+"pos_rate": 0
 },
 {
 "family": "session_loss_flush_reentry",
@@ -1770,9 +1770,9 @@
 {
 "family": "tight_spread_informed_flow",
 "bar": "15m",
-"n": 899,
-"best_pm": 1.13,
-"pos_rate": 0.291
+"n": 1478,
+"best_pm": 1.14,
+"pos_rate": 0.319
 },
 {
 "family": "tight_spread_informed_flow",
@@ -1791,16 +1791,16 @@
 {
 "family": "tight_spread_informed_flow",
 "bar": "30s",
-"n": 903,
+"n": 1034,
 "best_pm": 0.68,
-"pos_rate": 0.017
+"pos_rate": 0.018
 },
 {
 "family": "tight_spread_informed_flow",
 "bar": "5m",
-"n": 900,
+"n": 1479,
 "best_pm": 0.91,
-"pos_rate": 0.186
+"pos_rate": 0.185
 },
 {
 "family": "trailing_drawdown_flush",
@@ -1833,7 +1833,7 @@
 {
 "family": "trailing_drawdown_flush",
 "bar": "5m",
-"n": 974,
+"n": 982,
 "best_pm": 0.68,
 "pos_rate": 0.047
 },
@@ -1875,6 +1875,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-10-07T07:20",
+"name": "sliced_window_consensus",
+"status": "rejected",
+"rationale": "A loss-limit flush family already exists three times (`block_`, `session_` and `close_pinned_flush_reentry`), so another would be a neighbour that adds no new test. This proposal takes a different payer: passive counterparties of institutional sliced execution (TWAP/VWAP parents)",
+"note": "sandbox: AssertionError: zu speicherhungrig: 57 B je Bar und Parameter (max 40)"
+},
 {
 "ts": "2026-10-07T06:49",
 "name": "tight_spread_informed_flow",
@@ -1950,13 +1957,6 @@
 "name": "deleverage_exhaustion_book",
 "status": "rejected",
 "rationale": "Payer: vol-target and VaR-constrained funds that cut gold regardless of view after a vol spike. I buy once the spike has peaked and they have stopped selling, and exit when realised vol returns to normal. This uses a vol-ratio peak-and-roll-off state machine, not a break or hold ",
-"note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-07T01:11",
-"name": "deleverage_exhaustion_demeaned",
-"status": "rejected",
-"rationale": "I could not build the lagged real-yield family. `ALLOWED_MODULES` in `goldlab/evolve.py:46` still has no `goldlab.external`, so any import of it is rejected (as in my earlier attempt). The rule text and the sandbox disagree, and I did not work around it.\nRATIONALE: This is the se",
 "note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
@@ -7504,6 +7504,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 31.88,
 "distinct": 26213699
+},
+{
+"t": 1791357817.4484951,
+"total": 29674318,
+"per_min": 302.0,
+"cpu": 2.5,
+"gpu": 0,
+"free_gb": 118.0,
+"dsr_bar": 6.42,
+"best_pm_1h": 31.88,
+"distinct": 26215210
 }
 ],
 "instrument": "XAUUSD",
