@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-07 13:28:32 UTC",
+"generated_at": "2026-10-07 13:34:21 UTC",
 "host": {
-"cpu_pct": 23.5,
-"gpu_pct": 67,
-"free_gb": 138.4,
-"uptime": "up 7 days, 22:14, 2 users, load averages: 10.05 11.25 11.07",
-"load": "{ 10.05 11.25 11.07 }"
+"cpu_pct": 32.1,
+"gpu_pct": 84,
+"free_gb": 156.0,
+"uptime": "up 7 days, 22:20, 2 users, load averages: 12.86 11.35 11.12",
+"load": "{ 12.86 11.35 11.12 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-07T15:24:36",
-"it": 179200,
+"ts": "2026-10-07T15:33:03",
+"it": 179210,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.54,
+"pbo": 0.57,
 "best_family": "gated",
-"best_pm": 0.88,
-"best_params": "{'base': 'compression_break_matched_exposure', 'base_params': {'c': 0.58, 'days': 27, 'ex': 0.181, 'mdays': 30, 'mintr': 4}, 'mode': 'spread_below', 'vol_window",
+"best_pm": 0.77,
+"best_params": "{'base': 'shakeout_reclaim', 'base_params': {'hold': 1, 'k': 0.967, 'r': 8, 'side': 'long', 'sign': 1, 'span': 9}, 'mode': 'vol_below', 'vol_window': 292, 'vol_",
 "mix": "gat8",
-"queue_s": 7.0
+"queue_s": 8.0
 },
 "events": []
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-07T15:25:41",
-"it": 148800,
-"bar": "5m",
+"ts": "2026-10-07T15:34:06",
+"it": 148810,
+"bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.32,
+"pbo": 0.21,
 "best_family": "gated",
-"best_pm": 0.66,
-"best_params": "{'base': 'two_sided_squeeze_book', 'base_params': {'c': 0.261, 'days': 10, 'ex': 0.795, 'lm': 11, 'mdays': 9, 'mintr': 18}, 'mode': 'vol_below', 'vol_window': 2",
+"best_pm": 0.9,
+"best_params": "{'base': 'asia_participation_shift', 'base_params': {'d': 17, 'k': 1.98, 'mode': 'cold', 'mult': 9, 'sign': 1}, 'mode': 'vol_above', 'vol_window': 42, 'vol_pct'",
 "mix": "gat8",
-"queue_s": 8.0
+"queue_s": 7.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 29769439,
-"last_5m": 1517,
+"total": 29769511,
+"last_5m": 136,
 "last_1h": 19451,
-"last_24h": 359893,
-"distinct_ideas": 26306921,
+"last_24h": 358949,
+"distinct_ideas": 26307033,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19667768,
+"n": 19667840,
 "pos_rate": 0.346,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -1681,35 +1681,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 41663,
+"n": 41527,
 "best_pm": 3.51,
 "pos_rate": 0.658
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 67891,
+"n": 67627,
 "best_pm": 1.67,
 "pos_rate": 0.64
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 67893,
+"n": 67613,
 "best_pm": 16.8,
 "pos_rate": 0.374
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 42013,
+"n": 41877,
 "best_pm": 31.88,
 "pos_rate": 0.293
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 41458,
+"n": 41330,
 "best_pm": 1.7,
 "pos_rate": 0.6
 },
@@ -2221,6 +2221,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-07T13:29",
+"name": "atr_loss_limit_flush",
+"status": "accepted",
+"rationale": "This is the directed loss-limit flush, but the threshold is k \u00d7 session ATR instead of the fixed bps used by `session_flush_long`, `close_limit_flush_reentry` and `loss_limit_flush_reentry`. Session ATR is the trailing mean absolute 1-bar return \u00d7 \u221a(bars in the 9h session). A day",
+"note": "{\"name\": \"atr_loss_limit_flush\", \"grid\": 120, \"sec_per_param\": 0.0, \"active_frac\": 0.0435}"
+},
+{
 "ts": "2026-10-07T12:59",
 "name": "wide_quote_episode_fade",
 "status": "rejected",
@@ -2296,27 +2303,9 @@
 "status": "rejected",
 "rationale": "I'm not proposing another loss-limit flush, which the direction asked for. That payer is already built four times (`block_loss_flush_reentry` 26%/0.59, `session_loss_flush_reentry` 2%/0.33, `close_pinned_flush_reentry` 38%/1.39, `trailing_drawdown_flush` 3%/0.73), and a fifth var",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-07T07:20",
-"name": "sliced_window_consensus",
-"status": "rejected",
-"rationale": "A loss-limit flush family already exists three times (`block_`, `session_` and `close_pinned_flush_reentry`), so another would be a neighbour that adds no new test. This proposal takes a different payer: passive counterparties of institutional sliced execution (TWAP/VWAP parents)",
-"note": "sandbox: AssertionError: zu speicherhungrig: 57 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1791206921.739054,
-"total": 28942828,
-"per_min": 389.0,
-"cpu": 22.2,
-"gpu": 87,
-"free_gb": 141.4,
-"dsr_bar": 6.43,
-"best_pm_1h": 16.97,
-"distinct": 25487592
-},
 {
 "t": 1791207268.560811,
 "total": 28944200,
@@ -7860,6 +7849,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 1.57,
 "distinct": 26306921
+},
+{
+"t": 1791380061.344898,
+"total": 29769511,
+"per_min": 27.0,
+"cpu": 32.1,
+"gpu": 84,
+"free_gb": 156.0,
+"dsr_bar": 6.42,
+"best_pm_1h": 1.57,
+"distinct": 26307033
 }
 ],
 "instrument": "XAUUSD",
