@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-07 17:34:11 UTC",
+"generated_at": "2026-10-07 17:39:49 UTC",
 "host": {
-"cpu_pct": 41.0,
-"gpu_pct": 88,
-"free_gb": 146.5,
-"uptime": "up 8 days,  2:19, 2 users, load averages: 13.45 11.83 10.94",
-"load": "{ 13.45 11.83 10.94 }"
+"cpu_pct": 25.7,
+"gpu_pct": 92,
+"free_gb": 187.9,
+"uptime": "up 8 days,  2:25, 2 users, load averages: 10.02 9.97 10.19",
+"load": "{ 10.02 9.97 10.19 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-07T19:34:07",
-"it": 180679,
-"bar": "1m",
+"ts": "2026-10-07T19:36:21",
+"it": 180680,
+"bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.61,
+"pbo": 0.25,
 "best_family": "gated",
-"best_pm": 0.6,
-"best_params": "{'base': 'shfe_reopen_catchup', 'base_params': {'entry': 78, 'hold': 57, 'k': 2.77, 'sess': 'night', 'sign': 1}, 'mode': 'vol_above', 'vol_window': 311, 'vol_pc",
+"best_pm": 0.92,
+"best_params": "{'base': 'event_drift', 'base_params': {'atr_window': 26, 'hold': 14, 'pre_bars': 4, 'sign': 1, 'thr_atr': 1.62}, 'mode': 'spread_below', 'vol_window': 263, 'vo",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-07T19:33:58",
-"it": 149819,
-"bar": "15m",
-"batch": 11,
+"ts": "2026-10-07T19:34:11",
+"it": 149820,
+"bar": "30s",
+"batch": 37,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.64,
-"best_family": "gated",
-"best_pm": 1.29,
-"best_params": "{'base': 'unexited_leg_turnover', 'base_params': {'d': 9.95, 'k': 2.87, 'rho': 1.09, 'sign': 1, 'theta': 0.632}, 'mode': 'tick_above', 'vol_window': 107, 'vol_p",
-"mix": "blo1/cos2/gat8",
-"queue_s": 8.0
+"pbo": 0.32,
+"best_family": "session_loss_limit_refund",
+"best_pm": 0.27,
+"best_params": "{'close': 16, 'dm': 21, 'hold': 2, 'k': 1.31, 're': 7}",
+"mix": "cos1/gat8/ses15/ses13",
+"queue_s": 14.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 29831098,
-"last_5m": 1448,
-"last_1h": 16128,
-"last_24h": 360290,
-"distinct_ideas": 26365821,
+"total": 29832439,
+"last_5m": 8,
+"last_1h": 15434,
+"last_24h": 360367,
+"distinct_ideas": 26366915,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19687843,
+"n": 19688310,
 "pos_rate": 0.346,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -759,6 +759,15 @@
 "since": "2026-10-01"
 },
 {
+"family": "session_loss_flush_book",
+"n": 6833,
+"pos_rate": 0.166,
+"best_pm": 0.77,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-07"
+},
+{
 "family": "participation_break_hold",
 "n": 6784,
 "pos_rate": 0.773,
@@ -775,15 +784,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-05"
-},
-{
-"family": "session_loss_flush_book",
-"n": 6664,
-"pos_rate": 0.167,
-"best_pm": 0.77,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-07"
 },
 {
 "family": "continuation_sleeve_book",
@@ -966,6 +966,15 @@
 "since": "2026-09-30"
 },
 {
+"family": "cost_basis_flush_long",
+"n": 4589,
+"pos_rate": 0.012,
+"best_pm": 0.7,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-07"
+},
+{
 "family": "stale_high_time_stop",
 "n": 4587,
 "pos_rate": 0.442,
@@ -975,15 +984,6 @@
 "since": "2026-10-01"
 },
 {
-"family": "cost_basis_flush_long",
-"n": 4558,
-"pos_rate": 0.012,
-"best_pm": 0.7,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-07"
-},
-{
 "family": "breakeven_retest",
 "n": 4538,
 "pos_rate": 0.213,
@@ -991,6 +991,15 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-01"
+},
+{
+"family": "session_loss_limit_refund",
+"n": 4533,
+"pos_rate": 0.053,
+"best_pm": 0.31,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-07"
 },
 {
 "family": "close_limit_flush_reentry",
@@ -1092,15 +1101,6 @@
 "since": "2026-10-04"
 },
 {
-"family": "session_loss_limit_refund",
-"n": 3860,
-"pos_rate": 0.053,
-"best_pm": 0.31,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-07"
-},
-{
 "family": "signed_jump_asymmetry",
 "n": 3751,
 "pos_rate": 0.318,
@@ -1156,7 +1156,7 @@
 },
 {
 "family": "block_loss_touch_long",
-"n": 3146,
+"n": 3147,
 "pos_rate": 0.07,
 "best_pm": 0.65,
 "best_dsr": 0.0,
@@ -1774,7 +1774,7 @@
 {
 "family": "cost_basis_flush_long",
 "bar": "30s",
-"n": 882,
+"n": 883,
 "best_pm": 0.7,
 "pos_rate": 0.041
 },
@@ -1837,14 +1837,14 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 35669,
+"n": 35685,
 "best_pm": 1.59,
 "pos_rate": 0.653
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 60469,
+"n": 60477,
 "best_pm": 1.67,
 "pos_rate": 0.636
 },
@@ -1858,14 +1858,14 @@
 {
 "family": "gated",
 "bar": "30s",
-"n": 36108,
+"n": 36124,
 "best_pm": 31.88,
 "pos_rate": 0.289
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 35500,
+"n": 35508,
 "best_pm": 1.64,
 "pos_rate": 0.597
 },
@@ -2264,9 +2264,9 @@
 {
 "family": "session_loss_flush_book",
 "bar": "30s",
-"n": 1070,
+"n": 1085,
 "best_pm": 0.39,
-"pos_rate": 0.083
+"pos_rate": 0.085
 },
 {
 "family": "session_loss_flush_book",
@@ -2334,9 +2334,9 @@
 {
 "family": "session_loss_limit_refund",
 "bar": "30s",
-"n": 319,
+"n": 332,
 "best_pm": 0.31,
-"pos_rate": 0.11
+"pos_rate": 0.114
 },
 {
 "family": "session_loss_limit_refund",
@@ -2538,6 +2538,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-07T17:36",
+"name": "block_drawdown_flush",
+"status": "accepted",
+"rationale": "The payer is prop and retail desks with a block loss limit. After a drawdown from the block's running high of at least k bps, forced sellers dump until the limit is met. Once the block stops printing new lows for `calm` minutes, the selling is spent, and I go long once per block ",
+"note": "{\"name\": \"block_drawdown_flush\", \"grid\": 120, \"sec_per_param\": 0.001, \"active_frac\": 0.2505}"
+},
+{
 "ts": "2026-10-07T17:05",
 "name": "session_loss_limit_refund",
 "status": "accepted",
@@ -2613,13 +2620,6 @@
 "status": "accepted",
 "rationale": "This is the directed intraday loss-limit flush. `loss_limit_flush_reentry` (12%, 0.52) and `close_limit_flush_reentry` already cover this payer, so the only difference is the session definition. Both London (07\u201316) and New York (12\u201321) sessions are tested. The trigger is a fixed ",
 "note": "{\"name\": \"session_flush_long\", \"grid\": 160, \"sec_per_param\": 0.0, \"active_frac\": 0.105}"
-},
-{
-"ts": "2026-10-07T11:27",
-"name": "day_extreme_fade",
-"status": "accepted",
-"rationale": "Payer is range-chasing breakout buyers and sellers who enter at the UTC-day extreme after an already-wide day. Their stops and loss limits sit just beyond the extreme, and liquidity providers fade them. The loss-limit flush re-entry I was told to build is already accepted (`loss_",
-"note": "{\"name\": \"day_extreme_fade\", \"grid\": 120, \"sec_per_param\": 0.0, \"active_frac\": 0.5757375}"
 }
 ],
 "history": [
@@ -8166,6 +8166,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 1.36,
 "distinct": 26365821
+},
+{
+"t": 1791394789.424931,
+"total": 29832439,
+"per_min": 2.0,
+"cpu": 25.7,
+"gpu": 92,
+"free_gb": 187.9,
+"dsr_bar": 6.42,
+"best_pm_1h": 1.36,
+"distinct": 26366915
 }
 ],
 "instrument": "XAUUSD",
