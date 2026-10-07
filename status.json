@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-07 03:41:41 UTC",
+"generated_at": "2026-10-07 03:47:08 UTC",
 "host": {
-"cpu_pct": 23.2,
-"gpu_pct": 54,
-"free_gb": 141.4,
-"uptime": "up 7 days, 12:27, 2 users, load averages: 10.32 9.51 9.29",
-"load": "{ 10.32 9.51 9.29 }"
+"cpu_pct": 9.3,
+"gpu_pct": 0,
+"free_gb": 109.1,
+"uptime": "up 7 days, 12:33, 2 users, load averages: 5.02 8.10 8.88",
+"load": "{ 5.02 8.10 8.88 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-07T05:35:39",
-"it": 174200,
-"bar": "1h",
+"ts": "2026-10-07T05:46:40",
+"it": 174245,
+"bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.14,
+"pbo": 0.39,
 "best_family": "gated",
-"best_pm": 1.02,
-"best_params": "{'base': 'stepped_bid_accumulation', 'base_params': {'hold': 1, 'k': 0.263, 'n': 10, 'rho': 0.103, 'sign': 1}, 'mode': 'tick_above', 'vol_window': 25, 'vol_pct'",
+"best_pm": 0.6,
+"best_params": "{'base': 'attention_decay_unwind', 'base_params': {'base': 7, 'hold': 4.16, 'k': 0.477, 'sign': -1, 'theta': 1.71, 'w': 4.63}, 'mode': 'vol_below', 'vol_window'",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-07T05:34:11",
-"it": 144400,
-"bar": "5m",
+"ts": "2026-10-07T05:46:41",
+"it": 144483,
+"bar": "30s",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.54,
+"pbo": 0.32,
 "best_family": "gated",
-"best_pm": 0.78,
-"best_params": "{'base': 'dealer_gamma_hedge_flow', 'base_params': {'hold': 1, 'mode': 'short_gamma', 'n': 34, 'sign': -1, 'theta': 0.184}, 'mode': 'tick_above', 'vol_window': ",
+"best_pm": 0.41,
+"best_params": "{'base': 'levered_etf_close_rebalance', 'base_params': {'k': 2.3, 'post': 53, 'pre': 34, 'sign': 1}, 'mode': 'spread_below', 'vol_window': 589, 'vol_pct': 0.543",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 29619229,
-"last_5m": 0,
-"last_1h": 14402,
-"last_24h": 356432,
-"distinct_ideas": 26162234,
+"total": 29620239,
+"last_5m": 1010,
+"last_1h": 13686,
+"last_24h": 357346,
+"distinct_ideas": 26163244,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19591123,
+"n": 19592131,
 "pos_rate": 0.345,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -535,7 +535,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 11050,
+"n": 11052,
 "pos_rate": 0.902,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1422,42 +1422,42 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 50339,
+"n": 50547,
 "best_pm": 3.51,
 "pos_rate": 0.666
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 82751,
+"n": 82895,
 "best_pm": 1.61,
-"pos_rate": 0.643
+"pos_rate": 0.642
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 82693,
+"n": 82829,
 "best_pm": 16.8,
 "pos_rate": 0.379
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 50510,
+"n": 50726,
 "best_pm": 27.12,
 "pos_rate": 0.296
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 50337,
+"n": 50545,
 "best_pm": 2.16,
 "pos_rate": 0.608
 },
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 200,
+"n": 201,
 "best_pm": 0.68,
 "pos_rate": 0.97
 },
@@ -1485,7 +1485,7 @@
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 165,
+"n": 166,
 "best_pm": 0.64,
 "pos_rate": 0.964
 },
@@ -1654,6 +1654,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-07T03:44",
+"name": "deleverage_vol_normalise",
+"status": "rejected",
+"rationale": "Payer: vol-target and VaR-constrained funds that must cut gold after a realised-vol spike, whatever their view. The selling is mechanical, so I buy once vol has peaked and the 2-day drift is negative, and hold until vol falls back toward its 20-day baseline.\nRATIONALE: This works",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-10-07T03:14",
 "name": "deleverage_exhaustion_exit",
 "status": "rejected",
@@ -1729,27 +1736,9 @@
 "status": "rejected",
 "rationale": "`goldlab.external` is not in `ALLOWED_MODULES` (`goldlab/evolve.py:46`), so lagged real-yield repricing can't be built. That also explains the earlier \"import not allowed\" rejection. I'm delivering the director's second item instead. I haven't run the module.\nRATIONALE: The payer",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-06T21:35",
-"name": "vol_target_exhaustion_demeaned",
-"status": "rejected",
-"rationale": "Payer: vol-target and VaR-constrained funds that must cut gold after a vol spike regardless of view. I buy once the realised-vol ratio has come off its peak after a down-move and hold until vol normalises.\nRATIONALE: This is the long side of `forced_deleverage_refill`, with the s",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1791171790.356132,
-"total": 28721492,
-"per_min": 49.0,
-"cpu": 26.7,
-"gpu": 92,
-"free_gb": 152.8,
-"dsr_bar": 6.44,
-"best_pm_1h": 17.06,
-"distinct": 25266346
-},
 {
 "t": 1791172125.514703,
 "total": 28721566,
@@ -7293,6 +7282,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 21.93,
 "distinct": 26162234
+},
+{
+"t": 1791344828.128282,
+"total": 29620239,
+"per_min": 202.0,
+"cpu": 9.3,
+"gpu": 0,
+"free_gb": 109.1,
+"dsr_bar": 6.42,
+"best_pm_1h": 21.93,
+"distinct": 26163244
 }
 ],
 "instrument": "XAUUSD",
