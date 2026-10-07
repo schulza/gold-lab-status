@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-07 21:38:26 UTC",
+"generated_at": "2026-10-07 21:44:06 UTC",
 "host": {
-"cpu_pct": 23.8,
-"gpu_pct": 86,
+"cpu_pct": 28.5,
+"gpu_pct": 94,
 "free_gb": 131.1,
-"uptime": "up 8 days,  6:24, 2 users, load averages: 11.11 10.68 9.99",
-"load": "{ 11.11 10.68 9.99 }"
+"uptime": "up 8 days,  6:30, 2 users, load averages: 11.64 10.84 10.24",
+"load": "{ 11.64 10.84 10.24 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-07T23:34:32",
-"it": 182400,
-"bar": "1h",
-"batch": 8,
+"ts": "2026-10-07T23:43:53",
+"it": 182413,
+"bar": "1m",
+"batch": 312,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.5,
+"pbo": 0.39,
 "best_family": "gated",
-"best_pm": 1.24,
-"best_params": "{'base': 'tight_spread_informed_flow', 'base_params': {'hold': 11, 'k': 2.0, 'n': 15, 'sign': -1, 'sp': 0.8}, 'mode': 'vol_below', 'vol_window': 240, 'vol_pct':",
-"mix": "gat8",
-"queue_s": 8.0
+"best_pm": 1.53,
+"best_params": "{'base': 'restock_capitulation', 'base_params': {'d': 0.824, 'hold': 0.712, 'k': 2.5, 'm': 3, 'rho': 0.123, 'sign': 1}, 'mode': 'vol_above', 'vol_window': 60, '",
+"mix": "gat42/ses270",
+"queue_s": 127.0
 },
 "events": []
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-07T23:34:46",
-"it": 151200,
+"ts": "2026-10-07T23:43:49",
+"it": 151215,
 "bar": "30s",
-"batch": 30,
+"batch": 29,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.64,
+"pbo": 0.04,
 "best_family": "session_flush_next_open",
-"best_pm": 18.32,
-"best_params": "{'close': 16, 'L': 240, 'k': 1.5, 'entry': 13, 'hold': 60, 'dm': 0}",
-"mix": "gat8/ses22",
-"queue_s": 13.0
+"best_pm": 24.96,
+"best_params": "{'close': 16, 'L': 565, 'k': 1.44, 'entry': 13, 'hold': 55, 'dm': 0}",
+"mix": "gat8/ses21",
+"queue_s": 11.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 29907868,
-"last_5m": 3117,
-"last_1h": 20313,
-"last_24h": 376977,
-"distinct_ideas": 26439762,
+"total": 29909148,
+"last_5m": 2217,
+"last_1h": 19445,
+"last_24h": 377234,
+"distinct_ideas": 26441633,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19714302,
+"n": 19714581,
 "pos_rate": 0.346,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -966,6 +966,15 @@
 "since": "2026-10-07"
 },
 {
+"family": "session_flush_next_open",
+"n": 4876,
+"pos_rate": 0.344,
+"best_pm": 0.78,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-07"
+},
+{
 "family": "accumulator_knockout_flow",
 "n": 4853,
 "pos_rate": 0.472,
@@ -1153,15 +1162,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-04"
-},
-{
-"family": "session_flush_next_open",
-"n": 3875,
-"pos_rate": 0.292,
-"best_pm": 0.7,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-07"
 },
 {
 "family": "signed_jump_asymmetry",
@@ -1991,42 +1991,42 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 31016,
+"n": 30728,
 "best_pm": 1.59,
-"pos_rate": 0.646
+"pos_rate": 0.645
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 54096,
+"n": 53802,
 "best_pm": 1.67,
 "pos_rate": 0.627
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 54015,
+"n": 53667,
 "best_pm": 16.82,
 "pos_rate": 0.362
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 31410,
+"n": 31114,
 "best_pm": 31.88,
-"pos_rate": 0.286
+"pos_rate": 0.285
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 30783,
+"n": 30479,
 "best_pm": 1.64,
 "pos_rate": 0.587
 },
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 63,
+"n": 62,
 "best_pm": 0.6,
 "pos_rate": 0.952
 },
@@ -2047,14 +2047,14 @@
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 50,
+"n": 48,
 "best_pm": 0.59,
-"pos_rate": 0.92
+"pos_rate": 0.917
 },
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 64,
+"n": 62,
 "best_pm": 0.64,
 "pos_rate": 0.984
 },
@@ -2341,9 +2341,9 @@
 {
 "family": "range_expansion_hold",
 "bar": "15m",
-"n": 4,
+"n": 3,
 "best_pm": 0.21,
-"pos_rate": 0.75
+"pos_rate": 0.667
 },
 {
 "family": "range_expansion_hold",
@@ -2355,8 +2355,8 @@
 {
 "family": "range_expansion_hold",
 "bar": "1m",
-"n": 8,
-"best_pm": 0.45,
+"n": 6,
+"best_pm": 0.44,
 "pos_rate": 1.0
 },
 {
@@ -2460,37 +2460,37 @@
 {
 "family": "session_flush_next_open",
 "bar": "15m",
-"n": 904,
+"n": 1017,
 "best_pm": 0.63,
-"pos_rate": 0.246
+"pos_rate": 0.245
 },
 {
 "family": "session_flush_next_open",
 "bar": "1h",
-"n": 890,
-"best_pm": 0.7,
-"pos_rate": 0.581
+"n": 1825,
+"best_pm": 0.79,
+"pos_rate": 0.608
 },
 {
 "family": "session_flush_next_open",
 "bar": "1m",
-"n": 895,
-"best_pm": 0.48,
-"pos_rate": 0.185
+"n": 1427,
+"best_pm": 0.71,
+"pos_rate": 0.208
 },
 {
 "family": "session_flush_next_open",
 "bar": "30s",
-"n": 278,
+"n": 357,
 "best_pm": 0.39,
-"pos_rate": 0.255
+"pos_rate": 0.272
 },
 {
 "family": "session_flush_next_open",
 "bar": "5m",
-"n": 908,
+"n": 1044,
 "best_pm": 0.56,
-"pos_rate": 0.173
+"pos_rate": 0.168
 },
 {
 "family": "session_loss_flush_book",
@@ -2790,6 +2790,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-07T21:42",
+"name": "pinned_loss_flush_long",
+"status": "rejected",
+"rationale": "The payer is a desk or prop book with a daily loss limit, forced flat while price is pinned at the low of a fixed-bps drawdown. The forced sell prints through the bid, and the long re-enters after it clears.\nRATIONALE: Thresholds are fixed bps, not percentiles. The drawdown is me",
+"note": "sandbox: AssertionError: zu speicherhungrig: 41 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-10-07T21:12",
 "name": "session_flush_next_open",
 "status": "accepted",
@@ -2865,27 +2872,9 @@
 "status": "accepted",
 "rationale": "Payer: desks that built a long evenly through the session and are now underwater against their average cost basis, with a loss limit that forces them flat at k bps below it. The forced selling moves the price below fair value, and a long entered after a wait is paid back when liq",
 "note": "{\"name\": \"cost_basis_flush_long\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.4369625}"
-},
-{
-"ts": "2026-10-07T15:32",
-"name": "block_loss_touch_long",
-"status": "accepted",
-"rationale": "Payer: prop and retail desks with intraday loss limits sell at the adverse extreme after a drawdown from the block open of k or more times the expected noise, and an exposure-demeaned long takes the rebound.\nRATIONALE: This differs from `atr_loss_limit_flush` (2 closes, about 14 ",
-"note": "{\"name\": \"block_loss_touch_long\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.1912375}"
 }
 ],
 "history": [
-{
-"t": 1791236316.081449,
-"total": 29132678,
-"per_min": 1162.0,
-"cpu": 44.6,
-"gpu": 0,
-"free_gb": 170.5,
-"dsr_bar": 6.43,
-"best_pm_1h": 15.31,
-"distinct": 25677042
-},
 {
 "t": 1791236652.857117,
 "total": 29135688,
@@ -8429,6 +8418,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 19.36,
 "distinct": 26439762
+},
+{
+"t": 1791409446.33723,
+"total": 29909148,
+"per_min": 443.0,
+"cpu": 28.5,
+"gpu": 94,
+"free_gb": 131.1,
+"dsr_bar": 6.42,
+"best_pm_1h": 19.36,
+"distinct": 26441633
 }
 ],
 "instrument": "XAUUSD",
