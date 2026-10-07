@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-07 22:12:34 UTC",
+"generated_at": "2026-10-07 22:18:12 UTC",
 "host": {
-"cpu_pct": 36.1,
-"gpu_pct": 100,
-"free_gb": 140.0,
-"uptime": "up 8 days,  6:58, 2 users, load averages: 11.79 10.06 8.68",
-"load": "{ 11.79 10.06 8.68 }"
+"cpu_pct": 24.5,
+"gpu_pct": 93,
+"free_gb": 187.0,
+"uptime": "up 8 days,  7:04, 2 users, load averages: 9.96 11.00 9.72",
+"load": "{ 9.96 11.00 9.72 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-08T00:05:53",
-"it": 182800,
+"ts": "2026-10-08T00:14:00",
+"it": 182810,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.18,
+"pbo": 0.39,
 "best_family": "gated",
 "best_pm": 0.87,
-"best_params": "{'base': 'vol_cut_pressure_refill', 'base_params': {'d': 4, 'frac': 0.231, 'k': 0.987, 'side': 'long', 'sign': -1, 'xz': 0.348}, 'mode': 'htf_with', 'htf': '4h'",
+"best_params": "{'base': 'unfilled_dip_bid_chase', 'base_params': {'hold': 1, 'lookback': 4, 'rho': 2.0, 'side': 'long', 'sign': 1, 'wait': 0.396}, 'mode': 'tick_above', 'vol_w",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-08T00:12:33",
-"it": 151510,
+"ts": "2026-10-08T00:13:47",
+"it": 151570,
 "bar": "5m",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.11,
+"pbo": 0.32,
 "best_family": "gated",
-"best_pm": 0.53,
-"best_params": "{'base': 'horizon_agreement_hold', 'base_params': {'exit': 0.0588, 'lb': 5, 'n': 4, 'side': 1, 'thr': 0.455}, 'mode': 'vol_below', 'vol_window': 720, 'vol_pct':",
+"best_pm": 0.61,
+"best_params": "{'base': 'loss_limit_reset', 'base_params': {'hold': 1, 'k': 0.303, 'mode': 'reset', 'period': 'month', 'sign': -1}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 2",
 "mix": "gat8",
-"queue_s": 6.0
+"queue_s": 8.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 29919217,
-"last_5m": 839,
-"last_1h": 17177,
-"last_24h": 382121,
-"distinct_ideas": 26451117,
+"total": 29920005,
+"last_5m": 523,
+"last_1h": 17422,
+"last_24h": 381731,
+"distinct_ideas": 26451840,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19720091,
+"n": 19720875,
 "pos_rate": 0.346,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -526,7 +526,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 11188,
+"n": 11189,
 "pos_rate": 0.903,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1219,7 +1219,7 @@
 },
 {
 "family": "block_loss_touch_long",
-"n": 3158,
+"n": 3159,
 "pos_rate": 0.07,
 "best_pm": 0.65,
 "best_dsr": 0.0,
@@ -1363,7 +1363,7 @@
 },
 {
 "family": "atr_loss_limit_flush",
-"n": 2074,
+"n": 2076,
 "pos_rate": 0.143,
 "best_pm": 0.43,
 "best_dsr": 0.0,
@@ -1620,14 +1620,14 @@
 {
 "family": "atr_loss_limit_flush",
 "bar": "1m",
-"n": 406,
+"n": 407,
 "best_pm": 0.41,
 "pos_rate": 0.246
 },
 {
 "family": "atr_loss_limit_flush",
 "bar": "30s",
-"n": 414,
+"n": 415,
 "best_pm": 0.43,
 "pos_rate": 0.258
 },
@@ -1732,7 +1732,7 @@
 {
 "family": "block_loss_touch_long",
 "bar": "30s",
-"n": 623,
+"n": 624,
 "best_pm": 0.14,
 "pos_rate": 0.021
 },
@@ -1991,44 +1991,44 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 30850,
+"n": 30874,
 "best_pm": 1.59,
 "pos_rate": 0.644
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 54138,
+"n": 53898,
 "best_pm": 1.67,
 "pos_rate": 0.626
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 54032,
+"n": 53784,
 "best_pm": 16.82,
 "pos_rate": 0.36
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 31295,
+"n": 31327,
 "best_pm": 31.88,
 "pos_rate": 0.286
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 30602,
+"n": 30642,
 "best_pm": 1.64,
 "pos_rate": 0.586
 },
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 62,
+"n": 61,
 "best_pm": 0.6,
-"pos_rate": 0.952
+"pos_rate": 0.951
 },
 {
 "family": "higher_low_staircase",
@@ -2790,6 +2790,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-07T22:13",
+"name": "session_limit_flush_delay",
+"status": "accepted",
+"rationale": "The payer is prop and retail desks with daily loss limits. After an adverse move from the session open, they are forced flat during the London (16h) or NY (21h) close hour. That sale is mechanical, not informational.\nRATIONALE: This differs from `session_flush_next_open` and `atr",
+"note": "{\"name\": \"session_limit_flush_delay\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.4241625}"
+},
+{
 "ts": "2026-10-07T21:42",
 "name": "pinned_loss_flush_long",
 "status": "rejected",
@@ -2865,27 +2872,9 @@
 "status": "accepted",
 "rationale": "The payer is prop and retail desks with daily loss limits. Those desks are forced flat into the London or NY close after an adverse move beyond k \u00d7 a trailing-ATR session scale. That selling is non-discretionary, and the next session's liquidity gives it back. Entry is long only ",
 "note": "{\"name\": \"session_loss_flush_book\", \"grid\": 200, \"sec_per_param\": 0.0, \"active_frac\": 0.27685}"
-},
-{
-"ts": "2026-10-07T16:03",
-"name": "cost_basis_flush_long",
-"status": "accepted",
-"rationale": "Payer: desks that built a long evenly through the session and are now underwater against their average cost basis, with a loss limit that forces them flat at k bps below it. The forced selling moves the price below fair value, and a long entered after a wait is paid back when liq",
-"note": "{\"name\": \"cost_basis_flush_long\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.4369625}"
 }
 ],
 "history": [
-{
-"t": 1791238400.670521,
-"total": 29145166,
-"per_min": 479.0,
-"cpu": 27.0,
-"gpu": 96,
-"free_gb": 133.9,
-"dsr_bar": 6.43,
-"best_pm_1h": 15.31,
-"distinct": 25689315
-},
 {
 "t": 1791238750.469888,
 "total": 29145978,
@@ -8429,6 +8418,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 19.36,
 "distinct": 26451117
+},
+{
+"t": 1791411492.7285671,
+"total": 29920005,
+"per_min": 105.0,
+"cpu": 24.5,
+"gpu": 93,
+"free_gb": 187.0,
+"dsr_bar": 6.42,
+"best_pm_1h": 19.36,
+"distinct": 26451840
 }
 ],
 "instrument": "XAUUSD",
