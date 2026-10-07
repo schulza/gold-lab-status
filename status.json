@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-10-07 20:07:42 UTC",
+"generated_at": "2026-10-07 20:13:18 UTC",
 "host": {
-"cpu_pct": 29.2,
-"gpu_pct": 94,
-"free_gb": 125.3,
-"uptime": "up 8 days,  4:53, 2 users, load averages: 10.73 11.04 11.11",
-"load": "{ 10.73 11.04 11.11 }"
+"cpu_pct": 27.3,
+"gpu_pct": 81,
+"free_gb": 174.1,
+"uptime": "up 8 days,  4:59, 2 users, load averages: 10.40 11.24 11.18",
+"load": "{ 10.40 11.24 11.18 }"
 },
 "instances": [
 {
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-07T22:02:28",
-"it": 150800,
-"bar": "30s",
+"ts": "2026-10-07T22:10:41",
+"it": 150840,
+"bar": "5m",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.0,
+"pbo": 0.82,
 "best_family": "gated",
-"best_pm": 0.67,
-"best_params": "{'base': 'loss_limit_reset', 'base_params': {'hold': 5, 'k': 0.3, 'mode': 'cut', 'period': 'month', 'sign': 1}, 'mode': 'session', 'start_hour': 7, 'hold_hours'",
+"best_pm": 0.17,
+"best_params": "{'base': 'compression_break_matched_exposure', 'base_params': {'c': 0.612, 'days': 27, 'ex': 0.201, 'mdays': 30, 'mintr': 4}, 'mode': 'spread_below', 'vol_windo",
 "mix": "gat8",
-"queue_s": 7.0
+"queue_s": 8.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 29877178,
-"last_5m": 1521,
-"last_1h": 22700,
-"last_24h": 368246,
-"distinct_ideas": 26410128,
+"total": 29877492,
+"last_5m": 314,
+"last_1h": 21970,
+"last_24h": 368080,
+"distinct_ideas": 26410442,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19707077,
+"n": 19707389,
 "pos_rate": 0.346,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -1030,7 +1030,7 @@
 },
 {
 "family": "close_limit_flush_reentry",
-"n": 4518,
+"n": 4519,
 "pos_rate": 0.431,
 "best_pm": 1.14,
 "best_dsr": 0.0,
@@ -1336,7 +1336,7 @@
 },
 {
 "family": "atr_loss_limit_flush",
-"n": 2071,
+"n": 2072,
 "pos_rate": 0.143,
 "best_pm": 0.43,
 "best_dsr": 0.0,
@@ -1579,7 +1579,7 @@
 {
 "family": "atr_loss_limit_flush",
 "bar": "15m",
-"n": 423,
+"n": 424,
 "best_pm": 0.2,
 "pos_rate": 0.078
 },
@@ -1775,7 +1775,7 @@
 {
 "family": "close_limit_flush_reentry",
 "bar": "30s",
-"n": 883,
+"n": 884,
 "best_pm": 0.99,
 "pos_rate": 0.422
 },
@@ -1929,35 +1929,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 33059,
+"n": 33163,
 "best_pm": 1.59,
-"pos_rate": 0.65
+"pos_rate": 0.649
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 58322,
+"n": 58082,
 "best_pm": 1.67,
 "pos_rate": 0.631
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 58219,
+"n": 57979,
 "best_pm": 16.82,
 "pos_rate": 0.364
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 33546,
+"n": 33650,
 "best_pm": 31.88,
 "pos_rate": 0.288
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 32829,
+"n": 32933,
 "best_pm": 1.64,
 "pos_rate": 0.591
 },
@@ -2665,6 +2665,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-07T20:10",
+"name": "mark_drawdown_flush",
+"status": "accepted",
+"rationale": "The payer is prop and retail desks that check P&L on the half-hour against a fixed drawdown limit from their rolling high. When the limit is hit and price is still falling, they are forced flat at market, and the next liquidity gives that selling back. The seven loss-flush varian",
+"note": "{\"name\": \"mark_drawdown_flush\", \"grid\": 180, \"sec_per_param\": 0.0, \"active_frac\": 0.7354375}"
+},
+{
 "ts": "2026-10-07T19:39",
 "name": "session_flush_next_open",
 "status": "rejected",
@@ -2740,27 +2747,9 @@
 "status": "accepted",
 "rationale": "Payer: prop and retail desks with hard loss limits that are forced flat after an adverse move of k bps. The forced selling at hour boundaries is price-insensitive, and the long-only re-entry sells liquidity back to them. Unlike my earlier flush families, the trigger is a fixed bp",
 "note": "{\"name\": \"hourly_loss_flush_long\", \"grid\": 180, \"sec_per_param\": 0.0, \"active_frac\": 0.754}"
-},
-{
-"ts": "2026-10-07T14:00",
-"name": "thin_tick_catchup",
-"status": "accepted",
-"rationale": "I'm not proposing another loss-limit flush. `atr_loss_limit_flush` and its siblings are already registered and the last one was active only 4% of bars. This is a different payer: takers who hit a stale quote in a thin-tick bar. A move of fixed size (k bps) printed on thin quote t",
-"note": "{\"name\": \"thin_tick_catchup\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.8374125}"
 }
 ],
 "history": [
-{
-"t": 1791231181.487733,
-"total": 29088560,
-"per_min": 0.0,
-"cpu": 30.8,
-"gpu": 96,
-"free_gb": 189.4,
-"dsr_bar": 6.43,
-"best_pm_1h": 1.42,
-"distinct": 25632858
-},
 {
 "t": 1791231531.144686,
 "total": 29091005,
@@ -8293,6 +8282,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 10.34,
 "distinct": 26410128
+},
+{
+"t": 1791403998.5794141,
+"total": 29877492,
+"per_min": 63.0,
+"cpu": 27.3,
+"gpu": 81,
+"free_gb": 174.1,
+"dsr_bar": 6.42,
+"best_pm_1h": 10.34,
+"distinct": 26410442
 }
 ],
 "instrument": "XAUUSD",
