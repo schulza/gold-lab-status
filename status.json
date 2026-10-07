@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-07 05:47:28 UTC",
+"generated_at": "2026-10-07 05:53:06 UTC",
 "host": {
-"cpu_pct": 23.8,
-"gpu_pct": 50,
-"free_gb": 141.6,
-"uptime": "up 7 days, 14:33, 2 users, load averages: 11.87 11.67 11.33",
-"load": "{ 11.87 11.67 11.33 }"
+"cpu_pct": 29.4,
+"gpu_pct": 0,
+"free_gb": 186.5,
+"uptime": "up 7 days, 14:39, 2 users, load averages: 10.54 12.23 11.85",
+"load": "{ 10.54 12.23 11.85 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-07T07:47:19",
-"it": 175160,
+"ts": "2026-10-07T07:47:58",
+"it": 175190,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.64,
+"pbo": 0.29,
 "best_family": "gated",
 "best_pm": 0.63,
-"best_params": "{'base': 'intermediation_rent', 'base_params': {'d': 2, 'hold': 5, 'k': 1.02, 'mode': 'rent', 'sign': -1, 'theta': 2.03}, 'mode': 'htf_with', 'htf': '1h', 'sma_",
+"best_params": "{'base': 'var_breach_deleverage', 'base_params': {'cnt': 1, 'hold': 6, 'q': 0.972, 'sign': 1, 'window': 75}, 'mode': 'vol_above', 'vol_window': 87, 'vol_pct': 0",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-07T07:41:21",
-"it": 145200,
-"bar": "5m",
+"ts": "2026-10-07T07:49:06",
+"it": 145210,
+"bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.21,
+"pbo": 0.32,
 "best_family": "gated",
-"best_pm": 0.56,
-"best_params": "{'base': 'frame_consensus_catchup', 'base_params': {'exit': 'flip', 'frames': 'wm', 'k': 1.3, 'lead': 3, 'sign': 1}, 'mode': 'vol_above', 'vol_window': 189, 'vo",
+"best_pm": 0.83,
+"best_params": "{'base': 'choppy_break_demeaned', 'base_params': {'days': 9, 'ex': 0.563, 'mdays': 30, 'mintr': 3, 'thr': 0.284}, 'mode': 'vol_above', 'vol_window': 240, 'vol_p",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 29640804,
-"last_5m": 1129,
-"last_1h": 12302,
-"last_24h": 340695,
-"distinct_ideas": 26183140,
+"total": 29641435,
+"last_5m": 285,
+"last_1h": 12691,
+"last_24h": 339895,
+"distinct_ideas": 26183647,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19604921,
+"n": 19605545,
 "pos_rate": 0.345,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -535,7 +535,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 11088,
+"n": 11090,
 "pos_rate": 0.902,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -922,7 +922,7 @@
 },
 {
 "family": "prev_hour_stop_run",
-"n": 4303,
+"n": 4306,
 "pos_rate": 0.001,
 "best_pm": 0.16,
 "best_dsr": 0.0,
@@ -1120,7 +1120,7 @@
 },
 {
 "family": "session_loss_flush_reentry",
-"n": 2313,
+"n": 2315,
 "pos_rate": 0.023,
 "best_pm": 0.33,
 "best_dsr": 0.0,
@@ -1449,44 +1449,44 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 48986,
+"n": 48690,
 "best_pm": 3.51,
 "pos_rate": 0.665
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 79980,
+"n": 80028,
 "best_pm": 1.67,
 "pos_rate": 0.643
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 79981,
+"n": 80021,
 "best_pm": 16.8,
 "pos_rate": 0.379
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 49098,
+"n": 48802,
 "best_pm": 27.12,
 "pos_rate": 0.296
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 49002,
+"n": 48706,
 "best_pm": 2.16,
 "pos_rate": 0.607
 },
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 193,
+"n": 192,
 "best_pm": 0.68,
-"pos_rate": 0.969
+"pos_rate": 0.974
 },
 {
 "family": "higher_low_staircase",
@@ -1498,16 +1498,16 @@
 {
 "family": "higher_low_staircase",
 "bar": "1m",
-"n": 142,
+"n": 143,
 "best_pm": 0.61,
-"pos_rate": 0.88
+"pos_rate": 0.881
 },
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 158,
+"n": 155,
 "best_pm": 0.6,
-"pos_rate": 0.892
+"pos_rate": 0.89
 },
 {
 "family": "higher_low_staircase",
@@ -1589,7 +1589,7 @@
 {
 "family": "prev_hour_stop_run",
 "bar": "30s",
-"n": 861,
+"n": 864,
 "best_pm": 0,
 "pos_rate": 0
 },
@@ -1631,9 +1631,9 @@
 {
 "family": "range_expansion_hold",
 "bar": "5m",
-"n": 25,
+"n": 24,
 "best_pm": 0.77,
-"pos_rate": 0.96
+"pos_rate": 0.958
 },
 {
 "family": "real_yield_trend",
@@ -1666,7 +1666,7 @@
 {
 "family": "session_loss_flush_reentry",
 "bar": "1m",
-"n": 456,
+"n": 457,
 "best_pm": 0.21,
 "pos_rate": 0.02
 },
@@ -1751,6 +1751,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-07T05:47",
+"name": "close_pinned_flush_reentry",
+"status": "accepted",
+"rationale": "The direction's loss-limit flush is already accepted twice (`block_loss_flush_reentry`, `session_loss_flush_reentry`), so a third copy would be a re-skin. This version keeps the same payer but adds a condition those two don't have: the flush only counts if the segment closed in t",
+"note": "{\"name\": \"close_pinned_flush_reentry\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.49875625}"
+},
+{
 "ts": "2026-10-07T05:17",
 "name": "prev_hour_stop_run",
 "status": "accepted",
@@ -1826,27 +1833,9 @@
 "status": "rejected",
 "rationale": "The sandbox runs about 20k one-minute bars, roughly 14 days. Every earlier proposal used daily windows or absolute thresholds that never fire there, so the signal came out identically zero. This one uses fixed-scale real-yield z-scores and vol-scaled gold moves over windows cappe",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-10-06T23:38",
-"name": "deleverage_exhaustion_refill",
-"status": "rejected",
-"rationale": "`goldlab.external` is not in `ALLOWED_MODULES` (`goldlab/evolve.py:46`), although the prompt contract allows it. That is why the earlier external-data attempt was rejected on import. So this is the director's second family, forced-deleverage refill, built only on price.\nThe payer",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1791179261.293033,
-"total": 28763847,
-"per_min": 29.0,
-"cpu": 26.1,
-"gpu": 97,
-"free_gb": 193.0,
-"dsr_bar": 6.44,
-"best_pm_1h": 13.89,
-"distinct": 25308637
-},
 {
 "t": 1791179595.404329,
 "total": 28763847,
@@ -7390,6 +7379,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 7.28,
 "distinct": 26183140
+},
+{
+"t": 1791352386.484176,
+"total": 29641435,
+"per_min": 57.0,
+"cpu": 29.4,
+"gpu": 0,
+"free_gb": 186.5,
+"dsr_bar": 6.42,
+"best_pm_1h": 7.28,
+"distinct": 26183647
 }
 ],
 "instrument": "XAUUSD",
