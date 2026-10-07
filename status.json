@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-07 04:10:31 UTC",
+"generated_at": "2026-10-07 04:15:59 UTC",
 "host": {
-"cpu_pct": 2.4,
+"cpu_pct": 1.6,
 "gpu_pct": 0,
-"free_gb": 116.3,
-"uptime": "up 7 days, 12:56, 2 users, load averages: 2.90 6.93 8.20",
-"load": "{ 2.90 6.93 8.20 }"
+"free_gb": 116.5,
+"uptime": "up 7 days, 13:02, 2 users, load averages: 1.43 3.87 6.41",
+"load": "{ 1.43 3.87 6.41 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-07T06:10:30",
-"it": 174542,
-"bar": "1h",
+"ts": "2026-10-07T06:11:13",
+"it": 174555,
+"bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.54,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 0.45,
-"best_params": "{'base': 'vol_window_rolloff', 'base_params': {'drop': 0.136, 'hold': 4, 'lead': 4, 'mode': 'long', 'sign': 1, 'window': 11}, 'mode': 'vol_below', 'vol_window':",
+"best_pm": 0.83,
+"best_params": "{'base': 'giveback_break_matched', 'base_params': {'days': 4, 'fr': 0.251, 'k': 0.8, 'mdays': 26}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 50}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-07T06:10:31",
-"it": 144716,
-"bar": "15m",
+"ts": "2026-10-07T06:11:16",
+"it": 144732,
+"bar": "30s",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.61,
+"pbo": 0.18,
 "best_family": "gated",
-"best_pm": 0.74,
-"best_params": "{'base': 'trailing_peak_hold', 'base_params': {'days': 6, 'k': 8.0, 'mdays': 12}, 'mode': 'vol_below', 'vol_window': 60, 'vol_pct': 0.3}",
+"best_pm": 0.26,
+"best_params": "{'base': 'settle_hedge_momentum', 'base_params': {'entry': -1, 'hold': 38, 'k': 2.5, 'sign': -1}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 234}",
 "mix": "gat8",
-"queue_s": 7.0
+"queue_s": 8.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 29624360,
-"last_5m": 1429,
-"last_1h": 11554,
-"last_24h": 349582,
-"distinct_ideas": 26167365,
+"total": 29624728,
+"last_5m": 192,
+"last_1h": 10205,
+"last_24h": 347434,
+"distinct_ideas": 26167733,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19596235,
+"n": 19596603,
 "pos_rate": 0.345,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -1352,37 +1352,37 @@
 {
 "family": "compression_break_matched_exposure",
 "bar": "15m",
-"n": 243,
+"n": 239,
 "best_pm": 0.61,
-"pos_rate": 0.481
+"pos_rate": 0.477
 },
 {
 "family": "compression_break_matched_exposure",
 "bar": "1h",
-"n": 1897,
-"best_pm": 1.14,
-"pos_rate": 0.492
+"n": 818,
+"best_pm": 1.12,
+"pos_rate": 0.429
 },
 {
 "family": "compression_break_matched_exposure",
 "bar": "1m",
-"n": 1897,
-"best_pm": 1.44,
-"pos_rate": 0.633
+"n": 1064,
+"best_pm": 1.23,
+"pos_rate": 0.585
 },
 {
 "family": "compression_break_matched_exposure",
 "bar": "30s",
-"n": 363,
+"n": 282,
 "best_pm": 1.11,
-"pos_rate": 0.614
+"pos_rate": 0.624
 },
 {
 "family": "compression_break_matched_exposure",
 "bar": "5m",
-"n": 245,
+"n": 239,
 "best_pm": 1.06,
-"pos_rate": 0.62
+"pos_rate": 0.615
 },
 {
 "family": "forced_deleverage_refill",
@@ -1422,35 +1422,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 50774,
+"n": 50782,
 "best_pm": 3.51,
 "pos_rate": 0.666
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 83295,
+"n": 83186,
 "best_pm": 1.61,
 "pos_rate": 0.643
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 83229,
+"n": 83174,
 "best_pm": 16.8,
 "pos_rate": 0.379
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 50864,
+"n": 50867,
 "best_pm": 27.12,
 "pos_rate": 0.297
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 50797,
+"n": 50805,
 "best_pm": 2.16,
 "pos_rate": 0.608
 },
@@ -1654,6 +1654,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-07T04:15",
+"name": "block_loss_flush_reentry",
+"status": "accepted",
+"rationale": "Payer: desks with block loss limits who are forced flat after an adverse move beyond k block-sigmas, and who rebuild long at the next block when the budget resets. The cut is set by P&L, not by price.\nFixed-scale triggers (trailing 1-day bar sigma \u00d7 sqrt(block bars)), long-only r",
+"note": "{\"name\": \"block_loss_flush_reentry\", \"grid\": 90, \"sec_per_param\": 0.0, \"active_frac\": 0.744275}"
+},
+{
 "ts": "2026-10-07T03:44",
 "name": "deleverage_vol_normalise",
 "status": "rejected",
@@ -1729,27 +1736,9 @@
 "status": "rejected",
 "rationale": "The payer is vol-target and VaR-constrained funds. After a realised-vol spike they must cut gold regardless of view, so price overshoots against the spike. I buy once the vol ratio has rolled over from its peak and exit when vol normalises.\nRATIONALE: `goldlab.external` is not in",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-06T22:06",
-"name": "vol_spike_exhaustion_refill",
-"status": "rejected",
-"rationale": "`goldlab.external` is not in `ALLOWED_MODULES` (`goldlab/evolve.py:46`), so lagged real-yield repricing can't be built. That also explains the earlier \"import not allowed\" rejection. I'm delivering the director's second item instead. I haven't run the module.\nRATIONALE: The payer",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1791173482.620876,
-"total": 28732149,
-"per_min": 114.0,
-"cpu": 27.4,
-"gpu": 91,
-"free_gb": 150.7,
-"dsr_bar": 6.44,
-"best_pm_1h": 14.39,
-"distinct": 25276939
-},
 {
 "t": 1791173831.226665,
 "total": 28732149,
@@ -7293,6 +7282,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 1.59,
 "distinct": 26167365
+},
+{
+"t": 1791346559.511956,
+"total": 29624728,
+"per_min": 38.0,
+"cpu": 1.6,
+"gpu": 0,
+"free_gb": 116.5,
+"dsr_bar": 6.42,
+"best_pm_1h": 1.59,
+"distinct": 26167733
 }
 ],
 "instrument": "XAUUSD",
