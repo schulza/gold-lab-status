@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-08 01:14:38 UTC",
+"generated_at": "2026-10-08 01:20:15 UTC",
 "host": {
-"cpu_pct": 32.4,
-"gpu_pct": 91,
-"free_gb": 169.9,
-"uptime": "up 8 days, 10 hrs, 2 users, load averages: 9.95 10.80 10.58",
-"load": "{ 9.95 10.80 10.58 }"
+"cpu_pct": 29.2,
+"gpu_pct": 92,
+"free_gb": 189.7,
+"uptime": "up 8 days, 10:06, 2 users, load averages: 10.90 10.52 10.47",
+"load": "{ 10.90 10.52 10.47 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-08T03:10:09",
-"it": 184200,
+"ts": "2026-10-08T03:18:28",
+"it": 184210,
 "bar": "1h",
-"batch": 8,
+"batch": 40,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.46,
-"best_family": "gated",
-"best_pm": 0.8,
-"best_params": "{'base': 'volburst_break_matched', 'base_params': {'c': 1.31, 'f': 0.266, 'md': 39, 'n': 191}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 56}",
-"mix": "gat8",
-"queue_s": 8.0
+"pbo": 0.0,
+"best_family": "clock_block_loss_flush",
+"best_pm": 0.67,
+"best_params": "{'dm': 0, 'hold': 88, 'k': 0.516, 'step': 36}",
+"mix": "clo32/gat8",
+"queue_s": 16.0
 },
 "events": []
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 29977608,
-"last_5m": 481,
-"last_1h": 11631,
-"last_24h": 393000,
-"distinct_ideas": 26506856,
+"total": 29977713,
+"last_5m": 105,
+"last_1h": 10132,
+"last_24h": 391521,
+"distinct_ideas": 26506961,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19739841,
+"n": 19739913,
 "pos_rate": 0.346,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -1399,7 +1399,7 @@
 },
 {
 "family": "atr_loss_limit_flush",
-"n": 2085,
+"n": 2086,
 "pos_rate": 0.142,
 "best_pm": 0.43,
 "best_dsr": 0.0,
@@ -1453,8 +1453,8 @@
 },
 {
 "family": "clock_block_loss_flush",
-"n": 1730,
-"pos_rate": 0.198,
+"n": 1762,
+"pos_rate": 0.202,
 "best_pm": 0.68,
 "best_dsr": 0.0,
 "passed": 0,
@@ -1665,7 +1665,7 @@
 {
 "family": "atr_loss_limit_flush",
 "bar": "1m",
-"n": 409,
+"n": 410,
 "best_pm": 0.41,
 "pos_rate": 0.244
 },
@@ -1826,9 +1826,9 @@
 {
 "family": "clock_block_loss_flush",
 "bar": "1h",
-"n": 854,
+"n": 886,
 "best_pm": 0.68,
-"pos_rate": 0.4
+"pos_rate": 0.402
 },
 {
 "family": "clock_block_loss_flush",
@@ -2057,35 +2057,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 27659,
+"n": 27427,
 "best_pm": 1.59,
 "pos_rate": 0.635
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 49947,
+"n": 49659,
 "best_pm": 2.37,
-"pos_rate": 0.617
+"pos_rate": 0.618
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 49786,
+"n": 49498,
 "best_pm": 16.82,
 "pos_rate": 0.352
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 28191,
+"n": 27963,
 "best_pm": 31.88,
-"pos_rate": 0.285
+"pos_rate": 0.284
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 27435,
+"n": 27203,
 "best_pm": 1.71,
 "pos_rate": 0.579
 },
@@ -2967,27 +2967,27 @@
 {
 "family": "vol_cut_pressure_refill",
 "bar": "1h",
-"n": 37,
-"best_pm": 0.85,
-"pos_rate": 0.486
+"n": 4,
+"best_pm": 0.02,
+"pos_rate": 0.25
 },
 {
 "family": "vol_cut_pressure_refill",
 "bar": "1m",
-"n": 37,
-"best_pm": 0.57,
-"pos_rate": 0.541
-},
-{
-"family": "vol_cut_pressure_refill",
-"bar": "30s",
-"n": 178,
-"best_pm": 0.5,
-"pos_rate": 0.185
+"n": 4,
+"best_pm": -0.12,
+"pos_rate": 0.25
 }
 ]
 },
 "generated": [
+{
+"ts": "2026-10-08T01:17",
+"name": "session_close_recovery_target",
+"status": "accepted",
+"rationale": "Payer is a desk with a daily loss limit, flattened into the London (16:00) or NY (21:00) close after the session-open-to-close move falls below k \u00d7 a fixed trailing ATR scale. It sells into the close at a concession. The strategy buys the next session's open window once spread ha",
+"note": "{\"name\": \"session_close_recovery_target\", \"grid\": 128, \"sec_per_param\": 0.001, \"active_frac\": 0.1079875}"
+},
 {
 "ts": "2026-10-08T00:46",
 "name": "clock_block_loss_flush",
@@ -3064,27 +3064,9 @@
 "status": "rejected",
 "rationale": "Payer is prop and retail desks with a daily loss limit. They are forced flat into the London close (16:30 UTC) or NY close (21:00 UTC) after a session drawdown beyond k bps. The signal buys the next session's open and holds for `hold` minutes, demeaned against trailing exposure.\n",
 "note": "sandbox: NameError: name 'FAMILIES' is not defined"
-},
-{
-"ts": "2026-10-07T19:08",
-"name": "late_loaded_block_flush_long",
-"status": "accepted",
-"rationale": "The payer is prop and retail desks with loss limits. Their forced selling arrives late in a block, so the loss is back-loaded, and a later buyer who supplies liquidity is paid for it. Fixed-scale 10\u201320 minute blocks give enough events for the 100-trade minimum. The direction's da",
-"note": "{\"name\": \"late_loaded_block_flush_long\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.5437125}"
 }
 ],
 "history": [
-{
-"t": 1791249428.743653,
-"total": 29219991,
-"per_min": 385.0,
-"cpu": 26.6,
-"gpu": 92,
-"free_gb": 132.1,
-"dsr_bar": 6.43,
-"best_pm_1h": 17.32,
-"distinct": 25763775
-},
 {
 "t": 1791249781.7267468,
 "total": 29221208,
@@ -8628,6 +8610,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 12.32,
 "distinct": 26506856
+},
+{
+"t": 1791422415.625178,
+"total": 29977713,
+"per_min": 21.0,
+"cpu": 29.2,
+"gpu": 92,
+"free_gb": 189.7,
+"dsr_bar": 6.42,
+"best_pm_1h": 12.32,
+"distinct": 26506961
 }
 ],
 "instrument": "XAUUSD",
