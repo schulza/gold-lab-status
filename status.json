@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-10-08 09:59:58 UTC",
+"generated_at": "2026-10-08 10:05:34 UTC",
 "host": {
-"cpu_pct": 17.2,
-"gpu_pct": 91,
-"free_gb": 122.5,
-"uptime": "up 8 days, 18:45, 2 users, load averages: 7.42 9.00 10.47",
-"load": "{ 7.42 9.00 10.47 }"
+"cpu_pct": 23.0,
+"gpu_pct": 90,
+"free_gb": 171.0,
+"uptime": "up 8 days, 18:51, 2 users, load averages: 9.79 9.95 10.46",
+"load": "{ 9.79 9.95 10.46 }"
 },
 "instances": [
 {
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-08T11:56:09",
-"it": 155800,
-"bar": "5m",
+"ts": "2026-10-08T12:00:58",
+"it": 155810,
+"bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.41,
-"pbo": 0.36,
+"pbo": 0.61,
 "best_family": "gated",
-"best_pm": 0.95,
-"best_params": "{'base': 'monotone_close_flush', 'base_params': {'close': 21, 'frac': 0.528, 'hold': 64, 'k': 45.9, 'w': 422}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 431}",
+"best_pm": 1.23,
+"best_params": "{'base': 'unexited_leg_turnover', 'base_params': {'d': 9.95, 'k': 2.87, 'rho': 1.25, 'sign': 1, 'theta': 0.632}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 200, ",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 30192360,
-"last_5m": 2156,
-"last_1h": 24706,
-"last_24h": 482745,
-"distinct_ideas": 26719715,
+"total": 30192432,
+"last_5m": 72,
+"last_1h": 24100,
+"last_24h": 481683,
+"distinct_ideas": 26719787,
 "dsr_bar": 6.41,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19807761,
+"n": 19807833,
 "pos_rate": 0.347,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -1999,9 +1999,9 @@
 {
 "family": "close_limit_flush_reentry",
 "bar": "30s",
-"n": 22,
+"n": 21,
 "best_pm": 0.72,
-"pos_rate": 0.545
+"pos_rate": 0.524
 },
 {
 "family": "close_limit_flush_reentry",
@@ -2118,37 +2118,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 24561,
+"n": 24449,
 "best_pm": 2.25,
-"pos_rate": 0.607
+"pos_rate": 0.606
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 47312,
+"n": 46960,
 "best_pm": 2.37,
 "pos_rate": 0.594
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 47141,
+"n": 46789,
 "best_pm": 16.82,
 "pos_rate": 0.33
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 25507,
+"n": 25395,
 "best_pm": 24.15,
 "pos_rate": 0.275
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 24505,
+"n": 24393,
 "best_pm": 6.88,
-"pos_rate": 0.547
+"pos_rate": 0.546
 },
 {
 "family": "higher_low_staircase",
@@ -2160,9 +2160,9 @@
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 34,
+"n": 33,
 "best_pm": 0.67,
-"pos_rate": 0.941
+"pos_rate": 0.939
 },
 {
 "family": "higher_low_staircase",
@@ -2174,9 +2174,9 @@
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 26,
+"n": 25,
 "best_pm": 0.59,
-"pos_rate": 0.962
+"pos_rate": 0.96
 },
 {
 "family": "higher_low_staircase",
@@ -2188,7 +2188,7 @@
 {
 "family": "hour_slice_parent",
 "bar": "30s",
-"n": 34,
+"n": 17,
 "best_pm": 0,
 "pos_rate": 0
 },
@@ -2538,7 +2538,7 @@
 {
 "family": "range_expansion_hold",
 "bar": "30s",
-"n": 6,
+"n": 5,
 "best_pm": 0.5,
 "pos_rate": 1.0
 },
@@ -2860,7 +2860,7 @@
 {
 "family": "session_loss_flush_reentry",
 "bar": "1m",
-"n": 6,
+"n": 5,
 "best_pm": 0,
 "pos_rate": 0
 },
@@ -3295,6 +3295,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-08T10:00",
+"name": "thin_shock_spread_refund",
+"status": "accepted",
+"rationale": "Payer is market sellers who cross a thin book at the 12, 19, 20 and 21 UTC troughs and pay impact. The signature is a fast n-minute fall of at least k bps together with a spread already widened against its 5-day mean, which marks a depth vacuum. Depth returns and part of the impa",
+"note": "{\"name\": \"thin_shock_spread_refund\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.0282}"
+},
+{
 "ts": "2026-10-08T09:29",
 "name": "thin_recovery_refund",
 "status": "rejected",
@@ -3370,27 +3377,9 @@
 "status": "rejected",
 "rationale": "Payer is takers who have to sell into the London lunch (11\u201313 UTC) or late New York trough (20\u201322 UTC). They pay impact on a thin book, and that impact comes back once depth returns.\nThinness is measured, not clocked: the last hour's ticks against the same hour of the previous `b",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-08T03:51",
-"name": "hourly_review_flush",
-"status": "rejected",
-"rationale": "The payer is intraday prop and retail desks. Their risk systems check the loss limit on the hour and force positions flat after a drawdown from the recent high beyond k \u00d7 fixed-scale vol. That forced selling is price-insensitive, so the next hour's liquidity providers get paid fo",
-"note": "sandbox: AssertionError: non-finite values"
 }
 ],
 "history": [
-{
-"t": 1791280930.319117,
-"total": 29364090,
-"per_min": 289.0,
-"cpu": 28.9,
-"gpu": 94,
-"free_gb": 140.4,
-"dsr_bar": 6.42,
-"best_pm_1h": 17.39,
-"distinct": 25907865
-},
 {
 "t": 1791281262.4218938,
 "total": 29365291,
@@ -8934,6 +8923,17 @@
 "dsr_bar": 6.41,
 "best_pm_1h": 2.2,
 "distinct": 26719715
+},
+{
+"t": 1791453934.613523,
+"total": 30192432,
+"per_min": 14.0,
+"cpu": 23.0,
+"gpu": 90,
+"free_gb": 171.0,
+"dsr_bar": 6.41,
+"best_pm_1h": 2.2,
+"distinct": 26719787
 }
 ],
 "instrument": "XAUUSD",
