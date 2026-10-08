@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-08 06:21:43 UTC",
+"generated_at": "2026-10-08 06:27:19 UTC",
 "host": {
-"cpu_pct": 27.1,
-"gpu_pct": 76,
-"free_gb": 141.4,
-"uptime": "up 8 days, 15:07, 2 users, load averages: 10.12 11.73 10.87",
-"load": "{ 10.12 11.73 10.87 }"
+"cpu_pct": 33.4,
+"gpu_pct": 90,
+"free_gb": 163.5,
+"uptime": "up 8 days, 15:13, 2 users, load averages: 10.92 11.72 11.17",
+"load": "{ 10.92 11.72 11.17 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-08T08:15:51",
-"it": 186600,
+"ts": "2026-10-08T08:24:53",
+"it": 186660,
 "bar": "1h",
-"batch": 38,
+"batch": 39,
 "passed": 0,
 "bench": 6.41,
 "pbo": 0.0,
-"best_family": "thin_window_dip_bid",
-"best_pm": 2.39,
-"best_params": "{'hold_min': 137, 'k_bps': 5.09, 'lookback_min': 42, 'window': 'late'}",
-"mix": "gat8/thi30",
-"queue_s": 10.0
+"best_family": "thin_hour_impact_refund",
+"best_pm": 2.04,
+"best_params": "{'slot': 20, 'k_bps': 7.7, 'theta': 1.12, 'hold_min': 32}",
+"mix": "gat8/thi31",
+"queue_s": 14.0
 },
 "events": []
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 30082532,
-"last_5m": 8173,
-"last_1h": 23018,
-"last_24h": 428249,
-"distinct_ideas": 26610596,
+"total": 30085659,
+"last_5m": 3127,
+"last_1h": 21342,
+"last_24h": 431304,
+"distinct_ideas": 26613723,
 "dsr_bar": 6.41,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19773685,
+"n": 19774157,
 "pos_rate": 0.346,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -462,6 +462,15 @@
 "since": "2026-10-02"
 },
 {
+"family": "thin_window_dip_bid",
+"n": 12178,
+"pos_rate": 0.622,
+"best_pm": 2.5,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-08"
+},
+{
 "family": "momentum_breakout",
 "n": 12052,
 "pos_rate": 0.77,
@@ -631,15 +640,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-07"
-},
-{
-"family": "thin_window_dip_bid",
-"n": 10573,
-"pos_rate": 0.621,
-"best_pm": 2.5,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-08"
 },
 {
 "family": "unrefunded_move_drift",
@@ -1038,6 +1038,15 @@
 "since": "2026-10-07"
 },
 {
+"family": "thin_hour_impact_refund",
+"n": 5158,
+"pos_rate": 0.759,
+"best_pm": 2.14,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-08"
+},
+{
 "family": "two_block_loss_flush",
 "n": 5120,
 "pos_rate": 0.054,
@@ -1261,15 +1270,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-01"
-},
-{
-"family": "thin_hour_impact_refund",
-"n": 4108,
-"pos_rate": 0.772,
-"best_pm": 2.09,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-08"
 },
 {
 "family": "sleeve_vote_hold",
@@ -2108,16 +2108,16 @@
 {
 "family": "gated",
 "bar": "1h",
-"n": 45803,
+"n": 46011,
 "best_pm": 2.37,
 "pos_rate": 0.601
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 45685,
+"n": 45877,
 "best_pm": 16.82,
-"pos_rate": 0.337
+"pos_rate": 0.336
 },
 {
 "family": "gated",
@@ -2969,16 +2969,16 @@
 {
 "family": "thin_hour_impact_refund",
 "bar": "1h",
-"n": 867,
-"best_pm": 2.04,
-"pos_rate": 0.668
+"n": 1374,
+"best_pm": 2.14,
+"pos_rate": 0.655
 },
 {
 "family": "thin_hour_impact_refund",
 "bar": "1m",
-"n": 608,
+"n": 1151,
 "best_pm": 1.77,
-"pos_rate": 0.771
+"pos_rate": 0.772
 },
 {
 "family": "thin_hour_impact_refund",
@@ -3074,16 +3074,16 @@
 {
 "family": "thin_window_dip_bid",
 "bar": "1h",
-"n": 1842,
+"n": 2788,
 "best_pm": 2.5,
-"pos_rate": 0.576
+"pos_rate": 0.585
 },
 {
 "family": "thin_window_dip_bid",
 "bar": "1m",
-"n": 1485,
+"n": 2144,
 "best_pm": 1.77,
-"pos_rate": 0.63
+"pos_rate": 0.641
 },
 {
 "family": "thin_window_dip_bid",
@@ -3243,6 +3243,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-08T06:24",
+"name": "thin_lunch_trough_refund",
+"status": "accepted",
+"rationale": "Payer is takers who sell at market into the London lunch (11-13 UTC) and late New York (20-22 UTC) troughs and pay impact to thin books. A bid placed at a fixed bps drop from the slot open collects the refund as liquidity returns.\nRATIONALE: Long-only, fixed-bps thresholds, 120 s",
+"note": "{\"name\": \"thin_lunch_trough_refund\", \"grid\": 120, \"sec_per_param\": 0.0, \"active_frac\": 0.03291875}"
+},
+{
 "ts": "2026-10-08T05:54",
 "name": "thin_hour_impact_refund",
 "status": "accepted",
@@ -3318,27 +3325,9 @@
 "status": "accepted",
 "rationale": "Payer is prop and retail desks that check a loss limit at the clock mark (every 30, 60 or 120 minutes). After an adverse block beyond k \u00d7 trailing ATR, they are forced flat. Their forced selling pushes the price below value, and the strategy buys that liquidity and holds it while",
 "note": "{\"name\": \"clock_block_loss_flush\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.6995}"
-},
-{
-"ts": "2026-10-08T00:16",
-"name": "hourly_atr_loss_flush",
-"status": "rejected",
-"rationale": "Payer is prop and retail desks with daily loss limits. They are forced flat into the London (16h) or NY (21h) close once the session loss exceeds k hourly ATRs, and they sell into thin books. The strategy buys at the next session's re-open, long only and optionally demeaned again",
-"note": "sandbox: AssertionError: grid size 288"
 }
 ],
 "history": [
-{
-"t": 1791267926.2280982,
-"total": 29310740,
-"per_min": 318.0,
-"cpu": 38.1,
-"gpu": 95,
-"free_gb": 118.4,
-"dsr_bar": 6.42,
-"best_pm_1h": 1.57,
-"distinct": 25854683
-},
 {
 "t": 1791268271.2614138,
 "total": 29312657,
@@ -8882,6 +8871,17 @@
 "dsr_bar": 6.41,
 "best_pm_1h": 6.88,
 "distinct": 26610596
+},
+{
+"t": 1791440839.640469,
+"total": 30085659,
+"per_min": 625.0,
+"cpu": 33.4,
+"gpu": 90,
+"free_gb": 163.5,
+"dsr_bar": 6.41,
+"best_pm_1h": 6.88,
+"distinct": 26613723
 }
 ],
 "instrument": "XAUUSD",
