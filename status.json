@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-08 08:23:01 UTC",
+"generated_at": "2026-10-08 08:28:30 UTC",
 "host": {
-"cpu_pct": 27.9,
-"gpu_pct": 19,
-"free_gb": 108.5,
-"uptime": "up 8 days, 17:08, 2 users, load averages: 10.51 11.46 11.29",
-"load": "{ 10.51 11.46 11.29 }"
+"cpu_pct": 8.2,
+"gpu_pct": 0,
+"free_gb": 129.5,
+"uptime": "up 8 days, 17:14, 2 users, load averages: 5.99 8.93 10.12",
+"load": "{ 5.99 8.93 10.12 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-08T10:22:58",
-"it": 187726,
+"ts": "2026-10-08T10:26:54",
+"it": 187800,
 "bar": "1h",
-"batch": 9,
+"batch": 8,
 "passed": 0,
 "bench": 6.41,
-"pbo": 0.0,
+"pbo": 0.5,
 "best_family": "gated",
-"best_pm": 1.63,
-"best_params": "{'base': 'thin_hour_impact_refund', 'base_params': {'hold_min': 25, 'k_bps': 6.13, 'slot': 20, 'theta': 0.818}, 'mode': 'htf_against', 'htf': '1h', 'sma_n': 50}",
-"mix": "gat8/hig1",
-"queue_s": 8.0
+"best_pm": 0.37,
+"best_params": "{'base': 'compression_break_matched_exposure', 'base_params': {'c': 0.892, 'days': 25, 'ex': 0.16, 'mdays': 46, 'mintr': 6}, 'mode': 'vol_above', 'vol_window': ",
+"mix": "gat8",
+"queue_s": 7.0
 },
 "events": []
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-08T10:22:53",
-"it": 154970,
+"ts": "2026-10-08T10:26:49",
+"it": 155000,
 "bar": "15m",
-"batch": 8,
+"batch": 64,
 "passed": 0,
 "bench": 6.41,
-"pbo": 0.07,
-"best_family": "gated",
-"best_pm": 0.91,
-"best_params": "{'base': 'disposition_overhang', 'base_params': {'days': 3, 'exit': 0.463, 'k': 0.801, 'side': 'long', 'sign': 1}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 156",
-"mix": "gat8",
-"queue_s": 7.0
+"pbo": 0.57,
+"best_family": "thin_sweep_efficiency_refund",
+"best_pm": 3.69,
+"best_params": "{'slot': 20, 'n': 33, 'k_bps': 4.77, 'eff': 0.689, 'hold': 99}",
+"mix": "gat11/thi53",
+"queue_s": 11.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 30147680,
-"last_5m": 12167,
-"last_1h": 30102,
-"last_24h": 461238,
-"distinct_ideas": 26675643,
+"total": 30155327,
+"last_5m": 6926,
+"last_1h": 31348,
+"last_24h": 468384,
+"distinct_ideas": 26683096,
 "dsr_bar": 6.41,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19791383,
+"n": 19792936,
 "pos_rate": 0.346,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -300,6 +300,15 @@
 "since": "2026-10-05"
 },
 {
+"family": "thin_slot_depth_refund",
+"n": 15430,
+"pos_rate": 0.586,
+"best_pm": 1.72,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-08"
+},
+{
 "family": "close_channel_retrace_demeaned",
 "n": 15168,
 "pos_rate": 0.673,
@@ -361,15 +370,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-05"
-},
-{
-"family": "thin_slot_depth_refund",
-"n": 14158,
-"pos_rate": 0.587,
-"best_pm": 1.67,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-08"
 },
 {
 "family": "thin_window_dip_bid",
@@ -552,6 +552,15 @@
 "since": "2026-10-02"
 },
 {
+"family": "thin_sweep_efficiency_refund",
+"n": 11458,
+"pos_rate": 0.547,
+"best_pm": 2.0,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-08"
+},
+{
 "family": "choppy_break_demeaned",
 "n": 11410,
 "pos_rate": 0.46,
@@ -580,7 +589,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 11248,
+"n": 11249,
 "pos_rate": 0.903,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -921,15 +930,6 @@
 "since": "2026-10-05"
 },
 {
-"family": "thin_sweep_efficiency_refund",
-"n": 6638,
-"pos_rate": 0.529,
-"best_pm": 1.68,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-08"
-},
-{
 "family": "session_close_recovery_target",
 "n": 6211,
 "pos_rate": 0.09,
@@ -1156,7 +1156,7 @@
 },
 {
 "family": "loss_limit_reset_flush",
-"n": 4628,
+"n": 4629,
 "pos_rate": 0.37,
 "best_pm": 1.06,
 "best_dsr": 0.0,
@@ -1967,9 +1967,9 @@
 {
 "family": "close_limit_flush_reentry",
 "bar": "15m",
-"n": 824,
+"n": 902,
 "best_pm": 1.14,
-"pos_rate": 0.443
+"pos_rate": 0.441
 },
 {
 "family": "close_limit_flush_reentry",
@@ -1988,16 +1988,16 @@
 {
 "family": "close_limit_flush_reentry",
 "bar": "30s",
-"n": 874,
+"n": 894,
 "best_pm": 0.99,
-"pos_rate": 0.428
+"pos_rate": 0.423
 },
 {
 "family": "close_limit_flush_reentry",
 "bar": "5m",
-"n": 804,
-"best_pm": 0.88,
-"pos_rate": 0.432
+"n": 900,
+"best_pm": 0.97,
+"pos_rate": 0.421
 },
 {
 "family": "cost_basis_flush_long",
@@ -2107,35 +2107,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 23840,
+"n": 24118,
 "best_pm": 1.92,
-"pos_rate": 0.611
+"pos_rate": 0.61
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 45745,
+"n": 46041,
 "best_pm": 2.37,
 "pos_rate": 0.597
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 45538,
+"n": 45866,
 "best_pm": 16.82,
 "pos_rate": 0.332
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 24706,
+"n": 24912,
 "best_pm": 24.15,
 "pos_rate": 0.276
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 23782,
+"n": 24064,
 "best_pm": 6.88,
 "pos_rate": 0.552
 },
@@ -3087,9 +3087,9 @@
 {
 "family": "thin_slot_depth_refund",
 "bar": "30s",
-"n": 2034,
-"best_pm": 1.67,
-"pos_rate": 0.649
+"n": 3025,
+"best_pm": 1.72,
+"pos_rate": 0.623
 },
 {
 "family": "thin_slot_depth_refund",
@@ -3101,9 +3101,9 @@
 {
 "family": "thin_sweep_efficiency_refund",
 "bar": "15m",
-"n": 894,
+"n": 2576,
 "best_pm": 1.21,
-"pos_rate": 0.543
+"pos_rate": 0.564
 },
 {
 "family": "thin_sweep_efficiency_refund",
@@ -3115,23 +3115,23 @@
 {
 "family": "thin_sweep_efficiency_refund",
 "bar": "1m",
-"n": 1760,
-"best_pm": 1.57,
-"pos_rate": 0.523
+"n": 2440,
+"best_pm": 1.62,
+"pos_rate": 0.516
 },
 {
 "family": "thin_sweep_efficiency_refund",
 "bar": "30s",
-"n": 904,
-"best_pm": 1.36,
-"pos_rate": 0.476
+"n": 1431,
+"best_pm": 1.66,
+"pos_rate": 0.518
 },
 {
 "family": "thin_sweep_efficiency_refund",
 "bar": "5m",
-"n": 893,
-"best_pm": 1.68,
-"pos_rate": 0.501
+"n": 2575,
+"best_pm": 2.0,
+"pos_rate": 0.568
 },
 {
 "family": "thin_tick_catchup",
@@ -3277,6 +3277,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-08T08:27",
+"name": "thin_slot_handover_refund",
+"status": "accepted",
+"rationale": "The payer is takers who sell into a thin book in the London lunch or late-NY trough and pay impact. Dealers refund it when depth returns at the next liquid handover. Unlike the five hold-minute variants, the exit is a clock time (slot end) and the thin gate is spread widening. Th",
+"note": "{\"name\": \"thin_slot_handover_refund\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.00991875}"
+},
+{
 "ts": "2026-10-08T07:57",
 "name": "thin_sweep_efficiency_refund",
 "status": "accepted",
@@ -3352,27 +3359,9 @@
 "status": "accepted",
 "rationale": "Existing flush families fire at most once per session close. This one tests every hourly clock boundary inside the London and NY sessions, so it can fire several times a day, with fixed bps thresholds and no percentiles. A desk that is down k bps from the session open and has jus",
 "note": "{\"name\": \"hourly_limit_fresh_low\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.003}"
-},
-{
-"ts": "2026-10-08T02:19",
-"name": "two_block_loss_flush",
-"status": "accepted",
-"rationale": "Payer is desks with a cumulative two-block loss limit, such as a prop desk or a retail margin rule that cuts after two consecutive losing blocks. They are forced flat on the second down block, and the market-impact cost is paid to whoever re-bids after a short liquidity lag. The ",
-"note": "{\"name\": \"two_block_loss_flush\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.3904375}"
 }
 ],
 "history": [
-{
-"t": 1791275138.1983192,
-"total": 29340697,
-"per_min": 143.0,
-"cpu": 0.6,
-"gpu": 0,
-"free_gb": 115.6,
-"dsr_bar": 6.42,
-"best_pm_1h": 13.37,
-"distinct": 25884472
-},
 {
 "t": 1791275464.7771342,
 "total": 29341501,
@@ -8916,6 +8905,17 @@
 "dsr_bar": 6.41,
 "best_pm_1h": 2.26,
 "distinct": 26675643
+},
+{
+"t": 1791448110.761037,
+"total": 30155327,
+"per_min": 1385.0,
+"cpu": 8.2,
+"gpu": 0,
+"free_gb": 129.5,
+"dsr_bar": 6.41,
+"best_pm_1h": 2.26,
+"distinct": 26683096
 }
 ],
 "instrument": "XAUUSD",
