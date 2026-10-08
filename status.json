@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-08 15:57:07 UTC",
+"generated_at": "2026-10-08 16:12:45 UTC",
 "host": {
-"cpu_pct": 22.2,
-"gpu_pct": 89,
-"free_gb": 186.7,
-"uptime": "up 9 days, 43 mins, 2 users, load averages: 10.06 10.29 10.6",
-"load": "{ 10.06 10.29 10.68 }"
+"cpu_pct": 36.9,
+"gpu_pct": 92,
+"free_gb": 140.0,
+"uptime": "up 9 days, 58 mins, 2 users, load averages: 10.67 11.88 11.7",
+"load": "{ 10.67 11.88 11.79 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-08T17:40:28",
-"it": 191130,
+"ts": "2026-10-08T18:10:28",
+"it": 191400,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.4,
-"pbo": 0.29,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 0.73,
-"best_params": "{'base': 'giveback_break_matched', 'base_params': {'days': 4, 'fr': 0.251, 'k': 0.8, 'mdays': 26}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 15, 'g2_mode': 'spr",
+"best_pm": 0.55,
+"best_params": "{'base': 'settle_hedge_momentum', 'base_params': {'entry': -42, 'hold': 34, 'k': 2.38, 'sign': 1}, 'mode': 'tick_above', 'vol_window': 82, 'vol_pct': 0.795}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-08T17:44:24",
-"it": 157410,
+"ts": "2026-10-08T18:06:48",
+"it": 157600,
 "bar": "30s",
-"batch": 8,
+"batch": 9,
 "passed": 0,
 "bench": 6.4,
-"pbo": 0.04,
+"pbo": 0.68,
 "best_family": "gated",
-"best_pm": 0.07,
-"best_params": "{'base': 'thin_hour_impact_refund', 'base_params': {'hold_min': 75, 'k_bps': 6.08, 'slot': 20, 'theta': 0.857}, 'mode': 'vol_below', 'vol_window': 96, 'vol_pct'",
-"mix": "gat8",
-"queue_s": 8.0
+"best_pm": 0.13,
+"best_params": "{'base': 'session_flush_long', 'base_params': {'close': 16, 'dm': 0, 'hold': 5, 'k_bps': 32.1, 'w': 1}, 'mode': 'tick_above', 'vol_window': 202, 'vol_pct': 0.80",
+"mix": "gat8/thi1",
+"queue_s": 7.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 30344756,
-"last_5m": 0,
-"last_1h": 28107,
-"last_24h": 535600,
-"distinct_ideas": 26869835,
+"total": 30359528,
+"last_5m": 5053,
+"last_1h": 26859,
+"last_24h": 548711,
+"distinct_ideas": 26884448,
 "dsr_bar": 6.4,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19843154,
+"n": 19847073,
 "pos_rate": 0.347,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -714,6 +714,15 @@
 "since": "2026-10-02"
 },
 {
+"family": "thin_window_mean_gap_refund",
+"n": 10852,
+"pos_rate": 0.468,
+"best_pm": 2.29,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-08"
+},
+{
 "family": "range_expansion_hold",
 "n": 10641,
 "pos_rate": 0.955,
@@ -1255,7 +1264,7 @@
 },
 {
 "family": "loss_limit_reset_flush",
-"n": 4641,
+"n": 4642,
 "pos_rate": 0.369,
 "best_pm": 1.06,
 "best_dsr": 0.0,
@@ -1858,14 +1867,14 @@
 {
 "family": "atr_loss_limit_flush",
 "bar": "15m",
-"n": 14,
+"n": 12,
 "best_pm": 0,
 "pos_rate": 0
 },
 {
 "family": "atr_loss_limit_flush",
 "bar": "1m",
-"n": 19,
+"n": 18,
 "best_pm": -0.01,
 "pos_rate": 0
 },
@@ -1921,35 +1930,35 @@
 {
 "family": "block_loss_touch_long",
 "bar": "15m",
-"n": 14,
+"n": 12,
 "best_pm": -0.02,
 "pos_rate": 0
 },
 {
 "family": "block_loss_touch_long",
 "bar": "1h",
-"n": 19,
+"n": 11,
 "best_pm": 0.59,
-"pos_rate": 0.684
+"pos_rate": 0.818
 },
 {
 "family": "block_loss_touch_long",
 "bar": "1m",
-"n": 96,
-"best_pm": 0.23,
-"pos_rate": 0.115
+"n": 13,
+"best_pm": 0.17,
+"pos_rate": 0.308
 },
 {
 "family": "block_loss_touch_long",
 "bar": "30s",
-"n": 32,
+"n": 14,
 "best_pm": -0.04,
 "pos_rate": 0
 },
 {
 "family": "block_loss_touch_long",
 "bar": "5m",
-"n": 15,
+"n": 12,
 "best_pm": 0,
 "pos_rate": 0
 },
@@ -2110,44 +2119,44 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 22749,
+"n": 23039,
 "best_pm": 2.25,
-"pos_rate": 0.596
+"pos_rate": 0.597
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 46465,
+"n": 47199,
 "best_pm": 2.5,
 "pos_rate": 0.588
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 46138,
+"n": 46849,
 "best_pm": 14.99,
 "pos_rate": 0.33
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 23735,
+"n": 24095,
 "best_pm": 20.48,
 "pos_rate": 0.277
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 22865,
+"n": 23161,
 "best_pm": 6.88,
-"pos_rate": 0.536
+"pos_rate": 0.535
 },
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 31,
+"n": 29,
 "best_pm": 0.59,
-"pos_rate": 0.968
+"pos_rate": 0.966
 },
 {
 "family": "higher_low_staircase",
@@ -2250,8 +2259,8 @@
 {
 "family": "hourly_loss_flush_long",
 "bar": "30s",
-"n": 19,
-"best_pm": -0.06,
+"n": 10,
+"best_pm": -0.15,
 "pos_rate": 0
 },
 {
@@ -2348,7 +2357,7 @@
 {
 "family": "loss_limit_reset_flush",
 "bar": "30s",
-"n": 909,
+"n": 910,
 "best_pm": 0.88,
 "pos_rate": 0.178
 },
@@ -2453,9 +2462,9 @@
 {
 "family": "prior_settle_excursion",
 "bar": "30s",
-"n": 6,
-"best_pm": 0.28,
-"pos_rate": 0.333
+"n": 2,
+"best_pm": 0.05,
+"pos_rate": 0.5
 },
 {
 "family": "prior_settle_excursion",
@@ -2621,9 +2630,9 @@
 {
 "family": "session_flush_long",
 "bar": "1m",
-"n": 5,
+"n": 4,
 "best_pm": -0.21,
-"pos_rate": 0.2
+"pos_rate": 0.25
 },
 {
 "family": "session_flush_long",
@@ -3417,6 +3426,41 @@
 "pos_rate": 0.641
 },
 {
+"family": "thin_window_mean_gap_refund",
+"bar": "15m",
+"n": 1882,
+"best_pm": 2.29,
+"pos_rate": 0.666
+},
+{
+"family": "thin_window_mean_gap_refund",
+"bar": "1h",
+"n": 2622,
+"best_pm": 0,
+"pos_rate": 0
+},
+{
+"family": "thin_window_mean_gap_refund",
+"bar": "1m",
+"n": 2621,
+"best_pm": 2.07,
+"pos_rate": 0.606
+},
+{
+"family": "thin_window_mean_gap_refund",
+"bar": "30s",
+"n": 1843,
+"best_pm": 1.86,
+"pos_rate": 0.608
+},
+{
+"family": "thin_window_mean_gap_refund",
+"bar": "5m",
+"n": 1884,
+"best_pm": 2.19,
+"pos_rate": 0.59
+},
+{
 "family": "two_block_loss_flush",
 "bar": "15m",
 "n": 1036,
@@ -3454,6 +3498,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-10-08T16:10",
+"name": "thin_slot_peak_drop_refund",
+"status": "accepted",
+"rationale": "The payer is takers who sell into a thin London-lunch or late-NY book after buyers had lifted it. They pay impact measured from the slot-local peak, not from the slot-open reference that the existing thin_* families use, and they get it back when depth returns at the hour handove",
+"note": "{\"name\": \"thin_slot_peak_drop_refund\", \"grid\": 36, \"sec_per_param\": 0.0, \"active_frac\": 0.044325}"
+},
 {
 "ts": "2026-10-08T15:40",
 "name": "thin_window_mean_gap_refund",
@@ -3530,49 +3581,9 @@
 "status": "accepted",
 "rationale": "Payer: takers who sweep a thin book in the London lunch or late-NY trough and pay impact. The displacement below the pre-slot price refunds as depth returns, and the buyer is paid to provide it.\nDifference from the neighbours (thin_hour_impact_refund 72%, thin_lunch_trough_refund",
 "note": "{\"name\": \"thin_slot_target_refund\", \"grid\": 180, \"sec_per_param\": 0.0, \"active_frac\": 0.00698125}"
-},
-{
-"ts": "2026-10-08T10:00",
-"name": "thin_shock_spread_refund",
-"status": "accepted",
-"rationale": "Payer is market sellers who cross a thin book at the 12, 19, 20 and 21 UTC troughs and pay impact. The signature is a fast n-minute fall of at least k bps together with a spread already widened against its 5-day mean, which marks a depth vacuum. Depth returns and part of the impa",
-"note": "{\"name\": \"thin_shock_spread_refund\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.0282}"
 }
 ],
 "history": [
-{
-"t": 1791302460.635349,
-"total": 29444434,
-"per_min": 354.0,
-"cpu": 27.7,
-"gpu": 80,
-"free_gb": 140.4,
-"dsr_bar": 6.42,
-"best_pm_1h": 10.44,
-"distinct": 25988297
-},
-{
-"t": 1791302805.835253,
-"total": 29445977,
-"per_min": 265.0,
-"cpu": 27.4,
-"gpu": 91,
-"free_gb": 139.8,
-"dsr_bar": 6.42,
-"best_pm_1h": 10.44,
-"distinct": 25989752
-},
-{
-"t": 1791303150.620573,
-"total": 29447975,
-"per_min": 390.0,
-"cpu": 39.4,
-"gpu": 91,
-"free_gb": 132.2,
-"dsr_bar": 6.42,
-"best_pm_1h": 10.44,
-"distinct": 25991838
-},
 {
 "t": 1791303496.709265,
 "total": 29449511,
@@ -8918,6 +8929,17 @@
 "dsr_bar": 6.4,
 "best_pm_1h": 2.5,
 "distinct": 26869835
+},
+{
+"t": 1791475965.227613,
+"total": 30359528,
+"per_min": 1011.0,
+"cpu": 36.9,
+"gpu": 92,
+"free_gb": 140.0,
+"dsr_bar": 6.4,
+"best_pm_1h": 2.5,
+"distinct": 26884448
 }
 ],
 "instrument": "XAUUSD",
