@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-08 14:23:03 UTC",
+"generated_at": "2026-10-08 14:38:31 UTC",
 "host": {
-"cpu_pct": 25.4,
-"gpu_pct": 91,
-"free_gb": 188.5,
-"uptime": "up 8 days, 23:09, 2 users, load averages: 9.49 10.08 10.35",
-"load": "{ 9.49 10.08 10.35 }"
+"cpu_pct": 3.4,
+"gpu_pct": 0,
+"free_gb": 125.7,
+"uptime": "up 8 days, 23:24, 2 users, load averages: 2.66 7.68 9.82",
+"load": "{ 2.66 7.68 9.82 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-08T16:07:25",
-"it": 190250,
-"bar": "1h",
-"batch": 8,
+"ts": "2026-10-08T16:35:08",
+"it": 190411,
+"bar": "1m",
+"batch": 312,
 "passed": 0,
 "bench": 6.41,
-"pbo": 0.0,
-"best_family": "gated",
-"best_pm": 1.51,
-"best_params": "{'base': 'calendar_rebalance_flow', 'base_params': {'k': 0.125, 'period': 'month', 'phase': 'pre', 'sign': -1, 'span': 2}, 'mode': 'spread_below', 'vol_window':",
-"mix": "gat8",
-"queue_s": 7.0
+"pbo": 0.43,
+"best_family": "thin_trough_confirmed_refund",
+"best_pm": 15.71,
+"best_params": "{'slot': 21, 'k_bps': 38.9, 'm_min': 12, 'r_bps': 6.93}",
+"mix": "gat50/thi262",
+"queue_s": 174.0
 },
 "events": []
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-08T15:37:03",
-"it": 156610,
+"ts": "2026-10-08T16:37:50",
+"it": 156801,
 "bar": "5m",
-"batch": 87,
+"batch": 8,
 "passed": 0,
 "bench": 6.41,
-"pbo": 0.14,
-"best_family": "thin_hour_tickrate_refund",
-"best_pm": 5.6,
-"best_params": "{'slot': 12, 'k_bps': 2.47, 'theta': 0.331, 'hold_min': 64}",
-"mix": "gat8/thi4/thi46/thi27/thi2",
-"queue_s": 25.0
+"pbo": 0.0,
+"best_family": "gated",
+"best_pm": 1.15,
+"best_params": "{'base': 'shakeout_reclaim', 'base_params': {'hold': 2, 'k': 0.927, 'r': 5, 'side': 'long', 'sign': 1, 'span': 5}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 36}",
+"mix": "gat8",
+"queue_s": 8.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 30289173,
-"last_5m": 0,
-"last_1h": 20497,
-"last_24h": 514544,
-"distinct_ideas": 26814923,
+"total": 30313936,
+"last_5m": 2386,
+"last_1h": 32281,
+"last_24h": 536550,
+"distinct_ideas": 26839273,
 "dsr_bar": 6.41,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19828236,
+"n": 19831803,
 "pos_rate": 0.347,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -417,6 +417,15 @@
 "since": "2026-10-05"
 },
 {
+"family": "thin_impact_per_tick_refund",
+"n": 13379,
+"pos_rate": 0.604,
+"best_pm": 2.36,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-08"
+},
+{
 "family": "demeaned_break_book",
 "n": 13285,
 "pos_rate": 0.53,
@@ -469,15 +478,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-07"
-},
-{
-"family": "thin_impact_per_tick_refund",
-"n": 12391,
-"pos_rate": 0.607,
-"best_pm": 2.36,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-08"
 },
 {
 "family": "pullback_resume_hold",
@@ -543,6 +543,15 @@
 "since": "2026-10-08"
 },
 {
+"family": "thin_fast_impact_refund",
+"n": 11787,
+"pos_rate": 0.506,
+"best_pm": 2.25,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-08"
+},
+{
 "family": "v_recovery_hold",
 "n": 11773,
 "pos_rate": 0.483,
@@ -550,6 +559,15 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-05"
+},
+{
+"family": "thin_refund_regime_gate",
+"n": 11580,
+"pos_rate": 0.607,
+"best_pm": 2.25,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-08"
 },
 {
 "family": "sold_strength_closeout",
@@ -616,7 +634,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 11273,
+"n": 11275,
 "pos_rate": 0.903,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -751,7 +769,7 @@
 },
 {
 "family": "thin_bleed_refund",
-"n": 10377,
+"n": 10388,
 "pos_rate": 0.398,
 "best_pm": 1.88,
 "best_dsr": 0.0,
@@ -786,6 +804,15 @@
 "since": "2026-10-01"
 },
 {
+"family": "thin_hour_tickrate_refund",
+"n": 9886,
+"pos_rate": 0.415,
+"best_pm": 1.83,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-08"
+},
+{
 "family": "stepped_bid_accumulation",
 "n": 9795,
 "pos_rate": 0.351,
@@ -814,7 +841,7 @@
 },
 {
 "family": "thin_exhaustion_refund",
-"n": 9462,
+"n": 9469,
 "pos_rate": 0.316,
 "best_pm": 1.66,
 "best_dsr": 0.0,
@@ -912,15 +939,6 @@
 "since": "2026-10-07"
 },
 {
-"family": "thin_fast_impact_refund",
-"n": 7797,
-"pos_rate": 0.531,
-"best_pm": 2.25,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-08"
-},
-{
 "family": "volburst_break_matched",
 "n": 7783,
 "pos_rate": 0.223,
@@ -1002,11 +1020,11 @@
 "since": "2026-10-05"
 },
 {
-"family": "thin_hour_tickrate_refund",
-"n": 6697,
-"pos_rate": 0.412,
-"best_pm": 1.83,
-"best_dsr": 0.0,
+"family": "thin_trough_confirmed_refund",
+"n": 6394,
+"pos_rate": 0.323,
+"best_pm": 1.02,
+"best_dsr": 0,
 "passed": 0,
 "since": "2026-10-08"
 },
@@ -1173,15 +1191,6 @@
 "since": "2026-10-07"
 },
 {
-"family": "thin_refund_regime_gate",
-"n": 4967,
-"pos_rate": 0.532,
-"best_pm": 2.25,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-08"
-},
-{
 "family": "thin_tick_catchup",
 "n": 4964,
 "pos_rate": 0.027,
@@ -1237,8 +1246,8 @@
 },
 {
 "family": "loss_limit_reset_flush",
-"n": 4636,
-"pos_rate": 0.369,
+"n": 4637,
+"pos_rate": 0.37,
 "best_pm": 1.06,
 "best_dsr": 0.0,
 "passed": 0,
@@ -1678,7 +1687,7 @@
 },
 {
 "family": "rebalance_size",
-"n": 966,
+"n": 967,
 "pos_rate": 0.41,
 "best_pm": 0.45,
 "best_dsr": 0.0,
@@ -1835,12 +1844,12 @@
 "pbo": 0.04
 }
 ],
-"best_pm_1h": 2.33,
+"best_pm_1h": 14.99,
 "heat": [
 {
 "family": "atr_loss_limit_flush",
 "bar": "15m",
-"n": 23,
+"n": 18,
 "best_pm": 0,
 "pos_rate": 0
 },
@@ -1854,14 +1863,14 @@
 {
 "family": "atr_loss_limit_flush",
 "bar": "30s",
-"n": 64,
+"n": 20,
 "best_pm": -0.07,
 "pos_rate": 0
 },
 {
 "family": "atr_loss_limit_flush",
 "bar": "5m",
-"n": 8,
+"n": 7,
 "best_pm": -0.24,
 "pos_rate": 0
 },
@@ -2008,9 +2017,9 @@
 {
 "family": "close_limit_flush_reentry",
 "bar": "1m",
-"n": 7,
+"n": 6,
 "best_pm": 0.4,
-"pos_rate": 0.429
+"pos_rate": 0.333
 },
 {
 "family": "close_limit_flush_reentry",
@@ -2092,37 +2101,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 21913,
+"n": 22256,
 "best_pm": 2.25,
-"pos_rate": 0.598
+"pos_rate": 0.597
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 45507,
+"n": 45395,
 "best_pm": 2.48,
-"pos_rate": 0.59
+"pos_rate": 0.589
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 45182,
+"n": 45040,
 "best_pm": 16.82,
-"pos_rate": 0.328
+"pos_rate": 0.329
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 22681,
+"n": 23102,
 "best_pm": 20.48,
-"pos_rate": 0.273
+"pos_rate": 0.275
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 21982,
+"n": 22335,
 "best_pm": 6.88,
-"pos_rate": 0.538
+"pos_rate": 0.537
 },
 {
 "family": "higher_low_staircase",
@@ -2134,9 +2143,9 @@
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 31,
+"n": 32,
 "best_pm": 0.67,
-"pos_rate": 0.935
+"pos_rate": 0.938
 },
 {
 "family": "higher_low_staircase",
@@ -2155,7 +2164,7 @@
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 20,
+"n": 21,
 "best_pm": 0.69,
 "pos_rate": 1.0
 },
@@ -2351,9 +2360,9 @@
 {
 "family": "loss_limit_reset_flush",
 "bar": "1m",
-"n": 923,
+"n": 924,
 "best_pm": 1.06,
-"pos_rate": 0.25
+"pos_rate": 0.251
 },
 {
 "family": "loss_limit_reset_flush",
@@ -2512,9 +2521,9 @@
 {
 "family": "range_expansion_hold",
 "bar": "5m",
-"n": 3,
+"n": 2,
 "best_pm": 0.12,
-"pos_rate": 0.667
+"pos_rate": 1.0
 },
 {
 "family": "real_yield_trend",
@@ -2526,7 +2535,7 @@
 {
 "family": "rebalance_size",
 "bar": "15m",
-"n": 1,
+"n": 2,
 "best_pm": -0.24,
 "pos_rate": 0
 },
@@ -2652,7 +2661,7 @@
 {
 "family": "session_flush_long",
 "bar": "30s",
-"n": 3,
+"n": 2,
 "best_pm": 0,
 "pos_rate": 0
 },
@@ -2813,7 +2822,7 @@
 {
 "family": "thin_bleed_refund",
 "bar": "15m",
-"n": 2075,
+"n": 2080,
 "best_pm": 1.47,
 "pos_rate": 0.21
 },
@@ -2834,21 +2843,21 @@
 {
 "family": "thin_bleed_refund",
 "bar": "30s",
-"n": 2073,
+"n": 2078,
 "best_pm": 1.42,
-"pos_rate": 0.58
+"pos_rate": 0.579
 },
 {
 "family": "thin_bleed_refund",
 "bar": "5m",
-"n": 2077,
+"n": 2078,
 "best_pm": 1.88,
 "pos_rate": 0.515
 },
 {
 "family": "thin_exhaustion_refund",
 "bar": "15m",
-"n": 1887,
+"n": 1891,
 "best_pm": 0.94,
 "pos_rate": 0.141
 },
@@ -2869,7 +2878,7 @@
 {
 "family": "thin_exhaustion_refund",
 "bar": "30s",
-"n": 1887,
+"n": 1890,
 "best_pm": 1.28,
 "pos_rate": 0.401
 },
@@ -2883,9 +2892,9 @@
 {
 "family": "thin_fast_impact_refund",
 "bar": "15m",
-"n": 1074,
+"n": 2570,
 "best_pm": 1.61,
-"pos_rate": 0.387
+"pos_rate": 0.428
 },
 {
 "family": "thin_fast_impact_refund",
@@ -2904,16 +2913,16 @@
 {
 "family": "thin_fast_impact_refund",
 "bar": "30s",
-"n": 353,
+"n": 1511,
 "best_pm": 1.43,
-"pos_rate": 0.38
+"pos_rate": 0.453
 },
 {
 "family": "thin_fast_impact_refund",
 "bar": "5m",
-"n": 1228,
+"n": 2564,
 "best_pm": 1.49,
-"pos_rate": 0.458
+"pos_rate": 0.445
 },
 {
 "family": "thin_hour_impact_refund",
@@ -2988,9 +2997,9 @@
 {
 "family": "thin_hour_tickrate_refund",
 "bar": "15m",
-"n": 954,
+"n": 2159,
 "best_pm": 1.77,
-"pos_rate": 0.415
+"pos_rate": 0.414
 },
 {
 "family": "thin_hour_tickrate_refund",
@@ -3009,21 +3018,21 @@
 {
 "family": "thin_hour_tickrate_refund",
 "bar": "30s",
-"n": 313,
+"n": 1154,
 "best_pm": 1.42,
-"pos_rate": 0.406
+"pos_rate": 0.433
 },
 {
 "family": "thin_hour_tickrate_refund",
 "bar": "5m",
-"n": 1011,
+"n": 2154,
 "best_pm": 1.6,
-"pos_rate": 0.461
+"pos_rate": 0.437
 },
 {
 "family": "thin_impact_per_tick_refund",
 "bar": "15m",
-"n": 2785,
+"n": 2790,
 "best_pm": 1.9,
 "pos_rate": 0.581
 },
@@ -3044,9 +3053,9 @@
 {
 "family": "thin_impact_per_tick_refund",
 "bar": "30s",
-"n": 1232,
+"n": 2215,
 "best_pm": 1.66,
-"pos_rate": 0.605
+"pos_rate": 0.591
 },
 {
 "family": "thin_impact_per_tick_refund",
@@ -3092,17 +3101,38 @@
 },
 {
 "family": "thin_refund_regime_gate",
+"bar": "15m",
+"n": 2646,
+"best_pm": 1.95,
+"pos_rate": 0.575
+},
+{
+"family": "thin_refund_regime_gate",
 "bar": "1h",
-"n": 2484,
+"n": 2502,
 "best_pm": 2.25,
-"pos_rate": 0.358
+"pos_rate": 0.359
 },
 {
 "family": "thin_refund_regime_gate",
 "bar": "1m",
-"n": 2483,
+"n": 2501,
 "best_pm": 1.72,
-"pos_rate": 0.706
+"pos_rate": 0.705
+},
+{
+"family": "thin_refund_regime_gate",
+"bar": "30s",
+"n": 1285,
+"best_pm": 1.74,
+"pos_rate": 0.728
+},
+{
+"family": "thin_refund_regime_gate",
+"bar": "5m",
+"n": 2646,
+"best_pm": 1.95,
+"pos_rate": 0.723
 },
 {
 "family": "thin_shock_spread_refund",
@@ -3350,6 +3380,41 @@
 "pos_rate": 0.009
 },
 {
+"family": "thin_trough_confirmed_refund",
+"bar": "15m",
+"n": 1370,
+"best_pm": 1.02,
+"pos_rate": 0.428
+},
+{
+"family": "thin_trough_confirmed_refund",
+"bar": "1h",
+"n": 1405,
+"best_pm": 0,
+"pos_rate": 0
+},
+{
+"family": "thin_trough_confirmed_refund",
+"bar": "1m",
+"n": 1152,
+"best_pm": 0.97,
+"pos_rate": 0.379
+},
+{
+"family": "thin_trough_confirmed_refund",
+"bar": "30s",
+"n": 1097,
+"best_pm": 0.87,
+"pos_rate": 0.465
+},
+{
+"family": "thin_trough_confirmed_refund",
+"bar": "5m",
+"n": 1370,
+"best_pm": 0.96,
+"pos_rate": 0.39
+},
+{
 "family": "thin_window_dip_bid",
 "bar": "15m",
 "n": 2797,
@@ -3422,6 +3487,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-10-08T14:37",
+"name": "thin_capped_impact_refund",
+"status": "accepted",
+"rationale": "Payer is uninformed market sellers who push size through a thin book at the London lunch (12 UTC) and late-NY (20/21 UTC) hours. They give part of the impact back once depth returns. The drop is measured from the last close before the hour starts, and informed sellers are exclude",
+"note": "{\"name\": \"thin_capped_impact_refund\", \"grid\": 128, \"sec_per_param\": 0.0, \"active_frac\": 0.02121875}"
+},
 {
 "ts": "2026-10-08T14:07",
 "name": "thin_trough_confirmed_refund",
@@ -3498,49 +3570,9 @@
 "status": "accepted",
 "rationale": "Payer: sellers who cross a thin book and pay a wide spread at the London lunch or the late-NY trough. They give back part of that impact once quoted depth returns, which shows as the spread normalising. This is the only member of the thin-hour set whose trigger is \"wide spread, t",
 "note": "{\"name\": \"thin_spread_return_refund\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.00219375}"
-},
-{
-"ts": "2026-10-08T08:27",
-"name": "thin_slot_handover_refund",
-"status": "accepted",
-"rationale": "The payer is takers who sell into a thin book in the London lunch or late-NY trough and pay impact. Dealers refund it when depth returns at the next liquid handover. Unlike the five hold-minute variants, the exit is a clock time (slot end) and the thin gate is spread widening. Th",
-"note": "{\"name\": \"thin_slot_handover_refund\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.00991875}"
 }
 ],
 "history": [
-{
-"t": 1791296607.9619431,
-"total": 29418590,
-"per_min": 342.0,
-"cpu": 50.1,
-"gpu": 100,
-"free_gb": 122.4,
-"dsr_bar": 6.42,
-"best_pm_1h": 13.24,
-"distinct": 25962503
-},
-{
-"t": 1791296947.3819158,
-"total": 29420290,
-"per_min": 290.0,
-"cpu": 29.9,
-"gpu": 90,
-"free_gb": 136.6,
-"dsr_bar": 6.42,
-"best_pm_1h": 13.24,
-"distinct": 25964065
-},
-{
-"t": 1791297312.509226,
-"total": 29421733,
-"per_min": 342.0,
-"cpu": 29.1,
-"gpu": 92,
-"free_gb": 142.1,
-"dsr_bar": 6.42,
-"best_pm_1h": 13.24,
-"distinct": 25965644
-},
 {
 "t": 1791297651.432417,
 "total": 29423500,
@@ -9007,6 +9039,17 @@
 "dsr_bar": 6.41,
 "best_pm_1h": 2.33,
 "distinct": 26814923
+},
+{
+"t": 1791470311.317434,
+"total": 30313936,
+"per_min": 477.0,
+"cpu": 3.4,
+"gpu": 0,
+"free_gb": 125.7,
+"dsr_bar": 6.41,
+"best_pm_1h": 14.99,
+"distinct": 26839273
 }
 ],
 "instrument": "XAUUSD",
