@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-08 07:54:04 UTC",
+"generated_at": "2026-10-08 07:59:50 UTC",
 "host": {
-"cpu_pct": 25.4,
-"gpu_pct": 89,
-"free_gb": 138.1,
-"uptime": "up 8 days, 16:40, 2 users, load averages: 9.92 10.86 11.50",
-"load": "{ 9.92 10.86 11.50 }"
+"cpu_pct": 24.5,
+"gpu_pct": 88,
+"free_gb": 170.5,
+"uptime": "up 8 days, 16:45, 2 users, load averages: 11.10 10.69 11.16",
+"load": "{ 11.10 10.69 11.16 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-08T09:51:28",
-"it": 187600,
-"bar": "1m",
+"ts": "2026-10-08T09:59:49",
+"it": 187609,
+"bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.41,
-"pbo": 0.46,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": -0.23,
-"best_params": "{'base': 'lagged_shock_repricing', 'base_params': {'d': 2, 'k': 2.5, 'lag': 5, 'mdays': 22, 'sign': -1}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 94}",
+"best_pm": 2.04,
+"best_params": "{'base': 'thin_hour_impact_refund', 'base_params': {'hold_min': 41, 'k_bps': 7.25, 'slot': 20, 'theta': 0.804}, 'mode': 'htf_against', 'htf': '4h', 'sma_n': 100",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-08T09:49:34",
-"it": 154800,
-"bar": "5m",
+"ts": "2026-10-08T09:57:51",
+"it": 154810,
+"bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.41,
-"pbo": 0.0,
+"pbo": 0.86,
 "best_family": "gated",
-"best_pm": 1.04,
-"best_params": "{'base': 'round_level_break', 'base_params': {'fresh': 131, 'hold': 18, 'offset': 0.0, 'sign': 1, 'step': 50}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 24}",
+"best_pm": 0.74,
+"best_params": "{'base': 'expanding_break_matched', 'base_params': {'c': 4.69, 'days': 9, 'ex': 0.798, 'sw': 0.3}, 'mode': 'vol_below', 'vol_window': 240, 'vol_pct': 0.7, 'vol_",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 30130583,
-"last_5m": 1346,
-"last_1h": 36203,
-"last_24h": 450201,
-"distinct_ideas": 26658601,
+"total": 30130655,
+"last_5m": 72,
+"last_1h": 32464,
+"last_24h": 449511,
+"distinct_ideas": 26658673,
 "dsr_bar": 6.41,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19788936,
+"n": 19789008,
 "pos_rate": 0.346,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -2098,44 +2098,44 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 24353,
+"n": 24177,
 "best_pm": 1.92,
 "pos_rate": 0.614
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 46993,
+"n": 46905,
 "best_pm": 2.37,
 "pos_rate": 0.598
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 46770,
+"n": 46690,
 "best_pm": 16.82,
 "pos_rate": 0.334
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 25166,
+"n": 24998,
 "best_pm": 24.15,
 "pos_rate": 0.277
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 24263,
+"n": 24087,
 "best_pm": 6.88,
-"pos_rate": 0.554
+"pos_rate": 0.553
 },
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 32,
+"n": 31,
 "best_pm": 0.59,
-"pos_rate": 0.906
+"pos_rate": 0.903
 },
 {
 "family": "higher_low_staircase",
@@ -2161,7 +2161,7 @@
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 24,
+"n": 23,
 "best_pm": 0.69,
 "pos_rate": 1.0
 },
@@ -3212,6 +3212,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-08T07:57",
+"name": "thin_sweep_efficiency_refund",
+"status": "accepted",
+"rationale": "Payer: market sellers who sweep a thin book in one direction at the London lunch (12 UTC) or the late NY trough (19\u201320 UTC). They pay impact in a one-way move with almost no retracement, and depth returns afterwards. The family is long-only and uses fixed-bps thresholds. It has 1",
+"note": "{\"name\": \"thin_sweep_efficiency_refund\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.0301625}"
+},
+{
 "ts": "2026-10-08T07:26",
 "name": "slot_relative_impact_refund",
 "status": "rejected",
@@ -3287,27 +3294,9 @@
 "status": "accepted",
 "rationale": "Payer is desks with a cumulative two-block loss limit, such as a prop desk or a retail margin rule that cuts after two consecutive losing blocks. They are forced flat on the second down block, and the market-impact cost is paid to whoever re-bids after a short liquidity lag. The ",
 "note": "{\"name\": \"two_block_loss_flush\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.3904375}"
-},
-{
-"ts": "2026-10-08T01:48",
-"name": "monotone_close_flush",
-"status": "accepted",
-"rationale": "Payer: prop and retail desks with a daily loss limit. After a one-way slide of at least k bps over the last w bars, they are forced flat into the close. The distinguishing filter is that the share of down-bars in that window is at least `frac`, which marks a forced liquidation ra",
-"note": "{\"name\": \"monotone_close_flush\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.015875}"
 }
 ],
 "history": [
-{
-"t": 1791273432.3454678,
-"total": 29334733,
-"per_min": 263.0,
-"cpu": 37.0,
-"gpu": 97,
-"free_gb": 137.8,
-"dsr_bar": 6.42,
-"best_pm_1h": 19.96,
-"distinct": 25878612
-},
 {
 "t": 1791273770.870891,
 "total": 29336767,
@@ -8851,6 +8840,17 @@
 "dsr_bar": 6.41,
 "best_pm_1h": 2.33,
 "distinct": 26658601
+},
+{
+"t": 1791446390.561642,
+"total": 30130655,
+"per_min": 14.0,
+"cpu": 24.5,
+"gpu": 88,
+"free_gb": 170.5,
+"dsr_bar": 6.41,
+"best_pm_1h": 2.33,
+"distinct": 26658673
 }
 ],
 "instrument": "XAUUSD",
