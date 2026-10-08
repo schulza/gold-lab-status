@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-08 00:46:15 UTC",
+"generated_at": "2026-10-08 00:51:55 UTC",
 "host": {
-"cpu_pct": 19.6,
-"gpu_pct": 92,
-"free_gb": 121.9,
-"uptime": "up 8 days,  9:32, 2 users, load averages: 5.69 8.27 9.55",
-"load": "{ 5.69 8.27 9.55 }"
+"cpu_pct": 24.0,
+"gpu_pct": 91,
+"free_gb": 184.8,
+"uptime": "up 8 days,  9:37, 2 users, load averages: 10.70 9.37 9.58",
+"load": "{ 10.65 9.38 9.58 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-08T02:43:14",
-"it": 184000,
+"ts": "2026-10-08T02:48:52",
+"it": 184010,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.32,
+"pbo": 0.04,
 "best_family": "gated",
-"best_pm": 0.91,
-"best_params": "{'base': 'session_loss_flush_book', 'base_params': {'dm': 0, 'hold': 372, 'k': 2.01, 'late': 3, 'sess': 'L'}, 'mode': 'vol_below', 'vol_window': 599, 'vol_pct':",
+"best_pm": 1.16,
+"best_params": "{'base': 'calendar_rebalance_flow', 'base_params': {'k': 0.00818, 'period': 'month', 'phase': 'pre', 'sign': -1, 'span': 2}, 'mode': 'tick_above', 'vol_window':",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-08T02:42:17",
-"it": 152400,
-"bar": "30s",
+"ts": "2026-10-08T02:47:22",
+"it": 152410,
+"bar": "5m",
 "batch": 8,
 "passed": 0,
 "bench": 6.42,
-"pbo": 0.71,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 0.4,
-"best_params": "{'base': 'close_limit_flush_reentry', 'base_params': {'close': 16, 'dm': 1, 'hold': 7, 'k': 1.63, 're': 7}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 50}",
+"best_pm": 1.07,
+"best_params": "{'base': 'compression_break_demeaned', 'base_params': {'c': 3.71, 'days': 8, 'ex': 0.8, 'mdays': 6}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 50, 'vol_scale': ",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 29974196,
-"last_5m": 1394,
-"last_1h": 20191,
-"last_24h": 402215,
-"distinct_ideas": 26503544,
+"total": 29974341,
+"last_5m": 145,
+"last_1h": 19770,
+"last_24h": 402360,
+"distinct_ideas": 26503689,
 "dsr_bar": 6.42,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19738161,
+"n": 19738305,
 "pos_rate": 0.346,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -535,7 +535,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 11208,
+"n": 11209,
 "pos_rate": 0.903,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -2027,35 +2027,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 27946,
+"n": 27970,
 "best_pm": 1.59,
 "pos_rate": 0.636
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 50075,
+"n": 50115,
 "best_pm": 2.37,
 "pos_rate": 0.618
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 49904,
+"n": 49936,
 "best_pm": 16.82,
 "pos_rate": 0.353
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 28533,
+"n": 28557,
 "best_pm": 31.88,
 "pos_rate": 0.285
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 27737,
+"n": 27761,
 "best_pm": 1.71,
 "pos_rate": 0.579
 },
@@ -2069,9 +2069,9 @@
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 58,
+"n": 59,
 "best_pm": 0.67,
-"pos_rate": 0.914
+"pos_rate": 0.915
 },
 {
 "family": "higher_low_staircase",
@@ -2973,6 +2973,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-08T00:46",
+"name": "clock_block_loss_flush",
+"status": "accepted",
+"rationale": "Payer is prop and retail desks that check a loss limit at the clock mark (every 30, 60 or 120 minutes). After an adverse block beyond k \u00d7 trailing ATR, they are forced flat. Their forced selling pushes the price below value, and the strategy buys that liquidity and holds it while",
+"note": "{\"name\": \"clock_block_loss_flush\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.6995}"
+},
+{
 "ts": "2026-10-08T00:16",
 "name": "hourly_atr_loss_flush",
 "status": "rejected",
@@ -3048,27 +3055,9 @@
 "status": "accepted",
 "rationale": "The payer is prop and retail desks with loss limits. Their forced selling arrives late in a block, so the loss is back-loaded, and a later buyer who supplies liquidity is paid for it. Fixed-scale 10\u201320 minute blocks give enough events for the 100-trade minimum. The direction's da",
 "note": "{\"name\": \"late_loaded_block_flush_long\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.5437125}"
-},
-{
-"ts": "2026-10-07T18:37",
-"name": "hourly_limit_flush_stack",
-"status": "accepted",
-"rationale": "`atr_loss_limit_flush` (n=2,065, 14% positive) already covers the director's once-a-day version. A once-a-day trigger can fire at most about 14 times in a 14-day sandbox, which fails the 100-trade requirement. This variant keeps the same payer, desks with loss limits being forced",
-"note": "{\"name\": \"hourly_limit_flush_stack\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.0468875}"
 }
 ],
 "history": [
-{
-"t": 1791247708.1809258,
-"total": 29210842,
-"per_min": 136.0,
-"cpu": 34.8,
-"gpu": 93,
-"free_gb": 125.7,
-"dsr_bar": 6.43,
-"best_pm_1h": 40.81,
-"distinct": 25754682
-},
 {
 "t": 1791248047.0451741,
 "total": 29213564,
@@ -8612,6 +8601,17 @@
 "dsr_bar": 6.42,
 "best_pm_1h": 12.32,
 "distinct": 26503544
+},
+{
+"t": 1791420715.7115798,
+"total": 29974341,
+"per_min": 29.0,
+"cpu": 24.0,
+"gpu": 91,
+"free_gb": 184.8,
+"dsr_bar": 6.42,
+"best_pm_1h": 12.32,
+"distinct": 26503689
 }
 ],
 "instrument": "XAUUSD",
