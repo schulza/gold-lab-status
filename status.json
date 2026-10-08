@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-08 07:24:55 UTC",
+"generated_at": "2026-10-08 07:30:32 UTC",
 "host": {
-"cpu_pct": 39.6,
-"gpu_pct": 94,
-"free_gb": 157.6,
-"uptime": "up 8 days, 16:10, 2 users, load averages: 13.89 13.61 12.98",
-"load": "{ 13.89 13.61 12.98 }"
+"cpu_pct": 34.5,
+"gpu_pct": 92,
+"free_gb": 154.9,
+"uptime": "up 8 days, 16:16, 2 users, load averages: 12.21 13.23 13.08",
+"load": "{ 12.21 13.23 13.08 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-08T09:24:55",
-"it": 187115,
-"bar": "1h",
+"ts": "2026-10-08T09:26:22",
+"it": 187200,
+"bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.41,
-"pbo": 0.14,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 1.08,
-"best_params": "{'base': 'range_expansion_hold', 'base_params': {'days': 2, 'exit': 0.229, 'hi': 0.703, 'k': 1.31}, 'mode': 'vol_below', 'vol_window': 23, 'vol_pct': 0.8}",
+"best_pm": 0.96,
+"best_params": "{'base': 'thin_hour_refund_long', 'base_params': {'hold_min': 88, 'k_bps': 2.97, 'slot': 20, 'theta': 0.905}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 200}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 30123019,
-"last_5m": 6525,
-"last_1h": 39321,
-"last_24h": 448861,
-"distinct_ideas": 26651069,
+"total": 30123979,
+"last_5m": 656,
+"last_1h": 37198,
+"last_24h": 448031,
+"distinct_ideas": 26651997,
 "dsr_bar": 6.41,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19781558,
+"n": 19782518,
 "pos_rate": 0.346,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -1736,7 +1736,7 @@
 "pbo": 0.04
 }
 ],
-"best_pm_1h": 2.49,
+"best_pm_1h": 2.33,
 "heat": [
 {
 "family": "atr_loss_limit_flush",
@@ -2098,35 +2098,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 24113,
+"n": 23929,
 "best_pm": 1.92,
 "pos_rate": 0.616
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 46504,
+"n": 46608,
 "best_pm": 2.37,
-"pos_rate": 0.601
+"pos_rate": 0.6
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 46289,
+"n": 46393,
 "best_pm": 16.82,
-"pos_rate": 0.336
+"pos_rate": 0.335
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 24995,
+"n": 24750,
 "best_pm": 24.15,
 "pos_rate": 0.277
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 24031,
+"n": 23847,
 "best_pm": 6.88,
 "pos_rate": 0.555
 },
@@ -2161,7 +2161,7 @@
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 25,
+"n": 24,
 "best_pm": 0.69,
 "pos_rate": 1.0
 },
@@ -3190,9 +3190,9 @@
 {
 "family": "tight_spread_informed_flow",
 "bar": "30s",
-"n": 414,
-"best_pm": 0.65,
-"pos_rate": 0.019
+"n": 6,
+"best_pm": 0,
+"pos_rate": 0
 },
 {
 "family": "tight_spread_informed_flow",
@@ -3204,7 +3204,7 @@
 {
 "family": "trailing_drawdown_flush",
 "bar": "15m",
-"n": 10,
+"n": 2,
 "best_pm": 0,
 "pos_rate": 0
 },
@@ -3218,9 +3218,9 @@
 {
 "family": "trailing_drawdown_flush",
 "bar": "30s",
-"n": 10,
-"best_pm": 0.56,
-"pos_rate": 0.3
+"n": 2,
+"best_pm": 0,
+"pos_rate": 0
 },
 {
 "family": "trailing_drawdown_flush",
@@ -3267,6 +3267,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-10-08T07:26",
+"name": "slot_relative_impact_refund",
+"status": "rejected",
+"rationale": "The payer is the takers who sell into the London lunch (11\u201313 UTC) or late New York (19\u201321 UTC) trough and pay the impact premium for it. A thin-hour drop only counts when its impact per tick is several times that slot's own trailing mean. That separates a real liquidity cost fro",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
 {
 "ts": "2026-10-08T06:55",
 "name": "thin_slot_depth_refund",
@@ -3343,27 +3350,9 @@
 "status": "accepted",
 "rationale": "Payer: prop and retail desks with a daily loss limit. After a one-way slide of at least k bps over the last w bars, they are forced flat into the close. The distinguishing filter is that the share of down-bars in that window is at least `frac`, which marks a forced liquidation ra",
 "note": "{\"name\": \"monotone_close_flush\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.015875}"
-},
-{
-"ts": "2026-10-08T01:17",
-"name": "session_close_recovery_target",
-"status": "accepted",
-"rationale": "Payer is a desk with a daily loss limit, flattened into the London (16:00) or NY (21:00) close after the session-open-to-close move falls below k \u00d7 a fixed trailing ATR scale. It sells into the close at a concession. The strategy buys the next session's open window once spread ha",
-"note": "{\"name\": \"session_close_recovery_target\", \"grid\": 128, \"sec_per_param\": 0.001, \"active_frac\": 0.1079875}"
 }
 ],
 "history": [
-{
-"t": 1791271705.49773,
-"total": 29326449,
-"per_min": 212.0,
-"cpu": 29.9,
-"gpu": 0,
-"free_gb": 126.7,
-"dsr_bar": 6.42,
-"best_pm_1h": 19.96,
-"distinct": 25870256
-},
 {
 "t": 1791272055.701521,
 "total": 29328395,
@@ -8907,6 +8896,17 @@
 "dsr_bar": 6.41,
 "best_pm_1h": 2.49,
 "distinct": 26651069
+},
+{
+"t": 1791444632.106263,
+"total": 30123979,
+"per_min": 131.0,
+"cpu": 34.5,
+"gpu": 92,
+"free_gb": 154.9,
+"dsr_bar": 6.41,
+"best_pm_1h": 2.33,
+"distinct": 26651997
 }
 ],
 "instrument": "XAUUSD",
