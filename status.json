@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-08 02:46:13 UTC",
+"generated_at": "2026-10-08 02:51:40 UTC",
 "host": {
-"cpu_pct": 4.4,
+"cpu_pct": 6.1,
 "gpu_pct": 0,
-"free_gb": 127.8,
-"uptime": "up 8 days, 11:32, 2 users, load averages: 2.11 6.37 8.67",
-"load": "{ 2.11 6.37 8.67 }"
+"free_gb": 121.3,
+"uptime": "up 8 days, 11:37, 2 users, load averages: 3.57 6.27 7.99",
+"load": "{ 3.57 6.27 7.99 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-08T04:43:33",
-"it": 184801,
+"ts": "2026-10-08T04:49:31",
+"it": 184901,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.41,
-"pbo": 0.11,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 1.06,
-"best_params": "{'base': 'compression_break_hold', 'base_params': {'c': 0.507, 'days': 8, 'ex': 0.784, 'lm': 6}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 100}",
+"best_pm": 0.8,
+"best_params": "{'base': 'shakeout_reclaim', 'base_params': {'hold': 1, 'k': 0.967, 'r': 9, 'side': 'long', 'sign': 1, 'span': 9}, 'mode': 'tick_above', 'vol_window': 60, 'vol_",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-08T04:42:26",
-"it": 153104,
+"ts": "2026-10-08T04:49:37",
+"it": 153194,
 "bar": "30s",
-"batch": 156,
+"batch": 91,
 "passed": 0,
 "bench": 6.41,
-"pbo": 0.18,
+"pbo": 0.21,
 "best_family": "gated",
-"best_pm": 0.59,
-"best_params": "{'base': 'range_expansion_hold', 'base_params': {'days': 2, 'exit': 0.4, 'hi': 0.8, 'k': 1.0}, 'mode': 'htf_with', 'htf': '4h', 'sma_n': 200, 'vol_scale': 0.15,",
-"mix": "gat24/ses1/two131",
-"queue_s": 82.0
+"best_pm": 0.51,
+"best_params": "{'base': 'attention_decay_unwind', 'base_params': {'base': 7, 'hold': 3.59, 'k': 0.342, 'sign': -1, 'theta': 1.71, 'w': 4.63}, 'mode': 'htf_with', 'htf': '1h', ",
+"mix": "gat15/two76",
+"queue_s": 28.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 30017214,
-"last_5m": 1233,
-"last_1h": 27656,
-"last_24h": 410821,
-"distinct_ideas": 26545904,
+"total": 30019631,
+"last_5m": 2417,
+"last_1h": 28860,
+"last_24h": 411828,
+"distinct_ideas": 26548307,
 "dsr_bar": 6.41,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19750920,
+"n": 19752481,
 "pos_rate": 0.346,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -409,7 +409,7 @@
 },
 {
 "family": "monotone_close_flush",
-"n": 12568,
+"n": 12570,
 "pos_rate": 0.474,
 "best_pm": 1.49,
 "best_dsr": 0.0,
@@ -868,7 +868,7 @@
 },
 {
 "family": "session_close_recovery_target",
-"n": 6199,
+"n": 6211,
 "pos_rate": 0.09,
 "best_pm": 0.51,
 "best_dsr": 0.0,
@@ -1000,6 +1000,15 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-07"
+},
+{
+"family": "two_block_loss_flush",
+"n": 5113,
+"pos_rate": 0.054,
+"best_pm": 0.32,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-08"
 },
 {
 "family": "counter_drift_chase_fade",
@@ -1198,15 +1207,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-01"
-},
-{
-"family": "two_block_loss_flush",
-"n": 4271,
-"pos_rate": 0.052,
-"best_pm": 0.32,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-08"
 },
 {
 "family": "retrace_speed_squeeze",
@@ -2098,37 +2098,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 26429,
+"n": 26206,
 "best_pm": 1.59,
-"pos_rate": 0.628
+"pos_rate": 0.627
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 46473,
+"n": 46873,
 "best_pm": 2.37,
 "pos_rate": 0.613
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 46319,
+"n": 46719,
 "best_pm": 16.82,
-"pos_rate": 0.347
+"pos_rate": 0.346
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 27153,
+"n": 26952,
 "best_pm": 31.88,
 "pos_rate": 0.283
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 26223,
+"n": 26000,
 "best_pm": 1.71,
-"pos_rate": 0.57
+"pos_rate": 0.569
 },
 {
 "family": "higher_low_staircase",
@@ -2161,7 +2161,7 @@
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 42,
+"n": 40,
 "best_pm": 0.69,
 "pos_rate": 1.0
 },
@@ -2455,14 +2455,14 @@
 {
 "family": "monotone_close_flush",
 "bar": "1h",
-"n": 2318,
+"n": 2319,
 "best_pm": 0.97,
 "pos_rate": 0.647
 },
 {
 "family": "monotone_close_flush",
 "bar": "1m",
-"n": 2318,
+"n": 2319,
 "best_pm": 1.25,
 "pos_rate": 0.431
 },
@@ -2700,7 +2700,7 @@
 {
 "family": "session_close_recovery_target",
 "bar": "30s",
-"n": 1240,
+"n": 1252,
 "best_pm": 0,
 "pos_rate": 0
 },
@@ -3071,41 +3071,48 @@
 {
 "family": "two_block_loss_flush",
 "bar": "15m",
-"n": 945,
+"n": 1036,
 "best_pm": 0.28,
-"pos_rate": 0.066
+"pos_rate": 0.068
 },
 {
 "family": "two_block_loss_flush",
 "bar": "1h",
-"n": 843,
+"n": 1007,
 "best_pm": 0.22,
-"pos_rate": 0.024
+"pos_rate": 0.023
 },
 {
 "family": "two_block_loss_flush",
 "bar": "1m",
-"n": 840,
-"best_pm": 0.12,
-"pos_rate": 0.029
+"n": 1004,
+"best_pm": 0.24,
+"pos_rate": 0.037
 },
 {
 "family": "two_block_loss_flush",
 "bar": "30s",
-"n": 694,
+"n": 1031,
 "best_pm": 0.32,
-"pos_rate": 0.108
+"pos_rate": 0.104
 },
 {
 "family": "two_block_loss_flush",
 "bar": "5m",
-"n": 949,
+"n": 1035,
 "best_pm": 0.19,
-"pos_rate": 0.041
+"pos_rate": 0.04
 }
 ]
 },
 "generated": [
+{
+"ts": "2026-10-08T02:50",
+"name": "hourly_limit_fresh_low",
+"status": "accepted",
+"rationale": "Existing flush families fire at most once per session close. This one tests every hourly clock boundary inside the London and NY sessions, so it can fire several times a day, with fixed bps thresholds and no percentiles. A desk that is down k bps from the session open and has jus",
+"note": "{\"name\": \"hourly_limit_fresh_low\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.003}"
+},
 {
 "ts": "2026-10-08T02:19",
 "name": "two_block_loss_flush",
@@ -3182,27 +3189,9 @@
 "status": "accepted",
 "rationale": "Payer is prop and retail desks with daily loss limits. They are forced flat into the London (16h) or NY (21h) close after an adverse session move beyond k \u00d7 trailing-1m \u03c3 \u00d7 \u221aL, so the sale is mechanical and not information. The module goes long only at the next session's first ba",
 "note": "{\"name\": \"session_flush_next_open\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.30035}"
-},
-{
-"ts": "2026-10-07T20:41",
-"name": "clock_loss_flush_long",
-"status": "accepted",
-"rationale": "Payer is prop and retail desks with daily loss limits, forced flat at fixed clock times after an adverse move beyond k \u00d7 the \u221aw-scaled trailing 1-minute \u03c3. Their market sells land at the clock and are not information. The family enters long just after the flush and holds for a fi",
-"note": "{\"name\": \"clock_loss_flush_long\", \"grid\": 108, \"sec_per_param\": 0.002, \"active_frac\": 0.57968125}"
 }
 ],
 "history": [
-{
-"t": 1791254931.9920661,
-"total": 29248344,
-"per_min": 329.0,
-"cpu": 22.8,
-"gpu": 82,
-"free_gb": 132.8,
-"dsr_bar": 6.43,
-"best_pm_1h": 1.45,
-"distinct": 25792124
-},
 {
 "t": 1791255270.985843,
 "total": 29249956,
@@ -8746,6 +8735,17 @@
 "dsr_bar": 6.41,
 "best_pm_1h": 1.55,
 "distinct": 26545904
+},
+{
+"t": 1791427900.423626,
+"total": 30019631,
+"per_min": 483.0,
+"cpu": 6.1,
+"gpu": 0,
+"free_gb": 121.3,
+"dsr_bar": 6.41,
+"best_pm_1h": 1.55,
+"distinct": 26548307
 }
 ],
 "instrument": "XAUUSD",
