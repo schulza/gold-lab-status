@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-10-08 10:28:29 UTC",
+"generated_at": "2026-10-08 10:34:08 UTC",
 "host": {
-"cpu_pct": 35.4,
-"gpu_pct": 94,
-"free_gb": 156.9,
-"uptime": "up 8 days, 19:14, 2 users, load averages: 11.58 12.48 11.66",
-"load": "{ 11.58 12.48 11.66 }"
+"cpu_pct": 23.4,
+"gpu_pct": 92,
+"free_gb": 177.2,
+"uptime": "up 8 days, 19:20, 2 users, load averages: 10.79 11.42 11.39",
+"load": "{ 10.79 11.42 11.39 }"
 },
 "instances": [
 {
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-08T12:23:19",
-"it": 156000,
-"bar": "5m",
-"batch": 8,
+"ts": "2026-10-08T12:31:48",
+"it": 156010,
+"bar": "15m",
+"batch": 614,
 "passed": 0,
 "bench": 6.41,
-"pbo": 0.14,
-"best_family": "gated",
-"best_pm": 0.98,
-"best_params": "{'base': 'basis_migration_hold', 'base_params': {'days': 3, 'ex': 0.474, 'k': 0.391, 'sl': 0.429}, 'mode': 'vol_above', 'vol_window': 240, 'vol_pct': 0.3, 'vol_",
-"mix": "gat8",
-"queue_s": 8.0
+"pbo": 0.21,
+"best_family": "thin_shock_spread_refund",
+"best_pm": 5.59,
+"best_params": "{'slot': 12, 'n_min': 4, 'k_bps': 4.51, 'm': 2.08, 'hold_min': 236}",
+"mix": "gat98/thi516",
+"queue_s": 341.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 30203923,
-"last_5m": 7296,
-"last_1h": 22227,
-"last_24h": 489869,
-"distinct_ideas": 26731006,
+"total": 30204601,
+"last_5m": 678,
+"last_1h": 20226,
+"last_24h": 490475,
+"distinct_ideas": 26731684,
 "dsr_bar": 6.41,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19811021,
+"n": 19811183,
 "pos_rate": 0.347,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -822,6 +822,15 @@
 "since": "2026-10-08"
 },
 {
+"family": "thin_shock_spread_refund",
+"n": 8815,
+"pos_rate": 0.567,
+"best_pm": 2.32,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-08"
+},
+{
 "family": "stale_high_break_demeaned",
 "n": 8761,
 "pos_rate": 0.275,
@@ -847,15 +856,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-04"
-},
-{
-"family": "thin_shock_spread_refund",
-"n": 8299,
-"pos_rate": 0.559,
-"best_pm": 2.32,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-08"
 },
 {
 "family": "round_the_clock_order",
@@ -2127,7 +2127,7 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 24425,
+"n": 24515,
 "best_pm": 2.25,
 "pos_rate": 0.605
 },
@@ -2157,7 +2157,7 @@
 "bar": "5m",
 "n": 24369,
 "best_pm": 6.88,
-"pos_rate": 0.544
+"pos_rate": 0.543
 },
 {
 "family": "higher_low_staircase",
@@ -3016,9 +3016,9 @@
 {
 "family": "thin_shock_spread_refund",
 "bar": "15m",
-"n": 904,
+"n": 1420,
 "best_pm": 1.87,
-"pos_rate": 0.545
+"pos_rate": 0.595
 },
 {
 "family": "thin_shock_spread_refund",
@@ -3332,6 +3332,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-08T10:31",
+"name": "thin_slot_target_refund",
+"status": "accepted",
+"rationale": "Payer: takers who sweep a thin book in the London lunch or late-NY trough and pay impact. The displacement below the pre-slot price refunds as depth returns, and the buyer is paid to provide it.\nDifference from the neighbours (thin_hour_impact_refund 72%, thin_lunch_trough_refund",
+"note": "{\"name\": \"thin_slot_target_refund\", \"grid\": 180, \"sec_per_param\": 0.0, \"active_frac\": 0.00698125}"
+},
+{
 "ts": "2026-10-08T10:00",
 "name": "thin_shock_spread_refund",
 "status": "accepted",
@@ -3407,27 +3414,9 @@
 "status": "accepted",
 "rationale": "Payer is takers who have to trade the thin hours, London lunch and the late New York trough. They pay extra impact per ounce on a large down-move in a hour with low tick activity, and the price recovers when full depth returns. This is the hourly version of thin_day_impact_refund",
 "note": "{\"name\": \"thin_hour_refund_long\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.000575}"
-},
-{
-"ts": "2026-10-08T04:22",
-"name": "thin_hour_impact_refund",
-"status": "rejected",
-"rationale": "Payer is takers who have to sell into the London lunch (11\u201313 UTC) or late New York trough (20\u201322 UTC). They pay impact on a thin book, and that impact comes back once depth returns.\nThinness is measured, not clocked: the last hour's ticks against the same hour of the previous `b",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1791282638.652844,
-"total": 29370519,
-"per_min": 0.0,
-"cpu": 31.7,
-"gpu": 89,
-"free_gb": 122.4,
-"dsr_bar": 6.42,
-"best_pm_1h": 1.61,
-"distinct": 25914294
-},
 {
 "t": 1791282966.7540412,
 "total": 29371256,
@@ -8971,6 +8960,17 @@
 "dsr_bar": 6.41,
 "best_pm_1h": 2.32,
 "distinct": 26731006
+},
+{
+"t": 1791455648.521162,
+"total": 30204601,
+"per_min": 136.0,
+"cpu": 23.4,
+"gpu": 92,
+"free_gb": 177.2,
+"dsr_bar": 6.41,
+"best_pm_1h": 2.32,
+"distinct": 26731684
 }
 ],
 "instrument": "XAUUSD",
