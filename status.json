@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-09 18:38:50 UTC",
+"generated_at": "2026-10-09 18:54:26 UTC",
 "host": {
-"cpu_pct": 1.8,
-"gpu_pct": 0,
-"free_gb": 122.4,
-"uptime": "up 10 days,  3:25, 2 users, load averages: 5.00 9.78 9.80",
-"load": "{ 5.00 9.78 9.80 }"
+"cpu_pct": 28.3,
+"gpu_pct": 94,
+"free_gb": 188.0,
+"uptime": "up 10 days,  3:40, 2 users, load averages: 9.97 9.65 9.15",
+"load": "{ 9.97 9.65 9.15 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-09T20:37:13",
-"it": 206039,
-"bar": "1m",
+"ts": "2026-10-09T20:46:08",
+"it": 206130,
+"bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.39,
-"pbo": 0.46,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 0.61,
-"best_params": "{'base': 'thin_trough_confirmed_refund', 'base_params': {'k_bps': 9.25, 'm_min': 25, 'r_bps': 3.95, 'slot': 20}, 'mode': 'tick_above', 'vol_window': 653, 'vol_p",
+"best_pm": 1.69,
+"best_params": "{'base': 'thin_lunch_trough_refund', 'base_params': {'hold_min': 120, 'k_bps': 7, 'slot': 'ny', 'theta': 0.0}, 'mode': 'htf_against', 'htf': '4h', 'sma_n': 65}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-09T20:37:14",
-"it": 168357,
+"ts": "2026-10-09T20:43:40",
+"it": 168420,
 "bar": "30s",
-"batch": 24,
+"batch": 156,
 "passed": 0,
 "bench": 6.39,
-"pbo": 0.11,
-"best_family": "gated",
-"best_pm": 0.87,
-"best_params": "{'base': 'monotone_close_flush', 'base_params': {'close': 21, 'frac': 0.528, 'hold': 64, 'k': 45.9, 'w': 422}, 'mode': 'htf_against', 'htf': '4h', 'sma_n': 98, ",
-"mix": "dow14/gat8/pre1/sta1",
-"queue_s": 11.0
+"pbo": 0.07,
+"best_family": "downside_share_panic_bid",
+"best_pm": 1.16,
+"best_params": "{'hold': 8, 'theta': 0.938, 'w': 99, 'z_min': 2.14}",
+"mix": "dow129/gat25/pre1/sta1",
+"queue_s": 86.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 30962519,
-"last_5m": 5496,
-"last_1h": 15808,
-"last_24h": 557859,
-"distinct_ideas": 27478351,
+"total": 30964192,
+"last_5m": 0,
+"last_1h": 14798,
+"last_24h": 556858,
+"distinct_ideas": 27479979,
 "dsr_bar": 6.39,
 "sharpe_std": 1.16,
 "families": [
 {
 "family": "gated",
-"n": 20060297,
+"n": 20061546,
 "pos_rate": 0.348,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -1084,7 +1084,7 @@
 },
 {
 "family": "range_budget_fade",
-"n": 8914,
+"n": 8915,
 "pos_rate": 0.312,
 "best_pm": 0.76,
 "best_dsr": 0.0,
@@ -1237,7 +1237,7 @@
 },
 {
 "family": "staircase_chaser_fade",
-"n": 7305,
+"n": 7326,
 "pos_rate": 0.153,
 "best_pm": 0.84,
 "best_dsr": 0.0,
@@ -1650,6 +1650,15 @@
 "since": "2026-10-01"
 },
 {
+"family": "prev_mid_stretch_fade",
+"n": 4441,
+"pos_rate": 0,
+"best_pm": -0.19,
+"best_dsr": 0,
+"passed": 0,
+"since": "2026-10-09"
+},
+{
 "family": "block_drawdown_flush",
 "n": 4436,
 "pos_rate": 0.0,
@@ -1695,15 +1704,6 @@
 "since": "2026-10-01"
 },
 {
-"family": "prev_mid_stretch_fade",
-"n": 4394,
-"pos_rate": 0,
-"best_pm": -0.19,
-"best_dsr": 0,
-"passed": 0,
-"since": "2026-10-09"
-},
-{
 "family": "prev_hour_stop_run",
 "n": 4317,
 "pos_rate": 0.001,
@@ -1740,6 +1740,15 @@
 "since": "2026-10-01"
 },
 {
+"family": "downside_share_panic_bid",
+"n": 4132,
+"pos_rate": 0.395,
+"best_pm": 1.16,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-09"
+},
+{
 "family": "spread_excess_refund",
 "n": 4108,
 "pos_rate": 0.373,
@@ -1756,15 +1765,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-04"
-},
-{
-"family": "downside_share_panic_bid",
-"n": 3777,
-"pos_rate": 0.398,
-"best_pm": 1.0,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-09"
 },
 {
 "family": "signed_jump_asymmetry",
@@ -2231,7 +2231,7 @@
 "pbo": 0.04
 }
 ],
-"best_pm_1h": 2.51,
+"best_pm_1h": 2.27,
 "heat": [
 {
 "family": "activity_weighted_flow",
@@ -2453,9 +2453,9 @@
 {
 "family": "downside_share_panic_bid",
 "bar": "30s",
-"n": 299,
-"best_pm": 1.0,
-"pos_rate": 0.264
+"n": 654,
+"best_pm": 1.16,
+"pos_rate": 0.318
 },
 {
 "family": "downside_share_panic_bid",
@@ -2537,37 +2537,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 28680,
+"n": 28848,
 "best_pm": 2.36,
 "pos_rate": 0.619
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 56364,
+"n": 55396,
 "best_pm": 6.47,
 "pos_rate": 0.599
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 55916,
+"n": 54940,
 "best_pm": 52.57,
 "pos_rate": 0.377
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 30101,
+"n": 30286,
 "best_pm": 31.88,
 "pos_rate": 0.3
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 28916,
+"n": 29084,
 "best_pm": 2.37,
-"pos_rate": 0.557
+"pos_rate": 0.556
 },
 {
 "family": "handover_inventory_unwind",
@@ -2691,9 +2691,9 @@
 {
 "family": "loss_limit_reset_flush",
 "bar": "1m",
-"n": 7,
+"n": 6,
 "best_pm": 0,
-"pos_rate": 0.143
+"pos_rate": 0.167
 },
 {
 "family": "loss_limit_reset_flush",
@@ -2761,7 +2761,7 @@
 {
 "family": "prev_mid_stretch_fade",
 "bar": "15m",
-"n": 865,
+"n": 886,
 "best_pm": -0.19,
 "pos_rate": 0
 },
@@ -2782,14 +2782,14 @@
 {
 "family": "prev_mid_stretch_fade",
 "bar": "30s",
-"n": 825,
+"n": 846,
 "best_pm": -0.4,
 "pos_rate": 0
 },
 {
 "family": "prev_mid_stretch_fade",
 "bar": "5m",
-"n": 930,
+"n": 935,
 "best_pm": -0.23,
 "pos_rate": 0
 },
@@ -2894,7 +2894,7 @@
 {
 "family": "range_budget_fade",
 "bar": "5m",
-"n": 1788,
+"n": 1789,
 "best_pm": 0.76,
 "pos_rate": 0.332
 },
@@ -2915,7 +2915,7 @@
 {
 "family": "range_expansion_hold",
 "bar": "1m",
-"n": 3,
+"n": 2,
 "best_pm": 0.55,
 "pos_rate": 1.0
 },
@@ -3090,7 +3090,7 @@
 {
 "family": "staircase_chaser_fade",
 "bar": "30s",
-"n": 1388,
+"n": 1409,
 "best_pm": 0.65,
 "pos_rate": 0.037
 },
@@ -3819,6 +3819,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-09T18:46",
+"name": "hot_tape_continuation",
+"status": "accepted",
+"rationale": "Payer: liquidity providers and stale-quote resters who get run over in news-driven bursts, and late chasers. Price moves fast on a surge in tick rate, and the move continues while the surge is still on.\nThe family is long/short symmetric and only trades when activity is abnormal,",
+"note": "{\"name\": \"hot_tape_continuation\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.0052375}"
+},
+{
 "ts": "2026-10-09T18:15",
 "name": "downside_share_panic_bid",
 "status": "accepted",
@@ -3894,49 +3901,9 @@
 "status": "accepted",
 "rationale": "Payer: noise and liquidity traders who trade in quiet bars and move price against informed or parent-order flow. The excess-activity-weighted return is the part of the move that carries information, and the quiet part is mean-reverting noise. The grid has `sign` \u00b11 and the signal",
 "note": "{\"name\": \"activity_weighted_flow\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.5534625}"
-},
-{
-"ts": "2026-10-09T12:37",
-"name": "prior_week_break_hold",
-"status": "accepted",
-"rationale": "The payer is weekly-expiry option hedgers and stop-clustered breakout fades. Prior-week high and low are the strikes and barriers where gamma hedging and stop clusters concentrate. A close beyond them by a fraction of the prior week's range makes the hedgers chase the move until ",
-"note": "{\"name\": \"prior_week_break_hold\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.2342}"
 }
 ],
 "history": [
-{
-"t": 1791398541.636516,
-"total": 29848476,
-"per_min": 152.0,
-"cpu": 0.7,
-"gpu": 0,
-"free_gb": 120.6,
-"dsr_bar": 6.42,
-"best_pm_1h": 1.35,
-"distinct": 26382241
-},
-{
-"t": 1791398881.373909,
-"total": 29848736,
-"per_min": 52.0,
-"cpu": 19.4,
-"gpu": 75,
-"free_gb": 188.7,
-"dsr_bar": 6.42,
-"best_pm_1h": 1.35,
-"distinct": 26382496
-},
-{
-"t": 1791399216.6518888,
-"total": 29848736,
-"per_min": 0.0,
-"cpu": 25.4,
-"gpu": 82,
-"free_gb": 188.3,
-"dsr_bar": 6.42,
-"best_pm_1h": 1.35,
-"distinct": 26382496
-},
 {
 "t": 1791399553.929376,
 "total": 29848736,
@@ -7324,6 +7291,17 @@
 "dsr_bar": 6.39,
 "best_pm_1h": 2.51,
 "distinct": 27478351
+},
+{
+"t": 1791572066.78504,
+"total": 30964192,
+"per_min": 0.0,
+"cpu": 28.3,
+"gpu": 94,
+"free_gb": 188.0,
+"dsr_bar": 6.39,
+"best_pm_1h": 2.27,
+"distinct": 27479979
 }
 ],
 "instrument": "XAUUSD",
