@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-09 22:17:09 UTC",
+"generated_at": "2026-10-09 22:32:35 UTC",
 "host": {
-"cpu_pct": 9.7,
+"cpu_pct": 4.5,
 "gpu_pct": 0,
-"free_gb": 120.6,
-"uptime": "up 10 days,  7:03, 2 users, load averages: 7.77 9.53 8.30",
-"load": "{ 7.77 9.53 8.30 }"
+"free_gb": 120.8,
+"uptime": "up 10 days,  7:18, 2 users, load averages: 1.85 5.34 6.57",
+"load": "{ 1.85 5.34 6.57 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-10T00:17:03",
-"it": 210188,
-"bar": "1m",
+"ts": "2026-10-10T00:31:12",
+"it": 210565,
+"bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.39,
-"pbo": 0.0,
+"pbo": 0.25,
 "best_family": "gated",
-"best_pm": 1.0,
-"best_params": "{'base': 'vol_target_rebalance', 'base_params': {'f': 3, 'hold': 4, 'k': 1.72, 'side': 'relever', 'sign': 1}, 'mode': 'spread_below', 'vol_window': 724, 'vol_pc",
+"best_pm": 0.77,
+"best_params": "{'base': 'anchor_absorbed_continuation', 'base_params': {'days': 4, 'hold': 7, 'k': 0.937, 'rho': 0.158, 'side': 'long', 'sign': 1}, 'mode': 'htf_with', 'htf': ",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-10T00:17:08",
-"it": 171851,
+"ts": "2026-10-10T00:30:35",
+"it": 172118,
 "bar": "15m",
-"batch": 8,
+"batch": 9,
 "passed": 0,
 "bench": 6.39,
-"pbo": 0.18,
+"pbo": 0.14,
 "best_family": "gated",
-"best_pm": 1.05,
-"best_params": "{'base': 'thin_lunch_trough_refund', 'base_params': {'hold_min': 105, 'k_bps': 3, 'slot': 'ny', 'theta': 0.0}, 'mode': 'tick_above', 'vol_window': 380, 'vol_pct",
-"mix": "gat8",
+"best_pm": 1.14,
+"best_params": "{'base': 'session_limit_flush_delay', 'base_params': {'dm': 0, 'hold': 32, 'k': 0.935, 'lag': 87, 'sess': 1}, 'mode': 'htf_against', 'htf': '4h', 'sma_n': 171}",
+"mix": "gat8/ran1",
 "queue_s": 8.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 31050541,
-"last_5m": 2877,
-"last_1h": 25625,
-"last_24h": 563013,
-"distinct_ideas": 27565378,
+"total": 31055827,
+"last_5m": 1300,
+"last_1h": 22838,
+"last_24h": 547845,
+"distinct_ideas": 27570664,
 "dsr_bar": 6.39,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 20122160,
+"n": 20127424,
 "pos_rate": 0.349,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -751,7 +751,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 11466,
+"n": 11471,
 "pos_rate": 0.904,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -886,7 +886,7 @@
 },
 {
 "family": "range_expansion_hold",
-"n": 10659,
+"n": 10660,
 "pos_rate": 0.955,
 "best_pm": 1.06,
 "best_dsr": 0.0,
@@ -1084,7 +1084,7 @@
 },
 {
 "family": "range_budget_fade",
-"n": 9002,
+"n": 9007,
 "pos_rate": 0.31,
 "best_pm": 0.76,
 "best_dsr": 0.0,
@@ -1210,7 +1210,7 @@
 },
 {
 "family": "week_open_anchor_pull",
-"n": 7883,
+"n": 7885,
 "pos_rate": 0.413,
 "best_pm": 0.94,
 "best_dsr": 0.0,
@@ -1588,7 +1588,7 @@
 },
 {
 "family": "thin_slot_peak_drop_refund",
-"n": 4667,
+"n": 4668,
 "pos_rate": 0.231,
 "best_pm": 1.86,
 "best_dsr": 0.0,
@@ -1831,7 +1831,7 @@
 },
 {
 "family": "clock_mark_concession",
-"n": 3275,
+"n": 3283,
 "pos_rate": 0.009,
 "best_pm": 4.56,
 "best_dsr": 0,
@@ -2396,21 +2396,21 @@
 {
 "family": "clock_mark_concession",
 "bar": "1m",
-"n": 655,
+"n": 657,
 "best_pm": 0,
 "pos_rate": 0
 },
 {
 "family": "clock_mark_concession",
 "bar": "30s",
-"n": 634,
+"n": 639,
 "best_pm": 0,
 "pos_rate": 0
 },
 {
 "family": "clock_mark_concession",
 "bar": "5m",
-"n": 662,
+"n": 663,
 "best_pm": 0,
 "pos_rate": 0
 },
@@ -2599,37 +2599,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 35136,
+"n": 35299,
 "best_pm": 3.63,
 "pos_rate": 0.618
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 65855,
+"n": 66860,
 "best_pm": 7.05,
 "pos_rate": 0.597
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 65431,
-"best_pm": 13.92,
-"pos_rate": 0.377
+"n": 66499,
+"best_pm": 13.03,
+"pos_rate": 0.376
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 36315,
+"n": 36386,
 "best_pm": 24.07,
 "pos_rate": 0.298
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 35232,
+"n": 35375,
 "best_pm": 6.4,
-"pos_rate": 0.558
+"pos_rate": 0.556
 },
 {
 "family": "handover_inventory_unwind",
@@ -2669,16 +2669,16 @@
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 37,
+"n": 36,
 "best_pm": 0.6,
-"pos_rate": 0.919
+"pos_rate": 0.917
 },
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 41,
+"n": 43,
 "best_pm": 0.63,
-"pos_rate": 1.0
+"pos_rate": 0.977
 },
 {
 "family": "higher_low_staircase",
@@ -2690,16 +2690,16 @@
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 27,
+"n": 28,
 "best_pm": 0.56,
-"pos_rate": 0.963
+"pos_rate": 0.964
 },
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 33,
+"n": 35,
 "best_pm": 0.63,
-"pos_rate": 0.909
+"pos_rate": 0.914
 },
 {
 "family": "hot_tape_continuation",
@@ -2998,7 +2998,7 @@
 {
 "family": "range_budget_fade",
 "bar": "15m",
-"n": 1804,
+"n": 1807,
 "best_pm": 0.63,
 "pos_rate": 0.302
 },
@@ -3012,7 +3012,7 @@
 {
 "family": "range_budget_fade",
 "bar": "1m",
-"n": 1825,
+"n": 1826,
 "best_pm": 0.71,
 "pos_rate": 0.298
 },
@@ -3026,14 +3026,14 @@
 {
 "family": "range_budget_fade",
 "bar": "5m",
-"n": 1812,
+"n": 1813,
 "best_pm": 0.76,
 "pos_rate": 0.329
 },
 {
 "family": "range_expansion_hold",
 "bar": "15m",
-"n": 3,
+"n": 4,
 "best_pm": 0.4,
 "pos_rate": 1.0
 },
@@ -3480,38 +3480,10 @@
 },
 {
 "family": "thin_single_block_refund",
-"bar": "15m",
-"n": 2998,
-"best_pm": 1.87,
-"pos_rate": 0.501
-},
-{
-"family": "thin_single_block_refund",
-"bar": "1h",
-"n": 2175,
-"best_pm": 2.23,
-"pos_rate": 0.647
-},
-{
-"family": "thin_single_block_refund",
-"bar": "1m",
-"n": 2175,
-"best_pm": 1.64,
-"pos_rate": 0.638
-},
-{
-"family": "thin_single_block_refund",
 "bar": "30s",
-"n": 2809,
-"best_pm": 1.65,
-"pos_rate": 0.622
-},
-{
-"family": "thin_single_block_refund",
-"bar": "5m",
-"n": 2998,
-"best_pm": 1.87,
-"pos_rate": 0.538
+"n": 1128,
+"best_pm": 1.54,
+"pos_rate": 0.583
 },
 {
 "family": "thin_slot_anchor_discount_refund",
@@ -3549,16 +3521,9 @@
 "pos_rate": 0.57
 },
 {
-"family": "thin_slot_novel_drop_refund",
-"bar": "30s",
-"n": 588,
-"best_pm": 1.62,
-"pos_rate": 0.604
-},
-{
 "family": "thin_slot_peak_drop_refund",
 "bar": "15m",
-"n": 22,
+"n": 18,
 "best_pm": -0.15,
 "pos_rate": 0
 },
@@ -3572,9 +3537,9 @@
 {
 "family": "thin_slot_peak_drop_refund",
 "bar": "5m",
-"n": 17,
-"best_pm": 0.51,
-"pos_rate": 0.235
+"n": 16,
+"best_pm": 0.25,
+"pos_rate": 0.188
 },
 {
 "family": "thin_slot_presence_refund",
@@ -3683,24 +3648,10 @@
 },
 {
 "family": "thin_trailing_sweep_refund",
-"bar": "15m",
-"n": 1710,
-"best_pm": 1.89,
-"pos_rate": 0.468
-},
-{
-"family": "thin_trailing_sweep_refund",
 "bar": "30s",
-"n": 1622,
-"best_pm": 1.67,
-"pos_rate": 0.482
-},
-{
-"family": "thin_trailing_sweep_refund",
-"bar": "5m",
-"n": 1714,
-"best_pm": 1.62,
-"pos_rate": 0.442
+"n": 28,
+"best_pm": 1.16,
+"pos_rate": 0.643
 },
 {
 "family": "thin_window_close_refund",
@@ -3754,14 +3705,14 @@
 {
 "family": "week_open_anchor_pull",
 "bar": "1m",
-"n": 1567,
+"n": 1568,
 "best_pm": 0.79,
 "pos_rate": 0.401
 },
 {
 "family": "week_open_anchor_pull",
 "bar": "30s",
-"n": 1578,
+"n": 1579,
 "best_pm": 0.72,
 "pos_rate": 0.437
 },
@@ -3775,6 +3726,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-10-09T22:21",
+"name": null,
+"status": "rejected",
+"rationale": "Payer: speculative non-commercial positions that are crowded (COT net z-score extreme) and held into a scheduled NFP/FOMC release. A surprise forces the crowd to cut risk in the same direction, and they pay liquidity to exit.\nRATIONALE: This is not a thin/refund variant, and not ",
+"note": "ast: import not allowed: from goldlab.external"
+},
 {
 "ts": "2026-10-09T21:50",
 "name": "clock_vol_surprise",
@@ -3851,49 +3809,9 @@
 "status": "rejected",
 "rationale": "The director's one allowed family, thin_hour_impact_refund_demeaned, already exists (n=16,602, 76%). I'm not repeating it, and I'm not proposing anything thin-related.\nRATIONALE: Instead this is a different kind of payer, built on real yields. Slow allocators and gold-ETF holders",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-10-09T16:12",
-"name": "flow_divergence_extreme",
-"status": "accepted",
-"rationale": "The payer is breakout chasers who buy a new n-bar high that tick-rule flow does not support. Their stops and late entries are filled by the passive side, so the price tends to give the move back. This is not a thin, refund, slot or window idea. It is symmetric (long at lows, shor",
-"note": "{\"name\": \"flow_divergence_extreme\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.993325}"
 }
 ],
 "history": [
-{
-"t": 1791411492.7285671,
-"total": 29920005,
-"per_min": 105.0,
-"cpu": 24.5,
-"gpu": 93,
-"free_gb": 187.0,
-"dsr_bar": 6.42,
-"best_pm_1h": 19.36,
-"distinct": 26451840
-},
-{
-"t": 1791411830.811965,
-"total": 29920005,
-"per_min": 0.0,
-"cpu": 23.8,
-"gpu": 90,
-"free_gb": 190.6,
-"dsr_bar": 6.42,
-"best_pm_1h": 19.36,
-"distinct": 26451840
-},
-{
-"t": 1791412166.544346,
-"total": 29920005,
-"per_min": 0.0,
-"cpu": 28.2,
-"gpu": 95,
-"free_gb": 185.4,
-"dsr_bar": 6.42,
-"best_pm_1h": 19.36,
-"distinct": 26451840
-},
 {
 "t": 1791412519.1249511,
 "total": 29924884,
@@ -7017,6 +6935,17 @@
 "dsr_bar": 6.39,
 "best_pm_1h": 21.42,
 "distinct": 27565378
+},
+{
+"t": 1791585155.192988,
+"total": 31055827,
+"per_min": 260.0,
+"cpu": 4.5,
+"gpu": 0,
+"free_gb": 120.8,
+"dsr_bar": 6.39,
+"best_pm_1h": 21.42,
+"distinct": 27570664
 }
 ],
 "instrument": "XAUUSD",
