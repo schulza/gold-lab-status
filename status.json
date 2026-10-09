@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-09 12:06:40 UTC",
+"generated_at": "2026-10-09 12:22:19 UTC",
 "host": {
-"cpu_pct": 9.2,
-"gpu_pct": 0,
-"free_gb": 126.0,
-"uptime": "up 9 days, 20:52, 2 users, load averages: 4.17 6.65 8.26",
-"load": "{ 4.17 6.65 8.26 }"
+"cpu_pct": 23.7,
+"gpu_pct": 90,
+"free_gb": 190.3,
+"uptime": "up 9 days, 21:08, 2 users, load averages: 11.00 11.50 10.63",
+"load": "{ 11.00 11.50 10.63 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-09T14:03:35",
-"it": 200753,
-"bar": "1m",
-"batch": 30,
+"ts": "2026-10-09T14:08:55",
+"it": 200760,
+"bar": "1h",
+"batch": 8,
 "passed": 0,
 "bench": 6.39,
-"pbo": 0.04,
-"best_family": "fragile_extreme_unwind",
-"best_pm": 0.94,
-"best_params": "{'w': 158, 'q': 0.989, 'theta': 0.699, 'hold': 40}",
-"mix": "fra22/gat8",
-"queue_s": 10.0
+"pbo": 0.39,
+"best_family": "gated",
+"best_pm": 0.42,
+"best_params": "{'base': 'settle_hedge_momentum', 'base_params': {'entry': 1, 'hold': 73, 'k': 2.23, 'sign': -1}, 'mode': 'htf_with', 'htf': '1h', 'sma_n': 14}",
+"mix": "gat8",
+"queue_s": 8.0
 },
 "events": []
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-09T14:03:41",
-"it": 164368,
-"bar": "30s",
-"batch": 156,
+"ts": "2026-10-09T14:09:04",
+"it": 164370,
+"bar": "15m",
+"batch": 814,
 "passed": 0,
 "bench": 6.39,
-"pbo": 0.0,
+"pbo": 0.07,
 "best_family": "fragile_extreme_unwind",
-"best_pm": 16.2,
-"best_params": "{'w': 316, 'q': 0.948, 'theta': 0.83, 'hold': 154}",
-"mix": "fra141/gat15",
-"queue_s": 28.0
+"best_pm": 5.9,
+"best_params": "{'w': 565, 'q': 0.903, 'theta': 0.611, 'hold': 182}",
+"mix": "fra728/gat86",
+"queue_s": 186.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 30811519,
-"last_5m": 2017,
-"last_1h": 24039,
-"last_24h": 565596,
-"distinct_ideas": 27329543,
+"total": 30814710,
+"last_5m": 0,
+"last_1h": 18123,
+"last_24h": 568787,
+"distinct_ideas": 27332734,
 "dsr_bar": 6.39,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19984300,
+"n": 19984601,
 "pos_rate": 0.348,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -1200,6 +1200,15 @@
 "since": "2026-10-07"
 },
 {
+"family": "fragile_extreme_unwind",
+"n": 7488,
+"pos_rate": 0.23,
+"best_pm": 0.87,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-09"
+},
+{
 "family": "event_drift",
 "n": 7302,
 "pos_rate": 0.494,
@@ -1531,15 +1540,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-09-29"
-},
-{
-"family": "fragile_extreme_unwind",
-"n": 4598,
-"pos_rate": 0.227,
-"best_pm": 0.79,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-09"
 },
 {
 "family": "late_participation",
@@ -2321,23 +2321,23 @@
 {
 "family": "fragile_extreme_unwind",
 "bar": "15m",
-"n": 899,
-"best_pm": 0.31,
-"pos_rate": 0.15
+"n": 1627,
+"best_pm": 0.34,
+"pos_rate": 0.148
 },
 {
 "family": "fragile_extreme_unwind",
 "bar": "1h",
-"n": 887,
+"n": 1615,
 "best_pm": 0.26,
-"pos_rate": 0.152
+"pos_rate": 0.17
 },
 {
 "family": "fragile_extreme_unwind",
 "bar": "1m",
-"n": 916,
-"best_pm": 0.79,
-"pos_rate": 0.394
+"n": 1622,
+"best_pm": 0.87,
+"pos_rate": 0.401
 },
 {
 "family": "fragile_extreme_unwind",
@@ -2349,28 +2349,28 @@
 {
 "family": "fragile_extreme_unwind",
 "bar": "5m",
-"n": 906,
+"n": 1634,
 "best_pm": 0.45,
-"pos_rate": 0.208
+"pos_rate": 0.205
 },
 {
 "family": "gated",
 "bar": "15m",
-"n": 22458,
+"n": 22544,
 "best_pm": 2.36,
 "pos_rate": 0.616
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 48558,
+"n": 48590,
 "best_pm": 6.47,
 "pos_rate": 0.596
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 47798,
+"n": 47896,
 "best_pm": 52.57,
 "pos_rate": 0.369
 },
@@ -2384,7 +2384,7 @@
 {
 "family": "gated",
 "bar": "5m",
-"n": 22882,
+"n": 22967,
 "best_pm": 2.37,
 "pos_rate": 0.552
 },
@@ -3743,6 +3743,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-09T12:06",
+"name": "sliced_parent_follow",
+"status": "accepted",
+"rationale": "This is not a thin-cluster variant, because none of its signals involve slot, depth, impact, refund or sweep. The payer is institutions that slice a parent order, who accept impact for scheduling certainty. When the q-bar return autocorrelation at lag q is measurably positive and",
+"note": "{\"name\": \"sliced_parent_follow\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.14420625}"
+},
+{
 "ts": "2026-10-09T11:36",
 "name": "fragile_extreme_unwind",
 "status": "accepted",
@@ -3818,49 +3825,9 @@
 "status": "accepted",
 "rationale": "Payer: the dealers and desks that absorbed a large session-handover move at a handover hour, mostly market makers forced to carry inventory into the next session. When the next session's liquidity arrives, the unwind either reverts the move or continues it, and `sign` tests which",
 "note": "{\"name\": \"handover_inventory_unwind\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.06}"
-},
-{
-"ts": "2026-10-09T05:58",
-"name": "range_budget_fade",
-"status": "accepted",
-"rationale": "Payer is late trend-chasers who size intraday entries off a fixed daily risk budget. After a move beyond k times the normal daily range, they chase it and then close out into the session end, so a fade is paid by their forced exits.\nThe exit is a fixed clock hour and the day-open",
-"note": "{\"name\": \"range_budget_fade\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.0045}"
 }
 ],
 "history": [
-{
-"t": 1791374904.4195998,
-"total": 29744732,
-"per_min": 21.0,
-"cpu": 25.7,
-"gpu": 66,
-"free_gb": 186.0,
-"dsr_bar": 6.42,
-"best_pm_1h": 24.15,
-"distinct": 26283212
-},
-{
-"t": 1791375243.249312,
-"total": 29744732,
-"per_min": 0.0,
-"cpu": 32.6,
-"gpu": 85,
-"free_gb": 183.2,
-"dsr_bar": 6.42,
-"best_pm_1h": 24.15,
-"distinct": 26283212
-},
-{
-"t": 1791375589.999983,
-"total": 29746579,
-"per_min": 398.0,
-"cpu": 43.9,
-"gpu": 90,
-"free_gb": 146.7,
-"dsr_bar": 6.42,
-"best_pm_1h": 24.15,
-"distinct": 26284849
-},
 {
 "t": 1791375935.1553972,
 "total": 29749915,
@@ -7732,6 +7699,17 @@
 "dsr_bar": 6.39,
 "best_pm_1h": 2.32,
 "distinct": 27329543
+},
+{
+"t": 1791548539.54449,
+"total": 30814710,
+"per_min": 0.0,
+"cpu": 23.7,
+"gpu": 90,
+"free_gb": 190.3,
+"dsr_bar": 6.39,
+"best_pm_1h": 2.32,
+"distinct": 27332734
 }
 ],
 "instrument": "XAUUSD",
