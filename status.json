@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-09 22:48:20 UTC",
+"generated_at": "2026-10-09 23:04:01 UTC",
 "host": {
-"cpu_pct": 0.5,
-"gpu_pct": 0,
-"free_gb": 119.9,
-"uptime": "up 10 days,  7:34, 2 users, load averages: 7.35 8.17 6.96",
-"load": "{ 7.35 8.17 6.96 }"
+"cpu_pct": 22.9,
+"gpu_pct": 46,
+"free_gb": 192.9,
+"uptime": "up 10 days,  7:49, 2 users, load averages: 9.94 9.99 8.91",
+"load": "{ 9.94 9.99 8.91 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-10T00:48:12",
-"it": 210966,
+"ts": "2026-10-10T00:50:40",
+"it": 211080,
 "bar": "1m",
 "batch": 8,
 "passed": 0,
 "bench": 6.39,
-"pbo": 0.39,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 0.22,
-"best_params": "{'base': 'heavy_day_concession', 'base_params': {'base': 7, 'hold': 2, 'k': 1.27, 'sign': 1, 'theta': 1.12}, 'mode': 'session', 'start_hour': 15, 'hold_hours': ",
+"best_pm": 0.39,
+"best_params": "{'base': 'thin_slot_handover_refund', 'base_params': {'k_bps': 6.9, 'length': 2, 'start': 20, 'theta': 0.589}, 'mode': 'vol_above', 'vol_window': 189, 'vol_pct'",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-10T00:48:12",
-"it": 172437,
-"bar": "30s",
+"ts": "2026-10-10T00:52:08",
+"it": 172540,
+"bar": "5m",
 "batch": 8,
 "passed": 0,
 "bench": 6.39,
-"pbo": 0.0,
+"pbo": 0.39,
 "best_family": "gated",
-"best_pm": 0.0,
-"best_params": "{'base': 'monotone_close_flush', 'base_params': {'close': 21, 'frac': 0.494, 'hold': 70, 'k': 48.0, 'w': 480}, 'mode': 'session', 'start_hour': 1, 'hold_hours':",
+"best_pm": 1.13,
+"best_params": "{'base': 'thin_spread_unit_refund', 'base_params': {'hold_min': 115, 'k_bps': 10.2, 'slot': 19, 'z': 2.36}, 'mode': 'htf_against', 'htf': '1h', 'sma_n': 119}",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 31061201,
-"last_5m": 3333,
-"last_1h": 22054,
-"last_24h": 544264,
-"distinct_ideas": 27576270,
+"total": 31063344,
+"last_5m": 0,
+"last_1h": 18774,
+"last_24h": 544835,
+"distinct_ideas": 27578181,
 "dsr_bar": 6.39,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 20132784,
+"n": 20134920,
 "pos_rate": 0.349,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -751,7 +751,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 11475,
+"n": 11477,
 "pos_rate": 0.904,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -886,7 +886,7 @@
 },
 {
 "family": "range_expansion_hold",
-"n": 10660,
+"n": 10661,
 "pos_rate": 0.955,
 "best_pm": 1.06,
 "best_dsr": 0.0,
@@ -1084,8 +1084,8 @@
 },
 {
 "family": "range_budget_fade",
-"n": 9013,
-"pos_rate": 0.31,
+"n": 9015,
+"pos_rate": 0.309,
 "best_pm": 0.76,
 "best_dsr": 0.0,
 "passed": 0,
@@ -1831,7 +1831,7 @@
 },
 {
 "family": "clock_mark_concession",
-"n": 3287,
+"n": 3288,
 "pos_rate": 0.009,
 "best_pm": 4.56,
 "best_dsr": 0,
@@ -1939,8 +1939,8 @@
 },
 {
 "family": "handover_inventory_unwind",
-"n": 2416,
-"pos_rate": 0.368,
+"n": 2417,
+"pos_rate": 0.367,
 "best_pm": 1.0,
 "best_dsr": 0.0,
 "passed": 0,
@@ -2403,7 +2403,7 @@
 {
 "family": "clock_mark_concession",
 "bar": "30s",
-"n": 642,
+"n": 643,
 "best_pm": 0,
 "pos_rate": 0
 },
@@ -2599,35 +2599,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 35611,
+"n": 35859,
 "best_pm": 3.63,
-"pos_rate": 0.617
+"pos_rate": 0.616
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 67369,
+"n": 67473,
 "best_pm": 7.05,
 "pos_rate": 0.597
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 67082,
+"n": 67154,
 "best_pm": 13.03,
-"pos_rate": 0.376
+"pos_rate": 0.375
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 36680,
+"n": 36928,
 "best_pm": 24.07,
-"pos_rate": 0.298
+"pos_rate": 0.297
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 35687,
+"n": 35943,
 "best_pm": 6.4,
 "pos_rate": 0.555
 },
@@ -2655,9 +2655,9 @@
 {
 "family": "handover_inventory_unwind",
 "bar": "30s",
-"n": 406,
+"n": 407,
 "best_pm": 0.94,
-"pos_rate": 0.389
+"pos_rate": 0.388
 },
 {
 "family": "handover_inventory_unwind",
@@ -2676,7 +2676,7 @@
 {
 "family": "higher_low_staircase",
 "bar": "1h",
-"n": 43,
+"n": 44,
 "best_pm": 0.63,
 "pos_rate": 0.977
 },
@@ -2697,9 +2697,9 @@
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 37,
+"n": 38,
 "best_pm": 0.63,
-"pos_rate": 0.919
+"pos_rate": 0.921
 },
 {
 "family": "hot_tape_continuation",
@@ -2998,7 +2998,7 @@
 {
 "family": "range_budget_fade",
 "bar": "15m",
-"n": 1810,
+"n": 1811,
 "best_pm": 0.63,
 "pos_rate": 0.301
 },
@@ -3019,7 +3019,7 @@
 {
 "family": "range_budget_fade",
 "bar": "30s",
-"n": 1694,
+"n": 1695,
 "best_pm": 0.72,
 "pos_rate": 0.296
 },
@@ -3054,7 +3054,7 @@
 {
 "family": "range_expansion_hold",
 "bar": "30s",
-"n": 4,
+"n": 5,
 "best_pm": 0.59,
 "pos_rate": 1.0
 },
@@ -3648,13 +3648,6 @@
 },
 {
 "family": "thin_window_close_refund",
-"bar": "1m",
-"n": 364,
-"best_pm": 1.25,
-"pos_rate": 0.412
-},
-{
-"family": "thin_window_close_refund",
 "bar": "30s",
 "n": 2199,
 "best_pm": 1.48,
@@ -3705,6 +3698,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-10-09T22:51",
+"name": "activity_clock_move",
+"status": "accepted",
+"rationale": "Payer is fixed-clock execution and risk systems (time-sliced algos, stop and VaR checks sampled every N minutes). In activity time, a burst of ticks packs a large move into a few bars. Participants who size or react on a clock misjudge how much of that move was one-sided urgency,",
+"note": "{\"name\": \"activity_clock_move\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.6432}"
+},
 {
 "ts": "2026-10-09T22:21",
 "name": null,
@@ -3781,38 +3781,9 @@
 "status": "accepted",
 "rationale": "The demeaned thin kill test has already reported (76%, 16.6k trials), and the director has barred every thin/refund/slot/window/depth/impact name. So I'm proposing something outside that cluster, and I avoid `goldlab.external` because the AST check rejected it twice.\nRATIONALE: P",
 "note": "{\"name\": \"staircase_chaser_fade\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.9959375}"
-},
-{
-"ts": "2026-10-09T16:43",
-"name": null,
-"status": "rejected",
-"rationale": "The director's one allowed family, thin_hour_impact_refund_demeaned, already exists (n=16,602, 76%). I'm not repeating it, and I'm not proposing anything thin-related.\nRATIONALE: Instead this is a different kind of payer, built on real yields. Slow allocators and gold-ETF holders",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1791413532.849063,
-"total": 29933897,
-"per_min": 0.0,
-"cpu": 25.1,
-"gpu": 0,
-"free_gb": 186.3,
-"dsr_bar": 6.42,
-"best_pm_1h": 13.89,
-"distinct": 26465048
-},
-{
-"t": 1791413870.4055831,
-"total": 29933897,
-"per_min": 0.0,
-"cpu": 21.7,
-"gpu": 89,
-"free_gb": 187.8,
-"dsr_bar": 6.42,
-"best_pm_1h": 13.89,
-"distinct": 26465048
-},
 {
 "t": 1791414244.570653,
 "total": 29935370,
@@ -6903,6 +6874,17 @@
 "dsr_bar": 6.39,
 "best_pm_1h": 21.42,
 "distinct": 27576270
+},
+{
+"t": 1791587041.6861079,
+"total": 31063344,
+"per_min": 0.0,
+"cpu": 22.9,
+"gpu": 46,
+"free_gb": 192.9,
+"dsr_bar": 6.39,
+"best_pm_1h": 21.42,
+"distinct": 27578181
 }
 ],
 "instrument": "XAUUSD",
