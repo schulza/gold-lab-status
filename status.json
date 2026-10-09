@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-09 16:01:39 UTC",
+"generated_at": "2026-10-09 16:17:17 UTC",
 "host": {
-"cpu_pct": 47.4,
-"gpu_pct": 86,
-"free_gb": 124.0,
-"uptime": "up 10 days, 47 mins, 2 users, load averages: 16.93 12.04 10.",
-"load": "{ 16.93 12.04 10.76 }"
+"cpu_pct": 29.3,
+"gpu_pct": 51,
+"free_gb": 195.4,
+"uptime": "up 10 days,  1:03, 2 users, load averages: 8.60 6.21 7.24",
+"load": "{ 8.60 6.21 7.24 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-09T18:01:38",
-"it": 204136,
-"bar": "1h",
-"batch": 8,
+"ts": "2026-10-09T18:09:29",
+"it": 204239,
+"bar": "1m",
+"batch": 312,
 "passed": 0,
 "bench": 6.39,
-"pbo": 0.5,
-"best_family": "gated",
-"best_pm": 0.92,
-"best_params": "{'base': 'thin_lunch_trough_refund', 'base_params': {'hold_min': 30, 'k_bps': 3, 'slot': 'ny', 'theta': 0.0}, 'mode': 'vol_above', 'vol_window': 240, 'vol_pct':",
-"mix": "gat8",
-"queue_s": 8.0
+"pbo": 0.29,
+"best_family": "overnight_chase_fade",
+"best_pm": 13.6,
+"best_params": "{'entry_hour': 5, 'exit_hour': 11, 'k': 2.83, 'ref_hour': 22, 'sign': 1}",
+"mix": "gat50/ove262",
+"queue_s": 174.0
 },
 "events": []
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-09T18:01:38",
-"it": 167305,
-"bar": "15m",
-"batch": 88,
+"ts": "2026-10-09T18:15:09",
+"it": 167390,
+"bar": "30s",
+"batch": 156,
 "passed": 0,
 "bench": 6.39,
-"pbo": 0.39,
-"best_family": "gated",
-"best_pm": 2.56,
-"best_params": "{'base': 'broad_flow_drift', 'base_params': {'base': 10, 'd': 3, 'exit': 0.0393, 'k': 0.961, 'theta': 1.54}, 'mode': 'tick_above', 'vol_window': 40, 'vol_pct': ",
-"mix": "gat8/ove53/ske27",
-"queue_s": 15.0
+"pbo": 0.11,
+"best_family": "overnight_chase_fade",
+"best_pm": 14.39,
+"best_params": "{'ref_hour': 7, 'entry_hour': 1, 'k': 2.73, 'exit_hour': 22, 'sign': 1}",
+"mix": "gat25/ove76/ske55",
+"queue_s": 87.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 30905045,
-"last_5m": 5052,
-"last_1h": 26365,
-"last_24h": 560675,
-"distinct_ideas": 27423040,
+"total": 30913210,
+"last_5m": 172,
+"last_1h": 23571,
+"last_24h": 553017,
+"distinct_ideas": 27430003,
 "dsr_bar": 6.39,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 20035330,
+"n": 20037517,
 "pos_rate": 0.348,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -1102,7 +1102,7 @@
 },
 {
 "family": "range_budget_fade",
-"n": 8876,
+"n": 8883,
 "pos_rate": 0.314,
 "best_pm": 0.76,
 "best_dsr": 0.0,
@@ -1183,7 +1183,7 @@
 },
 {
 "family": "week_open_anchor_pull",
-"n": 7861,
+"n": 7862,
 "pos_rate": 0.413,
 "best_pm": 0.94,
 "best_dsr": 0.0,
@@ -1380,6 +1380,15 @@
 "since": "2026-10-08"
 },
 {
+"family": "skew_lottery_fade",
+"n": 5797,
+"pos_rate": 0.13,
+"best_pm": 0.61,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-09"
+},
+{
 "family": "sge_benchmark_flow",
 "n": 5734,
 "pos_rate": 0.26,
@@ -1450,6 +1459,15 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-01"
+},
+{
+"family": "overnight_chase_fade",
+"n": 5286,
+"pos_rate": 0.246,
+"best_pm": 1.12,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-09"
 },
 {
 "family": "session_loss_limit_refund",
@@ -1776,15 +1794,6 @@
 "since": "2026-10-07"
 },
 {
-"family": "skew_lottery_fade",
-"n": 3061,
-"pos_rate": 0.142,
-"best_pm": 0.59,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-09"
-},
-{
 "family": "session_bias",
 "n": 3029,
 "pos_rate": 0.206,
@@ -1936,15 +1945,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-07"
-},
-{
-"family": "overnight_chase_fade",
-"n": 2086,
-"pos_rate": 0.198,
-"best_pm": 0.83,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-09"
 },
 {
 "family": "lookback_rolloff_flow",
@@ -2195,7 +2195,7 @@
 "pbo": 0.04
 }
 ],
-"best_pm_1h": 2.71,
+"best_pm_1h": 2.48,
 "heat": [
 {
 "family": "activity_weighted_flow",
@@ -2431,37 +2431,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 27647,
+"n": 27365,
 "best_pm": 2.36,
 "pos_rate": 0.618
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 54130,
+"n": 53682,
 "best_pm": 6.47,
 "pos_rate": 0.598
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 53535,
+"n": 53146,
 "best_pm": 52.57,
-"pos_rate": 0.375
+"pos_rate": 0.376
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 28912,
+"n": 28587,
 "best_pm": 31.88,
-"pos_rate": 0.298
+"pos_rate": 0.299
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 27880,
+"n": 27519,
 "best_pm": 2.37,
-"pos_rate": 0.556
+"pos_rate": 0.557
 },
 {
 "family": "handover_inventory_unwind",
@@ -2606,37 +2606,37 @@
 {
 "family": "overnight_chase_fade",
 "bar": "15m",
-"n": 741,
+"n": 913,
 "best_pm": 0.93,
-"pos_rate": 0.224
+"pos_rate": 0.218
 },
 {
 "family": "overnight_chase_fade",
 "bar": "1h",
-"n": 911,
-"best_pm": 0.78,
-"pos_rate": 0.205
+"n": 1611,
+"best_pm": 0.98,
+"pos_rate": 0.258
 },
 {
 "family": "overnight_chase_fade",
 "bar": "1m",
-"n": 900,
-"best_pm": 0.98,
-"pos_rate": 0.213
+"n": 1186,
+"best_pm": 1.12,
+"pos_rate": 0.258
 },
 {
 "family": "overnight_chase_fade",
 "bar": "30s",
-"n": 175,
-"best_pm": 0.51,
-"pos_rate": 0.251
+"n": 665,
+"best_pm": 0.84,
+"pos_rate": 0.26
 },
 {
 "family": "overnight_chase_fade",
 "bar": "5m",
-"n": 792,
-"best_pm": 0.87,
-"pos_rate": 0.231
+"n": 911,
+"best_pm": 0.94,
+"pos_rate": 0.228
 },
 {
 "family": "portfolio",
@@ -2725,9 +2725,9 @@
 {
 "family": "range_budget_fade",
 "bar": "15m",
-"n": 1764,
+"n": 1766,
 "best_pm": 0.63,
-"pos_rate": 0.308
+"pos_rate": 0.307
 },
 {
 "family": "range_budget_fade",
@@ -2739,7 +2739,7 @@
 {
 "family": "range_budget_fade",
 "bar": "1m",
-"n": 1802,
+"n": 1804,
 "best_pm": 0.71,
 "pos_rate": 0.301
 },
@@ -2809,9 +2809,9 @@
 {
 "family": "skew_lottery_fade",
 "bar": "15m",
-"n": 613,
+"n": 1316,
 "best_pm": 0.39,
-"pos_rate": 0.052
+"pos_rate": 0.051
 },
 {
 "family": "skew_lottery_fade",
@@ -2830,16 +2830,16 @@
 {
 "family": "skew_lottery_fade",
 "bar": "30s",
-"n": 183,
-"best_pm": 0.38,
-"pos_rate": 0.213
+"n": 562,
+"best_pm": 0.61,
+"pos_rate": 0.26
 },
 {
 "family": "skew_lottery_fade",
 "bar": "5m",
-"n": 653,
+"n": 1316,
 "best_pm": 0.48,
-"pos_rate": 0.113
+"pos_rate": 0.122
 },
 {
 "family": "sleeve_vote_hold",
@@ -3663,37 +3663,16 @@
 {
 "family": "thin_window_mean_gap_refund",
 "bar": "15m",
-"n": 2293,
-"best_pm": 2.29,
-"pos_rate": 0.655
-},
-{
-"family": "thin_window_mean_gap_refund",
-"bar": "1h",
-"n": 1752,
-"best_pm": 0,
-"pos_rate": 0
-},
-{
-"family": "thin_window_mean_gap_refund",
-"bar": "1m",
-"n": 1779,
-"best_pm": 2.07,
-"pos_rate": 0.599
+"n": 515,
+"best_pm": 2.23,
+"pos_rate": 0.612
 },
 {
 "family": "thin_window_mean_gap_refund",
 "bar": "30s",
-"n": 2366,
-"best_pm": 1.86,
-"pos_rate": 0.61
-},
-{
-"family": "thin_window_mean_gap_refund",
-"bar": "5m",
-"n": 2250,
-"best_pm": 2.19,
-"pos_rate": 0.596
+"n": 555,
+"best_pm": 1.79,
+"pos_rate": 0.62
 },
 {
 "family": "week_open_anchor_pull",
@@ -3712,7 +3691,7 @@
 {
 "family": "week_open_anchor_pull",
 "bar": "1m",
-"n": 1555,
+"n": 1556,
 "best_pm": 0.79,
 "pos_rate": 0.401
 },
@@ -3733,6 +3712,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-10-09T16:12",
+"name": "flow_divergence_extreme",
+"status": "accepted",
+"rationale": "The payer is breakout chasers who buy a new n-bar high that tick-rule flow does not support. Their stops and late entries are filled by the passive side, so the price tends to give the move back. This is not a thin, refund, slot or window idea. It is symmetric (long at lows, shor",
+"note": "{\"name\": \"flow_divergence_extreme\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.993325}"
+},
 {
 "ts": "2026-10-09T15:42",
 "name": "overnight_chase_fade",
@@ -3809,49 +3795,9 @@
 "status": "accepted",
 "rationale": "The direction's only allowed new family, thin_hour_impact_refund_demeaned, already exists (n=16,602), and thin/refund/slot/window/sweep/depth/impact are hard-stopped. So I'm proposing something outside the thin cluster.\nRATIONALE: The payer is trend-chasers and stop-entry buyers ",
 "note": "{\"name\": \"smooth_run_exhaustion\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.3532}"
-},
-{
-"ts": "2026-10-09T10:03",
-"name": "close_location_pressure",
-"status": "accepted",
-"rationale": "The kill test the direction asks for, `thin_hour_impact_refund_demeaned`, is already in the registry (n=16,602, 76%). I'm not re-proposing it, and I'm avoiding every banned word.\nRATIONALE: This family uses range-weighted close location, `\u03a3(clv\u00b7range)/\u03a3range`, over n bars, with h",
-"note": "{\"name\": \"close_location_pressure\", \"grid\": 64, \"sec_per_param\": 0.0, \"active_frac\": 0.5192375}"
 }
 ],
 "history": [
-{
-"t": 1791388955.609152,
-"total": 29810663,
-"per_min": 229.0,
-"cpu": 29.8,
-"gpu": 93,
-"free_gb": 142.7,
-"dsr_bar": 6.42,
-"best_pm_1h": 16.82,
-"distinct": 26346038
-},
-{
-"t": 1791389305.972118,
-"total": 29810735,
-"per_min": 18.0,
-"cpu": 31.2,
-"gpu": 95,
-"free_gb": 155.1,
-"dsr_bar": 6.42,
-"best_pm_1h": 16.82,
-"distinct": 26346110
-},
-{
-"t": 1791389644.0799282,
-"total": 29810817,
-"per_min": 0.0,
-"cpu": 28.9,
-"gpu": 93,
-"free_gb": 184.1,
-"dsr_bar": 6.42,
-"best_pm_1h": 16.82,
-"distinct": 26346192
-},
 {
 "t": 1791389978.33564,
 "total": 29810817,
@@ -7437,6 +7383,17 @@
 "dsr_bar": 6.39,
 "best_pm_1h": 2.71,
 "distinct": 27423040
+},
+{
+"t": 1791562637.888798,
+"total": 30913210,
+"per_min": 34.0,
+"cpu": 29.3,
+"gpu": 51,
+"free_gb": 195.4,
+"dsr_bar": 6.39,
+"best_pm_1h": 2.48,
+"distinct": 27430003
 }
 ],
 "instrument": "XAUUSD",
