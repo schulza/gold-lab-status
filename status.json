@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-09 02:25:41 UTC",
+"generated_at": "2026-10-09 02:41:20 UTC",
 "host": {
-"cpu_pct": 38.1,
-"gpu_pct": 76,
-"free_gb": 134.0,
-"uptime": "up 9 days, 11:11, 2 users, load averages: 9.07 10.77 10.88",
-"load": "{ 9.07 10.77 10.88 }"
+"cpu_pct": 30.5,
+"gpu_pct": 0,
+"free_gb": 183.3,
+"uptime": "up 9 days, 11:27, 2 users, load averages: 10.12 10.18 10.56",
+"load": "{ 10.12 10.18 10.56 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-09T04:20:40",
-"it": 195800,
+"ts": "2026-10-09T04:27:29",
+"it": 195810,
 "bar": "1h",
-"batch": 8,
+"batch": 614,
 "passed": 0,
 "bench": 6.4,
 "pbo": 0.0,
-"best_family": "gated",
-"best_pm": 2.35,
-"best_params": "{'base': 'thin_window_dip_bid', 'base_params': {'hold_min': 129, 'k_bps': 7.12, 'lookback_min': 13, 'window': 'late'}, 'mode': 'vol_below', 'vol_window': 284, '",
-"mix": "gat8",
-"queue_s": 8.0
+"best_family": "thin_depth_return_refund",
+"best_pm": 5.8,
+"best_params": "{'hold_min': 107, 'k_bps': 7.87, 'r': 1.71, 'slot': 20, 'theta': 0.728}",
+"mix": "gat98/thi327/thi189",
+"queue_s": 341.0
 },
 "events": []
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 30618822,
-"last_5m": 8537,
-"last_1h": 45179,
-"last_24h": 607632,
-"distinct_ideas": 27140726,
+"total": 30619836,
+"last_5m": 0,
+"last_1h": 24825,
+"last_24h": 604228,
+"distinct_ideas": 27141583,
 "dsr_bar": 6.4,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19909269,
+"n": 19909485,
 "pos_rate": 0.347,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -463,7 +463,7 @@
 },
 {
 "family": "thin_late_drop_refund",
-"n": 13723,
+"n": 13725,
 "pos_rate": 0.501,
 "best_pm": 2.42,
 "best_dsr": 0,
@@ -1038,6 +1038,15 @@
 "since": "2026-10-08"
 },
 {
+"family": "thin_slot_presence_refund",
+"n": 8828,
+"pos_rate": 0.409,
+"best_pm": 1.93,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-09"
+},
+{
 "family": "stale_high_break_demeaned",
 "n": 8761,
 "pos_rate": 0.275,
@@ -1063,15 +1072,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-08"
-},
-{
-"family": "thin_slot_presence_refund",
-"n": 8519,
-"pos_rate": 0.409,
-"best_pm": 1.93,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-09"
 },
 {
 "family": "broad_flow_drift",
@@ -1155,6 +1155,15 @@
 "since": "2026-10-08"
 },
 {
+"family": "thin_depth_return_refund",
+"n": 7186,
+"pos_rate": 0.463,
+"best_pm": 1.97,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-09"
+},
+{
 "family": "inventory_vacuum",
 "n": 7034,
 "pos_rate": 0.466,
@@ -1180,15 +1189,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-05"
-},
-{
-"family": "thin_depth_return_refund",
-"n": 6699,
-"pos_rate": 0.467,
-"best_pm": 1.97,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-09"
 },
 {
 "family": "session_close_recovery_target",
@@ -2015,7 +2015,7 @@
 "pbo": 0.04
 }
 ],
-"best_pm_1h": 2.42,
+"best_pm_1h": 2.35,
 "heat": [
 {
 "family": "atr_loss_limit_flush",
@@ -2055,37 +2055,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 21137,
+"n": 21057,
 "best_pm": 2.25,
 "pos_rate": 0.6
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 47576,
+"n": 47422,
 "best_pm": 2.5,
 "pos_rate": 0.591
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 46949,
+"n": 46693,
 "best_pm": 52.57,
 "pos_rate": 0.346
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 22658,
+"n": 22570,
 "best_pm": 31.88,
 "pos_rate": 0.286
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 21423,
+"n": 21335,
 "best_pm": 6.88,
-"pos_rate": 0.536
+"pos_rate": 0.535
 },
 {
 "family": "higher_low_staircase",
@@ -2118,7 +2118,7 @@
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 12,
+"n": 11,
 "best_pm": 0.63,
 "pos_rate": 1.0
 },
@@ -2195,16 +2195,16 @@
 {
 "family": "monotone_close_flush",
 "bar": "1h",
-"n": 26,
-"best_pm": 0.56,
-"pos_rate": 0.615
+"n": 1,
+"best_pm": 0.27,
+"pos_rate": 1.0
 },
 {
 "family": "monotone_close_flush",
 "bar": "1m",
-"n": 18,
-"best_pm": 0.35,
-"pos_rate": 0.444
+"n": 1,
+"best_pm": 0,
+"pos_rate": 1.0
 },
 {
 "family": "portfolio",
@@ -2286,7 +2286,7 @@
 {
 "family": "session_close_recovery_target",
 "bar": "30s",
-"n": 44,
+"n": 33,
 "best_pm": 0,
 "pos_rate": 0
 },
@@ -2384,9 +2384,9 @@
 {
 "family": "thin_depth_return_refund",
 "bar": "1h",
-"n": 867,
-"best_pm": 0.83,
-"pos_rate": 0.276
+"n": 1194,
+"best_pm": 0.97,
+"pos_rate": 0.302
 },
 {
 "family": "thin_depth_return_refund",
@@ -3154,9 +3154,9 @@
 {
 "family": "thin_slot_presence_refund",
 "bar": "1h",
-"n": 1817,
+"n": 2006,
 "best_pm": 1.93,
-"pos_rate": 0.141
+"pos_rate": 0.168
 },
 {
 "family": "thin_slot_presence_refund",
@@ -3567,37 +3567,37 @@
 {
 "family": "two_block_loss_flush",
 "bar": "15m",
-"n": 1036,
-"best_pm": 0.28,
-"pos_rate": 0.068
+"n": 408,
+"best_pm": 0.25,
+"pos_rate": 0.061
 },
 {
 "family": "two_block_loss_flush",
 "bar": "1h",
-"n": 1007,
-"best_pm": 0.22,
-"pos_rate": 0.023
+"n": 164,
+"best_pm": 0.06,
+"pos_rate": 0.018
 },
 {
 "family": "two_block_loss_flush",
 "bar": "1m",
-"n": 1004,
+"n": 164,
 "best_pm": 0.24,
-"pos_rate": 0.037
+"pos_rate": 0.079
 },
 {
 "family": "two_block_loss_flush",
 "bar": "30s",
-"n": 1038,
-"best_pm": 0.32,
-"pos_rate": 0.103
+"n": 831,
+"best_pm": 0.3,
+"pos_rate": 0.11
 },
 {
 "family": "two_block_loss_flush",
 "bar": "5m",
-"n": 1035,
-"best_pm": 0.19,
-"pos_rate": 0.04
+"n": 353,
+"best_pm": 0.18,
+"pos_rate": 0.025
 }
 ]
 },
@@ -3688,39 +3688,6 @@
 }
 ],
 "history": [
-{
-"t": 1791340006.007551,
-"total": 29601375,
-"per_min": 306.0,
-"cpu": 14.9,
-"gpu": 76,
-"free_gb": 118.9,
-"dsr_bar": 6.42,
-"best_pm_1h": 14.39,
-"distinct": 26144428
-},
-{
-"t": 1791340350.4980638,
-"total": 29601583,
-"per_min": 10.0,
-"cpu": 24.6,
-"gpu": 85,
-"free_gb": 133.6,
-"dsr_bar": 6.42,
-"best_pm_1h": 14.39,
-"distinct": 26144612
-},
-{
-"t": 1791340690.653261,
-"total": 29603962,
-"per_min": 465.0,
-"cpu": 22.3,
-"gpu": 94,
-"free_gb": 121.9,
-"dsr_bar": 6.42,
-"best_pm_1h": 11.94,
-"distinct": 26146991
-},
 {
 "t": 1791341042.141471,
 "total": 29605728,
@@ -8307,6 +8274,17 @@
 "dsr_bar": 6.4,
 "best_pm_1h": 2.42,
 "distinct": 27140726
+},
+{
+"t": 1791513680.634527,
+"total": 30619836,
+"per_min": 0.0,
+"cpu": 30.5,
+"gpu": 0,
+"free_gb": 183.3,
+"dsr_bar": 6.4,
+"best_pm_1h": 2.35,
+"distinct": 27141583
 }
 ],
 "instrument": "XAUUSD",
