@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-09 10:32:14 UTC",
+"generated_at": "2026-10-09 10:47:55 UTC",
 "host": {
-"cpu_pct": 2.3,
-"gpu_pct": 0,
-"free_gb": 120.4,
-"uptime": "up 9 days, 19:18, 2 users, load averages: 4.16 8.17 9.93",
-"load": "{ 4.16 8.17 9.93 }"
+"cpu_pct": 33.2,
+"gpu_pct": 93,
+"free_gb": 188.7,
+"uptime": "up 9 days, 19:33, 2 users, load averages: 9.92 9.91 9.70",
+"load": "{ 9.92 9.91 9.70 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-09T12:30:45",
-"it": 200019,
-"bar": "1m",
+"ts": "2026-10-09T12:34:40",
+"it": 200020,
+"bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.39,
-"pbo": 0.04,
+"pbo": 0.0,
 "best_family": "gated",
-"best_pm": 0.53,
-"best_params": "{'base': 'loss_limit_liquidity_reentry', 'base_params': {'W': 170, 'close': 21, 'dm': 0, 'hold': 173, 'k': 7.7, 'ratio': 1.76}, 'mode': 'tick_above', 'vol_windo",
+"best_pm": 1.47,
+"best_params": "{'base': 'thin_slot_novel_drop_refund', 'base_params': {'hold_min': 79, 'k_bps': 8.13, 'nov_bps': 34.7, 'slot': 20}, 'mode': 'vol_below', 'vol_window': 60, 'vol",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 30774882,
-"last_5m": 1866,
-"last_1h": 14415,
-"last_24h": 570281,
-"distinct_ideas": 27293706,
+"total": 30774890,
+"last_5m": 0,
+"last_1h": 14197,
+"last_24h": 570217,
+"distinct_ideas": 27293714,
 "dsr_bar": 6.39,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 19967306,
+"n": 19967314,
 "pos_rate": 0.348,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -2266,14 +2266,14 @@
 {
 "family": "gated",
 "bar": "1h",
-"n": 47236,
+"n": 47204,
 "best_pm": 6.47,
 "pos_rate": 0.596
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 46503,
+"n": 46471,
 "best_pm": 52.57,
 "pos_rate": 0.367
 },
@@ -3653,6 +3653,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-09T10:34",
+"name": "smooth_run_exhaustion",
+"status": "accepted",
+"rationale": "The direction's only allowed new family, thin_hour_impact_refund_demeaned, already exists (n=16,602), and thin/refund/slot/window/sweep/depth/impact are hard-stopped. So I'm proposing something outside the thin cluster.\nRATIONALE: The payer is trend-chasers and stop-entry buyers ",
+"note": "{\"name\": \"smooth_run_exhaustion\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.3532}"
+},
+{
 "ts": "2026-10-09T10:03",
 "name": "close_location_pressure",
 "status": "accepted",
@@ -3728,38 +3735,9 @@
 "status": "accepted",
 "rationale": "The director's hard stop covers thin, refund, slot, window and the rest, and `thin_hour_impact_refund_demeaned` (the kill test) is already accepted. I'm submitting one small-grid, non-thin family anyway: prior-day close location. Both signs are in the grid, so the data decides th",
 "note": "{\"name\": \"prior_close_location\", \"grid\": 24, \"sec_per_param\": 0.0, \"active_frac\": 0.09}"
-},
-{
-"ts": "2026-10-09T04:27",
-"name": "thin_hour_impact_refund_demeaned",
-"status": "accepted",
-"rationale": "Kill test as directed. It uses the same signals as thin_hour_impact_refund (a thin-hour drop with below-baseline activity, then a long hold). Its exposure has its own trailing mean subtracted, so a constant long earns zero.\nRATIONALE: The payer is takers who sell into a thin book",
-"note": "{\"name\": \"thin_hour_impact_refund_demeaned\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.29665625}"
 }
 ],
 "history": [
-{
-"t": 1791369454.3925738,
-"total": 29714126,
-"per_min": 0.0,
-"cpu": 25.0,
-"gpu": 2,
-"free_gb": 187.6,
-"dsr_bar": 6.42,
-"best_pm_1h": 1.75,
-"distinct": 26253713
-},
-{
-"t": 1791369795.714894,
-"total": 29714126,
-"per_min": 0.0,
-"cpu": 28.5,
-"gpu": 81,
-"free_gb": 188.8,
-"dsr_bar": 6.42,
-"best_pm_1h": 1.75,
-"distinct": 26253713
-},
 {
 "t": 1791370153.255282,
 "total": 29720810,
@@ -7752,6 +7730,17 @@
 "dsr_bar": 6.39,
 "best_pm_1h": 9.29,
 "distinct": 27293706
+},
+{
+"t": 1791542875.743188,
+"total": 30774890,
+"per_min": 0.0,
+"cpu": 33.2,
+"gpu": 93,
+"free_gb": 188.7,
+"dsr_bar": 6.39,
+"best_pm_1h": 9.29,
+"distinct": 27293714
 }
 ],
 "instrument": "XAUUSD",
