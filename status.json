@@ -1,29 +1,29 @@
 {
-"generated_at": "2026-10-10 03:15:43 UTC",
+"generated_at": "2026-10-10 03:31:21 UTC",
 "host": {
-"cpu_pct": 31.0,
-"gpu_pct": 96,
-"free_gb": 125.8,
-"uptime": "up 10 days, 12:01, 2 users, load averages: 14.11 12.47 10.93",
-"load": "{ 14.11 12.47 10.93 }"
+"cpu_pct": 30.8,
+"gpu_pct": 0,
+"free_gb": 119.7,
+"uptime": "up 10 days, 12:17, 2 users, load averages: 6.67 7.90 8.46",
+"load": "{ 6.67 7.90 8.46 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-10T05:15:27",
-"it": 213435,
-"bar": "1m",
-"batch": 10,
+"ts": "2026-10-10T05:31:21",
+"it": 213858,
+"bar": "1h",
+"batch": 8,
 "passed": 0,
 "bench": 6.4,
-"pbo": 0.04,
+"pbo": 0.14,
 "best_family": "gated",
-"best_pm": 0.4,
-"best_params": "{'base': 'thin_window_close_refund', 'base_params': {'hold_min': 104, 'k_bps': 5.5, 'm': 3, 'slot': 20}, 'mode': 'vol_above', 'vol_window': 62, 'vol_pct': 0.204",
-"mix": "gat8/hou2",
-"queue_s": 10.0
+"best_pm": 0.97,
+"best_params": "{'base': 'two_sided_squeeze_book', 'base_params': {'c': 0.261, 'days': 10, 'ex': 0.8, 'lm': 11, 'mdays': 9, 'mintr': 10}, 'mode': 'spread_below', 'vol_window': ",
+"mix": "gat8",
+"queue_s": 7.0
 },
 "events": []
 },
@@ -31,34 +31,34 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-10T05:15:22",
-"it": 175622,
-"bar": "30s",
+"ts": "2026-10-10T05:31:21",
+"it": 175975,
+"bar": "15m",
 "batch": 8,
 "passed": 0,
 "bench": 6.4,
-"pbo": 0.0,
+"pbo": 0.61,
 "best_family": "gated",
-"best_pm": 1.11,
-"best_params": "{'base': 'overnight_chase_fade', 'base_params': {'entry_hour': 3, 'exit_hour': 8, 'k': 1.84, 'ref_hour': 1, 'sign': 1}, 'mode': 'htf_against', 'htf': '4h', 'sma",
+"best_pm": 0.28,
+"best_params": "{'base': 'v_recovery_hold', 'base_params': {'days': 6.26, 'ex': 0.379, 'k': 1.0, 'mf': 0.207, 'rec': 0.897}, 'mode': 'vol_below', 'vol_window': 240, 'vol_pct': ",
 "mix": "gat8",
-"queue_s": 7.0
+"queue_s": 8.0
 },
 "events": []
 }
 ],
 "registry": {
-"total": 31157765,
-"last_5m": 2288,
-"last_1h": 22041,
-"last_24h": 514817,
-"distinct_ideas": 27671256,
+"total": 31164389,
+"last_5m": 2754,
+"last_1h": 21803,
+"last_24h": 518162,
+"distinct_ideas": 27677954,
 "dsr_bar": 6.4,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 20180039,
+"n": 20185991,
 "pos_rate": 0.349,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -723,6 +723,15 @@
 "since": "2026-10-02"
 },
 {
+"family": "higher_low_staircase",
+"n": 11499,
+"pos_rate": 0.904,
+"best_pm": 0.72,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-04"
+},
+{
 "family": "news_overhang_underreaction",
 "n": 11497,
 "pos_rate": 0.439,
@@ -730,15 +739,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-02"
-},
-{
-"family": "higher_low_staircase",
-"n": 11496,
-"pos_rate": 0.904,
-"best_pm": 0.72,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-04"
 },
 {
 "family": "statement_chaser_inflow",
@@ -886,7 +886,7 @@
 },
 {
 "family": "range_expansion_hold",
-"n": 10663,
+"n": 10664,
 "pos_rate": 0.955,
 "best_pm": 1.06,
 "best_dsr": 0.0,
@@ -1084,7 +1084,7 @@
 },
 {
 "family": "range_budget_fade",
-"n": 9030,
+"n": 9031,
 "pos_rate": 0.309,
 "best_pm": 0.76,
 "best_dsr": 0.0,
@@ -1434,6 +1434,15 @@
 "since": "2026-10-09"
 },
 {
+"family": "hour_retrace_follow",
+"n": 6050,
+"pos_rate": 0.105,
+"best_pm": 0.73,
+"best_dsr": 0,
+"passed": 0,
+"since": "2026-10-10"
+},
+{
 "family": "impact_asymmetry_refund",
 "n": 6040,
 "pos_rate": 0.359,
@@ -1558,15 +1567,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-01"
-},
-{
-"family": "hour_retrace_follow",
-"n": 5375,
-"pos_rate": 0.117,
-"best_pm": 0.73,
-"best_dsr": 0,
-"passed": 0,
-"since": "2026-10-10"
 },
 {
 "family": "absorbed_flow_release",
@@ -2837,35 +2837,35 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 41361,
+"n": 41737,
 "best_pm": 3.63,
-"pos_rate": 0.611
+"pos_rate": 0.61
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 70164,
+"n": 71020,
 "best_pm": 7.05,
 "pos_rate": 0.597
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 70182,
+"n": 71014,
 "best_pm": 13.03,
-"pos_rate": 0.374
+"pos_rate": 0.373
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 42173,
-"best_pm": 24.07,
+"n": 42557,
+"best_pm": 21.42,
 "pos_rate": 0.297
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 41562,
+"n": 41938,
 "best_pm": 6.4,
 "pos_rate": 0.552
 },
@@ -2928,16 +2928,16 @@
 {
 "family": "higher_low_staircase",
 "bar": "30s",
-"n": 25,
+"n": 26,
 "best_pm": 0.57,
-"pos_rate": 0.92
+"pos_rate": 0.923
 },
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 44,
+"n": 45,
 "best_pm": 0.63,
-"pos_rate": 0.932
+"pos_rate": 0.933
 },
 {
 "family": "hot_tape_continuation",
@@ -2984,21 +2984,21 @@
 {
 "family": "hour_retrace_follow",
 "bar": "1h",
-"n": 906,
+"n": 1209,
 "best_pm": 0,
 "pos_rate": 0
 },
 {
 "family": "hour_retrace_follow",
 "bar": "1m",
-"n": 868,
+"n": 1207,
 "best_pm": 0.56,
-"pos_rate": 0.068
+"pos_rate": 0.056
 },
 {
 "family": "hour_retrace_follow",
 "bar": "30s",
-"n": 1204,
+"n": 1207,
 "best_pm": 0.05,
 "pos_rate": 0.001
 },
@@ -3057,13 +3057,6 @@
 "n": 1,
 "best_pm": -0.21,
 "pos_rate": 0
-},
-{
-"family": "loss_limit_reset_flush",
-"bar": "1h",
-"n": 1,
-"best_pm": 0.17,
-"pos_rate": 1.0
 },
 {
 "family": "loss_limit_reset_flush",
@@ -3299,7 +3292,7 @@
 {
 "family": "range_budget_fade",
 "bar": "30s",
-"n": 1709,
+"n": 1710,
 "best_pm": 0.72,
 "pos_rate": 0.294
 },
@@ -3320,9 +3313,9 @@
 {
 "family": "range_expansion_hold",
 "bar": "1h",
-"n": 6,
+"n": 5,
 "best_pm": 0.57,
-"pos_rate": 0.833
+"pos_rate": 0.8
 },
 {
 "family": "range_expansion_hold",
@@ -3579,14 +3572,14 @@
 {
 "family": "thin_hour_peak_gap_refund",
 "bar": "1h",
-"n": 2629,
+"n": 2610,
 "best_pm": 2.11,
 "pos_rate": 0.589
 },
 {
 "family": "thin_hour_peak_gap_refund",
 "bar": "1m",
-"n": 2628,
+"n": 2607,
 "best_pm": 1.55,
 "pos_rate": 0.468
 },
@@ -3663,58 +3656,16 @@
 {
 "family": "thin_slot_presence_refund",
 "bar": "15m",
-"n": 4,
-"best_pm": 0.77,
+"n": 1,
+"best_pm": 0.24,
 "pos_rate": 1.0
-},
-{
-"family": "thin_slot_presence_refund",
-"bar": "1h",
-"n": 3,
-"best_pm": 0,
-"pos_rate": 0
-},
-{
-"family": "thin_slot_presence_refund",
-"bar": "1m",
-"n": 3,
-"best_pm": 0.75,
-"pos_rate": 0.333
-},
-{
-"family": "thin_slot_presence_refund",
-"bar": "30s",
-"n": 3,
-"best_pm": 0.02,
-"pos_rate": 0.667
 },
 {
 "family": "thin_slot_presence_refund",
 "bar": "5m",
-"n": 4,
-"best_pm": 0.99,
-"pos_rate": 0.5
-},
-{
-"family": "thin_slot_stopped_refund",
-"bar": "1h",
-"n": 1,
-"best_pm": 0.59,
-"pos_rate": 1.0
-},
-{
-"family": "thin_slot_stopped_refund",
-"bar": "1m",
 "n": 1,
 "best_pm": 0,
 "pos_rate": 0
-},
-{
-"family": "thin_slot_stopped_refund",
-"bar": "30s",
-"n": 68,
-"best_pm": 0.61,
-"pos_rate": 0.279
 },
 {
 "family": "variance_ratio_stretch",
@@ -3789,6 +3740,13 @@
 ]
 },
 "generated": [
+{
+"ts": "2026-10-10T03:29",
+"name": null,
+"status": "rejected",
+"rationale": "",
+"note": "no python block in reply"
+},
 {
 "ts": "2026-10-10T02:58",
 "name": "efficiency_stall",
@@ -3865,38 +3823,9 @@
 "status": "rejected",
 "rationale": "Payer is the liquidity demander who trades into an hour whose realized volatility is far above that clock slot's own history (news-driven, event-style flow). Dealers charge a concession for absorbing it, and the move partially refunds once the flow stops.\nRATIONALE: The surprise ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-09T21:19",
-"name": "vacuum_move_fade",
-"status": "rejected",
-"rationale": "The payer is liquidity-demanding sellers and buyers who hit quotes while market makers are pulling them. The signal is a rolling correlation of |return| with spread change over w bars. When it is high and the n-bar move exceeds k sigma, the move was bought or sold into a vacuum, ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1791429619.744183,
-"total": 30024572,
-"per_min": 492.0,
-"cpu": 42.6,
-"gpu": 93,
-"free_gb": 123.9,
-"dsr_bar": 6.41,
-"best_pm_1h": 1.41,
-"distinct": 26553133
-},
-{
-"t": 1791429960.285154,
-"total": 30026676,
-"per_min": 93.0,
-"cpu": 23.5,
-"gpu": 85,
-"free_gb": 190.4,
-"dsr_bar": 6.41,
-"best_pm_1h": 1.41,
-"distinct": 26555132
-},
 {
 "t": 1791430295.22149,
 "total": 30026676,
@@ -6657,6 +6586,17 @@
 "dsr_bar": 6.4,
 "best_pm_1h": 15.88,
 "distinct": 27671256
+},
+{
+"t": 1791603081.558927,
+"total": 31164389,
+"per_min": 551.0,
+"cpu": 30.8,
+"gpu": 0,
+"free_gb": 119.7,
+"dsr_bar": 6.4,
+"best_pm_1h": 15.88,
+"distinct": 27677954
 }
 ],
 "instrument": "XAUUSD",
