@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-10-10 07:58:55 UTC",
+"generated_at": "2026-10-10 08:14:36 UTC",
 "host": {
-"cpu_pct": 33.9,
-"gpu_pct": 94,
-"free_gb": 116.2,
-"uptime": "up 10 days, 16:44, 2 users, load averages: 10.41 10.83 9.96",
-"load": "{ 10.41 10.83 9.96 }"
+"cpu_pct": 30.8,
+"gpu_pct": 82,
+"free_gb": 151.3,
+"uptime": "up 10 days, 17 hrs, 2 users, load averages: 11.67 11.09 9.85",
+"load": "{ 11.67 11.09 9.85 }"
 },
 "instances": [
 {
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-10T09:58:38",
-"it": 180023,
+"ts": "2026-10-10T10:14:35",
+"it": 180527,
 "bar": "30s",
 "batch": 9,
 "passed": 0,
 "bench": 6.4,
-"pbo": 0.32,
+"pbo": 0.46,
 "best_family": "gated",
-"best_pm": 0.4,
-"best_params": "{'base': 'thin_window_close_refund', 'base_params': {'hold_min': 114, 'k_bps': 7.42, 'm': 0, 'slot': 20}, 'mode': 'vol_below', 'vol_window': 240, 'vol_pct': 0.5",
+"best_pm": 0.5,
+"best_params": "{'base': 'thin_trough_confirmed_refund', 'base_params': {'k_bps': 9.25, 'm_min': 25, 'r_bps': 3.95, 'slot': 20}, 'mode': 'vol_above', 'vol_window': 98, 'vol_pct",
 "mix": "gat8/mor1",
 "queue_s": 9.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 31273153,
-"last_5m": 2528,
-"last_1h": 27308,
-"last_24h": 536103,
-"distinct_ideas": 27785496,
+"total": 31277330,
+"last_5m": 1687,
+"last_1h": 27106,
+"last_24h": 537683,
+"distinct_ideas": 27789499,
 "dsr_bar": 6.4,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 20267607,
+"n": 20271599,
 "pos_rate": 0.35,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -715,7 +715,7 @@
 },
 {
 "family": "higher_low_staircase",
-"n": 11558,
+"n": 11560,
 "pos_rate": 0.904,
 "best_pm": 0.72,
 "best_dsr": 0.0,
@@ -1084,7 +1084,7 @@
 },
 {
 "family": "range_budget_fade",
-"n": 9045,
+"n": 9047,
 "pos_rate": 0.308,
 "best_pm": 0.76,
 "best_dsr": 0.0,
@@ -1174,7 +1174,7 @@
 },
 {
 "family": "efficiency_stall",
-"n": 8374,
+"n": 8392,
 "pos_rate": 0.241,
 "best_pm": 0.96,
 "best_dsr": 0.0,
@@ -1614,6 +1614,15 @@
 "since": "2026-10-07"
 },
 {
+"family": "morning_displacement_carry",
+"n": 5165,
+"pos_rate": 0.359,
+"best_pm": 0.99,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-10"
+},
+{
 "family": "two_block_loss_flush",
 "n": 5120,
 "pos_rate": 0.054,
@@ -1630,15 +1639,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-07"
-},
-{
-"family": "morning_displacement_carry",
-"n": 5002,
-"pos_rate": 0.361,
-"best_pm": 0.99,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-10"
 },
 {
 "family": "thin_tick_catchup",
@@ -2432,30 +2432,30 @@
 {
 "family": "asia_london_conflict",
 "bar": "15m",
-"n": 125,
+"n": 64,
 "best_pm": 0.37,
-"pos_rate": 0.176
+"pos_rate": 0.141
 },
 {
 "family": "asia_london_conflict",
 "bar": "1m",
-"n": 4,
-"best_pm": -0.03,
+"n": 3,
+"best_pm": 0,
 "pos_rate": 0
 },
 {
 "family": "asia_london_conflict",
 "bar": "30s",
-"n": 195,
-"best_pm": 0.05,
-"pos_rate": 0.015
+"n": 111,
+"best_pm": 0,
+"pos_rate": 0
 },
 {
 "family": "asia_london_conflict",
 "bar": "5m",
-"n": 136,
+"n": 62,
 "best_pm": 0,
-"pos_rate": 0.154
+"pos_rate": 0.194
 },
 {
 "family": "atr_loss_limit_flush",
@@ -2467,37 +2467,23 @@
 {
 "family": "autocorr_regime_switch",
 "bar": "15m",
-"n": 136,
-"best_pm": 0.57,
-"pos_rate": 0.059
-},
-{
-"family": "autocorr_regime_switch",
-"bar": "1h",
-"n": 135,
-"best_pm": 3.61,
-"pos_rate": 0.415
-},
-{
-"family": "autocorr_regime_switch",
-"bar": "1m",
-"n": 135,
+"n": 10,
 "best_pm": 0,
-"pos_rate": 0
+"pos_rate": 0.1
 },
 {
 "family": "autocorr_regime_switch",
 "bar": "30s",
-"n": 789,
+"n": 82,
 "best_pm": 0,
 "pos_rate": 0
 },
 {
 "family": "autocorr_regime_switch",
 "bar": "5m",
-"n": 126,
-"best_pm": 0.37,
-"pos_rate": 0.008
+"n": 8,
+"best_pm": 0,
+"pos_rate": 0
 },
 {
 "family": "clock_mark_concession",
@@ -2894,79 +2880,79 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 49970,
+"n": 51098,
 "best_pm": 3.63,
 "pos_rate": 0.606
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 87771,
+"n": 87672,
 "best_pm": 7.05,
 "pos_rate": 0.593
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 87997,
+"n": 87901,
 "best_pm": 11.19,
 "pos_rate": 0.367
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 50919,
+"n": 51984,
 "best_pm": 21.42,
 "pos_rate": 0.297
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 50210,
+"n": 51330,
 "best_pm": 6.4,
-"pos_rate": 0.547
+"pos_rate": 0.546
 },
 {
 "family": "handover_inventory_unwind",
 "bar": "15m",
-"n": 60,
-"best_pm": 0.72,
-"pos_rate": 0.617
+"n": 19,
+"best_pm": 0.17,
+"pos_rate": 0.211
 },
 {
 "family": "handover_inventory_unwind",
 "bar": "1h",
-"n": 16,
+"n": 14,
 "best_pm": 0.58,
-"pos_rate": 0.812
+"pos_rate": 0.786
 },
 {
 "family": "handover_inventory_unwind",
 "bar": "1m",
-"n": 31,
+"n": 26,
 "best_pm": 0.71,
-"pos_rate": 0.677
+"pos_rate": 0.654
 },
 {
 "family": "handover_inventory_unwind",
 "bar": "30s",
-"n": 172,
-"best_pm": 0.94,
-"pos_rate": 0.453
+"n": 75,
+"best_pm": 0.25,
+"pos_rate": 0.333
 },
 {
 "family": "handover_inventory_unwind",
 "bar": "5m",
-"n": 67,
-"best_pm": 0.86,
-"pos_rate": 0.672
+"n": 13,
+"best_pm": 0.55,
+"pos_rate": 0.154
 },
 {
 "family": "higher_low_staircase",
 "bar": "15m",
-"n": 52,
+"n": 54,
 "best_pm": 0.6,
-"pos_rate": 0.885
+"pos_rate": 0.889
 },
 {
 "family": "higher_low_staircase",
@@ -2992,9 +2978,9 @@
 {
 "family": "higher_low_staircase",
 "bar": "5m",
-"n": 50,
+"n": 51,
 "best_pm": 0.63,
-"pos_rate": 0.94
+"pos_rate": 0.941
 },
 {
 "family": "hot_tape_continuation",
@@ -3118,7 +3104,7 @@
 {
 "family": "jump_lottery_fade",
 "bar": "1m",
-"n": 1675,
+"n": 1647,
 "best_pm": 0.45,
 "pos_rate": 0.056
 },
@@ -3167,7 +3153,7 @@
 {
 "family": "loss_limit_reset_flush",
 "bar": "30s",
-"n": 11,
+"n": 10,
 "best_pm": -0.48,
 "pos_rate": 0
 },
@@ -3181,9 +3167,9 @@
 {
 "family": "morning_displacement_carry",
 "bar": "15m",
-"n": 1004,
+"n": 1050,
 "best_pm": 0.53,
-"pos_rate": 0.231
+"pos_rate": 0.23
 },
 {
 "family": "morning_displacement_carry",
@@ -3202,16 +3188,16 @@
 {
 "family": "morning_displacement_carry",
 "bar": "30s",
-"n": 890,
+"n": 936,
 "best_pm": 0.79,
-"pos_rate": 0.348
+"pos_rate": 0.35
 },
 {
 "family": "morning_displacement_carry",
 "bar": "5m",
-"n": 992,
+"n": 1044,
 "best_pm": 0.53,
-"pos_rate": 0.361
+"pos_rate": 0.354
 },
 {
 "family": "overnight_chase_fade",
@@ -3370,7 +3356,7 @@
 {
 "family": "range_budget_fade",
 "bar": "15m",
-"n": 148,
+"n": 146,
 "best_pm": 0.11,
 "pos_rate": 0.041
 },
@@ -3391,14 +3377,14 @@
 {
 "family": "range_budget_fade",
 "bar": "30s",
-"n": 222,
+"n": 215,
 "best_pm": 0.37,
-"pos_rate": 0.086
+"pos_rate": 0.074
 },
 {
 "family": "range_budget_fade",
 "bar": "5m",
-"n": 113,
+"n": 112,
 "best_pm": 0.1,
 "pos_rate": 0.062
 },
@@ -3643,42 +3629,42 @@
 {
 "family": "thin_hour_local_drop_refund",
 "bar": "1h",
-"n": 3,
-"best_pm": 0.83,
+"n": 2,
+"best_pm": 0,
 "pos_rate": 1.0
 },
 {
 "family": "thin_hour_local_drop_refund",
 "bar": "1m",
-"n": 3,
+"n": 2,
 "best_pm": 0,
-"pos_rate": 0.667
+"pos_rate": 0.5
 },
 {
 "family": "thin_hour_local_drop_refund",
 "bar": "30s",
-"n": 80,
+"n": 79,
 "best_pm": 0.82,
-"pos_rate": 0.5
+"pos_rate": 0.494
 },
 {
 "family": "thin_slot_peak_drop_refund",
 "bar": "15m",
-"n": 7,
+"n": 6,
 "best_pm": 0,
 "pos_rate": 0
 },
 {
 "family": "thin_slot_peak_drop_refund",
 "bar": "30s",
-"n": 20,
+"n": 19,
 "best_pm": 0,
 "pos_rate": 0
 },
 {
 "family": "thin_slot_peak_drop_refund",
 "bar": "5m",
-"n": 5,
+"n": 4,
 "best_pm": 0,
 "pos_rate": 0
 },
@@ -3756,6 +3742,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-10T08:07",
+"name": "wide_spread_normalise",
+"status": "rejected",
+"rationale": "The director's hard stop covers the thin/refund cluster, and `thin_hour_impact_refund_demeaned` already exists (16.6k trials, 76%), so I am not re-proposing it. This is a different mechanism that does not use hour slots.\nRATIONALE: Payer: liquidity providers and stop-loss takers ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-10-10T07:36",
 "name": "range_expansion_edge_fade",
 "status": "rejected",
@@ -3831,49 +3824,9 @@
 "status": "accepted",
 "rationale": "This is not a thin-slot family and not a refund variant. The kill test `thin_hour_impact_refund_demeaned` already sits at 16,602 trials and 76%, so I'm skipping it.\nRATIONALE: The payer is hourly stop-and-reverse and hour-end rebalancing flow. After a large prior-hour move, an in",
 "note": "{\"name\": \"hour_retrace_follow\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.02355}"
-},
-{
-"ts": "2026-10-10T01:57",
-"name": "variance_ratio_stretch",
-"status": "accepted",
-"rationale": "The director's one permitted family, thin_hour_impact_refund_demeaned, already exists (16,602 trials, 76%), so I am not re-proposing it, and I stay out of the thin/refund/slot/window/sweep/depth/impact vocabulary.\nRATIONALE: Payer: stretch-chasers and breakout buyers who pay the ",
-"note": "{\"name\": \"variance_ratio_stretch\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.039975}"
 }
 ],
 "history": [
-{
-"t": 1791446390.561642,
-"total": 30130655,
-"per_min": 14.0,
-"cpu": 24.5,
-"gpu": 88,
-"free_gb": 170.5,
-"dsr_bar": 6.41,
-"best_pm_1h": 2.33,
-"distinct": 26658673
-},
-{
-"t": 1791446725.565862,
-"total": 30130727,
-"per_min": 0.0,
-"cpu": 26.5,
-"gpu": 96,
-"free_gb": 186.6,
-"dsr_bar": 6.41,
-"best_pm_1h": 2.33,
-"distinct": 26658745
-},
-{
-"t": 1791447064.7313359,
-"total": 30130727,
-"per_min": 0.0,
-"cpu": 23.6,
-"gpu": 89,
-"free_gb": 186.9,
-"dsr_bar": 6.41,
-"best_pm_1h": 2.33,
-"distinct": 26658745
-},
 {
 "t": 1791447435.945462,
 "total": 30132709,
@@ -6282,6 +6235,17 @@
 "dsr_bar": 6.4,
 "best_pm_1h": 11.19,
 "distinct": 27785496
+},
+{
+"t": 1791620076.272487,
+"total": 31277330,
+"per_min": 337.0,
+"cpu": 30.8,
+"gpu": 82,
+"free_gb": 151.3,
+"dsr_bar": 6.4,
+"best_pm_1h": 11.19,
+"distinct": 27789499
 }
 ],
 "instrument": "XAUUSD",
