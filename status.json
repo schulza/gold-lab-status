@@ -1,27 +1,27 @@
 {
-"generated_at": "2026-10-10 00:23:15 UTC",
+"generated_at": "2026-10-10 00:38:55 UTC",
 "host": {
-"cpu_pct": 76.9,
-"gpu_pct": 89,
-"free_gb": 147.1,
-"uptime": "up 10 days,  9:08, 2 users, load averages: 25.21 12.51 11.19",
-"load": "{ 25.21 12.51 11.19 }"
+"cpu_pct": 35.2,
+"gpu_pct": 69,
+"free_gb": 178.6,
+"uptime": "up 10 days,  9:24, 2 users, load averages: 10.52 10.69 11.05",
+"load": "{ 10.52 10.69 11.05 }"
 },
 "instances": [
 {
 "name": "a",
 "state": "running",
 "last": {
-"ts": "2026-10-10T02:23:14",
-"it": 212148,
+"ts": "2026-10-10T02:24:33",
+"it": 212210,
 "bar": "1h",
 "batch": 8,
 "passed": 0,
 "bench": 6.4,
-"pbo": 0.0,
+"pbo": 0.75,
 "best_family": "gated",
-"best_pm": 1.67,
-"best_params": "{'base': 'thin_refund_regime_gate', 'base_params': {'days': 28, 'g': 0.816, 'hold_min': 111, 'k_bps': 5.98, 'slot': 20}, 'mode': 'tick_above', 'vol_window': 60,",
+"best_pm": 0.55,
+"best_params": "{'base': 'clientele_tug_of_war', 'base_params': {'k': 1.39, 'lead': 'asia', 'mode': 'solo', 'n': 7, 'sign': 1}, 'mode': 'spread_below', 'vol_window': 240, 'vol_",
 "mix": "gat8",
 "queue_s": 8.0
 },
@@ -31,16 +31,16 @@
 "name": "b",
 "state": "running",
 "last": {
-"ts": "2026-10-10T02:23:15",
-"it": 173322,
+"ts": "2026-10-10T02:24:39",
+"it": 173400,
 "bar": "5m",
 "batch": 8,
 "passed": 0,
 "bench": 6.4,
-"pbo": 0.04,
+"pbo": 0.07,
 "best_family": "gated",
-"best_pm": 0.73,
-"best_params": "{'base': 'trailing_peak_hold', 'base_params': {'days': 9, 'k': 8.0, 'mdays': 12}, 'mode': 'vol_below', 'vol_window': 378, 'vol_pct': 0.235}",
+"best_pm": 0.84,
+"best_params": "{'base': 'thin_fast_impact_refund', 'base_params': {'hold_min': 60, 'k_bps': 7.67, 'm_min': 40, 'slot': 20}, 'mode': 'spread_below', 'vol_window': 240, 'vol_pct",
 "mix": "gat8",
 "queue_s": 7.0
 },
@@ -48,17 +48,17 @@
 }
 ],
 "registry": {
-"total": 31099904,
-"last_5m": 4728,
-"last_1h": 25903,
-"last_24h": 545282,
-"distinct_ideas": 27614302,
+"total": 31102222,
+"last_5m": 0,
+"last_1h": 26828,
+"last_24h": 545832,
+"distinct_ideas": 27616316,
 "dsr_bar": 6.4,
 "sharpe_std": 1.17,
 "families": [
 {
 "family": "gated",
-"n": 20150038,
+"n": 20151848,
 "pos_rate": 0.349,
 "best_pm": 67.99,
 "best_dsr": 0.611,
@@ -1182,6 +1182,15 @@
 "since": "2026-10-09"
 },
 {
+"family": "dwell_displacement_gap",
+"n": 8248,
+"pos_rate": 0.254,
+"best_pm": 0.99,
+"best_dsr": 0.0,
+"passed": 0,
+"since": "2026-10-10"
+},
+{
 "family": "pause_resume_jump",
 "n": 8228,
 "pos_rate": 0.236,
@@ -1234,15 +1243,6 @@
 "best_dsr": 0.0,
 "passed": 0,
 "since": "2026-10-05"
-},
-{
-"family": "dwell_displacement_gap",
-"n": 7740,
-"pos_rate": 0.258,
-"best_pm": 0.99,
-"best_dsr": 0.0,
-"passed": 0,
-"since": "2026-10-10"
 },
 {
 "family": "rolling_loss_flush_rebound",
@@ -2647,7 +2647,7 @@
 {
 "family": "dwell_displacement_gap",
 "bar": "30s",
-"n": 1595,
+"n": 1622,
 "best_pm": 0.63,
 "pos_rate": 0.182
 },
@@ -2731,37 +2731,37 @@
 {
 "family": "gated",
 "bar": "15m",
-"n": 37090,
+"n": 37298,
 "best_pm": 3.63,
 "pos_rate": 0.614
 },
 {
 "family": "gated",
 "bar": "1h",
-"n": 70290,
+"n": 70451,
 "best_pm": 7.05,
 "pos_rate": 0.597
 },
 {
 "family": "gated",
 "bar": "1m",
-"n": 70050,
+"n": 70291,
 "best_pm": 13.03,
 "pos_rate": 0.375
 },
 {
 "family": "gated",
 "bar": "30s",
-"n": 38085,
+"n": 38301,
 "best_pm": 24.07,
 "pos_rate": 0.296
 },
 {
 "family": "gated",
 "bar": "5m",
-"n": 37185,
+"n": 37401,
 "best_pm": 6.4,
-"pos_rate": 0.555
+"pos_rate": 0.554
 },
 {
 "family": "handover_inventory_unwind",
@@ -3571,9 +3571,9 @@
 {
 "family": "thin_quiet_prelude_refund",
 "bar": "1h",
-"n": 2050,
+"n": 1531,
 "best_pm": 1.98,
-"pos_rate": 0.641
+"pos_rate": 0.626
 },
 {
 "family": "thin_quiet_prelude_refund",
@@ -3775,6 +3775,13 @@
 },
 "generated": [
 {
+"ts": "2026-10-10T00:24",
+"name": "clock_surprise_fade",
+"status": "accepted",
+"rationale": "Payer: stop-loss and margin-call sellers (and breakout chasers) who push a move at a given clock time far beyond what that same clock slot normally produces; the fade is also symmetric (shorts spikes, longs dips).\nRATIONALE: The move is z-scored against the same minute-of-day's o",
+"note": "{\"name\": \"clock_surprise_fade\", \"grid\": 162, \"sec_per_param\": 0.015, \"active_frac\": 0.44115}"
+},
+{
 "ts": "2026-10-09T23:53",
 "name": "dwell_displacement_gap",
 "status": "accepted",
@@ -3850,49 +3857,9 @@
 "status": "accepted",
 "rationale": "Payer: liquidity providers and stale-quote resters who get run over in news-driven bursts, and late chasers. Price moves fast on a surge in tick rate, and the move continues while the surge is still on.\nThe family is long/short symmetric and only trades when activity is abnormal,",
 "note": "{\"name\": \"hot_tape_continuation\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.0052375}"
-},
-{
-"ts": "2026-10-09T18:15",
-"name": "downside_share_panic_bid",
-"status": "accepted",
-"rationale": "The director's only allowed new family is `thin_hour_impact_refund_demeaned`, and it already exists (n=16,602). I did not re-propose it. The thin/refund/slot/window words are hard-stopped.\nRATIONALE: This module is a separate, non-thin idea. Forced sellers (stop-outs and margin c",
-"note": "{\"name\": \"downside_share_panic_bid\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.4030875}"
 }
 ],
 "history": [
-{
-"t": 1791419005.0243788,
-"total": 29967581,
-"per_min": 0.0,
-"cpu": 27.4,
-"gpu": 83,
-"free_gb": 153.4,
-"dsr_bar": 6.42,
-"best_pm_1h": 1.98,
-"distinct": 26497039
-},
-{
-"t": 1791419352.911235,
-"total": 29970402,
-"per_min": 561.0,
-"cpu": 39.2,
-"gpu": 73,
-"free_gb": 128.2,
-"dsr_bar": 6.42,
-"best_pm_1h": 1.98,
-"distinct": 26499846
-},
-{
-"t": 1791419692.548094,
-"total": 29970987,
-"per_min": 64.0,
-"cpu": 26.5,
-"gpu": 75,
-"free_gb": 133.0,
-"dsr_bar": 6.42,
-"best_pm_1h": 1.98,
-"distinct": 26500335
-},
 {
 "t": 1791420044.370054,
 "total": 29972409,
@@ -6862,6 +6829,17 @@
 "dsr_bar": 6.4,
 "best_pm_1h": 2.28,
 "distinct": 27614302
+},
+{
+"t": 1791592735.903615,
+"total": 31102222,
+"per_min": 0.0,
+"cpu": 35.2,
+"gpu": 69,
+"free_gb": 178.6,
+"dsr_bar": 6.4,
+"best_pm_1h": 2.28,
+"distinct": 27616316
 }
 ],
 "instrument": "XAUUSD",
