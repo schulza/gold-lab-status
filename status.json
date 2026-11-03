@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-03 17:11:06 UTC",
+"generated_at": "2026-11-03 17:32:06 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": null,
 "gpu_pct": 2,
-"free_gb": 148.7,
-"uptime": "up 4 days,  3:29, 2 users, load averages: 64.11 66.26 62.56",
-"load": "{ 64.11 66.26 62.56 }"
+"free_gb": 153.7,
+"uptime": "up 4 days,  3:47, 2 users, load averages: 60.23 59.37 60.60",
+"load": "{ 60.23 59.37 60.60 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-03T17:21",
+"name": "hwm_drawdown_reset_hold",
+"status": "accepted",
+"rationale": "The payer is long-gold books run under a trailing monthly drawdown limit (CTA sleeves, prop desks, margin-funded accounts). They must cut when price falls k sigma below the month-to-date high, and they can only re-lever when the month turns. Their forced sale is done within hours",
+"note": "{\"name\": \"hwm_drawdown_reset_hold\", \"grid\": 162, \"sec_per_param\": 0.001, \"active_frac\": 0.123}"
+},
+{
 "ts": "2026-11-03T16:49",
 "name": "vol_decay_refill",
 "status": "accepted",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is vol-target funds and risk-parity books that cut gross when realised vol spikes, usually at a loss, and may only re-lever once vol decays back toward target. Their buy-back is set by the vol decay, not by price, so it is predictable and happens near the lows.\nTrigger:",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-03T11:06",
-"name": "reset_releverage_bid",
-"status": "accepted",
-"rationale": "PAYER = vol-target funds, FCM-margined books and risk-budget desks that cut on a drawdown breach in the period and may only re-lever once the day, week or month window resets. They buy back at a date fixed by the calendar, not by price.\nMeasured quantity: the previous period's pe",
-"note": "{\"name\": \"reset_releverage_bid\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.34475}"
 }
 ],
 "history": [
-{
-"t": 1793553349.645592,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.3,
-"gpu": 2,
-"free_gb": 187.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793554272.461313,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.3,
-"gpu": 42,
-"free_gb": 190.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793555195.414599,
 "total": 31310831,
@@ -4476,6 +4454,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 148.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793727126.823717,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": null,
+"gpu": 2,
+"free_gb": 153.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
