@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-03 10:56:56 UTC",
+"generated_at": "2026-11-03 11:12:52 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 9,
-"free_gb": 117.0,
-"uptime": "up 3 days, 21:17, 2 users, load averages: 40.89 40.38 40.79",
-"load": "{ 40.89 40.38 40.79 }"
+"gpu_pct": 6,
+"free_gb": 129.7,
+"uptime": "up 3 days, 21:33, 2 users, load averages: 41.67 41.39 41.35",
+"load": "{ 41.67 41.39 41.35 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-03T11:06",
+"name": "reset_releverage_bid",
+"status": "accepted",
+"rationale": "PAYER = vol-target funds, FCM-margined books and risk-budget desks that cut on a drawdown breach in the period and may only re-lever once the day, week or month window resets. They buy back at a date fixed by the calendar, not by price.\nMeasured quantity: the previous period's pe",
+"note": "{\"name\": \"reset_releverage_bid\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.34475}"
+},
+{
 "ts": "2026-11-03T10:34",
 "name": "vol_target_refill",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer = trend-chasers who buy into a clean, high-efficiency run and then sit through a stall: a stall means passive limit orders are absorbing the run's flow, so the chasers' next exit is the pressure. I test the follow and fade signs equally. It runs on path efficiency and range",
 "note": "{\"name\": \"run_stall_hold\", \"grid\": 162, \"sec_per_param\": 0.001, \"active_frac\": 0.6020625}"
-},
-{
-"ts": "2026-10-10T05:01",
-"name": "range_asymmetry_hold",
-"status": "rejected",
-"rationale": "Payer is stop-out and margin-call flow. When down-bars are persistently wider than up-bars, the move is driven by forced, price-insensitive sellers, and the market-makers and late trend-chasers who take the other side get paid or hurt by the hold-then-flat unwind. Both signs are ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793531173.456646,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 55.5,
-"gpu": 2,
-"free_gb": 144.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793532177.998684,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 100.0,
 "gpu": 9,
 "free_gb": 117.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793704372.9333398,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 6,
+"free_gb": 129.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
