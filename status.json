@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-03 10:24:52 UTC",
+"generated_at": "2026-11-03 10:40:58 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 9,
-"free_gb": 151.0,
-"uptime": "up 3 days, 20:45, 2 users, load averages: 41.51 40.82 41.21",
-"load": "{ 41.51 40.82 41.21 }"
+"gpu_pct": 20,
+"free_gb": 149.5,
+"uptime": "up 3 days, 21 hrs, 2 users, load averages: 46.74 42.48 41.55",
+"load": "{ 46.74 42.48 41.55 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-03T10:34",
+"name": "vol_target_refill",
+"status": "rejected",
+"rationale": "Payer = vol-target funds and risk-parity books that cut gold exposure after a realised-vol spike. They may only re-lever when the weekly or monthly rebalance window opens, so the refill is a calendar-dated flow that sits against the price move they sold into.\nTrade: on the first ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-03T10:03",
 "name": "calendar_reset_releverage",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is stop-out and margin-call flow. When down-bars are persistently wider than up-bars, the move is driven by forced, price-insensitive sellers, and the market-makers and late trend-chasers who take the other side get paid or hurt by the hold-then-flat unwind. Both signs are ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-10T04:31",
-"name": "quiet_hour_release",
-"status": "rejected",
-"rationale": "Payer is range-selling liquidity providers and short-vol hedgers who fade inside an hour that was quiet relative to the last n hours, and get run over when it releases. Their stops, plus breakout-triggered CTA orders, sit just outside the prior hour's box and are paid on release.",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793529209.500618,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 127.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793530221.241389,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 100.0,
 "gpu": 9,
 "free_gb": 151.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793702458.7364402,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 20,
+"free_gb": 149.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
