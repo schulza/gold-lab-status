@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-03 17:48:22 UTC",
+"generated_at": "2026-11-03 18:13:36 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": null,
 "gpu_pct": 2,
-"free_gb": 144.8,
-"uptime": "up 4 days,  4:08, 2 users, load averages: 65.46 64.58 63.59",
-"load": "{ 65.46 64.58 63.59 }"
+"free_gb": 145.9,
+"uptime": "up 4 days,  4:24, 2 users, load averages: 62.35 67.19 66.84",
+"load": "{ 62.72 67.18 66.84 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-03T17:57",
+"name": "absorbed_ceiling_fade",
+"status": "rejected",
+"rationale": "Payer is breakout buyers and stop-triggered chasers who repeatedly lift into a passive resting seller (or hit a resting bid) at the rolling extreme. Repeated touches that fail to exceed the level mean the passive side is absorbing flow, and a rejection candle shows the aggressors",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-03T17:21",
 "name": "hwm_drawdown_reset_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is vol-target funds and FCM risk desks. Their exposure is set by target vol divided by realised vol, so a vol spike forces them to cut into the decline. They only re-lever once realised vol has decayed back, on a rule-fixed schedule, so the refill bid is mechanical and not ",
 "note": "{\"name\": \"vol_target_refill\", \"grid\": 128, \"sec_per_param\": 0.0, \"active_frac\": 0.0326375}"
-},
-{
-"ts": "2026-11-03T11:36",
-"name": "vol_target_refill",
-"status": "rejected",
-"rationale": "The payer is vol-target funds and risk-parity books that cut gross when realised vol spikes, usually at a loss, and may only re-lever once vol decays back toward target. Their buy-back is set by the vol decay, not by price, so it is predictable and happens near the lows.\nTrigger:",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793556119.080967,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.2,
-"gpu": 2,
-"free_gb": 190.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793557046.25024,
 "total": 31310831,
@@ -4465,6 +4454,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 144.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793729616.6679308,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": null,
+"gpu": 2,
+"free_gb": 145.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
