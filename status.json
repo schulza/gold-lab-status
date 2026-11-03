@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-03 11:28:53 UTC",
+"generated_at": "2026-11-03 11:44:50 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 6,
-"free_gb": 143.3,
-"uptime": "up 3 days, 21:48, 2 users, load averages: 31.56 38.16 39.85",
-"load": "{ 31.56 38.16 39.85 }"
+"free_gb": 157.8,
+"uptime": "up 3 days, 22:04, 2 users, load averages: 39.60 38.95 39.71",
+"load": "{ 39.60 38.95 39.71 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-03T11:36",
+"name": "vol_target_refill",
+"status": "rejected",
+"rationale": "The payer is vol-target funds and risk-parity books that cut gross when realised vol spikes, usually at a loss, and may only re-lever once vol decays back toward target. Their buy-back is set by the vol decay, not by price, so it is predictable and happens near the lows.\nTrigger:",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-03T11:06",
 "name": "reset_releverage_bid",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is late-day hedgers and benchmark-bound flow that chases the morning move after a statistically large intraday displacement. Each day's morning window is scaled by trailing vol, so one-sided gold beta cancels by construction, which keeps it clear of the dead beta clusters.\n",
 "note": "{\"name\": \"morning_displacement_carry\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.045}"
-},
-{
-"ts": "2026-10-10T05:32",
-"name": "run_stall_hold",
-"status": "accepted",
-"rationale": "Payer = trend-chasers who buy into a clean, high-efficiency run and then sit through a stall: a stall means passive limit orders are absorbing the run's flow, so the chasers' next exit is the pressure. I test the follow and fade signs equally. It runs on path efficiency and range",
-"note": "{\"name\": \"run_stall_hold\", \"grid\": 162, \"sec_per_param\": 0.001, \"active_frac\": 0.6020625}"
 }
 ],
 "history": [
-{
-"t": 1793533105.2000918,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 41.1,
-"gpu": 24,
-"free_gb": 182.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793534110.4074602,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 100.0,
 "gpu": 6,
 "free_gb": 143.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793706290.7033339,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 6,
+"free_gb": 157.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
