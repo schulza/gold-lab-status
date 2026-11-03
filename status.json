@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-03 13:05:02 UTC",
+"generated_at": "2026-11-03 13:20:58 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 6,
-"free_gb": 139.1,
-"uptime": "up 3 days, 23:25, 2 users, load averages: 41.35 41.07 40.72",
-"load": "{ 41.35 41.07 40.72 }"
+"free_gb": 131.1,
+"uptime": "up 3 days, 23:41, 2 users, load averages: 36.89 39.04 40.05",
+"load": "{ 36.89 39.04 40.05 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-03T13:10",
+"name": "month_reset_releverage",
+"status": "rejected",
+"rationale": "Payer is the rule-bound risk desks (vol-target funds, FCM margin desks, loss-limit pods) that were cut during the period and can only re-lever at the calendar reset. This is the month/week reset family the director asked for.\nIt differs from `reset_releverage_bid` and `loss_limit",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-03T12:39",
 "name": "reset_breach_releverage",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is breakout chasers and stop-order holders who enter once the trailing window's range has expanded well beyond its own norm, while price sits at the window's edge. The expanded range means those stops fill into thin counterflow, and the run is more often spent than extended",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-10T07:05",
-"name": "efficiency_stall",
-"status": "accepted",
-"rationale": "Payer is trend-followers and breakout buyers who enter an unusually smooth (high path-efficiency) run, then get no follow-through (stall) and must exit into thinning bids; they are forced sellers/buyers, so a fade is paid by them.\nRATIONALE: Not a thin/refund/slot/window variant,",
-"note": "{\"name\": \"efficiency_stall\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.67025}"
 }
 ],
 "history": [
-{
-"t": 1793538343.373847,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 150.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793539335.563262,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 100.0,
 "gpu": 6,
 "free_gb": 139.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793712058.478274,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 6,
+"free_gb": 131.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
