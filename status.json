@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-03 14:40:59 UTC",
+"generated_at": "2026-11-03 14:56:58 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 6,
-"free_gb": 157.6,
-"uptime": "up 4 days,  1:01, 2 users, load averages: 32.49 39.00 39.75",
-"load": "{ 32.49 39.00 39.75 }"
+"free_gb": 157.1,
+"uptime": "up 4 days,  1:17, 2 users, load averages: 40.14 39.82 40.20",
+"load": "{ 40.14 39.82 40.20 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-03T14:44",
+"name": "month_reset_releverage",
+"status": "accepted",
+"rationale": "Payer is rule-bound desks (vol-target funds, FCM margin desks, prop desks) with a month-to-date loss limit. They cut when MTD P&L breaches k sigma and may only re-lever when the limit resets on the month turn at 22:00 UTC. They sell into the low, and that cut finishes within hour",
+"note": "{\"name\": \"month_reset_releverage\", \"grid\": 162, \"sec_per_param\": 0.001, \"active_frac\": 0.7746375}"
+},
+{
 "ts": "2026-11-03T14:12",
 "name": "week_reset_releverage",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the traders who cross at the end of the hour with their executions benchmarked to that hour's TWAP/average (benchmark-slice algos, fix-style order books). If the last close of the hour is stretched from the hour's running mean, the price has been pushed away from the ben",
 "note": "sandbox: AssertionError: zu speicherhungrig: 40 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-10-10T08:37",
-"name": "prior_range_failed_break",
-"status": "accepted",
-"rationale": "The direction's one allowed family, thin_hour_impact_refund_demeaned, already exists (16,602 trials, 76% positive), so I'm not re-proposing it, and anything thin/refund/slot is off-limits. This is a small non-thin family, with a grid of 54 and one payer.\nRATIONALE: Payer: traders",
-"note": "{\"name\": \"prior_range_failed_break\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.2894875}"
 }
 ],
 "history": [
-{
-"t": 1793544119.36255,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.3,
-"gpu": 37,
-"free_gb": 187.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793545042.063989,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 100.0,
 "gpu": 6,
 "free_gb": 157.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793717818.086609,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 6,
+"free_gb": 157.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
