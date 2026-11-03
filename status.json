@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-03 14:08:57 UTC",
+"generated_at": "2026-11-03 14:25:02 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 7,
-"free_gb": 153.9,
-"uptime": "up 4 days, 29 mins, 2 users, load averages: 40.08 40.79 40.6",
-"load": "{ 40.08 40.79 40.61 }"
+"gpu_pct": 6,
+"free_gb": 157.0,
+"uptime": "up 4 days, 45 mins, 2 users, load averages: 43.28 41.60 41.0",
+"load": "{ 43.28 41.60 41.00 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-03T14:12",
+"name": "week_reset_releverage",
+"status": "accepted",
+"rationale": "Payer is rule-bound risk desks and FCM margin desks. They cut after a period loss-limit breach and may only re-lever at the next reset, so they bid or offer into the reset window at predictable times. The signal trades that re-lever flow against the prior period's z-scored move, ",
+"note": "{\"name\": \"week_reset_releverage\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.06}"
+},
+{
 "ts": "2026-11-03T13:41",
 "name": "pre_reset_frontrun",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The direction's one allowed family, thin_hour_impact_refund_demeaned, already exists (16,602 trials, 76% positive), so I'm not re-proposing it, and anything thin/refund/slot is off-limits. This is a small non-thin family, with a grid of 54 and one payer.\nRATIONALE: Payer: traders",
 "note": "{\"name\": \"prior_range_failed_break\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.2894875}"
-},
-{
-"ts": "2026-10-10T08:07",
-"name": "wide_spread_normalise",
-"status": "rejected",
-"rationale": "The director's hard stop covers the thin/refund cluster, and `thin_hour_impact_refund_demeaned` already exists (16.6k trials, 76%), so I am not re-proposing it. This is a different mechanism that does not use hour slots.\nRATIONALE: Payer: liquidity providers and stop-loss takers ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793542273.1656032,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 4.0,
-"gpu": 2,
-"free_gb": 190.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793543196.23498,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 100.0,
 "gpu": 7,
 "free_gb": 153.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793715902.983979,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 6,
+"free_gb": 157.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
