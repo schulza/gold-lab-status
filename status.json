@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-03 20:04:12 UTC",
+"generated_at": "2026-11-03 20:25:16 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 80.5,
 "gpu_pct": 2,
-"free_gb": 117.6,
-"uptime": "up 4 days,  6:07, 2 users, load averages: 69.88 70.82 69.27",
-"load": "{ 69.88 70.82 69.27 }"
+"free_gb": 179.9,
+"uptime": "up 4 days,  6:40, 2 users, load averages: 47.58 65.37 69.92",
+"load": "{ 47.58 65.37 69.92 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-03T20:08",
+"name": "vol_spike_reset_rebid",
+"status": "rejected",
+"rationale": "The payer is vol-target funds and risk-parity books that cut exposure when realised vol spikes (peak short/long vol ratio at least k within a day or week period). They re-lever only at the next period reset, and only after vol has cooled, so the refill bid arrives at the reset ra",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-03T19:35",
 "name": "dual_stale_coil_break",
 "status": "accepted",
@@ -2446,38 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is rule-bound risk desks and FCM margin desks. They cut after a period loss-limit breach and may only re-lever at the next reset, so they bid or offer into the reset window at predictable times. The signal trades that re-lever flow against the prior period's z-scored move, ",
 "note": "{\"name\": \"week_reset_releverage\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.06}"
-},
-{
-"ts": "2026-11-03T13:41",
-"name": "pre_reset_frontrun",
-"status": "accepted",
-"rationale": "PAYER = vol-target funds, FCM margin books and risk-budget desks that were cut inside the week or month on a drawdown breach. They are still under-levered into the window close and may only rebuy at the calendar reset, so they buy at a date fixed by the clock. We buy before the r",
-"note": "{\"name\": \"pre_reset_frontrun\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.0677375}"
 }
 ],
 "history": [
-{
-"t": 1793563514.858102,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 2.9,
-"gpu": 2,
-"free_gb": 191.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793564439.111136,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.2,
-"gpu": 2,
-"free_gb": 190.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793565362.248616,
 "total": 31310831,
@@ -4443,6 +4421,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 117.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793737516.508866,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 80.5,
+"gpu": 2,
+"free_gb": 179.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
