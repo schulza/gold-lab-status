@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-03 22:36:11 UTC",
+"generated_at": "2026-11-03 23:00:25 UTC",
 "host": {
-"cpu_pct": 36.1,
-"gpu_pct": 29,
-"free_gb": 182.6,
-"uptime": "up 4 days,  8:56, 2 users, load averages: 12.98 13.84 15.30",
-"load": "{ 12.98 13.84 15.30 }"
+"cpu_pct": 100.0,
+"gpu_pct": 2,
+"free_gb": 118.2,
+"uptime": "up 4 days,  9:12, 2 users, load averages: 58.49 51.63 36.11",
+"load": "{ 58.49 51.63 36.11 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-03T22:47",
+"name": "vol_spike_calendar_relever",
+"status": "rejected",
+"rationale": "PAYER = vol-target funds and risk-parity books that must cut gross when short-horizon realised vol jumps against its 20-day norm, then may only re-lever when the weekly or monthly risk-budget window resets. The reset date, not the shock, fixes the re-entry time. This is a vol-rat",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-03T22:14",
 "name": "reset_releverage_bid",
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is vol-target funds and risk-limit desks. Realised vol jumps, so they cut exposure mechanically and sell into the move at a price they do not choose. Once vol decays back toward its slow baseline, their rules let them re-lever, and that buying lags the price recovery.\nRATIO",
 "note": "{\"name\": \"vol_decay_refill\", \"grid\": 144, \"sec_per_param\": 0.023, \"active_frac\": 0.0252}"
-},
-{
-"ts": "2026-11-03T16:17",
-"name": "absorbed_stop_run_reclaim",
-"status": "rejected",
-"rationale": "Payer is breakout sellers and buyers whose stops sit beyond a rolling extreme. Repeated stop-runs there that barely extend past the old extreme show the stop orders are exhausted and absorbed by passive liquidity. The late chasers then lose when price reclaims.\nRATIONALE: The sig",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793572764.301387,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.6,
-"gpu": 40,
-"free_gb": 192.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793573687.282946,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.5,
-"gpu": 2,
-"free_gb": 193.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793574610.145982,
 "total": 31310831,
@@ -4432,6 +4410,17 @@
 "cpu": 36.1,
 "gpu": 29,
 "free_gb": 182.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793746825.014206,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 118.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
