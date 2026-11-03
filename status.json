@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-03 12:33:02 UTC",
+"generated_at": "2026-11-03 12:48:58 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 6,
-"free_gb": 157.2,
-"uptime": "up 3 days, 22:53, 2 users, load averages: 42.36 40.75 40.32",
-"load": "{ 42.36 40.75 40.32 }"
+"free_gb": 151.6,
+"uptime": "up 3 days, 23:09, 2 users, load averages: 34.47 39.98 40.46",
+"load": "{ 34.47 39.98 40.46 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-03T12:39",
+"name": "reset_breach_releverage",
+"status": "rejected",
+"rationale": "Payer is rule-bound risk desks, vol-target funds and FCM margin desks. They cut on a calendar-period loss-limit breach and may only re-lever when the week or month window resets, so the refill is forced and lands on a known date.\nRATIONALE: Breach depth or period-close loss is me",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-03T12:07",
 "name": "vol_target_refill",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is trend-followers and breakout buyers who enter an unusually smooth (high path-efficiency) run, then get no follow-through (stall) and must exit into thinning bids; they are forced sellers/buyers, so a fade is paid by them.\nRATIONALE: Not a thin/refund/slot/window variant,",
 "note": "{\"name\": \"efficiency_stall\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.67025}"
-},
-{
-"ts": "2026-10-10T06:34",
-"name": null,
-"status": "rejected",
-"rationale": "The director's only permitted family, `thin_hour_impact_refund_demeaned`, already exists (16,602 trials, 76% positive), so I am not resubmitting it or any thin/refund variant. This is one small orthogonal test with a 36-signature grid. Payer: trend and ETF buyers who bought gold ",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1793537158.890759,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 47.7,
-"gpu": 13,
-"free_gb": 185.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793538343.373847,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 100.0,
 "gpu": 6,
 "free_gb": 157.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793710138.5175931,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 6,
+"free_gb": 151.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
