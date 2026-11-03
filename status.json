@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-03 13:36:54 UTC",
+"generated_at": "2026-11-03 13:52:59 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 6,
-"free_gb": 145.1,
-"uptime": "up 3 days, 23:57, 2 users, load averages: 42.50 41.47 40.92",
-"load": "{ 42.50 41.47 40.92 }"
+"free_gb": 157.7,
+"uptime": "up 4 days, 13 mins, 2 users, load averages: 42.91 40.64 40.5",
+"load": "{ 42.91 40.64 40.52 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-03T13:41",
+"name": "pre_reset_frontrun",
+"status": "accepted",
+"rationale": "PAYER = vol-target funds, FCM margin books and risk-budget desks that were cut inside the week or month on a drawdown breach. They are still under-levered into the window close and may only rebuy at the calendar reset, so they buy at a date fixed by the clock. We buy before the r",
+"note": "{\"name\": \"pre_reset_frontrun\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.0677375}"
+},
+{
 "ts": "2026-11-03T13:10",
 "name": "month_reset_releverage",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The director's hard stop covers the thin/refund cluster, and `thin_hour_impact_refund_demeaned` already exists (16.6k trials, 76%), so I am not re-proposing it. This is a different mechanism that does not use hour slots.\nRATIONALE: Payer: liquidity providers and stop-loss takers ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-10-10T07:36",
-"name": "range_expansion_edge_fade",
-"status": "rejected",
-"rationale": "Payer is breakout chasers and stop-order holders who enter once the trailing window's range has expanded well beyond its own norm, while price sits at the window's edge. The expanded range means those stops fill into thin counterflow, and the run is more often spent than extended",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793540382.654569,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 134.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793541348.995127,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 100.0,
 "gpu": 6,
 "free_gb": 145.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793713979.8929942,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 6,
+"free_gb": 157.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
