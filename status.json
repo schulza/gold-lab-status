@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-03 22:05:04 UTC",
+"generated_at": "2026-11-03 22:20:38 UTC",
 "host": {
-"cpu_pct": 41.7,
+"cpu_pct": 40.0,
 "gpu_pct": 2,
-"free_gb": 179.0,
-"uptime": "up 4 days,  8:25, 2 users, load averages: 17.68 17.75 19.23",
-"load": "{ 17.68 17.75 19.23 }"
+"free_gb": 181.3,
+"uptime": "up 4 days,  8:41, 2 users, load averages: 14.67 15.72 17.15",
+"load": "{ 14.67 15.72 17.15 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-03T22:14",
+"name": "reset_releverage_bid",
+"status": "rejected",
+"rationale": "Payer is rule-bound vol-target and loss-limit desks. They cut after a limit breach or a vol spike and may only re-lever when the calendar window (week or month) resets. That makes the reset bar a forced, dated bid.\nRATIONALE: Two long-only modes. \"loss\" fires when the prior windo",
+"note": "sandbox: AssertionError: expected exactly one new family, got []"
+},
+{
 "ts": "2026-11-03T21:43",
 "name": "vol_drop_releverage",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is breakout sellers and buyers whose stops sit beyond a rolling extreme. Repeated stop-runs there that barely extend past the old extreme show the stop orders are exhausted and absorbed by passive liquidity. The late chasers then lose when price reclaims.\nRATIONALE: The sig",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-03T15:46",
-"name": "spread_normalisation_refund",
-"status": "rejected",
-"rationale": "Payer is the liquidity taker who crossed a wide spread. During a spread-widening episode, dealers have withdrawn depth, so forced or urgent flow pays up and displaces the mid. Once the spread normalises, dealers re-quote around fair value and the displacement refunds.\nRATIONALE: ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793570918.5691478,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.5,
-"gpu": 2,
-"free_gb": 193.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793571841.386187,
 "total": 31310831,
@@ -4432,6 +4421,17 @@
 "cpu": 41.7,
 "gpu": 2,
 "free_gb": 179.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793744438.8091478,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 40.0,
+"gpu": 2,
+"free_gb": 181.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
