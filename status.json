@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-03 15:12:59 UTC",
+"generated_at": "2026-11-03 15:28:58 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 6,
-"free_gb": 138.6,
-"uptime": "up 4 days,  1:33, 2 users, load averages: 41.97 41.41 40.79",
-"load": "{ 41.97 41.41 40.79 }"
+"free_gb": 115.9,
+"uptime": "up 4 days,  1:49, 2 users, load averages: 42.44 42.32 41.63",
+"load": "{ 42.44 42.32 41.63 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-03T15:15",
+"name": null,
+"status": "rejected",
+"rationale": "Payer is slow-reacting trend and managed-money longs (or shorts) whose positioning is crowded (COT z-score) just as real yields move against the gold thesis. They cut late, because the COT data is weekly and their risk limits bind with a lag, so the marginal forced seller pays us",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-03T14:44",
 "name": "month_reset_releverage",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer: traders who fade the morning drive and park stops beyond the UTC day open. The open is a visible anchor, and the first retest after a k-sigma drive forces a decision there.\nRATIONALE: This is not a thin/refund family and not a neighbour of week_open_anchor_pull, open_drive",
 "note": "{\"name\": \"day_open_retest_hold\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.024225}"
-},
-{
-"ts": "2026-10-10T09:09",
-"name": "hour_mean_stretch_fade",
-"status": "rejected",
-"rationale": "Payer is the traders who cross at the end of the hour with their executions benchmarked to that hour's TWAP/average (benchmark-slice algos, fix-style order books). If the last close of the hour is stretched from the hour's running mean, the price has been pushed away from the ben",
-"note": "sandbox: AssertionError: zu speicherhungrig: 40 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1793546888.079176,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.3,
-"gpu": 36,
-"free_gb": 187.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793547811.309252,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 100.0,
 "gpu": 6,
 "free_gb": 138.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793719738.423412,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 6,
+"free_gb": 115.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
