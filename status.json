@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-03 18:13:36 UTC",
+"generated_at": "2026-11-03 18:32:16 UTC",
 "host": {
-"cpu_pct": null,
+"cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 145.9,
-"uptime": "up 4 days,  4:24, 2 users, load averages: 62.35 67.19 66.84",
-"load": "{ 62.72 67.18 66.84 }"
+"free_gb": 150.1,
+"uptime": "up 4 days,  4:49, 2 users, load averages: 93.55 78.70 73.34",
+"load": "{ 93.55 78.70 73.34 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-03T18:31",
+"name": "month_reset_breach_rebuy",
+"status": "rejected",
+"rationale": "Payer is a managed-account or prop desk with a monthly drawdown limit. It was forced to cut after its month-to-date loss crossed `k` times the month's own realised volatility. It cannot re-lever until the new month's risk budget starts, so it buys back in the first `hold` hours a",
+"note": "sandbox: NameError: name 'FAMILIES' is not defined"
+},
+{
 "ts": "2026-11-03T17:57",
 "name": "absorbed_ceiling_fade",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is rule-bound risk desks, vol-target funds and FCM margin desks. They cut on a calendar-period loss-limit breach and may only re-lever when the week or month window resets, so the refill is forced and lands on a known date.\nRATIONALE: Breach depth or period-close loss is me",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-03T12:07",
-"name": "vol_target_refill",
-"status": "accepted",
-"rationale": "Payer is vol-target funds and FCM risk desks. Their exposure is set by target vol divided by realised vol, so a vol spike forces them to cut into the decline. They only re-lever once realised vol has decayed back, on a rule-fixed schedule, so the refill bid is mechanical and not ",
-"note": "{\"name\": \"vol_target_refill\", \"grid\": 128, \"sec_per_param\": 0.0, \"active_frac\": 0.0326375}"
 }
 ],
 "history": [
-{
-"t": 1793557046.25024,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 97.7,
-"gpu": 2,
-"free_gb": 148.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793557969.6617851,
 "total": 31310831,
@@ -4465,6 +4454,17 @@
 "cpu": null,
 "gpu": 2,
 "free_gb": 145.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793730736.9311109,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 150.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
