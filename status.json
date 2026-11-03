@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-03 20:25:16 UTC",
+"generated_at": "2026-11-03 20:47:19 UTC",
 "host": {
-"cpu_pct": 80.5,
+"cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 179.9,
-"uptime": "up 4 days,  6:40, 2 users, load averages: 47.58 65.37 69.92",
-"load": "{ 47.58 65.37 69.92 }"
+"free_gb": 142.9,
+"uptime": "up 4 days,  7:01, 2 users, load averages: 74.28 72.00 71.51",
+"load": "{ 74.28 72.00 71.51 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-03T20:41",
+"name": null,
+"status": "rejected",
+"rationale": "Payer is slow macro allocators (real-asset and TIPS-vs-gold relative-value books) who reprice gold only on weekly or monthly rebalances, so gold lags a real-yield move. The faster intraday book that fades the lag pays them. The signal is the rolling regression residual of gold's ",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-03T20:08",
 "name": "vol_spike_reset_rebid",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is rule-bound desks (vol-target funds, FCM margin desks, prop desks) with a month-to-date loss limit. They cut when MTD P&L breaches k sigma and may only re-lever when the limit resets on the month turn at 22:00 UTC. They sell into the low, and that cut finishes within hour",
 "note": "{\"name\": \"month_reset_releverage\", \"grid\": 162, \"sec_per_param\": 0.001, \"active_frac\": 0.7746375}"
-},
-{
-"ts": "2026-11-03T14:12",
-"name": "week_reset_releverage",
-"status": "accepted",
-"rationale": "Payer is rule-bound risk desks and FCM margin desks. They cut after a period loss-limit breach and may only re-lever at the next reset, so they bid or offer into the reset window at predictable times. The signal trades that re-lever flow against the prior period's z-scored move, ",
-"note": "{\"name\": \"week_reset_releverage\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.06}"
 }
 ],
 "history": [
-{
-"t": 1793565362.248616,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 6.0,
-"gpu": 38,
-"free_gb": 188.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793566298.976108,
 "total": 31310831,
@@ -4432,6 +4421,17 @@
 "cpu": 80.5,
 "gpu": 2,
 "free_gb": 179.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793738839.445766,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 142.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
