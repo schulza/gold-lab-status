@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-03 16:35:29 UTC",
+"generated_at": "2026-11-03 16:53:26 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 6,
-"free_gb": 124.7,
-"uptime": "up 4 days,  2:52, 2 users, load averages: 54.88 38.14 31.40",
-"load": "{ 54.88 38.14 31.40 }"
+"gpu_pct": 2,
+"free_gb": 148.5,
+"uptime": "up 4 days,  3:11, 2 users, load averages: 62.17 61.71 53.93",
+"load": "{ 62.16 61.71 53.98 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-03T16:49",
+"name": "vol_decay_refill",
+"status": "accepted",
+"rationale": "Payer is vol-target funds and risk-limit desks. Realised vol jumps, so they cut exposure mechanically and sell into the move at a price they do not choose. Once vol decays back toward its slow baseline, their rules let them re-lever, and that buying lags the price recovery.\nRATIO",
+"note": "{\"name\": \"vol_decay_refill\", \"grid\": 144, \"sec_per_param\": 0.023, \"active_frac\": 0.0252}"
+},
+{
 "ts": "2026-11-03T16:17",
 "name": "absorbed_stop_run_reclaim",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "PAYER = vol-target funds, FCM-margined books and risk-budget desks that cut on a drawdown breach in the period and may only re-lever once the day, week or month window resets. They buy back at a date fixed by the calendar, not by price.\nMeasured quantity: the previous period's pe",
 "note": "{\"name\": \"reset_releverage_bid\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.34475}"
-},
-{
-"ts": "2026-11-03T10:34",
-"name": "vol_target_refill",
-"status": "rejected",
-"rationale": "Payer = vol-target funds and risk-parity books that cut gold exposure after a realised-vol spike. They may only re-lever when the weekly or monthly rebalance window opens, so the refill is a calendar-dated flow that sits against the price move they sold into.\nTrade: on the first ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793551503.799307,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 6.4,
-"gpu": 2,
-"free_gb": 189.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793552426.558536,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 100.0,
 "gpu": 6,
 "free_gb": 124.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793724806.256692,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 148.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
