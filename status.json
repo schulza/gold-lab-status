@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-04 04:51:33 UTC",
+"generated_at": "2026-11-04 05:07:10 UTC",
 "host": {
-"cpu_pct": 58.7,
+"cpu_pct": 47.2,
 "gpu_pct": 2,
-"free_gb": 178.4,
-"uptime": "up 4 days, 15:11, 2 users, load averages: 26.86 25.77 31.34",
-"load": "{ 26.86 25.77 31.34 }"
+"free_gb": 178.7,
+"uptime": "up 4 days, 15:27, 2 users, load averages: 16.76 20.10 24.42",
+"load": "{ 16.76 20.10 24.42 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-04T04:52",
+"name": "reset_window_relever",
+"status": "accepted",
+"rationale": "The payer is rule-bound risk desks: vol-target funds, FCM margin desks and prop desks with a period loss limit. A breach forces them to cut, and the limit only resets at the 22:00 UTC day roll or the Sunday 22:00 UTC week roll. Their re-lever is paid for by whoever sold the exhau",
+"note": "{\"name\": \"reset_window_relever\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.108}"
+},
+{
 "ts": "2026-11-04T04:20",
 "name": "vol_budget_refill",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "PAYER = vol-target funds and risk-parity books that must cut gross when short-horizon realised vol jumps against its 20-day norm, then may only re-lever when the weekly or monthly risk-budget window resets. The reset date, not the shock, fixes the re-entry time. This is a vol-rat",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-03T22:14",
-"name": "reset_releverage_bid",
-"status": "rejected",
-"rationale": "Payer is rule-bound vol-target and loss-limit desks. They cut after a limit breach or a vol spike and may only re-lever when the calendar window (week or month) resets. That makes the reset bar a forced, dated bid.\nRATIONALE: Two long-only modes. \"loss\" fires when the prior windo",
-"note": "sandbox: AssertionError: expected exactly one new family, got []"
 }
 ],
 "history": [
-{
-"t": 1793595835.584447,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.5,
-"gpu": 2,
-"free_gb": 192.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793596758.3615339,
 "total": 31310831,
@@ -4344,6 +4333,17 @@
 "cpu": 58.7,
 "gpu": 2,
 "free_gb": 178.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793768830.300517,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 47.2,
+"gpu": 2,
+"free_gb": 178.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
