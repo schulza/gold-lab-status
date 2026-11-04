@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-04 19:28:49 UTC",
+"generated_at": "2026-11-04 19:45:32 UTC",
 "host": {
-"cpu_pct": 67.1,
+"cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 174.0,
-"uptime": "up 5 days,  5:49, 2 users, load averages: 30.37 35.79 52.44",
-"load": "{ 30.37 35.79 52.44 }"
+"free_gb": 157.1,
+"uptime": "up 5 days,  6:05, 2 users, load averages: 70.15 71.62 64.87",
+"load": "{ 70.15 71.62 64.87 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-04T19:37",
+"name": "release_desk_rebuild",
+"status": "rejected",
+"rationale": "Payer is the risk-limited desk that goes flat before a scheduled US print (first-Friday NFP, weekly Thursday claims) and rebuilds after the first spread and vol blowout settles. The rebuild flow lands in the direction of the print's own move, so the strategy enters `wait` minutes",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-04T19:03",
 "name": "nfp_flat_rebuild_long",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is risk desks and event-driven funds that cut longs ahead of NFP/FOMC and force the selling into the pre-release window. They re-enter after the release, so price still carries a temporary concession that gets refunded.\nRATIONALE: Entry is long-only (shorts are a dead idea)",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-04T12:58",
-"name": "index_roll_settle_runup",
-"status": "accepted",
-"rationale": "Payer is the commodity-index-tracker roll book (GSCI BD 5-9, BCOM BD 6-10). It has to buy the deferred gold contract in fixed fifths into the COMEX settlement. Short-horizon sellers and market makers who fade that predictable bid pay for it.\nRATIONALE: `index_roll_window_long` an",
-"note": "{\"name\": \"index_roll_settle_runup\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.055125}"
 }
 ],
 "history": [
-{
-"t": 1793648441.9845178,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.0,
-"gpu": 2,
-"free_gb": 191.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793649365.147077,
 "total": 31310831,
@@ -4201,6 +4190,17 @@
 "cpu": 67.1,
 "gpu": 2,
 "free_gb": 174.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793821532.41579,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 157.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
