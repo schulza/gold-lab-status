@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-04 09:30:50 UTC",
+"generated_at": "2026-11-04 09:53:04 UTC",
 "host": {
-"cpu_pct": 94.2,
-"gpu_pct": 2,
-"free_gb": 165.4,
-"uptime": "up 4 days, 19:44, 2 users, load averages: 44.95 62.94 66.44",
-"load": "{ 44.95 62.94 66.44 }"
+"cpu_pct": 100.0,
+"gpu_pct": 20,
+"free_gb": 150.2,
+"uptime": "up 4 days, 20:07, 2 users, load averages: 72.80 70.90 69.74",
+"load": "{ 72.80 70.90 69.74 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-04T09:35",
+"name": "gotobi_settlement_long",
+"status": "accepted",
+"rationale": "The payer is Japanese importers and corporate treasuries. They settle USD on Gotobi days (5th, 10th, 15th, 20th, 25th and month-end, moved to the prior business day), and the flow is concentrated before the Tokyo fix at about 00:55 UTC. Counterparties who hold gold against USD, a",
+"note": "{\"name\": \"gotobi_settlement_long\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.045}"
+},
+{
 "ts": "2026-11-04T09:01",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is rule-bound risk desks, vol-target funds and FCM margin desks. After a weekly loss-limit breach they must cut during the week and may only re-lever when the next weekly window opens. That window opens at the Sunday 22:00 UTC open, so I use the week as the clock.\nRATIO",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-04T03:16",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is crowded speculative futures positioning (CFTC non-commercial net at a 52-week extreme). It is held through a scheduled NFP or FOMC release. Crowded longs, when real yields are already rising, are exposed to a discount-rate shock and must liquidate into the print. Crowded",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1793612446.7150452,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.6,
-"gpu": 2,
-"free_gb": 192.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793613369.55745,
 "total": 31310831,
@@ -4333,6 +4322,17 @@
 "cpu": 94.2,
 "gpu": 2,
 "free_gb": 165.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793785984.016227,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 20,
+"free_gb": 150.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
