@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-04 06:40:21 UTC",
+"generated_at": "2026-11-04 06:55:53 UTC",
 "host": {
-"cpu_pct": 64.8,
-"gpu_pct": 32,
-"free_gb": 176.7,
-"uptime": "up 4 days, 17 hrs, 2 users, load averages: 22.46 20.73 19.02",
-"load": "{ 22.46 20.73 19.02 }"
+"cpu_pct": 50.3,
+"gpu_pct": 2,
+"free_gb": 174.2,
+"uptime": "up 4 days, 17:16, 2 users, load averages: 23.60 22.39 21.04",
+"load": "{ 23.60 22.39 21.04 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-04T06:55",
+"name": null,
+"status": "rejected",
+"rationale": "The payer is risk desks and prop books that run flat into NFP and FOMC under pre-release limits. After the print they must rebuild gold exposure at the post-release spread, and the schedule is public.\nRATIONALE: Long-only. The single free window is hours after the release (delay,",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-04T06:24",
 "name": "index_roll_window_long",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is rule-bound risk desks and vol-target funds that cut after a period loss and may only re-lever when the calendar window resets. The signal is long only, in a window after the new week or month starts, and only if the prior period's drawdown or loss was at least k sigma. N",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-04T00:29",
-"name": "vol_spike_period_refill",
-"status": "accepted",
-"rationale": "The payer is vol-target funds and risk desks. A vol-based limit cuts exposure when realised vol spikes inside a week or month, and the book can only re-lever on the reset date. Their re-buy (after a falling period) or re-sell (after a rising one) arrives on a date the calendar fi",
-"note": "{\"name\": \"vol_spike_period_refill\", \"grid\": 192, \"sec_per_param\": 0.002, \"active_frac\": 0.0665}"
 }
 ],
 "history": [
-{
-"t": 1793602295.818131,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.5,
-"gpu": 2,
-"free_gb": 192.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793603218.5527081,
 "total": 31310831,
@@ -4344,6 +4333,17 @@
 "cpu": 64.8,
 "gpu": 32,
 "free_gb": 176.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793775353.100839,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 50.3,
+"gpu": 2,
+"free_gb": 174.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
