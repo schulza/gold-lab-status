@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-04 16:41:17 UTC",
+"generated_at": "2026-11-04 17:04:06 UTC",
 "host": {
-"cpu_pct": 98.1,
+"cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 176.4,
-"uptime": "up 5 days,  2:54, 2 users, load averages: 58.90 74.13 74.60",
-"load": "{ 58.90 74.13 74.60 }"
+"free_gb": 153.9,
+"uptime": "up 5 days,  3:17, 2 users, load averages: 74.02 76.74 76.82",
+"load": "{ 74.02 76.74 76.82 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-04T16:52",
+"name": "nfp_desk_reentry",
+"status": "rejected",
+"rationale": "Payer is risk desks that go flat before NFP (first Friday, 12:30 or 13:30 UTC depending on DST). They re-enter after the print in the direction of the book they ran down. The latecomers who stayed out of the old trend pay for that catch-up flow.\nRATIONALE: The release calendar is",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-04T16:19",
 "name": "release_pressure_reentry",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The index-roll and release re-entry windows already exist (`index_roll_window_long`, `release_reentry_follow`), so this uses a different payer. On US exchange holidays COMEX is shut or on a halt and only thin OTC dealer books trade gold. Whoever pushes price there pays the dealer",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-04T10:09",
-"name": "benchmark_closed_session_long",
-"status": "accepted",
-"rationale": "The payer is whoever has to trade gold on days when the LBMA auction is shut (UK bank holidays) or US desks are out (US federal holidays). Producers, hedgers and stop-loss sellers with a deadline cannot wait for the benchmark, so they concede price to the few dealers who still qu",
-"note": "{\"name\": \"benchmark_closed_session_long\", \"grid\": 72, \"sec_per_param\": 0.01, \"active_frac\": 0.01}"
 }
 ],
 "history": [
-{
-"t": 1793638288.0284002,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.6,
-"gpu": 2,
-"free_gb": 192.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793639210.896487,
 "total": 31310831,
@@ -4234,6 +4223,17 @@
 "cpu": 98.1,
 "gpu": 2,
 "free_gb": 176.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793811846.0703528,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 153.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
