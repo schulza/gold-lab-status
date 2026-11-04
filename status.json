@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-04 00:09:12 UTC",
+"generated_at": "2026-11-04 00:32:40 UTC",
 "host": {
-"cpu_pct": null,
+"cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 137.8,
-"uptime": "up 4 days, 10:21, 2 users, load averages: 74.40 71.72 69.69",
-"load": "{ 74.93 71.88 69.75 }"
+"free_gb": 144.2,
+"uptime": "up 4 days, 10:45, 2 users, load averages: 75.15 71.14 71.55",
+"load": "{ 75.15 71.14 71.55 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-04T00:29",
+"name": "vol_spike_period_refill",
+"status": "accepted",
+"rationale": "The payer is vol-target funds and risk desks. A vol-based limit cuts exposure when realised vol spikes inside a week or month, and the book can only re-lever on the reset date. Their re-buy (after a falling period) or re-sell (after a rising one) arrives on a date the calendar fi",
+"note": "{\"name\": \"vol_spike_period_refill\", \"grid\": 192, \"sec_per_param\": 0.002, \"active_frac\": 0.0665}"
+},
+{
 "ts": "2026-11-03T23:55",
 "name": "drawdown_limit_relever",
 "status": "accepted",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is a managed-account or prop desk with a monthly drawdown limit. It was forced to cut after its month-to-date loss crossed `k` times the month's own realised volatility. It cannot re-lever until the new month's risk budget starts, so it buys back in the first `hold` hours a",
 "note": "sandbox: NameError: name 'FAMILIES' is not defined"
-},
-{
-"ts": "2026-11-03T17:57",
-"name": "absorbed_ceiling_fade",
-"status": "rejected",
-"rationale": "Payer is breakout buyers and stop-triggered chasers who repeatedly lift into a passive resting seller (or hit a resting bid) at the rolling extreme. Repeated touches that fail to exceed the level mean the passive side is absorbing flow, and a rejection candle shows the aggressors",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793578301.837939,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.1,
-"gpu": 2,
-"free_gb": 191.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793579224.843873,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.5,
-"gpu": 2,
-"free_gb": 191.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793580147.656311,
 "total": 31310831,
@@ -4410,6 +4388,17 @@
 "cpu": null,
 "gpu": 2,
 "free_gb": 137.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793752360.225882,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 144.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
