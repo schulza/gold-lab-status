@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-04 08:13:49 UTC",
+"generated_at": "2026-11-04 08:29:24 UTC",
 "host": {
-"cpu_pct": 82.4,
-"gpu_pct": 2,
-"free_gb": 173.4,
-"uptime": "up 4 days, 18:34, 2 users, load averages: 31.63 28.97 28.78",
-"load": "{ 31.63 28.97 28.78 }"
+"cpu_pct": 78.7,
+"gpu_pct": 17,
+"free_gb": 176.6,
+"uptime": "up 4 days, 18:49, 2 users, load averages: 32.03 29.09 29.58",
+"load": "{ 32.03 29.09 29.58 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-04T08:28",
+"name": "release_reentry_follow",
+"status": "accepted",
+"rationale": "The payer is risk desks that flatten ahead of the 08:30 ET US data slot and re-enter afterwards. Everyone who sold into the pre-release move has to buy back or re-sell in the same direction, and the strategy takes the other side of that scheduled rebuild.\nRATIONALE: The release t",
+"note": "{\"name\": \"release_reentry_follow\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.015}"
+},
+{
 "ts": "2026-11-04T07:57",
 "name": "release_reentry_window_long",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is rule-bound risk desks and vol-target funds that cut after a period loss and may only re-lever at the next calendar window (week open or month open); their forced re-buy is paid for by whoever sells into the first hours of the new window.\nRATIONALE: The trigger is the com",
 "note": "{\"name\": \"prior_period_loss_rebid\", \"grid\": 144, \"sec_per_param\": 0.02, \"active_frac\": 0.003}"
-},
-{
-"ts": "2026-11-04T02:05",
-"name": "period_reset_refill",
-"status": "rejected",
-"rationale": "Payer is rule-bound risk desks (weekly or monthly loss limits) and vol-target funds. They are forced to cut after a period loss beyond their limit and may only re-lever when the calendar window resets. The refill bid lands in the first hours of the new period, and the mirror case",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793607832.5435781,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.2,
-"gpu": 2,
-"free_gb": 192.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793608755.364351,
 "total": 31310831,
@@ -4344,6 +4333,17 @@
 "cpu": 82.4,
 "gpu": 2,
 "free_gb": 173.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793780964.681966,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 78.7,
+"gpu": 17,
+"free_gb": 176.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
