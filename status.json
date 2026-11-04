@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-04 09:53:04 UTC",
+"generated_at": "2026-11-04 10:13:52 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 20,
-"free_gb": 150.2,
-"uptime": "up 4 days, 20:07, 2 users, load averages: 72.80 70.90 69.74",
-"load": "{ 72.80 70.90 69.74 }"
+"gpu_pct": 2,
+"free_gb": 157.0,
+"uptime": "up 4 days, 20:29, 2 users, load averages: 78.12 73.80 72.00",
+"load": "{ 77.55 73.76 71.99 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-04T10:09",
+"name": "benchmark_closed_session_long",
+"status": "accepted",
+"rationale": "The payer is whoever has to trade gold on days when the LBMA auction is shut (UK bank holidays) or US desks are out (US federal holidays). Producers, hedgers and stop-loss sellers with a deadline cannot wait for the benchmark, so they concede price to the few dealers who still qu",
+"note": "{\"name\": \"benchmark_closed_session_long\", \"grid\": 72, \"sec_per_param\": 0.01, \"active_frac\": 0.01}"
+},
+{
 "ts": "2026-11-04T09:35",
 "name": "gotobi_settlement_long",
 "status": "accepted",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is vol-target funds and risk-budget desks that size off a trailing daily vol. After a day whose realised vol collapsed against that sizing vol (or after a down day whose vol spike forced the cut), they are under-levered at the next daily reset and must buy back. They are bo",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-04T03:49",
-"name": "weekly_cut_rebid",
-"status": "rejected",
-"rationale": "The payer is rule-bound risk desks, vol-target funds and FCM margin desks. After a weekly loss-limit breach they must cut during the week and may only re-lever when the next weekly window opens. That window opens at the Sunday 22:00 UTC open, so I use the week as the clock.\nRATIO",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793613369.55745,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.5,
-"gpu": 2,
-"free_gb": 192.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793614292.455729,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 2.1,
-"gpu": 2,
-"free_gb": 192.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793615215.244818,
 "total": 31310831,
@@ -4333,6 +4311,17 @@
 "cpu": 100.0,
 "gpu": 20,
 "free_gb": 150.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793787232.8056362,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 157.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
