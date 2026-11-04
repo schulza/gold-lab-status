@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-04 22:20:44 UTC",
+"generated_at": "2026-11-04 22:43:38 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 130.6,
-"uptime": "up 5 days,  8:33, 2 users, load averages: 67.57 73.18 74.84",
-"load": "{ 67.57 73.18 74.84 }"
+"free_gb": 147.9,
+"uptime": "up 5 days,  8:57, 2 users, load averages: 95.70 78.49 75.44",
+"load": "{ 95.70 78.49 75.44 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-04T22:24",
+"name": "holiday_desk_flatten_long",
+"status": "rejected",
+"rationale": "The payer is dealer and prop risk desks that flatten books into US holidays under reduced holiday risk limits, and the retail and Asian flow that trades the thin holiday session. Desks sell inventory at a concession into the pre-holiday US afternoon, and the liquidity provider wh",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-04T21:50",
 "name": "index_roll_settle_slice",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the risk desks forced flat before the 08:30 ET US data release. They sell into thin pre-release liquidity (a forced exit, not an information-driven one) and re-buy after the print. The strategy provides that re-entry bid, long-only, and only after a statistically large p",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-04T15:46",
-"name": "nfp_release_reentry",
-"status": "rejected",
-"rationale": "Payer is the risk desks and vol-targeted books that are cut flat ahead of NFP by a pre-event limit rule. They sell into a thin pre-release book at a concession, and when the limit resets after the release they have to re-buy. This is long-only and calendar-driven, with the releas",
-"note": "sandbox: NameError: name 'FAMILIES' is not defined"
 }
 ],
 "history": [
-{
-"t": 1793658777.989297,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 151.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793659739.0430138,
 "total": 31310831,
@@ -4168,6 +4157,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 130.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793832218.756665,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 147.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
