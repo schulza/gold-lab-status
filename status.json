@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-04 01:57:45 UTC",
+"generated_at": "2026-11-04 02:20:37 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 146.0,
-"uptime": "up 4 days, 12:16, 2 users, load averages: 72.03 72.62 73.64",
-"load": "{ 72.03 72.62 73.64 }"
+"free_gb": 124.3,
+"uptime": "up 4 days, 12:33, 2 users, load averages: 96.03 76.45 73.87",
+"load": "{ 96.03 76.45 73.87 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-04T02:05",
+"name": "period_reset_refill",
+"status": "rejected",
+"rationale": "Payer is rule-bound risk desks (weekly or monthly loss limits) and vol-target funds. They are forced to cut after a period loss beyond their limit and may only re-lever when the calendar window resets. The refill bid lands in the first hours of the new period, and the mirror case",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-04T01:32",
 "name": "reset_cut_relever",
 "status": "accepted",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is vol-target funds and risk-parity books that cut exposure when realised vol spikes (peak short/long vol ratio at least k within a day or week period). They re-lever only at the next period reset, and only after vol has cooled, so the refill bid arrives at the reset ra",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-03T19:35",
-"name": "dual_stale_coil_break",
-"status": "accepted",
-"rationale": "Payer is short-gamma option sellers and range-fading market makers who are pinned inside a coil (neither N-bar extreme refreshed for m bars). They must re-hedge or cover when the box breaks, so the first close beyond it carries forced flow.\nRATIONALE: The three families the direc",
-"note": "{\"name\": \"dual_stale_coil_break\", \"grid\": 128, \"sec_per_param\": 0.001, \"active_frac\": 0.36105}"
 }
 ],
 "history": [
-{
-"t": 1793584761.656821,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.2,
-"gpu": 2,
-"free_gb": 191.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793585684.304599,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.6,
-"gpu": 2,
-"free_gb": 192.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793586607.100317,
 "total": 31310831,
@@ -4388,6 +4366,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 146.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793758837.322199,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 124.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
