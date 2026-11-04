@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-04 00:56:04 UTC",
+"generated_at": "2026-11-04 01:17:38 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 136.7,
-"uptime": "up 4 days, 11:08, 2 users, load averages: 69.32 72.96 73.11",
-"load": "{ 69.32 72.96 73.11 }"
+"free_gb": 144.4,
+"uptime": "up 4 days, 11:32, 2 users, load averages: 75.67 73.33 72.29",
+"load": "{ 75.67 73.33 72.29 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-04T01:00",
+"name": "period_reset_relever",
+"status": "rejected",
+"rationale": "Payer is rule-bound risk desks and vol-target funds that cut after a period loss and may only re-lever when the calendar window resets. The signal is long only, in a window after the new week or month starts, and only if the prior period's drawdown or loss was at least k sigma. N",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-04T00:29",
 "name": "vol_spike_period_refill",
 "status": "accepted",
@@ -2446,38 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is stop-bound books run under a trailing day or week drawdown limit (prop-desk traders, funded-account programmes, CTA risk overlays). They must flatten once price is k sigma under the period high and may re-lever only after the period resets, so their re-entry bid arri",
 "note": "{\"name\": \"period_drawdown_reset_hold\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.4347125}"
-},
-{
-"ts": "2026-11-03T18:31",
-"name": "month_reset_breach_rebuy",
-"status": "rejected",
-"rationale": "Payer is a managed-account or prop desk with a monthly drawdown limit. It was forced to cut after its month-to-date loss crossed `k` times the month's own realised volatility. It cannot re-lever until the new month's risk budget starts, so it buys back in the first `hold` hours a",
-"note": "sandbox: NameError: name 'FAMILIES' is not defined"
 }
 ],
 "history": [
-{
-"t": 1793581070.4813209,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.2,
-"gpu": 2,
-"free_gb": 192.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793581993.348684,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.2,
-"gpu": 2,
-"free_gb": 192.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793582916.052852,
 "total": 31310831,
@@ -4399,6 +4377,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 136.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793755058.980042,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 144.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
