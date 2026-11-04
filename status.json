@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-04 17:43:17 UTC",
+"generated_at": "2026-11-04 18:00:09 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 157.4,
-"uptime": "up 5 days,  4:02, 2 users, load averages: 79.05 77.33 75.32",
-"load": "{ 79.05 77.33 75.32 }"
+"free_gb": 156.8,
+"uptime": "up 5 days,  4:19, 2 users, load averages: 75.08 75.60 75.57",
+"load": "{ 75.08 75.60 75.57 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-04T17:58",
+"name": "nfp_desk_reentry_long",
+"status": "rejected",
+"rationale": "The payer is the risk desks and vol-targeted books that go flat before the monthly NFP release (08:30 ET, first Friday). Their sell-down pushes the price below fair value, and their forced re-entry after the release pays whoever holds gold through the window, so this strategy goe",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-04T17:25",
 "name": "nfp_desk_reentry_bid",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is risk-limit-bound desks that cut gold exposure ahead of NFP/FOMC and rebuy after. The cut leg sells into the event-risk premium, and the rebuy leg follows with a lag.\nThe strategy is long only, with the window (hours before and after the release) as the only free paramete",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-04T11:16",
-"name": "index_roll_session_long",
-"status": "rejected",
-"rationale": "Payer: the S&P GSCI (business days 5-9) and Bloomberg Commodity (6-10) index trackers. They hold gold mandates and execute fixed daily fifths of the roll on a published calendar, so their flow is price-insensitive and mechanical. I long gold only inside the roll business days and",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793641979.820972,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.5,
-"gpu": 2,
-"free_gb": 192.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793642902.843882,
 "total": 31310831,
@@ -4223,6 +4212,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 157.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793815209.357621,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 156.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
