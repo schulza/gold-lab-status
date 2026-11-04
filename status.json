@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-04 16:18:48 UTC",
+"generated_at": "2026-11-04 16:41:17 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 98.1,
 "gpu_pct": 2,
-"free_gb": 157.5,
-"uptime": "up 5 days,  2:38, 2 users, load averages: 69.90 72.47 72.42",
-"load": "{ 69.90 72.47 72.42 }"
+"free_gb": 176.4,
+"uptime": "up 5 days,  2:54, 2 users, load averages: 58.90 74.13 74.60",
+"load": "{ 58.90 74.13 74.60 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-04T16:19",
+"name": "release_pressure_reentry",
+"status": "rejected",
+"rationale": "Payer is the risk desks forced flat before the 08:30 ET US data release. They sell into thin pre-release liquidity (a forced exit, not an information-driven one) and re-buy after the print. The strategy provides that re-entry bid, long-only, and only after a statistically large p",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-04T15:46",
 "name": "nfp_release_reentry",
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is whoever has to trade gold on days when the LBMA auction is shut (UK bank holidays) or US desks are out (US federal holidays). Producers, hedgers and stop-loss sellers with a deadline cannot wait for the benchmark, so they concede price to the few dealers who still qu",
 "note": "{\"name\": \"benchmark_closed_session_long\", \"grid\": 72, \"sec_per_param\": 0.01, \"active_frac\": 0.01}"
-},
-{
-"ts": "2026-11-04T09:35",
-"name": "gotobi_settlement_long",
-"status": "accepted",
-"rationale": "The payer is Japanese importers and corporate treasuries. They settle USD on Gotobi days (5th, 10th, 15th, 20th, 25th and month-end, moved to the prior business day), and the flow is concentrated before the Tokyo fix at about 00:55 UTC. Counterparties who hold gold against USD, a",
-"note": "{\"name\": \"gotobi_settlement_long\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.045}"
 }
 ],
 "history": [
-{
-"t": 1793636441.9882681,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.8,
-"gpu": 2,
-"free_gb": 191.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793637365.112716,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.9,
-"gpu": 33,
-"free_gb": 192.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793638288.0284002,
 "total": 31310831,
@@ -4245,6 +4223,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 157.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793810477.184829,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 98.1,
+"gpu": 2,
+"free_gb": 176.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
