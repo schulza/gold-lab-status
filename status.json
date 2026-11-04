@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-04 12:38:25 UTC",
+"generated_at": "2026-11-04 13:01:34 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 129.5,
-"uptime": "up 4 days, 22:51, 2 users, load averages: 64.00 73.75 77.08",
-"load": "{ 64.00 73.75 77.08 }"
+"free_gb": 145.5,
+"uptime": "up 4 days, 23:14, 2 users, load averages: 80.73 75.56 76.44",
+"load": "{ 80.73 75.56 76.44 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-04T12:58",
+"name": "index_roll_settle_runup",
+"status": "accepted",
+"rationale": "Payer is the commodity-index-tracker roll book (GSCI BD 5-9, BCOM BD 6-10). It has to buy the deferred gold contract in fixed fifths into the COMEX settlement. Short-horizon sellers and market makers who fade that predictable bid pay for it.\nRATIONALE: `index_roll_window_long` an",
+"note": "{\"name\": \"index_roll_settle_runup\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.055125}"
+},
+{
 "ts": "2026-11-04T12:24",
 "name": "index_roll_phase_long",
 "status": "accepted",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is risk desks and prop books that run flat into NFP and FOMC under pre-release limits. After the print they must rebuild gold exposure at the post-release spread, and the schedule is public.\nRATIONALE: Long-only. The single free window is hours after the release (delay,",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-04T06:24",
-"name": "index_roll_window_long",
-"status": "accepted",
-"rationale": "Payer is the S&P GSCI / BCOM index trackers, which must roll in fixed daily fifths on business days 5\u20139 (6\u201310 for BCOM). Whoever warehouses that dated, price-insensitive roll flow is paid a premium for it, and I hold long (shorts are dead) only inside that calendar window.\nRATION",
-"note": "{\"name\": \"index_roll_window_long\", \"grid\": 50, \"sec_per_param\": 0.0, \"active_frac\": 0.171}"
 }
 ],
 "history": [
-{
-"t": 1793623521.272053,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.0,
-"gpu": 2,
-"free_gb": 191.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793624444.188998,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.7,
-"gpu": 2,
-"free_gb": 192.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793625366.977633,
 "total": 31310831,
@@ -4289,6 +4267,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 129.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793797294.304703,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 145.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
