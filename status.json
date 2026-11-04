@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-04 12:15:21 UTC",
+"generated_at": "2026-11-04 12:38:25 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 118.1,
-"uptime": "up 4 days, 22:33, 2 users, load averages: 69.00 71.36 74.10",
-"load": "{ 69.00 71.36 74.10 }"
+"free_gb": 129.5,
+"uptime": "up 4 days, 22:51, 2 users, load averages: 64.00 73.75 77.08",
+"load": "{ 64.00 73.75 77.08 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-04T12:24",
+"name": "index_roll_phase_long",
+"status": "accepted",
+"rationale": "Payer: commodity index trackers (GSCI business days 5\u20139, BCOM 6\u201310) have to roll their gold futures in fixed fifths on published days, whatever the price is. They concede calendar-spread price to the arbitrageurs who take the other side, and the spot-linked leg is expected to mea",
+"note": "{\"name\": \"index_roll_phase_long\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.216}"
+},
+{
 "ts": "2026-11-04T11:51",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the S&P GSCI / BCOM index trackers, which must roll in fixed daily fifths on business days 5\u20139 (6\u201310 for BCOM). Whoever warehouses that dated, price-insensitive roll flow is paid a premium for it, and I hold long (shorts are dead) only inside that calendar window.\nRATION",
 "note": "{\"name\": \"index_roll_window_long\", \"grid\": 50, \"sec_per_param\": 0.0, \"active_frac\": 0.171}"
-},
-{
-"ts": "2026-11-04T05:53",
-"name": "index_roll_window_long",
-"status": "rejected",
-"rationale": "Payer is commodity-index trackers (S&P GSCI rolls on business days 5-9, Bloomberg Commodity on 6-10). They must trade by rule on those dates regardless of price, so the gold-linked flow is time-forced rather than discretionary. The family is long-only, uses only `bars.ts` and `cl",
-"note": "sandbox: NameError: name 'FAMILIES' is not defined"
 }
 ],
 "history": [
-{
-"t": 1793622598.229833,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.6,
-"gpu": 2,
-"free_gb": 192.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793623521.272053,
 "total": 31310831,
@@ -4289,6 +4278,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 118.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793795905.147725,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 129.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
