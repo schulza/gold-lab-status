@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-04 03:41:47 UTC",
+"generated_at": "2026-11-04 04:04:37 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 163.1,
-"uptime": "up 4 days, 13:59, 2 users, load averages: 82.45 74.61 73.90",
-"load": "{ 82.45 74.61 73.90 }"
+"free_gb": 143.1,
+"uptime": "up 4 days, 14:18, 2 users, load averages: 63.57 67.74 70.73",
+"load": "{ 63.57 67.74 70.73 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-04T03:49",
+"name": "weekly_cut_rebid",
+"status": "rejected",
+"rationale": "The payer is rule-bound risk desks, vol-target funds and FCM margin desks. After a weekly loss-limit breach they must cut during the week and may only re-lever when the next weekly window opens. That window opens at the Sunday 22:00 UTC open, so I use the week as the clock.\nRATIO",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-04T03:16",
 "name": null,
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is vol-target and risk-parity books that cut gold in a high-vol period and re-lever by a formula on the next calendar reset. The formula (ratio of the prior-prior period's vol to the prior period's vol) is fixed by the calendar, so the buy lands on a known date, sized by th",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-03T21:12",
-"name": "vol_ratio_calendar_rebid",
-"status": "accepted",
-"rationale": "PAYER = vol-target funds and risk-parity books that cut gold exposure during a period in which realised vol ran above their long-run baseline, and may only re-lever at the next weekly or monthly rebalance. Their buying lands on a date the calendar fixes and is sized by the vol ra",
-"note": "{\"name\": \"vol_ratio_calendar_rebid\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.064}"
 }
 ],
 "history": [
-{
-"t": 1793591221.147663,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.6,
-"gpu": 2,
-"free_gb": 192.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793592144.15744,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.7,
-"gpu": 2,
-"free_gb": 192.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793593066.9763782,
 "total": 31310831,
@@ -4355,6 +4333,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 163.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793765077.773052,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 143.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
