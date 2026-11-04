@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-04 01:17:38 UTC",
+"generated_at": "2026-11-04 01:40:34 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 144.4,
-"uptime": "up 4 days, 11:32, 2 users, load averages: 75.67 73.33 72.29",
-"load": "{ 75.67 73.33 72.29 }"
+"free_gb": 135.8,
+"uptime": "up 4 days, 11:53, 2 users, load averages: 142.97 88.39 78.98",
+"load": "{ 142.97 88.39 78.98 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-04T01:32",
+"name": "reset_cut_relever",
+"status": "accepted",
+"rationale": "The payer is vol-target funds and rule-bound risk desks. They cut exposure through a week or month as the loss builds, and can only re-lever at the calendar reset, staggered over the first bars after it.\nRATIONALE: The trigger is the prior period's return in units of its own trai",
+"note": "{\"name\": \"reset_cut_relever\", \"grid\": 192, \"sec_per_param\": 0.001, \"active_frac\": 0.016}"
+},
+{
 "ts": "2026-11-04T01:00",
 "name": "period_reset_relever",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is short-gamma option sellers and range-fading market makers who are pinned inside a coil (neither N-bar extreme refreshed for m bars). They must re-hedge or cover when the box breaks, so the first close beyond it carries forced flow.\nRATIONALE: The three families the direc",
 "note": "{\"name\": \"dual_stale_coil_break\", \"grid\": 128, \"sec_per_param\": 0.001, \"active_frac\": 0.36105}"
-},
-{
-"ts": "2026-11-03T19:04",
-"name": "period_drawdown_reset_hold",
-"status": "accepted",
-"rationale": "The payer is stop-bound books run under a trailing day or week drawdown limit (prop-desk traders, funded-account programmes, CTA risk overlays). They must flatten once price is k sigma under the period high and may re-lever only after the period resets, so their re-entry bid arri",
-"note": "{\"name\": \"period_drawdown_reset_hold\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.4347125}"
 }
 ],
 "history": [
-{
-"t": 1793582916.052852,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.5,
-"gpu": 2,
-"free_gb": 192.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793583838.83674,
 "total": 31310831,
@@ -4388,6 +4377,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 144.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793756434.476584,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 135.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
