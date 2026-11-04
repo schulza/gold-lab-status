@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-04 06:09:18 UTC",
+"generated_at": "2026-11-04 06:24:49 UTC",
 "host": {
-"cpu_pct": 48.0,
+"cpu_pct": 42.4,
 "gpu_pct": 2,
-"free_gb": 179.7,
-"uptime": "up 4 days, 16:29, 2 users, load averages: 15.64 15.46 15.85",
-"load": "{ 15.64 15.46 15.85 }"
+"free_gb": 177.6,
+"uptime": "up 4 days, 16:45, 2 users, load averages: 18.89 17.55 16.83",
+"load": "{ 18.89 17.55 16.83 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-04T06:24",
+"name": "index_roll_window_long",
+"status": "accepted",
+"rationale": "Payer is the S&P GSCI / BCOM index trackers, which must roll in fixed daily fifths on business days 5\u20139 (6\u201310 for BCOM). Whoever warehouses that dated, price-insensitive roll flow is paid a premium for it, and I hold long (shorts are dead) only inside that calendar window.\nRATION",
+"note": "{\"name\": \"index_roll_window_long\", \"grid\": 50, \"sec_per_param\": 0.0, \"active_frac\": 0.171}"
+},
+{
 "ts": "2026-11-04T05:53",
 "name": "index_roll_window_long",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is vol-target funds and risk desks. A vol-based limit cuts exposure when realised vol spikes inside a week or month, and the book can only re-lever on the reset date. Their re-buy (after a falling period) or re-sell (after a rising one) arrives on a date the calendar fi",
 "note": "{\"name\": \"vol_spike_period_refill\", \"grid\": 192, \"sec_per_param\": 0.002, \"active_frac\": 0.0665}"
-},
-{
-"ts": "2026-11-03T23:55",
-"name": "drawdown_limit_relever",
-"status": "accepted",
-"rationale": "PAYER = drawdown-limited funds and vol-target books. Their limit is measured on peak-to-trough inside the calendar week or month, not on period-to-date P&L, so they cut at the trough and may only re-lever when the budget resets. That rebuy lands on a date the calendar fixes, and ",
-"note": "{\"name\": \"drawdown_limit_relever\", \"grid\": 192, \"sec_per_param\": 0.004, \"active_frac\": 0.0665}"
 }
 ],
 "history": [
-{
-"t": 1793600450.034046,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.4,
-"gpu": 2,
-"free_gb": 192.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793601372.8773298,
 "total": 31310831,
@@ -4344,6 +4333,17 @@
 "cpu": 48.0,
 "gpu": 2,
 "free_gb": 179.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793773489.470689,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 42.4,
+"gpu": 2,
+"free_gb": 177.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
