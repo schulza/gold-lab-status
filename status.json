@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-03 23:45:02 UTC",
+"generated_at": "2026-11-04 00:09:12 UTC",
 "host": {
-"cpu_pct": 100.0,
-"gpu_pct": 11,
-"free_gb": 148.9,
-"uptime": "up 4 days, 10:01, 2 users, load averages: 71.07 66.74 64.01",
-"load": "{ 71.07 66.74 64.01 }"
+"cpu_pct": null,
+"gpu_pct": 2,
+"free_gb": 137.8,
+"uptime": "up 4 days, 10:21, 2 users, load averages: 74.40 71.72 69.69",
+"load": "{ 74.93 71.88 69.75 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-03T23:55",
+"name": "drawdown_limit_relever",
+"status": "accepted",
+"rationale": "PAYER = drawdown-limited funds and vol-target books. Their limit is measured on peak-to-trough inside the calendar week or month, not on period-to-date P&L, so they cut at the trough and may only re-lever when the budget resets. That rebuy lands on a date the calendar fixes, and ",
+"note": "{\"name\": \"drawdown_limit_relever\", \"grid\": 192, \"sec_per_param\": 0.004, \"active_frac\": 0.0665}"
+},
+{
 "ts": "2026-11-03T23:23",
 "name": "vol_cut_calendar_refill",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is breakout buyers and stop-triggered chasers who repeatedly lift into a passive resting seller (or hit a resting bid) at the rolling extreme. Repeated touches that fail to exceed the level mean the passive side is absorbing flow, and a rejection candle shows the aggressors",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-03T17:21",
-"name": "hwm_drawdown_reset_hold",
-"status": "accepted",
-"rationale": "The payer is long-gold books run under a trailing monthly drawdown limit (CTA sleeves, prop desks, margin-funded accounts). They must cut when price falls k sigma below the month-to-date high, and they can only re-lever when the month turns. Their forced sale is done within hours",
-"note": "{\"name\": \"hwm_drawdown_reset_hold\", \"grid\": 162, \"sec_per_param\": 0.001, \"active_frac\": 0.123}"
 }
 ],
 "history": [
-{
-"t": 1793577379.0807161,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.5,
-"gpu": 2,
-"free_gb": 192.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793578301.837939,
 "total": 31310831,
@@ -4410,6 +4399,17 @@
 "cpu": 100.0,
 "gpu": 11,
 "free_gb": 148.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793750952.244669,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": null,
+"gpu": 2,
+"free_gb": 137.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
