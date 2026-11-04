@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-04 11:22:51 UTC",
+"generated_at": "2026-11-04 11:56:49 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 140.1,
-"uptime": "up 4 days, 21:34, 2 users, load averages: 71.12 67.80 70.84",
-"load": "{ 71.12 67.80 70.84 }"
+"free_gb": 118.0,
+"uptime": "up 4 days, 21:59, 2 users, load averages: 59.25 75.64 78.59",
+"load": "{ 59.25 75.64 78.59 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-04T11:51",
+"name": null,
+"status": "rejected",
+"rationale": "Payer is risk-limit-bound desks that cut gold exposure ahead of NFP/FOMC and rebuy after. The cut leg sells into the event-risk premium, and the rebuy leg follows with a lag.\nThe strategy is long only, with the window (hours before and after the release) as the only free paramete",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-04T11:16",
 "name": "index_roll_session_long",
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is commodity-index trackers (S&P GSCI rolls on business days 5-9, Bloomberg Commodity on 6-10). They must trade by rule on those dates regardless of price, so the gold-linked flow is time-forced rather than discretionary. The family is long-only, uses only `bars.ts` and `cl",
 "note": "sandbox: NameError: name 'FAMILIES' is not defined"
-},
-{
-"ts": "2026-11-04T05:23",
-"name": "release_reentry_rebuild",
-"status": "rejected",
-"rationale": "Payer is the event-risk desks (VaR-budgeted prop and bank books) that cut gold ahead of NFP. After the print they must restore the exposure the mandate calls for, which is the direction they held before cutting. The edge is their rebuild flow, and the entry comes after the print ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793618906.9591098,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.5,
-"gpu": 2,
-"free_gb": 192.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793619829.762914,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.5,
-"gpu": 2,
-"free_gb": 192.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793620752.726634,
 "total": 31310831,
@@ -4311,6 +4289,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 140.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793793409.1473532,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 118.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
