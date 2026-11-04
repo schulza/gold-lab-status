@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-04 18:21:37 UTC",
+"generated_at": "2026-11-04 18:49:26 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": null,
 "gpu_pct": 2,
-"free_gb": 150.5,
-"uptime": "up 5 days,  4:36, 2 users, load averages: 87.77 81.69 79.06",
-"load": "{ 84.18 81.05 78.85 }"
+"free_gb": 122.6,
+"uptime": "up 5 days,  4:58, 2 users, load averages: 49.11 46.62 60.70",
+"load": "{ 49.11 46.62 60.70 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-04T18:31",
+"name": "nfp_desk_reentry_window",
+"status": "rejected",
+"rationale": "Payer is risk desks that flatten ahead of NFP (first Friday) and re-risk afterwards. That re-entry is dated, price-insensitive buy flow, so I hold long from a delayed entry for a fixed window, as the director asked for the post-release reset.\nRATIONALE: The previous attempts came",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-04T17:58",
 "name": "nfp_desk_reentry_long",
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer: commodity index trackers (GSCI business days 5\u20139, BCOM 6\u201310) have to roll their gold futures in fixed fifths on published days, whatever the price is. They concede calendar-spread price to the arbitrageurs who take the other side, and the spot-linked leg is expected to mea",
 "note": "{\"name\": \"index_roll_phase_long\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.216}"
-},
-{
-"ts": "2026-11-04T11:51",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is risk-limit-bound desks that cut gold exposure ahead of NFP/FOMC and rebuy after. The cut leg sells into the event-risk premium, and the rebuy leg follows with a lag.\nThe strategy is long only, with the window (hours before and after the release) as the only free paramete",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1793643825.7619379,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.7,
-"gpu": 2,
-"free_gb": 191.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793644748.620437,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.6,
-"gpu": 2,
-"free_gb": 192.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793645673.528097,
 "total": 31310831,
@@ -4223,6 +4201,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 150.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793818166.3108952,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": null,
+"gpu": 2,
+"free_gb": 122.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
