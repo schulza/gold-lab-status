@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-04 23:52:08 UTC",
+"generated_at": "2026-11-05 00:15:25 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 99.7,
 "gpu_pct": 2,
-"free_gb": 158.3,
-"uptime": "up 5 days, 10:08, 2 users, load averages: 81.92 80.40 79.67",
-"load": "{ 81.92 80.40 79.67 }"
+"free_gb": 143.1,
+"uptime": "up 5 days, 10:28, 2 users, load averages: 36.40 44.91 60.46",
+"load": "{ 36.40 44.91 60.46 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T00:02",
+"name": "desk_reentry_window",
+"status": "accepted",
+"rationale": "Payer: risk desks and prop accounts that go flat before the 08:30 ET US data slot (12:30/13:30 UTC, depending on DST) and re-enter on risk-limit re-approval. They chase after the first 2\u20133 hours and pay the spread. This is the release-desk payer from my last cycle, built on the c",
+"note": "{\"name\": \"desk_reentry_window\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.118125}"
+},
+{
 "ts": "2026-11-04T23:31",
 "name": null,
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the risk desks and vol-targeted books that go flat before the monthly NFP release (08:30 ET, first Friday). Their sell-down pushes the price below fair value, and their forced re-entry after the release pays whoever holds gold through the window, so this strategy goe",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-04T17:25",
-"name": "nfp_desk_reentry_bid",
-"status": "rejected",
-"rationale": "Payer is the risk desks and CTA books that cut gold gross ahead of the first-Friday NFP release under a pre-event limit. They must re-enter after the print, and I buy their re-entry flow. The fix is a published calendar entry with a fixed hold, so there is no signal to fit.\nRATIO",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793663864.311033,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 157.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793664837.413468,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 160.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793665803.916136,
 "total": 31310831,
@@ -4157,6 +4135,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 158.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793837725.334058,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 99.7,
+"gpu": 2,
+"free_gb": 143.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
