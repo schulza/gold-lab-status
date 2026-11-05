@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 01:30:44 UTC",
+"generated_at": "2026-11-05 01:53:51 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 159.0,
-"uptime": "up 5 days, 11:42, 2 users, load averages: 62.88 68.98 71.33",
-"load": "{ 62.88 68.98 71.33 }"
+"free_gb": 118.5,
+"uptime": "up 5 days, 12:07, 2 users, load averages: 123.12 84.10 76.00",
+"load": "{ 123.12 84.10 76.00 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T01:41",
+"name": "quarter_slice_displacement",
+"status": "accepted",
+"rationale": "Payer is parent-order slicers (TWAP/VWAP execution algos and index-linked schedulers). They fire child orders on fixed quarter-hour clocks, so a pre-boundary displacement that is large against the bar's own noise is partly their footprint, and it gets refunded or extended after t",
+"note": "{\"name\": \"quarter_slice_displacement\", \"grid\": 144, \"sec_per_param\": 0.024, \"active_frac\": 0.039075}"
+},
+{
 "ts": "2026-11-05T01:09",
 "name": null,
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the risk-limited desk that goes flat before a scheduled US print (first-Friday NFP, weekly Thursday claims) and rebuilds after the first spread and vol blowout settles. The rebuild flow lands in the direction of the print's own move, so the strategy enters `wait` minutes",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-04T19:03",
-"name": "nfp_flat_rebuild_long",
-"status": "rejected",
-"rationale": "Payer is risk-limit-bound desks and CTAs that cut gold ahead of the monthly NFP print, often at a concession. They must rebuild the position after the release at fixed times, so a long that holds the rebuild window collects that dated re-entry flow.\nRATIONALE: My earlier attempts",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793669668.182017,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 99.9,
-"gpu": 2,
-"free_gb": 131.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793670632.076496,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 144.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793671595.6242712,
 "total": 31310831,
@@ -4135,6 +4113,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 159.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793843631.93959,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 118.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
