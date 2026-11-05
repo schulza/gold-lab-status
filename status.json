@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 09:04:33 UTC",
+"generated_at": "2026-11-05 09:26:57 UTC",
 "host": {
-"cpu_pct": 68.4,
+"cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 172.2,
-"uptime": "up 5 days, 19:25, 2 users, load averages: 30.24 29.82 29.21",
-"load": "{ 30.24 29.82 29.21 }"
+"free_gb": 153.2,
+"uptime": "up 5 days, 19:40, 2 users, load averages: 77.08 64.95 47.49",
+"load": "{ 77.08 64.95 47.49 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T09:08",
+"name": "dst_gap_data_fix_lead",
+"status": "rejected",
+"rationale": "Payer: US-data-anchored and London-fix-anchored schedulers (fix and benchmark hedgers, data-reaction algos) in the 3\u20134 weeks a year when US and UK clocks differ. The 08:30 ET data release moves to 12:30 UTC, while the 15:00 London fix stays at 15:00 UTC. The data-to-fix lead stre",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-05T08:36",
 "name": null,
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is retail leveraged longs on CFD and margin FX brokers. They face triple swap on Wednesday rollover (the rollover charge is booked \u00d73 for the weekend), and a rule-driven close-out ahead of it pushes price down. A down-move into the rollover is forced flow, not information, ",
 "note": "{\"name\": \"triple_swap_closeout_bid\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.006375}"
-},
-{
-"ts": "2026-11-05T02:49",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is slow-rebalancing gold holders (physical, ETF and allocator books that re-mark rate sensitivity weekly or monthly). After a real-yield move they sell or buy gold late. The gap between the real-yield move and gold's own same-window move is the residual that gets paid out a",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1793696740.7293282,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 145.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793697665.042036,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.4,
-"gpu": 2,
-"free_gb": 192.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793698588.0640051,
 "total": 31310831,
@@ -4113,6 +4091,17 @@
 "cpu": 68.4,
 "gpu": 2,
 "free_gb": 172.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793870817.806856,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 153.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
