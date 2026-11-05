@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 23:09:43 UTC",
+"generated_at": "2026-11-05 23:30:49 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": null,
 "gpu_pct": 2,
-"free_gb": 135.3,
-"uptime": "up 6 days,  9:26, 2 users, load averages: 46.17 18.90 9.59",
-"load": "{ 46.17 18.90 9.59 }"
+"free_gb": 150.1,
+"uptime": "up 6 days,  9:46, 2 users, load averages: 66.32 63.40 48.94",
+"load": "{ 66.32 63.40 48.94 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T23:29",
+"name": "dst_gap_asia_utc_leg_london_open",
+"status": "accepted",
+"rationale": "The payer is Asia-clock desks and SGE or Shanghai hedgers. Their flow is pinned to a fixed UTC time and builds a move before London opens, then meets London depth that arrives an hour earlier or later, depending on EU daylight saving. They pay the London opening liquidity provide",
+"note": "{\"name\": \"dst_gap_asia_utc_leg_london_open\", \"grid\": 108, \"sec_per_param\": 0.017, \"active_frac\": 0.01125}"
+},
+{
 "ts": "2026-11-05T22:55",
 "name": "dst_gap_globex_reopen_repricing",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer: schedulers pinned to one local clock, such as London-fix hedgers and NY-data or COMEX-settle rebalancers. In weeks when US and EU daylight saving differ, the gap between the two clocks changes by an hour. The A\u2192B move built by one clock's flow reaches the other clock's flo",
 "note": "{\"name\": \"dst_gap_clock_exit_pair\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.0354875}"
-},
-{
-"ts": "2026-11-05T17:01",
-"name": "dst_gap_us_data_catchup",
-"status": "rejected",
-"rationale": "Payer is schedulers whose volume curves are pinned to the 13:30 UTC US-data slot. In gap weeks (US on EDT, Europe still on GMT/standard time) the 8:30 ET release lands at 12:30 UTC, so those curves under-participate in the real burst and then catch up with a one-sided push after ",
-"note": "sandbox: AssertionError: zu speicherhungrig: 46 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1793748334.1889129,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": null,
-"gpu": 2,
-"free_gb": 145.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793749502.487752,
 "total": 31310831,
@@ -4025,6 +4014,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 135.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793921449.775918,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": null,
+"gpu": 2,
+"free_gb": 150.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
