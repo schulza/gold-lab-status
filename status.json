@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 18:24:28 UTC",
+"generated_at": "2026-11-05 18:47:37 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 159.0,
-"uptime": "up 6 days,  4:42, 2 users, load averages: 70.34 74.64 76.10",
-"load": "{ 70.34 74.64 76.10 }"
+"free_gb": 151.5,
+"uptime": "up 6 days, 5 hrs, 2 users, load averages: 70.54 74.41 75.71",
+"load": "{ 70.34 74.31 75.67 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T18:40",
+"name": "dst_gap_thin_open_refund",
+"status": "rejected",
+"rationale": "The payer is market makers and fix-pinned hedgers who quote the NY-clock COMEX open (08:20 ET = 12:20 UTC) against a London-clock depth forecast. In US-summer/EU-winter gap weeks London is one hour behind, so that open meets thinner London-side liquidity than the books were sized",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-05T18:07",
 "name": "dst_gap_utc_clock_chase",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer: hedgers and fix-auction participants who have pre-positioned for the London PM fix at the usual 30 min after the US cash open. In the weeks when US and EU daylight saving differ, the fix sits 90 min after the open, so their positions are exposed for an extra hour against t",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-05T11:55",
-"name": "dst_gap_wide_spread_refund",
-"status": "rejected",
-"rationale": "Payer is the taker who chases mid-price moves in a wide-spread window that sits on a UTC-pinned clock slot. In the 2\u20133 spring and 1 autumn weeks when US and EU DST differ, the market makers' clock-based spread schedule and the real event arrive an hour apart.\nRATIONALE: The widen",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793730736.9311109,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 150.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793731699.817342,
 "total": 31310831,
@@ -4014,6 +4003,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 159.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793904457.1629272,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 151.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
