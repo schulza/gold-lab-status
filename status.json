@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 12:45:25 UTC",
+"generated_at": "2026-11-05 13:20:10 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 137.8,
-"uptime": "up 5 days, 22:59, 2 users, load averages: 91.71 78.98 74.65",
-"load": "{ 91.71 78.98 74.65 }"
+"free_gb": 118.1,
+"uptime": "up 5 days, 23:21, 2 users, load averages: 81.20 74.43 74.12",
+"load": "{ 81.20 74.43 74.12 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T13:05",
+"name": "dst_gap_data_to_fix",
+"status": "accepted",
+"rationale": "The payer is London-fix participants and banks that execute client fix orders on the 15:00 London clock. In the 2\u20134 spring and autumn weeks when US DST and EU DST differ, the 08:30 ET US data slot sits 150 min before the fix instead of 90. The data move is then partly absorbed or",
+"note": "{\"name\": \"dst_gap_data_to_fix\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.01875}"
+},
+{
 "ts": "2026-11-05T12:29",
 "name": "dst_gap_open_leg_fix",
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer: schedulers pinned to one clock, such as London-fix hedgers and US-open or COMEX-settle rebalancers. In the weeks when US and EU daylight saving differ, their slot lands an hour away from the counterparties' clock, so their pre-slot pressure meets thinner or thicker depth t",
 "note": "{\"name\": \"dst_gap_clock_slot\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.009}"
-},
-{
-"ts": "2026-11-05T06:30",
-"name": "london_stale_slot_fade",
-"status": "accepted",
-"rationale": "The payer is London-clock-pinned desks and algos that fire at 13:30 London, the slot of the normal 08:30 ET US release. In the 3 to 4 weeks a year when the US is on EDT and Europe is still on GMT (2nd Sunday of March to the last Sunday of March, and the last Sunday of October to ",
-"note": "{\"name\": \"london_stale_slot_fade\", \"grid\": 144, \"sec_per_param\": 0.024, \"active_frac\": 0.009375}"
 }
 ],
 "history": [
-{
-"t": 1793710138.5175931,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 6,
-"free_gb": 151.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793711102.040523,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 6,
-"free_gb": 139.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793712058.478274,
 "total": 31310831,
@@ -4069,6 +4047,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 137.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793884810.973762,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 118.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
