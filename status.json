@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 17:01:01 UTC",
+"generated_at": "2026-11-05 17:23:55 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 158.6,
-"uptime": "up 6 days,  3:19, 2 users, load averages: 74.95 76.46 77.55",
-"load": "{ 74.95 76.46 77.55 }"
+"free_gb": 150.7,
+"uptime": "up 6 days,  3:37, 2 users, load averages: 78.92 75.92 75.42",
+"load": "{ 78.92 75.92 75.42 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T17:01",
+"name": "dst_gap_us_data_catchup",
+"status": "rejected",
+"rationale": "Payer is schedulers whose volume curves are pinned to the 13:30 UTC US-data slot. In gap weeks (US on EDT, Europe still on GMT/standard time) the 8:30 ET release lands at 12:30 UTC, so those curves under-participate in the real burst and then catch up with a one-sided push after ",
+"note": "sandbox: AssertionError: zu speicherhungrig: 46 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-05T16:29",
 "name": "dst_gap_fix_am_to_open",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer: schedulers pinned to a US or London clock during the 2\u20134 weeks each spring and autumn when US and UK daylight saving differ. The US-pinned COMEX open, data and hedge flow then lands in the thinner London-lunch hour, and its displacement is a liquidity-timing artefact that ",
 "note": "{\"name\": \"dst_gap_slot_displacement\", \"grid\": 144, \"sec_per_param\": 0.015, \"active_frac\": 0.02925}"
-},
-{
-"ts": "2026-11-05T10:15",
-"name": "phantom_slot_pressure",
-"status": "accepted",
-"rationale": "Payer: schedulers keyed to the other region's clock (EU-pinned desks at the NY slots, US-pinned desks at the London slots). Only in the 3 to 5 weeks a year when the US and EU DST states differ, their expected slot lands an hour away from the real one, so their one-sided order pre",
-"note": "{\"name\": \"phantom_slot_pressure\", \"grid\": 192, \"sec_per_param\": 0.001, \"active_frac\": 0.015}"
 }
 ],
 "history": [
-{
-"t": 1793725866.0229518,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 148.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793727126.823717,
 "total": 31310831,
@@ -4014,6 +4003,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 158.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793899435.1353111,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 150.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
