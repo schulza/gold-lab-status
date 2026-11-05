@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 10:37:04 UTC",
+"generated_at": "2026-11-05 11:00:12 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 156.3,
-"uptime": "up 5 days, 20:51, 2 users, load averages: 73.23 71.70 71.70",
-"load": "{ 73.23 71.70 71.70 }"
+"free_gb": 149.3,
+"uptime": "up 5 days, 21:13, 2 users, load averages: 70.99 72.80 72.84",
+"load": "{ 70.99 72.80 72.84 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T10:48",
+"name": "dst_gap_slot_displacement",
+"status": "accepted",
+"rationale": "Payer: schedulers pinned to a US or London clock during the 2\u20134 weeks each spring and autumn when US and UK daylight saving differ. The US-pinned COMEX open, data and hedge flow then lands in the thinner London-lunch hour, and its displacement is a liquidity-timing artefact that ",
+"note": "{\"name\": \"dst_gap_slot_displacement\", \"grid\": 144, \"sec_per_param\": 0.015, \"active_frac\": 0.02925}"
+},
+{
 "ts": "2026-11-05T10:15",
 "name": "phantom_slot_pressure",
 "status": "accepted",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "Both director-named payers already have generated files (six `index_roll_*` families and `release_reentry_follow` / `release_rebuild_long`, all n=0), so I'm not adding another variant of either. This family is a different payer: breakout sellers who put stops under a 5-to-20-day ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-05T04:22",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is slow macro-model allocators and daily-data ETF/CTA rebalancers. They reprice gold to real-yield moves only after the DFII10 print, so gold lags a large 5- or 20-day real-yield change. The strategy takes the other side of that lag and holds until the gap closes.\nRATIONALE",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1793702458.7364402,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 20,
-"free_gb": 149.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793703416.294037,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 9,
-"free_gb": 117.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793704372.9333398,
 "total": 31310831,
@@ -4091,6 +4069,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 156.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793876412.730241,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 149.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
