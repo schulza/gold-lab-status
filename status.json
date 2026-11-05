@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 22:19:57 UTC",
+"generated_at": "2026-11-05 22:35:21 UTC",
 "host": {
-"cpu_pct": 3.5,
+"cpu_pct": 3.6,
 "gpu_pct": 2,
-"free_gb": 192.2,
-"uptime": "up 6 days,  8:40, 2 users, load averages: 2.17 18.79 30.61",
-"load": "{ 2.17 18.79 30.61 }"
+"free_gb": 188.0,
+"uptime": "up 6 days,  8:56, 2 users, load averages: 1.25 2.14 11.27",
+"load": "{ 1.25 2.14 11.27 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T22:24",
+"name": "dst_gap_ny_open_london_deadline",
+"status": "accepted",
+"rationale": "The payer is London market makers who must be flat at the 16:30 London-local fix. In DST-gap weeks the NY open moves an hour against the London clock, so the NY first-hour move lands while London desks still carry inventory.\nTheir balance-sheet-constrained, price-insensitive inve",
+"note": "{\"name\": \"dst_gap_ny_open_london_deadline\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.0105}"
+},
+{
 "ts": "2026-11-05T21:53",
 "name": "dst_gap_asia_hour_extension",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is desks that hedge or mark gold off the LBMA AM fix (10:30 London) and then meet the COMEX 08:20 ET open and the US data slot. London and New York change clocks on different dates. In the US-on/EU-off weeks the fix-to-open gap is 1h50 instead of 2h50, so the same Londo",
 "note": "{\"name\": \"dst_gap_fix_am_to_open\", \"grid\": 108, \"sec_per_param\": 0.017, \"active_frac\": 0.01125}"
-},
-{
-"ts": "2026-11-05T15:57",
-"name": "dst_gap_fix_to_open",
-"status": "accepted",
-"rationale": "The payer is dealers and banks that take London-clock flow (the 08:00 open and the 10:30 AM fix) and lay it off in COMEX futures at the 08:20 ET pit open. In the weeks when US DST is on and EU DST is off, that lead time falls from 2h50 to 1h50. The London-session move has had an ",
-"note": "{\"name\": \"dst_gap_fix_to_open\", \"grid\": 144, \"sec_per_param\": 0.025, \"active_frac\": 0.006}"
 }
 ],
 "history": [
-{
-"t": 1793744438.8091478,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 40.0,
-"gpu": 2,
-"free_gb": 181.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793745371.243009,
 "total": 31310831,
@@ -4025,6 +4014,17 @@
 "cpu": 3.5,
 "gpu": 2,
 "free_gb": 192.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793918121.194884,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.6,
+"gpu": 2,
+"free_gb": 188.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
