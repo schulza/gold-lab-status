@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 09:26:57 UTC",
+"generated_at": "2026-11-05 09:50:43 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 153.2,
-"uptime": "up 5 days, 19:40, 2 users, load averages: 77.08 64.95 47.49",
-"load": "{ 77.08 64.95 47.49 }"
+"free_gb": 152.9,
+"uptime": "up 5 days, 20:03, 2 users, load averages: 72.26 74.15 68.53",
+"load": "{ 72.26 74.15 68.53 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T09:41",
+"name": "dst_gap_cut_pressure",
+"status": "accepted",
+"rationale": "Payer: dealers and option desks with books pinned to one local clock. They hit the NY 10:00 FX option cut, the LSE 08:00 open and 16:30 close, and the NY 17:00 FX roll. In the 3 to 5 weeks when US and EU daylight saving differ, those cuts sit an hour away from the counterparty cl",
+"note": "{\"name\": \"dst_gap_cut_pressure\", \"grid\": 192, \"sec_per_param\": 0.015, \"active_frac\": 0.0135}"
+},
+{
 "ts": "2026-11-05T09:08",
 "name": "dst_gap_data_fix_lead",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer: retail and CTA stop-loss sellers triggered by a momentary wide-spread print. Their sell stops fill at the wick low, and the market-maker re-quotes back up, so the wick is paid by the stop-sellers.\nRATIONALE: This differs from the reset cluster, the index-roll and desk-reen",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-05T03:21",
-"name": "triple_swap_closeout_bid",
-"status": "accepted",
-"rationale": "Payer is retail leveraged longs on CFD and margin FX brokers. They face triple swap on Wednesday rollover (the rollover charge is booked \u00d73 for the weekend), and a rule-driven close-out ahead of it pushes price down. A down-move into the rollover is forced flow, not information, ",
-"note": "{\"name\": \"triple_swap_closeout_bid\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.006375}"
 }
 ],
 "history": [
-{
-"t": 1793698588.0640051,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.5,
-"gpu": 31,
-"free_gb": 189.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793699560.430503,
 "total": 31310831,
@@ -4102,6 +4091,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 153.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793872243.471924,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 152.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
