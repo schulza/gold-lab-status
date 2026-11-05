@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 04:52:58 UTC",
+"generated_at": "2026-11-05 05:08:34 UTC",
 "host": {
-"cpu_pct": 69.9,
+"cpu_pct": 80.8,
 "gpu_pct": 2,
-"free_gb": 172.0,
-"uptime": "up 5 days, 15:13, 2 users, load averages: 29.32 28.79 29.17",
-"load": "{ 29.32 28.79 29.17 }"
+"free_gb": 171.6,
+"uptime": "up 5 days, 15:29, 2 users, load averages: 27.82 28.50 28.76",
+"load": "{ 27.82 28.50 28.76 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T04:53",
+"name": "late_day_low_reclaim",
+"status": "rejected",
+"rationale": "Both director-named payers already have generated files (six `index_roll_*` families and `release_reentry_follow` / `release_rebuild_long`, all n=0), so I'm not adding another variant of either. This family is a different payer: breakout sellers who put stops under a 5-to-20-day ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-05T04:22",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is commodity-index trackers (S&P GSCI rolls on business days 5-9, Bloomberg Commodity on 6-10). They are rule-bound books that must move a fixed fifth of the position during the US futures session on dated days, whatever the price. The existing `index_roll_*` families w",
 "note": "{\"name\": \"index_roll_session_ramp\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.04275}"
-},
-{
-"ts": "2026-11-04T22:24",
-"name": "holiday_desk_flatten_long",
-"status": "rejected",
-"rationale": "The payer is dealer and prop risk desks that flatten books into US holidays under reduced holiday risk limits, and the retail and Asian flow that trades the thin holiday session. Desks sell inventory at a concession into the pre-holiday US afternoon, and the liquidity provider wh",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793682165.718934,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 99.9,
-"gpu": 2,
-"free_gb": 153.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793683134.515023,
 "total": 31310831,
@@ -4113,6 +4102,17 @@
 "cpu": 69.9,
 "gpu": 2,
 "free_gb": 172.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793855314.426165,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 80.8,
+"gpu": 2,
+"free_gb": 171.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
