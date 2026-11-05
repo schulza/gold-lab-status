@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 20:44:05 UTC",
+"generated_at": "2026-11-05 21:00:07 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 165.3,
-"uptime": "up 6 days,  7:04, 2 users, load averages: 41.96 40.92 42.68",
-"load": "{ 41.96 40.92 42.68 }"
+"free_gb": 159.6,
+"uptime": "up 6 days,  7:20, 2 users, load averages: 27.26 36.43 39.45",
+"load": "{ 27.26 36.43 39.45 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T20:51",
+"name": "dst_gap_stale_slot_spread_refund",
+"status": "accepted",
+"rationale": "The payer is UTC-pinned liquidity providers and vol-schedule bots whose \"US cash open\" quote-widening slot was calibrated to the winter 14:30 UTC (or the 13:30 slot) and stays on UTC in the gap weeks, when only the US is on daylight saving. They quote wide spread into a slot wher",
+"note": "{\"name\": \"dst_gap_stale_slot_spread_refund\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.0045}"
+},
+{
 "ts": "2026-11-05T20:19",
 "name": "dst_gap_london_drive_release",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is COMEX trade-at-settlement and settle-linked hedgers (futures/option desks, ETF and spot-vs-futures basis books). Their settle window is pinned to 13:30 ET. In the US-on/EU-off weeks, London's PM fix and close sit only 1h before it, not 2h, so Europe's depth is gone w",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-05T14:14",
-"name": "dst_gap_release_to_fix",
-"status": "accepted",
-"rationale": "Payer is fix-benchmarked execution and market-on-fix order flow, which is pinned to the 15:00 London clock. The 10:00 ET US releases (ISM, JOLTS, consumer confidence) land on that fix in normal weeks, but 60 minutes before it in the DST-gap weeks. Fix traders who size their book ",
-"note": "{\"name\": \"dst_gap_release_to_fix\", \"grid\": 108, \"sec_per_param\": 0.05, \"active_frac\": 0.0115}"
 }
 ],
 "history": [
-{
-"t": 1793738839.445766,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 142.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793739774.814361,
 "total": 31310831,
@@ -4025,6 +4014,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 165.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793912407.035119,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 159.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
