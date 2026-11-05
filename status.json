@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 12:22:50 UTC",
+"generated_at": "2026-11-05 12:45:25 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 149.6,
-"uptime": "up 5 days, 22:35, 2 users, load averages: 71.08 71.17 72.09",
-"load": "{ 71.08 71.17 72.09 }"
+"free_gb": 137.8,
+"uptime": "up 5 days, 22:59, 2 users, load averages: 91.71 78.98 74.65",
+"load": "{ 91.71 78.98 74.65 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T12:29",
+"name": "dst_gap_open_leg_fix",
+"status": "rejected",
+"rationale": "Payer: hedgers and fix-auction participants who have pre-positioned for the London PM fix at the usual 30 min after the US cash open. In the weeks when US and EU daylight saving differ, the fix sits 90 min after the open, so their positions are exposed for an extra hour against t",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-05T11:55",
 "name": "dst_gap_wide_spread_refund",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is London-clock-pinned desks and algos that fire at 13:30 London, the slot of the normal 08:30 ET US release. In the 3 to 4 weeks a year when the US is on EDT and Europe is still on GMT (2nd Sunday of March to the last Sunday of March, and the last Sunday of October to ",
 "note": "{\"name\": \"london_stale_slot_fade\", \"grid\": 144, \"sec_per_param\": 0.024, \"active_frac\": 0.009375}"
-},
-{
-"ts": "2026-11-05T05:56",
-"name": "clock_pinned_slot_flow",
-"status": "rejected",
-"rationale": "Payer is schedulers pinned to a local clock (London fix and WMR 16:00, NY 08:30/10:00 data, 09:30 open). In the weeks when UK and US daylight saving differ, those events shift an hour against each other and against the UTC-pinned families already in the table. Flow into the slot ",
-"note": "sandbox: AssertionError: grid size 384"
 }
 ],
 "history": [
-{
-"t": 1793709182.3216379,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 6,
-"free_gb": 157.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793710138.5175931,
 "total": 31310831,
@@ -4069,6 +4058,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 149.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793882725.919307,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 137.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
