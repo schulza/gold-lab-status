@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 17:23:55 UTC",
+"generated_at": "2026-11-05 17:43:02 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 150.7,
-"uptime": "up 6 days,  3:37, 2 users, load averages: 78.92 75.92 75.42",
-"load": "{ 78.92 75.92 75.42 }"
+"free_gb": 158.6,
+"uptime": "up 6 days, 4 hrs, 2 users, load averages: 84.38 79.11 76.23",
+"load": "{ 84.38 79.11 76.23 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T17:35",
+"name": "dst_gap_clock_exit_pair",
+"status": "accepted",
+"rationale": "Payer: schedulers pinned to one local clock, such as London-fix hedgers and NY-data or COMEX-settle rebalancers. In weeks when US and EU daylight saving differ, the gap between the two clocks changes by an hour. The A\u2192B move built by one clock's flow reaches the other clock's flo",
+"note": "{\"name\": \"dst_gap_clock_exit_pair\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.0354875}"
+},
+{
 "ts": "2026-11-05T17:01",
 "name": "dst_gap_us_data_catchup",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is schedulers pinned to a US or London clock in the 2\u20134 weeks each spring and autumn when US and EU daylight saving differ. In those weeks US-pinned COMEX, data and hedge flow lands 60 minutes earlier relative to London-pinned flow, in a slot with different depth. The impac",
 "note": "{\"name\": \"dst_gap_vol_slot_fade\", \"grid\": 144, \"sec_per_param\": 0.024, \"active_frac\": 0.00675}"
-},
-{
-"ts": "2026-11-05T10:48",
-"name": "dst_gap_slot_displacement",
-"status": "accepted",
-"rationale": "Payer: schedulers pinned to a US or London clock during the 2\u20134 weeks each spring and autumn when US and UK daylight saving differ. The US-pinned COMEX open, data and hedge flow then lands in the thinner London-lunch hour, and its displacement is a liquidity-timing artefact that ",
-"note": "{\"name\": \"dst_gap_slot_displacement\", \"grid\": 144, \"sec_per_param\": 0.015, \"active_frac\": 0.02925}"
 }
 ],
 "history": [
-{
-"t": 1793727126.823717,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": null,
-"gpu": 2,
-"free_gb": 153.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793728102.64874,
 "total": 31310831,
@@ -4014,6 +4003,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 150.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793900582.0200992,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 158.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
