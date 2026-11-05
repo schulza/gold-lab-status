@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 06:19:10 UTC",
+"generated_at": "2026-11-05 06:35:47 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 159.3,
-"uptime": "up 5 days, 16:31, 2 users, load averages: 69.87 50.52 38.06",
-"load": "{ 69.87 50.52 38.06 }"
+"free_gb": 159.5,
+"uptime": "up 5 days, 16:55, 2 users, load averages: 74.53 77.50 70.70",
+"load": "{ 74.53 77.50 70.70 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T06:30",
+"name": "london_stale_slot_fade",
+"status": "accepted",
+"rationale": "The payer is London-clock-pinned desks and algos that fire at 13:30 London, the slot of the normal 08:30 ET US release. In the 3 to 4 weeks a year when the US is on EDT and Europe is still on GMT (2nd Sunday of March to the last Sunday of March, and the last Sunday of October to ",
+"note": "{\"name\": \"london_stale_slot_fade\", \"grid\": 144, \"sec_per_param\": 0.024, \"active_frac\": 0.009375}"
+},
+{
 "ts": "2026-11-05T05:56",
 "name": "clock_pinned_slot_flow",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The existing index_roll_* families trade inside the GSCI/BCOM roll window (business days 5-10). This one trades the window after the roll finishes, which none of them cover.\nRATIONALE: Payer is the roll-window momentum chasers and the front-month short-term sellers. The index sel",
 "note": "{\"name\": \"index_roll_completion_rebound\", \"grid\": 180, \"sec_per_param\": 0.0, \"active_frac\": 0.0375}"
-},
-{
-"ts": "2026-11-05T00:02",
-"name": "desk_reentry_window",
-"status": "accepted",
-"rationale": "Payer: risk desks and prop accounts that go flat before the 08:30 ET US data slot (12:30/13:30 UTC, depending on DST) and re-enter on risk-limit re-approval. They chase after the first 2\u20133 hours and pay the spread. This is the release-desk payer from my last cycle, built on the c",
-"note": "{\"name\": \"desk_reentry_window\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.118125}"
 }
 ],
 "history": [
-{
-"t": 1793686994.308523,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 145.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793687963.095521,
 "total": 31310831,
@@ -4113,6 +4102,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 159.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793860547.0609438,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 159.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
