@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 07:30:58 UTC",
+"generated_at": "2026-11-05 07:46:33 UTC",
 "host": {
-"cpu_pct": 58.5,
+"cpu_pct": 82.7,
 "gpu_pct": 2,
-"free_gb": 179.0,
-"uptime": "up 5 days, 17:51, 2 users, load averages: 34.10 59.96 70.26",
-"load": "{ 34.10 59.96 70.26 }"
+"free_gb": 173.9,
+"uptime": "up 5 days, 18:07, 2 users, load averages: 28.16 29.75 41.98",
+"load": "{ 28.16 29.75 41.98 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T07:35",
+"name": "halt_reopen_move",
+"status": "accepted",
+"rationale": "The payer is the CME Globex maintenance halt, 17:00-18:00 New York, which is server 00:00-01:00. Futures hedgers, ETF authorised participants and stop orders cannot act in that hour. Spot prints thin OTC quotes that move far on little volume, and a marginal buyer (or seller) in t",
+"note": "{\"name\": \"halt_reopen_move\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.010125}"
+},
+{
 "ts": "2026-11-05T07:03",
 "name": "dst_gap_clock_slot",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is parent-order slicers (TWAP/VWAP execution algos and index-linked schedulers). They fire child orders on fixed quarter-hour clocks, so a pre-boundary displacement that is large against the bar's own noise is partly their footprint, and it gets refunded or extended after t",
 "note": "{\"name\": \"quarter_slice_displacement\", \"grid\": 144, \"sec_per_param\": 0.024, \"active_frac\": 0.039075}"
-},
-{
-"ts": "2026-11-05T01:09",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is trend-following spec and CTA books that size off lagged positioning signals. After 20-day real yields fall, the gold bid arrives late, so the specs still underweight at that point pay as they cover. Entry is a conjunction of two existing external features (real-yield dro",
-"note": "ast: import not allowed: from __future__"
 }
 ],
 "history": [
-{
-"t": 1793691857.5922382,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 3,
-"free_gb": 144.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793692864.20151,
 "total": 31310831,
@@ -4102,6 +4091,17 @@
 "cpu": 58.5,
 "gpu": 2,
 "free_gb": 179.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793864793.7108,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 82.7,
+"gpu": 2,
+"free_gb": 173.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
