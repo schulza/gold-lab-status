@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 22:50:44 UTC",
+"generated_at": "2026-11-05 23:09:43 UTC",
 "host": {
-"cpu_pct": 3.3,
+"cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 189.6,
-"uptime": "up 6 days,  9:11, 2 users, load averages: 1.77 1.61 4.81",
-"load": "{ 1.77 1.61 4.81 }"
+"free_gb": 135.3,
+"uptime": "up 6 days,  9:26, 2 users, load averages: 46.17 18.90 9.59",
+"load": "{ 46.17 18.90 9.59 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T22:55",
+"name": "dst_gap_globex_reopen_repricing",
+"status": "accepted",
+"rationale": "The payer is spot-gold quote makers and UTC/London-clock schedulers who reset risk and widen quotes at a fixed UTC hour. The daily CME halt and Globex reopen sits at 17:00/18:00 New York time. In US/EU DST-gap weeks it lands an hour earlier on the London clock (22:00 instead of 2",
+"note": "{\"name\": \"dst_gap_globex_reopen_repricing\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.010125}"
+},
+{
 "ts": "2026-11-05T22:24",
 "name": "dst_gap_ny_open_london_deadline",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is schedulers whose volume curves are pinned to the 13:30 UTC US-data slot. In gap weeks (US on EDT, Europe still on GMT/standard time) the 8:30 ET release lands at 12:30 UTC, so those curves under-participate in the real burst and then catch up with a one-sided push after ",
 "note": "sandbox: AssertionError: zu speicherhungrig: 46 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-11-05T16:29",
-"name": "dst_gap_fix_am_to_open",
-"status": "accepted",
-"rationale": "The payer is desks that hedge or mark gold off the LBMA AM fix (10:30 London) and then meet the COMEX 08:20 ET open and the US data slot. London and New York change clocks on different dates. In the US-on/EU-off weeks the fix-to-open gap is 1h50 instead of 2h50, so the same Londo",
-"note": "{\"name\": \"dst_gap_fix_am_to_open\", \"grid\": 108, \"sec_per_param\": 0.017, \"active_frac\": 0.01125}"
 }
 ],
 "history": [
-{
-"t": 1793746825.014206,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 118.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793748334.1889129,
 "total": 31310831,
@@ -4025,6 +4014,17 @@
 "cpu": 3.3,
 "gpu": 2,
 "free_gb": 189.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793920183.3379068,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 135.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
