@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 03:50:30 UTC",
+"generated_at": "2026-11-05 04:06:06 UTC",
 "host": {
-"cpu_pct": 69.2,
+"cpu_pct": 82.8,
 "gpu_pct": 2,
-"free_gb": 173.1,
-"uptime": "up 5 days, 14:10, 2 users, load averages: 30.61 33.62 33.64",
-"load": "{ 30.61 33.62 33.64 }"
+"free_gb": 171.7,
+"uptime": "up 5 days, 14:26, 2 users, load averages: 32.88 31.32 32.22",
+"load": "{ 32.88 31.32 32.22 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T03:51",
+"name": "stop_wick_reclaim",
+"status": "rejected",
+"rationale": "Payer: retail and CTA stop-loss sellers triggered by a momentary wide-spread print. Their sell stops fill at the wick low, and the market-maker re-quotes back up, so the wick is paid by the stop-sellers.\nRATIONALE: This differs from the reset cluster, the index-roll and desk-reen",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-05T03:21",
 "name": "triple_swap_closeout_bid",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the dealers who warehouse the S&P GSCI and Bloomberg Commodity roll. Both indices roll in fixed daily fifths on business days 5\u20139 or 6\u201310, executed at the COMEX settle. The trackers are price-insensitive and dated, so whoever supplies gold into that settle is paid a prem",
 "note": "{\"name\": \"index_roll_settle_slice\", \"grid\": 96, \"sec_per_param\": 0.018, \"active_frac\": 0.0195}"
-},
-{
-"ts": "2026-11-04T21:14",
-"name": "month_bd_loser_rebid",
-"status": "rejected",
-"rationale": "The payer is constant-weight commodity and risk-parity rebalancers, including index trackers on GSCI business days 5\u20139 and BCOM days 6\u201310. They must buy gold after it lagged and sell it after it led, in fixed month business-day windows, and they are price-insensitive. Whoever fad",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793678322.735945,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 144.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793679287.437387,
 "total": 31310831,
@@ -4113,6 +4102,17 @@
 "cpu": 69.2,
 "gpu": 2,
 "free_gb": 173.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793851566.833154,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 82.8,
+"gpu": 2,
+"free_gb": 171.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
