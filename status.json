@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 19:35:17 UTC",
+"generated_at": "2026-11-05 19:56:25 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 117.9,
-"uptime": "up 6 days,  5:47, 2 users, load averages: 92.64 80.32 77.55",
-"load": "{ 92.19 80.43 77.61 }"
+"free_gb": 118.8,
+"uptime": "up 6 days,  6:11, 2 users, load averages: 77.65 80.30 81.61",
+"load": "{ 77.65 80.30 81.61 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T19:47",
+"name": "dst_gap_runup_at_release",
+"status": "accepted",
+"rationale": "The payer is London-session liquidity providers and algos who built inventory since the London open. In the roughly 5 gap weeks a year, NY 08:30 data lands at 12:30 UTC, so they have to unwind or reload with a thinner London-only book. They get that hour's flow one hour earlier t",
+"note": "{\"name\": \"dst_gap_runup_at_release\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.009}"
+},
+{
 "ts": "2026-11-05T19:14",
 "name": "dst_gap_release_impact",
 "status": "accepted",
@@ -2446,13 +2453,6 @@
 "status": "accepted",
 "rationale": "The payer is London desks and fix-hedgers who square inventory into the London 16:30 close. In the EU-off/US-on gap weeks that close lands at 12:30 ET, in the NY lunch lull, instead of 11:30 ET. The same flatten flow meets thinner US depth, so the fix-to-close leg overshoots and ",
 "note": "{\"name\": \"dst_gap_london_close_leg\", \"grid\": 108, \"sec_per_param\": 0.045, \"active_frac\": 0.01125}"
-},
-{
-"ts": "2026-11-05T13:05",
-"name": "dst_gap_data_to_fix",
-"status": "accepted",
-"rationale": "The payer is London-fix participants and banks that execute client fix orders on the 15:00 London clock. In the 2\u20134 spring and autumn weeks when US DST and EU DST differ, the 08:30 ET US data slot sits 150 min before the fix instead of 90. The data move is then partly absorbed or",
-"note": "{\"name\": \"dst_gap_data_to_fix\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.01875}"
 }
 ],
 "history": [
@@ -4003,6 +4003,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 117.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793908585.956219,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 118.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
