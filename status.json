@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 13:20:10 UTC",
+"generated_at": "2026-11-05 13:46:52 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 118.1,
-"uptime": "up 5 days, 23:21, 2 users, load averages: 81.20 74.43 74.12",
-"load": "{ 81.20 74.43 74.12 }"
+"free_gb": 132.4,
+"uptime": "up 5 days, 23:56, 2 users, load averages: 72.24 69.71 71.83",
+"load": "{ 72.24 69.71 71.83 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T13:41",
+"name": "dst_gap_london_close_leg",
+"status": "accepted",
+"rationale": "The payer is London desks and fix-hedgers who square inventory into the London 16:30 close. In the EU-off/US-on gap weeks that close lands at 12:30 ET, in the NY lunch lull, instead of 11:30 ET. The same flatten flow meets thinner US depth, so the fix-to-close leg overshoots and ",
+"note": "{\"name\": \"dst_gap_london_close_leg\", \"grid\": 108, \"sec_per_param\": 0.045, \"active_frac\": 0.01125}"
+},
+{
 "ts": "2026-11-05T13:05",
 "name": "dst_gap_data_to_fix",
 "status": "accepted",
@@ -2446,38 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the CME Globex maintenance halt, 17:00-18:00 New York, which is server 00:00-01:00. Futures hedgers, ETF authorised participants and stop orders cannot act in that hour. Spot prints thin OTC quotes that move far on little volume, and a marginal buyer (or seller) in t",
 "note": "{\"name\": \"halt_reopen_move\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.010125}"
-},
-{
-"ts": "2026-11-05T07:03",
-"name": "dst_gap_clock_slot",
-"status": "accepted",
-"rationale": "Payer: schedulers pinned to one clock, such as London-fix hedgers and US-open or COMEX-settle rebalancers. In the weeks when US and EU daylight saving differ, their slot lands an hour away from the counterparties' clock, so their pre-slot pressure meets thinner or thicker depth t",
-"note": "{\"name\": \"dst_gap_clock_slot\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.009}"
 }
 ],
 "history": [
-{
-"t": 1793712058.478274,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 6,
-"free_gb": 131.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793713014.8815832,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 6,
-"free_gb": 145.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793713979.8929942,
 "total": 31310831,
@@ -4058,6 +4036,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 118.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793886412.516049,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 132.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
