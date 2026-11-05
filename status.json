@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 05:24:13 UTC",
+"generated_at": "2026-11-05 05:39:49 UTC",
 "host": {
-"cpu_pct": 83.6,
+"cpu_pct": 72.3,
 "gpu_pct": 2,
-"free_gb": 170.0,
-"uptime": "up 5 days, 15:44, 2 users, load averages: 30.60 29.69 29.34",
-"load": "{ 30.60 29.69 29.34 }"
+"free_gb": 169.9,
+"uptime": "up 5 days, 16 hrs, 2 users, load averages: 28.10 28.38 28.67",
+"load": "{ 28.10 28.38 28.67 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T05:24",
+"name": "dst_gap_slot_displacement",
+"status": "rejected",
+"rationale": "Payer is a scheduler pinned to one clock. For about 3 weeks in March (US DST on, Europe off) and 1 week in late Oct/early Nov (Europe off, US still on), US data, COMEX and NY-close flows land an hour earlier in UTC than usual, and the London fix flows stay put. Algos and desks th",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-05T04:53",
 "name": "late_day_low_reclaim",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is slow macro and discount-rate allocators who anchor on yesterday's gold price. When real yields fall and gold has not yet repriced, the sellers are those still holding stale gold bids or offers, and a systematic long collects the catch-up.\nRATIONALE: It differs from real_",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-04T22:57",
-"name": "index_roll_session_ramp",
-"status": "accepted",
-"rationale": "The payer is commodity-index trackers (S&P GSCI rolls on business days 5-9, Bloomberg Commodity on 6-10). They are rule-bound books that must move a fixed fifth of the position during the US futures session on dated days, whatever the price. The existing `index_roll_*` families w",
-"note": "{\"name\": \"index_roll_session_ramp\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.04275}"
 }
 ],
 "history": [
-{
-"t": 1793684096.682382,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 99.9,
-"gpu": 2,
-"free_gb": 152.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793685063.624373,
 "total": 31310831,
@@ -4113,6 +4102,17 @@
 "cpu": 83.6,
 "gpu": 2,
 "free_gb": 170.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793857189.1844192,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 72.3,
+"gpu": 2,
+"free_gb": 169.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
