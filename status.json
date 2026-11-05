@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 20:12:28 UTC",
+"generated_at": "2026-11-05 20:28:35 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 163.5,
-"uptime": "up 6 days,  6:32, 2 users, load averages: 40.35 46.39 60.14",
-"load": "{ 40.35 46.39 60.14 }"
+"free_gb": 165.9,
+"uptime": "up 6 days,  6:48, 2 users, load averages: 40.50 40.60 47.02",
+"load": "{ 40.50 40.60 47.02 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T20:19",
+"name": "dst_gap_london_drive_release",
+"status": "accepted",
+"rationale": "The payer is London-session momentum holders in the gap weeks (US on daylight saving, EU not). The NY 08:30 release then lands at 12:30 London clock instead of 13:30, only 4.5 h after the London open, so the morning drive is still on the books and gets repriced or stopped out at ",
+"note": "{\"name\": \"dst_gap_london_drive_release\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.018}"
+},
+{
 "ts": "2026-11-05T19:47",
 "name": "dst_gap_runup_at_release",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is fix-benchmarked execution and market-on-fix order flow, which is pinned to the 15:00 London clock. The 10:00 ET US releases (ISM, JOLTS, consumer confidence) land on that fix in normal weeks, but 60 minutes before it in the DST-gap weeks. Fix traders who size their book ",
 "note": "{\"name\": \"dst_gap_release_to_fix\", \"grid\": 108, \"sec_per_param\": 0.05, \"active_frac\": 0.0115}"
-},
-{
-"ts": "2026-11-05T13:41",
-"name": "dst_gap_london_close_leg",
-"status": "accepted",
-"rationale": "The payer is London desks and fix-hedgers who square inventory into the London 16:30 close. In the EU-off/US-on gap weeks that close lands at 12:30 ET, in the NY lunch lull, instead of 11:30 ET. The same flatten flow meets thinner US depth, so the fix-to-close leg overshoots and ",
-"note": "{\"name\": \"dst_gap_london_close_leg\", \"grid\": 108, \"sec_per_param\": 0.045, \"active_frac\": 0.01125}"
 }
 ],
 "history": [
-{
-"t": 1793737516.508866,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 80.5,
-"gpu": 2,
-"free_gb": 179.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793738839.445766,
 "total": 31310831,
@@ -4014,6 +4003,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 163.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793910515.061323,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 165.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
