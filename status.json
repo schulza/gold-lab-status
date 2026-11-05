@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 21:16:07 UTC",
+"generated_at": "2026-11-05 21:32:11 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 147.3,
-"uptime": "up 6 days,  7:36, 2 users, load averages: 41.48 41.93 41.17",
-"load": "{ 41.48 41.93 41.17 }"
+"free_gb": 135.1,
+"uptime": "up 6 days,  7:52, 2 users, load averages: 36.47 40.52 41.02",
+"load": "{ 36.47 40.52 41.02 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T21:22",
+"name": "dst_gap_london_close_unwind",
+"status": "accepted",
+"rationale": "The payer is London dealer desks that must be flat at their local close, 16:30 London time. In gap weeks (US and EU on different DST) the NY data hour moves an hour against the London clock, so the final-hour move comes from a stale NY data catch-up, not from London's own flow. D",
+"note": "{\"name\": \"dst_gap_london_close_unwind\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.009}"
+},
+{
 "ts": "2026-11-05T20:51",
 "name": "dst_gap_stale_slot_spread_refund",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is physical dealers who take the London PM fix order and hedge it in COMEX futures before the 13:30 ET settle. Fix-to-settle is 3.5 h normally but 2.5 h in the weeks when US DST is on and EU DST is off, so those hedgers are squeezed into a shorter, thinner window.\nRATIO",
 "note": "{\"name\": \"dst_gap_fix_to_settle\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.0075}"
-},
-{
-"ts": "2026-11-05T14:49",
-"name": "dst_gap_settle_window_refund",
-"status": "rejected",
-"rationale": "The payer is COMEX trade-at-settlement and settle-linked hedgers (futures/option desks, ETF and spot-vs-futures basis books). Their settle window is pinned to 13:30 ET. In the US-on/EU-off weeks, London's PM fix and close sit only 1h before it, not 2h, so Europe's depth is gone w",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793740707.510747,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 76.2,
-"gpu": 2,
-"free_gb": 177.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793741638.915148,
 "total": 31310831,
@@ -4025,6 +4014,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 147.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793914331.395658,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 135.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
