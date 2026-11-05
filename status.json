@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 15:14:07 UTC",
+"generated_at": "2026-11-05 15:38:32 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 160.4,
-"uptime": "up 6 days,  1:29, 2 users, load averages: 69.60 70.49 72.80",
-"load": "{ 69.60 70.49 72.80 }"
+"free_gb": 163.8,
+"uptime": "up 6 days,  1:50, 2 users, load averages: 84.27 81.06 77.49",
+"load": "{ 84.27 81.06 77.49 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T15:22",
+"name": "dst_gap_fix_to_settle",
+"status": "accepted",
+"rationale": "The payer is physical dealers who take the London PM fix order and hedge it in COMEX futures before the 13:30 ET settle. Fix-to-settle is 3.5 h normally but 2.5 h in the weeks when US DST is on and EU DST is off, so those hedgers are squeezed into a shorter, thinner window.\nRATIO",
+"note": "{\"name\": \"dst_gap_fix_to_settle\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.0075}"
+},
+{
 "ts": "2026-11-05T14:49",
 "name": "dst_gap_settle_window_refund",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer: US-data-anchored and London-fix-anchored schedulers (fix and benchmark hedgers, data-reaction algos) in the 3\u20134 weeks a year when US and UK clocks differ. The 08:30 ET data release moves to 12:30 UTC, while the 15:00 London fix stays at 15:00 UTC. The data-to-fix lead stre",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-05T08:36",
-"name": null,
-"status": "rejected",
-"rationale": "",
-"note": "no python block in reply"
 }
 ],
 "history": [
-{
-"t": 1793719738.423412,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 6,
-"free_gb": 115.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793720699.978658,
 "total": 31310831,
@@ -4025,6 +4014,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 160.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793893112.6426141,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 163.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
