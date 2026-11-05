@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 04:21:42 UTC",
+"generated_at": "2026-11-05 04:37:18 UTC",
 "host": {
-"cpu_pct": 72.2,
+"cpu_pct": 75.7,
 "gpu_pct": 2,
-"free_gb": 170.3,
-"uptime": "up 5 days, 14:42, 2 users, load averages: 29.45 30.37 30.80",
-"load": "{ 29.45 30.37 30.80 }"
+"free_gb": 171.2,
+"uptime": "up 5 days, 14:57, 2 users, load averages: 31.16 29.87 30.10",
+"load": "{ 31.16 29.87 30.10 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-05T04:22",
+"name": null,
+"status": "rejected",
+"rationale": "Payer is slow macro-model allocators and daily-data ETF/CTA rebalancers. They reprice gold to real-yield moves only after the DFII10 print, so gold lags a large 5- or 20-day real-yield change. The strategy takes the other side of that lag and holds until the gap closes.\nRATIONALE",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-05T03:51",
 "name": "stop_wick_reclaim",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is dealer and prop risk desks that flatten books into US holidays under reduced holiday risk limits, and the retail and Asian flow that trades the thin holiday session. Desks sell inventory at a concession into the pre-holiday US afternoon, and the liquidity provider wh",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-04T21:50",
-"name": "index_roll_settle_slice",
-"status": "accepted",
-"rationale": "Payer is the dealers who warehouse the S&P GSCI and Bloomberg Commodity roll. Both indices roll in fixed daily fifths on business days 5\u20139 or 6\u201310, executed at the COMEX settle. The trackers are price-insensitive and dated, so whoever supplies gold into that settle is paid a prem",
-"note": "{\"name\": \"index_roll_settle_slice\", \"grid\": 96, \"sec_per_param\": 0.018, \"active_frac\": 0.0195}"
 }
 ],
 "history": [
-{
-"t": 1793680258.4402509,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 159.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793681201.3236039,
 "total": 31310831,
@@ -4113,6 +4102,17 @@
 "cpu": 72.2,
 "gpu": 2,
 "free_gb": 170.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793853438.283427,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 75.7,
+"gpu": 2,
+"free_gb": 171.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
