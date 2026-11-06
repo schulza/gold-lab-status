@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 22:27:48 UTC",
+"generated_at": "2026-11-06 22:51:03 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 2,
-"free_gb": 129.4,
-"uptime": "up 7 days,  8:41, 2 users, load averages: 68.63 69.98 64.81",
-"load": "{ 68.63 69.98 64.81 }"
+"gpu_pct": 19,
+"free_gb": 145.6,
+"uptime": "up 7 days,  9:04, 2 users, load averages: 71.31 71.73 70.28",
+"load": "{ 71.31 71.73 70.28 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T22:50",
+"name": "surprise_loss_rebid",
+"status": "rejected",
+"rationale": "`goldlab.external` is not in `ALLOWED_MODULES` (`goldlab/evolve.py:46`), so I used only price data from the director's under-sampled rule-bound list, near `var_breach_deleverage` and `loss_limit_reset`. The payer is a desk whose risk limit is a multiple of EWMA volatility. A loss",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-06T22:17",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the VaR-limit desk that was cut after a breach. Realised vol decays, headroom returns, and the desk re-adds at lagging, non-urgent size. Sellers who dumped at the low pay for that. It is long-only and a rule-bound payer (VaR limit reset), not a momentum, trend or vol-reg",
 "note": "{\"name\": \"var_headroom_rebuy\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.2224125}"
-},
-{
-"ts": "2026-11-06T16:12",
-"name": "vol_spike_decay_rebid",
-"status": "rejected",
-"rationale": "Payer is vol-target and risk-parity books. After a vol spike they cut gold exposure on a model schedule, and they re-lever mechanically once short-window vol decays to a fraction of its spike peak. Spike-driven sellers pay the discount, and the re-lever bid follows with a lag.\nTh",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793832218.756665,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 147.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793833692.083829,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 129.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794005463.377033,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 19,
+"free_gb": 145.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
