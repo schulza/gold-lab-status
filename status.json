@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 07:18:13 UTC",
+"generated_at": "2026-11-06 07:43:03 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
 "free_gb": 142.4,
-"uptime": "up 6 days, 17:29, 2 users, load averages: 70.46 61.09 65.49",
-"load": "{ 71.46 61.46 65.59 }"
+"uptime": "up 6 days, 17:54, 2 users, load averages: 67.93 68.93 70.83",
+"load": "{ 67.93 68.93 70.83 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T07:19",
+"name": "spread_stress_normalised_bid",
+"status": "rejected",
+"rationale": "Payer is forced sellers (margin calls, stop cascades) who hit quotes that dealers have widened. They pay the widened spread plus the price concession. The long entry comes only after the spread has normalised, once the forced flow is done.\nThis is a spread-stress then spread-norm",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-06T06:45",
 "name": "var_breach_quiet_rerisk",
 "status": "accepted",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the counterparty of clock-pinned schedulers (US-clock fix, data and hedge flow, EU-clock desk flow) in the 5 weeks a year when US DST is on and EU DST is off. In those weeks US flow lands at its summer UTC slots and EU flow at its winter slots, so the matching-regime int",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-06T00:34",
-"name": "dst_gap_slot_excess",
-"status": "accepted",
-"rationale": "The payer is UTC-calibrated schedulers (participation curves, dealer depth limits) who sized the 12:30 and 13:00 UTC slots on prior non-gap weeks. In gap weeks (US on DST, EU off) the NY 08:30 print lands in that slot, and the move there is the part the calibrated depth couldn't ",
-"note": "{\"name\": \"dst_gap_slot_excess\", \"grid\": 128, \"sec_per_param\": 0.0, \"active_frac\": 0.003}"
 }
 ],
 "history": [
-{
-"t": 1793777221.940299,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 86.2,
-"gpu": 29,
-"free_gb": 170.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793778157.32606,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 68.5,
-"gpu": 2,
-"free_gb": 169.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793779093.1504982,
 "total": 31310831,
@@ -3987,6 +3965,17 @@
 },
 {
 "t": 1793949493.974968,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 142.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793950983.082562,
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 100.0,
