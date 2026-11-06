@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 06:36:57 UTC",
+"generated_at": "2026-11-06 06:52:57 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 158.7,
-"uptime": "up 6 days, 16:51, 2 users, load averages: 70.40 76.56 74.28",
-"load": "{ 70.40 76.56 74.28 }"
+"free_gb": 158.4,
+"uptime": "up 6 days, 17:13, 2 users, load averages: 72.31 74.43 74.95",
+"load": "{ 72.31 74.43 74.95 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T06:45",
+"name": "var_breach_quiet_rerisk",
+"status": "accepted",
+"rationale": "The payer is risk desks and vol-targeted books that are hard-limited after a VaR breach. They cut exposure into the breach bar and may not re-lever until a fixed quiet period has passed. Selling is forced and price-insensitive, so the bounce after a quiet re-entry window is paid ",
+"note": "{\"name\": \"var_breach_quiet_rerisk\", \"grid\": 192, \"sec_per_param\": 0.007, \"active_frac\": 0.46078125}"
+},
+{
 "ts": "2026-11-06T06:12",
 "name": "maint_gap_reopen",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is UTC-calibrated schedulers (participation curves, dealer depth limits) who sized the 12:30 and 13:00 UTC slots on prior non-gap weeks. In gap weeks (US on DST, EU off) the NY 08:30 print lands in that slot, and the move there is the part the calibrated depth couldn't ",
 "note": "{\"name\": \"dst_gap_slot_excess\", \"grid\": 128, \"sec_per_param\": 0.0, \"active_frac\": 0.003}"
-},
-{
-"ts": "2026-11-06T00:00",
-"name": "dst_gap_london_morning_early_us",
-"status": "rejected",
-"rationale": "Payer is London desks hedging toward the 15:00 London PM fix. In the DST-gap weeks, when the US is on daylight time and the UK isn't, the NY-pinned COMEX open (08:20 NY) lands one London hour earlier. That puts it into London's late-morning inventory instead of after the lunch lu",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793774421.771552,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 64.8,
-"gpu": 32,
-"free_gb": 176.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793775353.100839,
 "total": 31310831,
@@ -4003,6 +3992,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 158.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793947977.477191,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 158.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
