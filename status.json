@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 11:51:48 UTC",
+"generated_at": "2026-11-06 12:07:24 UTC",
 "host": {
-"cpu_pct": 72.8,
+"cpu_pct": 86.7,
 "gpu_pct": 2,
-"free_gb": 173.4,
-"uptime": "up 6 days, 22:12, 2 users, load averages: 28.06 29.80 29.59",
-"load": "{ 28.06 29.80 29.59 }"
+"free_gb": 176.1,
+"uptime": "up 6 days, 22:27, 2 users, load averages: 29.45 28.99 29.05",
+"load": "{ 29.45 28.99 29.05 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T12:03",
+"name": "day_high_giveback_bid",
+"status": "accepted",
+"rationale": "Payer is late-day momentum buyers and their trailing stops. After an intraday run they are stopped out as the day gives back part of the run. That is a rule-bound forced seller rather than a view, and the forced selling ends at a predictable point. The family goes long after a wa",
+"note": "{\"name\": \"day_high_giveback_bid\", \"grid\": 81, \"sec_per_param\": 0.0, \"active_frac\": 0.39451875}"
+},
+{
 "ts": "2026-11-06T11:32",
 "name": "vol_target_turnover_flow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is stop and limit orders queued across the daily maintenance break (gap > 2.5\u00d7 the bar interval and < 10 h, weekends excluded). They fill together against thin quotes on the reopen. If that gap is large relative to the trailing per-bar sigma, the reopen print is either over",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-06T05:39",
-"name": null,
-"status": "rejected",
-"rationale": "Real-yield gap catch-up targets slow macro and allocation-model gold holders, who reprice only after the next-day DFII10 publication. They leave gold under-moved against a large 5- or 20-day real-yield change, and the family bets that the gap closes.\nIt is rule-bound and uses pub",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1793793409.1473532,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 118.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793794521.3375602,
 "total": 31310831,
@@ -4025,6 +4014,17 @@
 "cpu": 72.8,
 "gpu": 2,
 "free_gb": 173.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793966844.732485,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 86.7,
+"gpu": 2,
+"free_gb": 176.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
