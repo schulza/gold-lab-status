@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 01:59:29 UTC",
+"generated_at": "2026-11-06 02:22:52 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 157.9,
-"uptime": "up 6 days, 12:16, 2 users, load averages: 79.08 74.28 73.45",
-"load": "{ 79.08 74.28 73.45 }"
+"free_gb": 150.9,
+"uptime": "up 6 days, 12:35, 2 users, load averages: 69.75 70.71 71.68",
+"load": "{ 69.75 70.71 71.68 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T02:15",
+"name": "dst_gap_pinned_slot_displacement",
+"status": "rejected",
+"rationale": "Payer: schedulers pinned to the winter 14:30 UTC clock, such as ETF and index-hedge sweeps and UTC-cron execution algos. In the weeks when the US is already on EDT and Europe is still on winter time (or back on it), the NYSE open is at 13:30 UTC. Their orders then hit one hour in",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-06T01:41",
 "name": "dst_gap_open_hour_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is London-session momentum holders in the gap weeks (US on daylight saving, EU not). The NY 08:30 release then lands at 12:30 London clock instead of 13:30, only 4.5 h after the London open, so the morning drive is still on the books and gets repriced or stopped out at ",
 "note": "{\"name\": \"dst_gap_london_drive_release\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.018}"
-},
-{
-"ts": "2026-11-05T19:47",
-"name": "dst_gap_runup_at_release",
-"status": "accepted",
-"rationale": "The payer is London-session liquidity providers and algos who built inventory since the London open. In the roughly 5 gap weeks a year, NY 08:30 data lands at 12:30 UTC, so they have to unwind or reload with a thinner London-only book. They get that hour's flow one hour earlier t",
-"note": "{\"name\": \"dst_gap_runup_at_release\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.009}"
 }
 ],
 "history": [
-{
-"t": 1793758837.322199,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 124.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793760227.4752388,
 "total": 31310831,
@@ -4025,6 +4014,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 157.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793931772.885057,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 150.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
