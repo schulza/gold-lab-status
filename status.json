@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 08:14:18 UTC",
+"generated_at": "2026-11-06 08:29:55 UTC",
 "host": {
-"cpu_pct": 72.7,
+"cpu_pct": 69.7,
 "gpu_pct": 2,
-"free_gb": 175.9,
-"uptime": "up 6 days, 18:34, 2 users, load averages: 30.50 30.98 43.02",
-"load": "{ 30.50 30.98 43.02 }"
+"free_gb": 178.4,
+"uptime": "up 6 days, 18:50, 2 users, load averages: 28.67 28.88 33.61",
+"load": "{ 28.67 28.88 33.61 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T08:23",
+"name": "month_end_band_rebalance",
+"status": "rejected",
+"rationale": "Payer is balanced and target-weight portfolios (pension and multi-asset mandates) that rebalance a fixed gold weight in the last calendar days of the month. After a large move they must sell gold if it ran up and buy if it fell, regardless of price. We position at the start of th",
+"note": "sandbox: AssertionError: zu speicherhungrig: 43 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-06T07:52",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer: schedulers pinned to the winter 14:30 UTC clock, such as ETF and index-hedge sweeps and UTC-cron execution algos. In the weeks when the US is already on EDT and Europe is still on winter time (or back on it), the NYSE open is at 13:30 UTC. Their orders then hit one hour in",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-06T01:41",
-"name": "dst_gap_open_hour_follow",
-"status": "accepted",
-"rationale": "The payer is London-clock desks and bots that treat 14:30 London as \"the US open\". In US-DST-on, EU-DST-off weeks (spring and autumn windows pooled) the real NYSE open is 13:30 UTC, so New York has traded for an hour before those desks' pre-open quote regime ends at 14:30 UTC.\nWh",
-"note": "{\"name\": \"dst_gap_open_hour_follow\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.01125}"
 }
 ],
 "history": [
-{
-"t": 1793780964.681966,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 78.7,
-"gpu": 17,
-"free_gb": 176.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793782187.689417,
 "total": 31310831,
@@ -3981,6 +3970,17 @@
 "cpu": 72.7,
 "gpu": 2,
 "free_gb": 175.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793953795.00817,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 69.7,
+"gpu": 2,
+"free_gb": 178.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
