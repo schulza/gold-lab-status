@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 21:09:59 UTC",
+"generated_at": "2026-11-06 21:25:32 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 81.8,
 "gpu_pct": 2,
-"free_gb": 118.7,
-"uptime": "up 7 days,  7:23, 2 users, load averages: 72.31 72.41 73.35",
-"load": "{ 72.31 72.41 73.35 }"
+"free_gb": 178.3,
+"uptime": "up 7 days,  7:46, 2 users, load averages: 25.89 41.24 57.54",
+"load": "{ 25.89 41.24 57.54 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T21:13",
+"name": "repeat_breach_cut",
+"status": "accepted",
+"rationale": "Payer is the risk-limit desk (VaR or stop-loss) that gets cut again. A second same-direction k-sigma breach within m bars means the first cut did not bring exposure under the limit, so it must cut again over the next bars. Anyone trading against that forced second leg pays. This ",
+"note": "{\"name\": \"repeat_breach_cut\", \"grid\": 162, \"sec_per_param\": 0.002, \"active_frac\": 0.2894125}"
+},
+{
 "ts": "2026-11-06T20:40",
 "name": "drawdown_cooloff_rebid",
 "status": "rejected",
@@ -2445,13 +2452,6 @@
 "name": "cppi_floor_exhaustion",
 "status": "rejected",
 "rationale": "Payer is the CPPI and drawdown-budget holders (principal-protected notes, risk-budgeted funds). Their gold exposure is m\u00d7(NAV\u2212floor), so they sell more as the drawdown from the peak deepens, and the selling ends once the floor is hit and the position is fully de-risked. I buy aft",
-"note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-06T14:38",
-"name": "expiry_pin_release",
-"status": "rejected",
-"rationale": "Payer: breakout and stop-run traders who buy or sell into dealer-pinned strikes in the days before monthly COMEX gold options expiry (about the 4th-last business day). Dealers long gamma hedge against the move, which fades it. After expiry the pin is gone and the move can run.\nRA",
 "note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
@@ -4080,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 118.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794000332.1383529,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 81.8,
+"gpu": 2,
+"free_gb": 178.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
