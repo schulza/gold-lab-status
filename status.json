@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 19:22:38 UTC",
+"generated_at": "2026-11-06 19:39:35 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 77.1,
 "gpu_pct": 2,
-"free_gb": 140.0,
-"uptime": "up 7 days,  5:39, 2 users, load averages: 118.72 85.20 78.36",
-"load": "{ 115.78 85.14 78.39 }"
+"free_gb": 163.3,
+"uptime": "up 7 days,  5:58, 2 users, load averages: 56.10 72.51 75.87",
+"load": "{ 56.10 72.51 75.87 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T19:32",
+"name": "margin_hike_lag_cut",
+"status": "rejected",
+"rationale": "Payer is leveraged COMEX gold futures holders on the losing side of a volatility regime shift. When short-window daily range jumps above a disjoint longer baseline, exchange performance-bond requirements rise with a 1\u20133 day lag. Margin-constrained accounts then have to cut in the",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-06T18:58",
 "name": "consecutive_loss_margin_flush",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is desks whose daily risk limits are sized on the trailing mean absolute daily move. The first intraday close beyond k times that limit forces a cut or stop-out. Those orders run in the breach direction for a few hours and are paid by whoever takes the other side before",
 "note": "{\"name\": \"daily_limit_breach_flow\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.019575}"
-},
-{
-"ts": "2026-11-06T13:05",
-"name": "thin_anchor_fade",
-"status": "accepted",
-"rationale": "Payer is momentum chasers who push price away from the tick-weighted anchor on a thin tape. They cross the spread into low-participation prints and then wait to be refunded when normal flow returns. The thin filter relies on tick rate against its own trailing mean, so it is a par",
-"note": "{\"name\": \"thin_anchor_fade\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.6204375}"
 }
 ],
 "history": [
-{
-"t": 1793820529.9967911,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 67.1,
-"gpu": 2,
-"free_gb": 174.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793821532.41579,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 140.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793993975.0867321,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 77.1,
+"gpu": 2,
+"free_gb": 163.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
