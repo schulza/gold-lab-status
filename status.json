@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 04:39:44 UTC",
+"generated_at": "2026-11-06 05:09:53 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 117.9,
-"uptime": "up 6 days, 14:43, 2 users, load averages: 82.49 81.66 80.09",
-"load": "{ 82.49 81.66 80.09 }"
+"free_gb": 132.5,
+"uptime": "up 6 days, 15:16, 2 users, load averages: 79.73 78.36 80.01",
+"load": "{ 79.73 78.36 80.01 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T05:05",
+"name": "dst_gap_friday_cut_weekend",
+"status": "accepted",
+"rationale": "The payer is London-clock desks that cut the book at a fixed UTC hour on Fridays, which is also the Friday pre-weekend flatten, not the NY clock. In US-DST-on, EU-DST-off weeks (spring and autumn pooled) that cut lands an hour earlier relative to the New York afternoon, which sti",
+"note": "{\"name\": \"dst_gap_friday_cut_weekend\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.0195}"
+},
+{
 "ts": "2026-11-06T04:30",
 "name": "dst_gap_slot_learned_displacement",
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is spot-gold quote makers and UTC/London-clock schedulers who reset risk and widen quotes at a fixed UTC hour. The daily CME halt and Globex reopen sits at 17:00/18:00 New York time. In US/EU DST-gap weeks it lands an hour earlier on the London clock (22:00 instead of 2",
 "note": "{\"name\": \"dst_gap_globex_reopen_repricing\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.010125}"
-},
-{
-"ts": "2026-11-05T22:24",
-"name": "dst_gap_ny_open_london_deadline",
-"status": "accepted",
-"rationale": "The payer is London market makers who must be flat at the 16:30 London-local fix. In DST-gap weeks the NY open moves an hour against the London clock, so the NY first-hour move lands while London desks still carry inventory.\nTheir balance-sheet-constrained, price-insensitive inve",
-"note": "{\"name\": \"dst_gap_ny_open_london_deadline\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.0105}"
 }
 ],
 "history": [
-{
-"t": 1793767893.41208,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 58.7,
-"gpu": 2,
-"free_gb": 178.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793768830.300517,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 47.2,
-"gpu": 2,
-"free_gb": 178.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793769768.4715,
 "total": 31310831,
@@ -4025,6 +4003,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 117.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793941793.826226,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 132.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
