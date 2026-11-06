@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 03:43:24 UTC",
+"generated_at": "2026-11-06 04:07:15 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 150.1,
-"uptime": "up 6 days, 13:56, 2 users, load averages: 74.02 77.99 79.64",
-"load": "{ 74.02 77.99 79.64 }"
+"free_gb": 139.8,
+"uptime": "up 6 days, 14:19, 2 users, load averages: 75.48 79.55 80.10",
+"load": "{ 75.48 79.55 80.10 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T03:55",
+"name": "dst_gap_london_mark_ny_midday",
+"status": "accepted",
+"rationale": "The payer is London-clock desks that flatten before the weekend, and anyone benchmarked to the London PM fix or London close. In US-DST-on, EU-DST-off weeks (spring and autumn pooled) the London mark-to-NY-midday span shrinks from 120 to 60 minutes. Their London-clock exits and h",
+"note": "{\"name\": \"dst_gap_london_mark_ny_midday\", \"grid\": 192, \"sec_per_param\": 0.004, \"active_frac\": 0.0165}"
+},
+{
 "ts": "2026-11-06T03:21",
 "name": "dst_gap_desk_flatten",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is Asia-session stop and range orders, plus the thin quotes behind them, in the gap weeks (US on DST, EU not). London opens at 08:00 UTC instead of 07:00, so the 07:00\u201308:00 UTC hour that is normally London morning becomes Asia-only. A move printed in that hour has less",
 "note": "{\"name\": \"dst_gap_asia_hour_extension\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.0135}"
-},
-{
-"ts": "2026-11-05T21:22",
-"name": "dst_gap_london_close_unwind",
-"status": "accepted",
-"rationale": "The payer is London dealer desks that must be flat at their local close, 16:30 London time. In gap weeks (US and EU on different DST) the NY data hour moves an hour against the London clock, so the final-hour move comes from a stale NY data catch-up, not from London's own flow. D",
-"note": "{\"name\": \"dst_gap_london_close_unwind\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.009}"
 }
 ],
 "history": [
-{
-"t": 1793765077.773052,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 143.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793766021.3556328,
 "total": 31310831,
@@ -4036,6 +4025,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 150.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793938035.249424,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 139.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
