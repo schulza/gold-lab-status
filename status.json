@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-05 23:52:04 UTC",
+"generated_at": "2026-11-06 00:12:12 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 144.0,
-"uptime": "up 6 days, 10:07, 2 users, load averages: 108.95 86.25 71.47",
-"load": "{ 108.95 86.25 71.47 }"
+"free_gb": 158.4,
+"uptime": "up 6 days, 10:28, 2 users, load averages: 73.88 70.61 69.73",
+"load": "{ 73.88 70.61 69.73 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T00:00",
+"name": "dst_gap_london_morning_early_us",
+"status": "rejected",
+"rationale": "Payer is London desks hedging toward the 15:00 London PM fix. In the DST-gap weeks, when the US is on daylight time and the UK isn't, the NY-pinned COMEX open (08:20 NY) lands one London hour earlier. That puts it into London's late-morning inventory instead of after the lunch lu",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-05T23:29",
 "name": "dst_gap_asia_utc_leg_london_open",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is execution algos and CTA rebalancers scheduled on a fixed UTC clock. In the roughly 4 gap weeks a year, NY 08:30 data lands at 12:30 UTC instead of 13:30. Those schedulers start an hour late and chase a move they missed.\nThis is the one `dst_gap_*` variant anchored on",
 "note": "{\"name\": \"dst_gap_utc_clock_chase\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.018}"
-},
-{
-"ts": "2026-11-05T17:35",
-"name": "dst_gap_clock_exit_pair",
-"status": "accepted",
-"rationale": "Payer: schedulers pinned to one local clock, such as London-fix hedgers and NY-data or COMEX-settle rebalancers. In weeks when US and EU daylight saving differ, the gap between the two clocks changes by an hour. The A\u2192B move built by one clock's flow reaches the other clock's flo",
-"note": "{\"name\": \"dst_gap_clock_exit_pair\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.0354875}"
 }
 ],
 "history": [
-{
-"t": 1793750952.244669,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": null,
-"gpu": 2,
-"free_gb": 137.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793752360.225882,
 "total": 31310831,
@@ -4025,6 +4014,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 144.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793923932.370721,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 158.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
