@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 05:52:00 UTC",
+"generated_at": "2026-11-06 06:15:17 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 146.4,
-"uptime": "up 6 days, 16:04, 2 users, load averages: 69.13 73.48 78.29",
-"load": "{ 69.13 73.48 78.29 }"
+"free_gb": 143.1,
+"uptime": "up 6 days, 16:28, 2 users, load averages: 73.92 73.56 73.92",
+"load": "{ 73.92 73.56 73.92 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T06:12",
+"name": "maint_gap_reopen",
+"status": "rejected",
+"rationale": "Payer is stop and limit orders queued across the daily maintenance break (gap > 2.5\u00d7 the bar interval and < 10 h, weekends excluded). They fill together against thin quotes on the reopen. If that gap is large relative to the trailing per-bar sigma, the reopen print is either over",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-06T05:39",
 "name": null,
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is London desks hedging toward the 15:00 London PM fix. In the DST-gap weeks, when the US is on daylight time and the UK isn't, the NY-pinned COMEX open (08:20 NY) lands one London hour earlier. That puts it into London's late-morning inventory instead of after the lunch lu",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-05T23:29",
-"name": "dst_gap_asia_utc_leg_london_open",
-"status": "accepted",
-"rationale": "The payer is Asia-clock desks and SGE or Shanghai hedgers. Their flow is pinned to a fixed UTC time and builds a move before London opens, then meets London depth that arrives an hour earlier or later, depending on EU daylight saving. They pay the London opening liquidity provide",
-"note": "{\"name\": \"dst_gap_asia_utc_leg_london_open\", \"grid\": 108, \"sec_per_param\": 0.017, \"active_frac\": 0.01125}"
 }
 ],
 "history": [
-{
-"t": 1793771628.647406,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 35.1,
-"gpu": 2,
-"free_gb": 178.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793772558.2855911,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 48.0,
-"gpu": 2,
-"free_gb": 179.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793773489.470689,
 "total": 31310831,
@@ -4014,6 +3992,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 146.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793945717.114659,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 143.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
