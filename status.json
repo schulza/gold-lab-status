@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 11:20:36 UTC",
+"generated_at": "2026-11-06 11:36:13 UTC",
 "host": {
-"cpu_pct": 86.9,
-"gpu_pct": 2,
-"free_gb": 174.4,
-"uptime": "up 6 days, 21:41, 2 users, load averages: 29.06 29.47 29.43",
-"load": "{ 29.06 29.47 29.43 }"
+"cpu_pct": 81.6,
+"gpu_pct": 23,
+"free_gb": 173.7,
+"uptime": "up 6 days, 21:56, 2 users, load averages: 30.67 29.66 29.38",
+"load": "{ 30.67 29.66 29.38 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T11:32",
+"name": "vol_target_turnover_flow",
+"status": "accepted",
+"rationale": "Payer is vol-targeting and risk-parity funds. Their leverage target is 1/trailing-vol, and turnover limits and rebalance lag spread each adjustment over several days. After vol falls they keep buying, and after vol rises they keep selling, into liquidity they don't control.\nRATIO",
+"note": "{\"name\": \"vol_target_turnover_flow\", \"grid\": 81, \"sec_per_param\": 0.0, \"active_frac\": 0.99285}"
+},
+{
 "ts": "2026-11-06T11:01",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Real-yield gap catch-up targets slow macro and allocation-model gold holders, who reprice only after the next-day DFII10 publication. They leave gold under-moved against a large 5- or 20-day real-yield change, and the family bets that the gap closes.\nIt is rule-bound and uses pub",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-06T05:05",
-"name": "dst_gap_friday_cut_weekend",
-"status": "accepted",
-"rationale": "The payer is London-clock desks that cut the book at a fixed UTC hour on Fridays, which is also the Friday pre-weekend flatten, not the NY clock. In US-DST-on, EU-DST-off weeks (spring and autumn pooled) that cut lands an hour earlier relative to the New York afternoon, which sti",
-"note": "{\"name\": \"dst_gap_friday_cut_weekend\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.0195}"
 }
 ],
 "history": [
-{
-"t": 1793791371.089312,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 140.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793793409.1473532,
 "total": 31310831,
@@ -4014,6 +4003,17 @@
 "cpu": 86.9,
 "gpu": 2,
 "free_gb": 174.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793964973.079626,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 81.6,
+"gpu": 23,
+"free_gb": 173.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
