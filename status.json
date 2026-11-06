@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 16:01:28 UTC",
+"generated_at": "2026-11-06 16:17:05 UTC",
 "host": {
-"cpu_pct": 81.5,
-"gpu_pct": 2,
-"free_gb": 178.5,
-"uptime": "up 7 days,  2:21, 2 users, load averages: 28.11 28.33 28.45",
-"load": "{ 28.11 28.33 28.45 }"
+"cpu_pct": 79.2,
+"gpu_pct": 1,
+"free_gb": 178.0,
+"uptime": "up 7 days,  2:37, 2 users, load averages: 28.33 28.46 28.59",
+"load": "{ 28.33 28.46 28.59 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T16:12",
+"name": "vol_spike_decay_rebid",
+"status": "rejected",
+"rationale": "Payer is vol-target and risk-parity books. After a vol spike they cut gold exposure on a model schedule, and they re-lever mechanically once short-window vol decays to a fraction of its spike peak. Spike-driven sellers pay the discount, and the re-lever bid follows with a lag.\nTh",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-06T15:41",
 "name": "contraction_stop_cluster_break",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "PAYER = bank desks under Basel backtesting rules. Each VaR exception stays in the trailing window and adds to the capital multiplier, which caps gold risk. When the oldest exception rolls out of the window with no new one, the cap eases and the desk re-levers on a schedule set by",
 "note": "{\"name\": \"exception_rolloff_relever\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.0994}"
-},
-{
-"ts": "2026-11-06T09:59",
-"name": "drift_band_rebalance_lag",
-"status": "accepted",
-"rationale": "The payer is band-rule rebalancers (fixed-weight balanced and multi-asset funds). Their policy forces them to trade gold back to target weight once a cumulative drift passes a band, and they execute it `delay` bars after the band is crossed, whatever the price. A scheduled sell t",
-"note": "{\"name\": \"drift_band_rebalance_lag\", \"grid\": 162, \"sec_per_param\": 0.002, \"active_frac\": 0.541425}"
 }
 ],
 "history": [
-{
-"t": 1793808113.256335,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 140.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793809128.612045,
 "total": 31310831,
@@ -4080,6 +4069,17 @@
 "cpu": 81.5,
 "gpu": 2,
 "free_gb": 178.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793981825.17931,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 79.2,
+"gpu": 1,
+"free_gb": 178.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
