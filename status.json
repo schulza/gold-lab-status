@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 04:07:15 UTC",
+"generated_at": "2026-11-06 04:39:44 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 139.8,
-"uptime": "up 6 days, 14:19, 2 users, load averages: 75.48 79.55 80.10",
-"load": "{ 75.48 79.55 80.10 }"
+"free_gb": 117.9,
+"uptime": "up 6 days, 14:43, 2 users, load averages: 82.49 81.66 80.09",
+"load": "{ 82.49 81.66 80.09 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T04:30",
+"name": "dst_gap_slot_learned_displacement",
+"status": "rejected",
+"rationale": "The payer is schedulers pinned to the UTC clock (data slots, algo child-order windows, benchmark hedges). In the 3-4 weeks a year when US DST is on and EU DST is off, a different real event lands in the same UTC slot, so these schedulers trade into a flow they did not plan for.\nT",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-06T03:55",
 "name": "dst_gap_london_mark_ny_midday",
 "status": "accepted",
@@ -2446,38 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is London market makers who must be flat at the 16:30 London-local fix. In DST-gap weeks the NY open moves an hour against the London clock, so the NY first-hour move lands while London desks still carry inventory.\nTheir balance-sheet-constrained, price-insensitive inve",
 "note": "{\"name\": \"dst_gap_ny_open_london_deadline\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.0105}"
-},
-{
-"ts": "2026-11-05T21:53",
-"name": "dst_gap_asia_hour_extension",
-"status": "accepted",
-"rationale": "The payer is Asia-session stop and range orders, plus the thin quotes behind them, in the gap weeks (US on DST, EU not). London opens at 08:00 UTC instead of 07:00, so the 07:00\u201308:00 UTC hour that is normally London morning becomes Asia-only. A move printed in that hour has less",
-"note": "{\"name\": \"dst_gap_asia_hour_extension\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.0135}"
 }
 ],
 "history": [
-{
-"t": 1793766021.3556328,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 78.5,
-"gpu": 2,
-"free_gb": 179.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793766953.4741042,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 70.0,
-"gpu": 15,
-"free_gb": 176.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793767893.41208,
 "total": 31310831,
@@ -4036,6 +4014,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 139.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793939984.5955358,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 117.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
