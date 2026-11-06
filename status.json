@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 13:25:24 UTC",
+"generated_at": "2026-11-06 13:41:00 UTC",
 "host": {
-"cpu_pct": 68.1,
+"cpu_pct": 64.8,
 "gpu_pct": 2,
-"free_gb": 179.2,
-"uptime": "up 6 days, 23:45, 2 users, load averages: 29.13 27.81 27.60",
-"load": "{ 29.13 27.81 27.60 }"
+"free_gb": 178.8,
+"uptime": "up 7 days, 1 min, 2 users, load averages: 26.96 27.75 28.00",
+"load": "{ 26.96 27.75 28.00 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T13:36",
+"name": "daily_limit_breach_flow",
+"status": "accepted",
+"rationale": "The payer is desks whose daily risk limits are sized on the trailing mean absolute daily move. The first intraday close beyond k times that limit forces a cut or stop-out. Those orders run in the breach direction for a few hours and are paid by whoever takes the other side before",
+"note": "{\"name\": \"daily_limit_breach_flow\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.019575}"
+},
+{
 "ts": "2026-11-06T13:05",
 "name": "thin_anchor_fade",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is slow-rebalancing macro and ETF allocators whose gold exposure is set by a daily DFII10 real-yield model (published next day). After a 5- or 20-day real-yield move they chase gold with a lag, and they pay whoever holds gold before the catch-up flow arrives.\nRATIONALE: The",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-06T07:19",
-"name": "spread_stress_normalised_bid",
-"status": "rejected",
-"rationale": "Payer is forced sellers (margin calls, stop cascades) who hit quotes that dealers have widened. They pay the widened spread plus the price concession. The long entry comes only after the spread has normalised, once the forced flow is done.\nThis is a spread-stress then spread-norm",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793798946.192842,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 140.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793800391.884693,
 "total": 31310831,
@@ -4047,6 +4036,17 @@
 "cpu": 68.1,
 "gpu": 2,
 "free_gb": 179.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793972460.744798,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 64.8,
+"gpu": 2,
+"free_gb": 178.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
