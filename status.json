@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 21:41:08 UTC",
+"generated_at": "2026-11-06 22:04:58 UTC",
 "host": {
-"cpu_pct": 69.5,
+"cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 174.8,
-"uptime": "up 7 days,  8:01, 2 users, load averages: 25.98 28.21 37.81",
-"load": "{ 25.98 28.21 37.81 }"
+"free_gb": 131.5,
+"uptime": "up 7 days,  8:17, 2 users, load averages: 66.97 44.50 37.86",
+"load": "{ 66.97 44.50 37.86 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T21:44",
+"name": "pivot_stop_run_reclaim",
+"status": "accepted",
+"rationale": "Payer: retail and EA traders who place limit orders at the published floor-trader pivot S1/R1, computed from yesterday's H/L/C, and stop-loss orders just beyond them. A pierce that is reclaimed within the day means the stops were run and the late limit buyers were right (or, with",
+"note": "{\"name\": \"pivot_stop_run_reclaim\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.02875}"
+},
+{
 "ts": "2026-11-06T21:13",
 "name": "repeat_breach_cut",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the stop-order cluster outside an inside or contracted day. Traders who faded the quiet day park stops just beyond its range, and the break then forces them to cover. Dealers who are short that liquidity also have to buy into the move. The signal follows the first break ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-06T15:09",
-"name": "cppi_floor_exhaustion",
-"status": "rejected",
-"rationale": "Payer is the CPPI and drawdown-budget holders (principal-protected notes, risk-budgeted funds). Their gold exposure is m\u00d7(NAV\u2212floor), so they sell more as the drawdown from the peak deepens, and the selling ends once the floor is hit and the position is fully de-risked. I buy aft",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793829463.7791228,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 117.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793830844.9386911,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 69.5,
 "gpu": 2,
 "free_gb": 174.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794002698.335336,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 131.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
