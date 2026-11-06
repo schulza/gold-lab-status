@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 17:50:25 UTC",
+"generated_at": "2026-11-06 18:08:58 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 13,
-"free_gb": 143.0,
-"uptime": "up 7 days,  4:02, 2 users, load averages: 71.48 72.73 68.90",
-"load": "{ 71.48 72.73 68.90 }"
+"gpu_pct": 2,
+"free_gb": 146.6,
+"uptime": "up 7 days,  4:26, 2 users, load averages: 72.89 70.87 70.97",
+"load": "{ 72.89 70.87 70.97 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T17:51",
+"name": "voltarget_cut_fade",
+"status": "accepted",
+"rationale": "Payer is trend-following vol-target funds. When short-window realised vol jumps well above its long-window baseline while an established trend is running, their vol budget forces them to cut in the trend direction, so they sell into the spike at poor prices. The strategy takes th",
+"note": "{\"name\": \"voltarget_cut_fade\", \"grid\": 144, \"sec_per_param\": 0.013, \"active_frac\": 0.04425}"
+},
+{
 "ts": "2026-11-06T17:18",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is late-day momentum buyers and their trailing stops. After an intraday run they are stopped out as the day gives back part of the run. That is a rule-bound forced seller rather than a view, and the forced selling ends at a predictable point. The family goes long after a wa",
 "note": "{\"name\": \"day_high_giveback_bid\", \"grid\": 81, \"sec_per_param\": 0.0, \"active_frac\": 0.39451875}"
-},
-{
-"ts": "2026-11-06T11:32",
-"name": "vol_target_turnover_flow",
-"status": "accepted",
-"rationale": "Payer is vol-targeting and risk-parity funds. Their leverage target is 1/trailing-vol, and turnover limits and rebalance lag spread each adjustment over several days. After vol falls they keep buying, and after vol rises they keep selling, into liquidity they don't control.\nRATIO",
-"note": "{\"name\": \"vol_target_turnover_flow\", \"grid\": 81, \"sec_per_param\": 0.0, \"active_frac\": 0.99285}"
 }
 ],
 "history": [
-{
-"t": 1793815209.357621,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 156.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793816497.7699258,
 "total": 31310831,
@@ -4080,6 +4069,17 @@
 "cpu": 100.0,
 "gpu": 13,
 "free_gb": 143.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793988538.147189,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 146.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
