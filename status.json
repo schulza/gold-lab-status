@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 03:19:55 UTC",
+"generated_at": "2026-11-06 03:43:24 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 158.1,
-"uptime": "up 6 days, 13:39, 2 users, load averages: 80.35 81.43 80.89",
-"load": "{ 80.35 81.43 80.89 }"
+"free_gb": 150.1,
+"uptime": "up 6 days, 13:56, 2 users, load averages: 74.02 77.99 79.64",
+"load": "{ 74.02 77.99 79.64 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T03:21",
+"name": "dst_gap_desk_flatten",
+"status": "rejected",
+"rationale": "Payer is European bank and prop desks whose intraday risk cut-off is pinned to the London clock (17:00 London). In the weeks when the US is on DST and Europe is not, that cut-off falls at 17:00 UTC, an hour later than in normal weeks, so the flatten of the London-session inventor",
+"note": "sandbox: AssertionError: zu speicherhungrig: 52 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-06T02:49",
 "name": "dst_gap_open_move_pooled",
 "status": "accepted",
@@ -2446,38 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is London dealer desks that must be flat at their local close, 16:30 London time. In gap weeks (US and EU on different DST) the NY data hour moves an hour against the London clock, so the final-hour move comes from a stale NY data catch-up, not from London's own flow. D",
 "note": "{\"name\": \"dst_gap_london_close_unwind\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.009}"
-},
-{
-"ts": "2026-11-05T20:51",
-"name": "dst_gap_stale_slot_spread_refund",
-"status": "accepted",
-"rationale": "The payer is UTC-pinned liquidity providers and vol-schedule bots whose \"US cash open\" quote-widening slot was calibrated to the winter 14:30 UTC (or the 13:30 slot) and stays on UTC in the gap weeks, when only the US is on daylight saving. They quote wide spread into a slot wher",
-"note": "{\"name\": \"dst_gap_stale_slot_spread_refund\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.0045}"
 }
 ],
 "history": [
-{
-"t": 1793762565.8114402,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 117.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793763707.254279,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 163.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793765077.773052,
 "total": 31310831,
@@ -4047,6 +4025,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 158.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793936604.856632,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 150.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
