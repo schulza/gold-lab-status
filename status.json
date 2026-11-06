@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 09:55:00 UTC",
+"generated_at": "2026-11-06 10:18:13 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 139.2,
-"uptime": "up 6 days, 20:08, 2 users, load averages: 83.01 72.96 57.64",
-"load": "{ 82.53 73.02 57.76 }"
+"free_gb": 158.4,
+"uptime": "up 6 days, 20:31, 2 users, load averages: 72.76 72.19 69.73",
+"load": "{ 72.76 72.19 69.73 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T09:59",
+"name": "drift_band_rebalance_lag",
+"status": "accepted",
+"rationale": "The payer is band-rule rebalancers (fixed-weight balanced and multi-asset funds). Their policy forces them to trade gold back to target weight once a cumulative drift passes a band, and they execute it `delay` bars after the band is crossed, whatever the price. A scheduled sell t",
+"note": "{\"name\": \"drift_band_rebalance_lag\", \"grid\": 162, \"sec_per_param\": 0.002, \"active_frac\": 0.541425}"
+},
+{
 "ts": "2026-11-06T09:25",
 "name": "stale_vol_weight_refresh",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is London-clock desks that flatten before the weekend, and anyone benchmarked to the London PM fix or London close. In US-DST-on, EU-DST-off weeks (spring and autumn pooled) the London mark-to-NY-midday span shrinks from 120 to 60 minutes. Their London-clock exits and h",
 "note": "{\"name\": \"dst_gap_london_mark_ny_midday\", \"grid\": 192, \"sec_per_param\": 0.004, \"active_frac\": 0.0165}"
-},
-{
-"ts": "2026-11-06T03:21",
-"name": "dst_gap_desk_flatten",
-"status": "rejected",
-"rationale": "Payer is European bank and prop desks whose intraday risk cut-off is pinned to the London clock (17:00 London). In the weeks when the US is on DST and Europe is not, that cut-off falls at 17:00 UTC, an hour later than in normal weeks, so the flatten of the London-session inventor",
-"note": "sandbox: AssertionError: zu speicherhungrig: 52 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1793787232.8056362,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 157.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793788451.6857111,
 "total": 31310831,
@@ -3992,6 +3981,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 139.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793960293.13589,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 158.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
