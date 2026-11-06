@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 23:14:22 UTC",
+"generated_at": "2026-11-06 23:38:23 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 143.1,
-"uptime": "up 7 days,  9:27, 2 users, load averages: 71.15 70.27 71.15",
-"load": "{ 71.15 70.27 71.15 }"
+"free_gb": 159.4,
+"uptime": "up 7 days,  9:50, 2 users, load averages: 73.23 70.77 71.40",
+"load": "{ 73.23 70.77 71.40 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T23:23",
+"name": "vol_target_flow",
+"status": "rejected",
+"rationale": "Payer is a vol-targeted or risk-parity long-gold fund (CTA or multi-asset) that resizes by a rule keyed to a slow variance estimate. After a fast-vol spike with a down move it must cut gold at a capped pace, which pays whoever is short ahead of the cuts. After the spike has decay",
+"note": "sandbox: AssertionError: zu speicherhungrig: 41 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-06T22:50",
 "name": "surprise_loss_rebid",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is slow real-yield-sensitive gold holders (ETF and model allocators who reprice on the daily DFII10 print, plus stale-quote sellers). Gold lags a real-yield move that is already public, and the strategy buys the unfilled part of that move until gold catches up or the yield ",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-06T16:42",
-"name": "var_headroom_rebuy",
-"status": "accepted",
-"rationale": "Payer is the VaR-limit desk that was cut after a breach. Realised vol decays, headroom returns, and the desk re-adds at lagging, non-urgent size. Sellers who dumped at the low pay for that. It is long-only and a rule-bound payer (VaR limit reset), not a momentum, trend or vol-reg",
-"note": "{\"name\": \"var_headroom_rebuy\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.2224125}"
 }
 ],
 "history": [
-{
-"t": 1793835141.158668,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 159.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793836328.00429,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 143.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794008303.776866,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 159.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
