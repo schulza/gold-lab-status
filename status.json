@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 12:54:11 UTC",
+"generated_at": "2026-11-06 13:09:48 UTC",
 "host": {
-"cpu_pct": 68.4,
+"cpu_pct": 81.6,
 "gpu_pct": 2,
-"free_gb": 178.6,
-"uptime": "up 6 days, 23:14, 2 users, load averages: 27.92 27.75 27.90",
-"load": "{ 27.92 27.75 27.90 }"
+"free_gb": 178.7,
+"uptime": "up 6 days, 23:30, 2 users, load averages: 28.17 27.70 27.71",
+"load": "{ 28.17 27.70 27.71 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T13:05",
+"name": "thin_anchor_fade",
+"status": "accepted",
+"rationale": "Payer is momentum chasers who push price away from the tick-weighted anchor on a thin tape. They cross the spread into low-participation prints and then wait to be refunded when normal flow returns. The thin filter relies on tick rate against its own trailing mean, so it is a par",
+"note": "{\"name\": \"thin_anchor_fade\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.6204375}"
+},
+{
 "ts": "2026-11-06T12:34",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is forced sellers (margin calls, stop cascades) who hit quotes that dealers have widened. They pay the widened spread plus the price concession. The long entry comes only after the spread has normalised, once the forced flow is done.\nThis is a spread-stress then spread-norm",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-06T06:45",
-"name": "var_breach_quiet_rerisk",
-"status": "accepted",
-"rationale": "The payer is risk desks and vol-targeted books that are hard-limited after a VaR breach. They cut exposure into the breach bar and may not re-lever until a fixed quiet period has passed. Selling is forced and price-insensitive, so the bounce after a quiet re-entry window is paid ",
-"note": "{\"name\": \"var_breach_quiet_rerisk\", \"grid\": 192, \"sec_per_param\": 0.007, \"active_frac\": 0.46078125}"
 }
 ],
 "history": [
-{
-"t": 1793797294.304703,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 145.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793798946.192842,
 "total": 31310831,
@@ -4036,6 +4025,17 @@
 "cpu": 68.4,
 "gpu": 2,
 "free_gb": 178.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793970588.12032,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 81.6,
+"gpu": 2,
+"free_gb": 178.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
