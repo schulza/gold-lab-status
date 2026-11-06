@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 13:56:36 UTC",
+"generated_at": "2026-11-06 14:12:13 UTC",
 "host": {
-"cpu_pct": 68.5,
+"cpu_pct": 80.5,
 "gpu_pct": 2,
-"free_gb": 178.2,
-"uptime": "up 7 days, 17 mins, 2 users, load averages: 27.27 27.52 27.6",
-"load": "{ 27.27 27.52 27.62 }"
+"free_gb": 179.0,
+"uptime": "up 7 days, 32 mins, 2 users, load averages: 28.40 27.54 27.5",
+"load": "{ 28.40 27.54 27.54 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T14:07",
+"name": "down_streak_bid",
+"status": "rejected",
+"rationale": "Payer: systematic trend-followers and risk-limit sellers who sell on a rule that counts consecutive down days. The rule scales to its position cap after n down days and a decline of at least k average daily moves. Once that cap is hit the selling flow stops, and the next day's ea",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-06T13:36",
 "name": "daily_limit_breach_flow",
 "status": "accepted",
@@ -2446,13 +2453,6 @@
 "status": "rejected",
 "rationale": "Payer is balanced and target-weight portfolios (pension and multi-asset mandates) that rebalance a fixed gold weight in the last calendar days of the month. After a large move they must sell gold if it ran up and buy if it fell, regardless of price. We position at the start of th",
 "note": "sandbox: AssertionError: zu speicherhungrig: 43 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-11-06T07:52",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is slow-rebalancing macro and ETF allocators whose gold exposure is set by a daily DFII10 real-yield model (published next day). After a 5- or 20-day real-yield move they chase gold with a lag, and they pay whoever holds gold before the catch-up flow arrives.\nRATIONALE: The",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
@@ -4047,6 +4047,17 @@
 "cpu": 68.5,
 "gpu": 2,
 "free_gb": 178.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793974333.232692,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 80.5,
+"gpu": 2,
+"free_gb": 179.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
