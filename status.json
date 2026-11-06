@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 08:45:30 UTC",
+"generated_at": "2026-11-06 09:01:05 UTC",
 "host": {
-"cpu_pct": 79.0,
+"cpu_pct": 87.4,
 "gpu_pct": 2,
-"free_gb": 174.2,
-"uptime": "up 6 days, 19:05, 2 users, load averages: 27.51 28.35 30.24",
-"load": "{ 27.51 28.35 30.24 }"
+"free_gb": 174.0,
+"uptime": "up 6 days, 19:21, 2 users, load averages: 28.97 29.55 29.82",
+"load": "{ 28.97 29.55 29.82 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T08:54",
+"name": "weekly_vol_budget_reset",
+"status": "rejected",
+"rationale": "Payer is vol-targeting and risk-parity allocators. They resize on the previous completed week's realized volatility, so a clear drop in weekly vol versus the trailing m-week base forces them to re-add gold in a fixed window after Monday open (the opposite mode tests the post-spik",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-06T08:23",
 "name": "month_end_band_rebalance",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer: UTC-pinned schedulers (TWAP/VWAP and hedge algos keyed to a fixed UTC clock). In the 2-3 spring weeks and 1-2 autumn weeks when US DST differs from EU DST, US data and open flow arrives an hour earlier in UTC than the scheduler expects. I haven't run it.\nRATIONALE: This is",
 "note": "{\"name\": \"dst_gap_open_move_pooled\", \"grid\": 144, \"sec_per_param\": 0.03, \"active_frac\": 0.005625}"
-},
-{
-"ts": "2026-11-06T02:15",
-"name": "dst_gap_pinned_slot_displacement",
-"status": "rejected",
-"rationale": "Payer: schedulers pinned to the winter 14:30 UTC clock, such as ETF and index-hedge sweeps and UTC-cron execution algos. In the weeks when the US is already on EDT and Europe is still on winter time (or back on it), the NYSE open is at 13:30 UTC. Their orders then hit one hour in",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793782187.689417,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 154.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793783285.44006,
 "total": 31310831,
@@ -3992,6 +3981,17 @@
 "cpu": 79.0,
 "gpu": 2,
 "free_gb": 174.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793955665.9271948,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 87.4,
+"gpu": 2,
+"free_gb": 174.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
