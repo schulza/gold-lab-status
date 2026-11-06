@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 00:51:57 UTC",
+"generated_at": "2026-11-06 01:15:29 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 156.0,
-"uptime": "up 6 days, 11:04, 2 users, load averages: 70.78 70.48 71.47",
-"load": "{ 70.78 70.48 71.47 }"
+"free_gb": 155.7,
+"uptime": "up 6 days, 11:28, 2 users, load averages: 73.77 73.83 73.68",
+"load": "{ 73.77 73.83 73.68 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T01:08",
+"name": "dst_gap_regime_profile",
+"status": "rejected",
+"rationale": "Payer is the counterparty of clock-pinned schedulers (US-clock fix, data and hedge flow, EU-clock desk flow) in the 5 weeks a year when US DST is on and EU DST is off. In those weeks US flow lands at its summer UTC slots and EU flow at its winter slots, so the matching-regime int",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-06T00:34",
 "name": "dst_gap_slot_excess",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is London-desk dealers and algos pinned to a London or UTC clock. In the US-only or EU-only DST weeks, the NY 08:30 release lands at 12:30 UTC instead of 13:30, an hour before their liquidity and risk limits assume. They get hit in thin books and the unwind drifts or re",
 "note": "{\"name\": \"dst_gap_release_impact\", \"grid\": 162, \"sec_per_param\": 0.007, \"active_frac\": 0.005625}"
-},
-{
-"ts": "2026-11-05T18:40",
-"name": "dst_gap_thin_open_refund",
-"status": "rejected",
-"rationale": "The payer is market makers and fix-pinned hedgers who quote the NY-clock COMEX open (08:20 ET = 12:20 UTC) against a London-clock depth forecast. In US-summer/EU-winter gap weeks London is one hour behind, so that open meets thinner London-side liquidity than the books were sized",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793753764.557015,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 136.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793755058.980042,
 "total": 31310831,
@@ -4036,6 +4025,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 156.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793927729.9625568,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 155.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
