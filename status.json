@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 15:30:14 UTC",
+"generated_at": "2026-11-06 15:45:50 UTC",
 "host": {
-"cpu_pct": 68.7,
+"cpu_pct": 70.6,
 "gpu_pct": 2,
-"free_gb": 178.4,
-"uptime": "up 7 days,  1:50, 2 users, load averages: 29.27 28.28 27.92",
-"load": "{ 29.27 28.28 27.92 }"
+"free_gb": 178.3,
+"uptime": "up 7 days,  2:06, 2 users, load averages: 28.65 29.20 29.07",
+"load": "{ 28.65 29.20 29.07 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T15:41",
+"name": "contraction_stop_cluster_break",
+"status": "rejected",
+"rationale": "Payer is the stop-order cluster outside an inside or contracted day. Traders who faded the quiet day park stops just beyond its range, and the break then forces them to cover. Dealers who are short that liquidity also have to buy into the move. The signal follows the first break ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-06T15:09",
 "name": "cppi_floor_exhaustion",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is band-rule rebalancers (fixed-weight balanced and multi-asset funds). Their policy forces them to trade gold back to target weight once a cumulative drift passes a band, and they execute it `delay` bars after the band is crossed, whatever the price. A scheduled sell t",
 "note": "{\"name\": \"drift_band_rebalance_lag\", \"grid\": 162, \"sec_per_param\": 0.002, \"active_frac\": 0.541425}"
-},
-{
-"ts": "2026-11-06T09:25",
-"name": "stale_vol_weight_refresh",
-"status": "rejected",
-"rationale": "Payer = volatility-target funds that refresh their weights on a fixed weekly rule. Mid-week, their exposure is stale. When realised vol since the last refresh is above (below) the vol they sized with, the next refresh forces a cut (add) in their trend direction, regardless of pri",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793807051.939796,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 142.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793808113.256335,
 "total": 31310831,
@@ -4069,6 +4058,17 @@
 "cpu": 68.7,
 "gpu": 2,
 "free_gb": 178.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793979950.574152,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 70.6,
+"gpu": 2,
+"free_gb": 178.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
