@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 20:22:14 UTC",
+"generated_at": "2026-11-06 20:47:14 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 129.0,
-"uptime": "up 7 days,  6:36, 2 users, load averages: 72.78 71.12 71.92",
-"load": "{ 72.78 71.12 71.92 }"
+"free_gb": 117.8,
+"uptime": "up 7 days,  6:58, 2 users, load averages: 72.48 69.49 70.88",
+"load": "{ 72.48 69.49 70.88 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T20:40",
+"name": "drawdown_cooloff_rebid",
+"status": "rejected",
+"rationale": "Payer is the risk-limit fund that is forced to cut after an n-day drawdown, then barred from re-levering for `wait` days. It sells into the low at any price, and it is the one that pays for the missing bid. Long only. The signal enters after the cooling-off, and only if the close",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-06T20:05",
 "name": null,
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer: breakout and stop-run traders who buy or sell into dealer-pinned strikes in the days before monthly COMEX gold options expiry (about the 4th-last business day). Dealers long gamma hedge against the move, which fades it. After expiry the pin is gone and the move can run.\nRA",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-06T14:07",
-"name": "down_streak_bid",
-"status": "rejected",
-"rationale": "Payer: systematic trend-followers and risk-limit sellers who sell on a rule that counts consecutive down days. The rule scales to its position cap after n down days and a decline of at least k average daily moves. Once that cap is hit the selling flow stops, and the next day's ea",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793823861.5814679,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 156.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793825169.337465,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 10,
-"free_gb": 149.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793826558.308662,
 "total": 31310831,
@@ -4091,6 +4069,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 129.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793998034.058537,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 117.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
