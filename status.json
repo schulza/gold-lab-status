@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 18:45:50 UTC",
+"generated_at": "2026-11-06 19:03:22 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 69.7,
 "gpu_pct": 2,
-"free_gb": 139.4,
-"uptime": "up 7 days,  5:01, 2 users, load averages: 71.93 74.94 74.29",
-"load": "{ 71.93 74.94 74.29 }"
+"free_gb": 163.5,
+"uptime": "up 7 days,  5:21, 2 users, load averages: 62.35 73.94 73.31",
+"load": "{ 62.35 73.94 73.31 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T18:58",
+"name": "consecutive_loss_margin_flush",
+"status": "accepted",
+"rationale": "Payer is leveraged retail longs who get margin-called after a run of down days. Forced sellers liquidate into the close of day N, and the discount is refunded over the next few days.\nRATIONALE: Rule-bound trigger: n consecutive down days whose cumulative loss is at least k daily ",
+"note": "{\"name\": \"consecutive_loss_margin_flush\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.1749625}"
+},
+{
 "ts": "2026-11-06T18:24",
 "name": "calm_shock_deleverage",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is momentum chasers who push price away from the tick-weighted anchor on a thin tape. They cross the spread into low-participation prints and then wait to be refunded when normal flow returns. The thin filter relies on tick rate against its own trailing mean, so it is a par",
 "note": "{\"name\": \"thin_anchor_fade\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.6204375}"
-},
-{
-"ts": "2026-11-06T12:34",
-"name": null,
-"status": "rejected",
-"rationale": "The family is a real-yield catch-up, aimed at an under-sampled rule-bound payer (real_yield_trend, 230 trials). The payer is the gold seller or holder still quoting a stale price: ETF and discretionary macro desks reprice gold to DFII10 on a lag, and the position is held until go",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1793818166.3108952,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": null,
-"gpu": 2,
-"free_gb": 122.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793819591.0015419,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 139.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793991802.358366,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 69.7,
+"gpu": 2,
+"free_gb": 163.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
