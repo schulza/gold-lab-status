@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 12:23:00 UTC",
+"generated_at": "2026-11-06 12:38:36 UTC",
 "host": {
-"cpu_pct": 71.7,
+"cpu_pct": 81.5,
 "gpu_pct": 2,
-"free_gb": 175.8,
-"uptime": "up 6 days, 22:43, 2 users, load averages: 27.49 28.67 28.87",
-"load": "{ 27.49 28.67 28.87 }"
+"free_gb": 179.1,
+"uptime": "up 6 days, 22:59, 2 users, load averages: 31.48 29.01 28.48",
+"load": "{ 31.48 29.01 28.48 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T12:34",
+"name": null,
+"status": "rejected",
+"rationale": "The family is a real-yield catch-up, aimed at an under-sampled rule-bound payer (real_yield_trend, 230 trials). The payer is the gold seller or holder still quoting a stale price: ETF and discretionary macro desks reprice gold to DFII10 on a lag, and the position is held until go",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-06T12:03",
 "name": "day_high_giveback_bid",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is risk desks and vol-targeted books that are hard-limited after a VaR breach. They cut exposure into the breach bar and may not re-lever until a fixed quiet period has passed. Selling is forced and price-insensitive, so the bounce after a quiet re-entry window is paid ",
 "note": "{\"name\": \"var_breach_quiet_rerisk\", \"grid\": 192, \"sec_per_param\": 0.007, \"active_frac\": 0.46078125}"
-},
-{
-"ts": "2026-11-06T06:12",
-"name": "maint_gap_reopen",
-"status": "rejected",
-"rationale": "Payer is stop and limit orders queued across the daily maintenance break (gap > 2.5\u00d7 the bar interval and < 10 h, weekends excluded). They fill together against thin quotes on the reopen. If that gap is large relative to the trailing per-bar sigma, the reopen print is either over",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793795905.147725,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 129.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793797294.304703,
 "total": 31310831,
@@ -4025,6 +4014,17 @@
 "cpu": 71.7,
 "gpu": 2,
 "free_gb": 175.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793968716.1341178,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 81.5,
+"gpu": 2,
+"free_gb": 179.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
