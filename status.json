@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 02:39:20 UTC",
+"generated_at": "2026-11-06 03:03:10 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 156.7,
-"uptime": "up 6 days, 12:59, 2 users, load averages: 87.20 83.90 80.38",
-"load": "{ 87.20 83.90 80.38 }"
+"free_gb": 151.3,
+"uptime": "up 6 days, 13:15, 2 users, load averages: 80.93 83.30 82.95",
+"load": "{ 80.93 83.30 82.95 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T02:49",
+"name": "dst_gap_open_move_pooled",
+"status": "accepted",
+"rationale": "Payer: UTC-pinned schedulers (TWAP/VWAP and hedge algos keyed to a fixed UTC clock). In the 2-3 spring weeks and 1-2 autumn weeks when US DST differs from EU DST, US data and open flow arrives an hour earlier in UTC than the scheduler expects. I haven't run it.\nRATIONALE: This is",
+"note": "{\"name\": \"dst_gap_open_move_pooled\", \"grid\": 144, \"sec_per_param\": 0.03, \"active_frac\": 0.005625}"
+},
+{
 "ts": "2026-11-06T02:15",
 "name": "dst_gap_pinned_slot_displacement",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is UTC-pinned liquidity providers and vol-schedule bots whose \"US cash open\" quote-widening slot was calibrated to the winter 14:30 UTC (or the 13:30 slot) and stays on UTC in the gap weeks, when only the US is on daylight saving. They quote wide spread into a slot wher",
 "note": "{\"name\": \"dst_gap_stale_slot_spread_refund\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.0045}"
-},
-{
-"ts": "2026-11-05T20:19",
-"name": "dst_gap_london_drive_release",
-"status": "accepted",
-"rationale": "The payer is London-session momentum holders in the gap weeks (US on daylight saving, EU not). The NY 08:30 release then lands at 12:30 London clock instead of 13:30, only 4.5 h after the London open, so the morning drive is still on the books and gets repriced or stopped out at ",
-"note": "{\"name\": \"dst_gap_london_drive_release\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.018}"
 }
 ],
 "history": [
-{
-"t": 1793760227.4752388,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 131.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793762565.8114402,
 "total": 31310831,
@@ -4036,6 +4025,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 156.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1793934190.2956429,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 151.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
