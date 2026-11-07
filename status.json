@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 23:40:33 UTC",
+"generated_at": "2026-11-07 23:56:20 UTC",
 "host": {
-"cpu_pct": 82.2,
+"cpu_pct": 87.5,
 "gpu_pct": 2,
-"free_gb": 172.1,
-"uptime": "up 8 days, 10 hrs, 2 users, load averages: 38.07 37.09 45.51",
-"load": "{ 38.07 37.09 45.51 }"
+"free_gb": 172.6,
+"uptime": "up 8 days, 10:16, 2 users, load averages: 34.17 33.48 35.97",
+"load": "{ 34.17 33.48 35.97 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T23:44",
+"name": "reloaded_fader_stoprun",
+"status": "accepted",
+"rationale": "Payer: Bollinger-style band-fade traders who sold the first touch, were in profit after the retreat, then re-loaded on the second touch, and are stopped beyond zs. Their stop orders chase the move and pay the breakout holder. That is a re-loaded-fader stop run, not the VaR-deleve",
+"note": "{\"name\": \"reloaded_fader_stoprun\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.3008}"
+},
+{
 "ts": "2026-11-07T23:13",
 "name": "burst_velocity_decay_fade",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the shorts who sold after the session low. The day-low-anchored VWAP is their volume-weighted average entry. Once price reclaims it after a real flush (z-scored drop from the day open), they are net underwater and their cover stops trigger. They pay the squeeze.\nRATIONAL",
 "note": "{\"name\": \"anchored_vwap_squeeze\", \"grid\": 128, \"sec_per_param\": 0.007, \"active_frac\": 0.5739625}"
-},
-{
-"ts": "2026-11-07T17:10",
-"name": "wick_support_hold",
-"status": "rejected",
-"rationale": "The payer is breakout shorts and stop-sellers who repeatedly sell into dips and get absorbed. Resting limit bids defend a level through several rejection wicks (long lower wick, close in the upper part of the bar). Sellers then cover or chase above it.\nRATIONALE: It is rule-bound",
-"note": "sandbox: AssertionError: zu speicherhungrig: 57 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1793922724.772974,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 144.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793923932.370721,
 "total": 31310831,
@@ -4069,6 +4058,17 @@
 "cpu": 82.2,
 "gpu": 2,
 "free_gb": 172.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794095780.869848,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 87.5,
+"gpu": 2,
+"free_gb": 172.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
