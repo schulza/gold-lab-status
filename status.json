@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 22:04:50 UTC",
+"generated_at": "2026-11-07 22:26:51 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 99.8,
 "gpu_pct": 2,
-"free_gb": 130.6,
-"uptime": "up 8 days,  8:16, 2 users, load averages: 74.36 75.46 75.68",
-"load": "{ 74.17 75.40 75.66 }"
+"free_gb": 148.7,
+"uptime": "up 8 days,  8:41, 2 users, load averages: 60.40 70.85 74.88",
+"load": "{ 59.80 70.55 74.75 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T22:06",
+"name": "exit_channel_reclaim",
+"status": "rejected",
+"rationale": "Payer is the trend-following desk long from an N-day breakout. Its protective exit sits at the shorter m-day low, and the sweep through it fires those sells and the stops of late longs. After the fills are done and price reclaims the exit low, the exit flow was a forced, price-in",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-07T21:33",
 "name": "band_dwell_capitulation",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer: breakout chasers who send market orders into a bar with a range of at least k times the prior ATR, closing in the extreme f of that range. They pay the spread and impact at the worst price. The family fades that bar (or follows it, as a falsifiable alternative).\nRATIONALE:",
 "note": "{\"name\": \"expansion_close_chase\", \"grid\": 192, \"sec_per_param\": 0.004, \"active_frac\": 0.164625}"
-},
-{
-"ts": "2026-11-07T15:35",
-"name": "inside_day_break_trap",
-"status": "rejected",
-"rationale": "Payer: breakout traders who place stop-entries one tick beyond an inside day's high or low. An inside day is a day whose range sits inside the prior day's range. A breakout that closes back inside the box on the same day leaves them trapped, and their forced exits pay the fader.\n",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793917197.595584,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.5,
-"gpu": 2,
-"free_gb": 192.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793918121.194884,
 "total": 31310831,
@@ -4069,6 +4058,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 130.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794090410.898987,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 99.8,
+"gpu": 2,
+"free_gb": 148.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
