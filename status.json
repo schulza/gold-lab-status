@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 11:14:00 UTC",
+"generated_at": "2026-11-07 11:35:46 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 158.2,
-"uptime": "up 7 days, 21:28, 2 users, load averages: 73.04 72.55 74.49",
-"load": "{ 73.04 72.55 74.49 }"
+"free_gb": 151.8,
+"uptime": "up 7 days, 21:50, 2 users, load averages: 71.69 73.18 73.54",
+"load": "{ 71.69 73.18 73.54 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T11:14",
+"name": "stale_range_edge_fade",
+"status": "accepted",
+"rationale": "Payer is breakout chasers and stop-entry traders at the edge of a range that has not made a new extreme for m bars. The edge is stale, so their orders get filled by the resting liquidity at the edge, and price drifts back inside. It is price-only and not forced deleveraging, not ",
+"note": "{\"name\": \"stale_range_edge_fade\", \"grid\": 96, \"sec_per_param\": 0.002, \"active_frac\": 0.1524875}"
+},
+{
 "ts": "2026-11-07T10:41",
 "name": "spread_poke_refund",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the market-order liquidators and panic stop-sellers who dump into a thin book. A bar that wicks down several sigma on a tick-count surge and closes back in the upper part of its range means the stops are exhausted and makers are already refunding the move.\nRATIONALE: The",
 "note": "{\"name\": \"climax_reclaim_bid\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.02831875}"
-},
-{
-"ts": "2026-11-07T04:47",
-"name": "chandelier_flip_hold",
-"status": "accepted",
-"rationale": "Payer is the trend follower with a Chandelier trailing stop (N-day high minus k\u00d7ATR). When a long-standing trend breaks its stop, the exits cluster and the stop orders fill at progressively worse prices. `sign=+1` trades with that cascade, so the payer is whoever is still long af",
-"note": "{\"name\": \"chandelier_flip_hold\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.0979}"
 }
 ],
 "history": [
-{
-"t": 1793877464.0484521,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 156.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793878864.615278,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 158.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794051346.2821918,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 151.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
