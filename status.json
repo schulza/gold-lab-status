@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 01:48:53 UTC",
+"generated_at": "2026-11-07 02:12:51 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 158.4,
-"uptime": "up 7 days, 12:01, 2 users, load averages: 65.82 66.93 70.83",
-"load": "{ 65.82 66.93 70.83 }"
+"free_gb": 151.4,
+"uptime": "up 7 days, 12:25, 2 users, load averages: 73.94 75.82 74.93",
+"load": "{ 73.94 75.82 74.93 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T02:07",
+"name": "var_breach_forced_window_rebid",
+"status": "accepted",
+"rationale": "Payer is risk desks and vol-target funds that cut exposure after a one-sided breach of their rolling VaR. They sell through a window `wait` bars long, regardless of price, and rebound sellers get refunded after it ends. The family buys only after the forced window has finished, l",
+"note": "{\"name\": \"var_breach_forced_window_rebid\", \"grid\": 108, \"sec_per_param\": 0.05, \"active_frac\": 0.1279875}"
+},
+{
 "ts": "2026-11-07T01:33",
 "name": "exception_rolloff_rebuy",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is gold-only discretionary and ETF holders who reprice slowly to a real-yield (DFII10) change, which is a discount-rate move already published. The signal enters only when yields moved at least thr bp and gold's own vol-scaled return over the last `days` days has not yet fo",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-06T19:32",
-"name": "margin_hike_lag_cut",
-"status": "rejected",
-"rationale": "Payer is leveraged COMEX gold futures holders on the losing side of a volatility regime shift. When short-window daily range jumps above a disjoint longer baseline, exchange performance-bond requirements rise with a 1\u20133 day lag. Margin-constrained accounts then have to cut in the",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793843631.93959,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 118.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793844992.54828,
 "total": 31310831,
@@ -4102,6 +4091,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 158.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794017571.967029,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 151.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
