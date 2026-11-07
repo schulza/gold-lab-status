@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 13:06:11 UTC",
+"generated_at": "2026-11-07 13:32:02 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 138.6,
-"uptime": "up 7 days, 23:19, 2 users, load averages: 77.39 79.28 77.99",
-"load": "{ 77.39 79.28 77.99 }"
+"free_gb": 117.1,
+"uptime": "up 7 days, 23:42, 2 users, load averages: 74.72 75.94 75.99",
+"load": "{ 74.72 75.94 75.99 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T13:27",
+"name": "decisive_block_persist",
+"status": "accepted",
+"rationale": "Payer: slow allocators (pension and ETF accumulation) who work parent orders in many small child orders. This produces many modestly positive blocks rather than one jump, and magnitude-based trend rules are fooled by single jumps. The strategy counts only \"decisive\" blocks (|h-ba",
+"note": "{\"name\": \"decisive_block_persist\", \"grid\": 72, \"sec_per_param\": 0.004, \"active_frac\": 0.147375}"
+},
+{
 "ts": "2026-11-07T12:53",
 "name": "prior_value_pull",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the fast-MA-cross trend follower with tight stops. In chop (many MA crossings in a short window) they are whipsawed, flatten, and leave stop and re-entry orders resting just outside the compressed range. The first close through that range is where those orders trigger, a",
 "note": "{\"name\": \"whipsaw_range_break\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.7051625}"
-},
-{
-"ts": "2026-11-07T06:51",
-"name": "thin_break_fade",
-"status": "accepted",
-"rationale": "Payer is breakout chasers who enter on a new N-bar extreme printed on thin tick participation. Their market orders walk a book that nobody else is lifting, so the print is an impact artefact that gets refunded. `sign=-1` tests the opposite case, a break on heavy participation tha",
-"note": "{\"name\": \"thin_break_fade\", \"grid\": 120, \"sec_per_param\": 0.0, \"active_frac\": 0.33155}"
 }
 ],
 "history": [
-{
-"t": 1793884810.973762,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 118.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793886412.516049,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 138.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794058322.49063,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 117.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
