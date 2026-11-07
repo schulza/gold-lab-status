@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 10:30:13 UTC",
+"generated_at": "2026-11-07 10:52:06 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 158.0,
-"uptime": "up 7 days, 20:44, 2 users, load averages: 67.85 73.66 75.15",
-"load": "{ 67.85 73.66 75.15 }"
+"free_gb": 150.6,
+"uptime": "up 7 days, 21:06, 2 users, load averages: 72.28 78.90 77.99",
+"load": "{ 72.28 78.90 77.99 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T10:41",
+"name": "spread_poke_refund",
+"status": "accepted",
+"rationale": "The payer is stop-order holders whose stops trigger on the ask for buy stops and on the bid for sell stops. A bar whose mid high stays just below the N-bar high but whose ask reaches it has triggered those stops without any real breakout demand. The price impact is then refunded ",
+"note": "{\"name\": \"spread_poke_refund\", \"grid\": 160, \"sec_per_param\": 0.0, \"active_frac\": 0.3511875}"
+},
+{
 "ts": "2026-11-07T10:07",
 "name": "shock_quiet_resume",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the trend follower with a Chandelier trailing stop (N-day high minus k\u00d7ATR). When a long-standing trend breaks its stop, the exits cluster and the stop orders fill at progressively worse prices. `sign=+1` trades with that cascade, so the payer is whoever is still long af",
 "note": "{\"name\": \"chandelier_flip_hold\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.0979}"
-},
-{
-"ts": "2026-11-07T04:16",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is the slow real-money allocator, such as an ETF or physical holder, who rebalances gold weekly against a real-yield model. When DFII10 moves and spot has not yet followed it, that rebalance is still unexecuted, and the allocator pays the catch-up spread.\nRATIONALE: This is",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1793875024.150191,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 156.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793876412.730241,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 158.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794048726.1523468,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 150.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
