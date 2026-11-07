@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 11:35:46 UTC",
+"generated_at": "2026-11-07 11:56:07 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 151.8,
-"uptime": "up 7 days, 21:50, 2 users, load averages: 71.69 73.18 73.54",
-"load": "{ 71.69 73.18 73.54 }"
+"free_gb": 159.2,
+"uptime": "up 7 days, 22:12, 2 users, load averages: 107.83 82.34 78.56",
+"load": "{ 107.83 82.34 78.56 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T11:47",
+"name": "prior_extreme_acceptance",
+"status": "accepted",
+"rationale": "Payer is the counter-trend limit seller who fades the prior-day high or low. Their resting orders are filled but price keeps *accepting* beyond the level (a run of consecutive closes beyond it), so they are forced to cover into the move.\nRATIONALE: The edge comes from a time-at-l",
+"note": "{\"name\": \"prior_extreme_acceptance\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.29733125}"
+},
+{
 "ts": "2026-11-07T11:14",
 "name": "stale_range_edge_fade",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer: stop-triggered and momentum-chasing market orders that arrive in seasonally quiet hours. Their size is set from unconditional vol, so displacement beyond the hour-of-day norm pays an impact premium to whoever fades it, and that premium gets refunded.\nRATIONALE: The thresho",
 "note": "{\"name\": \"seasonal_overshoot_fade\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.2676625}"
-},
-{
-"ts": "2026-11-07T05:18",
-"name": "climax_reclaim_bid",
-"status": "accepted",
-"rationale": "Payer is the market-order liquidators and panic stop-sellers who dump into a thin book. A bar that wicks down several sigma on a tick-count surge and closes back in the upper part of its range means the stops are exhausted and makers are already refunding the move.\nRATIONALE: The",
-"note": "{\"name\": \"climax_reclaim_bid\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.02831875}"
 }
 ],
 "history": [
-{
-"t": 1793878864.615278,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 149.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793879952.929682,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 151.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794052567.574185,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 159.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
