@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 09:44:17 UTC",
+"generated_at": "2026-11-07 10:08:44 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 154.3,
-"uptime": "up 7 days, 19:57, 2 users, load averages: 78.48 81.93 78.71",
-"load": "{ 78.48 81.93 78.71 }"
+"free_gb": 157.4,
+"uptime": "up 7 days, 20:20, 2 users, load averages: 72.60 76.80 76.83",
+"load": "{ 72.60 76.80 76.83 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T10:07",
+"name": "shock_quiet_resume",
+"status": "accepted",
+"rationale": "Payer is the fade desk and liquidity providers who counter-trade a shock bar (more than k times the typical bar move), then cover once volatility dies. Their buy-back or sell-back after a quiet period of `quiet_w` bars pushes price further in the shock direction.\nRATIONALE: The s",
+"note": "{\"name\": \"shock_quiet_resume\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.07485}"
+},
+{
 "ts": "2026-11-07T09:33",
 "name": "located_lock_break",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the slow real-money allocator, such as an ETF or physical holder, who rebalances gold weekly against a real-yield model. When DFII10 moves and spot has not yet followed it, that rebalance is still unexecuted, and the allocator pays the catch-up spread.\nRATIONALE: This is",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-07T03:45",
-"name": "band_weekend_rebalance",
-"status": "rejected",
-"rationale": "Payer is constant-mix funds and balanced mandates that check their weight band once a week (Friday close) and trade the breach back to target in the next session. They are price-insensitive because the order is fixed by rule, so a Friday level more than k sigma from the weeks-lon",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793872243.471924,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 152.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793873702.647618,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 154.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794046124.017079,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 157.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
