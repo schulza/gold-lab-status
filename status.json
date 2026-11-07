@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 16:06:09 UTC",
+"generated_at": "2026-11-07 16:24:39 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 158.5,
-"uptime": "up 8 days,  2:19, 2 users, load averages: 77.30 73.76 74.22",
-"load": "{ 77.30 73.76 74.22 }"
+"free_gb": 162.1,
+"uptime": "up 8 days,  2:42, 2 users, load averages: 72.34 74.61 74.40",
+"load": "{ 72.34 74.61 74.40 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T16:08",
+"name": "expansion_close_chase",
+"status": "accepted",
+"rationale": "Payer: breakout chasers who send market orders into a bar with a range of at least k times the prior ATR, closing in the extreme f of that range. They pay the spread and impact at the worst price. The family fades that bar (or follows it, as a falsifiable alternative).\nRATIONALE:",
+"note": "{\"name\": \"expansion_close_chase\", \"grid\": 192, \"sec_per_param\": 0.004, \"active_frac\": 0.164625}"
+},
+{
 "ts": "2026-11-07T15:35",
 "name": "inside_day_break_trap",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the fade desk and liquidity providers who counter-trade a shock bar (more than k times the typical bar move), then cover once volatility dies. Their buy-back or sell-back after a quiet period of `quiet_w` bars pushes price further in the shock direction.\nRATIONALE: The s",
 "note": "{\"name\": \"shock_quiet_resume\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.07485}"
-},
-{
-"ts": "2026-11-07T09:33",
-"name": "located_lock_break",
-"status": "rejected",
-"rationale": "Payer is range-fade sellers and buyers who sit against a tight box formed in the already-extended part of the UTC-22h trading day. After a lock in the upper third of the day's range, an upside break forces their stops and chases the day's extension. The mirror applies in the lowe",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793895874.033442,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 155.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793897027.371416,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 158.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794068679.6227012,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 162.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
