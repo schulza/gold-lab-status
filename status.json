@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 14:58:24 UTC",
+"generated_at": "2026-11-07 15:20:49 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 146.6,
-"uptime": "up 8 days,  1:11, 2 users, load averages: 77.57 75.20 75.45",
-"load": "{ 77.57 75.20 75.45 }"
+"free_gb": 143.5,
+"uptime": "up 8 days,  1:34, 2 users, load averages: 85.79 83.49 80.68",
+"load": "{ 85.79 83.49 80.68 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T15:04",
+"name": "widened_jump_retrace_fade",
+"status": "rejected",
+"rationale": "Payer is aggressive market-order takers who cross a spread the liquidity providers have just widened, on a single-bar jump with no baseline volatility behind it. The jump is a take-out of thin quotes, not information.\nRATIONALE: Entry waits for the next bar to retrace at least r ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-07T14:33",
 "name": "prior_poc_reversion",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is retail OCO bracket traders, who rest stops at both edges of a range. A pierce of one edge that closes back inside the box, without touching the other edge, means those stops were run and the move had no follow-through. I trade toward the untouched opposite edge for a fix",
 "note": "{\"name\": \"bracket_trap_reclaim\", \"grid\": 162, \"sec_per_param\": 0.011, \"active_frac\": 0.18975}"
-},
-{
-"ts": "2026-11-07T08:27",
-"name": "slot_reaction_sign",
-"status": "rejected",
-"rationale": "Payer is scheduled hour-of-day hedgers and flow desks, whose reaction to the preceding move is recurrent. Examples are fix, settle and roll hedging, and the flow can persist or revert depending on the slot.\nEach hour-of-day slot's follow-vs-fade sign is estimated causally. Only c",
-"note": "sandbox: NameError: name 'FAMILIES' is not defined"
 }
 ],
 "history": [
-{
-"t": 1793891647.170211,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 160.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793893112.6426141,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 146.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794064849.469425,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 143.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
