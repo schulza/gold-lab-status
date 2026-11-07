@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 15:20:49 UTC",
+"generated_at": "2026-11-07 15:43:06 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 143.5,
-"uptime": "up 8 days,  1:34, 2 users, load averages: 85.79 83.49 80.68",
-"load": "{ 85.79 83.49 80.68 }"
+"free_gb": 159.8,
+"uptime": "up 8 days,  1:57, 2 users, load averages: 60.86 70.35 74.85",
+"load": "{ 60.86 70.35 74.85 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T15:35",
+"name": "inside_day_break_trap",
+"status": "rejected",
+"rationale": "Payer: breakout traders who place stop-entries one tick beyond an inside day's high or low. An inside day is a day whose range sits inside the prior day's range. A breakout that closes back inside the box on the same day leaves them trapped, and their forced exits pay the fader.\n",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-07T15:04",
 "name": "widened_jump_retrace_fade",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is range-fade sellers and buyers who sit against a tight box formed in the already-extended part of the UTC-22h trading day. After a lock in the upper third of the day's range, an upside break forces their stops and chases the day's extension. The mirror applies in the lowe",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-07T09:01",
-"name": "bracket_trap_reclaim",
-"status": "accepted",
-"rationale": "Payer is retail OCO bracket traders, who rest stops at both edges of a range. A pierce of one edge that closes back inside the box, without touching the other edge, means those stops were run and the move had no follow-through. I trade toward the untouched opposite edge for a fix",
-"note": "{\"name\": \"bracket_trap_reclaim\", \"grid\": 162, \"sec_per_param\": 0.011, \"active_frac\": 0.18975}"
 }
 ],
 "history": [
-{
-"t": 1793893112.6426141,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 163.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793894483.13117,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 143.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794066186.788437,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 159.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
