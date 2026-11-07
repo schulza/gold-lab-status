@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 13:55:00 UTC",
+"generated_at": "2026-11-07 14:17:16 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 118.1,
-"uptime": "up 8 days, 8 mins, 2 users, load averages: 74.58 80.05 79.25",
-"load": "{ 74.58 80.05 79.25 }"
+"free_gb": 130.0,
+"uptime": "up 8 days, 31 mins, 2 users, load averages: 77.33 76.36 76.9",
+"load": "{ 80.18 76.97 77.18 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T13:59",
+"name": "trap_cluster_fade",
+"status": "accepted",
+"rationale": "Payer is stop-order breakout traders. Their entries are buy-stops above the previous high and sell-stops below the previous low. When the stop fills but the bar closes back inside the prior close, they hold a losing position that needs capital or a cover.\nThe signal is the net co",
+"note": "{\"name\": \"trap_cluster_fade\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.3463375}"
+},
+{
 "ts": "2026-11-07T13:27",
 "name": "decisive_block_persist",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is retail \"Fibonacci retrace\" buyers and sellers. They fade a fresh impulse, so their stops sit just beyond the retrace level. When price touches a 38/50/62% retrace and closes back across it, those stops are about to be run.\nRATIONALE: The impulse must be large relative to",
 "note": "{\"name\": \"retrace_stop_run_hold\", \"grid\": 108, \"sec_per_param\": 0.028, \"active_frac\": 0.393525}"
-},
-{
-"ts": "2026-11-07T07:22",
-"name": "whipsaw_range_break",
-"status": "accepted",
-"rationale": "Payer is the fast-MA-cross trend follower with tight stops. In chop (many MA crossings in a short window) they are whipsawed, flatten, and leave stop and re-entry orders resting just outside the compressed range. The first close through that range is where those orders trigger, a",
-"note": "{\"name\": \"whipsaw_range_break\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.7051625}"
 }
 ],
 "history": [
-{
-"t": 1793887646.543402,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 129.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793889009.63907,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 118.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794061036.700771,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 130.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
