@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 02:53:43 UTC",
+"generated_at": "2026-11-07 03:17:28 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 150.3,
-"uptime": "up 7 days, 13:07, 2 users, load averages: 76.32 76.61 76.21",
-"load": "{ 76.32 76.61 76.21 }"
+"free_gb": 139.4,
+"uptime": "up 7 days, 13:30, 2 users, load averages: 71.64 73.44 74.47",
+"load": "{ 71.64 73.44 74.47 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T03:14",
+"name": null,
+"status": "rejected",
+"rationale": "Payer is speculators crowded on one side (COT z or real-yield z extreme) going into scheduled NFP/FOMC releases. Their risk limits force de-grossing around the binary event, so the crowded side pays the fade, and the position runs only from `pre` hours before the release to `post",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-07T02:41",
 "name": "margin_hike_liquidation",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the risk-limit desk (VaR or stop-loss) that gets cut again. A second same-direction k-sigma breach within m bars means the first cut did not bring exposure under the limit, so it must cut again over the next bars. Anyone trading against that forced second leg pays. This ",
 "note": "{\"name\": \"repeat_breach_cut\", \"grid\": 162, \"sec_per_param\": 0.002, \"active_frac\": 0.2894125}"
-},
-{
-"ts": "2026-11-06T20:40",
-"name": "drawdown_cooloff_rebid",
-"status": "rejected",
-"rationale": "Payer is the risk-limit fund that is forced to cut after an n-day drawdown, then barred from re-levering for `wait` days. It sells into the low at any price, and it is the one that pays for the missing bid. Long only. The signal enters after the cooling-off, and only if the close",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793847819.454802,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 158.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793848758.940184,
 "total": 31310831,
@@ -4102,6 +4091,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 150.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794021448.573626,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 139.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
