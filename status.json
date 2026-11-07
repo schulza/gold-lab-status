@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 05:13:39 UTC",
+"generated_at": "2026-11-07 05:29:15 UTC",
 "host": {
-"cpu_pct": 79.5,
+"cpu_pct": 84.0,
 "gpu_pct": 2,
-"free_gb": 176.6,
-"uptime": "up 7 days, 15:34, 2 users, load averages: 28.35 27.77 27.64",
-"load": "{ 28.35 27.77 27.64 }"
+"free_gb": 176.7,
+"uptime": "up 7 days, 15:49, 2 users, load averages: 28.45 28.27 27.91",
+"load": "{ 28.45 28.27 27.91 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T05:18",
+"name": "climax_reclaim_bid",
+"status": "accepted",
+"rationale": "Payer is the market-order liquidators and panic stop-sellers who dump into a thin book. A bar that wicks down several sigma on a tick-count surge and closes back in the upper part of its range means the stops are exhausted and makers are already refunding the move.\nRATIONALE: The",
+"note": "{\"name\": \"climax_reclaim_bid\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.02831875}"
+},
+{
 "ts": "2026-11-07T04:47",
 "name": "chandelier_flip_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is a vol-targeted or risk-parity long-gold fund (CTA or multi-asset) that resizes by a rule keyed to a slow variance estimate. After a fast-vol spike with a down move it must cut gold at a capped pace, which pays whoever is short ahead of the cuts. After the spike has decay",
 "note": "sandbox: AssertionError: zu speicherhungrig: 41 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-11-06T22:50",
-"name": "surprise_loss_rebid",
-"status": "rejected",
-"rationale": "`goldlab.external` is not in `ALLOWED_MODULES` (`goldlab/evolve.py:46`), so I used only price data from the director's under-sampled rule-bound list, near `var_breach_deleverage` and `loss_limit_reset`. The payer is a desk whose risk limit is a multiple of EWMA volatility. A loss",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793856253.834943,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 83.6,
-"gpu": 2,
-"free_gb": 170.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793857189.1844192,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 79.5,
 "gpu": 2,
 "free_gb": 176.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794029355.519655,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 84.0,
+"gpu": 2,
+"free_gb": 176.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
