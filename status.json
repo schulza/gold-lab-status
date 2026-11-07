@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-06 23:55:16 UTC",
+"generated_at": "2026-11-07 00:19:46 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 158.0,
-"uptime": "up 7 days, 10:14, 2 users, load averages: 73.28 73.50 72.97",
-"load": "{ 73.28 73.50 72.97 }"
+"free_gb": 155.6,
+"uptime": "up 7 days, 10:31, 2 users, load averages: 68.80 68.74 70.37",
+"load": "{ 68.80 68.74 70.37 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-06T23:55",
+"name": "exhausted_liquidation_bid",
+"status": "rejected",
+"rationale": "Payer: levered longs liquidated by margin calls or vol-target cuts. After a multi-day drop, they sell into thin liquidity, and the buyers on the other side (the strategy) are paid the liquidity discount. The signal goes long only once selling has visibly dried up, meaning recent ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-06T23:23",
 "name": "vol_target_flow",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is trend-following vol-target funds. When short-window realised vol jumps well above its long-window baseline while an established trend is running, their vol budget forces them to cut in the trend direction, so they sell into the spike at poor prices. The strategy takes th",
 "note": "{\"name\": \"voltarget_cut_fade\", \"grid\": 144, \"sec_per_param\": 0.013, \"active_frac\": 0.04425}"
-},
-{
-"ts": "2026-11-06T17:18",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is slow real-yield-sensitive gold holders (ETF and model allocators who reprice on the daily DFII10 print, plus stale-quote sellers). Gold lags a real-yield move that is already public, and the strategy buys the unfilled part of that move until gold catches up or the yield ",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1793837725.334058,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 99.7,
-"gpu": 2,
-"free_gb": 143.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793839313.401723,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 158.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794010786.048662,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 155.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
