@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 22:26:51 UTC",
+"generated_at": "2026-11-07 22:47:41 UTC",
 "host": {
-"cpu_pct": 99.8,
+"cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 148.7,
-"uptime": "up 8 days,  8:41, 2 users, load averages: 60.40 70.85 74.88",
-"load": "{ 59.80 70.55 74.75 }"
+"free_gb": 146.2,
+"uptime": "up 8 days,  9:03, 2 users, load averages: 82.09 79.90 77.50",
+"load": "{ 82.09 79.90 77.50 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T22:40",
+"name": "horizon_conflict_fade",
+"status": "accepted",
+"rationale": "Payer is intraday liquidity demanders (stop-outs and chasers) who push the fast horizon against a larger-horizon institutional slicing flow (VWAP/TWAP parent orders). The slice flow keeps buying or selling through the counter-move, so the counter-move refunds. Trade with the slow",
+"note": "{\"name\": \"horizon_conflict_fade\", \"grid\": 144, \"sec_per_param\": 0.005, \"active_frac\": 0.03805}"
+},
+{
 "ts": "2026-11-07T22:06",
 "name": "exit_channel_reclaim",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer: longs who bought into a week-high rally (and shorts who sold a week-low) and de-risk before the weekend on Friday afternoon, because benchmark-bound books and retail don't want to carry the week's extreme through the gap.\nRATIONALE: Keyed to where the close sits in the wee",
 "note": "{\"name\": \"friday_week_extreme_squaring\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.0092}"
-},
-{
-"ts": "2026-11-07T16:08",
-"name": "expansion_close_chase",
-"status": "accepted",
-"rationale": "Payer: breakout chasers who send market orders into a bar with a range of at least k times the prior ATR, closing in the extreme f of that range. They pay the spread and impact at the worst price. The family fades that bar (or follows it, as a falsifiable alternative).\nRATIONALE:",
-"note": "{\"name\": \"expansion_close_chase\", \"grid\": 192, \"sec_per_param\": 0.004, \"active_frac\": 0.164625}"
 }
 ],
 "history": [
-{
-"t": 1793918121.194884,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.6,
-"gpu": 2,
-"free_gb": 188.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793919044.6507058,
 "total": 31310831,
@@ -4069,6 +4058,17 @@
 "cpu": 99.8,
 "gpu": 2,
 "free_gb": 148.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794091661.772487,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 146.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
