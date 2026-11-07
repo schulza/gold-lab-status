@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 04:42:27 UTC",
+"generated_at": "2026-11-07 04:58:04 UTC",
 "host": {
-"cpu_pct": 70.2,
+"cpu_pct": 84.3,
 "gpu_pct": 2,
-"free_gb": 176.4,
-"uptime": "up 7 days, 15:02, 2 users, load averages: 27.96 28.01 28.41",
-"load": "{ 27.96 28.01 28.41 }"
+"free_gb": 176.7,
+"uptime": "up 7 days, 15:18, 2 users, load averages: 27.38 27.20 27.52",
+"load": "{ 27.38 27.20 27.52 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T04:47",
+"name": "chandelier_flip_hold",
+"status": "accepted",
+"rationale": "Payer is the trend follower with a Chandelier trailing stop (N-day high minus k\u00d7ATR). When a long-standing trend breaks its stop, the exits cluster and the stop orders fill at progressively worse prices. `sign=+1` trades with that cascade, so the payer is whoever is still long af",
+"note": "{\"name\": \"chandelier_flip_hold\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.0979}"
+},
+{
 "ts": "2026-11-07T04:16",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "`goldlab.external` is not in `ALLOWED_MODULES` (`goldlab/evolve.py:46`), so I used only price data from the director's under-sampled rule-bound list, near `var_breach_deleverage` and `loss_limit_reset`. The payer is a desk whose risk limit is a multiple of EWMA volatility. A loss",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-06T22:17",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is the slow gold holder (discretionary ETF and physical allocators) who reprices on the weekly rates move later than the rates-linked desks. Real yields (DFII10, usable next day) move over d days, and gold's own move over the same days falls short of what the beta implies. ",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1793854378.297757,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 69.9,
-"gpu": 2,
-"free_gb": 172.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793855314.426165,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 70.2,
 "gpu": 2,
 "free_gb": 176.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794027484.037923,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 84.3,
+"gpu": 2,
+"free_gb": 176.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
