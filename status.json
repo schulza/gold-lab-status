@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 08:25:16 UTC",
+"generated_at": "2026-11-07 08:41:07 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 89.8,
 "gpu_pct": 2,
-"free_gb": 141.1,
-"uptime": "up 7 days, 18:39, 2 users, load averages: 77.39 76.56 74.01",
-"load": "{ 76.79 76.45 73.98 }"
+"free_gb": 173.6,
+"uptime": "up 7 days, 19:01, 2 users, load averages: 36.87 46.06 60.19",
+"load": "{ 36.87 46.06 60.19 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T08:27",
+"name": "slot_reaction_sign",
+"status": "rejected",
+"rationale": "Payer is scheduled hour-of-day hedgers and flow desks, whose reaction to the preceding move is recurrent. Examples are fix, settle and roll hedging, and the flow can persist or revert depending on the slot.\nEach hour-of-day slot's follow-vs-fade sign is estimated causally. Only c",
+"note": "sandbox: NameError: name 'FAMILIES' is not defined"
+},
+{
 "ts": "2026-11-07T07:55",
 "name": "retrace_stop_run_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the long gold holders who hold through a futures-margin hike. Exchange margin is set from trailing realised volatility, so a short-window vol spike against the 20-day baseline triggers a hike. The forced exits then arrive 0\u20132 days later and run for 1\u20133 days. The family m",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-07T02:07",
-"name": "var_breach_forced_window_rebid",
-"status": "accepted",
-"rationale": "Payer is risk desks and vol-target funds that cut exposure after a one-sided breach of their rolling VaR. They sell through a window `wait` bars long, regardless of price, and rebound sellers get refunded after it ends. The family buys only after the forced window has finished, l",
-"note": "{\"name\": \"var_breach_forced_window_rebid\", \"grid\": 108, \"sec_per_param\": 0.05, \"active_frac\": 0.1279875}"
 }
 ],
 "history": [
-{
-"t": 1793867602.812137,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 71.2,
-"gpu": 2,
-"free_gb": 171.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793868538.223338,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 141.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794040867.781557,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 89.8,
+"gpu": 2,
+"free_gb": 173.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
