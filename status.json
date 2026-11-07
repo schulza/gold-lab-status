@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 09:21:26 UTC",
+"generated_at": "2026-11-07 09:44:17 UTC",
 "host": {
-"cpu_pct": 82.0,
+"cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 176.8,
-"uptime": "up 7 days, 19:39, 2 users, load averages: 57.01 71.72 70.57",
-"load": "{ 57.01 71.72 70.57 }"
+"free_gb": 154.3,
+"uptime": "up 7 days, 19:57, 2 users, load averages: 78.48 81.93 78.71",
+"load": "{ 78.48 81.93 78.71 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T09:33",
+"name": "located_lock_break",
+"status": "rejected",
+"rationale": "Payer is range-fade sellers and buyers who sit against a tight box formed in the already-extended part of the UTC-22h trading day. After a lock in the upper third of the day's range, an upside break forces their stops and chases the day's extension. The mirror applies in the lowe",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-07T09:01",
 "name": "bracket_trap_reclaim",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is constant-mix funds and balanced mandates that check their weight band once a week (Friday close) and trade the breach back to target in the next session. They are price-insensitive because the order is fixed by rule, so a Friday level more than k sigma from the weeks-lon",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-07T03:14",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is speculators crowded on one side (COT z or real-yield z extreme) going into scheduled NFP/FOMC releases. Their risk limits force de-grossing around the binary event, so the crowded side pays the fade, and the position runs only from `pre` hours before the release to `post",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1793870817.806856,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 153.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793872243.471924,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 82.0,
 "gpu": 2,
 "free_gb": 176.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794044657.2760682,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 154.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
