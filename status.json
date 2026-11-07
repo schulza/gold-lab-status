@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 06:16:02 UTC",
+"generated_at": "2026-11-07 06:31:38 UTC",
 "host": {
-"cpu_pct": 78.5,
+"cpu_pct": 81.4,
 "gpu_pct": 2,
-"free_gb": 176.7,
-"uptime": "up 7 days, 16:36, 2 users, load averages: 26.78 27.05 27.27",
-"load": "{ 26.78 27.05 27.27 }"
+"free_gb": 175.9,
+"uptime": "up 7 days, 16:52, 2 users, load averages: 27.65 27.47 27.47",
+"load": "{ 27.65 27.47 27.47 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T06:20",
+"name": "spread_episode_refund",
+"status": "rejected",
+"rationale": "Payer is the liquidity taker who crosses a dealer-withdrawn, wide-spread book. That includes stop-outs and market orders that print displacement during the episode, which is then refunded once quotes return.\nTrigger is a completed wide-spread episode (spread above a multiple of i",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-07T05:49",
 "name": "seasonal_overshoot_fade",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is CPPI and drawdown-floor mandates (principal-protected, risk-budgeted gold sleeves). In the band between the rolling peak and their floor, their rule cuts exposure in proportion to the shrinking cushion, so a down day with a thin cushion forces price-insensitive selling a",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-06T23:55",
-"name": "exhausted_liquidation_bid",
-"status": "rejected",
-"rationale": "Payer: levered longs liquidated by margin calls or vol-target cuts. After a multi-day drop, they sell into thin liquidity, and the buyers on the other side (the strategy) are paid the liquidity discount. The signal goes long only once selling has visibly dried up, meaning recent ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793859550.7657752,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 159.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793860547.0609438,
 "total": 31310831,
@@ -4102,6 +4091,17 @@
 "cpu": 78.5,
 "gpu": 2,
 "free_gb": 176.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794033098.6670249,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 81.4,
+"gpu": 2,
+"free_gb": 175.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
