@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 03:40:03 UTC",
+"generated_at": "2026-11-07 03:55:39 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 69.1,
 "gpu_pct": 2,
-"free_gb": 159.1,
-"uptime": "up 7 days, 13:53, 2 users, load averages: 78.35 75.40 72.45",
-"load": "{ 78.35 75.40 72.45 }"
+"free_gb": 175.6,
+"uptime": "up 7 days, 14:16, 2 users, load averages: 26.91 29.95 42.90",
+"load": "{ 26.91 29.95 42.90 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T03:45",
+"name": "band_weekend_rebalance",
+"status": "rejected",
+"rationale": "Payer is constant-mix funds and balanced mandates that check their weight band once a week (Friday close) and trade the breach back to target in the next session. They are price-insensitive because the order is fixed by rule, so a Friday level more than k sigma from the weeks-lon",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-07T03:14",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer: retail and EA traders who place limit orders at the published floor-trader pivot S1/R1, computed from yesterday's H/L/C, and stop-loss orders just beyond them. A pierce that is reclaimed within the day means the stops were run and the late limit buyers were right (or, with",
 "note": "{\"name\": \"pivot_stop_run_reclaim\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.02875}"
-},
-{
-"ts": "2026-11-06T21:13",
-"name": "repeat_breach_cut",
-"status": "accepted",
-"rationale": "Payer is the risk-limit desk (VaR or stop-loss) that gets cut again. A second same-direction k-sigma breach within m bars means the first cut did not bring exposure under the limit, so it must cut again over the next bars. Anyone trading against that forced second leg pays. This ",
-"note": "{\"name\": \"repeat_breach_cut\", \"grid\": 162, \"sec_per_param\": 0.002, \"active_frac\": 0.2894125}"
 }
 ],
 "history": [
-{
-"t": 1793850630.027092,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 69.2,
-"gpu": 2,
-"free_gb": 173.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793851566.833154,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 159.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794023739.268876,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 69.1,
+"gpu": 2,
+"free_gb": 175.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
