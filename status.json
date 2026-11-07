@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 02:31:40 UTC",
+"generated_at": "2026-11-07 02:53:43 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 158.2,
-"uptime": "up 7 days, 12:49, 2 users, load averages: 77.78 77.97 76.71",
-"load": "{ 77.78 77.97 76.71 }"
+"free_gb": 150.3,
+"uptime": "up 7 days, 13:07, 2 users, load averages: 76.32 76.61 76.21",
+"load": "{ 76.32 76.61 76.21 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T02:41",
+"name": "margin_hike_liquidation",
+"status": "rejected",
+"rationale": "Payer is the long gold holders who hold through a futures-margin hike. Exchange margin is set from trailing realised volatility, so a short-window vol spike against the 20-day baseline triggers a hike. The forced exits then arrive 0\u20132 days later and run for 1\u20133 days. The family m",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-07T02:07",
 "name": "var_breach_forced_window_rebid",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the risk-limit fund that is forced to cut after an n-day drawdown, then barred from re-levering for `wait` days. It sells into the low at any price, and it is the one that pays for the missing bid. Long only. The signal enters after the cooling-off, and only if the close",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-06T20:05",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is gold-only discretionary and ETF holders who reprice slowly to a real-yield (DFII10) change, which is a discount-rate move already published. The signal enters only when yields moved at least thr bp and gold's own vol-scaled return over the last `days` days has not yet fo",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1793846374.8194351,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 130.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793847819.454802,
 "total": 31310831,
@@ -4102,6 +4091,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 158.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794020023.3264132,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 150.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
