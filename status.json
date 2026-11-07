@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 12:43:19 UTC",
+"generated_at": "2026-11-07 13:06:11 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 139.9,
-"uptime": "up 7 days, 22:56, 2 users, load averages: 79.42 73.73 74.64",
-"load": "{ 79.31 73.80 74.66 }"
+"free_gb": 138.6,
+"uptime": "up 7 days, 23:19, 2 users, load averages: 77.39 79.28 77.99",
+"load": "{ 77.39 79.28 77.99 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T12:53",
+"name": "prior_value_pull",
+"status": "rejected",
+"rationale": "Payer is the trend-chaser and market-order trader who pays up away from the prior-day value anchor (median or TWAP-mean close). Execution algos and value-area limit orders anchored to yesterday's value are the counterparty and refill dislocations beyond k sigma; `sign=-1` is the ",
+"note": "sandbox: AssertionError: zu speicherhungrig: 43 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-07T12:20",
 "name": "outside_bar_stop_sweep",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is breakout chasers who enter on a new N-bar extreme printed on thin tick participation. Their market orders walk a book that nobody else is lifting, so the print is an impact artefact that gets refunded. `sign=-1` tests the opposite case, a break on heavy participation tha",
 "note": "{\"name\": \"thin_break_fade\", \"grid\": 120, \"sec_per_param\": 0.0, \"active_frac\": 0.33155}"
-},
-{
-"ts": "2026-11-07T06:20",
-"name": "spread_episode_refund",
-"status": "rejected",
-"rationale": "Payer is the liquidity taker who crosses a dealer-withdrawn, wide-spread book. That includes stop-outs and market orders that print displacement during the episode, which is then refunded once quotes return.\nTrigger is a completed wide-spread episode (spread above a multiple of i",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793882725.919307,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 137.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793884810.973762,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 139.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794056771.3485599,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 138.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
