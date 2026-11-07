@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 19:43:01 UTC",
+"generated_at": "2026-11-07 20:06:11 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 157.8,
-"uptime": "up 8 days,  5:57, 2 users, load averages: 72.53 75.09 74.86",
-"load": "{ 72.53 75.09 74.86 }"
+"free_gb": 151.5,
+"uptime": "up 8 days,  6:19, 2 users, load averages: 75.99 77.07 76.90",
+"load": "{ 75.99 77.07 76.90 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T19:54",
+"name": "cascade_contraction_bid",
+"status": "accepted",
+"rationale": "Payer is stop-loss sellers and late momentum shorts in a sell-off. They exit through market orders while the bar range expands. Once the range contracts and the bar closes in its upper half above the prior close, their selling is spent and the price bounces back.\nRule-bound and p",
+"note": "{\"name\": \"cascade_contraction_bid\", \"grid\": 162, \"sec_per_param\": 0.002, \"active_frac\": 0.1493875}"
+},
+{
 "ts": "2026-11-07T19:22",
 "name": "congestion_band_fade",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is stop-order breakout traders. Their entries are buy-stops above the previous high and sell-stops below the previous low. When the stop fills but the bar closes back inside the prior close, they hold a losing position that needs capital or a cover.\nThe signal is the net co",
 "note": "{\"name\": \"trap_cluster_fade\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.3463375}"
-},
-{
-"ts": "2026-11-07T13:27",
-"name": "decisive_block_persist",
-"status": "accepted",
-"rationale": "Payer: slow allocators (pension and ETF accumulation) who work parent orders in many small child orders. This produces many modestly positive blocks rather than one jump, and magnitude-based trend rules are fooled by single jumps. The strategy counts only \"decisive\" blocks (|h-ba",
-"note": "{\"name\": \"decisive_block_persist\", \"grid\": 72, \"sec_per_param\": 0.004, \"active_frac\": 0.147375}"
 }
 ],
 "history": [
-{
-"t": 1793908585.956219,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 118.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793909548.9147708,
 "total": 31310831,
@@ -4102,6 +4091,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 157.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794081971.969745,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 151.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
