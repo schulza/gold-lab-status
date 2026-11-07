@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 12:19:59 UTC",
+"generated_at": "2026-11-07 12:43:19 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 150.6,
-"uptime": "up 7 days, 22:32, 2 users, load averages: 76.65 72.47 73.92",
-"load": "{ 76.65 72.47 73.92 }"
+"free_gb": 139.9,
+"uptime": "up 7 days, 22:56, 2 users, load averages: 79.42 73.73 74.64",
+"load": "{ 79.31 73.80 74.66 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T12:20",
+"name": "outside_bar_stop_sweep",
+"status": "accepted",
+"rationale": "Payer is breakout-stop pairs placed on both sides of a one-bar range. An outside bar sweeps both sets of stops in one bar, and the close location shows which side was left holding the fill.\nRATIONALE: The family trades the close-location side for a fixed hold. Sign is a grid para",
+"note": "{\"name\": \"outside_bar_stop_sweep\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.223775}"
+},
+{
 "ts": "2026-11-07T11:47",
 "name": "prior_extreme_acceptance",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the liquidity taker who crosses a dealer-withdrawn, wide-spread book. That includes stop-outs and market orders that print displacement during the episode, which is then refunded once quotes return.\nTrigger is a completed wide-spread episode (spread above a multiple of i",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-07T05:49",
-"name": "seasonal_overshoot_fade",
-"status": "accepted",
-"rationale": "Payer: stop-triggered and momentum-chasing market orders that arrive in seasonally quiet hours. Their size is set from unconditional vol, so displacement beyond the hour-of-day norm pays an impact premium to whoever fades it, and that premium gets refunded.\nRATIONALE: The thresho",
-"note": "{\"name\": \"seasonal_overshoot_fade\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.2676625}"
 }
 ],
 "history": [
-{
-"t": 1793881370.318954,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 149.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793882725.919307,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 150.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794055399.6724741,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 139.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
