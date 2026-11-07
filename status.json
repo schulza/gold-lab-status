@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 00:19:46 UTC",
+"generated_at": "2026-11-07 00:44:04 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 155.6,
-"uptime": "up 7 days, 10:31, 2 users, load averages: 68.80 68.74 70.37",
-"load": "{ 68.80 68.74 70.37 }"
+"free_gb": 155.7,
+"uptime": "up 7 days, 10:56, 2 users, load averages: 75.04 72.82 71.68",
+"load": "{ 75.04 72.82 71.68 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T00:26",
+"name": "cppi_cushion_shock_rebid",
+"status": "rejected",
+"rationale": "Payer is CPPI and drawdown-floor mandates (principal-protected, risk-budgeted gold sleeves). In the band between the rolling peak and their floor, their rule cuts exposure in proportion to the shrinking cushion, so a down day with a thin cushion forces price-insensitive selling a",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-06T23:55",
 "name": "exhausted_liquidation_bid",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is volatility-targeted books (risk-parity and CTA overlays). They size inversely to trailing vol, so after a long calm stretch they sit at maximum leverage. The first shock bar then forces them to cut in the shock's direction, and they do it with lagged, non-urgent exec",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-06T17:51",
-"name": "voltarget_cut_fade",
-"status": "accepted",
-"rationale": "Payer is trend-following vol-target funds. When short-window realised vol jumps well above its long-window baseline while an established trend is running, their vol budget forces them to cut in the trend direction, so they sell into the spike at poor prices. The strategy takes th",
-"note": "{\"name\": \"voltarget_cut_fade\", \"grid\": 144, \"sec_per_param\": 0.013, \"active_frac\": 0.04425}"
 }
 ],
 "history": [
-{
-"t": 1793839313.401723,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 117.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793840782.853947,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 155.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794012244.476274,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 155.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
