@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 21:11:52 UTC",
+"generated_at": "2026-11-07 21:40:16 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 118.7,
-"uptime": "up 8 days,  7:26, 2 users, load averages: 73.33 76.01 76.96",
-"load": "{ 73.33 76.01 76.96 }"
+"free_gb": 118.5,
+"uptime": "up 8 days,  7:48, 2 users, load averages: 75.08 74.66 76.42",
+"load": "{ 75.08 74.66 76.42 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T21:33",
+"name": "band_dwell_capitulation",
+"status": "rejected",
+"rationale": "The payer is the band fader with a time stop. They short a stretch beyond the rolling band expecting reversion, and when price sits outside it for m bars without reverting, their risk limit forces them to cover into the move.\nRATIONALE: Entry requires a dwell count (m consecutive",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-07T21:00",
 "name": "spread_normalisation_refund",
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer: breakout traders who place stop-entries one tick beyond an inside day's high or low. An inside day is a day whose range sits inside the prior day's range. A breakout that closes back inside the box on the same day leaves them trapped, and their forced exits pay the fader.\n",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-07T15:04",
-"name": "widened_jump_retrace_fade",
-"status": "rejected",
-"rationale": "Payer is aggressive market-order takers who cross a spread the liquidity providers have just widened, on a single-bar jump with no baseline volatility behind it. The jump is a take-out of thin quotes, not information.\nRATIONALE: Entry waits for the next bar to retrace at least r ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793913367.088114,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 147.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793914331.395658,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 135.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793915303.624691,
 "total": 31310831,
@@ -4091,6 +4069,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 118.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794087616.148857,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 118.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
