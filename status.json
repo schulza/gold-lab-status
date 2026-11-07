@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 08:41:07 UTC",
+"generated_at": "2026-11-07 09:03:16 UTC",
 "host": {
-"cpu_pct": 89.8,
+"cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 173.6,
-"uptime": "up 7 days, 19:01, 2 users, load averages: 36.87 46.06 60.19",
-"load": "{ 36.87 46.06 60.19 }"
+"free_gb": 154.5,
+"uptime": "up 7 days, 19:17, 2 users, load averages: 78.84 63.22 55.57",
+"load": "{ 78.84 63.22 55.57 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T09:01",
+"name": "bracket_trap_reclaim",
+"status": "accepted",
+"rationale": "Payer is retail OCO bracket traders, who rest stops at both edges of a range. A pierce of one edge that closes back inside the box, without touching the other edge, means those stops were run and the move had no follow-through. I trade toward the untouched opposite edge for a fix",
+"note": "{\"name\": \"bracket_trap_reclaim\", \"grid\": 162, \"sec_per_param\": 0.011, \"active_frac\": 0.18975}"
+},
+{
 "ts": "2026-11-07T08:27",
 "name": "slot_reaction_sign",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is speculators crowded on one side (COT z or real-yield z extreme) going into scheduled NFP/FOMC releases. Their risk limits force de-grossing around the binary event, so the crowded side pays the fade, and the position runs only from `pre` hours before the release to `post",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-07T02:41",
-"name": "margin_hike_liquidation",
-"status": "rejected",
-"rationale": "Payer is the long gold holders who hold through a futures-margin hike. Exchange margin is set from trailing realised volatility, so a short-window vol spike against the 20-day baseline triggers a hike. The forced exits then arrive 0\u20132 days later and run for 1\u20133 days. The family m",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793868538.223338,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 87.5,
-"gpu": 2,
-"free_gb": 171.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793869473.7431738,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 89.8,
 "gpu": 2,
 "free_gb": 173.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794042195.812059,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 154.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
