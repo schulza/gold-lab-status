@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 14:17:16 UTC",
+"generated_at": "2026-11-07 14:34:52 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 130.0,
-"uptime": "up 8 days, 31 mins, 2 users, load averages: 77.33 76.36 76.9",
-"load": "{ 80.18 76.97 77.18 }"
+"free_gb": 129.7,
+"uptime": "up 8 days, 53 mins, 2 users, load averages: 75.02 77.74 78.1",
+"load": "{ 74.86 77.66 78.11 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T14:33",
+"name": "prior_poc_reversion",
+"status": "accepted",
+"rationale": "Payer: intraday-only breakout chasers and stop-entry traders who push price away from the prior day's high-acceptance price (volume profile point of control, POC), where resting passive inventory and anchored limit orders absorb them. They then have to flatten before the rollover",
+"note": "{\"name\": \"prior_poc_reversion\", \"grid\": 128, \"sec_per_param\": 0.011, \"active_frac\": 0.478825}"
+},
+{
 "ts": "2026-11-07T13:59",
 "name": "trap_cluster_fade",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is scheduled hour-of-day hedgers and flow desks, whose reaction to the preceding move is recurrent. Examples are fix, settle and roll hedging, and the flow can persist or revert depending on the slot.\nEach hour-of-day slot's follow-vs-fade sign is estimated causally. Only c",
 "note": "sandbox: NameError: name 'FAMILIES' is not defined"
-},
-{
-"ts": "2026-11-07T07:55",
-"name": "retrace_stop_run_hold",
-"status": "accepted",
-"rationale": "Payer is retail \"Fibonacci retrace\" buyers and sellers. They fade a fresh impulse, so their stops sit just beyond the retrace level. When price touches a 38/50/62% retrace and closes back across it, those stops are about to be run.\nRATIONALE: The impulse must be large relative to",
-"note": "{\"name\": \"retrace_stop_run_hold\", \"grid\": 108, \"sec_per_param\": 0.028, \"active_frac\": 0.393525}"
 }
 ],
 "history": [
-{
-"t": 1793889009.63907,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 147.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793890406.214324,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 130.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794062092.652599,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 129.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
