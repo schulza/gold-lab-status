@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 01:25:35 UTC",
+"generated_at": "2026-11-07 01:48:53 UTC",
 "host": {
-"cpu_pct": 67.6,
+"cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 173.8,
-"uptime": "up 7 days, 11:39, 2 users, load averages: 47.17 68.42 73.23",
-"load": "{ 47.17 68.42 73.23 }"
+"free_gb": 158.4,
+"uptime": "up 7 days, 12:01, 2 users, load averages: 65.82 66.93 70.83",
+"load": "{ 65.82 66.93 70.83 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T01:33",
+"name": "exception_rolloff_rebuy",
+"status": "rejected",
+"rationale": "PAYER = trading desks under a Basel-style backtesting traffic light. Once the count of VaR exceptions in a trailing window reaches a limit, they must cut risk. When the oldest exception rolls out of the window, the count drops under the limit and they re-lever. The re-lever date ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-07T01:00",
 "name": "vol_band_rebalance_fade",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is leveraged COMEX gold futures holders on the losing side of a volatility regime shift. When short-window daily range jumps above a disjoint longer baseline, exchange performance-bond requirements rise with a 1\u20133 day lag. Margin-constrained accounts then have to cut in the",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-06T18:58",
-"name": "consecutive_loss_margin_flush",
-"status": "accepted",
-"rationale": "Payer is leveraged retail longs who get margin-called after a run of down days. Forced sellers liquidate into the close of day N, and the discount is refunded over the next few days.\nRATIONALE: Rule-bound trigger: n consecutive down days whose cumulative loss is at least k daily ",
-"note": "{\"name\": \"consecutive_loss_margin_flush\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.1749625}"
 }
 ],
 "history": [
-{
-"t": 1793842244.3109329,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 159.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793843631.93959,
 "total": 31310831,
@@ -4102,6 +4091,17 @@
 "cpu": 67.6,
 "gpu": 2,
 "free_gb": 173.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794016133.0855849,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 158.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
