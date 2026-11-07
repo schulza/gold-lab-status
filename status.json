@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 20:49:47 UTC",
+"generated_at": "2026-11-07 21:11:52 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 8,
-"free_gb": 149.7,
-"uptime": "up 8 days,  7:04, 2 users, load averages: 109.76 88.58 81.19",
-"load": "{ 109.76 88.58 81.19 }"
+"gpu_pct": 2,
+"free_gb": 118.7,
+"uptime": "up 8 days,  7:26, 2 users, load averages: 73.33 76.01 76.96",
+"load": "{ 73.33 76.01 76.96 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T21:00",
+"name": "spread_normalisation_refund",
+"status": "rejected",
+"rationale": "Payer is takers who crossed a stressed (widened) spread and were stopped out near the extreme. They paid the liquidity premium at the worst price. The trigger is the spread-normalisation event, not the spread level, so it is not a neighbour of spread_excess_refund.\nRATIONALE: Aft",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-07T20:27",
 "name": "compression_stack_break",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is aggressive market-order takers who cross a spread the liquidity providers have just widened, on a single-bar jump with no baseline volatility behind it. The jump is a take-out of thin quotes, not information.\nRATIONALE: Entry waits for the next bar to retrace at least r ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-07T14:33",
-"name": "prior_poc_reversion",
-"status": "accepted",
-"rationale": "Payer: intraday-only breakout chasers and stop-entry traders who push price away from the prior day's high-acceptance price (volume profile point of control, POC), where resting passive inventory and anchored limit orders absorb them. They then have to flatten before the rollover",
-"note": "{\"name\": \"prior_poc_reversion\", \"grid\": 128, \"sec_per_param\": 0.011, \"active_frac\": 0.478825}"
 }
 ],
 "history": [
-{
-"t": 1793912407.035119,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 159.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793913367.088114,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 8,
 "free_gb": 149.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794085912.344262,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 118.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
