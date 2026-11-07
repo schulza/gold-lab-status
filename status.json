@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 23:08:55 UTC",
+"generated_at": "2026-11-07 23:24:45 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 93.3,
 "gpu_pct": 2,
-"free_gb": 143.8,
-"uptime": "up 8 days,  9:23, 2 users, load averages: 104.83 87.44 81.23",
-"load": "{ 104.83 87.44 81.23 }"
+"free_gb": 174.0,
+"uptime": "up 8 days,  9:45, 2 users, load averages: 38.30 50.90 65.03",
+"load": "{ 38.30 50.90 65.03 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T23:13",
+"name": "burst_velocity_decay_fade",
+"status": "accepted",
+"rationale": "Payer is late momentum chasers who enter an extended move after the burst has peaked. Their market orders arrive as velocity decays, and they cannot be filled at the extreme.\nRATIONALE: The rule fades only a move that was \u2265k sigma m bars ago and whose current n-bar velocity has f",
+"note": "{\"name\": \"burst_velocity_decay_fade\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.469775}"
+},
+{
 "ts": "2026-11-07T22:40",
 "name": "horizon_conflict_fade",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is breakout shorts and stop-sellers who repeatedly sell into dips and get absorbed. Resting limit bids defend a level through several rejection wicks (long lower wick, close in the upper part of the bar). Sellers then cover or chase above it.\nRATIONALE: It is rule-bound",
 "note": "sandbox: AssertionError: zu speicherhungrig: 57 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-11-07T16:39",
-"name": "friday_week_extreme_squaring",
-"status": "accepted",
-"rationale": "Payer: longs who bought into a week-high rally (and shorts who sold a week-low) and de-risk before the weekend on Friday afternoon, because benchmark-bound books and retail don't want to carry the week's extreme through the gap.\nRATIONALE: Keyed to where the close sits in the wee",
-"note": "{\"name\": \"friday_week_extreme_squaring\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.0092}"
 }
 ],
 "history": [
-{
-"t": 1793920183.3379068,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 135.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793921449.775918,
 "total": 31310831,
@@ -4069,6 +4058,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 143.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794093885.49144,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 93.3,
+"gpu": 2,
+"free_gb": 174.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
