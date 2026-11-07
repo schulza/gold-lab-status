@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 05:44:51 UTC",
+"generated_at": "2026-11-07 06:00:27 UTC",
 "host": {
-"cpu_pct": 84.1,
+"cpu_pct": 72.5,
 "gpu_pct": 2,
-"free_gb": 176.6,
-"uptime": "up 7 days, 16:05, 2 users, load averages: 28.04 27.40 27.51",
-"load": "{ 28.04 27.40 27.51 }"
+"free_gb": 184.1,
+"uptime": "up 7 days, 16:20, 2 users, load averages: 28.43 27.89 27.71",
+"load": "{ 28.43 27.89 27.71 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T05:49",
+"name": "seasonal_overshoot_fade",
+"status": "accepted",
+"rationale": "Payer: stop-triggered and momentum-chasing market orders that arrive in seasonally quiet hours. Their size is set from unconditional vol, so displacement beyond the hour-of-day norm pays an impact premium to whoever fades it, and that premium gets refunded.\nRATIONALE: The thresho",
+"note": "{\"name\": \"seasonal_overshoot_fade\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.2676625}"
+},
+{
 "ts": "2026-11-07T05:18",
 "name": "climax_reclaim_bid",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer: levered longs liquidated by margin calls or vol-target cuts. After a multi-day drop, they sell into thin liquidity, and the buyers on the other side (the strategy) are paid the liquidity discount. The signal goes long only once selling has visibly dried up, meaning recent ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-06T23:23",
-"name": "vol_target_flow",
-"status": "rejected",
-"rationale": "Payer is a vol-targeted or risk-parity long-gold fund (CTA or multi-asset) that resizes by a rule keyed to a slow variance estimate. After a fast-vol spike with a down move it must cut gold at a capped pace, which pays whoever is short ahead of the cuts. After the spike has decay",
-"note": "sandbox: AssertionError: zu speicherhungrig: 41 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1793858127.784692,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 87.2,
-"gpu": 2,
-"free_gb": 169.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793859550.7657752,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 84.1,
 "gpu": 2,
 "free_gb": 176.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794031227.211562,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 72.5,
+"gpu": 2,
+"free_gb": 184.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
