@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-07 18:13:51 UTC",
+"generated_at": "2026-11-07 18:36:43 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 155.3,
-"uptime": "up 8 days,  4:27, 2 users, load averages: 75.49 72.65 68.88",
-"load": "{ 75.49 72.65 68.88 }"
+"free_gb": 157.7,
+"uptime": "up 8 days,  4:50, 2 users, load averages: 87.10 78.05 76.81",
+"load": "{ 87.10 78.05 76.81 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-07T18:16",
+"name": "compressed_hour_carry",
+"status": "rejected",
+"rationale": "Payer: scalpers and limit-order fade desks who sell small hourly pushes in thin books. After a compressed hour that closes near one end of its own range, the move was absorbed without a fight, and their stale fade inventory loses over the next 1-2 hours.\nRATIONALE: This is not a ",
+"note": "sandbox: NameError: name 'FAMILIES' is not defined"
+},
+{
 "ts": "2026-11-07T17:44",
 "name": "anchored_vwap_squeeze",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is breakout-stop pairs placed on both sides of a one-bar range. An outside bar sweeps both sets of stops in one bar, and the close location shows which side was left holding the fill.\nRATIONALE: The family trades the close-location side for a fixed hold. Sign is a grid para",
 "note": "{\"name\": \"outside_bar_stop_sweep\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.223775}"
-},
-{
-"ts": "2026-11-07T11:47",
-"name": "prior_extreme_acceptance",
-"status": "accepted",
-"rationale": "Payer is the counter-trend limit seller who fades the prior-day high or low. Their resting orders are filled but price keeps *accepting* beyond the level (a run of consecutive closes beyond it), so they are forced to cover into the move.\nRATIONALE: The edge comes from a time-at-l",
-"note": "{\"name\": \"prior_extreme_acceptance\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.29733125}"
 }
 ],
 "history": [
-{
-"t": 1793903068.0162518,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 159.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793904457.1629272,
 "total": 31310831,
@@ -4102,6 +4091,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 155.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794076603.199064,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 157.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
