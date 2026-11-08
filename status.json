@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-08 07:24:42 UTC",
+"generated_at": "2026-11-08 07:48:10 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 140.1,
-"uptime": "up 8 days, 17:37, 2 users, load averages: 82.12 75.38 74.67",
-"load": "{ 82.12 75.38 74.67 }"
+"free_gb": 118.8,
+"uptime": "up 8 days, 18:01, 2 users, load averages: 74.87 77.92 79.03",
+"load": "{ 74.87 77.92 79.03 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-08T07:26",
+"name": "cover_pace_stall_hold",
+"status": "accepted",
+"rationale": "The payer is the range-top seller who sold the range high and has to cover through a break that arrives on rising participation. Their buy-stops are spread over price, so the cover runs at a pace and ends when the stops are used up. Nobody else holds this signal for them.\nRATIONA",
+"note": "{\"name\": \"cover_pace_stall_hold\", \"grid\": 72, \"sec_per_param\": 0.002, \"active_frac\": 0.11875}"
+},
+{
 "ts": "2026-11-08T06:52",
 "name": "break_exit_logic_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is takers who sell into a sell-off after dealers have defensively widened the down-side spread (spread on down bars versus up bars, z-scored). They pay a liquidity concession that the price refunds once the quotes normalise.\nIt is not a forced-deleveraging, real-yield or pi",
 "note": "{\"name\": \"downside_quote_stress_bid\", \"grid\": 144, \"sec_per_param\": 0.005, \"active_frac\": 0.46214375}"
-},
-{
-"ts": "2026-11-08T00:48",
-"name": "measured_move_completion",
-"status": "accepted",
-"rationale": "Payer is the swing trader who takes profit at a measured-move target (AB=CD, where leg C-D equals leg A-B). Their resting limit orders and exits cluster where the third leg matches the first, so price stalls or reverses there. `sign=-1` fades the completed leg and `sign=+1` rides",
-"note": "{\"name\": \"measured_move_completion\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.0636625}"
 }
 ],
 "history": [
-{
-"t": 1793950983.082562,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 142.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793951922.134392,
 "total": 31310831,
@@ -4080,6 +4069,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 140.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794124090.6297321,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 118.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
