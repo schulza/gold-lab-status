@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-08 17:28:05 UTC",
+"generated_at": "2026-11-08 17:51:22 UTC",
 "host": {
-"cpu_pct": 90.6,
+"cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 175.1,
-"uptime": "up 9 days,  3:48, 2 users, load averages: 33.85 33.08 34.38",
-"load": "{ 33.85 33.08 34.38 }"
+"free_gb": 139.7,
+"uptime": "up 9 days,  4:04, 2 users, load averages: 75.26 74.26 61.90",
+"load": "{ 75.26 74.26 61.90 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-08T17:41",
+"name": "broken_level_dwell_exit_hold",
+"status": "accepted",
+"rationale": "The payer is the range-top seller who sold into a break on rising participation and has to buy back. A fill only counts as absorbed while price stays above the broken level. If price spends a large share of the next hours back under that level, supply is re-accepted and the cover",
+"note": "{\"name\": \"broken_level_dwell_exit_hold\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.3425625}"
+},
+{
 "ts": "2026-11-08T17:08",
 "name": "acceptance_share_break_hold",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the range-top seller who sold into a participative N-day-high break and covers through buy-stops spread over price. Their remaining short shrinks as the squeeze matures, so their demand fades gradually and the exit should too.\nRATIONALE: The entry is the fixed partic",
 "note": "{\"name\": \"cover_giveback_graded_hold\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.162425}"
-},
-{
-"ts": "2026-11-08T11:09",
-"name": "break_participation_fade_hold",
-"status": "accepted",
-"rationale": "Payer is the range-top seller who absorbed a break on rising participation. They cover while the participation behind the break persists, and that bid fades once the activity does. Entry is the same as participation_break_hold, so only the exit differs.\nExit: the 24h-to-window ac",
-"note": "{\"name\": \"break_participation_fade_hold\", \"grid\": 144, \"sec_per_param\": 0.002, \"active_frac\": 0.24225}"
 }
 ],
 "history": [
-{
-"t": 1793987425.694282,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 13,
-"free_gb": 143.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793988538.147189,
 "total": 31310831,
@@ -4003,6 +3992,17 @@
 "cpu": 90.6,
 "gpu": 2,
 "free_gb": 175.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794160282.289801,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 139.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
