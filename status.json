@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-08 21:52:03 UTC",
+"generated_at": "2026-11-08 22:09:34 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 118.1,
-"uptime": "up 9 days,  8:07, 2 users, load averages: 78.91 79.78 77.78",
-"load": "{ 78.91 79.78 77.78 }"
+"free_gb": 118.9,
+"uptime": "up 9 days,  8:28, 2 users, load averages: 93.92 88.40 81.37",
+"load": "{ 93.92 88.40 81.37 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-08T22:06",
+"name": "cover_activity_decay_hold",
+"status": "accepted",
+"rationale": "The payer is the range-top seller who absorbed a break on rising participation and covers over hours. The existing family exits on price (an MA loss, dwell decay, stalls, floors); this one exits on activity. The hold ends when short-window absolute-return activity falls back belo",
+"note": "{\"name\": \"cover_activity_decay_hold\", \"grid\": 162, \"sec_per_param\": 0.003, \"active_frac\": 0.4244125}"
+},
+{
 "ts": "2026-11-08T21:33",
 "name": "absorption_floor_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the range-top seller who sold into an N-day-high break on above-normal participation. The seller covers over hours, and the drift ends when new supply arrives. Entry is the unchanged participation_break_hold trigger. Only the exit differs.\nRATIONALE: The exit is a supply",
 "note": "{\"name\": \"supply_return_shock_hold\", \"grid\": 108, \"sec_per_param\": 0.052, \"active_frac\": 0.14545}"
-},
-{
-"ts": "2026-11-08T15:33",
-"name": "cover_decay_trail_hold",
-"status": "accepted",
-"rationale": "Payer is the range-top seller who sold into a break on rising participation (ticks per day \u2265 k times the N-day average). That seller covers in a burst that fades, so the drift is front-loaded. The entry matches participation_break_hold, and only the exit is new.\nRATIONALE: The ex",
-"note": "{\"name\": \"cover_decay_trail_hold\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.1020125}"
 }
 ],
 "history": [
-{
-"t": 1794002698.335336,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 131.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794004068.4751801,
 "total": 31310831,
@@ -3992,6 +3981,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 118.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794175774.974248,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 118.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
