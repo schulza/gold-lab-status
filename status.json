@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-08 03:47:38 UTC",
+"generated_at": "2026-11-08 04:10:21 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 140.7,
-"uptime": "up 8 days, 13:59, 2 users, load averages: 62.33 53.72 63.10",
-"load": "{ 62.33 53.72 63.10 }"
+"free_gb": 139.8,
+"uptime": "up 8 days, 14:23, 2 users, load averages: 76.94 77.64 74.92",
+"load": "{ 76.94 77.64 74.92 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-08T04:05",
+"name": "churn_box_break",
+"status": "accepted",
+"rationale": "Payer is the liquidity provider or fader who absorbed a high-activity, low-displacement \"churn\" bar. Their inventory sits against the bar's range, and when price leaves that range they cover into the move.\nRATIONALE: This is not the forced-deleveraging payer, a DFII10 or other ex",
+"note": "{\"name\": \"churn_box_break\", \"grid\": 108, \"sec_per_param\": 0.002, \"active_frac\": 0.84355}"
+},
+{
 "ts": "2026-11-08T03:32",
 "name": "efficiency_trail_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the trend-following desk long from an N-day breakout. Its protective exit sits at the shorter m-day low, and the sweep through it fires those sells and the stops of late longs. After the fills are done and price reclaims the exit low, the exit flow was a forced, price-in",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-07T21:33",
-"name": "band_dwell_capitulation",
-"status": "rejected",
-"rationale": "The payer is the band fader with a time stop. They short a stretch beyond the rolling band expecting reversion, and when price sits outside it for m bars without reverting, their risk limit forces them to cover into the move.\nRATIONALE: Entry requires a dwell count (m consecutive",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793938035.249424,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 139.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793939984.5955358,
 "total": 31310831,
@@ -4069,6 +4058,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 140.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794111021.274376,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 139.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
