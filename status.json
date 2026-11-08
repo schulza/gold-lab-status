@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-08 04:32:24 UTC",
+"generated_at": "2026-11-08 04:53:26 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 118.4,
-"uptime": "up 8 days, 14:46, 2 users, load averages: 74.59 75.76 75.38",
-"load": "{ 74.59 75.76 75.38 }"
+"free_gb": 118.2,
+"uptime": "up 8 days, 15:08, 2 users, load averages: 79.69 77.68 77.25",
+"load": "{ 79.69 77.68 77.25 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-08T04:38",
+"name": "push_flow_divergence_fade",
+"status": "accepted",
+"rationale": "Payer is breakout chasers and OBV-style technical traders. They buy new n-bar highs, or sell new lows, that the signed tick flow does not confirm (OBV below its prior peak), so the push came from thin participation. They give the move back as the unconfirmed push stalls.\nRATIONAL",
+"note": "{\"name\": \"push_flow_divergence_fade\", \"grid\": 72, \"sec_per_param\": 0.001, \"active_frac\": 0.4343125}"
+},
+{
 "ts": "2026-11-08T04:05",
 "name": "churn_box_break",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is intraday liquidity demanders (stop-outs and chasers) who push the fast horizon against a larger-horizon institutional slicing flow (VWAP/TWAP parent orders). The slice flow keeps buying or selling through the counter-move, so the counter-move refunds. Trade with the slow",
 "note": "{\"name\": \"horizon_conflict_fade\", \"grid\": 144, \"sec_per_param\": 0.005, \"active_frac\": 0.03805}"
-},
-{
-"ts": "2026-11-07T22:06",
-"name": "exit_channel_reclaim",
-"status": "rejected",
-"rationale": "Payer is the trend-following desk long from an N-day breakout. Its protective exit sits at the shorter m-day low, and the sweep through it fires those sells and the stops of late longs. After the fills are done and price reclaims the exit low, the exit flow was a forced, price-in",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793939984.5955358,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 117.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793941793.826226,
 "total": 31310831,
@@ -4080,6 +4069,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 118.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794113606.930772,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 118.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
