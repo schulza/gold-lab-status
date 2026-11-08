@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-08 00:33:51 UTC",
+"generated_at": "2026-11-08 00:50:20 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 2,
-"free_gb": 140.6,
-"uptime": "up 8 days, 10:48, 2 users, load averages: 71.13 70.01 55.37",
-"load": "{ 71.13 70.01 55.37 }"
+"gpu_pct": 3,
+"free_gb": 138.4,
+"uptime": "up 8 days, 11:10, 2 users, load averages: 74.64 76.00 72.48",
+"load": "{ 74.64 76.00 72.48 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-08T00:48",
+"name": "measured_move_completion",
+"status": "accepted",
+"rationale": "Payer is the swing trader who takes profit at a measured-move target (AB=CD, where leg C-D equals leg A-B). Their resting limit orders and exits cluster where the third leg matches the first, so price stalls or reverses there. `sign=-1` fades the completed leg and `sign=+1` rides",
+"note": "{\"name\": \"measured_move_completion\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.0636625}"
+},
+{
 "ts": "2026-11-08T00:14",
 "name": "inside_bar_trap_fade",
 "status": "accepted",
@@ -2446,13 +2453,6 @@
 "status": "accepted",
 "rationale": "Payer is the range-centre fader. They anchor on the middle of the recent range and keep fading while the range itself relocates (value migration). They hold inventory against a moving centre and get run over.\nRATIONALE: Entry needs the Donchian midpoint to have migrated by more t",
 "note": "{\"name\": \"midpoint_migration_hold\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.23566875}"
-},
-{
-"ts": "2026-11-07T18:16",
-"name": "compressed_hour_carry",
-"status": "rejected",
-"rationale": "Payer: scalpers and limit-order fade desks who sell small hourly pushes in thin books. After a compressed hour that closes near one end of its own range, the move was absorbed without a fight, and their stale fade inventory loses over the next 1-2 hours.\nRATIONALE: This is not a ",
-"note": "sandbox: NameError: name 'FAMILIES' is not defined"
 }
 ],
 "history": [
@@ -4069,6 +4069,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 140.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794099020.5741189,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 3,
+"free_gb": 138.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
