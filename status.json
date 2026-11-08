@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-08 09:35:32 UTC",
+"generated_at": "2026-11-08 09:58:13 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 146.2,
-"uptime": "up 8 days, 19:54, 2 users, load averages: 75.72 77.02 76.58",
-"load": "{ 75.72 77.02 76.58 }"
+"free_gb": 143.0,
+"uptime": "up 8 days, 20:11, 2 users, load averages: 79.62 79.73 77.37",
+"load": "{ 79.62 79.73 77.37 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-08T09:35",
+"name": "absorption_scaled_cover_hold",
+"status": "accepted",
+"rationale": "The payer is the range-top seller who absorbed a break on rising participation. Cover time scales with how much supply was absorbed, so the hold length is proportional to the break's participation ratio (capped). This varies only the hold logic, as the director asked, and no exis",
+"note": "{\"name\": \"absorption_scaled_cover_hold\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.1701}"
+},
+{
 "ts": "2026-11-08T09:04",
 "name": "cover_clock_break_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the counter-trend fader and mean-reversion scaler. They add into smooth, one-directional runs, where net displacement is a large share of path length, and they take profit early. They keep paying the trend rider until a chandelier trail, scaled to realised bar-to-bar",
 "note": "{\"name\": \"efficiency_trail_hold\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.46489375}"
-},
-{
-"ts": "2026-11-08T03:00",
-"name": "wide_spread_break_fade",
-"status": "rejected",
-"rationale": "The payer is retail and market-order breakout chasers. They cross a quote that has temporarily widened at the N-bar extreme, so they pay a liquidity-provider premium and the mid snaps back as spreads normalise.\nRATIONALE: It is price-only (high/low/close/spread), not forced delev",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793958900.052311,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 139.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793960293.13589,
 "total": 31310831,
@@ -4058,6 +4047,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 146.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794131893.124108,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 143.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
