@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-08 02:40:36 UTC",
+"generated_at": "2026-11-08 03:01:15 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 146.4,
-"uptime": "up 8 days, 12:53, 2 users, load averages: 73.94 74.04 74.15",
-"load": "{ 73.94 74.04 74.15 }"
+"free_gb": 144.4,
+"uptime": "up 8 days, 13:16, 2 users, load averages: 70.15 71.35 72.68",
+"load": "{ 70.15 71.35 72.68 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-08T03:00",
+"name": "wide_spread_break_fade",
+"status": "rejected",
+"rationale": "The payer is retail and market-order breakout chasers. They cross a quote that has temporarily widened at the N-bar extreme, so they pay a liquidity-provider premium and the mid snaps back as spreads normalise.\nRATIONALE: It is price-only (high/low/close/spread), not forced delev",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-08T02:28",
 "name": "roll_reversal_fade",
 "status": "accepted",
@@ -2446,13 +2453,6 @@
 "status": "rejected",
 "rationale": "Payer is takers who crossed a stressed (widened) spread and were stopped out near the extreme. They paid the liquidity premium at the worst price. The trigger is the spread-normalisation event, not the spread level, so it is not a neighbour of spread_excess_refund.\nRATIONALE: Aft",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-07T20:27",
-"name": "compression_stack_break",
-"status": "accepted",
-"rationale": "Payer is stop-and-limit sellers (and buyers) who place resting orders just beyond a narrow intraday range after a quiet spell. When the range is compressed against its own longer-run average, their orders stack on one side. A close beyond the prior n-bar extreme triggers the stac",
-"note": "{\"name\": \"compression_stack_break\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.0672875}"
 }
 ],
 "history": [
@@ -4069,6 +4069,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 146.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794106875.300312,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 144.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
