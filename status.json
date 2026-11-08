@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-08 22:31:37 UTC",
+"generated_at": "2026-11-08 22:49:02 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 130.8,
-"uptime": "up 9 days,  8:45, 2 users, load averages: 79.45 77.67 77.15",
-"load": "{ 79.45 77.67 77.15 }"
+"free_gb": 129.8,
+"uptime": "up 9 days,  9:07, 2 users, load averages: 75.78 77.80 77.90",
+"load": "{ 75.78 77.80 77.90 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-08T22:39",
+"name": "range_age_proportional_hold",
+"status": "accepted",
+"rationale": "Payer is the range-top seller who sold into the range over N days and covers on rising participation. Existing exits (cover_*, absorption_*, trailing_*) key on price, activity decay or the clock. This one sizes the hold to how long the broken top had stood: `f` times the age of t",
+"note": "{\"name\": \"range_age_proportional_hold\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.16021875}"
+},
+{
 "ts": "2026-11-08T22:06",
 "name": "cover_activity_decay_hold",
 "status": "accepted",
@@ -2446,13 +2453,6 @@
 "status": "accepted",
 "rationale": "Payer is the range-top seller who sold into the break and covers over hours. The exit rests on their inventory: the tick count absorbed in the top quarter of the range. The long is held until up-bar ticks since the break equal f times that inventory, so cover size sets the hold, ",
 "note": "{\"name\": \"cover_quota_inventory_hold\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.1185}"
-},
-{
-"ts": "2026-11-08T16:07",
-"name": "supply_return_shock_hold",
-"status": "accepted",
-"rationale": "Payer is the range-top seller who sold into an N-day-high break on above-normal participation. The seller covers over hours, and the drift ends when new supply arrives. Entry is the unchanged participation_break_hold trigger. Only the exit differs.\nRATIONALE: The exit is a supply",
-"note": "{\"name\": \"supply_return_shock_hold\", \"grid\": 108, \"sec_per_param\": 0.052, \"active_frac\": 0.14545}"
 }
 ],
 "history": [
@@ -3992,6 +3992,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 130.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794178142.898598,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 129.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
