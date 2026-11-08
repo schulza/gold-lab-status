@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-08 19:03:29 UTC",
+"generated_at": "2026-11-08 19:25:15 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 132.2,
-"uptime": "up 9 days,  5:18, 2 users, load averages: 75.13 74.78 74.67",
-"load": "{ 75.13 74.78 74.67 }"
+"free_gb": 129.7,
+"uptime": "up 9 days,  5:39, 2 users, load averages: 75.09 76.84 78.22",
+"load": "{ 75.09 76.84 78.22 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-08T19:20",
+"name": "tick_clock_stall_hold",
+"status": "accepted",
+"rationale": "Payer is the range-top seller who sold into a break on rising participation and covers over many hours; the cover is paced by traded volume, not by wall-clock hours or price. Exit logic is new: hold until the number of ticks since the last post-entry high exceeds m \u00d7 the break-da",
+"note": "{\"name\": \"tick_clock_stall_hold\", \"grid\": 96, \"sec_per_param\": 0.002, \"active_frac\": 0.1361}"
+},
+{
 "ts": "2026-11-08T18:47",
 "name": "range_progress_taper_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the range-top seller who absorbed a break on rising participation and has to cover. Earlier exits (clock, pace, giveback, turnover) use time or price geometry. This one exits on the cost basis of the break itself: the tick-weighted VWAP paid since the break cluster s",
 "note": "{\"name\": \"breakout_cost_basis_hold\", \"grid\": 96, \"sec_per_param\": 0.008, \"active_frac\": 0.1695375}"
-},
-{
-"ts": "2026-11-08T12:45",
-"name": "broken_level_defense_hold",
-"status": "accepted",
-"rationale": "The payer is the range-top seller who absorbed a participative break and covers once the old high is retaken. This family changes only the exit: the position is held while price stays above the frozen pre-break level, minus a buffer in daily-sigma units. It has a hard day-cap and",
-"note": "{\"name\": \"broken_level_defense_hold\", \"grid\": 96, \"sec_per_param\": 0.019, \"active_frac\": 0.2869}"
 }
 ],
 "history": [
-{
-"t": 1793992958.784184,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 140.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793993975.0867321,
 "total": 31310831,
@@ -3992,6 +3981,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 132.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794165915.0477371,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 129.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
