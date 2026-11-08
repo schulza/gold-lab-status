@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-08 13:35:42 UTC",
+"generated_at": "2026-11-08 13:57:29 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 118.7,
-"uptime": "up 8 days, 23:49, 2 users, load averages: 71.56 75.52 76.32",
-"load": "{ 71.56 75.52 76.32 }"
+"free_gb": 131.3,
+"uptime": "up 9 days, 12 mins, 2 users, load averages: 77.19 75.46 75.6",
+"load": "{ 77.19 75.46 75.64 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-08T13:52",
+"name": "participation_exhaustion_exit_hold",
+"status": "accepted",
+"rationale": "Payer = the range-top seller who absorbed a break on rising participation and covers over hours (the director's participative-break cluster). Entry is the existing participation break; only the exit logic is new: hold until the break level fails (close back inside the range) or u",
+"note": "{\"name\": \"participation_exhaustion_exit_hold\", \"grid\": 108, \"sec_per_param\": 0.006, \"active_frac\": 0.01835625}"
+},
+{
 "ts": "2026-11-08T13:18",
 "name": "breakout_cost_basis_hold",
 "status": "accepted",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the range-top seller who sold into a break on rising participation and covers over hours. This family changes only the exit. It holds while tick activity stays elevated, since the cover is still running. It leaves when activity falls back to its norm (cover done), price ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-08T07:26",
-"name": "cover_pace_stall_hold",
-"status": "accepted",
-"rationale": "The payer is the range-top seller who sold the range high and has to cover through a break that arrives on rising participation. Their buy-stops are spread over price, so the cover runs at a pace and ends when the stops are used up. Nobody else holds this signal for them.\nRATIONA",
-"note": "{\"name\": \"cover_pace_stall_hold\", \"grid\": 72, \"sec_per_param\": 0.002, \"active_frac\": 0.11875}"
 }
 ],
 "history": [
-{
-"t": 1793972460.744798,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 64.8,
-"gpu": 2,
-"free_gb": 178.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1793973396.995122,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 68.5,
-"gpu": 2,
-"free_gb": 178.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793974333.232692,
 "total": 31310831,
@@ -4036,6 +4014,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 118.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794146249.539253,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 131.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
