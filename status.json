@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-08 03:23:33 UTC",
+"generated_at": "2026-11-08 03:47:38 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 160.2,
-"uptime": "up 8 days, 13:37, 2 users, load averages: 66.46 69.49 71.69",
-"load": "{ 66.46 69.49 71.69 }"
+"free_gb": 140.7,
+"uptime": "up 8 days, 13:59, 2 users, load averages: 62.33 53.72 63.10",
+"load": "{ 62.33 53.72 63.10 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-08T03:32",
+"name": "efficiency_trail_hold",
+"status": "accepted",
+"rationale": "The payer is the counter-trend fader and mean-reversion scaler. They add into smooth, one-directional runs, where net displacement is a large share of path length, and they take profit early. They keep paying the trend rider until a chandelier trail, scaled to realised bar-to-bar",
+"note": "{\"name\": \"efficiency_trail_hold\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.46489375}"
+},
+{
 "ts": "2026-11-08T03:00",
 "name": "wide_spread_break_fade",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the band fader with a time stop. They short a stretch beyond the rolling band expecting reversion, and when price sits outside it for m bars without reverting, their risk limit forces them to cover into the move.\nRATIONALE: Entry requires a dwell count (m consecutive",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-07T21:00",
-"name": "spread_normalisation_refund",
-"status": "rejected",
-"rationale": "Payer is takers who crossed a stressed (widened) spread and were stopped out near the extreme. They paid the liquidity premium at the worst price. The trigger is the spread-normalisation event, not the spread level, so it is not a neighbour of spread_excess_refund.\nRATIONALE: Aft",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1793936604.856632,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 150.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793938035.249424,
 "total": 31310831,
@@ -4069,6 +4058,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 160.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794109658.197623,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 140.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
