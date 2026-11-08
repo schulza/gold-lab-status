@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-08 17:51:22 UTC",
+"generated_at": "2026-11-08 18:17:14 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 139.7,
-"uptime": "up 9 days,  4:04, 2 users, load averages: 75.26 74.26 61.90",
-"load": "{ 75.26 74.26 61.90 }"
+"free_gb": 117.7,
+"uptime": "up 9 days,  4:27, 2 users, load averages: 87.31 78.38 73.74",
+"load": "{ 87.31 78.38 73.74 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-08T18:15",
+"name": "participation_stall_budget_hold",
+"status": "accepted",
+"rationale": "Payer is the range-top seller who absorbed a break on rising participation and covers over hours. The entry copies participation_break_hold unchanged, so only the exit is new.\nRATIONALE: The exit is a no-new-high time budget scaled by break-day participation. Heavier participatio",
+"note": "{\"name\": \"participation_stall_budget_hold\", \"grid\": 144, \"sec_per_param\": 0.004, \"active_frac\": 0.0526125}"
+},
+{
 "ts": "2026-11-08T17:41",
 "name": "broken_level_dwell_exit_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the range-top seller who covers into a break on rising participation. The cover is finished when net signed tick flow since the break stops building, so this family varies the exit only. It does not use a price MA, a level, a clock, a time stop or a price giveback.\nR",
 "note": "{\"name\": \"cover_flow_ledger_hold\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.69885}"
-},
-{
-"ts": "2026-11-08T11:41",
-"name": "cover_giveback_graded_hold",
-"status": "accepted",
-"rationale": "The payer is the range-top seller who sold into a participative N-day-high break and covers through buy-stops spread over price. Their remaining short shrinks as the squeeze matures, so their demand fades gradually and the exit should too.\nRATIONALE: The entry is the fixed partic",
-"note": "{\"name\": \"cover_giveback_graded_hold\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.162425}"
 }
 ],
 "history": [
-{
-"t": 1793988538.147189,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 146.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793989487.29216,
 "total": 31310831,
@@ -4003,6 +3992,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 139.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794161834.153279,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 117.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
