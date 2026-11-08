@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-08 15:47:12 UTC",
+"generated_at": "2026-11-08 16:08:58 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 162.9,
-"uptime": "up 9 days, 2 hrs, 2 users, load averages: 65.57 72.82 76.30",
-"load": "{ 65.57 72.82 76.30 }"
+"free_gb": 151.1,
+"uptime": "up 9 days,  2:23, 2 users, load averages: 73.46 74.06 74.84",
+"load": "{ 73.46 74.06 74.84 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-08T16:07",
+"name": "supply_return_shock_hold",
+"status": "accepted",
+"rationale": "Payer is the range-top seller who sold into an N-day-high break on above-normal participation. The seller covers over hours, and the drift ends when new supply arrives. Entry is the unchanged participation_break_hold trigger. Only the exit differs.\nRATIONALE: The exit is a supply",
+"note": "{\"name\": \"supply_return_shock_hold\", \"grid\": 108, \"sec_per_param\": 0.052, \"active_frac\": 0.14545}"
+},
+{
 "ts": "2026-11-08T15:33",
 "name": "cover_decay_trail_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the range-top seller who sold the range high and must cover a break that comes on rising participation. Their short size is roughly the turnover traded near range tops. The exit is a turnover clock: hold until the volume printed since entry equals m times that supply",
 "note": "{\"name\": \"cover_turnover_clock_hold\", \"grid\": 96, \"sec_per_param\": 0.02, \"active_frac\": 0.183075}"
-},
-{
-"ts": "2026-11-08T09:35",
-"name": "absorption_scaled_cover_hold",
-"status": "accepted",
-"rationale": "The payer is the range-top seller who absorbed a break on rising participation. Cover time scales with how much supply was absorbed, so the hold length is proportional to the break's participation ratio (capped). This varies only the hold logic, as the director asked, and no exis",
-"note": "{\"name\": \"absorption_scaled_cover_hold\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.1701}"
 }
 ],
 "history": [
-{
-"t": 1793980888.098295,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 81.5,
-"gpu": 2,
-"free_gb": 178.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1793981825.17931,
 "total": 31310831,
@@ -4003,6 +3992,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 162.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794154138.6083798,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 151.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
