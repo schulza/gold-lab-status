@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-09 18:28:06 UTC",
+"generated_at": "2026-11-09 18:43:31 UTC",
 "host": {
-"cpu_pct": 100.0,
-"gpu_pct": 2,
-"free_gb": 152.3,
-"uptime": "up 10 days,  4:48, 2 users, load averages: 43.31 42.00 39.48",
-"load": "{ 43.31 42.00 39.48 }"
+"cpu_pct": 0.7,
+"gpu_pct": 37,
+"free_gb": 191.4,
+"uptime": "up 10 days,  5:04, 2 users, load averages: 25.23 38.44 39.73",
+"load": "{ 25.23 38.44 39.73 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-09T18:40",
+"name": "seller_spread_baseline_break_hold",
+"status": "accepted",
+"rationale": "The payer is the range-top seller. Their own execution cost is the baseline: the mean quoted spread on top-of-range bars during the prior `days` is what their supply paid to get done.\nRATIONALE: A clean break above the old high, quoted at no more than `f` times that spread, means",
+"note": "{\"name\": \"seller_spread_baseline_break_hold\", \"grid\": 96, \"sec_per_param\": 0.002, \"active_frac\": 0.284}"
+},
+{
 "ts": "2026-11-09T18:09",
 "name": "seller_press_intensity_break_hold",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the range-top seller who hit bids at the top of the N-day range. Their own distribution ledger is the tick volume traded on down-bars while price sat in the top `band` of the range, averaged per top-zone bar. A break whose up-bar tick flow over the last `hours` is k time",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-09T12:15",
-"name": "top_seller_pace_break_hold",
-"status": "accepted",
-"rationale": "The payer is the range-top seller, whose resting supply is measured by their own tick rate on the bars that closed in the top of the range during the prior w days. It is not measured against recent bars or the all-bar average.\nRATIONALE: When the last quarter-day's tick rate on t",
-"note": "{\"name\": \"top_seller_pace_break_hold\", \"grid\": 96, \"sec_per_param\": 0.007, \"active_frac\": 0.31853125}"
 }
 ],
 "history": [
-{
-"t": 1794076603.199064,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 157.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794077943.049474,
 "total": 31310831,
@@ -4014,6 +4003,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 152.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794249811.9384499,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.7,
+"gpu": 37,
+"free_gb": 191.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
