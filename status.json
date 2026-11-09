@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-09 02:09:48 UTC",
+"generated_at": "2026-11-09 02:32:49 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 129.6,
-"uptime": "up 9 days, 12:28, 2 users, load averages: 90.10 83.17 78.34",
-"load": "{ 90.10 83.17 78.34 }"
+"free_gb": 146.7,
+"uptime": "up 9 days, 12:46, 2 users, load averages: 76.41 78.00 78.11",
+"load": "{ 76.41 78.00 78.11 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-09T02:30",
+"name": "cover_wick_rejection_hold",
+"status": "accepted",
+"rationale": "The payer is the range-top seller who sold into a break on rising participation and has to cover. This family changes only the exit. It leaves when the upper-wick share of recent bars rises, which is fresh supply being absorbed at the highs.\nRATIONALE: Existing exits use a level,",
+"note": "{\"name\": \"cover_wick_rejection_hold\", \"grid\": 162, \"sec_per_param\": 0.001, \"active_frac\": 0.06965}"
+},
+{
 "ts": "2026-11-09T01:56",
 "name": "cover_spread_normalise_hold",
 "status": "accepted",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the range-top seller or short who absorbed the break on rising participation and covers over hours. The covering is passive flow that dealers warehouse only while quotes stay tight.\nRATIONALE: The entry is the proven participative break (not varied). The new part is the ",
 "note": "sandbox: AssertionError: zu speicherhungrig: 41 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-11-08T19:53",
-"name": "cover_climax_exit_hold",
-"status": "accepted",
-"rationale": "Payer is the range-top seller who sold into an N-day-high break on rising participation, and whose stops and covers get run in one blow-off. The entry is the unchanged participation_break_hold trigger, restricted to the first bar of a fresh break, so only the exit is new.\nRATIONA",
-"note": "{\"name\": \"cover_climax_exit_hold\", \"grid\": 72, \"sec_per_param\": 0.004, \"active_frac\": 0.64875}"
 }
 ],
 "history": [
-{
-"t": 1794017571.967029,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 151.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1794018700.369899,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 158.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794020023.3264132,
 "total": 31310831,
@@ -4014,6 +3992,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 129.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794191569.247351,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 146.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
