@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-09 17:56:13 UTC",
+"generated_at": "2026-11-09 18:12:27 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 125.3,
-"uptime": "up 10 days,  4:16, 2 users, load averages: 33.72 33.63 21.96",
-"load": "{ 33.72 33.63 21.96 }"
+"free_gb": 137.0,
+"uptime": "up 10 days,  4:32, 2 users, load averages: 41.18 39.78 34.46",
+"load": "{ 41.18 39.78 34.46 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-09T18:09",
+"name": "seller_press_intensity_break_hold",
+"status": "rejected",
+"rationale": "The payer is the range-top seller. Their own pressing intensity is the baseline: mean ticks per bar on top-of-range bars that closed down (`close<open`) during the prior `days`.\nRATIONALE: A clean break of the range high whose participation is at least `m` times that pressing int",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-09T17:38",
 "name": "seller_run_down_break_hold",
 "status": "rejected",
@@ -2446,13 +2453,6 @@
 "status": "accepted",
 "rationale": "The payer is the range-top seller, whose resting supply is measured by their own tick rate on the bars that closed in the top of the range during the prior w days. It is not measured against recent bars or the all-bar average.\nRATIONALE: When the last quarter-day's tick rate on t",
 "note": "{\"name\": \"top_seller_pace_break_hold\", \"grid\": 96, \"sec_per_param\": 0.007, \"active_frac\": 0.31853125}"
-},
-{
-"ts": "2026-11-09T11:42",
-"name": "slot_baseline_break_hold",
-"status": "accepted",
-"rationale": "The payer is the range-top seller, who sells into the high at a steady rate. Their own activity during the range-building days, taken at the same clock slot, is their baseline. Existing gates measure participation against recent bars, so the intraday activity cycle makes London a",
-"note": "{\"name\": \"slot_baseline_break_hold\", \"grid\": 72, \"sec_per_param\": 0.003, \"active_frac\": 0.0989}"
 }
 ],
 "history": [
@@ -4003,6 +4003,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 125.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794247947.588358,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 137.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
