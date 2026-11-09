@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-09 22:12:35 UTC",
+"generated_at": "2026-11-09 22:28:41 UTC",
 "host": {
-"cpu_pct": 99.7,
+"cpu_pct": 95.2,
 "gpu_pct": 2,
-"free_gb": 165.6,
-"uptime": "up 10 days,  8:32, 2 users, load averages: 39.00 39.16 38.86",
-"load": "{ 39.00 39.16 38.86 }"
+"free_gb": 170.8,
+"uptime": "up 10 days,  8:48, 2 users, load averages: 28.42 37.74 39.01",
+"load": "{ 28.42 37.74 39.01 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-09T22:15",
+"name": "seller_efficiency_break_hold",
+"status": "accepted",
+"rationale": "The payer is the range-top seller, measured by how they sold. Their supply prints as passive churn: top-zone bars that net out, so their efficiency (|sum of moves| / sum of |moves|) is low. A break leg that is much more directional than the seller's own churn means their supply w",
+"note": "{\"name\": \"seller_efficiency_break_hold\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.21195625}"
+},
+{
 "ts": "2026-11-09T21:44",
 "name": "seller_clock_absence_break_hold",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the range-top seller, meaning resting supply and stops from participants who sold into the top of the last N days. That supply is only exhausted once buyers have absorbed as much effort as those sellers spent at the top. Existing gates compare participation to recent",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-09T16:06",
-"name": "seller_depth_break_hold",
-"status": "accepted",
-"rationale": "The payer is the range-top seller, measured by their own depth: ticks they needed per dollar of price travel on top-of-range bars during the prior `days`. A breakout leg that clears the old high with at most `f` times that depth means the seller's supply was thinner than it showe",
-"note": "{\"name\": \"seller_depth_break_hold\", \"grid\": 96, \"sec_per_param\": 0.003, \"active_frac\": 0.1175125}"
 }
 ],
 "history": [
-{
-"t": 1794090410.898987,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 99.8,
-"gpu": 2,
-"free_gb": 148.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794091661.772487,
 "total": 31310831,
@@ -4058,6 +4047,17 @@
 "cpu": 99.7,
 "gpu": 2,
 "free_gb": 165.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794263321.476376,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 95.2,
+"gpu": 2,
+"free_gb": 170.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
