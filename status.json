@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-09 00:06:59 UTC",
+"generated_at": "2026-11-09 00:29:30 UTC",
 "host": {
-"cpu_pct": 99.8,
+"cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 159.4,
-"uptime": "up 9 days, 10:27, 2 users, load averages: 77.22 78.70 78.90",
-"load": "{ 77.22 78.70 78.90 }"
+"free_gb": 140.5,
+"uptime": "up 9 days, 10:43, 2 users, load averages: 83.49 77.03 75.50",
+"load": "{ 83.49 77.03 75.50 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-09T00:18",
+"name": "break_acceptance_graded_hold",
+"status": "accepted",
+"rationale": "The payer is the range-top seller who sold into an N-day high and now covers over hours to days. Acceptance of the break is the evidence that the sellers have been absorbed, so exposure is graded by it instead of being a binary hold with a fixed exit.\nRATIONALE: The entry is the ",
+"note": "{\"name\": \"break_acceptance_graded_hold\", \"grid\": 144, \"sec_per_param\": 0.004, \"active_frac\": 0.216525}"
+},
+{
 "ts": "2026-11-08T23:44",
 "name": "variance_clock_cover_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the range-top seller who absorbed a break on rising participation and covers over hours. The entry copies participation_break_hold unchanged, so only the exit is new.\nRATIONALE: The exit is a no-new-high time budget scaled by break-day participation. Heavier participatio",
 "note": "{\"name\": \"participation_stall_budget_hold\", \"grid\": 144, \"sec_per_param\": 0.004, \"active_frac\": 0.0526125}"
-},
-{
-"ts": "2026-11-08T17:41",
-"name": "broken_level_dwell_exit_hold",
-"status": "accepted",
-"rationale": "The payer is the range-top seller who sold into a break on rising participation and has to buy back. A fill only counts as absorbed while price stays above the broken level. If price spends a large share of the next hours back under that level, supply is re-accepted and the cover",
-"note": "{\"name\": \"broken_level_dwell_exit_hold\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.3425625}"
 }
 ],
 "history": [
-{
-"t": 1794010786.048662,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 155.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794012244.476274,
 "total": 31310831,
@@ -4003,6 +3992,17 @@
 "cpu": 99.8,
 "gpu": 2,
 "free_gb": 159.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794184170.240004,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 140.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
