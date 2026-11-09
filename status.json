@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-09 04:53:26 UTC",
+"generated_at": "2026-11-09 05:16:21 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 117.9,
-"uptime": "up 9 days, 15:05, 2 users, load averages: 75.40 75.61 75.94",
-"load": "{ 75.40 75.61 75.94 }"
+"free_gb": 131.2,
+"uptime": "up 9 days, 15:29, 2 users, load averages: 72.94 73.96 74.96",
+"load": "{ 72.94 73.96 74.96 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-09T05:13",
+"name": "top_ledger_break_hold",
+"status": "accepted",
+"rationale": "Payer is the range-top seller. They distributed inventory into the top band of the N-day range, and that volume is their own supply ledger. A break that trades at a multiple of the per-bar volume seen while price sat at the top means that supply is being absorbed, so the stopped-",
+"note": "{\"name\": \"top_ledger_break_hold\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.335025}"
+},
+{
 "ts": "2026-11-09T04:40",
 "name": "cover_sign_balance_hold",
 "status": "accepted",
@@ -2446,38 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the range-top seller who absorbed a break on rising participation and now covers over hours. Their cover shows up as price impact per tick of the up-leg, so exit is keyed to that impact decaying to a fraction of the break-bar impact, not to a price or time target.\nRATION",
 "note": "{\"name\": \"cover_impact_decay_hold\", \"grid\": 144, \"sec_per_param\": 0.002, \"active_frac\": 0.00785}"
-},
-{
-"ts": "2026-11-08T22:39",
-"name": "range_age_proportional_hold",
-"status": "accepted",
-"rationale": "Payer is the range-top seller who sold into the range over N days and covers on rising participation. Existing exits (cover_*, absorption_*, trailing_*) key on price, activity decay or the clock. This one sizes the hold to how long the broken top had stood: `f` times the age of t",
-"note": "{\"name\": \"range_age_proportional_hold\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.16021875}"
 }
 ],
 "history": [
-{
-"t": 1794027484.037923,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 84.3,
-"gpu": 2,
-"free_gb": 176.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1794028419.60066,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 79.5,
-"gpu": 2,
-"free_gb": 176.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794029355.519655,
 "total": 31310831,
@@ -4003,6 +3981,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 117.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794201381.8161018,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 131.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
