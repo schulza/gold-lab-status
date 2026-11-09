@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-09 18:59:37 UTC",
+"generated_at": "2026-11-09 19:15:43 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 124.6,
-"uptime": "up 10 days,  5:19, 2 users, load averages: 40.70 39.67 38.74",
-"load": "{ 40.70 39.67 38.74 }"
+"free_gb": 136.5,
+"uptime": "up 10 days,  5:35, 2 users, load averages: 42.75 42.23 40.95",
+"load": "{ 42.75 42.23 40.95 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-09T19:10",
+"name": "seller_downshare_break_hold",
+"status": "accepted",
+"rationale": "The payer is the range-top seller, measured by their own footprint. It is the share of ticks that print on down-bars while price sits in the top of the prior `days` range, which is how hard they pressed. Sellers pass once the break leg's up-tick share beats their own down-share b",
+"note": "{\"name\": \"seller_downshare_break_hold\", \"grid\": 96, \"sec_per_param\": 0.004, \"active_frac\": 0.33336875}"
+},
+{
 "ts": "2026-11-09T18:40",
 "name": "seller_spread_baseline_break_hold",
 "status": "accepted",
@@ -2446,13 +2453,6 @@
 "status": "rejected",
 "rationale": "The payer is the range-top seller. Their supply is the total ticks they worked on the down-closing bars in the top zone of the range over the range-building days. That is a stock of offers, not a rate.\nRATIONALE: A close through the prior high, with buying over the breakout leg a",
 "note": "sandbox: AssertionError: zu speicherhungrig: 42 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-11-09T12:49",
-"name": "top_hit_volume_break_hold",
-"status": "rejected",
-"rationale": "Payer is the range-top seller who hit bids at the top of the N-day range. Their own distribution ledger is the tick volume traded on down-bars while price sat in the top `band` of the range, averaged per top-zone bar. A break whose up-bar tick flow over the last `hours` is k time",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
@@ -4014,6 +4014,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 124.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794251743.2518442,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 136.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
