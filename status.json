@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-09 16:04:35 UTC",
+"generated_at": "2026-11-09 16:20:41 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 99.9,
 "gpu_pct": 2,
-"free_gb": 155.5,
-"uptime": "up 10 days,  2:21, 2 users, load averages: 74.46 73.82 75.46",
-"load": "{ 74.46 73.82 75.46 }"
+"free_gb": 159.2,
+"uptime": "up 10 days,  2:40, 2 users, load averages: 37.92 39.31 50.96",
+"load": "{ 37.92 39.31 50.96 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-09T16:06",
+"name": "seller_depth_break_hold",
+"status": "accepted",
+"rationale": "The payer is the range-top seller, measured by their own depth: ticks they needed per dollar of price travel on top-of-range bars during the prior `days`. A breakout leg that clears the old high with at most `f` times that depth means the seller's supply was thinner than it showe",
+"note": "{\"name\": \"seller_depth_break_hold\", \"grid\": 96, \"sec_per_param\": 0.003, \"active_frac\": 0.1175125}"
+},
+{
 "ts": "2026-11-09T15:35",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the range-top holders and shorts, who stop offering as the range ages. I measure their supply as the mean ticks per bar on bars that closed in the top zone, comparing the recent half of the range-building window with the earlier half. A fall in that rate (late/early ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-09T09:32",
-"name": "seller_footprint_impact_break_hold",
-"status": "accepted",
-"rationale": "The payer is the range-top seller, meaning holders and shorts who offered inventory at the top of the N-day range. Their own footprint is price impact per tick, measured only on bars that closed in that top zone during range-building. A break whose impact per tick is k times that",
-"note": "{\"name\": \"seller_footprint_impact_break_hold\", \"grid\": 144, \"sec_per_param\": 0.007, \"active_frac\": 0.204625}"
 }
 ],
 "history": [
-{
-"t": 1794067569.400478,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 158.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794068679.6227012,
 "total": 31310831,
@@ -4003,6 +3992,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 155.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794241241.3514838,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 99.9,
+"gpu": 2,
+"free_gb": 159.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
