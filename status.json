@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-09 10:24:25 UTC",
+"generated_at": "2026-11-09 10:47:25 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 147.5,
-"uptime": "up 9 days, 20:37, 2 users, load averages: 71.57 73.48 75.27",
-"load": "{ 71.57 73.48 75.27 }"
+"free_gb": 143.0,
+"uptime": "up 9 days, 21 hrs, 2 users, load averages: 81.78 74.53 74.00",
+"load": "{ 82.36 74.77 74.09 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-09T10:37",
+"name": "top_quote_withdrawal_break_hold",
+"status": "rejected",
+"rationale": "The payer is the holders and shorts offering at the top of an N-day range. This family measures their quote behaviour, not their tick count. The baseline is the mean spread over bars that closed in the top zone during the range-building days. That is how wide they quoted while de",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-09T10:04",
 "name": "seller_fatigue_break_hold",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the range-top seller who sold into a break on rising participation and now covers in waves, which are one-sided buy pressure. Entry is the participation_break_hold gate unchanged. Only the exit is new: a rolling binomial sign-balance test of the last `m` hours of up-",
 "note": "{\"name\": \"cover_sign_balance_hold\", \"grid\": 144, \"sec_per_param\": 0.023, \"active_frac\": 0.2028375}"
-},
-{
-"ts": "2026-11-09T04:07",
-"name": "drift_floor_cover_hold",
-"status": "accepted",
-"rationale": "The payer is the range-top seller who absorbed a participative break and covers over hours. Entry is the participation_break_hold gate unchanged; only the exit differs. The position is held while the post-break drift beats a sqrt-time noise floor (`entry + e\u00b7\u03c3\u00b7\u221abars_since`) and i",
-"note": "{\"name\": \"drift_floor_cover_hold\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.2224}"
 }
 ],
 "history": [
-{
-"t": 1794047413.452951,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 158.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794048726.1523468,
 "total": 31310831,
@@ -3992,6 +3981,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 147.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794221245.760532,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 143.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
