@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-09 13:16:42 UTC",
+"generated_at": "2026-11-09 13:38:55 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 118.3,
-"uptime": "up 9 days, 23:30, 2 users, load averages: 78.09 80.01 79.73",
-"load": "{ 78.09 80.01 79.73 }"
+"free_gb": 132.0,
+"uptime": "up 9 days, 23:53, 2 users, load averages: 77.41 73.09 73.53",
+"load": "{ 77.41 73.09 73.53 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-09T13:22",
+"name": "seller_stock_exhaustion_hold",
+"status": "rejected",
+"rationale": "The payer is the range-top seller. Their supply is the total ticks they worked on the down-closing bars in the top zone of the range over the range-building days. That is a stock of offers, not a rate.\nRATIONALE: A close through the prior high, with buying over the breakout leg a",
+"note": "sandbox: AssertionError: zu speicherhungrig: 42 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-09T12:49",
 "name": "top_hit_volume_break_hold",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "",
 "note": "no python block in reply"
-},
-{
-"ts": "2026-11-09T06:48",
-"name": "slot_seller_break_hold",
-"status": "accepted",
-"rationale": "The payer is the holder and short who sold into the top of an N-day range, at the time of day when they usually sell. Participation is measured against the ticks per bar in the same clock hour, on bars that closed in the top zone of the range during the range-building days. A bre",
-"note": "{\"name\": \"slot_seller_break_hold\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.38719375}"
 }
 ],
 "history": [
-{
-"t": 1794058322.49063,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 117.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794059700.78717,
 "total": 31310831,
@@ -3992,6 +3981,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 118.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794231535.839396,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 132.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
