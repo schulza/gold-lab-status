@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-09 04:29:20 UTC",
+"generated_at": "2026-11-09 04:53:26 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 118.7,
-"uptime": "up 9 days, 14:43, 2 users, load averages: 75.92 76.12 74.30",
-"load": "{ 75.92 76.12 74.30 }"
+"free_gb": 117.9,
+"uptime": "up 9 days, 15:05, 2 users, load averages: 75.40 75.61 75.94",
+"load": "{ 75.40 75.61 75.94 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-09T04:40",
+"name": "cover_sign_balance_hold",
+"status": "accepted",
+"rationale": "The payer is the range-top seller who sold into a break on rising participation and now covers in waves, which are one-sided buy pressure. Entry is the participation_break_hold gate unchanged. Only the exit is new: a rolling binomial sign-balance test of the last `m` hours of up-",
+"note": "{\"name\": \"cover_sign_balance_hold\", \"grid\": 144, \"sec_per_param\": 0.023, \"active_frac\": 0.2028375}"
+},
+{
 "ts": "2026-11-09T04:07",
 "name": "drift_floor_cover_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the range-top seller who sold into the range over N days and covers on rising participation. Existing exits (cover_*, absorption_*, trailing_*) key on price, activity decay or the clock. This one sizes the hold to how long the broken top had stood: `f` times the age of t",
 "note": "{\"name\": \"range_age_proportional_hold\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.16021875}"
-},
-{
-"ts": "2026-11-08T22:06",
-"name": "cover_activity_decay_hold",
-"status": "accepted",
-"rationale": "The payer is the range-top seller who absorbed a break on rising participation and covers over hours. The existing family exits on price (an MA loss, dwell decay, stalls, floors); this one exits on activity. The hold ends when short-window absolute-return activity falls back belo",
-"note": "{\"name\": \"cover_activity_decay_hold\", \"grid\": 162, \"sec_per_param\": 0.003, \"active_frac\": 0.4244125}"
 }
 ],
 "history": [
-{
-"t": 1794026547.865079,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 70.2,
-"gpu": 2,
-"free_gb": 176.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794027484.037923,
 "total": 31310831,
@@ -4003,6 +3992,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 118.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794200006.8505301,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 117.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
