@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-09 11:22:49 UTC",
+"generated_at": "2026-11-09 11:45:40 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 154.8,
-"uptime": "up 9 days, 21:40, 2 users, load averages: 76.41 75.28 75.47",
-"load": "{ 76.41 75.28 75.47 }"
+"free_gb": 140.7,
+"uptime": "up 9 days, 21:59, 2 users, load averages: 75.51 76.77 75.37",
+"load": "{ 75.51 76.77 75.37 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-09T11:42",
+"name": "slot_baseline_break_hold",
+"status": "accepted",
+"rationale": "The payer is the range-top seller, who sells into the high at a steady rate. Their own activity during the range-building days, taken at the same clock slot, is their baseline. Existing gates measure participation against recent bars, so the intraday activity cycle makes London a",
+"note": "{\"name\": \"slot_baseline_break_hold\", \"grid\": 72, \"sec_per_param\": 0.003, \"active_frac\": 0.0989}"
+},
+{
 "ts": "2026-11-09T11:09",
 "name": "seller_stand_break_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the holder who stacked supply into the top of an N-day range. The new entry measures that seller's own activity. It sums ticks (or bar count) on bars that closed in the top f of their trailing range, then divides by days to get the seller's average daily top-zone vol",
 "note": "{\"name\": \"top_stack_absorbed_break\", \"grid\": 96, \"sec_per_param\": 0.017, \"active_frac\": 6.25e-06}"
-},
-{
-"ts": "2026-11-09T05:13",
-"name": "top_ledger_break_hold",
-"status": "accepted",
-"rationale": "Payer is the range-top seller. They distributed inventory into the top band of the N-day range, and that volume is their own supply ledger. A break that trades at a multiple of the per-bar volume seen while price sat at the top means that supply is being absorbed, so the stopped-",
-"note": "{\"name\": \"top_ledger_break_hold\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.335025}"
 }
 ],
 "history": [
-{
-"t": 1794051346.2821918,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 151.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794052567.574185,
 "total": 31310831,
@@ -3992,6 +3981,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 154.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794224740.350228,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 140.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
