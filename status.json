@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-09 01:13:45 UTC",
+"generated_at": "2026-11-09 01:29:42 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 99.2,
 "gpu_pct": 2,
-"free_gb": 118.3,
-"uptime": "up 9 days, 11:28, 2 users, load averages: 86.06 84.39 80.27",
-"load": "{ 86.06 84.39 80.27 }"
+"free_gb": 118.5,
+"uptime": "up 9 days, 11:49, 2 users, load averages: 71.07 74.82 76.29",
+"load": "{ 71.07 74.82 76.29 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-09T01:24",
+"name": "break_stair_lock_hold",
+"status": "rejected",
+"rationale": "The payer is the range-top seller who shorted into a break on rising participation and covers in steps. His stop sits at the broken level plus a buffer and he moves it up in stair steps as price advances. Earlier siblings varied the exit as a continuous trail, a decay or a clock.",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-09T00:52",
 "name": "noise_calibrated_cover_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the range-top seller who sold into a break on rising participation and covers over many hours; the cover is paced by traded volume, not by wall-clock hours or price. Exit logic is new: hold until the number of ticks since the last post-entry high exceeds m \u00d7 the break-da",
 "note": "{\"name\": \"tick_clock_stall_hold\", \"grid\": 96, \"sec_per_param\": 0.002, \"active_frac\": 0.1361}"
-},
-{
-"ts": "2026-11-08T18:47",
-"name": "range_progress_taper_hold",
-"status": "accepted",
-"rationale": "Payer is the range-top seller who absorbed a break on rising participation. Their short or stop inventory sits spread across the broken range, so the cover is finished once price has traversed a fraction of that range's height. Entry is the same prior-high break gated by particip",
-"note": "{\"name\": \"range_progress_taper_hold\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.2654875}"
 }
 ],
 "history": [
-{
-"t": 1794014735.0353112,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 67.6,
-"gpu": 2,
-"free_gb": 173.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794016133.0855849,
 "total": 31310831,
@@ -4003,6 +3992,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 118.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794187782.640789,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 99.2,
+"gpu": 2,
+"free_gb": 118.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
