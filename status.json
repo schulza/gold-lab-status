@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-09 06:13:49 UTC",
+"generated_at": "2026-11-09 06:29:37 UTC",
 "host": {
-"cpu_pct": 91.7,
+"cpu_pct": 86.9,
 "gpu_pct": 2,
-"free_gb": 175.0,
-"uptime": "up 9 days, 16:34, 2 users, load averages: 29.96 40.97 58.26",
-"load": "{ 29.96 40.97 58.26 }"
+"free_gb": 174.9,
+"uptime": "up 9 days, 16:49, 2 users, load averages: 31.29 31.28 41.03",
+"load": "{ 31.29 31.28 41.03 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-09T06:17",
+"name": "seller_baseline_break_hold",
+"status": "accepted",
+"rationale": "The payer is the holders and shorts offering at the top of an N-day range. Their own activity is measured as the mean ticks per bar over bars that closed in the top fraction of the range during the range-building window. A close above the prior high, while current activity is k t",
+"note": "{\"name\": \"seller_baseline_break_hold\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.44076875}"
+},
+{
 "ts": "2026-11-09T05:46",
 "name": "top_stack_absorbed_break",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the range-top seller who sold into an N-day high and now covers over hours to days. Acceptance of the break is the evidence that the sellers have been absorbed, so exposure is graded by it instead of being a binary hold with a fixed exit.\nRATIONALE: The entry is the ",
 "note": "{\"name\": \"break_acceptance_graded_hold\", \"grid\": 144, \"sec_per_param\": 0.004, \"active_frac\": 0.216525}"
-},
-{
-"ts": "2026-11-08T23:44",
-"name": "variance_clock_cover_hold",
-"status": "accepted",
-"rationale": "The payer is the range-top seller who absorbed a participative break and covers under a risk limit. Risk limits are denominated in variance, so the cover pace follows realised variance, not the clock.\nRATIONALE: The entry copies participation_break_hold, as the direction asks. On",
-"note": "{\"name\": \"variance_clock_cover_hold\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.32458125}"
 }
 ],
 "history": [
-{
-"t": 1794032162.9897652,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 78.5,
-"gpu": 2,
-"free_gb": 176.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794033098.6670249,
 "total": 31310831,
@@ -3992,6 +3981,17 @@
 "cpu": 91.7,
 "gpu": 2,
 "free_gb": 175.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794205777.407798,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 86.9,
+"gpu": 2,
+"free_gb": 174.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
