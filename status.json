@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-09 03:29:16 UTC",
+"generated_at": "2026-11-09 03:51:17 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 159.0,
-"uptime": "up 9 days, 13:47, 2 users, load averages: 73.06 72.61 73.82",
-"load": "{ 73.06 72.61 73.82 }"
+"free_gb": 140.8,
+"uptime": "up 9 days, 14:05, 2 users, load averages: 72.10 69.59 67.73",
+"load": "{ 72.10 69.59 67.73 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-09T03:34",
+"name": "cover_range_armed_trail_hold",
+"status": "rejected",
+"rationale": "The payer is the range-top seller who sold into a break on rising participation and has to cover. The entry is the working participative-break cluster (vwap_dwell_hold, participation_break_hold), unchanged. Only the exit is new.\nRATIONALE: The exit has two stages scaled by the en",
+"note": "sandbox: AssertionError: zu speicherhungrig: 55 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-09T03:03",
 "name": "thrust_time_symmetry_hold",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the range-top seller who sold into a break on rising participation and was absorbed. The low of that absorption window is the price where sellers ran out. As long as price holds above it, the cover plays out over days.\nRATIONALE: This changes the exit, not the entry.",
 "note": "{\"name\": \"absorption_floor_hold\", \"grid\": 162, \"sec_per_param\": 0.007, \"active_frac\": 0.494975}"
-},
-{
-"ts": "2026-11-08T20:59",
-"name": "cover_range_target_hold",
-"status": "accepted",
-"rationale": "Payer is the range-top seller who absorbed a participative break and covers over hours. The entry copies participation_break_hold, so only the exit changes.\nRATIONALE: The exit is a take-profit and stop sized in break-day ranges, with a day cap. Absorbed supply scales with the da",
-"note": "{\"name\": \"cover_range_target_hold\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.29610625}"
 }
 ],
 "history": [
-{
-"t": 1794022803.179015,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 159.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794023739.268876,
 "total": 31310831,
@@ -4014,6 +4003,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 159.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794196277.841326,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 140.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
