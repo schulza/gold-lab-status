@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-09 17:24:43 UTC",
+"generated_at": "2026-11-09 17:40:06 UTC",
 "host": {
-"cpu_pct": 3.5,
+"cpu_pct": 4.1,
 "gpu_pct": 2,
-"free_gb": 188.1,
-"uptime": "up 10 days,  3:45, 2 users, load averages: 1.31 1.73 8.80",
-"load": "{ 1.31 1.73 8.80 }"
+"free_gb": 186.8,
+"uptime": "up 10 days, 4 hrs, 2 users, load averages: 1.81 1.57 3.96",
+"load": "{ 1.81 1.57 3.96 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-09T17:38",
+"name": "seller_run_down_break_hold",
+"status": "rejected",
+"rationale": "The payer is the range-top seller. Their own activity over the range-building days is measured as the tick rate on top-of-range bars, recent half of the window against the earlier half, lagged past the break leg.\nRATIONALE: A ratio at or below `r` means the seller's supply was ru",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-09T17:07",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the range-top seller, who sells into the high at a steady rate. Their own activity during the range-building days, taken at the same clock slot, is their baseline. Existing gates measure participation against recent bars, so the intraday activity cycle makes London a",
 "note": "{\"name\": \"slot_baseline_break_hold\", \"grid\": 72, \"sec_per_param\": 0.003, \"active_frac\": 0.0989}"
-},
-{
-"ts": "2026-11-09T11:09",
-"name": "seller_stand_break_hold",
-"status": "accepted",
-"rationale": "Payer is the range-top seller. Their offers were absorbed at the bar that set the range high, and the activity printed at that moment is the size of their stand, so participation is measured against it, not against recent bars.\nA close above that high with activity of at least m ",
-"note": "{\"name\": \"seller_stand_break_hold\", \"grid\": 48, \"sec_per_param\": 0.022, \"active_frac\": 0.0164625}"
 }
 ],
 "history": [
-{
-"t": 1794072475.1175559,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 79.8,
-"gpu": 2,
-"free_gb": 172.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794073851.72831,
 "total": 31310831,
@@ -4003,6 +3992,17 @@
 "cpu": 3.5,
 "gpu": 2,
 "free_gb": 188.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794246006.9750369,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 4.1,
+"gpu": 2,
+"free_gb": 186.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
