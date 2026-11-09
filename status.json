@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-09 10:01:08 UTC",
+"generated_at": "2026-11-09 10:24:25 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 129.5,
-"uptime": "up 9 days, 20:20, 2 users, load averages: 87.35 80.69 79.46",
-"load": "{ 87.35 80.69 79.46 }"
+"free_gb": 147.5,
+"uptime": "up 9 days, 20:37, 2 users, load averages: 71.57 73.48 75.27",
+"load": "{ 71.57 73.48 75.27 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-09T10:04",
+"name": "seller_fatigue_break_hold",
+"status": "rejected",
+"rationale": "The payer is the range-top holders and shorts, who stop offering as the range ages. I measure their supply as the mean ticks per bar on bars that closed in the top zone, comparing the recent half of the range-building window with the earlier half. A fall in that rate (late/early ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-09T09:32",
 "name": "seller_footprint_impact_break_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the range-top seller who absorbed a participative break and covers over hours. Entry is the participation_break_hold gate unchanged; only the exit differs. The position is held while the post-break drift beats a sqrt-time noise floor (`entry + e\u00b7\u03c3\u00b7\u221abars_since`) and i",
 "note": "{\"name\": \"drift_floor_cover_hold\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.2224}"
-},
-{
-"ts": "2026-11-09T03:34",
-"name": "cover_range_armed_trail_hold",
-"status": "rejected",
-"rationale": "The payer is the range-top seller who sold into a break on rising participation and has to cover. The entry is the working participative-break cluster (vwap_dwell_hold, participation_break_hold), unchanged. Only the exit is new.\nRATIONALE: The exit has two stages scaled by the en",
-"note": "sandbox: AssertionError: zu speicherhungrig: 55 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1794046124.017079,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 157.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794047413.452951,
 "total": 31310831,
@@ -3992,6 +3981,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 129.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794219865.209686,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 147.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
