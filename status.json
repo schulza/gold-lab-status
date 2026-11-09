@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-09 06:45:22 UTC",
+"generated_at": "2026-11-09 07:01:08 UTC",
 "host": {
-"cpu_pct": 91.4,
+"cpu_pct": 92.3,
 "gpu_pct": 2,
-"free_gb": 174.8,
-"uptime": "up 9 days, 17:05, 2 users, load averages: 34.72 33.97 35.78",
-"load": "{ 34.72 33.97 35.78 }"
+"free_gb": 174.1,
+"uptime": "up 9 days, 17:21, 2 users, load averages: 31.02 30.53 31.93",
+"load": "{ 31.02 30.53 31.93 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-09T06:48",
+"name": "slot_seller_break_hold",
+"status": "accepted",
+"rationale": "The payer is the holder and short who sold into the top of an N-day range, at the time of day when they usually sell. Participation is measured against the ticks per bar in the same clock hour, on bars that closed in the top zone of the range during the range-building days. A bre",
+"note": "{\"name\": \"slot_seller_break_hold\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.38719375}"
+},
+{
 "ts": "2026-11-09T06:17",
 "name": "seller_baseline_break_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the range-top seller who sold into a break on rising participation and is now covering. Covering comes in slices, so the pullbacks inside the first few bars after entry measure how big the cover flow is. A pullback far beyond m times that footprint means the cover is",
 "note": "{\"name\": \"noise_calibrated_cover_hold\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.24358125}"
-},
-{
-"ts": "2026-11-09T00:18",
-"name": "break_acceptance_graded_hold",
-"status": "accepted",
-"rationale": "The payer is the range-top seller who sold into an N-day high and now covers over hours to days. Acceptance of the break is the evidence that the sellers have been absorbed, so exposure is graded by it instead of being a binary hold with a fixed exit.\nRATIONALE: The entry is the ",
-"note": "{\"name\": \"break_acceptance_graded_hold\", \"grid\": 144, \"sec_per_param\": 0.004, \"active_frac\": 0.216525}"
 }
 ],
 "history": [
-{
-"t": 1794034034.5655,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 78.4,
-"gpu": 2,
-"free_gb": 176.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794034970.883435,
 "total": 31310831,
@@ -3992,6 +3981,17 @@
 "cpu": 91.4,
 "gpu": 2,
 "free_gb": 174.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794207668.383268,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 92.3,
+"gpu": 2,
+"free_gb": 174.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
