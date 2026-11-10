@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-10 12:03:26 UTC",
+"generated_at": "2026-11-10 12:18:49 UTC",
 "host": {
-"cpu_pct": 1.0,
+"cpu_pct": 0.7,
 "gpu_pct": 2,
-"free_gb": 185.1,
-"uptime": "up 10 days, 22:24, 2 users, load averages: 0.88 12.36 21.25",
-"load": "{ 0.88 12.36 21.25 }"
+"free_gb": 185.6,
+"uptime": "up 10 days, 22:39, 2 users, load averages: 0.40 0.97 7.48",
+"load": "{ 0.40 0.97 7.48 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-10T12:03",
+"name": "digested_break_entry",
+"status": "rejected",
+"rationale": "Payer is traders who fade a fresh N-day-high break, shorting it with stops resting just above the break high. They stay uncovered while price digests above the level, and their buy-stops fire into the later push.\nRATIONALE: The family varies the entry only. It buys after the brea",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-10T11:32",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The direction says to hold off until seller_*/cover_* rows load, and none have. I'm sending one entry-varying family anyway, because an empty reply is rejected as malformed and wastes the slot. It is not a seller/cover/buyer sibling.\nRATIONALE: Payer: speculators who are crowded ",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-10T05:56",
-"name": "buyer_tick_share_break_hold",
-"status": "accepted",
-"rationale": "This deviates from the direction (write nothing until a seller_* or cover_* row with n>1,000 appears). Those rows are still n=0, an empty reply wastes a slot, and this is one family that varies the entry dimension, as asked.\nRATIONALE: The payer is range-fade shorts with resting ",
-"note": "{\"name\": \"buyer_tick_share_break_hold\", \"grid\": 72, \"sec_per_param\": 0.001, \"active_frac\": 0.0836125}"
 }
 ],
 "history": [
-{
-"t": 1794139457.571501,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 92.0,
-"gpu": 2,
-"free_gb": 172.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794140871.674461,
 "total": 31310831,
@@ -4201,6 +4190,17 @@
 "cpu": 1.0,
 "gpu": 2,
 "free_gb": 185.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794313129.2314901,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.7,
+"gpu": 2,
+"free_gb": 185.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
