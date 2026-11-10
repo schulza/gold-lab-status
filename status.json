@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-10 15:54:23 UTC",
+"generated_at": "2026-11-10 16:09:46 UTC",
 "host": {
-"cpu_pct": 0.7,
+"cpu_pct": 1.4,
 "gpu_pct": 2,
-"free_gb": 185.1,
-"uptime": "up 11 days,  2:15, 2 users, load averages: 0.57 0.50 0.49",
-"load": "{ 0.57 0.50 0.49 }"
+"free_gb": 184.9,
+"uptime": "up 11 days,  2:30, 2 users, load averages: 0.57 0.67 0.58",
+"load": "{ 0.57 0.67 0.58 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-10T16:09",
+"name": "approach_buyer_break_hold",
+"status": "accepted",
+"rationale": "This follows the direction, so it is one family with a new entry and not a seller_*/cover_* sibling. The entry is \"who buys the break\": it measures the aggressive-buyer share (up-bars weighted by ticks) in the window before the break, not the seller's baseline or the break bar it",
+"note": "{\"name\": \"approach_buyer_break_hold\", \"grid\": 72, \"sec_per_param\": 0.001, \"active_frac\": 0.060525}"
+},
+{
 "ts": "2026-11-10T15:38",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The direction says to write nothing until a seller_* or cover_* row shows n > 1,000. All of them still show n=0, so I'm submitting one family only, and it varies the entry. A reply with no module wastes the slot.\nRATIONALE: Entry dimension is who buys the break, the dimension the",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-10T10:00",
-"name": "settle_close_break",
-"status": "accepted",
-"rationale": "The seller_* and cover_* rows still show n=0. This is one entry-varying family only: it enters on a close-confirmed break, not an intrabar break, and trades long only.\nRATIONALE: Payer: intraday fade traders and stop-run sellers who short the pokes through the prior N-day high. A",
-"note": "{\"name\": \"settle_close_break\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.183}"
 }
 ],
 "history": [
-{
-"t": 1794154138.6083798,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 151.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794155092.296584,
 "total": 31310831,
@@ -4245,6 +4234,17 @@
 "cpu": 0.7,
 "gpu": 2,
 "free_gb": 185.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794326986.9245582,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.4,
+"gpu": 2,
+"free_gb": 184.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
