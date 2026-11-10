@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-10 20:37:02 UTC",
+"generated_at": "2026-11-10 20:52:42 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 2,
-"free_gb": 149.8,
-"uptime": "up 11 days,  6:57, 2 users, load averages: 40.05 39.63 39.73",
-"load": "{ 40.05 39.63 39.73 }"
+"gpu_pct": 15,
+"free_gb": 145.2,
+"uptime": "up 11 days,  7:13, 2 users, load averages: 41.38 42.35 41.62",
+"load": "{ 41.38 42.35 41.62 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-10T20:45",
+"name": "efficient_approach_break",
+"status": "accepted",
+"rationale": "Payer is the short-covering and stop-buying crowd that sits above a multi-day high. A break whose approach is one-sided (high path efficiency, so few sellers lean against it) forces late shorts to cover into thin offers; a churning break does not. This varies the entry dimension ",
+"note": "{\"name\": \"efficient_approach_break\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.2528625}"
+},
+{
 "ts": "2026-11-10T20:14",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "This follows the director's \"vary the entry only\" line. It is one family, not a seller_* or cover_* sibling, and I haven't checked whether the helper signatures below match goldlab/strategies.py.\nRATIONALE: Payer: stop-loss shorts and range-fading mean-reverters who sell into a b",
 "note": "{\"name\": \"diffuse_break_hold\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.09393125}"
-},
-{
-"ts": "2026-11-10T14:37",
-"name": "tick_acceptance_break_hold",
-"status": "accepted",
-"rationale": "This is the one entry variation the director allowed. It measures acceptance above the broken level by tick-weighted dwell instead of clock time, so thin bars don't count as proof.\nRATIONALE: Payer: range-fade limit sellers and stop-loss shorts anchored at the old N-day high, who",
-"note": "{\"name\": \"tick_acceptance_break_hold\", \"grid\": 81, \"sec_per_param\": 0.0, \"active_frac\": 0.1431625}"
 }
 ],
 "history": [
-{
-"t": 1794170769.971474,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 159.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794172118.354412,
 "total": 31310831,
@@ -4289,6 +4278,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 149.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794343962.633843,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 15,
+"free_gb": 145.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
