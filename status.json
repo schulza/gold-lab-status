@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-10 04:51:19 UTC",
+"generated_at": "2026-11-10 05:07:25 UTC",
 "host": {
-"cpu_pct": 13.4,
+"cpu_pct": 99.9,
 "gpu_pct": 2,
-"free_gb": 189.6,
-"uptime": "up 10 days, 15:11, 2 users, load averages: 30.82 38.59 38.62",
-"load": "{ 30.82 38.59 38.62 }"
+"free_gb": 162.0,
+"uptime": "up 10 days, 15:27, 2 users, load averages: 49.09 42.29 40.67",
+"load": "{ 49.09 42.29 40.67 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-10T04:55",
+"name": "seller_dayshare_break_hold",
+"status": "accepted",
+"rationale": "Payer is the range-top seller, who sold into the top of the last N days and now has to cover or give up. Participation is measured against that seller's own history: the share of daily activity spent in the upper half of the day's range, on the days that touched the range top, di",
+"note": "{\"name\": \"seller_dayshare_break_hold\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.13526875}"
+},
+{
 "ts": "2026-11-10T04:24",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "One family, entry-varying as directed. The payer is the range-top seller, whose offers show up as upper wicks (high minus close) in top-zone bars during the range-building days.\nRATIONALE: A break is entered only when the break leg's own upper-wick share falls clearly below that ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-09T22:46",
-"name": "seller_persistence_break_hold",
-"status": "accepted",
-"rationale": "The payer is the range-top seller, measured by how their supply persists. Passive supply in the top zone churns, so consecutive top-zone bars flip sign often. A break leg whose sign persistence clearly exceeds the seller's own persistence means their offers were lifted without be",
-"note": "{\"name\": \"seller_persistence_break_hold\", \"grid\": 96, \"sec_per_param\": 0.003, \"active_frac\": 0.06419375}"
 }
 ],
 "history": [
-{
-"t": 1794113606.930772,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 118.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794114954.406993,
 "total": 31310831,
@@ -4124,6 +4113,17 @@
 "cpu": 13.4,
 "gpu": 2,
 "free_gb": 189.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794287245.242838,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 99.9,
+"gpu": 2,
+"free_gb": 162.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
