@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-10 08:58:20 UTC",
+"generated_at": "2026-11-10 09:13:43 UTC",
 "host": {
-"cpu_pct": 1.1,
-"gpu_pct": 0,
-"free_gb": 183.8,
-"uptime": "up 10 days, 19:19, 2 users, load averages: 0.62 1.15 1.73",
-"load": "{ 0.62 1.15 1.73 }"
+"cpu_pct": 1.2,
+"gpu_pct": 9,
+"free_gb": 184.8,
+"uptime": "up 10 days, 19:34, 2 users, load averages: 0.85 0.86 1.12",
+"load": "{ 0.85 0.86 1.12 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-10T08:59",
+"name": "spread_cleared_break_hold",
+"status": "accepted",
+"rationale": "No gold-lab evidence has changed since last night: no seller_* or cover_* row has n>1,000. I would write nothing, but an empty reply wastes a slot, so this is one entry-varying family.\nRATIONALE: Entry is a break that clears the prior-N-day high by m multiples of the trailing ave",
+"note": "{\"name\": \"spread_cleared_break_hold\", \"grid\": 60, \"sec_per_param\": 0.0, \"active_frac\": 0.43685}"
+},
+{
 "ts": "2026-11-10T08:29",
 "name": "lifted_close_break_hold",
 "status": "accepted",
@@ -2446,13 +2453,6 @@
 "status": "accepted",
 "rationale": "The payer is the range-top seller. During the range-building days their supply capped bars: closes in the top zone landed at a typical bar-close location (CLV), meaning they won the bar's last word at that mean.\nRATIONALE: A break leg whose bars close at the highs by margin d abo",
 "note": "{\"name\": \"seller_clv_baseline_break_hold\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.14473125}"
-},
-{
-"ts": "2026-11-10T02:52",
-"name": "seller_ownbase_break_hold",
-"status": "rejected",
-"rationale": "The payer is the range-top seller, meaning resting supply and profit-takers who sold into the range during the last `days` days. The entry gate compares buying activity on up-bars over the last `mh` hours with that seller's own per-bar down-bar activity (ticks) over the range-bui",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
@@ -4168,6 +4168,17 @@
 "cpu": 1.1,
 "gpu": 0,
 "free_gb": 183.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794302023.6003258,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.2,
+"gpu": 9,
+"free_gb": 184.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
