@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-10 06:24:23 UTC",
+"generated_at": "2026-11-10 06:39:46 UTC",
 "host": {
-"cpu_pct": 0.6,
-"gpu_pct": 2,
-"free_gb": 191.0,
-"uptime": "up 10 days, 16:45, 2 users, load averages: 0.80 0.62 1.00",
-"load": "{ 0.80 0.62 1.00 }"
+"cpu_pct": 5.6,
+"gpu_pct": 12,
+"free_gb": 187.1,
+"uptime": "up 10 days, 17 hrs, 2 users, load averages: 1.17 0.79 0.79",
+"load": "{ 1.17 0.79 0.79 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-10T06:26",
+"name": null,
+"status": "rejected",
+"rationale": "The direction says to hold off until seller_*/cover_* rows load, and none have. I'm sending one entry-varying family anyway, because an empty reply is rejected as malformed and wastes the slot. It is not a seller/cover/buyer sibling.\nRATIONALE: Payer: speculators who are crowded ",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-10T05:56",
 "name": "buyer_tick_share_break_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the range-top seller, measured by their own bar size. During the range-building days they supplied into the top zone at a typical bar range. A break leg whose bars are k times that range means their supply was overwhelmed. Late shorts cover, and holders who anchored ",
 "note": "{\"name\": \"seller_zone_range_break_hold\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.16550625}"
-},
-{
-"ts": "2026-11-10T00:18",
-"name": "seller_topzone_activity_break_hold",
-"status": "rejected",
-"rationale": "The payer is the holder or short anchored at the range top. Their own activity is measured as the mean tick rate over bars that closed in the top zone during the range-building days, lagged so it excludes the break leg. A break leg whose tick rate is at least k times that baselin",
-"note": "sandbox: AssertionError: zu speicherhungrig: 55 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1794119083.047062,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 143.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794120182.4168131,
 "total": 31310831,
@@ -4146,6 +4135,17 @@
 "cpu": 0.6,
 "gpu": 2,
 "free_gb": 191.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794292786.945371,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 5.6,
+"gpu": 12,
+"free_gb": 187.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
