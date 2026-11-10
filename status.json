@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-09 23:46:24 UTC",
+"generated_at": "2026-11-10 00:02:31 UTC",
 "host": {
-"cpu_pct": 3.6,
+"cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 185.6,
-"uptime": "up 10 days, 10:07, 2 users, load averages: 1.60 1.74 2.99",
-"load": "{ 1.60 1.74 2.99 }"
+"free_gb": 123.7,
+"uptime": "up 10 days, 10:22, 2 users, load averages: 36.72 34.67 23.03",
+"load": "{ 36.72 34.67 23.03 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-09T23:47",
+"name": "seller_tick_zscore_break_hold",
+"status": "rejected",
+"rationale": "The payer is the range-top seller, with the participation baseline taken from that seller's own top-zone activity during the range-building days. The baseline is a z-score against the seller's tick-rate mean and std, not a ratio to recent bars. A break leg that sits several of th",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-09T23:16",
 "name": "seller_wick_baseline_break_hold",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the range-top seller. Their own pressing intensity is the baseline: mean ticks per bar on top-of-range bars that closed down (`close<open`) during the prior `days`.\nRATIONALE: A clean break of the range high whose participation is at least `m` times that pressing int",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-09T17:38",
-"name": "seller_run_down_break_hold",
-"status": "rejected",
-"rationale": "The payer is the range-top seller. Their own activity over the range-building days is measured as the tick rate on top-of-range bars, recent half of the window against the earlier half, lagged past the break leg.\nRATIONALE: A ratio at or below `r` means the seller's supply was ru",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794095780.869848,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 87.5,
-"gpu": 2,
-"free_gb": 172.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794096729.638788,
 "total": 31310831,
@@ -4069,6 +4058,17 @@
 "cpu": 3.6,
 "gpu": 2,
 "free_gb": 185.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794268951.735764,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 123.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
