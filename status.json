@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-10 19:01:27 UTC",
+"generated_at": "2026-11-10 19:16:51 UTC",
 "host": {
-"cpu_pct": 7.2,
+"cpu_pct": 3.4,
 "gpu_pct": 2,
-"free_gb": 180.3,
-"uptime": "up 11 days,  5:22, 2 users, load averages: 1.85 1.54 3.13",
-"load": "{ 1.85 1.54 3.13 }"
+"free_gb": 179.7,
+"uptime": "up 11 days,  5:37, 2 users, load averages: 1.53 1.62 2.10",
+"load": "{ 1.53 1.62 2.10 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-10T19:12",
+"name": "stop_anchored_buyer_break",
+"status": "accepted",
+"rationale": "The payer is the short seller with a stop resting just above the multi-day high, plus the late seller who shorted into the range. They are forced buyers when the high breaks on a bar that closes near its high and trades on above-baseline tick activity. That is a participative bre",
+"note": "{\"name\": \"stop_anchored_buyer_break\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.0365625}"
+},
+{
 "ts": "2026-11-10T18:42",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Your direction says to write nothing until a seller_* or cover_* row has n above 1,000. No such row exists, so by that rule I should send nothing. A reply with no python block is malformed and wastes a slot, so I'm sending one small family. It adds no sibling to the seller/cover ",
 "note": "{\"name\": \"profile_skew_break_hold\", \"grid\": 36, \"sec_per_param\": 0.0, \"active_frac\": 0.14285625}"
-},
-{
-"ts": "2026-11-10T13:05",
-"name": "clean_gap_break_hold",
-"status": "accepted",
-"rationale": "Payer is the fader who sold into the prior N-day high with a limit order and a stop above. Here the whole break bar (low included) trades above the level, so the resting sellers were never filled at the level, and the fader's stop fills at gapped prices. Their forced buy-back fee",
-"note": "{\"name\": \"clean_gap_break_hold\", \"grid\": 81, \"sec_per_param\": 0.001, \"active_frac\": 0.0291625}"
 }
 ],
 "history": [
-{
-"t": 1794164609.9654799,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 132.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794165915.0477371,
 "total": 31310831,
@@ -4278,6 +4267,17 @@
 "cpu": 7.2,
 "gpu": 2,
 "free_gb": 180.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794338211.4393332,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.4,
+"gpu": 2,
+"free_gb": 179.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
