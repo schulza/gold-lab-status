@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-10 14:06:40 UTC",
+"generated_at": "2026-11-10 14:22:04 UTC",
 "host": {
 "cpu_pct": 0.7,
 "gpu_pct": 2,
-"free_gb": 185.5,
-"uptime": "up 11 days, 27 mins, 2 users, load averages: 0.50 0.54 1.00",
-"load": "{ 0.50 0.54 1.00 }"
+"free_gb": 186.0,
+"uptime": "up 11 days, 42 mins, 2 users, load averages: 0.77 0.64 0.72",
+"load": "{ 0.77 0.64 0.72 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-10T14:06",
+"name": "rebreak_stop_cover",
+"status": "accepted",
+"rationale": "Payer is the breakout-fader. Traders who sell a fresh N-day high put their stops just above the break-bar high. A shallow pullback followed by a close back above that high triggers those stops and forces the shorts to cover, and the strategy enters on that re-break.\nRATIONALE: Th",
+"note": "{\"name\": \"rebreak_stop_cover\", \"grid\": 81, \"sec_per_param\": 0.001, \"active_frac\": 0.00053125}"
+},
+{
 "ts": "2026-11-10T13:35",
 "name": "profile_skew_break_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The director says to write nothing until a seller_* or cover_* row with n above 1,000 appears, and the table still shows n=0 for all of them. A malformed or empty reply costs a slot, so this is one small module (72 combinations) that varies the entry dimension only.\nRATIONALE: En",
 "note": "{\"name\": \"lifted_close_break_hold\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.3017875}"
-},
-{
-"ts": "2026-11-10T07:58",
-"name": "broad_buying_break_trail",
-"status": "rejected",
-"rationale": "The director's bar (seller_* or cover_* with n above 1,000) hasn't been met, so I propose one family, not a sibling set. It varies the entry along the \"who buys the break\" dimension: a stale-high break only counts when the preceding hours show broad buying (the share of up-closin",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794147476.274794,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 129.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794148890.299361,
 "total": 31310831,
@@ -4223,6 +4212,17 @@
 "cpu": 0.7,
 "gpu": 2,
 "free_gb": 185.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794320524.043681,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.7,
+"gpu": 2,
+"free_gb": 186.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
