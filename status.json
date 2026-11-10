@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-10 21:39:34 UTC",
+"generated_at": "2026-11-10 21:54:58 UTC",
 "host": {
-"cpu_pct": 0.6,
-"gpu_pct": 19,
-"free_gb": 186.8,
-"uptime": "up 11 days, 8 hrs, 2 users, load averages: 20.70 35.29 32.09",
-"load": "{ 20.70 35.29 32.09 }"
+"cpu_pct": 4.0,
+"gpu_pct": 2,
+"free_gb": 181.7,
+"uptime": "up 11 days,  8:15, 2 users, load averages: 1.62 3.02 11.80",
+"load": "{ 1.62 3.02 11.80 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-10T21:46",
+"name": "clock_close_break_hold",
+"status": "rejected",
+"rationale": "The seller_* and cover_* rows still show n=0, so this follows the director's \"at most one family, varying the entry\" and keeps the grid small at 81. Entry is decided only at one fixed daily clock bar, on the close above the N-day high plus k\u00b7\u03c3, and exit only on a daily close unde",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-10T21:15",
 "name": "second_push_break_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "This follows the direction, so it is one family with a new entry and not a seller_*/cover_* sibling. The entry is \"who buys the break\": it measures the aggressive-buyer share (up-bars weighted by ticks) in the window before the break, not the seller's baseline or the break bar it",
 "note": "{\"name\": \"approach_buyer_break_hold\", \"grid\": 72, \"sec_per_param\": 0.001, \"active_frac\": 0.060525}"
-},
-{
-"ts": "2026-11-10T15:38",
-"name": null,
-"status": "rejected",
-"rationale": "The direction asks for no new family until a seller_* or cover_* row with n above 1,000 appears, so this is one low-volume family. It changes the entry rather than adding a seller or cover sibling. It also avoids the dead ideas: the gate is a real-yield change, not a price trend ",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1794174723.825823,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 118.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794175774.974248,
 "total": 31310831,
@@ -4300,6 +4289,17 @@
 "cpu": 0.6,
 "gpu": 19,
 "free_gb": 186.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794347698.11962,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 4.0,
+"gpu": 2,
+"free_gb": 181.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
