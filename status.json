@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-10 12:34:14 UTC",
+"generated_at": "2026-11-10 12:49:37 UTC",
 "host": {
-"cpu_pct": 0.5,
+"cpu_pct": 1.2,
 "gpu_pct": 2,
-"free_gb": 186.0,
-"uptime": "up 10 days, 22:54, 2 users, load averages: 0.55 0.51 2.87",
-"load": "{ 0.55 0.51 2.87 }"
+"free_gb": 185.6,
+"uptime": "up 10 days, 23:10, 2 users, load averages: 0.40 0.42 1.27",
+"load": "{ 0.40 0.42 1.27 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-10T12:34",
+"name": "held_retest_entry",
+"status": "accepted",
+"rationale": "Payer is the retest-seller. Traders who fade a break by selling the first pullback to the broken level expect a \"failed breakout\". When the retest holds on a break whose bar was bought into the high, they are stopped out, and sellers who sold the break itself are squeezed with th",
+"note": "{\"name\": \"held_retest_entry\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.05}"
+},
+{
 "ts": "2026-11-10T12:03",
 "name": "digested_break_entry",
 "status": "rejected",
@@ -2446,13 +2453,6 @@
 "status": "accepted",
 "rationale": "The payer is the shorts and fade-sellers parked at the top of an N-day range. They fade because they read any push through the level as a stop-run spike. Orderly breaks (close above the prior high, bar range under q\u00d7ATR) show no climax, so the sellers are absorbed slowly and cove",
 "note": "{\"name\": \"quiet_break_hold\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.44096875}"
-},
-{
-"ts": "2026-11-10T06:26",
-"name": null,
-"status": "rejected",
-"rationale": "The direction says to hold off until seller_*/cover_* rows load, and none have. I'm sending one entry-varying family anyway, because an empty reply is rejected as malformed and wastes the slot. It is not a seller/cover/buyer sibling.\nRATIONALE: Payer: speculators who are crowded ",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
@@ -4201,6 +4201,17 @@
 "cpu": 0.5,
 "gpu": 2,
 "free_gb": 186.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794314977.701341,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.2,
+"gpu": 2,
+"free_gb": 185.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
