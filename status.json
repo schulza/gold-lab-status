@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-10 13:05:02 UTC",
+"generated_at": "2026-11-10 13:20:25 UTC",
 "host": {
-"cpu_pct": 3.3,
+"cpu_pct": 0.8,
 "gpu_pct": 2,
-"free_gb": 185.8,
-"uptime": "up 10 days, 23:25, 2 users, load averages: 0.58 0.56 0.83",
-"load": "{ 0.58 0.56 0.83 }"
+"free_gb": 185.9,
+"uptime": "up 10 days, 23:41, 2 users, load averages: 1.04 11.95 11.58",
+"load": "{ 1.04 11.95 11.58 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-10T13:05",
+"name": "clean_gap_break_hold",
+"status": "accepted",
+"rationale": "Payer is the fader who sold into the prior N-day high with a limit order and a stop above. Here the whole break bar (low included) trades above the level, so the resting sellers were never filled at the level, and the fader's stop fills at gapped prices. Their forced buy-back fee",
+"note": "{\"name\": \"clean_gap_break_hold\", \"grid\": 81, \"sec_per_param\": 0.001, \"active_frac\": 0.0291625}"
+},
+{
 "ts": "2026-11-10T12:34",
 "name": "held_retest_entry",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The director's direction says to hold new families until seller_*/cover_* rows load, but one reply with no module wastes a slot. So this is one family that varies only the entry, and it is long-only.\nRATIONALE: Payer: fade traders and range sellers who sell into spiky, overlappin",
 "note": "{\"name\": \"orderly_approach_break_hold\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.02835}"
-},
-{
-"ts": "2026-11-10T06:57",
-"name": "quiet_break_hold",
-"status": "accepted",
-"rationale": "The payer is the shorts and fade-sellers parked at the top of an N-day range. They fade because they read any push through the level as a stop-run spike. Orderly breaks (close above the prior high, bar range under q\u00d7ATR) show no climax, so the sellers are absorbed slowly and cove",
-"note": "{\"name\": \"quiet_break_hold\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.44096875}"
 }
 ],
 "history": [
-{
-"t": 1794143570.299598,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 118.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794144942.607866,
 "total": 31310831,
@@ -4212,6 +4201,17 @@
 "cpu": 3.3,
 "gpu": 2,
 "free_gb": 185.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794316825.950305,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.8,
+"gpu": 2,
+"free_gb": 185.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
