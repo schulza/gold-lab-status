@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-10 17:59:05 UTC",
+"generated_at": "2026-11-10 18:15:15 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 143.8,
-"uptime": "up 11 days,  4:18, 2 users, load averages: 33.60 37.97 30.98",
-"load": "{ 33.60 37.97 30.98 }"
+"free_gb": 143.3,
+"uptime": "up 11 days,  4:35, 2 users, load averages: 44.48 41.22 37.62",
+"load": "{ 44.48 41.22 37.62 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-10T18:11",
+"name": "absorbed_impact_break",
+"status": "rejected",
+"rationale": "Entry-varying variant of the participative-break cluster. A break of the N-day high counts only when its price impact per tick is below the instrument's own norm, meaning the passive offers at the old high were absorbed cheaply.\nPayer: short sellers and buy-stop holders positione",
+"note": "sandbox: AssertionError: zu speicherhungrig: 41 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-10T17:40",
 "name": "retest_hold_long",
 "status": "accepted",
@@ -2446,13 +2453,6 @@
 "status": "accepted",
 "rationale": "Payer is the retest-seller. Traders who fade a break by selling the first pullback to the broken level expect a \"failed breakout\". When the retest holds on a break whose bar was bought into the high, they are stopped out, and sellers who sold the break itself are squeezed with th",
 "note": "{\"name\": \"held_retest_entry\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.05}"
-},
-{
-"ts": "2026-11-10T12:03",
-"name": "digested_break_entry",
-"status": "rejected",
-"rationale": "Payer is traders who fade a fresh N-day-high break, shorting it with stops resting just above the break high. They stay uncovered while price digests above the level, and their buy-stops fire into the later push.\nRATIONALE: The family varies the entry only. It buys after the brea",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
@@ -4256,6 +4256,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 143.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794334515.285565,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 143.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
