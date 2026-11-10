@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-10 00:02:31 UTC",
+"generated_at": "2026-11-10 00:18:50 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 123.7,
-"uptime": "up 10 days, 10:22, 2 users, load averages: 36.72 34.67 23.03",
-"load": "{ 36.72 34.67 23.03 }"
+"free_gb": 135.6,
+"uptime": "up 10 days, 10:38, 2 users, load averages: 39.75 39.85 35.03",
+"load": "{ 39.75 39.85 35.03 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-10T00:18",
+"name": "seller_topzone_activity_break_hold",
+"status": "rejected",
+"rationale": "The payer is the holder or short anchored at the range top. Their own activity is measured as the mean tick rate over bars that closed in the top zone during the range-building days, lagged so it excludes the break leg. A break leg whose tick rate is at least k times that baselin",
+"note": "sandbox: AssertionError: zu speicherhungrig: 55 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-09T23:47",
 "name": "seller_tick_zscore_break_hold",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the range-top seller. Their own execution cost is the baseline: the mean quoted spread on top-of-range bars during the prior `days` is what their supply paid to get done.\nRATIONALE: A clean break above the old high, quoted at no more than `f` times that spread, means",
 "note": "{\"name\": \"seller_spread_baseline_break_hold\", \"grid\": 96, \"sec_per_param\": 0.002, \"active_frac\": 0.284}"
-},
-{
-"ts": "2026-11-09T18:09",
-"name": "seller_press_intensity_break_hold",
-"status": "rejected",
-"rationale": "The payer is the range-top seller. Their own pressing intensity is the baseline: mean ticks per bar on top-of-range bars that closed down (`close<open`) during the prior `days`.\nRATIONALE: A clean break of the range high whose participation is at least `m` times that pressing int",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794096729.638788,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 83.8,
-"gpu": 2,
-"free_gb": 172.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794098031.171534,
 "total": 31310831,
@@ -4069,6 +4058,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 123.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794269930.052938,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 135.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
