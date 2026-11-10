@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-10 17:26:48 UTC",
+"generated_at": "2026-11-10 17:42:53 UTC",
 "host": {
-"cpu_pct": 4.1,
-"gpu_pct": 2,
-"free_gb": 182.2,
-"uptime": "up 11 days,  3:47, 2 users, load averages: 1.46 1.78 1.48",
-"load": "{ 1.46 1.78 1.48 }"
+"cpu_pct": 100.0,
+"gpu_pct": 31,
+"free_gb": 142.4,
+"uptime": "up 11 days,  4:02, 2 users, load averages: 41.98 25.59 12.34",
+"load": "{ 41.98 25.59 12.34 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-10T17:40",
+"name": "retest_hold_long",
+"status": "accepted",
+"rationale": "Entry-varying single family, per the director's allowance. It is the first-pullback entry after a fresh N-day high break: long only, and it enters only if the break bar closed strong, the retest of the broken level holds, and the hold is time-stopped.\nRATIONALE: Payer: shorts who",
+"note": "{\"name\": \"retest_hold_long\", \"grid\": 81, \"sec_per_param\": 0.002, \"active_frac\": 0.0038125}"
+},
+{
 "ts": "2026-11-10T17:10",
 "name": "close_controlled_break_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is traders who fade a fresh N-day-high break, shorting it with stops resting just above the break high. They stay uncovered while price digests above the level, and their buy-stops fire into the later push.\nRATIONALE: The family varies the entry only. It buys after the brea",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-10T11:32",
-"name": null,
-"status": "rejected",
-"rationale": "The seller_* and cover_* rows still show n=0, so this is exactly one entry-variant and not a sibling of them. It follows the \"who buys the break\" dimension.\nRATIONALE: The payer is stop-sellers and short-covering shorts who sit at an N-day high. They keep covering into a break th",
-"note": "ast: name not allowed: getattr"
 }
 ],
 "history": [
-{
-"t": 1794158885.822604,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 90.6,
-"gpu": 2,
-"free_gb": 175.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794160282.289801,
 "total": 31310831,
@@ -4256,6 +4245,17 @@
 "cpu": 4.1,
 "gpu": 2,
 "free_gb": 182.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794332573.2155762,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 31,
+"free_gb": 142.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
