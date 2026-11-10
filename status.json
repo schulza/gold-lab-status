@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-10 09:59:53 UTC",
+"generated_at": "2026-11-10 10:15:16 UTC",
 "host": {
-"cpu_pct": 1.0,
+"cpu_pct": 0.7,
 "gpu_pct": 2,
-"free_gb": 185.1,
-"uptime": "up 10 days, 20:20, 2 users, load averages: 0.55 0.59 0.61",
-"load": "{ 0.55 0.59 0.61 }"
+"free_gb": 185.3,
+"uptime": "up 10 days, 20:35, 2 users, load averages: 0.67 0.55 0.56",
+"load": "{ 0.67 0.55 0.56 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-10T10:00",
+"name": "settle_close_break",
+"status": "accepted",
+"rationale": "The seller_* and cover_* rows still show n=0. This is one entry-varying family only: it enters on a close-confirmed break, not an intrabar break, and trades long only.\nRATIONALE: Payer: intraday fade traders and stop-run sellers who short the pokes through the prior N-day high. A",
+"note": "{\"name\": \"settle_close_break\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.183}"
+},
+{
 "ts": "2026-11-10T09:30",
 "name": "repeated_acceptance_break_hold",
 "status": "accepted",
@@ -2446,13 +2453,6 @@
 "status": "rejected",
 "rationale": "The payer is the range-top seller. Their supply is spread over the range-building days, and its size is the total activity (ticks) in bars that sat in the top zone at or below the level. A break pays them off only when buyer activity above the level, over the last day, reaches a ",
 "note": "ast: name not allowed: getattr"
-},
-{
-"ts": "2026-11-10T03:53",
-"name": "seller_wick_baseline_break_hold",
-"status": "accepted",
-"rationale": "The payer is the range-top seller and the late shorts and anchored holders who rely on that seller. Through the range-building days, the bars that closed in the top zone carried an upper-wick fraction, meaning the share of the bar's range that was offered back above the close. Th",
-"note": "{\"name\": \"seller_wick_baseline_break_hold\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.14473125}"
 }
 ],
 "history": [
@@ -4179,6 +4179,17 @@
 "cpu": 1.0,
 "gpu": 2,
 "free_gb": 185.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794305716.184532,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.7,
+"gpu": 2,
+"free_gb": 185.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
