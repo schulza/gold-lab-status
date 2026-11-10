@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-10 23:42:44 UTC",
+"generated_at": "2026-11-10 23:58:08 UTC",
 "host": {
-"cpu_pct": 3.6,
-"gpu_pct": 37,
-"free_gb": 177.2,
-"uptime": "up 11 days, 10:03, 2 users, load averages: 1.99 1.85 1.80",
-"load": "{ 1.99 1.85 1.80 }"
+"cpu_pct": 4.1,
+"gpu_pct": 2,
+"free_gb": 178.2,
+"uptime": "up 11 days, 10:18, 2 users, load averages: 1.84 1.72 1.71",
+"load": "{ 1.84 1.72 1.71 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-10T23:48",
+"name": "lifted_floor_break_hold",
+"status": "accepted",
+"rationale": "The director's gate is not met. No `seller_*` or `cover_*` row has n above 1,000 (the table still shows n=0), so the instruction is to write nothing. A reply without a python block is rejected as malformed, so this is the single entry-varying family the direction allows.\nPayer: s",
+"note": "{\"name\": \"lifted_floor_break_hold\", \"grid\": 36, \"sec_per_param\": 0.0, \"active_frac\": 0.027925}"
+},
+{
 "ts": "2026-11-10T23:18",
 "name": "higher_low_retest_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Entry-varying variant of the participative-break cluster. A break of the N-day high counts only when its price impact per tick is below the instrument's own norm, meaning the passive offers at the old high were absorbed cheaply.\nPayer: short sellers and buy-stop holders positione",
 "note": "sandbox: AssertionError: zu speicherhungrig: 41 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-11-10T17:40",
-"name": "retest_hold_long",
-"status": "accepted",
-"rationale": "Entry-varying single family, per the director's allowance. It is the first-pullback entry after a fresh N-day high break: long only, and it enters only if the break bar closed strong, the retest of the broken level holds, and the hold is time-stopped.\nRATIONALE: Payer: shorts who",
-"note": "{\"name\": \"retest_hold_long\", \"grid\": 81, \"sec_per_param\": 0.002, \"active_frac\": 0.0038125}"
 }
 ],
 "history": [
-{
-"t": 1794181858.34003,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 67.2,
-"gpu": 2,
-"free_gb": 180.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794182819.22683,
 "total": 31310831,
@@ -4322,6 +4311,17 @@
 "cpu": 3.6,
 "gpu": 37,
 "free_gb": 177.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794355088.196268,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 4.1,
+"gpu": 2,
+"free_gb": 178.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
