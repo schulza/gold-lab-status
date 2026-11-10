@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-10 00:34:53 UTC",
+"generated_at": "2026-11-10 00:50:51 UTC",
 "host": {
-"cpu_pct": 98.6,
-"gpu_pct": 9,
-"free_gb": 157.3,
-"uptime": "up 10 days, 10:54, 2 users, load averages: 28.32 38.66 38.77",
-"load": "{ 28.32 38.66 38.77 }"
+"cpu_pct": 6.1,
+"gpu_pct": 2,
+"free_gb": 190.3,
+"uptime": "up 10 days, 11:10, 2 users, load averages: 9.58 30.07 35.94",
+"load": "{ 9.58 30.07 35.94 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-10T00:49",
+"name": "seller_zone_range_break_hold",
+"status": "accepted",
+"rationale": "The payer is the range-top seller, measured by their own bar size. During the range-building days they supplied into the top zone at a typical bar range. A break leg whose bars are k times that range means their supply was overwhelmed. Late shorts cover, and holders who anchored ",
+"note": "{\"name\": \"seller_zone_range_break_hold\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.16550625}"
+},
+{
 "ts": "2026-11-10T00:18",
 "name": "seller_topzone_activity_break_hold",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the range-top seller, measured by their own footprint. It is the share of ticks that print on down-bars while price sits in the top of the prior `days` range, which is how hard they pressed. Sellers pass once the break leg's up-tick share beats their own down-share b",
 "note": "{\"name\": \"seller_downshare_break_hold\", \"grid\": 96, \"sec_per_param\": 0.004, \"active_frac\": 0.33336875}"
-},
-{
-"ts": "2026-11-09T18:40",
-"name": "seller_spread_baseline_break_hold",
-"status": "accepted",
-"rationale": "The payer is the range-top seller. Their own execution cost is the baseline: the mean quoted spread on top-of-range bars during the prior `days` is what their supply paid to get done.\nRATIONALE: A clean break above the old high, quoted at no more than `f` times that spread, means",
-"note": "{\"name\": \"seller_spread_baseline_break_hold\", \"grid\": 96, \"sec_per_param\": 0.002, \"active_frac\": 0.284}"
 }
 ],
 "history": [
-{
-"t": 1794099020.5741189,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 3,
-"free_gb": 138.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794100359.0243762,
 "total": 31310831,
@@ -4069,6 +4058,17 @@
 "cpu": 98.6,
 "gpu": 9,
 "free_gb": 157.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794271851.8559082,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 6.1,
+"gpu": 2,
+"free_gb": 190.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
