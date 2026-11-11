@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 11:29:28 UTC",
+"generated_at": "2026-11-11 11:44:51 UTC",
 "host": {
-"cpu_pct": 3.5,
-"gpu_pct": 36,
-"free_gb": 178.8,
-"uptime": "up 11 days, 21:50, 2 users, load averages: 1.55 1.68 1.57",
-"load": "{ 1.55 1.68 1.57 }"
+"cpu_pct": 3.4,
+"gpu_pct": 3,
+"free_gb": 185.1,
+"uptime": "up 11 days, 22:05, 2 users, load averages: 1.31 1.37 1.45",
+"load": "{ 1.31 1.37 1.45 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T11:32",
+"name": "absorbed_selloff_reversion",
+"status": "accepted",
+"rationale": "Payer: stop-loss and margin sellers who hit the bid after a stretch below the rolling mean. Heavy tick activity at that point means passive bids are absorbing the flow, so the sellers pay the liquidity providers.\nThe exact `participation_break_exposure_matched` file was rejected ",
+"note": "{\"name\": \"absorbed_selloff_reversion\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.20729375}"
+},
+{
 "ts": "2026-11-11T11:02",
 "name": "participation_break_exposure_matched",
 "status": "rejected",
@@ -2446,13 +2453,6 @@
 "status": "accepted",
 "rationale": "Payer is the range-top sellers who stop out and cover into a break that comes with above-normal participation, the same squeeze as participation_break_hold.\nRATIONALE: The position is the break-hold state minus its own trailing average exposure, so the constant long-gold drift ea",
 "note": "{\"name\": \"participation_break_matched\", \"grid\": 48, \"sec_per_param\": 0.004, \"active_frac\": 0.072}"
-},
-{
-"ts": "2026-11-11T05:26",
-"name": "participation_break_matched",
-"status": "rejected",
-"rationale": "Payer is the holders and shorts anchored at the top of an N-day range, who sell into a break and then have to cover. The break is gated by above-normal participation, which shows the supply is being absorbed.\nRATIONALE: Position = hold-state minus its own trailing mean exposure (",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
@@ -4421,6 +4421,17 @@
 "cpu": 3.5,
 "gpu": 36,
 "free_gb": 178.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794397491.785044,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.4,
+"gpu": 3,
+"free_gb": 185.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
