@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 14:03:21 UTC",
+"generated_at": "2026-11-11 14:18:44 UTC",
 "host": {
-"cpu_pct": 0.3,
-"gpu_pct": 17,
-"free_gb": 184.3,
-"uptime": "up 12 days, 24 mins, 2 users, load averages: 0.70 1.59 1.65",
-"load": "{ 0.70 1.59 1.65 }"
+"cpu_pct": 0.8,
+"gpu_pct": 4,
+"free_gb": 184.1,
+"uptime": "up 12 days, 39 mins, 2 users, load averages: 0.48 0.53 0.89",
+"load": "{ 0.48 0.53 0.89 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T14:05",
+"name": "participation_break_tri_matched",
+"status": "accepted",
+"rationale": "The payer is the range-top seller whose stop sits above the high. Those sellers cover into an N-day-high break that arrives on above-normal tick participation.\nRATIONALE: The position is the break state minus a triangular-smoothed trailing mean of itself, so the long-gold drift e",
+"note": "{\"name\": \"participation_break_tri_matched\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.072}"
+},
+{
 "ts": "2026-11-11T13:34",
 "name": "participation_break_graded_matched",
 "status": "accepted",
@@ -2446,13 +2453,6 @@
 "status": "accepted",
 "rationale": "The payer is the range-top seller whose stop sits above the N-day high. They cover into a break that arrives on above-normal tick participation, so this is the same entry as `participation_break_hold`.\nRATIONALE: `participation_break_matched`, `_demeaned` and `_exposure_matched` ",
 "note": "{\"name\": \"participation_break_clock_matched\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.072}"
-},
-{
-"ts": "2026-11-11T07:59",
-"name": "participation_break_exposure_matched",
-"status": "rejected",
-"rationale": "The payer is the range-top seller whose stop sits above the high. They cover into an N-day-high break that arrives on above-normal tick participation, and the position is the break state minus its own trailing mean exposure, so only the squeeze timing earns.\nRATIONALE: The direct",
-"note": "sandbox: AssertionError: expected exactly one new family, got []"
 }
 ],
 "history": [
@@ -4454,6 +4454,17 @@
 "cpu": 0.3,
 "gpu": 17,
 "free_gb": 184.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794406724.501069,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.8,
+"gpu": 4,
+"free_gb": 184.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
