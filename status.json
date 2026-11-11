@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 01:17:18 UTC",
+"generated_at": "2026-11-11 01:33:18 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 130.6,
-"uptime": "up 11 days, 11:37, 2 users, load averages: 44.98 41.80 36.78",
-"load": "{ 44.98 41.80 36.78 }"
+"free_gb": 143.8,
+"uptime": "up 11 days, 11:53, 2 users, load averages: 41.81 41.26 39.68",
+"load": "{ 41.81 41.26 39.68 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T01:20",
+"name": "squeezed_seller_break_hold",
+"status": "rejected",
+"rationale": "Payer is short sellers who stacked up through a sell-dominated range, then get squeezed when the N-day high breaks. Their cover orders are forced and price-insensitive. The entry differs from the participative-break cluster: it requires the range's own down-bar share to be high, ",
+"note": "sandbox: NameError: name 'FAMILIES' is not defined"
+},
+{
 "ts": "2026-11-11T00:50",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is Asia-session fade traders and range-sellers who sold a thin overnight break of the N-day high. London flow arrives afterwards and either confirms the break or squeezes them.\nRATIONALE: It varies only the entry and is not a seller_* or cover_* sibling. The long is held on",
 "note": "{\"name\": \"asia_break_london_confirm\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.00020625}"
-},
-{
-"ts": "2026-11-10T19:12",
-"name": "stop_anchored_buyer_break",
-"status": "accepted",
-"rationale": "The payer is the short seller with a stop resting just above the multi-day high, plus the late seller who shorted into the range. They are forced buyers when the high breaks on a bar that closes near its high and trades on above-baseline tick activity. That is a participative bre",
-"note": "{\"name\": \"stop_anchored_buyer_break\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.0365625}"
 }
 ],
 "history": [
-{
-"t": 1794187782.640789,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 99.2,
-"gpu": 2,
-"free_gb": 118.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794189138.247434,
 "total": 31310831,
@@ -4333,6 +4322,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 130.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794360798.109919,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 143.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
