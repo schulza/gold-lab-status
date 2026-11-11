@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 21:31:48 UTC",
+"generated_at": "2026-11-11 21:47:54 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 99.9,
 "gpu_pct": 3,
-"free_gb": 148.9,
-"uptime": "up 12 days,  7:51, 2 users, load averages: 42.84 41.76 42.54",
-"load": "{ 42.84 41.76 42.54 }"
+"free_gb": 150.2,
+"uptime": "up 12 days,  8:07, 2 users, load averages: 30.98 38.68 40.62",
+"load": "{ 30.98 38.68 40.62 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T21:44",
+"name": "participation_break_baseline_short",
+"status": "accepted",
+"rationale": "Payer is the range-fade short whose stop sits above the N-day high. A break on high participation forces their covering and is held until close drops below its trailing mean.\nRATIONALE: Exposure matching: a trailing duty-cycle baseline short (f \u00d7 share of time in the position ove",
+"note": "{\"name\": \"participation_break_baseline_short\", \"grid\": 48, \"sec_per_param\": 0.001, \"active_frac\": 0.277375}"
+},
+{
 "ts": "2026-11-11T21:13",
 "name": "participation_break_duty_scaled_contrast",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the range-top short whose stop sits above the N-day high. The long leg is the `participation_break_hold` gate (N-day high plus above-normal participation).\nRATIONALE: The hedge leg is the same hold on every N-day-high break with no participation condition, scaled by the ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-11T15:36",
-"name": "participation_break_lag_paired",
-"status": "accepted",
-"rationale": "The payer is the holders and shorts anchored at the top of an N-day range, who sell into a breakout that comes with above-normal participation. The family is long when the gate is on and short the gate's own series delayed by `lag` days. The two legs have the same duty cycle and ",
-"note": "{\"name\": \"participation_break_lag_paired\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.10083125}"
 }
 ],
 "history": [
-{
-"t": 1794260419.551845,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 149.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794261387.7133179,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 100.0,
 "gpu": 3,
 "free_gb": 148.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794433674.71684,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 99.9,
+"gpu": 3,
+"free_gb": 150.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
