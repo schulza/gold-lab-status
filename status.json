@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 23:38:30 UTC",
+"generated_at": "2026-11-11 23:54:35 UTC",
 "host": {
-"cpu_pct": 3.1,
-"gpu_pct": 36,
-"free_gb": 183.3,
-"uptime": "up 12 days,  9:59, 2 users, load averages: 1.48 1.81 4.46",
-"load": "{ 1.48 1.81 4.46 }"
+"cpu_pct": 99.9,
+"gpu_pct": 3,
+"free_gb": 139.6,
+"uptime": "up 12 days, 10:14, 2 users, load averages: 39.64 37.06 25.60",
+"load": "{ 39.64 37.06 25.60 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T23:47",
+"name": "participation_break_slot_matched_hold",
+"status": "rejected",
+"rationale": "The payer is the range-top seller whose stop sits above the N-day high. They are forced to cover into a break that arrives on participation above the same clock slot's norm. Slot-normalising the ratio removes the intraday-clock effect that the existing `day_part / long_avg` ratio",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-11T23:16",
 "name": "participation_break_residual_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is still the range-top seller whose stop sits above the N-day high, who covers into a break on above-normal tick participation. The name `participation_break_exposure_matched` already exists, which is why my two earlier submissions failed with \"got []\".\nRATIONALE: This ",
 "note": "{\"name\": \"participation_break_riskmatched\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.144}"
-},
-{
-"ts": "2026-11-11T17:39",
-"name": "participation_break_exposure_matched",
-"status": "rejected",
-"rationale": "The payer is the range-top seller whose stop sits above the high. They cover into an N-day-high break that arrives on above-normal tick participation, the same entry as `participation_break_hold`.\nRATIONALE: The position is the break state minus its own trailing mean exposure, so",
-"note": "sandbox: AssertionError: expected exactly one new family, got []"
 }
 ],
 "history": [
-{
-"t": 1794267984.234167,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.6,
-"gpu": 2,
-"free_gb": 185.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794268951.735764,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 3.1,
 "gpu": 36,
 "free_gb": 183.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794441275.6967502,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 99.9,
+"gpu": 3,
+"free_gb": 139.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
