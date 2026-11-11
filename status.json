@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 15:35:41 UTC",
+"generated_at": "2026-11-11 15:51:04 UTC",
 "host": {
 "cpu_pct": 0.7,
 "gpu_pct": 4,
-"free_gb": 183.5,
-"uptime": "up 12 days,  1:56, 2 users, load averages: 0.58 1.21 2.03",
-"load": "{ 0.58 1.21 2.03 }"
+"free_gb": 183.8,
+"uptime": "up 12 days,  2:11, 2 users, load averages: 0.75 0.95 1.30",
+"load": "{ 0.75 0.95 1.30 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T15:36",
+"name": "participation_break_lag_paired",
+"status": "accepted",
+"rationale": "The payer is the holders and shorts anchored at the top of an N-day range, who sell into a breakout that comes with above-normal participation. The family is long when the gate is on and short the gate's own series delayed by `lag` days. The two legs have the same duty cycle and ",
+"note": "{\"name\": \"participation_break_lag_paired\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.10083125}"
+},
+{
 "ts": "2026-11-11T15:06",
 "name": "participation_break_expanding_matched",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the range-top seller whose stop sits above the N-day high. They cover into a break that arrives on above-normal tick participation. The position is the break state minus its own trailing mean exposure, so the long-gold drift nets to zero and only the timing of the sq",
 "note": "{\"name\": \"participation_break_matched_window\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.233}"
-},
-{
-"ts": "2026-11-11T09:30",
-"name": null,
-"status": "rejected",
-"rationale": "The payer is speculative futures shorts in a crowded position (COT net z-score deeply negative) whose macro thesis is rates-driven, and who get forced to cover once the 10y real yield falls. Crowding cuts their risk budget, the yield move breaks the thesis, and they cover into a ",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1794239085.492793,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 155.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794240275.471592,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 0.7,
 "gpu": 4,
 "free_gb": 183.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794412264.274852,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.7,
+"gpu": 4,
+"free_gb": 183.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
