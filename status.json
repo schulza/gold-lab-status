@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 09:57:02 UTC",
+"generated_at": "2026-11-11 10:12:30 UTC",
 "host": {
-"cpu_pct": 1.4,
+"cpu_pct": 0.7,
 "gpu_pct": 4,
-"free_gb": 185.0,
-"uptime": "up 11 days, 20:17, 2 users, load averages: 0.95 0.77 0.70",
-"load": "{ 0.95 0.77 0.70 }"
+"free_gb": 185.4,
+"uptime": "up 11 days, 20:33, 2 users, load averages: 0.46 0.55 0.58",
+"load": "{ 0.46 0.55 0.58 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T10:01",
+"name": "participation_break_matched_window",
+"status": "accepted",
+"rationale": "The payer is the range-top seller whose stop sits above the N-day high. They cover into a break that arrives on above-normal tick participation. The position is the break state minus its own trailing mean exposure, so the long-gold drift nets to zero and only the timing of the sq",
+"note": "{\"name\": \"participation_break_matched_window\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.233}"
+},
+{
 "ts": "2026-11-11T09:30",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The direction's gate (a seller_* or cover_* row with n above 1,000) is not met. A reply with no python block is malformed, so this is the one family that varies the entry, as the director allowed.\nPayer: range-fade shorts with stops above the prior high. A close beyond that high ",
 "note": "{\"name\": \"range_relative_break_hold\", \"grid\": 48, \"sec_per_param\": 0.001, \"active_frac\": 0.03735}"
-},
-{
-"ts": "2026-11-11T03:54",
-"name": "decisive_overshoot_break_hold",
-"status": "accepted",
-"rationale": "The gate in the direction isn't met. No `seller_*` or `cover_*` row has n above 1,000, but a reply with no python block counts as malformed, so this is the one entry-varying family.\nPayer: range-fade shorts and sellers who put stops just above the prior high. A close beyond the l",
-"note": "{\"name\": \"decisive_overshoot_break_hold\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.00545625}"
 }
 ],
 "history": [
-{
-"t": 1794218468.9448671,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 129.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794219865.209686,
 "total": 31310831,
@@ -4410,6 +4399,17 @@
 "cpu": 1.4,
 "gpu": 4,
 "free_gb": 185.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794391950.69633,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.7,
+"gpu": 4,
+"free_gb": 185.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
