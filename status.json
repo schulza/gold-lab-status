@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 07:53:52 UTC",
+"generated_at": "2026-11-11 08:09:15 UTC",
 "host": {
-"cpu_pct": 1.2,
+"cpu_pct": 0.7,
 "gpu_pct": 2,
-"free_gb": 186.4,
-"uptime": "up 11 days, 18:14, 2 users, load averages: 0.57 0.72 5.35",
-"load": "{ 0.57 0.72 5.35 }"
+"free_gb": 186.5,
+"uptime": "up 11 days, 18:29, 2 users, load averages: 0.59 0.59 2.16",
+"load": "{ 0.59 0.59 2.16 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T07:59",
+"name": "participation_break_exposure_matched",
+"status": "rejected",
+"rationale": "The payer is the range-top seller whose stop sits above the high. They cover into an N-day-high break that arrives on above-normal tick participation, and the position is the break state minus its own trailing mean exposure, so only the squeeze timing earns.\nRATIONALE: The direct",
+"note": "sandbox: AssertionError: expected exactly one new family, got []"
+},
+{
 "ts": "2026-11-11T07:28",
 "name": "participation_break_exposure_matched",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The gate isn't met (no `seller_*` or `cover_*` row has n above 1,000), but a reply without a python block is rejected, so this is the one family the direction allows. It follows the stated next dimension, \"who buys the break\", and varies only the entry.\nRATIONALE: Payer: shorts a",
 "note": "sandbox: AssertionError: zu speicherhungrig: 41 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-11-11T01:51",
-"name": "bought_approach_break_hold",
-"status": "rejected",
-"rationale": "Entry varies, not the exit, as the direction asks. It tests the \"who buys the break\" dimension: a new N-day high only counts when the buyers' share of travelled distance (\u03a3(close\u2212low)/\u03a3(high\u2212low) over the m bars before the break) shows the approach was bought, not drifted. Payer:",
-"note": "sandbox: AssertionError: zu speicherhungrig: 54 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1794210885.582742,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 158.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794212191.9251158,
 "total": 31310831,
@@ -4388,6 +4377,17 @@
 "cpu": 1.2,
 "gpu": 2,
 "free_gb": 186.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794384555.688187,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.7,
+"gpu": 2,
+"free_gb": 186.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
