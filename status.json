@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 00:13:31 UTC",
+"generated_at": "2026-11-11 00:28:55 UTC",
 "host": {
-"cpu_pct": 3.5,
-"gpu_pct": 2,
-"free_gb": 177.9,
-"uptime": "up 11 days, 10:34, 2 users, load averages: 1.49 1.51 1.59",
-"load": "{ 1.49 1.51 1.59 }"
+"cpu_pct": 3.4,
+"gpu_pct": 37,
+"free_gb": 178.8,
+"uptime": "up 11 days, 10:49, 2 users, load averages: 1.45 1.56 1.60",
+"load": "{ 1.45 1.56 1.60 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T00:19",
+"name": "open_floor_break_hold",
+"status": "rejected",
+"rationale": "Following the director, this is one family that varies only the entry. It does not extend the seller_* or cover_* siblings, and it uses no external data.\nRATIONALE: The payer is intraday fade-sellers and short-the-open positions. If the UTC day open has acted as a floor for at le",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-10T23:48",
 "name": "lifted_floor_break_hold",
 "status": "accepted",
@@ -2446,13 +2453,6 @@
 "status": "rejected",
 "rationale": "Payer: late shorts and trend-fade sellers who are still positioned against a fresh N-day high. A break pays only when speculators have room to add, so I enter only when CFTC non-commercial net positioning is at a low percentile (uncrowded). The existing break families gate on the",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-10T18:11",
-"name": "absorbed_impact_break",
-"status": "rejected",
-"rationale": "Entry-varying variant of the participative-break cluster. A break of the N-day high counts only when its price impact per tick is below the instrument's own norm, meaning the passive offers at the old high were absorbed cheaply.\nPayer: short sellers and buy-stop holders positione",
-"note": "sandbox: AssertionError: zu speicherhungrig: 41 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
@@ -4322,6 +4322,17 @@
 "cpu": 3.5,
 "gpu": 2,
 "free_gb": 177.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794356935.2961228,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.4,
+"gpu": 37,
+"free_gb": 178.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
