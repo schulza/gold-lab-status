@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 10:27:54 UTC",
+"generated_at": "2026-11-11 10:43:17 UTC",
 "host": {
-"cpu_pct": 1.8,
+"cpu_pct": 0.6,
 "gpu_pct": 4,
-"free_gb": 185.1,
-"uptime": "up 11 days, 20:48, 2 users, load averages: 0.41 0.46 0.55",
-"load": "{ 0.41 0.46 0.55 }"
+"free_gb": 185.4,
+"uptime": "up 11 days, 21:03, 2 users, load averages: 0.45 0.58 0.62",
+"load": "{ 0.45 0.58 0.62 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T10:31",
+"name": "participation_break_placebo_lag",
+"status": "accepted",
+"rationale": "The payer is the range-top seller whose stop sits above the N-day high. They buy to cover into a break on above-normal tick participation, the same entry as `participation_break_hold` (77% / 33.01).\nRATIONALE: The control is a lagged placebo. The position is the break state minus",
+"note": "{\"name\": \"participation_break_placebo_lag\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.071625}"
+},
+{
 "ts": "2026-11-11T10:01",
 "name": "participation_break_matched_window",
 "status": "accepted",
@@ -2446,13 +2453,6 @@
 "status": "accepted",
 "rationale": "Your gate (a seller_* or cover_* row with n above 1,000) is not met. A reply without a python block is rejected, so this is the single entry-varying family you allowed, and it stays off the seller/cover dimension.\nPayer: shorts and fade traders whose buy-stops sit just above the ",
 "note": "{\"name\": \"prior_day_high_break_hold\", \"grid\": 60, \"sec_per_param\": 0.0, \"active_frac\": 0.46243125}"
-},
-{
-"ts": "2026-11-11T04:24",
-"name": "range_relative_break_hold",
-"status": "accepted",
-"rationale": "The direction's gate (a seller_* or cover_* row with n above 1,000) is not met. A reply with no python block is malformed, so this is the one family that varies the entry, as the director allowed.\nPayer: range-fade shorts with stops above the prior high. A close beyond that high ",
-"note": "{\"name\": \"range_relative_break_hold\", \"grid\": 48, \"sec_per_param\": 0.001, \"active_frac\": 0.03735}"
 }
 ],
 "history": [
@@ -4410,6 +4410,17 @@
 "cpu": 1.8,
 "gpu": 4,
 "free_gb": 185.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794393797.4858398,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.6,
+"gpu": 4,
+"free_gb": 185.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
