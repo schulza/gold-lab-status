@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 17:38:57 UTC",
+"generated_at": "2026-11-11 17:54:20 UTC",
 "host": {
-"cpu_pct": 3.7,
-"gpu_pct": 38,
-"free_gb": 184.8,
-"uptime": "up 12 days,  3:59, 2 users, load averages: 1.45 3.00 4.97",
-"load": "{ 1.45 3.00 4.97 }"
+"cpu_pct": 1.4,
+"gpu_pct": 4,
+"free_gb": 184.2,
+"uptime": "up 12 days,  4:15, 2 users, load averages: 0.68 0.95 2.29",
+"load": "{ 0.68 0.95 2.29 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T17:39",
+"name": "participation_break_exposure_matched",
+"status": "rejected",
+"rationale": "The payer is the range-top seller whose stop sits above the high. They cover into an N-day-high break that arrives on above-normal tick participation, the same entry as `participation_break_hold`.\nRATIONALE: The position is the break state minus its own trailing mean exposure, so",
+"note": "sandbox: AssertionError: expected exactly one new family, got []"
+},
+{
 "ts": "2026-11-11T17:08",
 "name": "participation_break_duty_matched",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the range-top seller whose stop sits above the N-day high. That seller covers into a break that arrives on above-normal tick participation. The position is the break state minus its own trailing mean exposure, so the long-gold drift nets to roughly zero and only the ",
 "note": "{\"name\": \"participation_break_drift_stripped\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.144}"
-},
-{
-"ts": "2026-11-11T11:32",
-"name": "absorbed_selloff_reversion",
-"status": "accepted",
-"rationale": "Payer: stop-loss and margin sellers who hit the bid after a stretch below the rolling mean. Heavy tick activity at that point means passive bids are absorbing the flow, so the sellers pay the liquidity providers.\nThe exact `participation_break_exposure_matched` file was rejected ",
-"note": "{\"name\": \"absorbed_selloff_reversion\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.20729375}"
 }
 ],
 "history": [
-{
-"t": 1794246006.9750369,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 4.1,
-"gpu": 2,
-"free_gb": 186.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794246973.8994849,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 3.7,
 "gpu": 38,
 "free_gb": 184.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794419660.481589,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.4,
+"gpu": 4,
+"free_gb": 184.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
