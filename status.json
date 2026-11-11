@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 08:55:25 UTC",
+"generated_at": "2026-11-11 09:10:48 UTC",
 "host": {
-"cpu_pct": 0.7,
+"cpu_pct": 0.1,
 "gpu_pct": 2,
-"free_gb": 186.6,
-"uptime": "up 11 days, 19:16, 2 users, load averages: 0.71 0.62 0.62",
-"load": "{ 0.71 0.62 0.62 }"
+"free_gb": 186.3,
+"uptime": "up 11 days, 19:31, 2 users, load averages: 0.98 0.71 0.67",
+"load": "{ 0.98 0.71 0.67 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T09:00",
+"name": "participation_break_exposure_matched",
+"status": "rejected",
+"rationale": "The payer is the range-top seller whose stop sits above the high. They cover into an N-day-high break that arrives on above-normal tick participation. The signal is the break state minus its own trailing mean exposure, so the long-gold drift earns zero and only the squeeze timing",
+"note": "sandbox: AssertionError: expected exactly one new family, got []"
+},
+{
 "ts": "2026-11-11T08:29",
 "name": "participation_break_clock_matched",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "",
 "note": "no python block in reply"
-},
-{
-"ts": "2026-11-11T02:53",
-"name": "arrival_accel_break_hold",
-"status": "rejected",
-"rationale": "Payer is the holders and shorts parked at the N-day high, who sell into the breakout. When tick activity in the last h hours is accelerating against the h hours before it, new buyers are arriving at the break. This is a different entry from the seller_* and cover_* siblings: it m",
-"note": "sandbox: AssertionError: zu speicherhungrig: 47 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1794214783.3734798,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 118.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794216059.9117,
 "total": 31310831,
@@ -4399,6 +4388,17 @@
 "cpu": 0.7,
 "gpu": 2,
 "free_gb": 186.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794388248.798972,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.1,
+"gpu": 2,
+"free_gb": 186.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
