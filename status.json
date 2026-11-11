@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 05:16:02 UTC",
+"generated_at": "2026-11-11 05:32:06 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 99.9,
 "gpu_pct": 2,
-"free_gb": 140.7,
-"uptime": "up 11 days, 15:36, 2 users, load averages: 41.06 35.51 24.20",
-"load": "{ 41.06 35.51 24.20 }"
+"free_gb": 147.0,
+"uptime": "up 11 days, 15:52, 2 users, load averages: 41.05 40.96 35.45",
+"load": "{ 41.05 40.96 35.45 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T05:26",
+"name": "participation_break_matched",
+"status": "rejected",
+"rationale": "Payer is the holders and shorts anchored at the top of an N-day range, who sell into a break and then have to cover. The break is gated by above-normal participation, which shows the supply is being absorbed.\nRATIONALE: Position = hold-state minus its own trailing mean exposure (",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-11T04:55",
 "name": "prior_day_high_break_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The director's gate is not met. No `seller_*` or `cover_*` row has n above 1,000 (the table still shows n=0), so the instruction is to write nothing. A reply without a python block is rejected as malformed, so this is the single entry-varying family the direction allows.\nPayer: s",
 "note": "{\"name\": \"lifted_floor_break_hold\", \"grid\": 36, \"sec_per_param\": 0.0, \"active_frac\": 0.027925}"
-},
-{
-"ts": "2026-11-10T23:18",
-"name": "higher_low_retest_hold",
-"status": "accepted",
-"rationale": "The payer is the retest shorts: they sell the first pullback to a broken multi-day high, expecting a failed break, and their stops sit just above it. A close above the pullback bar's high squeezes them, and the position is held until price loses the pullback low.\nRATIONALE: This ",
-"note": "{\"name\": \"higher_low_retest_hold\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.05848125}"
 }
 ],
 "history": [
-{
-"t": 1794201381.8161018,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 131.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794202472.753088,
 "total": 31310831,
@@ -4377,6 +4366,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 140.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794375126.68,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 99.9,
+"gpu": 2,
+"free_gb": 147.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
