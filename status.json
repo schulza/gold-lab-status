@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 16:06:27 UTC",
+"generated_at": "2026-11-11 16:21:51 UTC",
 "host": {
-"cpu_pct": 2.6,
-"gpu_pct": 4,
-"free_gb": 183.3,
-"uptime": "up 12 days,  2:27, 2 users, load averages: 18.27 9.92 4.77",
-"load": "{ 18.27 9.92 4.77 }"
+"cpu_pct": 0.7,
+"gpu_pct": 3,
+"free_gb": 183.7,
+"uptime": "up 12 days,  2:42, 2 users, load averages: 0.85 1.06 2.04",
+"load": "{ 0.85 1.06 2.04 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T16:07",
+"name": "participation_break_duty_hedged",
+"status": "rejected",
+"rationale": "Payer is the range-top short whose stop sits above the N-day high. The long leg is the `participation_break_hold` gate (N-day high plus above-normal participation).\nRATIONALE: The hedge leg is the same hold on every N-day-high break with no participation condition, scaled by the ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-11T15:36",
 "name": "participation_break_lag_paired",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the range-top seller whose stop sits above the N-day high. They buy to cover into a break on above-normal tick participation, the same entry as `participation_break_hold` (77% / 33.01).\nRATIONALE: The control is a lagged placebo. The position is the break state minus",
 "note": "{\"name\": \"participation_break_placebo_lag\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.071625}"
-},
-{
-"ts": "2026-11-11T10:01",
-"name": "participation_break_matched_window",
-"status": "accepted",
-"rationale": "The payer is the range-top seller whose stop sits above the N-day high. They cover into a break that arrives on above-normal tick participation. The position is the break state minus its own trailing mean exposure, so the long-gold drift nets to zero and only the timing of the sq",
-"note": "{\"name\": \"participation_break_matched_window\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.233}"
 }
 ],
 "history": [
-{
-"t": 1794241241.3514838,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 99.9,
-"gpu": 2,
-"free_gb": 159.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794242260.988545,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 2.6,
 "gpu": 4,
 "free_gb": 183.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794414111.129663,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.7,
+"gpu": 3,
+"free_gb": 183.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
