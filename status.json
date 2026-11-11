@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 18:25:06 UTC",
+"generated_at": "2026-11-11 18:40:29 UTC",
 "host": {
-"cpu_pct": 0.8,
+"cpu_pct": 1.3,
 "gpu_pct": 4,
-"free_gb": 185.0,
-"uptime": "up 12 days,  4:45, 2 users, load averages: 0.65 0.61 0.80",
-"load": "{ 0.65 0.61 0.80 }"
+"free_gb": 184.2,
+"uptime": "up 12 days,  5:01, 2 users, load averages: 0.55 0.66 0.77",
+"load": "{ 0.55 0.66 0.77 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T18:40",
+"name": "participation_break_ewm_matched",
+"status": "accepted",
+"rationale": "Payer is unchanged: the range-top seller whose stop sits above the N-day high and who covers into a break on above-normal tick participation. The position is the break state minus an exponentially weighted trailing mean of itself, so the constant long-gold drift earns about zero.",
+"note": "{\"name\": \"participation_break_ewm_matched\", \"grid\": 48, \"sec_per_param\": 0.004, \"active_frac\": 0.1703875}"
+},
+{
 "ts": "2026-11-11T18:09",
 "name": "participation_break_riskmatched",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is range-top shorts and holders anchored at the N-day high, who cover or capitulate into a break that comes with above-normal tick participation (long leg). The short leg is the chaser who buys a thin-participation break and gets faded.\nRATIONALE: Both legs buy the same",
 "note": "{\"name\": \"participation_break_contrast\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.1974875}"
-},
-{
-"ts": "2026-11-11T12:33",
-"name": "participation_break_longmatched",
-"status": "rejected",
-"rationale": "The payer is the range-top short whose stop sits above the N-day high. They cover into a break that arrives on above-normal tick participation, and the matching removes the long-gold drift.\nRATIONALE: `gen_participation_break_exposure_matched.py` already exists with the requested",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794248886.889985,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 152.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794249811.9384499,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 0.8,
 "gpu": 4,
 "free_gb": 185.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794422429.914618,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.3,
+"gpu": 4,
+"free_gb": 184.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
