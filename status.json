@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 03:41:54 UTC",
+"generated_at": "2026-11-11 03:57:18 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 4.5,
 "gpu_pct": 2,
-"free_gb": 159.8,
-"uptime": "up 11 days, 14:01, 2 users, load averages: 42.73 40.50 40.47",
-"load": "{ 42.73 40.50 40.47 }"
+"free_gb": 178.0,
+"uptime": "up 11 days, 14:17, 2 users, load averages: 1.29 3.50 15.12",
+"load": "{ 1.29 3.50 15.12 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T03:54",
+"name": "decisive_overshoot_break_hold",
+"status": "accepted",
+"rationale": "The gate in the direction isn't met. No `seller_*` or `cover_*` row has n above 1,000, but a reply with no python block counts as malformed, so this is the one entry-varying family.\nPayer: range-fade shorts and sellers who put stops just above the prior high. A close beyond the l",
+"note": "{\"name\": \"decisive_overshoot_break_hold\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.00545625}"
+},
+{
 "ts": "2026-11-11T03:23",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the late short and the pullback fader. After a multi-day high breaks, they sell the retest expecting a failed break, and their stops sit just above the broken level. When the retest trades on tick activity below its own baseline, no real sellers are present, so the s",
 "note": "{\"name\": \"dry_retest_break_hold\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.026775}"
-},
-{
-"ts": "2026-11-10T21:46",
-"name": "clock_close_break_hold",
-"status": "rejected",
-"rationale": "The seller_* and cover_* rows still show n=0, so this follows the director's \"at most one family, varying the entry\" and keeps the grid small at 81. Entry is decided only at one fixed daily clock bar, on the close above the N-day high plus k\u00b7\u03c3, and exit only on a daily close unde",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794196277.841326,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 140.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794197225.308713,
 "total": 31310831,
@@ -4355,6 +4344,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 159.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794369438.1546109,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 4.5,
+"gpu": 2,
+"free_gb": 178.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
