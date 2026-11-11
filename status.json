@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 08:24:38 UTC",
+"generated_at": "2026-11-11 08:40:02 UTC",
 "host": {
-"cpu_pct": 0.8,
+"cpu_pct": 0.5,
 "gpu_pct": 2,
-"free_gb": 186.1,
-"uptime": "up 11 days, 18:45, 2 users, load averages: 0.69 0.68 1.17",
-"load": "{ 0.69 0.68 1.17 }"
+"free_gb": 186.6,
+"uptime": "up 11 days, 19 hrs, 2 users, load averages: 0.55 0.57 0.73",
+"load": "{ 0.55 0.57 0.73 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T08:29",
+"name": "participation_break_clock_matched",
+"status": "accepted",
+"rationale": "The payer is the range-top seller whose stop sits above the N-day high. They cover into a break that arrives on above-normal tick participation, so this is the same entry as `participation_break_hold`.\nRATIONALE: `participation_break_matched`, `_demeaned` and `_exposure_matched` ",
+"note": "{\"name\": \"participation_break_clock_matched\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.072}"
+},
+{
 "ts": "2026-11-11T07:59",
 "name": "participation_break_exposure_matched",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the holders and shorts parked at the N-day high, who sell into the breakout. When tick activity in the last h hours is accelerating against the h hours before it, new buyers are arriving at the break. This is a different entry from the seller_* and cover_* siblings: it m",
 "note": "sandbox: AssertionError: zu speicherhungrig: 47 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-11-11T02:22",
-"name": "lifted_offer_break_hold",
-"status": "rejected",
-"rationale": "The gate isn't met (no `seller_*` or `cover_*` row has n above 1,000), but a reply without a python block is rejected, so this is the one family the direction allows. It follows the stated next dimension, \"who buys the break\", and varies only the entry.\nRATIONALE: Payer: shorts a",
-"note": "sandbox: AssertionError: zu speicherhungrig: 41 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1794213244.28383,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 138.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794214783.3734798,
 "total": 31310831,
@@ -4388,6 +4377,17 @@
 "cpu": 0.8,
 "gpu": 2,
 "free_gb": 186.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794386402.06062,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.5,
+"gpu": 2,
+"free_gb": 186.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
