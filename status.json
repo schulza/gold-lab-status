@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 02:37:46 UTC",
+"generated_at": "2026-11-11 02:53:35 UTC",
 "host": {
-"cpu_pct": 81.3,
+"cpu_pct": 0.8,
 "gpu_pct": 2,
-"free_gb": 142.6,
-"uptime": "up 11 days, 12:58, 2 users, load averages: 42.88 42.71 41.72",
-"load": "{ 42.88 42.71 41.72 }"
+"free_gb": 184.6,
+"uptime": "up 11 days, 13:13, 2 users, load averages: 34.74 40.41 40.88",
+"load": "{ 34.74 40.41 40.88 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T02:53",
+"name": "arrival_accel_break_hold",
+"status": "rejected",
+"rationale": "Payer is the holders and shorts parked at the N-day high, who sell into the breakout. When tick activity in the last h hours is accelerating against the h hours before it, new buyers are arriving at the break. This is a different entry from the seller_* and cover_* siblings: it m",
+"note": "sandbox: AssertionError: zu speicherhungrig: 47 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-11T02:22",
 "name": "lifted_offer_break_hold",
 "status": "rejected",
@@ -2446,13 +2453,6 @@
 "status": "accepted",
 "rationale": "The director asked for nothing until a seller_*/cover_* row with n>1,000 appears, and the table shows none, so these families are still unmeasured. A reply without a python block is a wasted slot, so this is one family that varies only the entry. It is not a seller/cover sibling ",
 "note": "{\"name\": \"second_push_break_hold\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.02081875}"
-},
-{
-"ts": "2026-11-10T20:45",
-"name": "efficient_approach_break",
-"status": "accepted",
-"rationale": "Payer is the short-covering and stop-buying crowd that sits above a multi-day high. A break whose approach is one-sided (high path efficiency, so few sellers lean against it) forces late shorts to cover into thin offers; a churning break does not. This varies the entry dimension ",
-"note": "{\"name\": \"efficient_approach_break\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.2528625}"
 }
 ],
 "history": [
@@ -4344,6 +4344,17 @@
 "cpu": 81.3,
 "gpu": 2,
 "free_gb": 142.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794365615.130111,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.8,
+"gpu": 2,
+"free_gb": 184.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
