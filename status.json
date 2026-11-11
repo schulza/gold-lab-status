@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 17:54:20 UTC",
+"generated_at": "2026-11-11 18:09:43 UTC",
 "host": {
-"cpu_pct": 1.4,
+"cpu_pct": 1.0,
 "gpu_pct": 4,
-"free_gb": 184.2,
-"uptime": "up 12 days,  4:15, 2 users, load averages: 0.68 0.95 2.29",
-"load": "{ 0.68 0.95 2.29 }"
+"free_gb": 184.6,
+"uptime": "up 12 days,  4:30, 2 users, load averages: 1.41 0.92 1.27",
+"load": "{ 1.41 0.92 1.27 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T18:09",
+"name": "participation_break_riskmatched",
+"status": "accepted",
+"rationale": "The payer is still the range-top seller whose stop sits above the N-day high, who covers into a break on above-normal tick participation. The name `participation_break_exposure_matched` already exists, which is why my two earlier submissions failed with \"got []\".\nRATIONALE: This ",
+"note": "{\"name\": \"participation_break_riskmatched\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.144}"
+},
+{
 "ts": "2026-11-11T17:39",
 "name": "participation_break_exposure_matched",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the range-top short whose stop sits above the N-day high. They cover into a break that arrives on above-normal tick participation, and the matching removes the long-gold drift.\nRATIONALE: `gen_participation_break_exposure_matched.py` already exists with the requested",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-11T12:03",
-"name": "participation_break_drift_stripped",
-"status": "accepted",
-"rationale": "The payer is the range-top seller whose stop sits above the N-day high. That seller covers into a break that arrives on above-normal tick participation. The position is the break state minus its own trailing mean exposure, so the long-gold drift nets to roughly zero and only the ",
-"note": "{\"name\": \"participation_break_drift_stripped\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.144}"
 }
 ],
 "history": [
-{
-"t": 1794246973.8994849,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 125.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794247947.588358,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 1.4,
 "gpu": 4,
 "free_gb": 184.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794420583.635691,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.0,
+"gpu": 4,
+"free_gb": 184.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
