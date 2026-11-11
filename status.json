@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 04:44:57 UTC",
+"generated_at": "2026-11-11 05:00:23 UTC",
 "host": {
 "cpu_pct": 3.5,
-"gpu_pct": 14,
-"free_gb": 185.8,
-"uptime": "up 11 days, 15:05, 2 users, load averages: 8.36 29.85 34.24",
-"load": "{ 8.36 29.85 34.24 }"
+"gpu_pct": 2,
+"free_gb": 181.4,
+"uptime": "up 11 days, 15:21, 2 users, load averages: 1.96 3.01 12.69",
+"load": "{ 1.96 3.01 12.69 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T04:55",
+"name": "prior_day_high_break_hold",
+"status": "accepted",
+"rationale": "Your gate (a seller_* or cover_* row with n above 1,000) is not met. A reply without a python block is rejected, so this is the single entry-varying family you allowed, and it stays off the seller/cover dimension.\nPayer: shorts and fade traders whose buy-stops sit just above the ",
+"note": "{\"name\": \"prior_day_high_break_hold\", \"grid\": 60, \"sec_per_param\": 0.0, \"active_frac\": 0.46243125}"
+},
+{
 "ts": "2026-11-11T04:24",
 "name": "range_relative_break_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the retest shorts: they sell the first pullback to a broken multi-day high, expecting a failed break, and their stops sit just above it. A close above the pullback bar's high squeezes them, and the position is held until price loses the pullback low.\nRATIONALE: This ",
 "note": "{\"name\": \"higher_low_retest_hold\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.05848125}"
-},
-{
-"ts": "2026-11-10T22:47",
-"name": "stepwise_buying_break_hold",
-"status": "rejected",
-"rationale": "Payer is the fader and short seller who sold into the N-day high and has a stop resting just above it. A break reached through many consecutive up-bars is steady buying that squeezes them. A break reached in one jump bar is a liquidity vacuum that tends to revert.\nRATIONALE: Only",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794200006.8505301,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 117.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794201381.8161018,
 "total": 31310831,
@@ -4366,6 +4355,17 @@
 "cpu": 3.5,
 "gpu": 14,
 "free_gb": 185.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794373223.216776,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.5,
+"gpu": 2,
+"free_gb": 181.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
