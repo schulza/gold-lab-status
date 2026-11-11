@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 15:04:54 UTC",
+"generated_at": "2026-11-11 15:20:17 UTC",
 "host": {
-"cpu_pct": 0.7,
-"gpu_pct": 4,
-"free_gb": 184.2,
-"uptime": "up 12 days,  1:25, 2 users, load averages: 0.58 0.81 0.82",
-"load": "{ 0.58 0.81 0.82 }"
+"cpu_pct": 1.4,
+"gpu_pct": 3,
+"free_gb": 183.8,
+"uptime": "up 12 days,  1:40, 2 users, load averages: 0.67 2.90 3.72",
+"load": "{ 0.67 2.90 3.72 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T15:06",
+"name": "participation_break_expanding_matched",
+"status": "accepted",
+"rationale": "Payer is the range-top seller whose stop sits above the high. They cover into an N-day-high break on above-normal tick participation, the same entry as `participation_break_hold`.\nRATIONALE: `participation_break_exposure_matched` already exists in the loader, which is why the las",
+"note": "{\"name\": \"participation_break_expanding_matched\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.072}"
+},
+{
 "ts": "2026-11-11T14:35",
 "name": "participation_break_exposure_matched",
 "status": "rejected",
@@ -2446,13 +2453,6 @@
 "status": "rejected",
 "rationale": "The payer is speculative futures shorts in a crowded position (COT net z-score deeply negative) whose macro thesis is rates-driven, and who get forced to cover once the 10y real yield falls. Crowding cuts their risk budget, the yield move breaks the thesis, and they cover into a ",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-11T09:00",
-"name": "participation_break_exposure_matched",
-"status": "rejected",
-"rationale": "The payer is the range-top seller whose stop sits above the high. They cover into an N-day-high break that arrives on above-normal tick participation. The signal is the break state minus its own trailing mean exposure, so the long-gold drift earns zero and only the squeeze timing",
-"note": "sandbox: AssertionError: expected exactly one new family, got []"
 }
 ],
 "history": [
@@ -4465,6 +4465,17 @@
 "cpu": 0.7,
 "gpu": 4,
 "free_gb": 184.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794410417.740903,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.4,
+"gpu": 3,
+"free_gb": 183.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
