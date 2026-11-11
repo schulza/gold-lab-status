@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 01:49:25 UTC",
+"generated_at": "2026-11-11 02:05:36 UTC",
 "host": {
-"cpu_pct": 99.9,
-"gpu_pct": 18,
-"free_gb": 140.8,
-"uptime": "up 11 days, 12:09, 2 users, load averages: 39.83 38.85 39.14",
-"load": "{ 39.83 38.85 39.14 }"
+"cpu_pct": 100.0,
+"gpu_pct": 2,
+"free_gb": 118.1,
+"uptime": "up 11 days, 12:25, 2 users, load averages: 40.15 40.59 40.46",
+"load": "{ 40.15 40.59 40.46 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T01:51",
+"name": "bought_approach_break_hold",
+"status": "rejected",
+"rationale": "Entry varies, not the exit, as the direction asks. It tests the \"who buys the break\" dimension: a new N-day high only counts when the buyers' share of travelled distance (\u03a3(close\u2212low)/\u03a3(high\u2212low) over the m bars before the break) shows the approach was bought, not drifted. Payer:",
+"note": "sandbox: AssertionError: zu speicherhungrig: 54 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-11T01:20",
 "name": "squeezed_seller_break_hold",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Seller_* and cover_* still show n=0, so your gate hasn't opened. A reply with no python block is rejected, so this is one entry-varying family, not a sibling of seller/cover or the break-hold cluster.\nRATIONALE: Payer is the crowded non-commercial long. When real yields rise shar",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-10T19:43",
-"name": "asia_break_london_confirm",
-"status": "accepted",
-"rationale": "Payer is Asia-session fade traders and range-sellers who sold a thin overnight break of the N-day high. London flow arrives afterwards and either confirms the break or squeezes them.\nRATIONALE: It varies only the entry and is not a seller_* or cover_* sibling. The long is held on",
-"note": "{\"name\": \"asia_break_london_confirm\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.00020625}"
 }
 ],
 "history": [
-{
-"t": 1794189138.247434,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 130.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794190188.8692029,
 "total": 31310831,
@@ -4344,6 +4333,17 @@
 "cpu": 99.9,
 "gpu": 18,
 "free_gb": 140.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794362736.9775202,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 118.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
