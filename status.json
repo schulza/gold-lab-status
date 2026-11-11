@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-11 07:23:06 UTC",
+"generated_at": "2026-11-11 07:38:29 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 0.7,
 "gpu_pct": 2,
-"free_gb": 142.4,
-"uptime": "up 11 days, 17:43, 2 users, load averages: 42.85 42.81 41.18",
-"load": "{ 42.85 42.81 41.18 }"
+"free_gb": 185.9,
+"uptime": "up 11 days, 17:59, 2 users, load averages: 0.52 2.71 14.55",
+"load": "{ 0.52 2.71 14.55 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-11T07:28",
+"name": "participation_break_exposure_matched",
+"status": "accepted",
+"rationale": "The payer is the range-top seller whose stop sits above the high. They cover into an N-day-high break that arrives on above-normal tick participation, the same entry as `participation_break_hold`.\nRATIONALE: The position is the break state minus its own trailing mean exposure, so",
+"note": "{\"name\": \"participation_break_exposure_matched\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.072}"
+},
+{
 "ts": "2026-11-11T06:58",
 "name": "participation_break_demeaned",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Entry varies, not the exit, as the direction asks. It tests the \"who buys the break\" dimension: a new N-day high only counts when the buyers' share of travelled distance (\u03a3(close\u2212low)/\u03a3(high\u2212low) over the m bars before the break) shows the approach was bought, not drifted. Payer:",
 "note": "sandbox: AssertionError: zu speicherhungrig: 54 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-11-11T01:20",
-"name": "squeezed_seller_break_hold",
-"status": "rejected",
-"rationale": "Payer is short sellers who stacked up through a sell-dominated range, then get squeezed when the N-day high breaks. Their cover orders are forced and price-insensitive. The entry differs from the participative-break cluster: it requires the range's own down-bar share to be high, ",
-"note": "sandbox: NameError: name 'FAMILIES' is not defined"
 }
 ],
 "history": [
-{
-"t": 1794209562.24512,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 76.4,
-"gpu": 2,
-"free_gb": 174.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794210885.582742,
 "total": 31310831,
@@ -4377,6 +4366,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 142.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794382709.0957341,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.7,
+"gpu": 2,
+"free_gb": 185.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
