@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-12 08:56:24 UTC",
+"generated_at": "2026-11-12 09:11:46 UTC",
 "host": {
-"cpu_pct": 0.8,
+"cpu_pct": 0.9,
 "gpu_pct": 4,
-"free_gb": 187.0,
-"uptime": "up 12 days, 19:17, 2 users, load averages: 0.58 0.69 0.72",
-"load": "{ 0.58 0.69 0.72 }"
+"free_gb": 186.8,
+"uptime": "up 12 days, 19:32, 2 users, load averages: 0.49 0.69 0.69",
+"load": "{ 0.49 0.69 0.69 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-12T08:57",
+"name": "spread_normalise_refund_matched",
+"status": "rejected",
+"rationale": "Payer is the liquidity taker who sells into a dealer-widened spread (spread at least k times its multi-day baseline) and pays the inventory premium. When the spread normalises after a price drop, the dealer who bought that flow collects the refund and the price drift to the long ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-12T08:26",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the passive executor on the other side of a persistent one-sided parent order, usually a sliced buy programme. It leans against the buying, and the flow keeps printing up-bars until the parent is filled.\nRATIONALE: The entry is a trailing up-bar share above a thresho",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-12T02:50",
-"name": "participation_break_basis_matched_hold",
-"status": "accepted",
-"rationale": "The payer is the range-top seller whose stop sits above the N-day high. They cover into a break that arrives on above-normal tick participation, the same entry as `participation_break_hold` (77% / 33.01).\nRATIONALE: The matching here differs from the existing netted and demeaned ",
-"note": "{\"name\": \"participation_break_basis_matched_hold\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.046575}"
 }
 ],
 "history": [
-{
-"t": 1794301100.57311,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.1,
-"gpu": 0,
-"free_gb": 183.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794302023.6003258,
 "total": 31310831,
@@ -4498,6 +4487,17 @@
 "cpu": 0.8,
 "gpu": 4,
 "free_gb": 187.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794474706.918988,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.9,
+"gpu": 4,
+"free_gb": 186.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
