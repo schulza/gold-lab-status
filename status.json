@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-12 00:10:51 UTC",
+"generated_at": "2026-11-12 00:26:57 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 3,
-"free_gb": 117.3,
-"uptime": "up 12 days, 10:30, 2 users, load averages: 42.90 42.49 36.92",
-"load": "{ 42.90 42.49 36.92 }"
+"free_gb": 115.5,
+"uptime": "up 12 days, 10:46, 2 users, load averages: 40.52 41.34 39.83",
+"load": "{ 40.52 41.34 39.83 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-12T00:17",
+"name": "participation_break_flat_duty_hold",
+"status": "rejected",
+"rationale": "The payer is the holders and shorts anchored under an N-day high, who sell into a breakout that comes with a day of above-normal participation, so supply at the top gets absorbed (the same payer as `participation_break_hold`).\nRATIONALE: The exposure is `pos - trailing duty cycle",
+"note": "sandbox: AssertionError: zu speicherhungrig: 57 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-11T23:47",
 "name": "participation_break_slot_matched_hold",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is unchanged: the range-top seller whose stop sits above the N-day high and who covers into a break on above-normal tick participation. The position is the break state minus an exponentially weighted trailing mean of itself, so the constant long-gold drift earns about zero.",
 "note": "{\"name\": \"participation_break_ewm_matched\", \"grid\": 48, \"sec_per_param\": 0.004, \"active_frac\": 0.1703875}"
-},
-{
-"ts": "2026-11-11T18:09",
-"name": "participation_break_riskmatched",
-"status": "accepted",
-"rationale": "The payer is still the range-top seller whose stop sits above the N-day high, who covers into a break on above-normal tick participation. The name `participation_break_exposure_matched` already exists, which is why my two earlier submissions failed with \"got []\".\nRATIONALE: This ",
-"note": "{\"name\": \"participation_break_riskmatched\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.144}"
 }
 ],
 "history": [
-{
-"t": 1794269930.052938,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 135.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794270893.9908109,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 100.0,
 "gpu": 3,
 "free_gb": 117.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794443217.6116989,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 3,
+"free_gb": 115.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
