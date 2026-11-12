@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-12 09:57:54 UTC",
+"generated_at": "2026-11-12 10:13:16 UTC",
 "host": {
-"cpu_pct": 0.7,
+"cpu_pct": 1.1,
 "gpu_pct": 4,
-"free_gb": 187.0,
-"uptime": "up 12 days, 20:18, 2 users, load averages: 0.48 0.64 0.69",
-"load": "{ 0.48 0.64 0.69 }"
+"free_gb": 186.6,
+"uptime": "up 12 days, 20:33, 2 users, load averages: 0.61 0.78 0.72",
+"load": "{ 0.61 0.78 0.72 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-12T09:59",
+"name": "leg_stall_absorption_resume",
+"status": "accepted",
+"rationale": "Payer is the passive liquidity provider who faded a fast leg with resting limit orders. A tight stall near the leg extreme shows a sliced parent order absorbing their inventory, and they cover into the resumption.\nRATIONALE: It trades the leg's direction only after the stall conf",
+"note": "{\"name\": \"leg_stall_absorption_resume\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.24236875}"
+},
+{
 "ts": "2026-11-12T09:28",
 "name": "capitulation_absorbed_long",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the range-top seller, a short or holder whose stop sits above the N-day high. Their stop-covering becomes forced buying when the break arrives on above-normal tick participation.\nRATIONALE: Position = break state minus its own trailing mean exposure over `xdays`. Thi",
 "note": "sandbox: AssertionError: expected exactly one new family, got []"
-},
-{
-"ts": "2026-11-12T03:51",
-"name": "participation_break_zero_mean_hold",
-"status": "accepted",
-"rationale": "The payer is the range-top seller, a short or holder whose stop sits above the N-day high. The stop turns into forced buying when a break comes with above-normal tick participation. The entry and the M-day-mean exit are the same as `participation_break_hold` (77% / 33.01).\nRATION",
-"note": "{\"name\": \"participation_break_zero_mean_hold\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.144}"
 }
 ],
 "history": [
-{
-"t": 1794304793.12207,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.0,
-"gpu": 2,
-"free_gb": 185.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794305716.184532,
 "total": 31310831,
@@ -4498,6 +4487,17 @@
 "cpu": 0.7,
 "gpu": 4,
 "free_gb": 187.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794478396.9594,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.1,
+"gpu": 4,
+"free_gb": 186.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
