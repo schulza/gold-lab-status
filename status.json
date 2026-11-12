@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-12 10:59:25 UTC",
+"generated_at": "2026-11-12 11:14:48 UTC",
 "host": {
-"cpu_pct": 0.7,
+"cpu_pct": 1.8,
 "gpu_pct": 4,
-"free_gb": 187.1,
-"uptime": "up 12 days, 21:20, 2 users, load averages: 0.54 0.70 0.73",
-"load": "{ 0.54 0.70 0.73 }"
+"free_gb": 186.9,
+"uptime": "up 12 days, 21:35, 2 users, load averages: 1.13 0.87 0.75",
+"load": "{ 1.13 0.87 0.75 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-12T11:00",
+"name": "stopout_symmetric_reversion",
+"status": "rejected",
+"rationale": "The payer is the stopped-out long whose forced sell hits a thin, wide-spread book at the low, and the mirror short squeezed into a thin book at the high. They pay the spread and the impact, and the book refunds it once the forced flow ends.\nRATIONALE: Long and short legs are each",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-12T10:30",
 "name": "forced_flow_two_sided_reversal",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the stopped-out long, forced by margin calls or stop cascades, who sells into a thin book after a run of mostly-down squared returns. The buyer absorbing that supply is paid when the book recovers.\nRATIONALE: This is `downside_exhaustion_hold` made exposure-matched. ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-12T04:52",
-"name": "participation_break_hold_exposure_neutral",
-"status": "accepted",
-"rationale": "The payer is the range-top seller whose stop sits above the N-day high. That seller covers into a break that arrives on above-normal tick participation, the same entry as `participation_break_hold` (77% / 33.01).\nRATIONALE: Position = break state minus its own trailing mean expos",
-"note": "{\"name\": \"participation_break_hold_exposure_neutral\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.072}"
 }
 ],
 "history": [
-{
-"t": 1794308489.010751,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.8,
-"gpu": 2,
-"free_gb": 185.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794309412.869693,
 "total": 31310831,
@@ -4498,6 +4487,17 @@
 "cpu": 0.7,
 "gpu": 4,
 "free_gb": 187.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794482088.618523,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.8,
+"gpu": 4,
+"free_gb": 186.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
