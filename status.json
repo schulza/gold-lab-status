@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-12 21:32:47 UTC",
+"generated_at": "2026-11-12 21:48:52 UTC",
 "host": {
-"cpu_pct": 4.0,
+"cpu_pct": 100.0,
 "gpu_pct": 3,
-"free_gb": 183.1,
-"uptime": "up 13 days,  7:53, 2 users, load averages: 34.41 42.39 43.28",
-"load": "{ 34.41 42.39 43.28 }"
+"free_gb": 159.1,
+"uptime": "up 13 days,  8:08, 2 users, load averages: 41.30 40.20 41.32",
+"load": "{ 41.30 40.20 41.32 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-12T21:47",
+"name": "stressed_capitulation_centered",
+"status": "rejected",
+"rationale": "The payer is the stopped-out or margin-called long who sells a multi-day capitulation low into a widened quote. The recovery goes to whoever supplies the bid while the spread is stressed, and the entry needs a downside-share extreme, price below its window mean, and spread above ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-12T21:16",
 "name": "seller_stop_exhaustion_centered",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the stopped-out long who sells the capitulation low into a thin book. The buyer who absorbs it earns the rebound, which shows up as downside-squared-return share rising above its own 20\u201360 day baseline while price is below its window mean.\nRATIONALE: Exposure-matching is",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-12T15:36",
-"name": null,
-"status": "rejected",
-"rationale": "The payer is the stopped-out long who sells a capitulation low into a thin book. A move of at least k sigma down over n bars, followed by the first up-bar, marks the end of forced selling, and the strategy buys the recovery for `hold` bars.\nRATIONALE: Exposure is netted against t",
-"note": "ast: name not allowed: getattr"
 }
 ],
 "history": [
-{
-"t": 1794346774.729287,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.6,
-"gpu": 19,
-"free_gb": 186.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794347698.11962,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 4.0,
 "gpu": 3,
 "free_gb": 183.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794520132.234405,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 3,
+"free_gb": 159.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
