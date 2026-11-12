@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-12 03:16:17 UTC",
+"generated_at": "2026-11-12 03:31:40 UTC",
 "host": {
-"cpu_pct": 0.8,
+"cpu_pct": 0.1,
 "gpu_pct": 4,
-"free_gb": 180.2,
-"uptime": "up 12 days, 13:36, 2 users, load averages: 0.42 0.82 0.79",
-"load": "{ 0.42 0.82 0.79 }"
+"free_gb": 180.3,
+"uptime": "up 12 days, 13:52, 2 users, load averages: 0.90 0.74 0.71",
+"load": "{ 0.90 0.74 0.71 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-12T03:21",
+"name": "upshare_persist_demeaned",
+"status": "rejected",
+"rationale": "The payer is the passive executor on the other side of a persistent one-sided parent order, usually a sliced buy programme. It leans against the buying, and the flow keeps printing up-bars until the parent is filled.\nRATIONALE: The entry is a trailing up-bar share above a thresho",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-12T02:50",
 "name": "participation_break_basis_matched_hold",
 "status": "accepted",
@@ -2446,13 +2453,6 @@
 "status": "accepted",
 "rationale": "Payer is the range-fade short whose stop sits above the N-day high. A break on high participation forces their covering and is held until close drops below its trailing mean.\nRATIONALE: Exposure matching: a trailing duty-cycle baseline short (f \u00d7 share of time in the position ove",
 "note": "{\"name\": \"participation_break_baseline_short\", \"grid\": 48, \"sec_per_param\": 0.001, \"active_frac\": 0.277375}"
-},
-{
-"ts": "2026-11-11T21:13",
-"name": "participation_break_duty_scaled_contrast",
-"status": "accepted",
-"rationale": "The payer is the range-top short whose stop sits above the N-day high. A break on above-normal participation is real cover-buying. A break on thin participation is stop-run noise that fades.\nRATIONALE: `participation_break_exposure_matched` already exists, so this uses a differen",
-"note": "{\"name\": \"participation_break_duty_scaled_contrast\", \"grid\": 48, \"sec_per_param\": 0.001, \"active_frac\": 0.046575}"
 }
 ],
 "history": [
@@ -4487,6 +4487,17 @@
 "cpu": 0.8,
 "gpu": 4,
 "free_gb": 180.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794454300.250711,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.1,
+"gpu": 4,
+"free_gb": 180.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
