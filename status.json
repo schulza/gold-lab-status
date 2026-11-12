@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-12 06:20:54 UTC",
+"generated_at": "2026-11-12 06:36:17 UTC",
 "host": {
-"cpu_pct": 0.7,
+"cpu_pct": 0.8,
 "gpu_pct": 4,
-"free_gb": 180.5,
-"uptime": "up 12 days, 16:41, 2 users, load averages: 0.83 0.88 0.79",
-"load": "{ 0.83 0.88 0.79 }"
+"free_gb": 180.0,
+"uptime": "up 12 days, 16:56, 2 users, load averages: 0.98 0.75 0.71",
+"load": "{ 0.98 0.75 0.71 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-12T06:24",
+"name": "upshare_persist_matched",
+"status": "accepted",
+"rationale": "The payer is the passive executor leaning against a sliced parent buy or sell. They keep supplying one side while most of the tick-weighted activity prints in the same direction.\nRATIONALE: The book is symmetric (long on persistent up-share, short on persistent down-share), and e",
+"note": "{\"name\": \"upshare_persist_matched\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.279825}"
+},
+{
 "ts": "2026-11-12T05:54",
 "name": "downside_exhaustion_matched",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the range-top seller whose stop sits above the N-day high. That seller covers into a break that arrives on above-normal tick participation.\nRATIONALE: Position = break state minus g \u00d7 its own trailing duty, with g in {0.5, 1.0}. The grid reads off how much of the 77%",
 "note": "{\"name\": \"participation_break_drift_hedged_hold\", \"grid\": 64, \"sec_per_param\": 0.0, \"active_frac\": 0.144}"
-},
-{
-"ts": "2026-11-12T00:17",
-"name": "participation_break_flat_duty_hold",
-"status": "rejected",
-"rationale": "The payer is the holders and shorts anchored under an N-day high, who sell into a breakout that comes with a day of above-normal participation, so supply at the top gets absorbed (the same payer as `participation_break_hold`).\nRATIONALE: The exposure is `pos - trailing duty cycle",
-"note": "sandbox: AssertionError: zu speicherhungrig: 57 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1794291863.538444,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.6,
-"gpu": 2,
-"free_gb": 191.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794292786.945371,
 "total": 31310831,
@@ -4498,6 +4487,17 @@
 "cpu": 0.7,
 "gpu": 4,
 "free_gb": 180.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794465377.326368,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.8,
+"gpu": 4,
+"free_gb": 180.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
