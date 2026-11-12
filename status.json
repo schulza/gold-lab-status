@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-12 18:03:39 UTC",
+"generated_at": "2026-11-12 18:19:43 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 3,
-"free_gb": 114.8,
-"uptime": "up 13 days,  4:23, 2 users, load averages: 40.84 40.99 40.10",
-"load": "{ 40.84 40.99 40.10 }"
+"free_gb": 144.1,
+"uptime": "up 13 days,  4:39, 2 users, load averages: 39.93 40.06 40.14",
+"load": "{ 39.93 40.06 40.14 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-12T18:11",
+"name": "upshare_baseline_symmetric",
+"status": "rejected",
+"rationale": "Payer is the passive executor leaning against a sliced parent order. Tick-weighted up-share runs persistently above or below its own slow baseline while a parent buy or sell is still being filled.\nRATIONALE: Exposure-matched by construction. The share is z-scored against its own ",
+"note": "sandbox: AssertionError: zu speicherhungrig: 44 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-12T17:40",
 "name": "downside_exhaustion_centered",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the stopped-out holder of either side. A persistent one-sided squared-return share, with price on the far side of its multi-day mean and a bounce or pullback already under way, marks forced flow that the patient counterparty is paid to absorb.\nRATIONALE: Drift is neutral",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-12T12:01",
-"name": "upshare_two_sided_persist",
-"status": "accepted",
-"rationale": "The payer is the passive executor who leans a limit order against a sliced parent buy (or sell). A persistent same-sign tick share with little net displacement means the parent still has size left, and that executor keeps selling the lift (or buying the dip) at a stale price.\nRAT",
-"note": "{\"name\": \"upshare_two_sided_persist\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.30545}"
 }
 ],
 "history": [
-{
-"t": 1794334515.285565,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 143.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794335439.540101,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 100.0,
 "gpu": 3,
 "free_gb": 114.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794507583.957484,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 3,
+"free_gb": 144.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
