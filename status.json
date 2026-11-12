@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-12 13:33:17 UTC",
+"generated_at": "2026-11-12 13:49:21 UTC",
 "host": {
-"cpu_pct": 4.3,
-"gpu_pct": 36,
-"free_gb": 180.9,
-"uptime": "up 12 days, 23:53, 2 users, load averages: 1.80 1.63 1.49",
-"load": "{ 1.80 1.63 1.49 }"
+"cpu_pct": 100.0,
+"gpu_pct": 2,
+"free_gb": 133.2,
+"uptime": "up 13 days, 9 mins, 2 users, load averages: 41.33 29.30 15.1",
+"load": "{ 41.33 29.30 15.12 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-12T13:33",
+"name": "downside_thin_book_bid_matched",
+"status": "rejected",
+"rationale": "Both matched versions the direction asks for already exist as unmeasured files (`gen_downside_exhaustion_matched.py`, `gen_upshare_persist_matched.py`), so I'm not writing a third neighbour. I'm keeping the payer, the stopped-out long who dumps into a thin book, and I'm using a d",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-12T13:03",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the stopped-out long who market-sells into a cascade low and pays the wide spread. Once the tick rate dries up after a k\u00b7ATR drawdown, the forced supply is gone and the position is held for a fixed number of bars.\nRATIONALE: It is not a neighbour of any break, flush, thi",
 "note": "{\"name\": \"activity_dryup_capitulation_bid\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.83314375}"
-},
-{
-"ts": "2026-11-12T07:25",
-"name": "stopout_thin_book_reversal",
-"status": "accepted",
-"rationale": "Payer is the stop-out in both directions: longs stopped out into a thin book at a capitulation low, and shorts stopped out into a thin book at a squeeze high. They cross a widened spread and move price against themselves, then the book refills.\nEntry needs three things together: ",
-"note": "{\"name\": \"stopout_thin_book_reversal\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.18285}"
 }
 ],
 "history": [
-{
-"t": 1794317754.142296,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.0,
-"gpu": 99,
-"free_gb": 157.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794318677.3504388,
 "total": 31310831,
@@ -4498,6 +4487,17 @@
 "cpu": 4.3,
 "gpu": 36,
 "free_gb": 180.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794491361.7608042,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 133.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
