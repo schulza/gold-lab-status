@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-12 21:00:42 UTC",
+"generated_at": "2026-11-12 21:17:01 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 3,
-"free_gb": 154.8,
-"uptime": "up 13 days,  7:20, 2 users, load averages: 41.82 40.94 40.29",
-"load": "{ 41.82 40.94 40.29 }"
+"free_gb": 154.3,
+"uptime": "up 13 days,  7:36, 2 users, load averages: 39.81 40.87 40.55",
+"load": "{ 39.81 40.87 40.55 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-12T21:16",
+"name": "seller_stop_exhaustion_centered",
+"status": "accepted",
+"rationale": "The payer is the stopped-out or margin-called long who dumps a multi-day capitulation low into a thin bid. Gold is the cleaner case than FX. The cascade is over when the window is still sell-dominated but the most recent slice of it is buyer-dominated. Buyers who absorbed the sup",
+"note": "{\"name\": \"seller_stop_exhaustion_centered\", \"grid\": 48, \"sec_per_param\": 0.006, \"active_frac\": 0.0919625}"
+},
+{
 "ts": "2026-11-12T20:45",
 "name": "upshare_sliced_symmetric",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the stopped-out long who sells a capitulation low into a thin book. A move of at least k sigma down over n bars, followed by the first up-bar, marks the end of forced selling, and the strategy buys the recovery for `hold` bars.\nRATIONALE: Exposure is netted against t",
 "note": "ast: name not allowed: getattr"
-},
-{
-"ts": "2026-11-12T15:06",
-"name": "stopout_share_z_matched",
-"status": "rejected",
-"rationale": "The payer is the stopped-out long who dumps into a thin book. The signal is the tick-weighted down-move share over `days`, measured as a z-score against its own trailing history rather than a fixed threshold. That means it fires in every regime, which addresses the earlier \"ident",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794344886.478934,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.6,
-"gpu": 2,
-"free_gb": 184.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794345850.835194,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 100.0,
 "gpu": 3,
 "free_gb": 154.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794518221.1134841,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 3,
+"free_gb": 154.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
