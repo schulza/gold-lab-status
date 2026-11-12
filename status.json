@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-12 15:54:37 UTC",
+"generated_at": "2026-11-12 16:10:47 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 3,
-"free_gb": 115.8,
-"uptime": "up 13 days,  2:14, 2 users, load averages: 40.97 36.56 24.23",
-"load": "{ 40.97 36.56 24.23 }"
+"free_gb": 126.9,
+"uptime": "up 13 days,  2:30, 2 users, load averages: 42.10 39.94 35.02",
+"load": "{ 42.10 39.94 35.02 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-12T16:07",
+"name": "capitulation_share_matched",
+"status": "rejected",
+"rationale": "Payer is the stopped-out long who sells the capitulation low into a thin book. The buyer who absorbs it earns the rebound, which shows up as downside-squared-return share rising above its own 20\u201360 day baseline while price is below its window mean.\nRATIONALE: Exposure-matching is",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-12T15:36",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Both exposure-matched versions the director asked for already exist (`upshare_persist_matched` accepted, `downside_exhaustion_matched` in `generated/`). A third long-only copy would be a parameter neighbour, so I'm proposing the two-sided mirror instead.\nRATIONALE: The payers are",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-12T09:59",
-"name": "leg_stall_absorption_resume",
-"status": "accepted",
-"rationale": "Payer is the passive liquidity provider who faded a fast leg with resting limit orders. A tight stall near the leg extreme shows a sliced parent order absorbing their inventory, and they cover into the resumption.\nRATIONALE: It trades the leg's direction only after the stall conf",
-"note": "{\"name\": \"leg_stall_absorption_resume\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.24236875}"
 }
 ],
 "history": [
-{
-"t": 1794326986.9245582,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.4,
-"gpu": 2,
-"free_gb": 184.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794327910.157135,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 100.0,
 "gpu": 3,
 "free_gb": 115.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794499847.3324192,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 3,
+"free_gb": 126.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
