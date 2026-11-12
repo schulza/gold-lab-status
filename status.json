@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-12 05:19:22 UTC",
+"generated_at": "2026-11-12 05:34:45 UTC",
 "host": {
 "cpu_pct": 0.8,
 "gpu_pct": 4,
-"free_gb": 180.1,
-"uptime": "up 12 days, 15:40, 2 users, load averages: 1.06 0.99 0.86",
-"load": "{ 1.06 0.99 0.86 }"
+"free_gb": 180.5,
+"uptime": "up 12 days, 15:55, 2 users, load averages: 0.83 0.77 0.76",
+"load": "{ 0.83 0.77 0.76 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-12T05:23",
+"name": "forced_seller_timing_matched",
+"status": "rejected",
+"rationale": "The payer is the stopped-out long, forced by margin calls or stop cascades, who sells into a thin book after a run of mostly-down squared returns. The buyer absorbing that supply is paid when the book recovers.\nRATIONALE: This is `downside_exhaustion_hold` made exposure-matched. ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-12T04:52",
 "name": "participation_break_hold_exposure_neutral",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the range-top seller whose stop sits above the N-day high. They are forced to cover into a break that arrives on participation above the same clock slot's norm. Slot-normalising the ratio removes the intraday-clock effect that the existing `day_part / long_avg` ratio",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-11T23:16",
-"name": "participation_break_residual_hold",
-"status": "accepted",
-"rationale": "The payer is the range-fade short whose stop sits above the N-day high. Their covering is the squeeze this strategy trades, and it is larger when participation is high.\nRATIONALE: Earlier matching removed a trailing mean of the exposure, which removes the drift but not the break ",
-"note": "{\"name\": \"participation_break_residual_hold\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.04081875}"
 }
 ],
 "history": [
-{
-"t": 1794288170.523754,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.3,
-"gpu": 2,
-"free_gb": 185.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794289094.01178,
 "total": 31310831,
@@ -4498,6 +4487,17 @@
 "cpu": 0.8,
 "gpu": 4,
 "free_gb": 180.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794461685.250249,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.8,
+"gpu": 4,
+"free_gb": 180.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
