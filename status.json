@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-12 02:45:31 UTC",
+"generated_at": "2026-11-12 03:00:54 UTC",
 "host": {
-"cpu_pct": 0.8,
+"cpu_pct": 0.3,
 "gpu_pct": 4,
-"free_gb": 180.4,
-"uptime": "up 12 days, 13:06, 2 users, load averages: 0.44 0.59 0.68",
-"load": "{ 0.44 0.59 0.68 }"
+"free_gb": 180.6,
+"uptime": "up 12 days, 13:21, 2 users, load averages: 0.60 0.67 0.71",
+"load": "{ 0.60 0.67 0.71 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-12T02:50",
+"name": "participation_break_basis_matched_hold",
+"status": "accepted",
+"rationale": "The payer is the range-top seller whose stop sits above the N-day high. They cover into a break that arrives on above-normal tick participation, the same entry as `participation_break_hold` (77% / 33.01).\nRATIONALE: The matching here differs from the existing netted and demeaned ",
+"note": "{\"name\": \"participation_break_basis_matched_hold\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.046575}"
+},
+{
 "ts": "2026-11-12T02:20",
 "name": "participation_break_plain_netted_hold",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the range-top short whose stop sits above the N-day high. A break on above-normal participation is real cover-buying. A break on thin participation is stop-run noise that fades.\nRATIONALE: `participation_break_exposure_matched` already exists, so this uses a differen",
 "note": "{\"name\": \"participation_break_duty_scaled_contrast\", \"grid\": 48, \"sec_per_param\": 0.001, \"active_frac\": 0.046575}"
-},
-{
-"ts": "2026-11-11T20:42",
-"name": "participation_break_two_sided_hold",
-"status": "accepted",
-"rationale": "The payer is range-edge sellers and buyers with stops beyond the extreme (shorts above the N-day high, longs below the N-day low). When a break comes on above-normal tick participation, they cover or liquidate into it.\nRATIONALE: This is the two-sided version of `participation_br",
-"note": "{\"name\": \"participation_break_two_sided_hold\", \"grid\": 48, \"sec_per_param\": 0.001, \"active_frac\": 0.2951375}"
 }
 ],
 "history": [
-{
-"t": 1794279574.041012,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 143.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794280540.655125,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 0.8,
 "gpu": 4,
 "free_gb": 180.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794452454.066903,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.3,
+"gpu": 4,
+"free_gb": 180.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
