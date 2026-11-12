@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-12 20:44:33 UTC",
+"generated_at": "2026-11-12 21:00:42 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 3,
-"free_gb": 151.7,
-"uptime": "up 13 days,  7:04, 2 users, load averages: 37.70 35.98 38.25",
-"load": "{ 37.70 35.98 38.25 }"
+"free_gb": 154.8,
+"uptime": "up 13 days,  7:20, 2 users, load averages: 41.82 40.94 40.29",
+"load": "{ 41.82 40.94 40.29 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-12T20:45",
+"name": "upshare_sliced_symmetric",
+"status": "accepted",
+"rationale": "Payer is the passive executor leaning against a sliced parent order, on both sides. Buyers fill a persistent parent buy and sellers a parent sell, so the up-share of tick-weighted moves stays tilted at both the full and the half horizon.\nRATIONALE: The family is sign-symmetric (l",
+"note": "{\"name\": \"upshare_sliced_symmetric\", \"grid\": 36, \"sec_per_param\": 0.001, \"active_frac\": 0.3168375}"
+},
+{
 "ts": "2026-11-12T20:14",
 "name": "block_persist_stale_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the stopped-out long who dumps into a thin book. The signal is the tick-weighted down-move share over `days`, measured as a z-score against its own trailing history rather than a fixed threshold. That means it fires in every regime, which addresses the earlier \"ident",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-12T14:35",
-"name": "downside_exhaustion_matched_book",
-"status": "rejected",
-"rationale": "The payer is the stopped-out long who sells the capitulation low into a thin book. Persistent downside-variance share, with price below its multi-day mean, marks that forced supply, and the bid that absorbs it earns the refund.\nRATIONALE: This is the exposure-matched version of `",
-"note": "sandbox: AssertionError: zu speicherhungrig: 43 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1794343962.633843,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 15,
-"free_gb": 145.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794344886.478934,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 100.0,
 "gpu": 3,
 "free_gb": 151.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794517242.862894,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 3,
+"free_gb": 154.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
