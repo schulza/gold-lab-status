@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-12 04:17:49 UTC",
+"generated_at": "2026-11-12 04:33:12 UTC",
 "host": {
-"cpu_pct": 1.2,
+"cpu_pct": 0.6,
 "gpu_pct": 4,
-"free_gb": 180.3,
-"uptime": "up 12 days, 14:38, 2 users, load averages: 0.90 0.97 0.82",
-"load": "{ 0.90 0.97 0.82 }"
+"free_gb": 180.5,
+"uptime": "up 12 days, 14:53, 2 users, load averages: 0.65 0.68 0.70",
+"load": "{ 0.65 0.68 0.70 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-12T04:22",
+"name": "participation_break_exposure_matched",
+"status": "rejected",
+"rationale": "The payer is the range-top seller, a short or holder whose stop sits above the N-day high. Their stop-covering becomes forced buying when the break arrives on above-normal tick participation.\nRATIONALE: Position = break state minus its own trailing mean exposure over `xdays`. Thi",
+"note": "sandbox: AssertionError: expected exactly one new family, got []"
+},
+{
 "ts": "2026-11-12T03:51",
 "name": "participation_break_zero_mean_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the range-top seller whose stop sits above the N-day high. They cover into a break that arrives on above-normal tick participation, the same entry as `participation_break_hold` (77% / 33.01).\nRATIONALE: The position is the break state minus its own trailing mean expo",
 "note": "{\"name\": \"participation_squeeze_netted_hold\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.072}"
-},
-{
-"ts": "2026-11-11T22:15",
-"name": "participation_break_exposure_matched",
-"status": "rejected",
-"rationale": "The payer is the range-top seller whose stop sits above the high. They cover into an N-day-high break that arrives on above-normal tick participation, which is the same entry as `participation_break_hold`.\nRATIONALE: The position is the break state minus its own trailing mean exp",
-"note": "sandbox: AssertionError: expected exactly one new family, got []"
 }
 ],
 "history": [
-{
-"t": 1794284351.676831,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 159.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794285318.230724,
 "total": 31310831,
@@ -4498,6 +4487,17 @@
 "cpu": 1.2,
 "gpu": 4,
 "free_gb": 180.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794457992.747489,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.6,
+"gpu": 4,
+"free_gb": 180.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
