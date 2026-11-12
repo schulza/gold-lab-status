@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-12 07:54:54 UTC",
+"generated_at": "2026-11-12 08:10:16 UTC",
 "host": {
-"cpu_pct": 0.8,
+"cpu_pct": 0.7,
 "gpu_pct": 4,
-"free_gb": 187.4,
-"uptime": "up 12 days, 18:15, 2 users, load averages: 0.59 0.65 0.70",
-"load": "{ 0.59 0.65 0.70 }"
+"free_gb": 186.9,
+"uptime": "up 12 days, 18:30, 2 users, load averages: 0.35 0.74 0.76",
+"load": "{ 0.35 0.74 0.76 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-12T07:56",
+"name": "activity_dryup_capitulation_bid",
+"status": "accepted",
+"rationale": "Payer is the stopped-out long who market-sells into a cascade low and pays the wide spread. Once the tick rate dries up after a k\u00b7ATR drawdown, the forced supply is gone and the position is held for a fixed number of bars.\nRATIONALE: It is not a neighbour of any break, flush, thi",
+"note": "{\"name\": \"activity_dryup_capitulation_bid\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.83314375}"
+},
+{
 "ts": "2026-11-12T07:25",
 "name": "stopout_thin_book_reversal",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the range-top seller whose stop sits above the N-day high. That seller covers into a break that arrives on above-normal tick participation, which is the squeeze.\nRATIONALE: Position = participation-confirmed break state minus g \u00d7 (its trailing duty \u00f7 the plain break'",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-12T01:49",
-"name": "participation_break_captured_drift_hedged",
-"status": "rejected",
-"rationale": "The payer is the range-top seller whose stop sits above the N-day high. That seller covers into a break that arrives on above-normal tick participation. The position is the break state minus a hedge equal to the share of the trailing long-gold drift that the break state actually ",
-"note": "sandbox: AssertionError: zu speicherhungrig: 48 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1794297402.6076748,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.2,
-"gpu": 2,
-"free_gb": 186.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794298325.684138,
 "total": 31310831,
@@ -4498,6 +4487,17 @@
 "cpu": 0.8,
 "gpu": 4,
 "free_gb": 187.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794471016.689409,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.7,
+"gpu": 4,
+"free_gb": 186.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
