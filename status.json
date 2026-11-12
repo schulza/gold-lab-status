@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-12 22:04:15 UTC",
+"generated_at": "2026-11-12 22:19:40 UTC",
 "host": {
-"cpu_pct": 3.3,
+"cpu_pct": 3.4,
 "gpu_pct": 3,
-"free_gb": 179.5,
-"uptime": "up 13 days,  8:24, 2 users, load averages: 1.80 3.65 15.37",
-"load": "{ 1.80 3.65 15.37 }"
+"free_gb": 179.9,
+"uptime": "up 13 days,  8:40, 2 users, load averages: 1.58 1.60 6.19",
+"load": "{ 1.58 1.60 6.19 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-12T22:18",
+"name": "downside_imbalance_matched",
+"status": "accepted",
+"rationale": "The payer is the stopped-out long who sells the capitulation low into a thin bid. The signal is how unusual the downside share of squared returns is against its own recent history, not the absolute 0.5 cut-off that `downside_exhaustion_hold` uses. The long entry also needs price ",
+"note": "{\"name\": \"downside_imbalance_matched\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.5303}"
+},
+{
 "ts": "2026-11-12T21:47",
 "name": "stressed_capitulation_centered",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the stopped-out long who sells the capitulation low into a thin book; a high downside share of squared returns while price sits under its multi-day mean marks that forced supply, and the buyer who absorbs it gets the recovery. This is the 77%-positive downside_exhaustion",
 "note": "sandbox: AssertionError: expected exactly one new family, got []"
-},
-{
-"ts": "2026-11-12T16:07",
-"name": "capitulation_share_matched",
-"status": "rejected",
-"rationale": "Payer is the stopped-out long who sells the capitulation low into a thin book. The buyer who absorbs it earns the rebound, which shows up as downside-squared-return share rising above its own 20\u201360 day baseline while price is below its window mean.\nRATIONALE: Exposure-matching is",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794348621.6328561,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.9,
-"gpu": 2,
-"free_gb": 180.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794349545.3344839,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 3.3,
 "gpu": 3,
 "free_gb": 179.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794521980.046837,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.4,
+"gpu": 3,
+"free_gb": 179.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
