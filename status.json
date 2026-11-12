@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-12 12:31:42 UTC",
+"generated_at": "2026-11-12 12:47:05 UTC",
 "host": {
-"cpu_pct": 0.9,
-"gpu_pct": 4,
-"free_gb": 187.1,
-"uptime": "up 12 days, 22:52, 2 users, load averages: 0.57 0.63 0.68",
-"load": "{ 0.57 0.63 0.68 }"
+"cpu_pct": 2.4,
+"gpu_pct": 15,
+"free_gb": 181.2,
+"uptime": "up 12 days, 23:07, 2 users, load averages: 1.04 1.42 1.21",
+"load": "{ 1.04 1.42 1.21 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-12T12:32",
+"name": "forced_flow_mirror_hold",
+"status": "rejected",
+"rationale": "Payer is the stopped-out holder of either side. A persistent one-sided squared-return share, with price on the far side of its multi-day mean and a bounce or pullback already under way, marks forced flow that the patient counterparty is paid to absorb.\nRATIONALE: Drift is neutral",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-12T12:01",
 "name": "upshare_two_sided_persist",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the leveraged speculative long (CFTC non-commercials) who was washed out of gold into a positioning trough while real yields were falling. The carry-cost pressure that forced the exit has already reversed, but the position is rebuilt slowly through margin and mandate cyc",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-12T06:24",
-"name": "upshare_persist_matched",
-"status": "accepted",
-"rationale": "The payer is the passive executor leaning against a sliced parent buy or sell. They keep supplying one side while most of the tick-weighted activity prints in the same direction.\nRATIONALE: The book is symmetric (long on persistent up-share, short on persistent down-share), and e",
-"note": "{\"name\": \"upshare_persist_matched\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.279825}"
 }
 ],
 "history": [
-{
-"t": 1794314054.5394108,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.5,
-"gpu": 2,
-"free_gb": 186.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794314977.701341,
 "total": 31310831,
@@ -4498,6 +4487,17 @@
 "cpu": 0.9,
 "gpu": 4,
 "free_gb": 187.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794487625.805422,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 2.4,
+"gpu": 15,
+"free_gb": 181.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
