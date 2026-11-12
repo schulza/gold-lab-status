@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-12 14:52:26 UTC",
+"generated_at": "2026-11-12 15:07:49 UTC",
 "host": {
-"cpu_pct": 3.6,
+"cpu_pct": 3.7,
 "gpu_pct": 3,
-"free_gb": 177.9,
-"uptime": "up 13 days,  1:13, 2 users, load averages: 2.00 4.76 17.43",
-"load": "{ 2.00 4.76 17.43 }"
+"free_gb": 178.4,
+"uptime": "up 13 days,  1:28, 2 users, load averages: 1.33 1.56 6.83",
+"load": "{ 1.33 1.56 6.83 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-12T15:06",
+"name": "stopout_share_z_matched",
+"status": "rejected",
+"rationale": "The payer is the stopped-out long who dumps into a thin book. The signal is the tick-weighted down-move share over `days`, measured as a z-score against its own trailing history rather than a fixed threshold. That means it fires in every regime, which addresses the earlier \"ident",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-12T14:35",
 "name": "downside_exhaustion_matched_book",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the forced seller (a stopped-out long or margin liquidation) who dumps into a one-directional, high-efficiency down-leg and sells the low. I hold long only after a short, partial rebound shows the selling has been absorbed. The entry is a leg-ending-c-bars-ago plus rebou",
 "note": "{\"name\": \"capitulation_absorbed_long\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.2580875}"
-},
-{
-"ts": "2026-11-12T08:57",
-"name": "spread_normalise_refund_matched",
-"status": "rejected",
-"rationale": "Payer is the liquidity taker who sells into a dealer-widened spread (spread at least k times its multi-day baseline) and pays the inventory premium. When the spread normalises after a price drop, the dealer who bought that flow collects the refund and the price drift to the long ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794322370.3777568,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.7,
-"gpu": 2,
-"free_gb": 185.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794323293.639659,
 "total": 31310831,
@@ -4498,6 +4487,17 @@
 "cpu": 3.6,
 "gpu": 3,
 "free_gb": 177.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794496069.2746282,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.7,
+"gpu": 3,
+"free_gb": 178.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
