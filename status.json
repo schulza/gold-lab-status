@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-12 14:21:02 UTC",
+"generated_at": "2026-11-12 14:37:01 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 3,
-"free_gb": 134.6,
-"uptime": "up 13 days, 41 mins, 2 users, load averages: 42.51 40.35 37.",
-"load": "{ 42.51 40.35 37.72 }"
+"gpu_pct": 11,
+"free_gb": 134.1,
+"uptime": "up 13 days, 57 mins, 2 users, load averages: 40.91 42.33 40.",
+"load": "{ 40.91 42.33 40.86 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-12T14:35",
+"name": "downside_exhaustion_matched_book",
+"status": "rejected",
+"rationale": "The payer is the stopped-out long who sells the capitulation low into a thin book. Persistent downside-variance share, with price below its multi-day mean, marks that forced supply, and the bid that absorbs it earns the refund.\nRATIONALE: This is the exposure-matched version of `",
+"note": "sandbox: AssertionError: zu speicherhungrig: 43 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-12T14:04",
 "name": "sell_exhaustion_netted_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the liquidity taker who sells into a dealer-widened spread (spread at least k times its multi-day baseline) and pays the inventory premium. When the spread normalises after a price drop, the dealer who bought that flow collects the refund and the price drift to the long ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-12T08:26",
-"name": null,
-"status": "rejected",
-"rationale": "Both directed families (downside_exhaustion and upshare_persist) already have accepted exposure-matched versions, and they are unmeasured only because the loader scans at process start. I'm proposing a different payer instead of another break or matched variant.\nRATIONALE: The pa",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1794320524.043681,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.7,
-"gpu": 2,
-"free_gb": 186.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794321447.366805,
 "total": 31310831,
@@ -4498,6 +4487,17 @@
 "cpu": 100.0,
 "gpu": 3,
 "free_gb": 134.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794494221.959216,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 11,
+"free_gb": 134.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
