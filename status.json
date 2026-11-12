@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-12 11:30:11 UTC",
+"generated_at": "2026-11-12 11:45:33 UTC",
 "host": {
 "cpu_pct": 0.6,
 "gpu_pct": 4,
-"free_gb": 186.8,
-"uptime": "up 12 days, 21:50, 2 users, load averages: 1.02 0.76 0.70",
-"load": "{ 1.02 0.76 0.70 }"
+"free_gb": 186.9,
+"uptime": "up 12 days, 22:06, 2 users, load averages: 0.31 0.55 0.66",
+"load": "{ 0.31 0.55 0.66 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-12T11:31",
+"name": "upshare_deviation_matched",
+"status": "accepted",
+"rationale": "The payer is the passive executor leaning against a sliced parent order. They sell into persistent tick-weighted buying, or buy into persistent selling, and the parent keeps getting filled as the execution schedule continues.\nRATIONALE: The up-share is measured against its own tr",
+"note": "{\"name\": \"upshare_deviation_matched\", \"grid\": 36, \"sec_per_param\": 0.0, \"active_frac\": 0.3704125}"
+},
+{
 "ts": "2026-11-12T11:00",
 "name": "stopout_symmetric_reversion",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the stopped-out long who sells into the capitulation low. Persistent downside variance share with price below its multi-day mean marks that forced supply, and the buyer who absorbs it earns the refund once the bounce starts.\nRATIONALE: Exposure-matched, per the director'",
 "note": "{\"name\": \"downside_exhaustion_matched\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.851475}"
-},
-{
-"ts": "2026-11-12T05:23",
-"name": "forced_seller_timing_matched",
-"status": "rejected",
-"rationale": "The payer is the stopped-out long, forced by margin calls or stop cascades, who sells into a thin book after a run of mostly-down squared returns. The buyer absorbing that supply is paid when the book recovers.\nRATIONALE: This is `downside_exhaustion_hold` made exposure-matched. ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794310349.958784,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 89.7,
-"gpu": 2,
-"free_gb": 146.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794311282.940534,
 "total": 31310831,
@@ -4498,6 +4487,17 @@
 "cpu": 0.6,
 "gpu": 4,
 "free_gb": 186.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794483933.946985,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.6,
+"gpu": 4,
+"free_gb": 186.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
