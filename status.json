@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-13 14:41:58 UTC",
+"generated_at": "2026-11-13 14:57:27 UTC",
 "host": {
-"cpu_pct": 13.4,
+"cpu_pct": 3.3,
 "gpu_pct": 1,
-"free_gb": 184.5,
-"uptime": "up 14 days,  1:02, 2 users, load averages: 1.23 1.28 6.91",
-"load": "{ 1.23 1.28 6.91 }"
+"free_gb": 180.1,
+"uptime": "up 14 days,  1:18, 2 users, load averages: 1.61 1.73 3.42",
+"load": "{ 1.61 1.73 3.42 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-13T14:44",
+"name": "close_move_size_rebalance",
+"status": "rejected",
+"rationale": "The payer is the daily-reset leveraged and inverse gold ETF/ETN complex. At the close it must trade in the direction of the day's move, in proportion to the move size, at a time it does not choose. Sizing by |move|/daily sigma (graded, capped) is the quantity the rebalancer actua",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-13T14:13",
 "name": "vol_cross_cut_clock",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Both director payers (vol-target fund, close rebalancer) already have accepted families, so I am not proposing variants of them. This one targets a different payer: slow discretionary and ETF gold holders who reprice only after the real yield has moved, so they sell or buy gold t",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-13T08:34",
-"name": "cta_relever_clock",
-"status": "rejected",
-"rationale": "Payer is the trend-following CTA/managed-futures book that sizes gold by trend sign \u00d7 target/\u03c3. When fast vol falls below slow vol, its mandated weight rises by \u03c3_slow/\u03c3_fast \u2212 1 in the direction it is already holding. That is a forced, price-insensitive add on its own rebalance ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794408571.2331562,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.8,
-"gpu": 3,
-"free_gb": 184.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794409494.525216,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 13.4,
 "gpu": 1,
 "free_gb": 184.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794581847.216328,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.3,
+"gpu": 1,
+"free_gb": 180.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
