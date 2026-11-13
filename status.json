@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-13 02:13:47 UTC",
+"generated_at": "2026-11-13 02:29:10 UTC",
 "host": {
-"cpu_pct": 3.6,
-"gpu_pct": 3,
-"free_gb": 182.5,
-"uptime": "up 13 days, 12:34, 2 users, load averages: 1.70 1.36 1.75",
-"load": "{ 1.70 1.36 1.75 }"
+"cpu_pct": 3.4,
+"gpu_pct": 36,
+"free_gb": 180.3,
+"uptime": "up 13 days, 12:49, 2 users, load averages: 1.53 1.75 1.76",
+"load": "{ 1.53 1.75 1.76 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-13T02:24",
+"name": "capitulation_matched_bid",
+"status": "accepted",
+"rationale": "Payer is the stopped-out long (margin/stop-loss liquidation) who sells a capitulation low into a thin book. A bar that closes off its low after a large negative z-move marks the end of forced selling, and the strategy buys the recovery.\nRATIONALE: Exposure is matched by subtracti",
+"note": "{\"name\": \"capitulation_matched_bid\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.9722375}"
+},
+{
 "ts": "2026-11-13T01:53",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the passive executor leaning against a sliced parent order, on both sides. Buyers fill a persistent parent buy and sellers a parent sell, so the up-share of tick-weighted moves stays tilted at both the full and the half horizon.\nRATIONALE: The family is sign-symmetric (l",
 "note": "{\"name\": \"upshare_sliced_symmetric\", \"grid\": 36, \"sec_per_param\": 0.001, \"active_frac\": 0.3168375}"
-},
-{
-"ts": "2026-11-12T20:14",
-"name": "block_persist_stale_follow",
-"status": "accepted",
-"rationale": "The payer is the passive liquidity provider who keeps quoting against a hidden sliced parent order. When N consecutive hourly blocks all close the same way but the cumulative move is small against hourly noise, the quotes are stale and not news-driven, so I follow the parent.\nRAT",
-"note": "{\"name\": \"block_persist_stale_follow\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.6463}"
 }
 ],
 "history": [
-{
-"t": 1794363735.266109,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 147.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794364666.9469461,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 3.6,
 "gpu": 3,
 "free_gb": 182.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794536950.8785422,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.4,
+"gpu": 36,
+"free_gb": 180.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
