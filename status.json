@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-13 10:01:23 UTC",
+"generated_at": "2026-11-13 10:17:50 UTC",
 "host": {
-"cpu_pct": 99.4,
-"gpu_pct": 8,
-"free_gb": 114.6,
-"uptime": "up 13 days, 20:21, 2 users, load averages: 37.00 36.38 26.07",
-"load": "{ 37.00 36.38 26.07 }"
+"cpu_pct": 100.0,
+"gpu_pct": 3,
+"free_gb": 155.0,
+"uptime": "up 13 days, 20:37, 2 users, load averages: 47.30 43.27 37.72",
+"load": "{ 50.00 43.90 37.97 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-13T10:07",
+"name": "close_hedge_size_flow",
+"status": "accepted",
+"rationale": "The payer is the issuer or swap counterparty of constant-leverage gold ETFs. They must trade a notional proportional to the day's move at the close, on a fixed clock and regardless of price. The strategy sizes exposure by |close-to-close move| in units of its trailing RMS (graded",
+"note": "{\"name\": \"close_hedge_size_flow\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.010625}"
+},
+{
 "ts": "2026-11-13T09:35",
 "name": "weekly_range_spent_fade",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the passive executor leaning against a sliced parent buy. The tick-weighted up-share over `days` is ranked against its own trailing history sampled every `lag` bars, so a persistent buyer shows up as a high percentile.\nRATIONALE: Position is `2\u00b7rank \u2212 1` with a deadb",
 "note": "sandbox: AssertionError: zu speicherhungrig: 124 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-11-13T03:56",
-"name": "parent_onset_balanced",
-"status": "accepted",
-"rationale": "The payer is the passive executor of a sliced parent order. When the tick-weighted up-share over a short window rises clearly above its own slower baseline, a new parent buy has just started, and the executor's remaining slices are paid at worse prices than the buyers in front of",
-"note": "{\"name\": \"parent_onset_balanced\", \"grid\": 36, \"sec_per_param\": 0.001, \"active_frac\": 0.87554375}"
 }
 ],
 "history": [
-{
-"t": 1794391950.69633,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.7,
-"gpu": 4,
-"free_gb": 185.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794392874.2837398,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 99.4,
 "gpu": 8,
 "free_gb": 114.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794565070.081027,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 3,
+"free_gb": 155.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
