@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-13 06:21:35 UTC",
+"generated_at": "2026-11-13 06:37:37 UTC",
 "host": {
-"cpu_pct": 99.8,
+"cpu_pct": 100.0,
 "gpu_pct": 3,
-"free_gb": 143.5,
-"uptime": "up 13 days, 16:41, 2 users, load averages: 40.92 40.22 38.02",
-"load": "{ 40.92 40.22 38.02 }"
+"free_gb": 155.9,
+"uptime": "up 13 days, 16:57, 2 users, load averages: 42.19 42.12 40.94",
+"load": "{ 42.19 42.12 40.94 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-13T06:31",
+"name": "vol_target_cut_schedule",
+"status": "rejected",
+"rationale": "Payer is the volatility-targeting fund that must scale gold exposure by long-run vol over short-run vol after a realised-vol jump. It does this on its own schedule, over the following days, and not at the moment of the jump.\nThe cut fraction is `1 - 1/ratio` at the crossing event",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-13T06:00",
 "name": "vol_target_cut_window_pair",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the stopped-out long who sells the capitulation low into a thin book. Downside variance share is high over several days and the price sits below its multi-day mean. The buyer who absorbs that supply is repaid when the book refills.\nRATIONALE: Exposure matching is cau",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-13T00:21",
-"name": "downside_exhaustion_duty_netted",
-"status": "accepted",
-"rationale": "The payer is the stopped-out or margin-called long who sells into a thin book after several days of downside-dominated variance. The buyer who absorbs that supply is paid when the selling exhausts.\nRATIONALE: Exposure matching: the long state is netted against its own trailing du",
-"note": "{\"name\": \"downside_exhaustion_duty_netted\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.85755}"
 }
 ],
 "history": [
-{
-"t": 1794378900.9964669,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 9.6,
-"gpu": 2,
-"free_gb": 141.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794379872.8497999,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 99.8,
 "gpu": 3,
 "free_gb": 143.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794551857.099155,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 3,
+"free_gb": 155.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
