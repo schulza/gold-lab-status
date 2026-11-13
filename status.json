@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-13 11:35:55 UTC",
+"generated_at": "2026-11-13 11:51:18 UTC",
 "host": {
-"cpu_pct": 3.7,
-"gpu_pct": 38,
-"free_gb": 176.5,
-"uptime": "up 13 days, 21:56, 2 users, load averages: 2.77 2.76 10.49",
-"load": "{ 2.77 2.76 10.49 }"
+"cpu_pct": 0.8,
+"gpu_pct": 2,
+"free_gb": 183.1,
+"uptime": "up 13 days, 22:11, 2 users, load averages: 0.60 0.96 4.18",
+"load": "{ 0.60 0.96 4.18 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-13T11:40",
+"name": "close_move_size_rebalance",
+"status": "rejected",
+"rationale": "Payer is the leveraged-ETF and calendar rebalancer. Its close-time hedge scales with the day's absolute move, which is known by the afternoon, and it must execute into a fixed NAV or settlement clock. It does not choose that time, so it pays up to the liquidity providers who take",
+"note": "sandbox: NameError: name 'FAMILIES' is not defined"
+},
+{
 "ts": "2026-11-13T11:09",
 "name": "vol_cut_completion_bid",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the volatility-targeting fund, long gold through leverage. After its short-window realised variance jumps against its trailing baseline, its scheduled de-risking sells into the following hours, and that selling is price-insensitive. Once the cut is done, the same fun",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-13T05:28",
-"name": "close_rebalance_graded",
-"status": "accepted",
-"rationale": "The payer is the constant-leverage gold ETP complex (UGL, GLL, NUGT, DUST, and the swap desks hedging them). At the 16:00 New York close it must trade an amount proportional to the day's close-to-close move, in the sign of that move, whatever the price.\nThe existing `levered_etf_",
-"note": "{\"name\": \"close_rebalance_graded\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.03015}"
 }
 ],
 "history": [
-{
-"t": 1794397491.785044,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.4,
-"gpu": 3,
-"free_gb": 185.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794398414.8276072,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 3.7,
 "gpu": 38,
 "free_gb": 176.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794570678.487272,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.8,
+"gpu": 2,
+"free_gb": 183.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
