@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-13 21:47:17 UTC",
+"generated_at": "2026-11-13 22:02:42 UTC",
 "host": {
-"cpu_pct": 99.5,
-"gpu_pct": 13,
-"free_gb": 157.5,
-"uptime": "up 14 days,  8:06, 2 users, load averages: 39.97 40.44 35.60",
-"load": "{ 39.97 40.44 35.60 }"
+"cpu_pct": 3.3,
+"gpu_pct": 1,
+"free_gb": 184.7,
+"uptime": "up 14 days,  8:23, 2 users, load averages: 1.66 6.07 18.41",
+"load": "{ 1.66 6.07 18.41 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-13T21:59",
+"name": null,
+"status": "rejected",
+"rationale": "Payer is the slow macro allocator (gold ETF and discretionary holders) who reprices gold to a 5-day real-yield move with a delay. When gold has not yet moved by the amount its rolling yield beta implies, the catch-up is forced flow, not drift.\nRATIONALE: This is neither payer you",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-13T21:28",
 "name": "close_move_scaled_rebalance",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the levered-ETF and calendar rebalancer. It must trade a size proportional to the day's absolute move, in the direction of that move, into the close. Liquidity takers ahead of that print pay the impact. Exposure is graded by |move since the prior close-hour| divided by t",
 "note": "{\"name\": \"close_abs_move_rebalance\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.012175}"
-},
-{
-"ts": "2026-11-13T15:46",
-"name": null,
-"status": "rejected",
-"rationale": "I did not write another close-rebalance or vol-target family. `close_hedge_size_flow`, `close_rebalance_graded`, `vol_jump_cut_pressure` and `vol_cross_cut_clock` are already on disk or accepted, and none has a measured row. Per the direction, a further variant on those two payer",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1794433674.71684,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 99.9,
-"gpu": 3,
-"free_gb": 150.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794434632.700248,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 99.5,
 "gpu": 13,
 "free_gb": 157.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794607362.2918139,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.3,
+"gpu": 1,
+"free_gb": 184.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
