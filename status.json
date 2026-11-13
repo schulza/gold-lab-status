@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-13 20:44:19 UTC",
+"generated_at": "2026-11-13 20:59:43 UTC",
 "host": {
-"cpu_pct": 4.7,
+"cpu_pct": 4.9,
 "gpu_pct": 1,
-"free_gb": 182.0,
-"uptime": "up 14 days,  7:04, 2 users, load averages: 1.51 11.56 24.89",
-"load": "{ 1.51 11.56 24.89 }"
+"free_gb": 185.8,
+"uptime": "up 14 days,  7:20, 2 users, load averages: 0.87 1.70 9.25",
+"load": "{ 0.87 1.70 9.25 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-13T20:56",
+"name": "vol_target_deleverage_window",
+"status": "accepted",
+"rationale": "The payer is the volatility-targeting fund, which has to cut gold exposure by about 1 \u2212 \u03c3_base/\u03c3_now once short-window realised vol jumps above its own longer baseline. It cannot cut in one print, so it sells over the following clock window in the direction of the trigger-window ",
+"note": "{\"name\": \"vol_target_deleverage_window\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.468525}"
+},
+{
 "ts": "2026-11-13T20:26",
 "name": "vol_target_cut_hold",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the constant-leverage gold ETP complex and the swap desks that hedge it. Their close order is `L(L-1)\u00b7AUM\u00b7r`, so it grows with the day's move, and AUM is larger after same-direction run-ups because inflows chase them.\nRATIONALE: `close_rebalance_graded` (on disk, unm",
 "note": "sandbox: NameError: name 'math' is not defined. Did you forget to import 'math'?"
-},
-{
-"ts": "2026-11-13T14:44",
-"name": "close_move_size_rebalance",
-"status": "rejected",
-"rationale": "The payer is the daily-reset leveraged and inverse gold ETF/ETN complex. At the close it must trade in the direction of the day's move, in proportion to the move size, at a time it does not choose. Sizing by |move|/daily sigma (graded, capped) is the quantity the rebalancer actua",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794430767.500701,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 4,
-"free_gb": 146.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794431732.437366,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 4.7,
 "gpu": 1,
 "free_gb": 182.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794603583.576949,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 4.9,
+"gpu": 1,
+"free_gb": 185.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
