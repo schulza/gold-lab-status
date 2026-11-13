@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-13 08:25:31 UTC",
+"generated_at": "2026-11-13 08:41:07 UTC",
 "host": {
-"cpu_pct": 3.9,
+"cpu_pct": 98.2,
 "gpu_pct": 3,
-"free_gb": 176.9,
-"uptime": "up 13 days, 18:46, 2 users, load averages: 2.52 2.26 2.26",
-"load": "{ 2.52 2.26 2.26 }"
+"free_gb": 134.2,
+"uptime": "up 13 days, 19:01, 2 users, load averages: 42.35 35.93 21.21",
+"load": "{ 42.35 35.93 21.21 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-13T08:34",
+"name": "cta_relever_clock",
+"status": "rejected",
+"rationale": "Payer is the trend-following CTA/managed-futures book that sizes gold by trend sign \u00d7 target/\u03c3. When fast vol falls below slow vol, its mandated weight rises by \u03c3_slow/\u03c3_fast \u2212 1 in the direction it is already holding. That is a forced, price-insensitive add on its own rebalance ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-13T08:03",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the leveraged long who is stopped out into a thin book. They sell the low after a long, decelerating drop with a wide spread, and the bounce pays whoever bought from them. The mirrored short-squeeze buyer is the second payer. Mode \"both\" trades both sides, so net exp",
 "note": "{\"name\": \"capitulation_exhaustion_paired\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.216025}"
-},
-{
-"ts": "2026-11-13T02:24",
-"name": "capitulation_matched_bid",
-"status": "accepted",
-"rationale": "Payer is the stopped-out long (margin/stop-loss liquidation) who sells a capitulation low into a thin book. A bar that closes off its low after a large negative z-move marks the end of forced selling, and the strategy buys the recovery.\nRATIONALE: Exposure is matched by subtracti",
-"note": "{\"name\": \"capitulation_matched_bid\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.9722375}"
 }
 ],
 "history": [
-{
-"t": 1794386402.06062,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.5,
-"gpu": 2,
-"free_gb": 186.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794387325.384387,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 3.9,
 "gpu": 3,
 "free_gb": 176.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794559267.041573,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 98.2,
+"gpu": 3,
+"free_gb": 134.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
