@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-13 03:46:07 UTC",
+"generated_at": "2026-11-13 04:01:30 UTC",
 "host": {
-"cpu_pct": 3.5,
+"cpu_pct": 3.6,
 "gpu_pct": 3,
-"free_gb": 176.9,
-"uptime": "up 13 days, 14:06, 2 users, load averages: 1.98 1.69 1.67",
-"load": "{ 1.98 1.69 1.67 }"
+"free_gb": 175.7,
+"uptime": "up 13 days, 14:22, 2 users, load averages: 1.58 1.56 1.65",
+"load": "{ 1.58 1.56 1.65 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-13T03:56",
+"name": "parent_onset_balanced",
+"status": "accepted",
+"rationale": "The payer is the passive executor of a sliced parent order. When the tick-weighted up-share over a short window rises clearly above its own slower baseline, a new parent buy has just started, and the executor's remaining slices are paid at worse prices than the buyers in front of",
+"note": "{\"name\": \"parent_onset_balanced\", \"grid\": 36, \"sec_per_param\": 0.001, \"active_frac\": 0.87554375}"
+},
+{
 "ts": "2026-11-13T03:25",
 "name": "upshare_zscore_symmetric_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the stopped-out long who sells the capitulation low into a thin bid. The signal is how unusual the downside share of squared returns is against its own recent history, not the absolute 0.5 cut-off that `downside_exhaustion_hold` uses. The long entry also needs price ",
 "note": "{\"name\": \"downside_imbalance_matched\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.5303}"
-},
-{
-"ts": "2026-11-12T21:47",
-"name": "stressed_capitulation_centered",
-"status": "rejected",
-"rationale": "The payer is the stopped-out or margin-called long who sells a multi-day capitulation low into a widened quote. The recovery goes to whoever supplies the bid while the spread is stressed, and the entry needs a downside-share extreme, price below its window mean, and spread above ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794369438.1546109,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 4.5,
-"gpu": 2,
-"free_gb": 178.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794370404.378209,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 3.5,
 "gpu": 3,
 "free_gb": 176.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794542490.8930712,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.6,
+"gpu": 3,
+"free_gb": 175.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
