@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-13 11:05:07 UTC",
+"generated_at": "2026-11-13 11:20:31 UTC",
 "host": {
-"cpu_pct": 100.0,
-"gpu_pct": 9,
-"free_gb": 114.6,
-"uptime": "up 13 days, 21:25, 2 users, load averages: 42.56 40.97 32.53",
-"load": "{ 42.56 40.97 32.53 }"
+"cpu_pct": 1.1,
+"gpu_pct": 11,
+"free_gb": 181.6,
+"uptime": "up 13 days, 21:41, 2 users, load averages: 2.94 18.87 27.75",
+"load": "{ 2.94 18.87 27.75 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-13T11:09",
+"name": "vol_cut_completion_bid",
+"status": "accepted",
+"rationale": "Both directed payers already have unmeasured families on disk (vol_cut_mandate_clock and close_hedge_size_flow), so this is a different construction rather than a third variant. The payer is the vol-targeting fund, which must cut gold by roughly 1 \u2212 target/realised after a vol ju",
+"note": "{\"name\": \"vol_cut_completion_bid\", \"grid\": 54, \"sec_per_param\": 0.001, \"active_frac\": 0.00376875}"
+},
+{
 "ts": "2026-11-13T10:38",
 "name": "overlap_budget_overshoot_fade",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the constant-leverage gold ETP complex (UGL, GLL, NUGT, DUST, and the swap desks hedging them). At the 16:00 New York close it must trade an amount proportional to the day's close-to-close move, in the sign of that move, whatever the price.\nThe existing `levered_etf_",
 "note": "{\"name\": \"close_rebalance_graded\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.03015}"
-},
-{
-"ts": "2026-11-13T04:57",
-"name": "downside_exhaustion_spread_normalised",
-"status": "rejected",
-"rationale": "The payer is the stopped-out long who market-sells into a capitulation low. Persistent downside variance share with price below its multi-day mean marks forced supply. The long enters only after the quote-stress spread premium has decayed, meaning the thin-book liquidity vacuum h",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794395644.084091,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 4.7,
-"gpu": 4,
-"free_gb": 179.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794396568.597476,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 100.0,
 "gpu": 9,
 "free_gb": 114.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794568831.5918238,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.1,
+"gpu": 11,
+"free_gb": 181.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
