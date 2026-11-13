@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-13 09:30:01 UTC",
+"generated_at": "2026-11-13 09:45:24 UTC",
 "host": {
-"cpu_pct": 0.8,
-"gpu_pct": 6,
-"free_gb": 186.3,
-"uptime": "up 13 days, 19:50, 2 users, load averages: 4.55 25.99 34.03",
-"load": "{ 4.55 25.99 34.03 }"
+"cpu_pct": 3.6,
+"gpu_pct": 38,
+"free_gb": 179.1,
+"uptime": "up 13 days, 20:06, 2 users, load averages: 1.76 2.62 12.47",
+"load": "{ 1.76 2.62 12.47 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-13T09:35",
+"name": "weekly_range_spent_fade",
+"status": "rejected",
+"rationale": "Late-week breakout chasers pay. They buy or sell the week's extreme on Thu/Fri after the weekly range already exceeds k times the trailing mean of completed weeks, so the move is spent and the risk is carried into the weekend. The strategy fades back from that extreme to a Friday",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-13T09:04",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the passive executor of a sliced parent order. When the tick-weighted up-share over a short window rises clearly above its own slower baseline, a new parent buy has just started, and the executor's remaining slices are paid at worse prices than the buyers in front of",
 "note": "{\"name\": \"parent_onset_balanced\", \"grid\": 36, \"sec_per_param\": 0.001, \"active_frac\": 0.87554375}"
-},
-{
-"ts": "2026-11-13T03:25",
-"name": "upshare_zscore_symmetric_hold",
-"status": "accepted",
-"rationale": "The payer is the passive executor who leans against a sliced parent buy or sell. They keep quoting the same side while signed bar flow stays one-sided against its own long-run baseline. Their fills are adversely selected until the parent finishes.\nRATIONALE: The signal is a two-s",
-"note": "{\"name\": \"upshare_zscore_symmetric_hold\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.1206}"
 }
 ],
 "history": [
-{
-"t": 1794390099.500126,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.7,
-"gpu": 4,
-"free_gb": 185.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794391022.547837,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 0.8,
 "gpu": 6,
 "free_gb": 186.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794563124.809598,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.6,
+"gpu": 38,
+"free_gb": 179.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
