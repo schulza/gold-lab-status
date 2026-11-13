@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-13 10:33:14 UTC",
+"generated_at": "2026-11-13 10:49:10 UTC",
 "host": {
-"cpu_pct": 16.5,
-"gpu_pct": 36,
-"free_gb": 178.3,
-"uptime": "up 13 days, 20:53, 2 users, load averages: 3.53 7.05 18.85",
-"load": "{ 3.53 7.05 18.85 }"
+"cpu_pct": 100.0,
+"gpu_pct": 5,
+"free_gb": 136.5,
+"uptime": "up 13 days, 21:09, 2 users, load averages: 40.12 18.71 14.48",
+"load": "{ 40.12 18.71 14.48 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-13T10:38",
+"name": "overlap_budget_overshoot_fade",
+"status": "accepted",
+"rationale": "Both payers in the direction already have accepted, unmeasured families (vol_cut_mandate_clock, close_hedge_size_flow), so this is a third payer rather than a variant of those. The payer is desks that sized risk on a day-average vol estimate and de-risk when the London/NY overlap",
+"note": "{\"name\": \"overlap_budget_overshoot_fade\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.102}"
+},
+{
 "ts": "2026-11-13T10:07",
 "name": "close_hedge_size_flow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the stopped-out long who market-sells into a capitulation low. Persistent downside variance share with price below its multi-day mean marks forced supply. The long enters only after the quote-stress spread premium has decayed, meaning the thin-book liquidity vacuum h",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-13T04:26",
-"name": "upshare_rank_balanced",
-"status": "rejected",
-"rationale": "The payer is the passive executor leaning against a sliced parent buy. The tick-weighted up-share over `days` is ranked against its own trailing history sampled every `lag` bars, so a persistent buyer shows up as a high percentile.\nRATIONALE: Position is `2\u00b7rank \u2212 1` with a deadb",
-"note": "sandbox: AssertionError: zu speicherhungrig: 124 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1794393797.4858398,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.6,
-"gpu": 4,
-"free_gb": 185.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794394720.714664,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 16.5,
 "gpu": 36,
 "free_gb": 178.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794566950.664736,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 5,
+"free_gb": 136.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
