@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-13 00:07:28 UTC",
+"generated_at": "2026-11-13 00:22:51 UTC",
 "host": {
-"cpu_pct": 3.5,
+"cpu_pct": 3.7,
 "gpu_pct": 3,
-"free_gb": 176.8,
-"uptime": "up 13 days, 10:28, 2 users, load averages: 1.87 1.84 1.71",
-"load": "{ 1.87 1.84 1.71 }"
+"free_gb": 177.1,
+"uptime": "up 13 days, 10:43, 2 users, load averages: 1.88 1.99 1.88",
+"load": "{ 1.88 1.99 1.88 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-13T00:21",
+"name": "downside_exhaustion_duty_netted",
+"status": "accepted",
+"rationale": "The payer is the stopped-out or margin-called long who sells into a thin book after several days of downside-dominated variance. The buyer who absorbs that supply is paid when the selling exhausts.\nRATIONALE: Exposure matching: the long state is netted against its own trailing du",
+"note": "{\"name\": \"downside_exhaustion_duty_netted\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.85755}"
+},
+{
 "ts": "2026-11-12T23:50",
 "name": "downside_exhaustion_exposure_matched",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the stopped-out or margin-called long who dumps into a thin bid after a multi-day sell-off. The entry needs three things together: a downside share of squared returns above theta, a negative window return, and a recent spread wider than its window mean (thin book). T",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-12T18:11",
-"name": "upshare_baseline_symmetric",
-"status": "rejected",
-"rationale": "Payer is the passive executor leaning against a sliced parent order. Tick-weighted up-share runs persistently above or below its own slow baseline while a parent buy or sell is still being filled.\nRATIONALE: Exposure-matched by construction. The share is z-scored against its own ",
-"note": "sandbox: AssertionError: zu speicherhungrig: 44 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1794356011.9004931,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.5,
-"gpu": 2,
-"free_gb": 177.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794356935.2961228,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 3.5,
 "gpu": 3,
 "free_gb": 176.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794529371.5258482,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.7,
+"gpu": 3,
+"free_gb": 177.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
