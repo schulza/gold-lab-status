@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-13 15:13:34 UTC",
+"generated_at": "2026-11-13 15:29:21 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 99.8,
 "gpu_pct": 1,
-"free_gb": 129.9,
-"uptime": "up 14 days,  1:33, 2 users, load averages: 61.92 41.51 22.61",
-"load": "{ 61.92 41.51 22.61 }"
+"free_gb": 116.6,
+"uptime": "up 14 days,  1:49, 2 users, load averages: 51.79 49.98 40.90",
+"load": "{ 51.79 49.98 40.90 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-13T15:15",
+"name": "close_runup_scaled_rebalance",
+"status": "rejected",
+"rationale": "The payer is the constant-leverage gold ETP complex and the swap desks that hedge it. Their close order is `L(L-1)\u00b7AUM\u00b7r`, so it grows with the day's move, and AUM is larger after same-direction run-ups because inflows chase them.\nRATIONALE: `close_rebalance_graded` (on disk, unm",
+"note": "sandbox: NameError: name 'math' is not defined. Did you forget to import 'math'?"
+},
+{
 "ts": "2026-11-13T14:44",
 "name": "close_move_size_rebalance",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Late-week breakout chasers pay. They buy or sell the week's extreme on Thu/Fri after the weekly range already exceeds k times the trailing mean of completed weeks, so the move is spent and the risk is carried into the weekend. The strategy fades back from that extreme to a Friday",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-13T09:04",
-"name": null,
-"status": "rejected",
-"rationale": "Both director payers (vol-target fund, close rebalancer) already have accepted families, so I am not proposing variants of them. This one targets a different payer: slow discretionary and ETF gold holders who reprice only after the real yield has moved, so they sell or buy gold t",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1794410417.740903,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.4,
-"gpu": 3,
-"free_gb": 183.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794411341.1755211,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 129.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794583761.488768,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 99.8,
+"gpu": 1,
+"free_gb": 116.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
