@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-13 22:18:05 UTC",
+"generated_at": "2026-11-13 22:35:35 UTC",
 "host": {
-"cpu_pct": 3.3,
+"cpu_pct": 100.0,
 "gpu_pct": 1,
-"free_gb": 179.7,
-"uptime": "up 14 days,  8:38, 2 users, load averages: 1.25 1.68 7.19",
-"load": "{ 1.25 1.68 7.19 }"
+"free_gb": 116.8,
+"uptime": "up 14 days,  8:54, 2 users, load averages: 50.33 40.88 28.28",
+"load": "{ 50.33 40.88 28.28 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-13T22:30",
+"name": "vol_estimate_rebalance_flow",
+"status": "rejected",
+"rationale": "The payer is the volatility-targeting fund that resizes once a day at a fixed hour. Its target weight is sigma_target divided by trailing realised vol, so the size of the trade is the one-day change in smooth 20-day vol. The fund must execute that trade over the next hours whatev",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-13T21:59",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "",
 "note": "no python block in reply"
-},
-{
-"ts": "2026-11-13T16:17",
-"name": "close_abs_move_rebalance",
-"status": "accepted",
-"rationale": "Payer is the levered-ETF and calendar rebalancer. It must trade a size proportional to the day's absolute move, in the direction of that move, into the close. Liquidity takers ahead of that print pay the impact. Exposure is graded by |move since the prior close-hour| divided by t",
-"note": "{\"name\": \"close_abs_move_rebalance\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.012175}"
 }
 ],
 "history": [
-{
-"t": 1794435599.303988,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 3,
-"free_gb": 144.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794436569.347229,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 3.3,
 "gpu": 1,
 "free_gb": 179.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794609335.375562,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 116.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
