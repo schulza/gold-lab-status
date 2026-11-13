@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-13 05:18:28 UTC",
+"generated_at": "2026-11-13 05:33:51 UTC",
 "host": {
-"cpu_pct": 3.5,
-"gpu_pct": 3,
-"free_gb": 178.0,
-"uptime": "up 13 days, 15:39, 2 users, load averages: 1.78 1.69 1.62",
-"load": "{ 1.78 1.69 1.62 }"
+"cpu_pct": 3.6,
+"gpu_pct": 37,
+"free_gb": 177.6,
+"uptime": "up 13 days, 15:54, 2 users, load averages: 1.24 1.56 1.65",
+"load": "{ 1.24 1.56 1.65 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-13T05:28",
+"name": "close_rebalance_graded",
+"status": "accepted",
+"rationale": "The payer is the constant-leverage gold ETP complex (UGL, GLL, NUGT, DUST, and the swap desks hedging them). At the 16:00 New York close it must trade an amount proportional to the day's close-to-close move, in the sign of that move, whatever the price.\nThe existing `levered_etf_",
+"note": "{\"name\": \"close_rebalance_graded\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.03015}"
+},
+{
 "ts": "2026-11-13T04:57",
 "name": "downside_exhaustion_spread_normalised",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the stopped-out long who sells the capitulation low into a thin book. The signal is the downside share of squared returns over several days, entered only while price is below its window mean and left with hysteresis.\nRATIONALE: This is an exposure-matched version of ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-12T23:20",
-"name": "stopout_decel_matched_bid",
-"status": "rejected",
-"rationale": "The payer is the stopped-out or margin-called long who sells into a thin bid. The signal is a downside-variance share that is extreme against its own 20-day distribution but already decelerating: the recent half-window share is below the prior half, and price is below its window ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794375126.68,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 99.9,
-"gpu": 2,
-"free_gb": 147.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794376050.971394,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 3.5,
 "gpu": 3,
 "free_gb": 178.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794548031.3656561,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.6,
+"gpu": 37,
+"free_gb": 177.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
