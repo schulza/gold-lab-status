@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-13 23:21:52 UTC",
+"generated_at": "2026-11-13 23:38:09 UTC",
 "host": {
-"cpu_pct": 3.3,
-"gpu_pct": 1,
-"free_gb": 184.8,
-"uptime": "up 14 days,  9:42, 2 users, load averages: 1.31 1.37 6.56",
-"load": "{ 1.31 1.37 6.56 }"
+"cpu_pct": 100.0,
+"gpu_pct": 35,
+"free_gb": 134.6,
+"uptime": "up 14 days,  9:57, 2 users, load averages: 25.10 8.29 5.88",
+"load": "{ 25.10 8.29 5.88 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-13T23:32",
+"name": "jump_acceptance_follow",
+"status": "accepted",
+"rationale": "The payer is liquidity providers and stop-based fade traders. They lean against a one-bar jump of at least k sigma, taking it for a liquidity shock. When the market has kept at least a fraction f of the jump m bars later, the jump carried information and their inventory is wrong-",
+"note": "{\"name\": \"jump_acceptance_follow\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.1213375}"
+},
+{
 "ts": "2026-11-13T23:01",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer: late breakout chasers who push price to a trailing-range extreme on falling tick activity. The thin tape means no fresh participation is behind the push, so the sellers or buyers they lift from are stopped-out or inventory-heavy makers who are refilled by the mean-revertin",
 "note": "{\"name\": \"thin_extreme_fade\", \"grid\": 64, \"sec_per_param\": 0.0, \"active_frac\": 0.2402875}"
-},
-{
-"ts": "2026-11-13T17:20",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is the stop-runner and breakout chaser who pushes aggressive flow through a drift. Tick activity spikes while price makes no net progress, so passive limit liquidity absorbed it, and the chaser's inventory has to be sold back.\nRATIONALE: It trades against the prior drift fo",
-"note": "ast: name not allowed: getattr"
 }
 ],
 "history": [
-{
-"t": 1794439387.063519,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.6,
-"gpu": 3,
-"free_gb": 182.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794440310.009185,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 3.3,
 "gpu": 1,
 "free_gb": 184.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794613089.4831529,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 35,
+"free_gb": 134.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
