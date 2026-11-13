@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-13 19:41:32 UTC",
+"generated_at": "2026-11-13 19:56:56 UTC",
 "host": {
-"cpu_pct": 3.3,
-"gpu_pct": 31,
-"free_gb": 186.2,
-"uptime": "up 14 days,  6:02, 2 users, load averages: 14.54 35.31 37.18",
-"load": "{ 14.54 35.31 37.18 }"
+"cpu_pct": 3.4,
+"gpu_pct": 1,
+"free_gb": 182.1,
+"uptime": "up 14 days,  6:17, 2 users, load averages: 1.44 3.65 14.77",
+"load": "{ 1.44 3.65 14.77 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-13T19:54",
+"name": "vol_cut_fraction_refund",
+"status": "rejected",
+"rationale": "The payer is the volatility-targeting fund that is long gold and has to sell after a realised-vol jump, on a schedule it doesn't choose. Its forced selling pushes the price temporarily below fair value.\nRATIONALE: The family buys after the selling finishes (`lag`, then a fixed `h",
+"note": "sandbox: AssertionError: non-finite values"
+},
+{
 "ts": "2026-11-13T19:24",
 "name": "vol_jump_clock_exit",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the volatility-targeting fund. After a realised-vol jump it must cut gold exposure on its own rebalance schedule, whatever the price. The family enters short when trailing vol crosses its rolling z-threshold, with fixed size, and exits on a fixed clock. `sign=-1` is the ",
 "note": "{\"name\": \"vol_cross_cut_clock\", \"grid\": 108, \"sec_per_param\": 0.002, \"active_frac\": 0.4211875}"
-},
-{
-"ts": "2026-11-13T13:42",
-"name": null,
-"status": "rejected",
-"rationale": "Both payers the director named, the vol-target fund and the close rebalancer, already have accepted but unmeasured families (`vol_jump_cut_pressure`, `close_hedge_size_flow`). So I'm not adding a third neighbour for either. The payer here is speculative longs (or shorts) that are",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1794426124.520562,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.7,
-"gpu": 4,
-"free_gb": 185.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794427047.525345,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 3.3,
 "gpu": 31,
 "free_gb": 186.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794599816.426584,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.4,
+"gpu": 1,
+"free_gb": 182.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
