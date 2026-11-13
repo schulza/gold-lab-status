@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-13 20:12:57 UTC",
+"generated_at": "2026-11-13 20:28:56 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 1,
-"free_gb": 136.3,
-"uptime": "up 14 days,  6:33, 2 users, load averages: 41.37 31.49 21.18",
-"load": "{ 41.37 31.49 21.18 }"
+"free_gb": 115.7,
+"uptime": "up 14 days,  6:49, 2 users, load averages: 48.63 45.82 37.31",
+"load": "{ 48.63 45.82 37.31 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-13T20:26",
+"name": "vol_target_cut_hold",
+"status": "rejected",
+"rationale": "The payer is the volatility-targeting fund. When realised vol jumps, its mandate forces a cut of gold exposure by roughly 1 \u2212 target/realised, regardless of price direction. The fund sells inelastically into a window it does not choose, and the discount is refunded afterwards.\nRA",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-13T19:54",
 "name": "vol_cut_fraction_refund",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the daily-reset leveraged and inverse gold ETF/ETN complex. At the close it must trade in the direction of the day's move, in proportion to the move size, at a time it does not choose. Sizing by |move|/daily sigma (graded, capped) is the quantity the rebalancer actua",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-13T14:13",
-"name": "vol_cross_cut_clock",
-"status": "accepted",
-"rationale": "Payer is the volatility-targeting fund. After a realised-vol jump it must cut gold exposure on its own rebalance schedule, whatever the price. The family enters short when trailing vol crosses its rolling z-threshold, with fixed size, and exits on a fixed clock. `sign=-1` is the ",
-"note": "{\"name\": \"vol_cross_cut_clock\", \"grid\": 108, \"sec_per_param\": 0.002, \"active_frac\": 0.4211875}"
 }
 ],
 "history": [
-{
-"t": 1794428894.937414,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.6,
-"gpu": 4,
-"free_gb": 184.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794429817.974211,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 136.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794601736.0849988,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 115.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
