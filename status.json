@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-13 16:16:41 UTC",
+"generated_at": "2026-11-13 16:32:19 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 3.4,
 "gpu_pct": 1,
-"free_gb": 115.3,
-"uptime": "up 14 days,  2:36, 2 users, load averages: 48.34 43.20 31.46",
-"load": "{ 48.34 43.20 31.46 }"
+"free_gb": 186.7,
+"uptime": "up 14 days,  2:52, 2 users, load averages: 11.35 32.06 36.54",
+"load": "{ 11.35 32.06 36.54 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-13T16:17",
+"name": "close_abs_move_rebalance",
+"status": "accepted",
+"rationale": "Payer is the levered-ETF and calendar rebalancer. It must trade a size proportional to the day's absolute move, in the direction of that move, into the close. Liquidity takers ahead of that print pay the impact. Exposure is graded by |move since the prior close-hour| divided by t",
+"note": "{\"name\": \"close_abs_move_rebalance\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.012175}"
+},
+{
 "ts": "2026-11-13T15:46",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Both payers in the direction already have accepted, unmeasured families (vol_cut_mandate_clock, close_hedge_size_flow), so this is a third payer rather than a variant of those. The payer is desks that sized risk on a day-average vol estimate and de-risk when the London/NY overlap",
 "note": "{\"name\": \"overlap_budget_overshoot_fade\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.102}"
-},
-{
-"ts": "2026-11-13T10:07",
-"name": "close_hedge_size_flow",
-"status": "accepted",
-"rationale": "The payer is the issuer or swap counterparty of constant-leverage gold ETFs. They must trade a notional proportional to the day's move at the close, on a fixed clock and regardless of price. The strategy sizes exposure by |close-to-close move| in units of its trailing RMS (graded",
-"note": "{\"name\": \"close_hedge_size_flow\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.010625}"
 }
 ],
 "history": [
-{
-"t": 1794414111.129663,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.7,
-"gpu": 3,
-"free_gb": 183.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794415034.3036,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 115.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794587539.736833,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.4,
+"gpu": 1,
+"free_gb": 186.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
