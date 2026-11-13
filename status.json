@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-13 06:53:01 UTC",
+"generated_at": "2026-11-13 07:08:33 UTC",
 "host": {
-"cpu_pct": 4.8,
+"cpu_pct": 99.9,
 "gpu_pct": 3,
-"free_gb": 180.4,
-"uptime": "up 13 days, 17:13, 2 users, load averages: 2.01 4.98 17.79",
-"load": "{ 2.01 4.98 17.79 }"
+"free_gb": 170.0,
+"uptime": "up 13 days, 17:29, 2 users, load averages: 36.10 26.61 20.22",
+"load": "{ 36.10 26.61 20.22 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-13T07:02",
+"name": "vol_cut_mandate_clock",
+"status": "accepted",
+"rationale": "Payer is the volatility-targeted allocator (risk parity, managed-vol overlay). When fast realised vol jumps, its mandated gold weight falls by exactly 1 \u2212 \u03c3_slow/\u03c3_fast, and it executes by the clock, not by price.\nExisting `vol_target_rebalance` fires equal-size events on a fixed",
+"note": "{\"name\": \"vol_cut_mandate_clock\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.4250875}"
+},
+{
 "ts": "2026-11-13T06:31",
 "name": "vol_target_cut_schedule",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the passive executor leaning against a sliced parent buy. Their slow fills keep the tick-weighted up-share above 50% for days, and the buyer in front of them is paid as the parent keeps lifting.\nRATIONALE: Exposure matching: the long state is netted against its own t",
 "note": "{\"name\": \"upshare_persist_duty_balanced\", \"grid\": 36, \"sec_per_param\": 0.0, \"active_frac\": 0.51025}"
-},
-{
-"ts": "2026-11-13T00:52",
-"name": "downside_exhaustion_duty_demeaned",
-"status": "rejected",
-"rationale": "The payer is the stopped-out long who sells the capitulation low into a thin book. Downside variance share is high over several days and the price sits below its multi-day mean. The buyer who absorbs that supply is repaid when the book refills.\nRATIONALE: Exposure matching is cau",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794380846.142942,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 143.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794381786.0251148,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 4.8,
 "gpu": 3,
 "free_gb": 180.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794553713.5931,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 99.9,
+"gpu": 3,
+"free_gb": 170.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
