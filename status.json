@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-13 21:15:06 UTC",
+"generated_at": "2026-11-13 21:30:41 UTC",
 "host": {
-"cpu_pct": 3.3,
+"cpu_pct": 100.0,
 "gpu_pct": 1,
-"free_gb": 180.4,
-"uptime": "up 14 days,  7:35, 2 users, load averages: 1.31 1.52 4.11",
-"load": "{ 1.31 1.52 4.11 }"
+"free_gb": 134.5,
+"uptime": "up 14 days,  7:51, 2 users, load averages: 42.90 39.42 24.26",
+"load": "{ 42.90 39.42 24.26 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-13T21:28",
+"name": "close_move_scaled_rebalance",
+"status": "accepted",
+"rationale": "The payer is the levered-gold-ETF and calendar rebalancer. Its hedge size is leverage \u00d7 the day's move, so a move that is large against recent days forces more close-time flow. This family goes with the move into the settle window, sized by the day's move relative to the trailing",
+"note": "{\"name\": \"close_move_scaled_rebalance\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.0061}"
+},
+{
 "ts": "2026-11-13T20:56",
 "name": "vol_target_deleverage_window",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "I did not write another close-rebalance or vol-target family. `close_hedge_size_flow`, `close_rebalance_graded`, `vol_jump_cut_pressure` and `vol_cross_cut_clock` are already on disk or accepted, and none has a measured row. Per the direction, a further variant on those two payer",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-13T15:15",
-"name": "close_runup_scaled_rebalance",
-"status": "rejected",
-"rationale": "The payer is the constant-leverage gold ETP complex and the swap desks that hedge it. Their close order is `L(L-1)\u00b7AUM\u00b7r`, so it grows with the day's move, and AUM is larger after same-direction run-ups because inflows chase them.\nRATIONALE: `close_rebalance_graded` (on disk, unm",
-"note": "sandbox: NameError: name 'math' is not defined. Did you forget to import 'math'?"
 }
 ],
 "history": [
-{
-"t": 1794431732.437366,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 3,
-"free_gb": 148.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794432708.9708228,
 "total": 31310831,
@@ -4487,6 +4476,17 @@
 "cpu": 3.3,
 "gpu": 1,
 "free_gb": 180.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794605441.53138,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 134.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
