@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-14 08:04:03 UTC",
+"generated_at": "2026-11-14 08:20:14 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 99.9,
 "gpu_pct": 1,
-"free_gb": 130.4,
-"uptime": "up 14 days, 18:23, 2 users, load averages: 43.54 42.31 38.70",
-"load": "{ 43.54 42.31 38.70 }"
+"free_gb": 143.9,
+"uptime": "up 14 days, 18:40, 2 users, load averages: 41.51 39.81 39.48",
+"load": "{ 41.51 39.81 39.48 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-14T08:18",
+"name": "var_drawdown_reset_refill",
+"status": "accepted",
+"rationale": "Payer is the leveraged long book (futures funds, desks) whose intra-period drawdown (period high to the period-end mark) breaches its own trailing VaR-style quantile. Its limit forces a cut into the roll, and the budget resets at the boundary. The refill bid then arrives into a b",
+"note": "{\"name\": \"var_drawdown_reset_refill\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.066}"
+},
+{
 "ts": "2026-11-14T07:47",
 "name": "limit_excursion_refill",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the vol-target fund that must cut gold exposure after a realised-vol jump, on a schedule it doesn't choose. Its cut-and-refill flow is mechanical, so the move after the jump reverts or extends depending on whether the move that caused it was a sell or a rally.\nRATIONALE:",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-14T02:07",
-"name": "vol_cut_schedule_flow",
-"status": "rejected",
-"rationale": "The payer is the volatility-targeting fund. It must cut gold exposure on its own schedule after realised vol jumps, with a lag it does not choose. Long-only mandates cut into down-moves, so the forced flow arrives lagged and in one direction. The parameters decide whether to foll",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794471016.689409,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.7,
-"gpu": 4,
-"free_gb": 186.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794471939.173683,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 130.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794644414.5810208,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 99.9,
+"gpu": 1,
+"free_gb": 143.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
