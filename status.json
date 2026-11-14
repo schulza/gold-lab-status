@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-14 13:16:01 UTC",
+"generated_at": "2026-11-14 13:32:15 UTC",
 "host": {
-"cpu_pct": 3.6,
-"gpu_pct": 1,
-"free_gb": 179.0,
-"uptime": "up 14 days, 23:36, 3 users, load averages: 1.80 1.59 2.12",
-"load": "{ 1.80 1.59 2.12 }"
+"cpu_pct": 100.0,
+"gpu_pct": 31,
+"free_gb": 169.9,
+"uptime": "up 14 days, 23:52, 2 users, load averages: 32.32 31.66 19.57",
+"load": "{ 32.93 31.80 19.69 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-14T13:30",
+"name": "drawdown_limit_close_refill",
+"status": "rejected",
+"rationale": "The payer is the leveraged futures long whose loss limit is measured on the intra-period peak-to-close drawdown, not the n-period return that var_limit_matched_refill and var_breach_deleverage use. A period that closes on its low after a drawdown beyond the trailing quantile of i",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-14T12:59",
 "name": "reset_clock_loss_refill",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the leveraged book, long or short, whose intraperiod loss limit (a stop-out or margin line watched through the period, not only at the close) is hit and force-cut into the low or high, which pushes price past fair value. The budget resets at the boundary and the refi",
 "note": "{\"name\": \"limit_excursion_refill\", \"grid\": 128, \"sec_per_param\": 0.003, \"active_frac\": 0.0975}"
-},
-{
-"ts": "2026-11-14T07:16",
-"name": "var_limit_unfilled_refill",
-"status": "rejected",
-"rationale": "Payer is the leveraged long book (futures funds, desks) whose N-period loss breaches its own risk limit. The limit forces a cut into the roll, and the budget resets at the boundary, so the refill bid arrives afterwards. Sellers who cut at the lows pay the refill.\nDiffers from `va",
-"note": "sandbox: IndexError: index 14 is out of bounds for axis 0 with size 14"
 }
 ],
 "history": [
-{
-"t": 1794489472.957068,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.9,
-"gpu": 0,
-"free_gb": 181.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794490397.775074,
 "total": 31310831,
@@ -4465,6 +4454,17 @@
 "cpu": 3.6,
 "gpu": 1,
 "free_gb": 179.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794663135.508746,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 31,
+"free_gb": 169.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
