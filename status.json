@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-14 11:14:19 UTC",
+"generated_at": "2026-11-14 11:30:30 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 99.9,
 "gpu_pct": 1,
-"free_gb": 113.6,
-"uptime": "up 14 days, 21:34, 2 users, load averages: 46.82 40.12 24.96",
-"load": "{ 46.82 40.12 24.96 }"
+"free_gb": 134.1,
+"uptime": "up 14 days, 21:50, 2 users, load averages: 40.55 43.00 38.51",
+"load": "{ 40.55 43.00 38.51 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-14T11:27",
+"name": null,
+"status": "rejected",
+"rationale": "The payer is slow-updating gold holders and ETF/physical-channel dealers. They price off gold's own tape, not the 10y real yield, so after a large real-yield move their quotes and flows lag it. Gold then catches up to the rate shock by roughly the remaining beta.\nRATIONALE: I dev",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-14T10:55",
 "name": "limit_drawdown_close_refill",
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the leveraged futures long whose daily VaR or loss limit forces a cut into the period close after an outsized loss. It sells on the risk clock, then refills after the reset, so price overshoots down into the boundary and recovers once the cut is done.\nRATIONALE: The ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-14T05:12",
-"name": "var_loss_refill_clock",
-"status": "rejected",
-"rationale": "Payer is the leveraged futures long under a day-boundary VaR or loss limit. After a multi-day loss beyond its own trailing loss-quantile, the cut runs into the close, and the refill comes after the reset at a time set by the calendar, not by price.\nTrade: long only, entered after",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794482088.618523,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.8,
-"gpu": 4,
-"free_gb": 186.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1794483011.477066,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.6,
-"gpu": 4,
-"free_gb": 186.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794483933.946985,
 "total": 31310831,
@@ -4476,6 +4454,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 113.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794655830.242919,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 99.9,
+"gpu": 1,
+"free_gb": 134.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
