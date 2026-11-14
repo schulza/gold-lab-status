@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-14 09:39:30 UTC",
+"generated_at": "2026-11-14 09:55:25 UTC",
 "host": {
-"cpu_pct": 99.8,
-"gpu_pct": 12,
-"free_gb": 149.8,
-"uptime": "up 14 days, 19:59, 2 users, load averages: 57.76 47.62 42.48",
-"load": "{ 57.76 47.62 42.48 }"
+"cpu_pct": 99.9,
+"gpu_pct": 1,
+"free_gb": 160.1,
+"uptime": "up 14 days, 20:15, 2 users, load averages: 59.73 60.73 56.70",
+"load": "{ 59.73 60.73 56.70 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-14T09:52",
+"name": "var_cut_deceleration_refill",
+"status": "rejected",
+"rationale": "Payer is the leveraged long book that is being cut to its VaR limit. The cut runs over several periods, and the last cut slice is smaller than the one before it, so the forced sellers are nearly done when the next period's budget opens. I buy only when the 2-period loss breaches ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-14T09:21",
 "name": "var_cut_tape_refill",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the volatility-targeting fund. After a realised-vol jump it must cut exposure on its own rebalance schedule, so the cut runs for days in the direction of the price move that triggered it. Entry fires when the 1-to-2-day realised vol first crosses a multiple of its 20-day",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-14T03:39",
-"name": "vol_jump_dip_bid",
-"status": "rejected",
-"rationale": "The payer is the volatility-targeting fund. When realised vol jumps, it must cut long gold on a rule it doesn't choose, so it sells into a falling, thin book and concedes price. Once the cut is done, the move partly refunds, so I bid the dip after a wait.\nRATIONALE: The trigger i",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794476551.945366,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.6,
-"gpu": 4,
-"free_gb": 186.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794477474.495892,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 99.8,
 "gpu": 12,
 "free_gb": 149.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794650125.422123,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 99.9,
+"gpu": 1,
+"free_gb": 160.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
