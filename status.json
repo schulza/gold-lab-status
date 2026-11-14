@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-14 15:24:36 UTC",
+"generated_at": "2026-11-14 15:40:46 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 1,
-"free_gb": 128.2,
-"uptime": "up 15 days,  1:44, 2 users, load averages: 43.99 43.54 42.21",
-"load": "{ 43.99 43.54 42.21 }"
+"gpu_pct": 14,
+"free_gb": 152.3,
+"uptime": "up 15 days, 2 hrs, 2 users, load averages: 45.79 42.83 42.19",
+"load": "{ 45.79 42.83 42.19 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-14T15:34",
+"name": "late_limit_breach_refill",
+"status": "accepted",
+"rationale": "The payer is the leveraged futures long whose loss limit is hit only late in the period. A breach after the day or week is mostly gone leaves no time to cut gradually, so the forced liquidation lands in the closing hours and the close stays near the low. Buyers who refill after t",
+"note": "{\"name\": \"late_limit_breach_refill\", \"grid\": 128, \"sec_per_param\": 0.001, \"active_frac\": 0.165}"
+},
+{
 "ts": "2026-11-14T15:03",
 "name": "limit_drawdown_bounce_refill",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the leveraged long book that is being cut to its VaR limit. The cut runs over several periods, and the last cut slice is smaller than the one before it, so the forced sellers are nearly done when the next period's budget opens. I buy only when the 2-period loss breaches ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-14T09:21",
-"name": "var_cut_tape_refill",
-"status": "accepted",
-"rationale": "The payer is the leveraged long whose limit breach forces a cut into the 22:00 UTC roll. A forced seller must finish before the boundary, so the loss concentrates in the last `cw` hours before the roll. Those sellers pay a concession that the refill after the reset recovers.\nThe ",
-"note": "{\"name\": \"var_cut_tape_refill\", \"grid\": 128, \"sec_per_param\": 0.001, \"active_frac\": 0.048}"
 }
 ],
 "history": [
-{
-"t": 1794497915.548016,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.9,
-"gpu": 36,
-"free_gb": 177.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794498877.342335,
 "total": 31310831,
@@ -4454,6 +4443,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 128.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794670846.3026502,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 14,
+"free_gb": 152.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
