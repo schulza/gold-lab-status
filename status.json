@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-14 03:05:42 UTC",
+"generated_at": "2026-11-14 03:21:06 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 0.5,
 "gpu_pct": 1,
-"free_gb": 118.6,
-"uptime": "up 14 days, 13:25, 2 users, load averages: 41.26 40.03 31.69",
-"load": "{ 41.26 40.03 31.69 }"
+"free_gb": 186.9,
+"uptime": "up 14 days, 13:41, 2 users, load averages: 3.91 20.64 28.87",
+"load": "{ 3.91 20.64 28.87 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-14T03:08",
+"name": "vol_percentile_cut_clock",
+"status": "rejected",
+"rationale": "The payer is the volatility-targeted allocator (risk-parity and managed-vol mandates). When short-window realised vol crosses a high rolling percentile, the mandate forces a price-insensitive cut of gold, so the cut sells into the low and pays whoever buys the lag.\nThe event is t",
+"note": "sandbox: AssertionError: zu speicherhungrig: 92 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-14T02:37",
 "name": "vol_jump_clock_follow",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the levered-gold-ETF and calendar rebalancer. Its hedge size is leverage \u00d7 the day's move, so a move that is large against recent days forces more close-time flow. This family goes with the move into the settle window, sized by the day's move relative to the trailing",
 "note": "{\"name\": \"close_move_scaled_rebalance\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.0061}"
-},
-{
-"ts": "2026-11-13T20:56",
-"name": "vol_target_deleverage_window",
-"status": "accepted",
-"rationale": "The payer is the volatility-targeting fund, which has to cut gold exposure by about 1 \u2212 \u03c3_base/\u03c3_now once short-window realised vol jumps above its own longer baseline. It cannot cut in one print, so it sells over the following clock window in the direction of the trigger-window ",
-"note": "{\"name\": \"vol_target_deleverage_window\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.468525}"
 }
 ],
 "history": [
-{
-"t": 1794453377.2591438,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.8,
-"gpu": 4,
-"free_gb": 180.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794454300.250711,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 118.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794626466.2023602,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.5,
+"gpu": 1,
+"free_gb": 186.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
