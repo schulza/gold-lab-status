@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-14 00:27:05 UTC",
+"generated_at": "2026-11-14 00:43:09 UTC",
 "host": {
-"cpu_pct": 3.5,
-"gpu_pct": 36,
-"free_gb": 180.5,
-"uptime": "up 14 days, 10:47, 2 users, load averages: 2.24 3.82 12.88",
-"load": "{ 2.24 3.82 12.88 }"
+"cpu_pct": 100.0,
+"gpu_pct": 1,
+"free_gb": 139.9,
+"uptime": "up 14 days, 11:03, 2 users, load averages: 44.41 31.80 20.28",
+"load": "{ 44.41 31.80 20.28 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-14T00:34",
+"name": "downside_variance_cut_bid",
+"status": "accepted",
+"rationale": "The payer is the vol-target and risk-parity fund that must keep cutting gold after a persistent run of downside realised variance. It sells on a schedule it does not choose, so price overshoots and then refunds. The signal is the downside share of realised variance together with ",
+"note": "{\"name\": \"downside_variance_cut_bid\", \"grid\": 81, \"sec_per_param\": 0.0, \"active_frac\": 0.202025}"
+},
+{
 "ts": "2026-11-14T00:03",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "`goldlab.external` is not in `ALLOWED_MODULES` (`goldlab/evolve.py:46`), which caused two earlier rejections, so this module is price-only. Both payers the director named already have unmeasured families on disk (`vol_jump_cut_pressure`, `close_abs_move_rebalance`), so this takes",
 "note": "sandbox: AssertionError: zu speicherhungrig: 65 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-11-13T18:21",
-"name": null,
-"status": "rejected",
-"rationale": "I deviate from the direction on purpose. Both named payers (`vol_cross_cut_clock`, `close_abs_move_rebalance`) are already accepted and unmeasured, and the direction says to wait for their first row, so this module takes a third payer.\nRATIONALE: The payer is the crowded speculat",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1794444143.816766,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.1,
-"gpu": 39,
-"free_gb": 180.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794445066.9537249,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 3.5,
 "gpu": 36,
 "free_gb": 180.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794616989.9320362,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 139.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
