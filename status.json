@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-14 20:26:03 UTC",
+"generated_at": "2026-11-14 20:48:04 UTC",
 "host": {
-"cpu_pct": 100.0,
-"gpu_pct": 1,
-"free_gb": 104.0,
-"uptime": "up 15 days,  6:38, 1 user, load averages: 75.47 75.50 77.88",
-"load": "{ 75.47 75.50 77.88 }"
+"cpu_pct": null,
+"gpu_pct": 0,
+"free_gb": 101.2,
+"uptime": "up 15 days,  7:02, 1 user, load averages: 121.13 99.35 91.68",
+"load": "{ 117.35 98.93 91.58 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-14T20:29",
+"name": "loss_streak_reset_refill",
+"status": "rejected",
+"rationale": "The payer is the leveraged long under a drawdown-stop rule that counts consecutive losing days. After m straight down days with a cumulative loss in the lower tail of its own history, risk is cut across several resets, and the cut pushes price past fair value. Buyers who refill a",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-14T19:56",
 "name": "weekend_cut_monday_refill",
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is a leveraged futures long whose intraperiod loss limit is hit. Their risk system forces a cut into the period close, and sellers who liquidate at the high-to-close trough pay the buyers who refill after the reset.\nRATIONALE: This is not a neighbour of `var_limit_match",
 "note": "{\"name\": \"limit_drawdown_bounce_refill\", \"grid\": 128, \"sec_per_param\": 0.002, \"active_frac\": 0.165}"
-},
-{
-"ts": "2026-11-14T14:32",
-"name": "reset_giveback_matched_refill",
-"status": "accepted",
-"rationale": "Payer is the leveraged long with a trailing loss limit measured from the period high, such as a high-water-mark or intraday drawdown stop. The limit forces a cut into the period mark, and the refill after the reset buys from sellers who were forced out at the lows.\nRATIONALE: `va",
-"note": "{\"name\": \"reset_giveback_matched_refill\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.18}"
 }
 ],
 "history": [
-{
-"t": 1794515308.900789,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 3,
-"free_gb": 140.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1794516273.652344,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 3,
-"free_gb": 151.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794517242.862894,
 "total": 31310831,
@@ -4443,6 +4421,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 104.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794689284.7462249,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": null,
+"gpu": 0,
+"free_gb": 101.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
