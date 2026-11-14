@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-14 09:07:18 UTC",
+"generated_at": "2026-11-14 09:23:24 UTC",
 "host": {
-"cpu_pct": 97.4,
+"cpu_pct": 100.0,
 "gpu_pct": 1,
-"free_gb": 158.9,
-"uptime": "up 14 days, 19:27, 2 users, load averages: 39.97 40.18 34.39",
-"load": "{ 39.97 40.18 34.39 }"
+"free_gb": 158.5,
+"uptime": "up 14 days, 19:43, 2 users, load averages: 39.21 38.65 37.38",
+"load": "{ 39.21 38.65 37.38 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-14T09:21",
+"name": "var_cut_tape_refill",
+"status": "accepted",
+"rationale": "The payer is the leveraged long whose limit breach forces a cut into the 22:00 UTC roll. A forced seller must finish before the boundary, so the loss concentrates in the last `cw` hours before the roll. Those sellers pay a concession that the refill after the reset recovers.\nThe ",
+"note": "{\"name\": \"var_cut_tape_refill\", \"grid\": 128, \"sec_per_param\": 0.001, \"active_frac\": 0.048}"
+},
+{
 "ts": "2026-11-14T08:49",
 "name": "var_excess_graded_refill",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the volatility-targeting fund. When realised vol jumps, it must cut long gold on a rule it doesn't choose, so it sells into a falling, thin book and concedes price. Once the cut is done, the move partly refunds, so I bid the dip after a wait.\nRATIONALE: The trigger i",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-14T03:08",
-"name": "vol_percentile_cut_clock",
-"status": "rejected",
-"rationale": "The payer is the volatility-targeted allocator (risk-parity and managed-vol mandates). When short-window realised vol crosses a high rolling percentile, the mandate forces a price-insensitive cut of gold, so the cut sells into the low and pays whoever buys the lag.\nThe event is t",
-"note": "sandbox: AssertionError: zu speicherhungrig: 92 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1794474706.918988,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.9,
-"gpu": 4,
-"free_gb": 186.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794475629.437835,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 97.4,
 "gpu": 1,
 "free_gb": 158.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794648204.7773921,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 158.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
