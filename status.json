@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-14 02:33:13 UTC",
+"generated_at": "2026-11-14 02:49:27 UTC",
 "host": {
-"cpu_pct": 3.5,
-"gpu_pct": 35,
-"free_gb": 185.0,
-"uptime": "up 14 days, 12:53, 2 users, load averages: 2.34 4.08 13.58",
-"load": "{ 2.34 4.08 13.58 }"
+"cpu_pct": 100.0,
+"gpu_pct": 1,
+"free_gb": 141.1,
+"uptime": "up 14 days, 13:09, 2 users, load averages: 37.73 16.98 11.94",
+"load": "{ 37.73 16.98 11.94 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-14T02:37",
+"name": "vol_jump_clock_follow",
+"status": "rejected",
+"rationale": "Payer is the vol-target fund that must cut gold exposure after a realised-vol jump, on a schedule it doesn't choose. Its cut-and-refill flow is mechanical, so the move after the jump reverts or extends depending on whether the move that caused it was a sell or a rally.\nRATIONALE:",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-14T02:07",
 "name": "vol_cut_schedule_flow",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the volatility-targeting fund, which has to cut gold exposure by about 1 \u2212 \u03c3_base/\u03c3_now once short-window realised vol jumps above its own longer baseline. It cannot cut in one print, so it sells over the following clock window in the direction of the trigger-window ",
 "note": "{\"name\": \"vol_target_deleverage_window\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.468525}"
-},
-{
-"ts": "2026-11-13T20:26",
-"name": "vol_target_cut_hold",
-"status": "rejected",
-"rationale": "The payer is the volatility-targeting fund. When realised vol jumps, its mandate forces a cut of gold exposure by roughly 1 \u2212 target/realised, regardless of price direction. The fund sells inelastically into a window it does not choose, and the discount is refunded afterwards.\nRA",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794451531.027242,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.8,
-"gpu": 4,
-"free_gb": 180.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794452454.066903,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 3.5,
 "gpu": 35,
 "free_gb": 185.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794624567.428803,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 141.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
