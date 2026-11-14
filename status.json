@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-14 07:16:01 UTC",
+"generated_at": "2026-11-14 07:31:23 UTC",
 "host": {
-"cpu_pct": 100.0,
-"gpu_pct": 1,
-"free_gb": 160.6,
-"uptime": "up 14 days, 17:36, 2 users, load averages: 43.38 41.59 40.73",
-"load": "{ 43.38 41.59 40.73 }"
+"cpu_pct": 0.6,
+"gpu_pct": 35,
+"free_gb": 185.8,
+"uptime": "up 14 days, 17:52, 2 users, load averages: 0.58 3.12 14.83",
+"load": "{ 0.58 3.12 14.83 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-14T07:16",
+"name": "var_limit_unfilled_refill",
+"status": "rejected",
+"rationale": "Payer is the leveraged long book (futures funds, desks) whose N-period loss breaches its own risk limit. The limit forces a cut into the roll, and the budget resets at the boundary, so the refill bid arrives afterwards. Sellers who cut at the lows pay the refill.\nDiffers from `va",
+"note": "sandbox: IndexError: index 14 is out of bounds for axis 0 with size 14"
+},
+{
 "ts": "2026-11-14T06:45",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the volatility-targeting fund, which must cut gold exposure on a schedule it doesn't choose once realised vol jumps. The cut is price-insensitive selling spread over the following bars.\nThe family fires when vol crosses its own trailing z-score from below, waits `lag",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-14T01:05",
-"name": null,
-"status": "rejected",
-"rationale": "",
-"note": "no python block in reply"
 }
 ],
 "history": [
-{
-"t": 1794468248.989558,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.6,
-"gpu": 4,
-"free_gb": 187.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794469171.778072,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 160.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794641483.9795809,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.6,
+"gpu": 35,
+"free_gb": 185.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
