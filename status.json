@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-14 02:02:21 UTC",
+"generated_at": "2026-11-14 02:17:44 UTC",
 "host": {
-"cpu_pct": 99.9,
+"cpu_pct": 3.4,
 "gpu_pct": 1,
-"free_gb": 118.5,
-"uptime": "up 14 days, 12:22, 2 users, load averages: 50.34 47.55 36.85",
-"load": "{ 50.34 47.55 36.85 }"
+"free_gb": 183.1,
+"uptime": "up 14 days, 12:38, 2 users, load averages: 1.99 18.97 30.29",
+"load": "{ 1.99 18.97 30.29 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-14T02:07",
+"name": "vol_cut_schedule_flow",
+"status": "rejected",
+"rationale": "The payer is the volatility-targeting fund. It must cut gold exposure on its own schedule after realised vol jumps, with a lag it does not choose. Long-only mandates cut into down-moves, so the forced flow arrives lagged and in one direction. The parameters decide whether to foll",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-14T01:36",
 "name": "vol_jump_cut_window",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the volatility-targeting fund. When realised vol jumps, its mandate forces a cut of gold exposure by roughly 1 \u2212 target/realised, regardless of price direction. The fund sells inelastically into a window it does not choose, and the discount is refunded afterwards.\nRA",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-13T19:54",
-"name": "vol_cut_fraction_refund",
-"status": "rejected",
-"rationale": "The payer is the volatility-targeting fund that is long gold and has to sell after a realised-vol jump, on a schedule it doesn't choose. Its forced selling pushes the price temporarily below fair value.\nRATIONALE: The family buys after the selling finishes (`lag`, then a fixed `h",
-"note": "sandbox: AssertionError: non-finite values"
 }
 ],
 "history": [
-{
-"t": 1794449683.829747,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.8,
-"gpu": 4,
-"free_gb": 180.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794450607.0039492,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 99.9,
 "gpu": 1,
 "free_gb": 118.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794622664.552757,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.4,
+"gpu": 1,
+"free_gb": 183.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
