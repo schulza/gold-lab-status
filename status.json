@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-14 08:35:38 UTC",
+"generated_at": "2026-11-14 08:51:44 UTC",
 "host": {
-"cpu_pct": 3.3,
-"gpu_pct": 1,
-"free_gb": 182.5,
-"uptime": "up 14 days, 18:56, 2 users, load averages: 1.90 17.98 30.10",
-"load": "{ 1.90 17.98 30.10 }"
+"cpu_pct": 100.0,
+"gpu_pct": 28,
+"free_gb": 155.6,
+"uptime": "up 14 days, 19:11, 2 users, load averages: 40.03 22.45 19.99",
+"load": "{ 40.03 22.45 19.99 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-14T08:49",
+"name": "var_excess_graded_refill",
+"status": "accepted",
+"rationale": "Payer is the leveraged long whose limit breach forces a cut sized by the excess over its VaR. The director's family (N-day loss over a rolling VaR quantile, boundary passed, clock exit) already exists as my accepted `var_boundary_refill`, and `var_drawdown_reset_refill` covers th",
+"note": "{\"name\": \"var_excess_graded_refill\", \"grid\": 128, \"sec_per_param\": 0.001, \"active_frac\": 0.036}"
+},
+{
 "ts": "2026-11-14T08:18",
 "name": "var_drawdown_reset_refill",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the volatility-targeted allocator (risk-parity and managed-vol mandates). When short-window realised vol crosses a high rolling percentile, the mandate forces a price-insensitive cut of gold, so the cut sells into the low and pays whoever buys the lag.\nThe event is t",
 "note": "sandbox: AssertionError: zu speicherhungrig: 92 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-11-14T02:37",
-"name": "vol_jump_clock_follow",
-"status": "rejected",
-"rationale": "Payer is the vol-target fund that must cut gold exposure after a realised-vol jump, on a schedule it doesn't choose. Its cut-and-refill flow is mechanical, so the move after the jump reverts or extends depending on whether the move that caused it was a sell or a rally.\nRATIONALE:",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794472861.770293,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.7,
-"gpu": 4,
-"free_gb": 187.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794473784.411668,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 3.3,
 "gpu": 1,
 "free_gb": 182.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794646304.229558,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 28,
+"free_gb": 155.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
