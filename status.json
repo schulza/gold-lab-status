@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-14 13:48:11 UTC",
+"generated_at": "2026-11-14 14:04:27 UTC",
 "host": {
-"cpu_pct": 9.3,
+"cpu_pct": 100.0,
 "gpu_pct": 1,
-"free_gb": 183.9,
-"uptime": "up 15 days, 8 mins, 2 users, load averages: 36.41 43.06 35.0",
-"load": "{ 36.41 43.06 35.06 }"
+"free_gb": 113.8,
+"uptime": "up 15 days, 24 mins, 2 users, load averages: 36.80 42.25 41.",
+"load": "{ 36.80 42.25 41.91 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-14T14:01",
+"name": "close_pinned_var_refill",
+"status": "accepted",
+"rationale": "Payer is the leveraged futures long whose day loss breaches its trailing VaR quantile. The limit cut executes into the 22:00 UTC mark, so I require the final k hours to carry at least a fraction f of the loss. Sellers who sold the closing leg get refilled after the reset.\nRATIONA",
+"note": "{\"name\": \"close_pinned_var_refill\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.132}"
+},
+{
 "ts": "2026-11-14T13:30",
 "name": "drawdown_limit_close_refill",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the leveraged long book (futures funds, desks) whose intra-period drawdown (period high to the period-end mark) breaches its own trailing VaR-style quantile. Its limit forces a cut into the roll, and the budget resets at the boundary. The refill bid then arrives into a b",
 "note": "{\"name\": \"var_drawdown_reset_refill\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.066}"
-},
-{
-"ts": "2026-11-14T07:47",
-"name": "limit_excursion_refill",
-"status": "accepted",
-"rationale": "The payer is the leveraged book, long or short, whose intraperiod loss limit (a stop-out or margin line watched through the period, not only at the close) is hit and force-cut into the low or high, which pushes price past fair value. The budget resets at the boundary and the refi",
-"note": "{\"name\": \"limit_excursion_refill\", \"grid\": 128, \"sec_per_param\": 0.003, \"active_frac\": 0.0975}"
 }
 ],
 "history": [
-{
-"t": 1794491361.7608042,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 133.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794492296.398891,
 "total": 31310831,
@@ -4465,6 +4454,17 @@
 "cpu": 9.3,
 "gpu": 1,
 "free_gb": 183.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794665067.045419,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 113.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
