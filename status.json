@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-14 18:05:19 UTC",
+"generated_at": "2026-11-14 18:22:47 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 2,
-"free_gb": 101.1,
-"uptime": "up 15 days,  4:22, 2 users, load averages: 51.05 45.95 31.84",
-"load": "{ 51.05 45.95 31.84 }"
+"free_gb": 112.9,
+"uptime": "up 15 days,  4:41, 2 users, load averages: 50.01 51.42 46.10",
+"load": "{ 50.01 51.42 46.10 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-14T18:11",
+"name": "ewma_limit_breach_refill",
+"status": "rejected",
+"rationale": "Payer is the leveraged futures long whose desk limit is parametric (EWMA sigma \u00d7 z \u00d7 sqrt(n), set at window start). A realised n-period loss beyond that limit forces a cut into the period mark, and the refill after the reset buys from those forced sellers.\nRATIONALE: It is not a ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-14T17:39",
 "name": "multiperiod_var_reset_refill",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the leveraged futures long whose n-period loss breaches its own trailing VaR quantile. The limit forces a cut into the period mark, and the refill after the reset buys from sellers who sold the trough.\nRATIONALE: New against `var_breach_deleverage`, `var_boundary_refill`",
 "note": "{\"name\": \"var_limit_matched_refill\", \"grid\": 192, \"sec_per_param\": 0.001, \"active_frac\": 0.132}"
-},
-{
-"ts": "2026-11-14T11:58",
-"name": "late_breach_limit_refill",
-"status": "rejected",
-"rationale": "The payer is the leveraged long book (futures fund or desk) whose period loss crosses its own parametric VaR limit only in the last hours before the roll. That book has to cut into the close, and its budget resets at the boundary, so the refill bid arrives after the forced seller",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794507583.957484,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 3,
-"free_gb": 144.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794508546.5196118,
 "total": 31310831,
@@ -4454,6 +4443,17 @@
 "cpu": 100.0,
 "gpu": 2,
 "free_gb": 101.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794680567.2489028,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 2,
+"free_gb": 112.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
