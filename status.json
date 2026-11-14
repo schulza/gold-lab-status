@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-14 05:41:20 UTC",
+"generated_at": "2026-11-14 05:56:42 UTC",
 "host": {
-"cpu_pct": 99.9,
-"gpu_pct": 38,
-"free_gb": 134.0,
-"uptime": "up 14 days, 16:01, 2 users, load averages: 18.20 10.35 8.49",
-"load": "{ 18.20 10.35 8.49 }"
+"cpu_pct": 3.3,
+"gpu_pct": 1,
+"free_gb": 186.6,
+"uptime": "up 14 days, 16:17, 2 users, load averages: 1.87 4.59 5.95",
+"load": "{ 1.87 4.59 5.95 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-14T05:43",
+"name": "period_reset_refill",
+"status": "rejected",
+"rationale": "The payer is the leveraged futures long whose daily VaR or loss limit forces a cut into the period close after an outsized loss. It sells on the risk clock, then refills after the reset, so price overshoots down into the boundary and recovers once the cut is done.\nRATIONALE: The ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-14T05:12",
 "name": "var_loss_refill_clock",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The director's two named payers (vol-target cut, close rebalance) already have accepted, unmeasured families, so I skipped them. This family targets a third payer: slow real-money gold holders (ETF and allocator flows) who reprice off the DFII10 print with a delay. When the 5-day",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-13T23:32",
-"name": "jump_acceptance_follow",
-"status": "accepted",
-"rationale": "The payer is liquidity providers and stop-based fade traders. They lean against a one-bar jump of at least k sigma, taking it for a liquidity shock. When the market has kept at least a fraction f of the jump m bars later, the jump carried information and their inventory is wrong-",
-"note": "{\"name\": \"jump_acceptance_follow\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.1213375}"
 }
 ],
 "history": [
-{
-"t": 1794462608.264025,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.6,
-"gpu": 4,
-"free_gb": 180.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794463531.2730181,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 99.9,
 "gpu": 38,
 "free_gb": 134.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794635802.4201221,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.3,
+"gpu": 1,
+"free_gb": 186.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
