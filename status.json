@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-14 06:12:05 UTC",
+"generated_at": "2026-11-14 06:28:08 UTC",
 "host": {
-"cpu_pct": 1.8,
+"cpu_pct": 99.4,
 "gpu_pct": 1,
-"free_gb": 186.0,
-"uptime": "up 14 days, 16:32, 2 users, load averages: 16.17 8.62 6.84",
-"load": "{ 16.17 8.62 6.84 }"
+"free_gb": 153.2,
+"uptime": "up 14 days, 16:48, 2 users, load averages: 28.52 33.90 22.72",
+"load": "{ 28.52 33.90 22.72 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-14T06:14",
+"name": "var_boundary_refill",
+"status": "accepted",
+"rationale": "Payer is the leveraged long book (futures funds, desks) whose N-period loss breaches its own rolling historical VaR quantile. The cut is dictated by the limit and is done by the period boundary. The budget resets at the roll, and the refill bid arrives lag hours after it into the",
+"note": "{\"name\": \"var_boundary_refill\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.048}"
+},
+{
 "ts": "2026-11-14T05:43",
 "name": "period_reset_refill",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the vol-target and risk-parity fund that must keep cutting gold after a persistent run of downside realised variance. It sells on a schedule it does not choose, so price overshoots and then refunds. The signal is the downside share of realised variance together with ",
 "note": "{\"name\": \"downside_variance_cut_bid\", \"grid\": 81, \"sec_per_param\": 0.0, \"active_frac\": 0.202025}"
-},
-{
-"ts": "2026-11-14T00:03",
-"name": null,
-"status": "rejected",
-"rationale": "The director's two named payers (vol-target cut, close rebalance) already have accepted, unmeasured families, so I skipped them. This family targets a third payer: slow real-money gold holders (ETF and allocator flows) who reprice off the DFII10 print with a delay. When the 5-day",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1794464454.4414332,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.7,
-"gpu": 4,
-"free_gb": 180.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794465377.326368,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 1.8,
 "gpu": 1,
 "free_gb": 186.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794637688.602672,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 99.4,
+"gpu": 1,
+"free_gb": 153.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
