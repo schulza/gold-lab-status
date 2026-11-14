@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-14 12:45:14 UTC",
+"generated_at": "2026-11-14 13:00:37 UTC",
 "host": {
-"cpu_pct": 3.5,
+"cpu_pct": 3.4,
 "gpu_pct": 1,
-"free_gb": 181.9,
-"uptime": "up 14 days, 23:05, 2 users, load averages: 1.32 1.57 7.18",
-"load": "{ 1.32 1.57 7.18 }"
+"free_gb": 179.8,
+"uptime": "up 14 days, 23:21, 2 users, load averages: 1.52 1.59 3.50",
+"load": "{ 1.52 1.59 3.50 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-14T12:59",
+"name": "reset_clock_loss_refill",
+"status": "rejected",
+"rationale": "The payer is the leveraged long whose N-day loss breaches a risk limit scaled by trailing daily volatility. That holder is cut into the day-boundary reset, which pushes price below value, and re-risks only once the new limit period opens. The family goes long from the first bar o",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-14T12:28",
 "name": "var_limit_matched_refill",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the leveraged long book (futures funds, desks) whose N-period loss breaches its own risk limit. The limit forces a cut into the roll, and the budget resets at the boundary, so the refill bid arrives afterwards. Sellers who cut at the lows pay the refill.\nDiffers from `va",
 "note": "sandbox: IndexError: index 14 is out of bounds for axis 0 with size 14"
-},
-{
-"ts": "2026-11-14T06:45",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is the speculative short crowd, meaning managed-money accounts with extreme net-short COT positioning. Margin and risk limits tighten into scheduled NFP and FOMC vol spikes, which forces them to cover (a squeeze) while the crowd is one-sided.\nOnly the crowded-short side is ",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1794487625.805422,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 2.4,
-"gpu": 15,
-"free_gb": 181.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794488549.967962,
 "total": 31310831,
@@ -4465,6 +4454,17 @@
 "cpu": 3.5,
 "gpu": 1,
 "free_gb": 181.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794661237.97947,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.4,
+"gpu": 1,
+"free_gb": 179.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
