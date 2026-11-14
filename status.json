@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-14 04:08:36 UTC",
+"generated_at": "2026-11-14 04:24:01 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 9.6,
 "gpu_pct": 1,
-"free_gb": 117.9,
-"uptime": "up 14 days, 14:28, 2 users, load averages: 40.92 42.28 35.44",
-"load": "{ 40.92 42.28 35.44 }"
+"free_gb": 182.6,
+"uptime": "up 14 days, 14:44, 2 users, load averages: 1.14 11.21 23.50",
+"load": "{ 1.14 11.21 23.50 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-14T04:10",
+"name": "vol_jump_cut_follow",
+"status": "rejected",
+"rationale": "Payer is the volatility-targeting fund. After a realised-vol jump it must cut exposure on its own rebalance schedule, so the cut runs for days in the direction of the price move that triggered it. Entry fires when the 1-to-2-day realised vol first crosses a multiple of its 20-day",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-14T03:39",
 "name": "vol_jump_dip_bid",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the volatility-targeting fund that resizes once a day at a fixed hour. Its target weight is sigma_target divided by trailing realised vol, so the size of the trade is the one-day change in smooth 20-day vol. The fund must execute that trade over the next hours whatev",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-13T21:59",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is the slow macro allocator (gold ETF and discretionary holders) who reprices gold to a 5-day real-yield move with a delay. When gold has not yet moved by the amount its rolling yield beta implies, the catch-up is forced flow, not drift.\nRATIONALE: This is neither payer you",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1794457069.7617931,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.2,
-"gpu": 4,
-"free_gb": 180.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794457992.747489,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 117.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794630241.096524,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 9.6,
+"gpu": 1,
+"free_gb": 182.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
