@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-14 01:30:04 UTC",
+"generated_at": "2026-11-14 01:46:15 UTC",
 "host": {
-"cpu_pct": 4.0,
+"cpu_pct": 100.0,
 "gpu_pct": 1,
-"free_gb": 185.4,
-"uptime": "up 14 days, 11:50, 2 users, load averages: 1.39 1.89 9.74",
-"load": "{ 1.39 1.89 9.74 }"
+"free_gb": 140.7,
+"uptime": "up 14 days, 12:06, 2 users, load averages: 40.32 24.34 14.54",
+"load": "{ 40.32 24.34 14.54 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-14T01:36",
+"name": "vol_jump_cut_window",
+"status": "rejected",
+"rationale": "The payer is the volatility-targeting fund, which must cut gold exposure on a schedule it doesn't choose once realised vol jumps. The cut is price-insensitive selling spread over the following bars.\nThe family fires when vol crosses its own trailing z-score from below, waits `lag",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-14T01:05",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the volatility-targeting fund that is long gold and has to sell after a realised-vol jump, on a schedule it doesn't choose. Its forced selling pushes the price temporarily below fair value.\nRATIONALE: The family buys after the selling finishes (`lag`, then a fixed `h",
 "note": "sandbox: AssertionError: non-finite values"
-},
-{
-"ts": "2026-11-13T19:24",
-"name": "vol_jump_clock_exit",
-"status": "accepted",
-"rationale": "The payer is the volatility-targeting fund. After a realised-vol jump it must sell exposure on its own rebalance schedule, and it does so over the next few hours whatever the price level is. That forced flow moves price in the direction of the jump window, and the fund's own mand",
-"note": "{\"name\": \"vol_jump_clock_exit\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.04565}"
 }
 ],
 "history": [
-{
-"t": 1794447836.5701919,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.8,
-"gpu": 4,
-"free_gb": 180.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794448760.566029,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 4.0,
 "gpu": 1,
 "free_gb": 185.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794620775.550186,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 140.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
