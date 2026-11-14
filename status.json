@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-14 17:00:29 UTC",
+"generated_at": "2026-11-14 17:15:53 UTC",
 "host": {
-"cpu_pct": 5.1,
-"gpu_pct": 10,
-"free_gb": 174.0,
-"uptime": "up 15 days,  3:21, 2 users, load averages: 3.43 18.40 30.62",
-"load": "{ 3.43 18.40 30.62 }"
+"cpu_pct": 3.3,
+"gpu_pct": 13,
+"free_gb": 169.7,
+"uptime": "up 15 days,  3:36, 2 users, load averages: 1.73 3.35 12.70",
+"load": "{ 1.73 3.35 12.70 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-14T17:08",
+"name": "run_end_limit_refill",
+"status": "accepted",
+"rationale": "Payer is the leveraged long fund whose rolling VaR or loss limit stayed breached for m consecutive periods. Its risk was cut each time. The first period that closes back inside the limit restores budget, and the refill buy comes at the next boundary.\nRATIONALE: The entry trigger ",
+"note": "{\"name\": \"run_end_limit_refill\", \"grid\": 192, \"sec_per_param\": 0.001, \"active_frac\": 0.054}"
+},
+{
 "ts": "2026-11-14T16:36",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is slow-updating gold holders and ETF/physical-channel dealers. They price off gold's own tape, not the 10y real yield, so after a large real-yield move their quotes and flows lag it. Gold then catches up to the rate shock by roughly the remaining beta.\nRATIONALE: I dev",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-14T10:55",
-"name": "limit_drawdown_close_refill",
-"status": "rejected",
-"rationale": "The payer is the leveraged long whose limit is set on mark-to-market drawdown from the day's high, which can trip even when the close-to-close loss is small. After a breach the desk is cut into the 22:00 UTC roll and closes near the low. The seller crosses the spread under a dead",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794503706.680935,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 3,
-"free_gb": 126.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794504677.548152,
 "total": 31310831,
@@ -4454,6 +4443,17 @@
 "cpu": 5.1,
 "gpu": 10,
 "free_gb": 174.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794676553.797472,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.3,
+"gpu": 13,
+"free_gb": 169.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
