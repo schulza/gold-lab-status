@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-14 04:39:24 UTC",
+"generated_at": "2026-11-14 04:54:47 UTC",
 "host": {
-"cpu_pct": 3.5,
-"gpu_pct": 38,
-"free_gb": 182.1,
-"uptime": "up 14 days, 15 hrs, 2 users, load averages: 1.23 3.10 10.22",
-"load": "{ 1.23 3.10 10.22 }"
+"cpu_pct": 5.5,
+"gpu_pct": 1,
+"free_gb": 180.8,
+"uptime": "up 14 days, 15:15, 2 users, load averages: 1.43 3.30 6.73",
+"load": "{ 1.43 3.30 6.73 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-14T04:41",
+"name": "vol_jump_schedule_rebid",
+"status": "accepted",
+"rationale": "The payer is the vol-targeting or risk-parity fund that is long gold and must cut it after a realised-vol jump with a falling window return. It sells on its own rebalance clock, `lag` bars after the jump, so price overshoots down while it executes.\nRATIONALE: The module enters lo",
+"note": "{\"name\": \"vol_jump_schedule_rebid\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.1455125}"
+},
+{
 "ts": "2026-11-14T04:10",
 "name": "vol_jump_cut_follow",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Both director payers already have accepted proposals from me (vol_jump_clock_exit, vol_target_deleverage_window, close_move_scaled_rebalance). I therefore ignore the \"one more proposal\" request and use an unmeasured payer on external data.\nRATIONALE: The payer is speculators posi",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-13T22:30",
-"name": "vol_estimate_rebalance_flow",
-"status": "rejected",
-"rationale": "The payer is the volatility-targeting fund that resizes once a day at a fixed hour. Its target weight is sigma_target divided by trailing realised vol, so the size of the trade is the one-day change in smooth 20-day vol. The fund must execute that trade over the next hours whatev",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794458915.9385128,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.7,
-"gpu": 4,
-"free_gb": 180.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794459839.0035572,
 "total": 31310831,
@@ -4476,6 +4465,17 @@
 "cpu": 3.5,
 "gpu": 38,
 "free_gb": 182.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794632087.05456,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 5.5,
+"gpu": 1,
+"free_gb": 180.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
