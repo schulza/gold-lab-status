@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-15 01:12:48 UTC",
+"generated_at": "2026-11-15 01:36:43 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 10,
-"free_gb": 163.9,
-"uptime": "up 15 days, 11:24, 1 user, load averages: 87.89 86.40 84.09",
-"load": "{ 87.89 86.40 84.09 }"
+"gpu_pct": 1,
+"free_gb": 161.8,
+"uptime": "up 15 days, 11:49, 1 user, load averages: 77.51 81.93 83.58",
+"load": "{ 77.51 81.93 83.58 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-15T01:33",
+"name": "trailing_high_drawdown_refill",
+"status": "accepted",
+"rationale": "The payer is the leveraged futures long whose limit is a drawdown from the n-day high, not an n-day change. It is marked on a 22:00 UTC day boundary and breached against a trailing q-quantile of its own drawdowns. The forced cut runs into the boundary, and the refill buyer after ",
+"note": "{\"name\": \"trailing_high_drawdown_refill\", \"grid\": 96, \"sec_per_param\": 0.013, \"active_frac\": 0.15}"
+},
+{
 "ts": "2026-11-15T00:58",
 "name": "quantile_breach_boundary_refill",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the leveraged futures long whose weekly loss limit or VaR is breached at the Friday close. They are cut into the weekend, can only re-lever after the Sunday reopen reset, and sell below fair value on Friday.\nRATIONALE: The family differs from `multiday_var_reset_refi",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-14T18:51",
-"name": "breach_stabilised_refill",
-"status": "accepted",
-"rationale": "The payer is a leveraged futures long whose N-period loss breaches its own rolling VaR quantile. The limit forces a cut into the close, and the budget resets at the 22:00 UTC day or week roll. Earlier refill families enter at a fixed lag after the boundary whether or not the forc",
-"note": "{\"name\": \"breach_stabilised_refill\", \"grid\": 192, \"sec_per_param\": 0.001, \"active_frac\": 0.0165}"
 }
 ],
 "history": [
-{
-"t": 1794533256.858699,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.5,
-"gpu": 3,
-"free_gb": 177.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794534180.2500548,
 "total": 31310831,
@@ -4377,6 +4366,17 @@
 "cpu": 100.0,
 "gpu": 10,
 "free_gb": 163.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794706603.015483,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 161.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
