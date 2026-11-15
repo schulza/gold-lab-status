@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-15 02:03:46 UTC",
+"generated_at": "2026-11-15 02:31:35 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 14,
-"free_gb": 177.6,
-"uptime": "up 15 days, 12:13, 1 user, load averages: 121.39 95.21 88.00",
-"load": "{ 117.35 94.81 87.90 }"
+"gpu_pct": 1,
+"free_gb": 174.0,
+"uptime": "up 15 days, 12:40, 1 user, load averages: 81.37 80.27 80.80",
+"load": "{ 81.37 80.27 80.80 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-15T02:06",
+"name": "cut_clock_limit_refill",
+"status": "rejected",
+"rationale": "The payer is the leveraged futures long whose desk loss limit is read at the pre-reset clock (the 22:00 UTC day roll). A breach forces a cut into the close, and the refill buyer after the reset collects the concession.\nRATIONALE: This differs from the three accepted siblings. The",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-15T01:33",
 "name": "trailing_high_drawdown_refill",
 "status": "accepted",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the leveraged long whose weekly loss limit is breached into the Friday close; the forced cut lands at the trough and the refill arrives after the Monday reset, so the weekend-reopen buyer collects the concession.\nRATIONALE: Differs from the daily-boundary reset families ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-14T19:22",
-"name": "weekly_limit_reset_refill",
-"status": "rejected",
-"rationale": "The payer is the leveraged futures long whose weekly loss limit or VaR is breached at the Friday close. They are cut into the weekend, can only re-lever after the Sunday reopen reset, and sell below fair value on Friday.\nRATIONALE: The family differs from `multiday_var_reset_refi",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794536027.150753,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.6,
-"gpu": 3,
-"free_gb": 182.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1794536950.8785422,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.4,
-"gpu": 36,
-"free_gb": 180.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794537874.1327639,
 "total": 31310831,
@@ -4366,6 +4344,17 @@
 "cpu": 100.0,
 "gpu": 14,
 "free_gb": 177.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794709895.5488,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 174.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
