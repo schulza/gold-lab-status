@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-15 00:21:38 UTC",
+"generated_at": "2026-11-15 00:48:00 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 1,
-"free_gb": 152.5,
-"uptime": "up 15 days, 10:30, 1 user, load averages: 78.14 78.12 80.56",
-"load": "{ 78.14 78.12 80.56 }"
+"free_gb": 147.8,
+"uptime": "up 15 days, 10:57, 1 user, load averages: 88.61 84.38 84.94",
+"load": "{ 87.52 84.23 84.88 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-15T00:27",
+"name": "period_budget_reset_refill",
+"status": "rejected",
+"rationale": "The payer is the leveraged futures long whose period-to-date (week, fortnight or 4-week) loss has used up its budget, so it is cut into the period close. The refill buyer at the new period's open collects the concession.\nRATIONALE: It differs from the day-boundary families (ewma_",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-14T23:54",
 "name": "weekly_drawdown_reset_refill",
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the leveraged futures long whose multi-day VaR limit is breached at a day boundary. They are forced to cut into the roll and sell at the trough, and buyers who refill after the reset collect that concession.\nRATIONALE: This differs from `limit_drawdown_bounce_refill`",
 "note": "{\"name\": \"multiday_var_reset_refill\", \"grid\": 96, \"sec_per_param\": 0.004, \"active_frac\": 0.066}"
-},
-{
-"ts": "2026-11-14T18:11",
-"name": "ewma_limit_breach_refill",
-"status": "rejected",
-"rationale": "Payer is the leveraged futures long whose desk limit is parametric (EWMA sigma \u00d7 z \u00d7 sqrt(n), set at window start). A realised n-period loss beyond that limit forces a cut into the period mark, and the refill after the reset buys from those forced sellers.\nRATIONALE: It is not a ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794529371.5258482,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.7,
-"gpu": 3,
-"free_gb": 177.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1794530294.648045,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.9,
-"gpu": 36,
-"free_gb": 182.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794531401.553349,
 "total": 31310831,
@@ -4399,6 +4377,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 152.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794703680.931514,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 147.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
