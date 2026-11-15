@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-15 02:56:08 UTC",
+"generated_at": "2026-11-15 03:20:52 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 18,
-"free_gb": 190.2,
-"uptime": "up 15 days, 13:07, 1 user, load averages: 90.20 87.77 88.90",
-"load": "{ 90.20 87.77 88.90 }"
+"gpu_pct": 1,
+"free_gb": 170.8,
+"uptime": "up 15 days, 13:32, 1 user, load averages: 82.79 80.55 81.42",
+"load": "{ 82.79 80.55 81.42 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-15T03:15",
+"name": "multiday_margin_cut_refill",
+"status": "rejected",
+"rationale": "Payer is the leveraged futures long whose margin or VaR limit trips on cumulative losses over the last m completed day-blocks, measured against its own 20-day daily sigma. The forced cut lands at the boundary, and the refill is delayed by `lag` hours and held for a fixed clock wi",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-15T02:41",
 "name": "weekly_rank_limit_refill",
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the leveraged futures long whose weekly loss limit or VaR is assessed at the Friday close. After a 3 to 5 day loss deep in its own lower tail, that long is forced to cut into the week-end. Buyers who refill once the limit resets on the first session of the new week c",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-14T20:29",
-"name": "loss_streak_reset_refill",
-"status": "rejected",
-"rationale": "The payer is the leveraged long under a drawdown-stop rule that counts consecutive losing days. After m straight down days with a cumulative loss in the lower tail of its own history, risk is cut across several resets, and the cut pushes price past fair value. Buyers who refill a",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794538797.304322,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.4,
-"gpu": 3,
-"free_gb": 177.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1794539720.428132,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.9,
-"gpu": 3,
-"free_gb": 182.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794540643.5816488,
 "total": 31310831,
@@ -4355,6 +4333,17 @@
 "cpu": 100.0,
 "gpu": 18,
 "free_gb": 190.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794712852.8860621,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 170.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
