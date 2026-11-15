@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-15 00:48:00 UTC",
+"generated_at": "2026-11-15 01:12:48 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 1,
-"free_gb": 147.8,
-"uptime": "up 15 days, 10:57, 1 user, load averages: 88.61 84.38 84.94",
-"load": "{ 87.52 84.23 84.88 }"
+"gpu_pct": 10,
+"free_gb": 163.9,
+"uptime": "up 15 days, 11:24, 1 user, load averages: 87.89 86.40 84.09",
+"load": "{ 87.89 86.40 84.09 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-15T00:58",
+"name": "quantile_breach_boundary_refill",
+"status": "accepted",
+"rationale": "The payer is the leveraged futures long whose N-day loss breaches its own VaR limit. A 22:00 UTC day-boundary reset forces a cut sized to the limit, and the refill buyer after the reset collects the concession.\nRATIONALE: The limit is the trailing empirical q-quantile of the prio",
+"note": "{\"name\": \"quantile_breach_boundary_refill\", \"grid\": 96, \"sec_per_param\": 0.007, \"active_frac\": 0.198}"
+},
+{
 "ts": "2026-11-15T00:27",
 "name": "period_budget_reset_refill",
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is a leveraged futures long whose N-period loss breaches its own rolling VaR quantile. The limit forces a cut into the close, and the budget resets at the 22:00 UTC day or week roll. Earlier refill families enter at a fixed lag after the boundary whether or not the forc",
 "note": "{\"name\": \"breach_stabilised_refill\", \"grid\": 192, \"sec_per_param\": 0.001, \"active_frac\": 0.0165}"
-},
-{
-"ts": "2026-11-14T18:45",
-"name": "multiday_var_reset_refill",
-"status": "accepted",
-"rationale": "The payer is the leveraged futures long whose multi-day VaR limit is breached at a day boundary. They are forced to cut into the roll and sell at the trough, and buyers who refill after the reset collect that concession.\nRATIONALE: This differs from `limit_drawdown_bounce_refill`",
-"note": "{\"name\": \"multiday_var_reset_refill\", \"grid\": 96, \"sec_per_param\": 0.004, \"active_frac\": 0.066}"
 }
 ],
 "history": [
-{
-"t": 1794531401.553349,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 3,
-"free_gb": 116.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1794532333.287355,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.6,
-"gpu": 3,
-"free_gb": 183.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794533256.858699,
 "total": 31310831,
@@ -4388,6 +4366,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 147.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794705168.352181,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 10,
+"free_gb": 163.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
