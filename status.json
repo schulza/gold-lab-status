@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-15 05:55:22 UTC",
+"generated_at": "2026-11-15 06:19:50 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 10,
-"free_gb": 174.0,
-"uptime": "up 15 days, 16:09, 1 user, load averages: 75.44 82.12 83.96",
-"load": "{ 75.44 82.12 83.96 }"
+"gpu_pct": 1,
+"free_gb": 190.8,
+"uptime": "up 15 days, 16:31, 1 user, load averages: 75.01 71.51 77.54",
+"load": "{ 75.01 71.51 77.54 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-15T06:04",
+"name": "boundary_concession_refill",
+"status": "rejected",
+"rationale": "The payer is the leveraged long cut at the boundary by a risk-limit reset. The n-day close-to-close loss exceeds its own trailing q-quantile, and the forced seller leaves a concession below the prior close. The refill buyer is long only while price is still below prior close minu",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-15T05:30",
 "name": "weekly_limit_boundary_refill",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the leveraged futures long under a weekly peak-to-mark drawdown limit. A week that falls from its own high to the Friday close by more than a day-range-scaled budget forces a cut into the close, and the refill buyer after the Sunday reopen collects the concession.\nRATION",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-14T23:19",
-"name": "exception_count_tip_refill",
-"status": "rejected",
-"rationale": "The payer is the risk-model-driven fund whose VaR backtest, a trailing count of daily-loss exceptions, hits the Basel traffic-light threshold. The exception that tips the count forces a leverage cut into the day close, and the refill buyer after the reset collects the concession.",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794549930.460601,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.5,
-"gpu": 3,
-"free_gb": 116.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794550895.318432,
 "total": 31310831,
@@ -4311,6 +4300,17 @@
 "cpu": 100.0,
 "gpu": 10,
 "free_gb": 174.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794723590.199357,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 190.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
