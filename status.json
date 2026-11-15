@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-15 16:34:28 UTC",
+"generated_at": "2026-11-15 16:58:37 UTC",
 "host": {
-"cpu_pct": 99.8,
+"cpu_pct": 100.0,
 "gpu_pct": 4,
-"free_gb": 195.0,
-"uptime": "up 16 days,  2:48, 1 user, load averages: 58.39 73.52 77.66",
-"load": "{ 58.39 73.52 77.66 }"
+"free_gb": 176.3,
+"uptime": "up 16 days,  3:10, 1 user, load averages: 75.26 79.93 82.20",
+"load": "{ 75.26 79.93 82.20 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-15T16:57",
+"name": "loss_streak_limit_refill",
+"status": "rejected",
+"rationale": "The payer is the leveraged futures long on a loss-streak stop (several down days in a row, cumulative loss above a limit set before the streak began). The forced cut lands into the daily 22:00 UTC reset, and the refill after the reset pays the concession.\nRATIONALE: This differs ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-15T16:23",
 "name": "peak_drawdown_limit_refill",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the leveraged futures long whose loss limit is measured from the N-day equity high, not close to close. A drawdown-from-high breach that ends with the close in the bottom of the day's range is a forced cut. The margin desk completes it into the 22:00 UTC roll, and th",
 "note": "{\"name\": \"drawdown_high_boundary_refill\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.15}"
-},
-{
-"ts": "2026-11-15T10:30",
-"name": "late_cut_decay_refill",
-"status": "accepted",
-"rationale": "The payer is the leveraged futures long whose N-day loss limit resets at the 22:00 UTC day roll. The margin desk cuts them in the last hours before the close, and the refill buyer after the roll collects the concession.\nRATIONALE: This differs from the accepted boundary families ",
-"note": "{\"name\": \"late_cut_decay_refill\", \"grid\": 128, \"sec_per_param\": 0.002, \"active_frac\": 0.15}"
 }
 ],
 "history": [
-{
-"t": 1794588467.4614248,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.3,
-"gpu": 30,
-"free_gb": 180.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794589430.131806,
 "total": 31310831,
@@ -4212,6 +4201,17 @@
 "cpu": 99.8,
 "gpu": 4,
 "free_gb": 195.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794761917.911564,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 4,
+"free_gb": 176.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
