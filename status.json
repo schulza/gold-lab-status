@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-15 07:00:51 UTC",
+"generated_at": "2026-11-15 07:24:46 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 23,
-"free_gb": 184.8,
-"uptime": "up 15 days, 17:12, 1 user, load averages: 88.43 89.31 81.14",
-"load": "{ 88.43 89.31 81.14 }"
+"gpu_pct": 1,
+"free_gb": 185.3,
+"uptime": "up 15 days, 17:37, 1 user, load averages: 84.85 89.84 87.12",
+"load": "{ 84.85 89.84 87.12 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-15T07:07",
+"name": "weekly_limit_clock_refill",
+"status": "rejected",
+"rationale": "The payer is the leveraged futures long whose week-to-date loss breaches a weekly VaR or loss limit. The desk is cut into the Friday close and cannot re-risk until the Monday reset, so a refill buyer collects the concession in the first hours of the new week.\nRATIONALE: Earlier w",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-15T06:34",
 "name": "sigma_cut_boundary_refill",
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the leveraged futures long whose N-day loss breaches its own VaR limit. A 22:00 UTC day-boundary reset forces a cut sized to the limit, and the refill buyer after the reset collects the concession.\nRATIONALE: The limit is the trailing empirical q-quantile of the prio",
 "note": "{\"name\": \"quantile_breach_boundary_refill\", \"grid\": 96, \"sec_per_param\": 0.007, \"active_frac\": 0.198}"
-},
-{
-"ts": "2026-11-15T00:27",
-"name": "period_budget_reset_refill",
-"status": "rejected",
-"rationale": "The payer is the leveraged futures long whose period-to-date (week, fortnight or 4-week) loss has used up its budget, so it is cut into the period close. The refill buyer at the new period's open collects the concession.\nRATIONALE: It differs from the day-boundary families (ewma_",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794553713.5931,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 99.9,
-"gpu": 3,
-"free_gb": 170.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1794554637.497516,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.5,
-"gpu": 3,
-"free_gb": 182.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794555560.783723,
 "total": 31310831,
@@ -4300,6 +4278,17 @@
 "cpu": 100.0,
 "gpu": 23,
 "free_gb": 184.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794727486.882429,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 185.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
