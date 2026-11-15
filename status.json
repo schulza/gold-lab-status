@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-15 10:53:17 UTC",
+"generated_at": "2026-11-15 11:09:12 UTC",
 "host": {
-"cpu_pct": 99.8,
-"gpu_pct": 16,
-"free_gb": 204.4,
-"uptime": "up 15 days, 21:12, 2 users, load averages: 43.86 50.01 57.95",
-"load": "{ 43.86 50.01 57.95 }"
+"cpu_pct": 85.3,
+"gpu_pct": 4,
+"free_gb": 207.6,
+"uptime": "up 15 days, 21:29, 1 user, load averages: 39.94 39.23 44.93",
+"load": "{ 39.94 39.23 44.93 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-15T11:01",
+"name": "drawdown_high_boundary_refill",
+"status": "accepted",
+"rationale": "The payer is the leveraged futures long whose loss limit is measured from the N-day equity high, not close to close. A drawdown-from-high breach that ends with the close in the bottom of the day's range is a forced cut. The margin desk completes it into the 22:00 UTC roll, and th",
+"note": "{\"name\": \"drawdown_high_boundary_refill\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.15}"
+},
+{
 "ts": "2026-11-15T10:30",
 "name": "late_cut_decay_refill",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the leveraged futures long whose weekly loss breaches a parametric VaR limit (k \u00d7 trailing \u03c3 of weekly returns). The margin or risk desk cuts into the Friday close, and the refill buyer after the Sunday 22:00 UTC reset collects the concession.\nRATIONALE: The limit is",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-15T04:22",
-"name": "trough_limit_boundary_refill",
-"status": "accepted",
-"rationale": "Payer is the leveraged long whose intraday mark-to-market, not the close, breaches the risk limit. A desk stopped on the trough is cut by the margin engine at the worst print, even when the close recovers, so the next-day refill buyer collects the concession.\nRATIONALE: Existing ",
-"note": "{\"name\": \"trough_limit_boundary_refill\", \"grid\": 192, \"sec_per_param\": 0.001, \"active_frac\": 0.198}"
 }
 ],
 "history": [
-{
-"t": 1794567907.8831072,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 9,
-"free_gb": 114.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794568831.5918238,
 "total": 31310831,
@@ -4256,6 +4245,17 @@
 "cpu": 99.8,
 "gpu": 16,
 "free_gb": 204.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794740952.13522,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 85.3,
+"gpu": 4,
+"free_gb": 207.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
