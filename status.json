@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-15 06:19:50 UTC",
+"generated_at": "2026-11-15 06:36:06 UTC",
 "host": {
-"cpu_pct": 100.0,
-"gpu_pct": 1,
-"free_gb": 190.8,
-"uptime": "up 15 days, 16:31, 1 user, load averages: 75.01 71.51 77.54",
-"load": "{ 75.01 71.51 77.54 }"
+"cpu_pct": 98.9,
+"gpu_pct": 20,
+"free_gb": 172.2,
+"uptime": "up 15 days, 16:56, 1 user, load averages: 50.74 57.95 67.34",
+"load": "{ 50.74 57.95 67.34 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-15T06:34",
+"name": "sigma_cut_boundary_refill",
+"status": "rejected",
+"rationale": "Payer is the leveraged futures long whose N-day loss exceeds its own risk budget (k \u00d7 trailing daily sigma). The desk is cut into the close, and the refill buyer after the boundary earns the concession.\nRATIONALE: Uses a sigma-multiple threshold instead of a rolling quantile of r",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-15T06:04",
 "name": "boundary_concession_refill",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the leveraged futures long whose period-to-date (week, fortnight or 4-week) loss has used up its budget, so it is cut into the period close. The refill buyer at the new period's open collects the concession.\nRATIONALE: It differs from the day-boundary families (ewma_",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-14T23:54",
-"name": "weekly_drawdown_reset_refill",
-"status": "rejected",
-"rationale": "Payer is the leveraged futures long under a weekly peak-to-mark drawdown limit. A week that falls from its own high to the Friday close by more than a day-range-scaled budget forces a cut into the close, and the refill buyer after the Sunday reopen collects the concession.\nRATION",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794550895.318432,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 99.8,
-"gpu": 3,
-"free_gb": 143.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794551857.099155,
 "total": 31310831,
@@ -4311,6 +4300,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 190.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794724566.6372428,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 98.9,
+"gpu": 20,
+"free_gb": 172.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
