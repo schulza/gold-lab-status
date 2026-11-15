@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-15 18:57:45 UTC",
+"generated_at": "2026-11-15 19:13:32 UTC",
 "host": {
-"cpu_pct": 86.3,
+"cpu_pct": 95.5,
 "gpu_pct": 4,
 "free_gb": 205.9,
-"uptime": "up 16 days,  5:17, 1 user, load averages: 33.41 35.72 36.63",
-"load": "{ 33.41 35.72 36.63 }"
+"uptime": "up 16 days,  5:33, 1 user, load averages: 34.58 35.57 36.27",
+"load": "{ 34.61 35.56 36.27 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-15T19:04",
+"name": "trough_limit_rank_refill",
+"status": "accepted",
+"rationale": "The payer is the leveraged long whose intraday loss limit trips at the day's trough, so it is forced to cut mid-session. The refill comes after the next boundary, and we buy that concession.\nRATIONALE: The trough (log of day low over day open) is ranked against its own past-only ",
+"note": "{\"name\": \"trough_limit_rank_refill\", \"grid\": 128, \"sec_per_param\": 0.004, \"active_frac\": 0.0545}"
+},
+{
 "ts": "2026-11-15T18:33",
 "name": "weekly_limit_trough_refill",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The brief's family is already on disk four times (limit_quantile_reset_refill, slot_var_boundary_refill, late_cut_decay_refill, drawdown_high_boundary_refill). I'm not adding a fifth neighbour. The measured external-data families are the only ones with 45\u201355% positive paths and m",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-15T12:33",
-"name": "slot_var_boundary_refill",
-"status": "accepted",
-"rationale": "The payer is the leveraged futures long whose day-to-date loss is checked against a VaR limit at a check hour. A day-to-date return below its own same-slot trailing lower-tail quantile forces a cut into the boundary, and the post-reset refill buyer collects the concession.\nRATION",
-"note": "{\"name\": \"slot_var_boundary_refill\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.063}"
 }
 ],
 "history": [
-{
-"t": 1794596987.829329,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.5,
-"gpu": 1,
-"free_gb": 182.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794597958.396331,
 "total": 31310831,
@@ -4199,6 +4188,17 @@
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 86.3,
+"gpu": 4,
+"free_gb": 205.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794770012.684739,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 95.5,
 "gpu": 4,
 "free_gb": 205.9,
 "dsr_bar": 6.4,
