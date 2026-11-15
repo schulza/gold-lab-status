@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-15 21:01:11 UTC",
+"generated_at": "2026-11-15 21:23:49 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 4,
-"free_gb": 162.4,
-"uptime": "up 16 days,  7:15, 1 user, load averages: 89.79 90.61 84.75",
-"load": "{ 89.79 90.61 84.75 }"
+"gpu_pct": 13,
+"free_gb": 140.2,
+"uptime": "up 16 days,  7:37, 1 user, load averages: 85.69 80.57 79.68",
+"load": "{ 85.69 80.57 79.68 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-15T21:11",
+"name": "boundary_sigma_loss_refill",
+"status": "rejected",
+"rationale": "Payer is the leveraged long under a parametric day/week VaR limit. After an n-day loss large against its own EWMA sigma, the desk is cut into the boundary and refills in the hours after the reset, so we buy that concession.\nRATIONALE: This uses a sigma-scaled loss z-score with gr",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-15T20:39",
 "name": "breach_run_release_refill",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the crowded speculative position (CFTC non-commercial net extreme) held into a scheduled NFP/FOMC. Risk-limited holders flatten before a binary event, and crowded shorts cover. Both leave a predictable one-sided flow against the crowd, so the family fades the crowd from ",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-15T14:43",
-"name": "week_loss_quantile_refill",
-"status": "rejected",
-"rationale": "The payer is the leveraged futures long with a weekly P&L or VaR limit. A week that loses more than the empirical lower quantile of its own recent weekly P&Ls forces a cut into the Friday close. The refill after the Sunday-night reset in the first Monday hours pays the concession",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794604506.7514281,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.3,
-"gpu": 1,
-"free_gb": 180.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794605441.53138,
 "total": 31310831,
@@ -4190,6 +4179,17 @@
 "cpu": 100.0,
 "gpu": 4,
 "free_gb": 162.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794777829.292423,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 13,
+"free_gb": 140.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
