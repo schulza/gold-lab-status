@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-15 12:29:03 UTC",
+"generated_at": "2026-11-15 12:48:03 UTC",
 "host": {
-"cpu_pct": 82.8,
-"gpu_pct": 19,
-"free_gb": 203.9,
-"uptime": "up 15 days, 22:49, 1 user, load averages: 36.70 36.38 36.39",
-"load": "{ 36.70 36.38 36.39 }"
+"cpu_pct": 100.0,
+"gpu_pct": 27,
+"free_gb": 197.2,
+"uptime": "up 15 days, 23:05, 1 user, load averages: 49.54 39.59 38.00",
+"load": "{ 49.54 39.59 38.00 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-15T12:33",
+"name": "slot_var_boundary_refill",
+"status": "accepted",
+"rationale": "The payer is the leveraged futures long whose day-to-date loss is checked against a VaR limit at a check hour. A day-to-date return below its own same-slot trailing lower-tail quantile forces a cut into the boundary, and the post-reset refill buyer collects the concession.\nRATION",
+"note": "{\"name\": \"slot_var_boundary_refill\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.063}"
+},
+{
 "ts": "2026-11-15T12:02",
 "name": "limit_quantile_reset_refill",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the leveraged futures long whose N-day loss exceeds its own risk budget (k \u00d7 trailing daily sigma). The desk is cut into the close, and the refill buyer after the boundary earns the concession.\nRATIONALE: Uses a sigma-multiple threshold instead of a rolling quantile of r",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-15T06:04",
-"name": "boundary_concession_refill",
-"status": "rejected",
-"rationale": "The payer is the leveraged long cut at the boundary by a risk-limit reset. The n-day close-to-close loss exceeds its own trailing q-quantile, and the forced seller leaves a concession below the prior close. The refill buyer is long only while price is still below prior close minu",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794573453.201689,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 27.7,
-"gpu": 36,
-"free_gb": 145.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794574378.558995,
 "total": 31310831,
@@ -4256,6 +4245,17 @@
 "cpu": 82.8,
 "gpu": 19,
 "free_gb": 203.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794746883.1828249,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 27,
+"free_gb": 197.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
