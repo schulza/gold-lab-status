@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-15 13:04:03 UTC",
+"generated_at": "2026-11-15 13:20:00 UTC",
 "host": {
-"cpu_pct": 96.5,
+"cpu_pct": 93.2,
 "gpu_pct": 4,
-"free_gb": 207.6,
-"uptime": "up 15 days, 23:24, 1 user, load averages: 40.70 37.76 39.57",
-"load": "{ 40.70 37.76 39.57 }"
+"free_gb": 203.3,
+"uptime": "up 15 days, 23:40, 1 user, load averages: 40.15 37.08 37.92",
+"load": "{ 40.15 37.08 37.92 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-15T13:04",
+"name": null,
+"status": "rejected",
+"rationale": "The brief's family is already on disk four times (limit_quantile_reset_refill, slot_var_boundary_refill, late_cut_decay_refill, drawdown_high_boundary_refill). I'm not adding a fifth neighbour. The measured external-data families are the only ones with 45\u201355% positive paths and m",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-15T12:33",
 "name": "slot_var_boundary_refill",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the leveraged futures long whose week-to-date loss breaches a weekly VaR or loss limit. The desk is cut into the Friday close and cannot re-risk until the Monday reset, so a refill buyer collects the concession in the first hours of the new week.\nRATIONALE: Earlier w",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-15T06:34",
-"name": "sigma_cut_boundary_refill",
-"status": "rejected",
-"rationale": "Payer is the leveraged futures long whose N-day loss exceeds its own risk budget (k \u00d7 trailing daily sigma). The desk is cut into the close, and the refill buyer after the boundary earns the concession.\nRATIONALE: Uses a sigma-multiple threshold instead of a rolling quantile of r",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794575302.97776,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 2.8,
-"gpu": 14,
-"free_gb": 181.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794576226.949342,
 "total": 31310831,
@@ -4256,6 +4245,17 @@
 "cpu": 96.5,
 "gpu": 4,
 "free_gb": 207.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794748800.0946822,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 93.2,
+"gpu": 4,
+"free_gb": 203.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
