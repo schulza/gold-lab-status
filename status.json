@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-15 09:35:11 UTC",
+"generated_at": "2026-11-15 10:00:56 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 7,
-"free_gb": 190.3,
-"uptime": "up 15 days, 19:50, 1 user, load averages: 74.52 81.44 82.85",
-"load": "{ 74.52 81.44 82.85 }"
+"gpu_pct": 8,
+"free_gb": 183.4,
+"uptime": "up 15 days, 20:11, 1 user, load averages: 78.02 79.06 79.51",
+"load": "{ 78.02 79.06 79.51 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-15T09:56",
+"name": "sigma_limit_boundary_refill",
+"status": "rejected",
+"rationale": "Payer is the leveraged futures long whose parametric VaR limit (N-day drop beyond k daily sigmas) forces a cut into the day close. The refill buyer after the 22:00 UTC reset collects the concession.\nRATIONALE: Differs from my accepted quantile-limit family: the limit is sigma-sca",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-15T09:22",
 "name": "close_leg_limit_refill",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The family `quantile_breach_boundary_refill` (accepted) already covers the one-sided \"N-day loss over a rolling VaR quantile, refill after the 22:00 UTC reset\" family, so this module is not a re-proposal of it.\nRATIONALE: The payer is the leveraged short book (the mirror image of",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-15T03:15",
-"name": "multiday_margin_cut_refill",
-"status": "rejected",
-"rationale": "Payer is the leveraged futures long whose margin or VaR limit trips on cumulative losses over the last m completed day-blocks, measured against its own 20-day daily sigma. The forced cut lands at the boundary, and the refill is delayed by `lag` hours and held for a fixed clock wi",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794563124.809598,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.6,
-"gpu": 38,
-"free_gb": 179.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794564083.097449,
 "total": 31310831,
@@ -4267,6 +4256,17 @@
 "cpu": 100.0,
 "gpu": 7,
 "free_gb": 190.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794736856.6016052,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 8,
+"free_gb": 183.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
