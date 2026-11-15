@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-15 20:16:58 UTC",
+"generated_at": "2026-11-15 20:39:16 UTC",
 "host": {
-"cpu_pct": 93.6,
-"gpu_pct": 4,
-"free_gb": 203.5,
-"uptime": "up 16 days,  6:37, 1 user, load averages: 35.30 36.60 37.28",
-"load": "{ 35.30 36.60 37.28 }"
+"cpu_pct": 100.0,
+"gpu_pct": 15,
+"free_gb": 162.2,
+"uptime": "up 16 days,  6:53, 1 user, load averages: 97.88 82.01 60.66",
+"load": "{ 97.88 82.01 60.66 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-15T20:39",
+"name": "breach_run_release_refill",
+"status": "accepted",
+"rationale": "The payer is the leveraged long who has to cut a fixed fraction at each daily risk reset until the n-day loss is back inside its VaR or loss limit. That selling keeps going for as long as the breach lasts. The first reset after a breach run ends is the first day the forced sellin",
+"note": "{\"name\": \"breach_run_release_refill\", \"grid\": 128, \"sec_per_param\": 0.0, \"active_frac\": 0.02725}"
+},
+{
 "ts": "2026-11-15T20:06",
 "name": "period_loss_rank_refill",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the leveraged futures long with a weekly P&L or VaR limit. A week that loses more than the empirical lower quantile of its own recent weekly P&Ls forces a cut into the Friday close. The refill after the Sunday-night reset in the first Monday hours pays the concession",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-15T14:09",
-"name": "var_limit_boundary_refill",
-"status": "accepted",
-"rationale": "The payer is the leveraged futures long whose RiskMetrics-style VaR limit (EWMA sigma, scaled by \u221an) is breached over an n-day loss at the 22:00 UTC boundary. The forced cut lands into the close and the refill after the reset pays the concession.\nRATIONALE: This differs from my e",
-"note": "{\"name\": \"var_limit_boundary_refill\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.243}"
 }
 ],
 "history": [
-{
-"t": 1794601736.0849988,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 1,
-"free_gb": 115.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794602659.448855,
 "total": 31310831,
@@ -4201,6 +4190,17 @@
 "cpu": 93.6,
 "gpu": 4,
 "free_gb": 203.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794775156.053222,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 15,
+"free_gb": 162.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
