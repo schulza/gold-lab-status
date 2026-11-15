@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-15 17:54:06 UTC",
+"generated_at": "2026-11-15 18:10:03 UTC",
 "host": {
-"cpu_pct": 83.3,
-"gpu_pct": 13,
-"free_gb": 209.6,
-"uptime": "up 16 days,  4:14, 1 user, load averages: 33.88 57.01 70.74",
-"load": "{ 33.88 57.01 70.74 }"
+"cpu_pct": 88.4,
+"gpu_pct": 4,
+"free_gb": 203.4,
+"uptime": "up 16 days,  4:30, 1 user, load averages: 36.40 36.72 47.21",
+"load": "{ 36.40 36.72 47.21 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-15T18:01",
+"name": "empirical_limit_rank_refill",
+"status": "accepted",
+"rationale": "The payer is the leveraged long whose n-day loss lands in the worst tail of its own history at the daily risk-limit reset. It is forced to cut into the boundary and refills after it, so we buy that concession.\nRATIONALE: The limit is nonparametric (past-only empirical rank of the",
+"note": "{\"name\": \"empirical_limit_rank_refill\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.0545}"
+},
+{
 "ts": "2026-11-15T17:30",
 "name": "peak_sigma_limit_decay_refill",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the leveraged futures long whose loss limit is checked at a day or Friday boundary. A day or week return below its own trailing lower-tail quantile forces a cut into the reset, and the refill buyer after the reset collects the concession.\nRATIONALE: The breach metric",
 "note": "{\"name\": \"limit_quantile_reset_refill\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.054}"
-},
-{
-"ts": "2026-11-15T11:31",
-"name": "loss_quantile_period_refill",
-"status": "rejected",
-"rationale": "The payer is the leveraged futures long whose N-day loss limit is checked against a trailing VaR quantile at the day or week close (Friday close in weekly mode). A breach forces a cut into the 22:00 UTC rollover, and the refill buyer after the reset collects the concession.\nRATIO",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794593192.2734988,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.4,
-"gpu": 1,
-"free_gb": 179.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794594157.0133078,
 "total": 31310831,
@@ -4201,6 +4190,17 @@
 "cpu": 83.3,
 "gpu": 13,
 "free_gb": 209.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794766203.516673,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 88.4,
+"gpu": 4,
+"free_gb": 203.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
