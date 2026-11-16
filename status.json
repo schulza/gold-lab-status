@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-16 03:26:03 UTC",
+"generated_at": "2026-11-16 03:42:01 UTC",
 "host": {
-"cpu_pct": 69.8,
-"gpu_pct": 4,
-"free_gb": 209.7,
-"uptime": "up 16 days, 13:46, 1 user, load averages: 31.50 31.04 33.07",
-"load": "{ 31.50 31.04 33.07 }"
+"cpu_pct": 90.7,
+"gpu_pct": 29,
+"free_gb": 207.6,
+"uptime": "up 16 days, 14:02, 1 user, load averages: 39.32 37.28 35.26",
+"load": "{ 39.32 37.28 35.26 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-16T03:33",
+"name": "var_utilisation_reset_refill",
+"status": "accepted",
+"rationale": "Payer is the leveraged futures long whose VaR utilisation (period loss divided by z times RiskMetrics EWMA sigma) exceeds 1, so the desk is forced to cut at the close and can only refill after the day boundary resets the limit.\nRATIONALE: This differs from the existing quantile a",
+"note": "{\"name\": \"var_utilisation_reset_refill\", \"grid\": 128, \"sec_per_param\": 0.0, \"active_frac\": 0.04725}"
+},
+{
 "ts": "2026-11-16T03:02",
 "name": "limit_breach_mirrored_refill",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is a leveraged long book whose N-period loss breaches its own trailing VaR quantile. It is forced to cut into the period boundary and refills after the reset, so the forced sellers pay.\nRATIONALE: The new part is the exposure matching. The long refill window after a bre",
 "note": "{\"name\": \"matched_boundary_refill\", \"grid\": 192, \"sec_per_param\": 0.001, \"active_frac\": 0.027}"
-},
-{
-"ts": "2026-11-15T21:11",
-"name": "boundary_sigma_loss_refill",
-"status": "rejected",
-"rationale": "Payer is the leveraged long under a parametric day/week VaR limit. After an n-day loss large against its own EWMA sigma, the desk is cut into the boundary and refills in the hours after the reset, so we buy that concession.\nRATIONALE: This uses a sigma-scaled loss z-score with gr",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794627388.729578,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.4,
-"gpu": 1,
-"free_gb": 180.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794628352.895696,
 "total": 31310831,
@@ -4157,6 +4146,17 @@
 "cpu": 69.8,
 "gpu": 4,
 "free_gb": 209.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794800521.967933,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 90.7,
+"gpu": 29,
+"free_gb": 207.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
