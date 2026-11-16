@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-16 14:45:55 UTC",
+"generated_at": "2026-11-16 15:01:50 UTC",
 "host": {
-"cpu_pct": 86.3,
-"gpu_pct": 18,
-"free_gb": 204.7,
-"uptime": "up 17 days,  1:06, 1 user, load averages: 37.91 36.63 36.20",
-"load": "{ 37.91 36.63 36.20 }"
+"cpu_pct": 89.8,
+"gpu_pct": 1,
+"free_gb": 202.6,
+"uptime": "up 17 days,  1:22, 1 user, load averages: 37.52 34.27 34.48",
+"load": "{ 37.52 34.27 34.48 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-16T14:55",
+"name": "gap_vacuum_reversion",
+"status": "accepted",
+"rationale": "Payer is the market-order taker who crosses a thin book at the start of a bar. The gap between the prior close and this bar's open is a pure liquidity-vacuum print with no new information. Dealers who absorb it get paid back as the book refills over the next few bars.\nRATIONALE: ",
+"note": "{\"name\": \"gap_vacuum_reversion\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.3806625}"
+},
+{
 "ts": "2026-11-16T14:24",
 "name": "quote_withdrawal_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is traders who faded a decisive impulse bar (range at least k times ATR, close in the extreme q of the bar) and are trapped when the next bar is a contained inside bar that holds the impulse half. Their stops sit just beyond the impulse extreme, and the inside bar gives the",
 "note": "{\"name\": \"inside_impulse_resume\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.18155625}"
-},
-{
-"ts": "2026-11-16T08:27",
-"name": "semivar_imbalance_fade",
-"status": "accepted",
-"rationale": "Payer is leveraged stop-out and margin-call sellers, plus panic dip-sellers, who dump in one-sided bursts. A window whose realised variance is almost all down-bars marks forced flow rather than information. The rule fades that imbalance, or follows it with `sign=-1`, and exits on",
-"note": "{\"name\": \"semivar_imbalance_fade\", \"grid\": 96, \"sec_per_param\": 0.01, \"active_frac\": 0.57781875}"
 }
 ],
 "history": [
-{
-"t": 1794667939.478122,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 6.8,
-"gpu": 34,
-"free_gb": 121.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794668907.545064,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 86.3,
 "gpu": 18,
 "free_gb": 204.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794841310.799804,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 89.8,
+"gpu": 1,
+"free_gb": 202.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
