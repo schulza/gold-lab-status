@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-16 22:31:58 UTC",
+"generated_at": "2026-11-16 23:00:48 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 1,
-"free_gb": 134.8,
-"uptime": "up 17 days,  8:40, 2 users, load averages: 81.97 80.47 82.03",
-"load": "{ 82.13 80.53 82.04 }"
+"gpu_pct": 4,
+"free_gb": 134.7,
+"uptime": "up 17 days,  9:08, 2 users, load averages: 98.65 95.77 94.47",
+"load": "{ 98.65 95.77 94.47 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-16T22:59",
+"name": null,
+"status": "rejected",
+"rationale": "The payer is spec shorts in gold futures at a COT washout (non-commercial net z52 deeply negative). They have no marginal seller left, and a falling real yield (DFII10 change) raises the value of gold against their position, so they cover at a loss. The idea is a joint state, flu",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-16T22:24",
 "name": "jump_residual_fade",
 "status": "accepted",
@@ -2446,38 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the hour-specific liquidity demander (fix, handover and desk flows) whose price impact reverts or continues on a stable clock pattern. They pay the spread and impact in the same hour each day. The family measures each hour's own lead-lag beta (move vs. the preceding move",
 "note": "{\"name\": \"hour_leadlag_follow\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.0005625}"
-},
-{
-"ts": "2026-11-16T16:29",
-"name": "range_budget_exhaustion_fade",
-"status": "accepted",
-"rationale": "Payer is breakout chasers and range-extension buyers who enter at the day's extreme after the instrument has already used up its typical daily range (a trailing mean of completed UTC-day ranges). Their entries are the late liquidity. Once the range budget is spent, the marginal p",
-"note": "{\"name\": \"range_budget_exhaustion_fade\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.0342}"
 }
 ],
 "history": [
-{
-"t": 1794695930.3028858,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 13,
-"free_gb": 179.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1794697037.775038,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 16,
-"free_gb": 195.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794698021.67491,
 "total": 31310831,
@@ -4102,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 134.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794870048.075136,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 4,
+"free_gb": 134.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
