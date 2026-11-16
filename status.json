@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-16 15:17:44 UTC",
+"generated_at": "2026-11-16 15:33:27 UTC",
 "host": {
-"cpu_pct": 82.3,
-"gpu_pct": 0,
-"free_gb": 205.5,
-"uptime": "up 17 days,  1:37, 1 user, load averages: 38.30 36.82 35.99",
-"load": "{ 38.30 36.82 35.99 }"
+"cpu_pct": 91.6,
+"gpu_pct": 12,
+"free_gb": 212.7,
+"uptime": "up 17 days,  1:53, 1 user, load averages: 57.77 55.36 46.64",
+"load": "{ 57.77 55.36 46.64 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-16T15:27",
+"name": "one_sided_flow_follow",
+"status": "accepted",
+"rationale": "Payer = liquidity providers and fade traders who keep leaning against a one-sided move. When consecutive bars stop overlapping (low rolling range-overlap) and the n-bar net move is large relative to the typical bar range, their resting stops and re-quotes get run. The strategy fo",
+"note": "{\"name\": \"one_sided_flow_follow\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.998875}"
+},
+{
 "ts": "2026-11-16T14:55",
 "name": "gap_vacuum_reversion",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer: market-order takers who chased a move while quotes were wide, because makers had withdrawn quotes. They paid the spread on the way in and are paid back once the quote normalises. Not on the moratorium list. It differs from liquidity_hole_fade and thin_spread_unit_refund be",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-16T09:04",
-"name": "inside_impulse_resume",
-"status": "accepted",
-"rationale": "Payer is traders who faded a decisive impulse bar (range at least k times ATR, close in the extreme q of the bar) and are trapped when the next bar is a contained inside bar that holds the impulse half. Their stops sit just beyond the impulse extreme, and the inside bar gives the",
-"note": "{\"name\": \"inside_impulse_resume\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.18155625}"
 }
 ],
 "history": [
-{
-"t": 1794669876.8541691,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 1,
-"free_gb": 128.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794670846.3026502,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 82.3,
 "gpu": 0,
 "free_gb": 205.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794843207.564948,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 91.6,
+"gpu": 12,
+"free_gb": 212.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
