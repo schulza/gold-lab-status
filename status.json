@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-15 23:48:49 UTC",
+"generated_at": "2026-11-16 00:09:29 UTC",
 "host": {
-"cpu_pct": 80.5,
+"cpu_pct": 100.0,
 "gpu_pct": 4,
-"free_gb": 206.4,
-"uptime": "up 16 days, 10:09, 1 user, load averages: 33.06 35.60 38.10",
-"load": "{ 33.06 35.60 38.10 }"
+"free_gb": 168.2,
+"uptime": "up 16 days, 10:25, 1 user, load averages: 90.23 83.66 66.83",
+"load": "{ 90.23 83.66 66.83 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-15T23:50",
+"name": "period_open_loss_refill",
+"status": "rejected",
+"rationale": "The payer is the leveraged long whose VaR or loss limit is measured from the period open (day or week) and resets at the boundary. After a z-scored period-to-date loss ranks in the worst `thr` of its own strictly past history, the fund is cut into the close, and the buyer after t",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-15T23:19",
 "name": "var_breach_rank_refill",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the leveraged long whose n-day loss lands in the worst tail of its own history at the daily risk-limit reset. It is forced to cut into the boundary and refills after it, so we buy that concession.\nRATIONALE: The limit is nonparametric (past-only empirical rank of the",
 "note": "{\"name\": \"empirical_limit_rank_refill\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.0545}"
-},
-{
-"ts": "2026-11-15T17:30",
-"name": "peak_sigma_limit_decay_refill",
-"status": "accepted",
-"rationale": "The payer is the leveraged futures long whose loss or margin limit is measured as drawdown from the n-day peak (not close-to-close). When that drawdown breaches a sigma limit fixed before the window began, the desk cuts into the 22:00 UTC boundary and refills after it, with the r",
-"note": "{\"name\": \"peak_sigma_limit_decay_refill\", \"grid\": 192, \"sec_per_param\": 0.004, \"active_frac\": 0.1215}"
 }
 ],
 "history": [
-{
-"t": 1794614170.082655,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 1,
-"free_gb": 115.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794615093.683556,
 "total": 31310831,
@@ -4179,6 +4168,17 @@
 "cpu": 80.5,
 "gpu": 4,
 "free_gb": 206.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794787769.7129338,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 4,
+"free_gb": 168.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
