@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-16 16:52:37 UTC",
+"generated_at": "2026-11-16 17:08:40 UTC",
 "host": {
-"cpu_pct": 72.3,
-"gpu_pct": 1,
-"free_gb": 206.3,
-"uptime": "up 17 days,  3:12, 1 user, load averages: 32.17 35.23 36.17",
-"load": "{ 32.17 35.23 36.17 }"
+"cpu_pct": 98.3,
+"gpu_pct": 12,
+"free_gb": 205.3,
+"uptime": "up 17 days,  3:28, 1 user, load averages: 34.98 35.71 36.07",
+"load": "{ 34.98 35.71 36.07 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-16T17:00",
+"name": "hour_leadlag_follow",
+"status": "accepted",
+"rationale": "Payer is the hour-specific liquidity demander (fix, handover and desk flows) whose price impact reverts or continues on a stable clock pattern. They pay the spread and impact in the same hour each day. The family measures each hour's own lead-lag beta (move vs. the preceding move",
+"note": "{\"name\": \"hour_leadlag_follow\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.0005625}"
+},
+{
 "ts": "2026-11-16T16:29",
 "name": "range_budget_exhaustion_fade",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Gold's N-day move that real yields don't explain (an expanding-window regression on `ry_chg5_bp` / `ry_chg20_bp`) is mostly flow, not fundamentals. The payer, in fade mode, is the momentum and ETF-inflow buyer chasing gold away from its yield-implied path. In follow mode, it is t",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-16T10:45",
-"name": "orphan_wick_fade",
-"status": "accepted",
-"rationale": "Payer is stop-run chasers and breakout buyers who lift or hit an outlier one-sided wick, a print far larger than the recent average bar range. The bar closes back near its open, so the move was liquidity-driven rather than information, and it mean-reverts once resting stops are e",
-"note": "{\"name\": \"orphan_wick_fade\", \"grid\": 96, \"sec_per_param\": 0.016, \"active_frac\": 0.994625}"
 }
 ],
 "history": [
-{
-"t": 1794675629.2575412,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 5.1,
-"gpu": 10,
-"free_gb": 174.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794676553.797472,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 72.3,
 "gpu": 1,
 "free_gb": 206.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794848920.766569,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 98.3,
+"gpu": 12,
+"free_gb": 205.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
