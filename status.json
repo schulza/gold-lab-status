@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-16 22:03:39 UTC",
+"generated_at": "2026-11-16 22:31:58 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 1,
-"free_gb": 158.1,
-"uptime": "up 17 days,  8:14, 2 users, load averages: 83.59 81.92 64.70",
-"load": "{ 83.14 81.86 64.77 }"
+"free_gb": 134.8,
+"uptime": "up 17 days,  8:40, 2 users, load averages: 81.97 80.47 82.03",
+"load": "{ 82.13 80.53 82.04 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-16T22:24",
+"name": "jump_residual_fade",
+"status": "accepted",
+"rationale": "This sits outside the moratorium and is not a neighbour of the existing families. It builds a jump-free \"clean\" price path by winsorising returns at c\u00b7\u03c3, then measures the accumulated clipped-off excess over a window (the jump residual) and fades it.\nRATIONALE: Payer: aggressors ",
+"note": "{\"name\": \"jump_residual_fade\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.21668125}"
+},
+{
 "ts": "2026-11-16T21:49",
 "name": "overlap_vacuum_move",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is breakout chasers and range-extension buyers who enter at the day's extreme after the instrument has already used up its typical daily range (a trailing mean of completed UTC-day ranges). Their entries are the late liquidity. Once the range budget is spent, the marginal p",
 "note": "{\"name\": \"range_budget_exhaustion_fade\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.0342}"
-},
-{
-"ts": "2026-11-16T15:57",
-"name": null,
-"status": "rejected",
-"rationale": "This is outside the moratorium (not a VaR reset, a vol-target fund or a close rebalancer) and not a neighbour of cot_positioning or real_yield_trend, which each use one signal alone. The payer is non-commercial specs crowded long while the real yield rises against gold, or crowde",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1794694910.472484,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 14,
-"free_gb": 180.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794695930.3028858,
 "total": 31310831,
@@ -4102,6 +4091,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 158.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794868318.254666,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 134.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
