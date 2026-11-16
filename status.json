@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-16 13:42:26 UTC",
+"generated_at": "2026-11-16 13:58:17 UTC",
 "host": {
-"cpu_pct": 98.5,
-"gpu_pct": 13,
-"free_gb": 208.7,
-"uptime": "up 17 days, 2 mins, 1 user, load averages: 40.72 39.98 39.71",
-"load": "{ 40.72 39.98 39.71 }"
+"cpu_pct": 96.4,
+"gpu_pct": 1,
+"free_gb": 209.8,
+"uptime": "up 17 days, 18 mins, 1 user, load averages: 36.21 34.97 36.6",
+"load": "{ 36.21 34.97 36.65 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-16T13:53",
+"name": "thin_displacement_fade",
+"status": "accepted",
+"rationale": "Payer is aggressive market-order takers who push price over m bars while tick activity is below its own baseline. Thin tape means a small order moved the price a long way, and the move gets refunded to the liquidity providers who absorbed it. The fade enters against a z-scored di",
+"note": "{\"name\": \"thin_displacement_fade\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.0572125}"
+},
+{
 "ts": "2026-11-16T13:22",
 "name": "jump_range_mismatch_fade",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is takers who cross an abnormally wide, clock-adjusted spread to chase a large move. They pay the dealer's widened quote at a thin hour and get filled near the local extreme. The spread is normalised against the same hour-of-day's causal history, not a recent window, so the",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-16T07:21",
-"name": "shallow_giveback_resume",
-"status": "accepted",
-"rationale": "Direction says no new risk-limit, vol-target or close-rebalancer families, so this is a single orthogonal probe and not part of that backlog.\nPayer: profit-takers and short-term sellers who sell the first shallow giveback after a strong up-excursion. They exit early on the first ",
-"note": "{\"name\": \"shallow_giveback_resume\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.6397625}"
 }
 ],
 "history": [
-{
-"t": 1794664091.9675882,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 9.3,
-"gpu": 1,
-"free_gb": 183.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794665067.045419,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 98.5,
 "gpu": 13,
 "free_gb": 208.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794837497.2387352,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 96.4,
+"gpu": 1,
+"free_gb": 209.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
