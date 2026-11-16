@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-16 18:27:45 UTC",
+"generated_at": "2026-11-16 18:43:38 UTC",
 "host": {
-"cpu_pct": 77.7,
+"cpu_pct": 85.4,
 "gpu_pct": 1,
-"free_gb": 210.2,
-"uptime": "up 17 days,  4:48, 2 users, load averages: 38.24 35.98 35.73",
-"load": "{ 38.24 35.98 35.73 }"
+"free_gb": 207.4,
+"uptime": "up 17 days,  5:03, 2 users, load averages: 38.05 36.63 36.12",
+"load": "{ 38.05 36.63 36.12 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-16T18:32",
+"name": "round_trip_spike_continuation",
+"status": "accepted",
+"rationale": "Payer: counter-trend limit and stop participants whose resting orders get swept by a spike bar that round-trips to its open, which clears the opposing flow, so the prior drift tends to resume.\nRATIONALE: This sits outside the director's moratorium (risk-limit, vol-target and clos",
+"note": "{\"name\": \"round_trip_spike_continuation\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.39390625}"
+},
+{
 "ts": "2026-11-16T18:01",
 "name": null,
 "status": "rejected",
@@ -2446,13 +2453,6 @@
 "status": "accepted",
 "rationale": "Payer is late trend-followers and breakout chasers who add into a parabolic run after the move has already slowed. The run's second half covers much less ground than its first half, so their entries and protective stops sit at the exhaustion point.\nRATIONALE: The signal is accele",
 "note": "{\"name\": \"decel_run_fade\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.2421}"
-},
-{
-"ts": "2026-11-16T12:21",
-"name": "count_magnitude_divergence",
-"status": "accepted",
-"rationale": "Payer is small-lot, count-driven buyers and sellers (retail and algo clip flow). A high share of up-bars with no net return means a large passive counterparty absorbed them, so I take that side. A small net move on a low share is the mirror case.\nRATIONALE: This is not a paramete",
-"note": "{\"name\": \"count_magnitude_divergence\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.425625}"
 }
 ],
 "history": [
@@ -4091,6 +4091,17 @@
 "cpu": 77.7,
 "gpu": 1,
 "free_gb": 210.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794854618.449759,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 85.4,
+"gpu": 1,
+"free_gb": 207.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
