@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-16 07:42:52 UTC",
+"generated_at": "2026-11-16 08:04:33 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 4,
-"free_gb": 194.2,
-"uptime": "up 16 days, 17:56, 1 user, load averages: 88.92 79.65 76.75",
-"load": "{ 88.92 79.65 76.75 }"
+"free_gb": 195.5,
+"uptime": "up 16 days, 18:19, 1 user, load averages: 77.53 74.90 78.33",
+"load": "{ 77.53 74.90 78.33 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-16T07:53",
+"name": "wide_spread_taker_fade",
+"status": "rejected",
+"rationale": "Payer is takers who cross an abnormally wide, clock-adjusted spread to chase a large move. They pay the dealer's widened quote at a thin hour and get filled near the local extreme. The spread is normalised against the same hour-of-day's causal history, not a recent window, so the",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-16T07:21",
 "name": "shallow_giveback_resume",
 "status": "accepted",
@@ -2446,38 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer = the leveraged long whose VaR or loss limit is breached by an n-period loss (below its own trailing W-period tail quantile). The desk is forced to cut into the breach period's close and re-risk only after the limit resets at the boundary, so it sells at the discount and bu",
 "note": "{\"name\": \"var_reset_cluster_refill\", \"grid\": 128, \"sec_per_param\": 0.001, \"active_frac\": 0.144}"
-},
-{
-"ts": "2026-11-16T01:29",
-"name": "boundary_limit_reset_refill",
-"status": "rejected",
-"rationale": "The payer is a leveraged futures long whose VaR or loss limit resets at a day or week boundary. The desk is forced to cut after an N-day loss beyond its vol-scaled limit, and the cut pushes price below value into the boundary. After the reset it re-levers, and I go long for a fix",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794642470.729335,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 1,
-"free_gb": 119.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1794643443.16574,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 1,
-"free_gb": 130.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794644414.5810208,
 "total": 31310831,
@@ -4124,6 +4102,17 @@
 "cpu": 100.0,
 "gpu": 4,
 "free_gb": 194.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794816273.2443788,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 4,
+"free_gb": 195.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
