@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-16 13:10:28 UTC",
+"generated_at": "2026-11-16 13:26:20 UTC",
 "host": {
-"cpu_pct": 93.0,
-"gpu_pct": 1,
-"free_gb": 210.5,
-"uptime": "up 16 days, 23:30, 1 user, load averages: 40.20 41.96 43.41",
-"load": "{ 40.20 41.96 43.41 }"
+"cpu_pct": 91.2,
+"gpu_pct": 0,
+"free_gb": 212.5,
+"uptime": "up 16 days, 23:46, 1 user, load averages: 33.80 34.69 37.41",
+"load": "{ 33.80 34.69 37.41 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-16T13:22",
+"name": "jump_range_mismatch_fade",
+"status": "rejected",
+"rationale": "This is a single probe, because the direction says to propose nothing new. It sits outside the risk-limit, vol-target and close-rebalance moratorium.\nRATIONALE: Payer: traders who chase a close-to-close jump that the intrabar range never confirmed. That happens when quotes go sta",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-16T12:52",
 "name": "decel_run_fade",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Direction says no new risk-limit, vol-target or close-rebalancer families, so this is a single orthogonal probe and not part of that backlog.\nPayer: profit-takers and short-term sellers who sell the first shallow giveback after a strong up-excursion. They exit early on the first ",
 "note": "{\"name\": \"shallow_giveback_resume\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.6397625}"
-},
-{
-"ts": "2026-11-16T06:50",
-"name": "round_level_pin_pull",
-"status": "rejected",
-"rationale": "Payer = holders of short-dated gold options and barrier/strike hedgers. Dealers delta-hedge around round-dollar strikes, which pins price toward the strike. Whoever chases a price move into a round level pays the pin.\nRATIONALE: The strategy fades an approach toward a round level",
-"note": "sandbox: AssertionError: zu speicherhungrig: 51 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1794662161.4507918,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.6,
-"gpu": 1,
-"free_gb": 179.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794663135.508746,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 93.0,
 "gpu": 1,
 "free_gb": 210.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794835580.591199,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 91.2,
+"gpu": 0,
+"free_gb": 212.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
