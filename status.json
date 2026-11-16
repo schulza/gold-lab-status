@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-16 21:38:23 UTC",
+"generated_at": "2026-11-16 22:03:39 UTC",
 "host": {
-"cpu_pct": 89.9,
-"gpu_pct": 10,
-"free_gb": 204.9,
-"uptime": "up 17 days,  7:58, 2 users, load averages: 32.06 35.85 36.06",
-"load": "{ 32.06 35.85 36.06 }"
+"cpu_pct": 100.0,
+"gpu_pct": 1,
+"free_gb": 158.1,
+"uptime": "up 17 days,  8:14, 2 users, load averages: 83.59 81.92 64.70",
+"load": "{ 83.14 81.86 64.77 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-16T21:49",
+"name": "overlap_vacuum_move",
+"status": "rejected",
+"rationale": "Payer: impatient market-order takers who sweep a thin book. Bars that barely overlap their predecessor's range mean the book was jumped over, not traded through. Those takers pay impact that later refunds (fade), or the jump marks a real repricing (follow). Both signs are in the ",
+"note": "sandbox: AssertionError: zu speicherhungrig: 46 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-16T21:15",
 "name": "range_reject_fade",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "This is outside the moratorium (not a VaR reset, a vol-target fund or a close rebalancer) and not a neighbour of cot_positioning or real_yield_trend, which each use one signal alone. The payer is non-commercial specs crowded long while the real yield rises against gold, or crowde",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-16T15:27",
-"name": "one_sided_flow_follow",
-"status": "accepted",
-"rationale": "Payer = liquidity providers and fade traders who keep leaning against a one-sided move. When consecutive bars stop overlapping (low rolling range-overlap) and the n-bar net move is large relative to the typical bar range, their resting stops and re-quotes get run. The strategy fo",
-"note": "{\"name\": \"one_sided_flow_follow\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.998875}"
 }
 ],
 "history": [
-{
-"t": 1794693156.3705978,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 20,
-"free_gb": 182.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794694910.472484,
 "total": 31310831,
@@ -4102,6 +4091,17 @@
 "cpu": 89.9,
 "gpu": 10,
 "free_gb": 204.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794866619.046038,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 158.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
