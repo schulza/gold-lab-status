@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-16 17:56:03 UTC",
+"generated_at": "2026-11-16 18:11:56 UTC",
 "host": {
-"cpu_pct": 64.8,
+"cpu_pct": 80.8,
 "gpu_pct": 1,
 "free_gb": 207.2,
-"uptime": "up 17 days,  4:16, 2 users, load averages: 29.92 31.63 33.89",
-"load": "{ 29.92 31.63 33.89 }"
+"uptime": "up 17 days,  4:32, 2 users, load averages: 36.33 35.61 35.08",
+"load": "{ 36.33 35.61 35.08 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-16T18:01",
+"name": null,
+"status": "rejected",
+"rationale": "This breaks the moratorium on one point only. The slot has to produce a module, and this one stays outside the risk-limit, vol-target and close-rebalance payers. It is not a neighbour of real_yield_trend, because it trades the gap between gold's realised move and its real-yield-i",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-16T17:30",
 "name": "spread_unit_overshoot",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is small-lot, count-driven buyers and sellers (retail and algo clip flow). A high share of up-bars with no net return means a large passive counterparty absorbed them, so I take that side. A small net move on a low share is the mirror case.\nRATIONALE: This is not a paramete",
 "note": "{\"name\": \"count_magnitude_divergence\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.425625}"
-},
-{
-"ts": "2026-11-16T11:50",
-"name": "tail_imbalance_hold",
-"status": "rejected",
-"rationale": "Payer is stop-run and breakout-chase flow. Aggressive orders that fill at an intrabar extreme and are rejected by the close leave a one-sided wick imprint, and the chaser pays the round-trip spread plus the reversion.\nRATIONALE: Unlike wick_absorption and orphan_wick_fade, this s",
-"note": "sandbox: AssertionError: zu speicherhungrig: 41 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1794679519.632703,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 2,
-"free_gb": 101.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794680567.2489028,
 "total": 31310831,
@@ -4089,6 +4078,17 @@
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 64.8,
+"gpu": 1,
+"free_gb": 207.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794852716.6060202,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 80.8,
 "gpu": 1,
 "free_gb": 207.2,
 "dsr_bar": 6.4,
