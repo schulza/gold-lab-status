@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-16 02:22:32 UTC",
+"generated_at": "2026-11-16 02:38:27 UTC",
 "host": {
-"cpu_pct": 90.3,
-"gpu_pct": 4,
-"free_gb": 209.1,
-"uptime": "up 16 days, 12:42, 1 user, load averages: 32.44 34.93 38.74",
-"load": "{ 32.44 34.93 38.74 }"
+"cpu_pct": 82.8,
+"gpu_pct": 23,
+"free_gb": 208.1,
+"uptime": "up 16 days, 12:58, 1 user, load averages: 37.81 39.21 39.62",
+"load": "{ 37.81 39.21 39.62 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-16T02:31",
+"name": "intraday_limit_touch_refill",
+"status": "accepted",
+"rationale": "Payer is the leveraged long whose intraday loss limit is touched by the period low (not the close). The desk is forced to cut during the touch, and re-risks only after the limit resets at the next boundary, so it sells the low and buys back higher.\nRATIONALE: Entry is long in a c",
+"note": "{\"name\": \"intraday_limit_touch_refill\", \"grid\": 128, \"sec_per_param\": 0.001, \"active_frac\": 0.081}"
+},
+{
 "ts": "2026-11-16T02:00",
 "name": "var_reset_cluster_refill",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the leveraged long who has to cut a fixed fraction at each daily risk reset until the n-day loss is back inside its VaR or loss limit. That selling keeps going for as long as the breach lasts. The first reset after a breach run ends is the first day the forced sellin",
 "note": "{\"name\": \"breach_run_release_refill\", \"grid\": 128, \"sec_per_param\": 0.0, \"active_frac\": 0.02725}"
-},
-{
-"ts": "2026-11-15T20:06",
-"name": "period_loss_rank_refill",
-"status": "accepted",
-"rationale": "The payer is the leveraged long whose weekly VaR or loss limit resets at the week boundary. After a multi-day drawdown the fund is cut into the Friday close and refills in the first hours after the Sunday reopen, so we buy the forced seller's concession.\nRATIONALE: The n-day clos",
-"note": "{\"name\": \"period_loss_rank_refill\", \"grid\": 128, \"sec_per_param\": 0.0, \"active_frac\": 0.05425}"
 }
 ],
 "history": [
-{
-"t": 1794623593.724726,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.5,
-"gpu": 35,
-"free_gb": 185.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794624567.428803,
 "total": 31310831,
@@ -4157,6 +4146,17 @@
 "cpu": 90.3,
 "gpu": 4,
 "free_gb": 209.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794796707.766704,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 82.8,
+"gpu": 23,
+"free_gb": 208.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
