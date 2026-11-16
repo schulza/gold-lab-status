@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-16 09:31:39 UTC",
+"generated_at": "2026-11-16 09:47:50 UTC",
 "host": {
-"cpu_pct": 100.0,
-"gpu_pct": 3,
-"free_gb": 197.0,
-"uptime": "up 16 days, 19:47, 1 user, load averages: 111.93 100.02 96.2",
-"load": "{ 111.93 100.02 96.22 }"
+"cpu_pct": 99.2,
+"gpu_pct": 18,
+"free_gb": 191.8,
+"uptime": "up 16 days, 20:07, 1 user, load averages: 93.72 89.58 87.59",
+"load": "{ 93.72 89.58 87.59 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-16T09:37",
+"name": "spread_normalised_chase_fade",
+"status": "rejected",
+"rationale": "Payer: market-order takers who chased a move while quotes were wide, because makers had withdrawn quotes. They paid the spread on the way in and are paid back once the quote normalises. Not on the moratorium list. It differs from liquidity_hole_fade and thin_spread_unit_refund be",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-16T09:04",
 "name": "inside_impulse_resume",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the leveraged futures long whose VaR utilisation (period loss divided by z times RiskMetrics EWMA sigma) exceeds 1, so the desk is forced to cut at the close and can only refill after the day boundary resets the limit.\nRATIONALE: This differs from the existing quantile a",
 "note": "{\"name\": \"var_utilisation_reset_refill\", \"grid\": 128, \"sec_per_param\": 0.0, \"active_frac\": 0.04725}"
-},
-{
-"ts": "2026-11-16T03:02",
-"name": "limit_breach_mirrored_refill",
-"status": "accepted",
-"rationale": "Payer is the leveraged desk whose n-period loss breaches its own trailing VaR. A long desk is forced to cut into the breach period's close and re-risk only after the boundary reset. A short desk breaching on the upside is squeezed the same way.\nRATIONALE: This differs from var_re",
-"note": "{\"name\": \"limit_breach_mirrored_refill\", \"grid\": 128, \"sec_per_param\": 0.001, \"active_frac\": 0.275375}"
 }
 ],
 "history": [
-{
-"t": 1794649170.759247,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 99.8,
-"gpu": 12,
-"free_gb": 149.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794650125.422123,
 "total": 31310831,
@@ -4102,6 +4091,17 @@
 "cpu": 100.0,
 "gpu": 3,
 "free_gb": 197.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794822470.2236679,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 99.2,
+"gpu": 18,
+"free_gb": 191.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
