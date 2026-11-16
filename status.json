@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-16 07:20:04 UTC",
+"generated_at": "2026-11-16 07:42:52 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 4,
-"free_gb": 198.0,
-"uptime": "up 16 days, 17:34, 1 user, load averages: 79.42 79.02 80.49",
-"load": "{ 79.42 79.02 80.49 }"
+"free_gb": 194.2,
+"uptime": "up 16 days, 17:56, 1 user, load averages: 88.92 79.65 76.75",
+"load": "{ 88.92 79.65 76.75 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-16T07:21",
+"name": "shallow_giveback_resume",
+"status": "accepted",
+"rationale": "Direction says no new risk-limit, vol-target or close-rebalancer families, so this is a single orthogonal probe and not part of that backlog.\nPayer: profit-takers and short-term sellers who sell the first shallow giveback after a strong up-excursion. They exit early on the first ",
+"note": "{\"name\": \"shallow_giveback_resume\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.6397625}"
+},
+{
 "ts": "2026-11-16T06:50",
 "name": "round_level_pin_pull",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is a leveraged futures long whose VaR or loss limit resets at a day or week boundary. The desk is forced to cut after an N-day loss beyond its vol-scaled limit, and the cut pushes price below value into the boundary. After the reset it re-levers, and I go long for a fix",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-16T00:55",
-"name": "boundary_excess_loss_refill",
-"status": "rejected",
-"rationale": "The payer is the leveraged long whose N-day loss breaches its own rolling-W-day empirical loss quantile, forcing a risk-limit cut into the 22:00 UTC boundary. They refill after the reset, and the cut was a constraint, not information.\nRATIONALE: It is a neighbour of var_limit_mat",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794641483.9795809,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.6,
-"gpu": 35,
-"free_gb": 185.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794642470.729335,
 "total": 31310831,
@@ -4124,6 +4113,17 @@
 "cpu": 100.0,
 "gpu": 4,
 "free_gb": 198.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794814972.889997,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 4,
+"free_gb": 194.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
