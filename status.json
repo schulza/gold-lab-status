@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-16 10:33:15 UTC",
+"generated_at": "2026-11-16 10:57:09 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 1,
-"free_gb": 194.1,
-"uptime": "up 16 days, 20:49, 1 user, load averages: 85.48 96.94 95.12",
-"load": "{ 85.48 96.94 95.12 }"
+"gpu_pct": 7,
+"free_gb": 185.1,
+"uptime": "up 16 days, 21:09, 1 user, load averages: 87.11 85.99 87.96",
+"load": "{ 87.11 85.99 87.96 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-16T10:45",
+"name": "orphan_wick_fade",
+"status": "accepted",
+"rationale": "Payer is stop-run chasers and breakout buyers who lift or hit an outlier one-sided wick, a print far larger than the recent average bar range. The bar closes back near its open, so the move was liquidity-driven rather than information, and it mean-reverts once resting stops are e",
+"note": "{\"name\": \"orphan_wick_fade\", \"grid\": 96, \"sec_per_param\": 0.016, \"active_frac\": 0.994625}"
+},
+{
 "ts": "2026-11-16T10:11",
 "name": "thin_print_stretch_fade",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the leveraged long book with a daily or weekly loss limit. After an n-block loss worth more than k trailing sigmas, it has to cut into the close. It re-risks only once the limit resets at the 22:00 UTC day boundary or the Friday 22:00 weekly boundary, so it sells the",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-16T04:04",
-"name": "unrefilled_limit_bid",
-"status": "rejected",
-"rationale": "Payer is the leveraged long whose VaR or loss limit was breached in the previous block. The desk cut into that block's close and refills after the boundary. Late refillers who have not yet bounced pay the bid back up.\nRATIONALE: This differs from `var_reset_cluster_refill` by an ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794652953.252626,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 6.3,
-"gpu": 32,
-"free_gb": 170.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794653895.424038,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 194.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794826629.517345,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 7,
+"free_gb": 185.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
