@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-16 08:26:58 UTC",
+"generated_at": "2026-11-16 08:45:50 UTC",
 "host": {
-"cpu_pct": 99.5,
-"gpu_pct": 4,
-"free_gb": 173.3,
-"uptime": "up 16 days, 18:40, 1 user, load averages: 56.71 72.72 77.75",
-"load": "{ 56.71 72.72 77.75 }"
+"cpu_pct": 97.6,
+"gpu_pct": 18,
+"free_gb": 207.9,
+"uptime": "up 16 days, 19:03, 1 user, load averages: 48.85 71.47 77.80",
+"load": "{ 48.85 71.47 77.80 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-16T08:27",
+"name": "semivar_imbalance_fade",
+"status": "accepted",
+"rationale": "Payer is leveraged stop-out and margin-call sellers, plus panic dip-sellers, who dump in one-sided bursts. A window whose realised variance is almost all down-bars marks forced flow rather than information. The rule fades that imbalance, or follows it with `sign=-1`, and exits on",
+"note": "{\"name\": \"semivar_imbalance_fade\", \"grid\": 96, \"sec_per_param\": 0.01, \"active_frac\": 0.57781875}"
+},
+{
 "ts": "2026-11-16T07:53",
 "name": "wide_spread_taker_fade",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the leveraged long whose intraday loss limit is touched by the period low (not the close). The desk is forced to cut during the touch, and re-risks only after the limit resets at the next boundary, so it sells the low and buys back higher.\nRATIONALE: Entry is long in a c",
 "note": "{\"name\": \"intraday_limit_touch_refill\", \"grid\": 128, \"sec_per_param\": 0.001, \"active_frac\": 0.081}"
-},
-{
-"ts": "2026-11-16T02:00",
-"name": "var_reset_cluster_refill",
-"status": "accepted",
-"rationale": "Payer = the leveraged long whose VaR or loss limit is breached by an n-period loss (below its own trailing W-period tail quantile). The desk is forced to cut into the breach period's close and re-risk only after the limit resets at the boundary, so it sells at the discount and bu",
-"note": "{\"name\": \"var_reset_cluster_refill\", \"grid\": 128, \"sec_per_param\": 0.001, \"active_frac\": 0.144}"
 }
 ],
 "history": [
-{
-"t": 1794645338.134594,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.3,
-"gpu": 1,
-"free_gb": 182.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794646304.229558,
 "total": 31310831,
@@ -4113,6 +4102,17 @@
 "cpu": 99.5,
 "gpu": 4,
 "free_gb": 173.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794818750.129782,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 97.6,
+"gpu": 18,
+"free_gb": 207.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
