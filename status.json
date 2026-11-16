@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-16 02:54:26 UTC",
+"generated_at": "2026-11-16 03:10:16 UTC",
 "host": {
-"cpu_pct": 96.7,
+"cpu_pct": 90.2,
 "gpu_pct": 4,
-"free_gb": 207.7,
-"uptime": "up 16 days, 13:14, 1 user, load averages: 39.40 37.29 38.09",
-"load": "{ 39.40 37.29 38.09 }"
+"free_gb": 209.3,
+"uptime": "up 16 days, 13:30, 1 user, load averages: 33.48 35.00 36.63",
+"load": "{ 33.48 35.00 36.63 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-16T03:02",
+"name": "limit_breach_mirrored_refill",
+"status": "accepted",
+"rationale": "Payer is the leveraged desk whose n-period loss breaches its own trailing VaR. A long desk is forced to cut into the breach period's close and re-risk only after the boundary reset. A short desk breaching on the upside is squeezed the same way.\nRATIONALE: This differs from var_re",
+"note": "{\"name\": \"limit_breach_mirrored_refill\", \"grid\": 128, \"sec_per_param\": 0.001, \"active_frac\": 0.275375}"
+},
+{
 "ts": "2026-11-16T02:31",
 "name": "intraday_limit_touch_refill",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the leveraged long under a parametric day/week VaR limit. After an n-day loss large against its own EWMA sigma, the desk is cut into the boundary and refills in the hours after the reset, so we buy that concession.\nRATIONALE: This uses a sigma-scaled loss z-score with gr",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-15T20:39",
-"name": "breach_run_release_refill",
-"status": "accepted",
-"rationale": "The payer is the leveraged long who has to cut a fixed fraction at each daily risk reset until the n-day loss is back inside its VaR or loss limit. That selling keeps going for as long as the breach lasts. The first reset after a breach run ends is the first day the forced sellin",
-"note": "{\"name\": \"breach_run_release_refill\", \"grid\": 128, \"sec_per_param\": 0.0, \"active_frac\": 0.02725}"
 }
 ],
 "history": [
-{
-"t": 1794625542.7290418,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 1,
-"free_gb": 118.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794626466.2023602,
 "total": 31310831,
@@ -4157,6 +4146,17 @@
 "cpu": 96.7,
 "gpu": 4,
 "free_gb": 207.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794798616.007647,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 90.2,
+"gpu": 4,
+"free_gb": 209.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
