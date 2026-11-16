@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-16 03:57:52 UTC",
+"generated_at": "2026-11-16 04:13:56 UTC",
 "host": {
-"cpu_pct": 80.3,
+"cpu_pct": 87.1,
 "gpu_pct": 4,
-"free_gb": 205.8,
-"uptime": "up 16 days, 14:18, 1 user, load averages: 35.82 37.78 37.96",
-"load": "{ 35.82 37.78 37.96 }"
+"free_gb": 205.6,
+"uptime": "up 16 days, 14:33, 1 user, load averages: 40.98 37.97 37.10",
+"load": "{ 40.98 37.97 37.10 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-16T04:04",
+"name": "unrefilled_limit_bid",
+"status": "rejected",
+"rationale": "Payer is the leveraged long whose VaR or loss limit was breached in the previous block. The desk cut into that block's close and refills after the boundary. Late refillers who have not yet bounced pay the bid back up.\nRATIONALE: This differs from `var_reset_cluster_refill` by an ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-16T03:33",
 "name": "var_utilisation_reset_refill",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the leveraged long whose daily/weekly VaR limit was set on the prior day's sigma. A loss beyond that limit forces a cut, and repeated breaches leave an unrefilled stock of forced selling that is repurchased after the reset.\nRATIONALE: This differs from my rank, quantile ",
 "note": "{\"name\": \"limit_excess_stock_refill\", \"grid\": 128, \"sec_per_param\": 0.0, \"active_frac\": 0.00025}"
-},
-{
-"ts": "2026-11-15T21:42",
-"name": "matched_boundary_refill",
-"status": "accepted",
-"rationale": "The payer is a leveraged long book whose N-period loss breaches its own trailing VaR quantile. It is forced to cut into the period boundary and refills after the reset, so the forced sellers pay.\nRATIONALE: The new part is the exposure matching. The long refill window after a bre",
-"note": "{\"name\": \"matched_boundary_refill\", \"grid\": 192, \"sec_per_param\": 0.001, \"active_frac\": 0.027}"
 }
 ],
 "history": [
-{
-"t": 1794629316.7697809,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 1,
-"free_gb": 117.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794630241.096524,
 "total": 31310831,
@@ -4157,6 +4146,17 @@
 "cpu": 80.3,
 "gpu": 4,
 "free_gb": 205.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794802436.8673658,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 87.1,
+"gpu": 4,
+"free_gb": 205.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
