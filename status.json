@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-16 16:20:54 UTC",
+"generated_at": "2026-11-16 16:36:46 UTC",
 "host": {
-"cpu_pct": 76.5,
-"gpu_pct": 1,
-"free_gb": 208.6,
-"uptime": "up 17 days,  2:41, 1 user, load averages: 33.25 35.53 36.51",
-"load": "{ 33.25 35.53 36.51 }"
+"cpu_pct": 95.3,
+"gpu_pct": 21,
+"free_gb": 208.7,
+"uptime": "up 17 days,  2:56, 1 user, load averages: 38.78 37.00 36.26",
+"load": "{ 38.78 37.00 36.26 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-16T16:29",
+"name": "range_budget_exhaustion_fade",
+"status": "accepted",
+"rationale": "Payer is breakout chasers and range-extension buyers who enter at the day's extreme after the instrument has already used up its typical daily range (a trailing mean of completed UTC-day ranges). Their entries are the late liquidity. Once the range budget is spent, the marginal p",
+"note": "{\"name\": \"range_budget_exhaustion_fade\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.0342}"
+},
+{
 "ts": "2026-11-16T15:57",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is stop-run chasers and breakout buyers who lift or hit an outlier one-sided wick, a print far larger than the recent average bar range. The bar closes back near its open, so the move was liquidity-driven rather than information, and it mean-reverts once resting stops are e",
 "note": "{\"name\": \"orphan_wick_fade\", \"grid\": 96, \"sec_per_param\": 0.016, \"active_frac\": 0.994625}"
-},
-{
-"ts": "2026-11-16T10:11",
-"name": "thin_print_stretch_fade",
-"status": "accepted",
-"rationale": "Payer is breakout and momentum chasers who buy stretched prints made while market makers have pulled liquidity (the spread is wide against its own baseline). The wide-spread print is thin-book inventory pricing, not information, and it mean-reverts once depth returns.\nThe entry n",
-"note": "{\"name\": \"thin_print_stretch_fade\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.27}"
 }
 ],
 "history": [
-{
-"t": 1794673740.5529962,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 99.9,
-"gpu": 1,
-"free_gb": 139.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794674701.519105,
 "total": 31310831,
@@ -4091,6 +4080,17 @@
 "cpu": 76.5,
 "gpu": 1,
 "free_gb": 208.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794847006.5212212,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 95.3,
+"gpu": 21,
+"free_gb": 208.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
