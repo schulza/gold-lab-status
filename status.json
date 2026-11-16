@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-16 00:48:35 UTC",
+"generated_at": "2026-11-16 01:11:13 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 13,
-"free_gb": 146.7,
-"uptime": "up 16 days, 11:04, 1 user, load averages: 83.29 81.86 79.92",
-"load": "{ 83.29 81.86 79.92 }"
+"gpu_pct": 4,
+"free_gb": 146.6,
+"uptime": "up 16 days, 11:24, 1 user, load averages: 75.31 79.64 81.44",
+"load": "{ 75.31 79.64 81.44 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-16T00:55",
+"name": "boundary_excess_loss_refill",
+"status": "rejected",
+"rationale": "The payer is the leveraged long whose N-day loss breaches its own rolling-W-day empirical loss quantile, forcing a risk-limit cut into the 22:00 UTC boundary. They refill after the reset, and the cut was a constraint, not information.\nRATIONALE: It is a neighbour of var_limit_mat",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-16T00:23",
 "name": "drawdown_recovery_refill",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the leveraged long whose intraday loss limit trips at the day's trough, so it is forced to cut mid-session. The refill comes after the next boundary, and we buy that concession.\nRATIONALE: The trough (log of day low over day open) is ranked against its own past-only ",
 "note": "{\"name\": \"trough_limit_rank_refill\", \"grid\": 128, \"sec_per_param\": 0.004, \"active_frac\": 0.0545}"
-},
-{
-"ts": "2026-11-15T18:33",
-"name": "weekly_limit_trough_refill",
-"status": "rejected",
-"rationale": "The payer is the leveraged futures long on a weekly loss limit and margin check. A week-to-date breach, measured on the intra-week low and not only the close, forces a cut. The refill after the Sunday 20:00 UTC reset pays the concession, and the previous refills sat on daily boun",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794617957.396189,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 1,
-"free_gb": 117.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794618882.202914,
 "total": 31310831,
@@ -4168,6 +4157,17 @@
 "cpu": 100.0,
 "gpu": 13,
 "free_gb": 146.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794791473.5121112,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 4,
+"free_gb": 146.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
