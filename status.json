@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-17 18:46:41 UTC",
+"generated_at": "2026-11-17 19:04:42 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 5,
-"free_gb": 176.7,
-"uptime": "up 18 days, 5 hrs, 2 users, load averages: 81.42 79.60 79.62",
-"load": "{ 81.42 79.60 79.62 }"
+"gpu_pct": 1,
+"free_gb": 174.7,
+"uptime": "up 18 days,  5:23, 2 users, load averages: 80.79 79.21 79.57",
+"load": "{ 80.79 79.21 79.57 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-17T18:51",
+"name": "hedger_pain_follow",
+"status": "rejected",
+"rationale": "Payer is the forward-selling hedger (miners, dealers short gold) who sold into a persistent, broad-based uptrend (high up-bar share, not a single spike). Their average entry sits at the rolling mean, so their loss is the z-distance above it, and margin calls force buy-backs while",
+"note": "sandbox: AssertionError: zu speicherhungrig: 57 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-17T18:18",
 "name": "repeated_break_cover_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the laddered short seller (producer hedgers and CTA shorts who sell gold once per day into a rise). Each daily-close short is underwater against the current price, and the pain they hold is the sum of those open losses in daily sigmas. When most daily entries are und",
 "note": "{\"name\": \"laddered_short_pain_cover\", \"grid\": 96, \"sec_per_param\": 0.013, \"active_frac\": 0.52741875}"
-},
-{
-"ts": "2026-11-17T12:15",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is the systematic macro desk and the rates-model gold short, who hold gold short on a real-yield model and have to cover when real yields keep falling while gold trends up. This is the \"sold into an uptrend, forced to buy back\" shape from the direction, built on external da",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1794769065.3264241,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 86.3,
-"gpu": 4,
-"free_gb": 205.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794770012.684739,
 "total": 31310831,
@@ -4157,6 +4146,17 @@
 "cpu": 100.0,
 "gpu": 5,
 "free_gb": 176.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794942282.4900658,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 174.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
