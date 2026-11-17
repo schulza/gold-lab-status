@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-17 03:45:49 UTC",
+"generated_at": "2026-11-17 04:08:17 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 1,
-"free_gb": 128.4,
-"uptime": "up 17 days, 13:55, 2 users, load averages: 82.78 90.69 88.17",
-"load": "{ 82.78 90.69 88.17 }"
+"free_gb": 127.1,
+"uptime": "up 17 days, 14:22, 2 users, load averages: 86.53 87.27 89.18",
+"load": "{ 86.53 87.27 89.18 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-17T03:53",
+"name": "stalled_move_fade",
+"status": "rejected",
+"rationale": "Payer is late momentum chasers who enter at the end of an extended n-bar move and get run over when the last bar stalls against the move, so the strategy fades the stall after a statistically large move. The `sign` param tests the opposite hypothesis (follow), which keeps the fam",
+"note": "sandbox: NameError: name 'FAMILIES' is not defined"
+},
+{
 "ts": "2026-11-17T03:19",
 "name": "expansion_failure_fade",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer: impatient market-order takers who sweep a thin book. Bars that barely overlap their predecessor's range mean the book was jumped over, not traded through. Those takers pay impact that later refunds (fade), or the jump marks a real repricing (follow). Both signs are in the ",
 "note": "sandbox: AssertionError: zu speicherhungrig: 46 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-11-16T21:15",
-"name": "range_reject_fade",
-"status": "accepted",
-"rationale": "This departs from the director's \"no new families\" line only because the task requires a module, and it avoids all three moratorium payers (risk-limit, vol-target fund, close rebalancer). The payer is breakout and stop chasers who buy or sell at intrabar extremes that then get re",
-"note": "{\"name\": \"range_reject_fade\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.10123125}"
 }
 ],
 "history": [
-{
-"t": 1794715336.772757,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 14,
-"free_gb": 148.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794716572.218591,
 "total": 31310831,
@@ -4113,6 +4102,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 128.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794888497.801745,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 127.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
