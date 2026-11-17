@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-17 11:28:31 UTC",
+"generated_at": "2026-11-17 11:44:51 UTC",
 "host": {
 "cpu_pct": null,
-"gpu_pct": 19,
-"free_gb": 150.7,
-"uptime": "up 17 days, 21:40, 2 users, load averages: 84.82 76.46 59.53",
-"load": "{ 84.82 76.46 59.53 }"
+"gpu_pct": 11,
+"free_gb": 149.9,
+"uptime": "up 17 days, 22:04, 2 users, load averages: 87.24 88.23 81.19",
+"load": "{ 87.24 88.23 81.19 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-17T11:42",
+"name": "scheduled_hedger_ladder_cover",
+"status": "accepted",
+"rationale": "Payer: hedgers who sell gold in fixed-schedule tranches (every B bars) into a rising market. Their layered average sale price falls further below spot, and their margin and risk-review pressure grows. We go long once the mark-to-market loss on that hypothetical ladder is large an",
+"note": "{\"name\": \"scheduled_hedger_ladder_cover\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.14014375}"
+},
+{
 "ts": "2026-11-17T11:07",
 "name": "aged_loss_review_cover",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is hedgers and discretionary shorts who sell into a persistent gold uptrend. Their average sale price is estimated as the up-bar-weighted mean price over the window. They are forced to buy back when mark-to-market pain, in sigma units, crosses a risk budget. That is a f",
 "note": "{\"name\": \"seller_pain_cover\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.44549375}"
-},
-{
-"ts": "2026-11-17T05:28",
-"name": "short_cover_efficiency_follow",
-"status": "accepted",
-"rationale": "Payer: short sellers and forward-hedgers who sold into a persistent gold uptrend. A high path efficiency means they never got a chance to cover on a dip. Their forced cover (stop-outs and margin calls) arrives as new highs. The signal is long only on a fresh n-bar high while the ",
-"note": "{\"name\": \"short_cover_efficiency_follow\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.1934875}"
 }
 ],
 "history": [
-{
-"t": 1794742879.109973,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 97.0,
-"gpu": 37,
-"free_gb": 203.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794743834.695885,
 "total": 31310831,
@@ -4179,6 +4168,17 @@
 "cpu": null,
 "gpu": 19,
 "free_gb": 150.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794915891.07644,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": null,
+"gpu": 11,
+"free_gb": 149.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
