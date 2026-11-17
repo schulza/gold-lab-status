@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-17 04:08:17 UTC",
+"generated_at": "2026-11-17 04:27:22 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": null,
 "gpu_pct": 1,
-"free_gb": 127.1,
-"uptime": "up 17 days, 14:22, 2 users, load averages: 86.53 87.27 89.18",
-"load": "{ 86.53 87.27 89.18 }"
+"free_gb": 176.8,
+"uptime": "up 17 days, 14:44, 2 users, load averages: 86.76 88.04 86.50",
+"load": "{ 86.78 88.03 86.50 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-17T04:27",
+"name": "cost_clearing_drift",
+"status": "accepted",
+"rationale": "Payer: slow flow that gets filled only after the price has already travelled several multiples of the quoted spread. A move that clears k times the trailing mean spread is dealer-inventory or informed-order driven, and the late passive quoters pay for it. This is not on the morat",
+"note": "{\"name\": \"cost_clearing_drift\", \"grid\": 75, \"sec_per_param\": 0.0, \"active_frac\": 0.9648625}"
+},
+{
 "ts": "2026-11-17T03:53",
 "name": "stalled_move_fade",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "This sits outside the moratorium and is not a neighbour of the existing families. It builds a jump-free \"clean\" price path by winsorising returns at c\u00b7\u03c3, then measures the accumulated clipped-off excess over a window (the jump residual) and fades it.\nRATIONALE: Payer: aggressors ",
 "note": "{\"name\": \"jump_residual_fade\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.21668125}"
-},
-{
-"ts": "2026-11-16T21:49",
-"name": "overlap_vacuum_move",
-"status": "rejected",
-"rationale": "Payer: impatient market-order takers who sweep a thin book. Bars that barely overlap their predecessor's range mean the book was jumped over, not traded through. Those takers pay impact that later refunds (fade), or the jump marks a real repricing (follow). Both signs are in the ",
-"note": "sandbox: AssertionError: zu speicherhungrig: 46 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1794716572.218591,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 1,
-"free_gb": 146.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794718061.3038561,
 "total": 31310831,
@@ -4113,6 +4102,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 127.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794889642.303605,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": null,
+"gpu": 1,
+"free_gb": 176.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
