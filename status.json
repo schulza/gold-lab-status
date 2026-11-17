@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-17 19:47:54 UTC",
+"generated_at": "2026-11-17 20:12:37 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 13,
-"free_gb": 173.5,
-"uptime": "up 18 days,  6:06, 2 users, load averages: 88.88 87.68 84.75",
-"load": "{ 88.88 87.68 84.75 }"
+"gpu_pct": 1,
+"free_gb": 161.9,
+"uptime": "up 18 days,  6:24, 2 users, load averages: 89.86 88.67 86.08",
+"load": "{ 89.86 88.67 86.08 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-17T19:59",
+"name": "dip_seller_margin_cover",
+"status": "rejected",
+"rationale": "Payer is the dip-selling short, who scales into a persistent gold uptrend on down bars (producer hedgers and trend-fighting CTAs). Their average entry sits below price, so their margin pain is the distance to a down-bar-weighted cost basis, scaled by the window's own noise. When ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-17T19:25",
 "name": "fade_seller_basis_cover",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is dip and rally sellers who shorted gold on up-day closes during a persistent uptrend. Their aggregate mark-to-market loss, measured in daily sigma, forces stop-outs and margin cover, and the buying lands after the loss has built, not at a single level.\nRATIONALE: This",
 "note": "sandbox: AssertionError: zu speicherhungrig: 42 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-11-17T13:24",
-"name": "shallow_pullback_short_trap_hold",
-"status": "accepted",
-"rationale": "Payer: discretionary and algorithmic shorts who sell each rally in a persistent uptrend and place their stops just beyond the shallow pullbacks. Every shallow pullback fails, so their losing inventory grows and the forced buy-back comes later.\nEntry: a fresh n-bar high, a large n",
-"note": "{\"name\": \"shallow_pullback_short_trap_hold\", \"grid\": 81, \"sec_per_param\": 0.0, \"active_frac\": 0.11198125}"
 }
 ],
 "history": [
-{
-"t": 1794772871.517965,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 92.4,
-"gpu": 4,
-"free_gb": 207.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794773818.701758,
 "total": 31310831,
@@ -4146,6 +4135,17 @@
 "cpu": 100.0,
 "gpu": 13,
 "free_gb": 173.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794946357.159809,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 161.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
