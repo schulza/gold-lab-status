@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-17 22:36:58 UTC",
+"generated_at": "2026-11-17 22:52:52 UTC",
 "host": {
-"cpu_pct": 94.7,
-"gpu_pct": 17,
-"free_gb": 202.3,
-"uptime": "up 18 days,  8:57, 2 users, load averages: 38.41 37.39 37.79",
-"load": "{ 38.41 37.39 37.79 }"
+"cpu_pct": 96.8,
+"gpu_pct": 1,
+"free_gb": 203.3,
+"uptime": "up 18 days,  9:13, 2 users, load averages: 33.21 35.90 36.80",
+"load": "{ 33.21 35.90 36.80 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-17T22:39",
+"name": "stop_budget_cohort_squeeze",
+"status": "accepted",
+"rationale": "Payer is short sellers who sell gold in daily cohorts and keep a stop of k daily sigmas above their own entry. Once price runs through enough cohorts' stops, forced buy-backs continue until fewer cohorts remain beyond their stop budget. Long only, with an explicit exit when bread",
+"note": "{\"name\": \"stop_budget_cohort_squeeze\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.22163125}"
+},
+{
 "ts": "2026-11-17T22:08",
 "name": "squeeze_impulse_cover_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the forward-seller or discretionary short who sold into a persistent gold rise. Their average sale price is the trailing mean close. Once the close sits k daily-sigmas above that basis in an efficient, one-way advance, their loss budgets force buy-backs.\nRATIONALE: T",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-17T16:06",
-"name": "fresh_high_run_cover",
-"status": "rejected",
-"rationale": "Payer is the discretionary and hedger shorts who keep selling into a gold advance. Each fresh multi-week high stops out another batch, so a high-frequency run of new highs means forced buy-backs are still unfinished.\nRATIONALE: Entry is the share of the last n daily samples that ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794782482.438385,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 99.2,
-"gpu": 7,
-"free_gb": 142.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794783673.10201,
 "total": 31310831,
@@ -4157,6 +4146,17 @@
 "cpu": 94.7,
 "gpu": 17,
 "free_gb": 202.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794955972.657633,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 96.8,
+"gpu": 1,
+"free_gb": 203.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
