@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-17 00:20:38 UTC",
+"generated_at": "2026-11-17 00:38:20 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": null,
 "gpu_pct": 1,
-"free_gb": 152.4,
-"uptime": "up 17 days, 10:31, 2 users, load averages: 82.80 61.56 50.17",
-"load": "{ 82.65 61.88 50.35 }"
+"free_gb": 151.0,
+"uptime": "up 17 days, 10:57, 2 users, load averages: 93.09 93.00 85.17",
+"load": "{ 93.09 93.00 85.17 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-17T00:37",
+"name": "tight_after_wide_move",
+"status": "rejected",
+"rationale": "The payer is the fader of a liquidity-confirmed move. After a large n-bar move, quote spreads first blow out and then re-tighten to baseline. That re-tightening means liquidity providers have re-entered at the new price and accept it. Counter-trend traders who sold into the spike",
+"note": "sandbox: AssertionError: zu speicherhungrig: 47 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-17T00:02",
 "name": "cusum_shift_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer: counter-trend limit and stop participants whose resting orders get swept by a spike bar that round-trips to its open, which clears the opposing flow, so the prior drift tends to resume.\nRATIONALE: This sits outside the director's moratorium (risk-limit, vol-target and clos",
 "note": "{\"name\": \"round_trip_spike_continuation\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.39390625}"
-},
-{
-"ts": "2026-11-16T18:01",
-"name": null,
-"status": "rejected",
-"rationale": "This breaks the moratorium on one point only. The slot has to produce a module, and this one stays outside the risk-limit, vol-target and close-rebalance payers. It is not a neighbour of real_yield_trend, because it trades the gap between gold's realised move and its real-yield-i",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1794702098.8442612,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 1,
-"free_gb": 152.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794703680.931514,
 "total": 31310831,
@@ -4102,6 +4091,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 152.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794875900.208972,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": null,
+"gpu": 1,
+"free_gb": 151.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
