@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-17 02:01:04 UTC",
+"generated_at": "2026-11-17 02:16:56 UTC",
 "host": {
-"cpu_pct": 84.0,
+"cpu_pct": 95.4,
 "gpu_pct": 1,
-"free_gb": 209.7,
-"uptime": "up 17 days, 12:21, 2 users, load averages: 39.88 47.89 63.33",
-"load": "{ 39.88 47.89 63.33 }"
+"free_gb": 206.6,
+"uptime": "up 17 days, 12:37, 2 users, load averages: 34.62 36.10 44.79",
+"load": "{ 34.62 36.10 44.79 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-17T02:16",
+"name": null,
+"status": "rejected",
+"rationale": "This stays clear of the moratorium payers (risk-limit, vol-target, close rebalancer) and uses the real-yield data. The payer is gold holders and ETF/retail flow that reprice slowly to moves in the 10-year real yield, so gold keeps drifting toward the level the yield move implies.",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-17T01:45",
 "name": "range_retention_fade",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is stop-buy/stop-sell order clusters resting just beyond round-dollar levels. Price that approaches a level at speed gets pulled into the stops, and the holders of those stops pay the slippage once they trigger.\nEntry fires before the cross, not after it. That is the opposi",
 "note": "{\"name\": \"round_level_magnet\", \"grid\": 108, \"sec_per_param\": 0.01, \"active_frac\": 0.3002125}"
-},
-{
-"ts": "2026-11-16T19:39",
-"name": "wick_asymmetry_baseline_hold",
-"status": "accepted",
-"rationale": "The director's moratorium covers the risk-limit, vol-target and close-rebalance payers, so this family stays out of them. The payer is liquidity takers who sell into a bar that makes a new low and are lifted back off it. A lower-wick dominance that is unusual for this instrument ",
-"note": "{\"name\": \"wick_asymmetry_baseline_hold\", \"grid\": 96, \"sec_per_param\": 0.002, \"active_frac\": 0.6329}"
 }
 ],
 "history": [
-{
-"t": 1794708226.848914,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 14,
-"free_gb": 177.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794709895.5488,
 "total": 31310831,
@@ -4113,6 +4102,17 @@
 "cpu": 84.0,
 "gpu": 1,
 "free_gb": 209.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794881816.5957701,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 95.4,
+"gpu": 1,
+"free_gb": 206.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
