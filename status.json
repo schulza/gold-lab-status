@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-17 01:03:05 UTC",
+"generated_at": "2026-11-17 01:26:02 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 9,
-"free_gb": 126.6,
-"uptime": "up 17 days, 11:14, 2 users, load averages: 87.96 90.79 88.81",
-"load": "{ 87.96 90.79 88.81 }"
+"gpu_pct": 1,
+"free_gb": 128.5,
+"uptime": "up 17 days, 11:39, 2 users, load averages: 106.02 100.58 98.",
+"load": "{ 106.02 100.58 98.47 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-17T01:11",
+"name": "spread_wide_extreme_fade",
+"status": "rejected",
+"rationale": "Payer: stop-order holders whose triggered stops fill as market orders at a new n-bar extreme while the quoted spread is already wide against its own baseline, so they pay both the spread and the thin-book impact. Those prints tend to be partly refunded over the next bars. The edg",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-17T00:37",
 "name": "tight_after_wide_move",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer = option dealers short gamma near round-dollar strikes. Their hedging pins price to the strike, then the hedge flips when a bar breaks away from the level, so dealers and anyone fading the break pay for the release. This is a probe, not a new payer idea: it sits outside the",
 "note": "sandbox: AssertionError: zu speicherhungrig: 63 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-11-16T18:32",
-"name": "round_trip_spike_continuation",
-"status": "accepted",
-"rationale": "Payer: counter-trend limit and stop participants whose resting orders get swept by a spike bar that round-trips to its open, which clears the opposing flow, so the prior drift tends to resume.\nRATIONALE: This sits outside the director's moratorium (risk-limit, vol-target and clos",
-"note": "{\"name\": \"round_trip_spike_continuation\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.39390625}"
 }
 ],
 "history": [
-{
-"t": 1794705168.352181,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 10,
-"free_gb": 163.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794706603.015483,
 "total": 31310831,
@@ -4102,6 +4091,17 @@
 "cpu": 100.0,
 "gpu": 9,
 "free_gb": 126.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794878762.358834,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 128.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
