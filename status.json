@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-17 08:56:59 UTC",
+"generated_at": "2026-11-17 09:12:50 UTC",
 "host": {
-"cpu_pct": 92.4,
+"cpu_pct": 85.8,
 "gpu_pct": 1,
-"free_gb": 210.8,
-"uptime": "up 17 days, 19:17, 2 users, load averages: 32.95 45.00 42.58",
-"load": "{ 32.95 45.00 42.58 }"
+"free_gb": 206.1,
+"uptime": "up 17 days, 19:33, 2 users, load averages: 34.08 36.67 38.01",
+"load": "{ 34.08 36.67 38.01 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-17T09:04",
+"name": "sold_trend_relief_follow",
+"status": "accepted",
+"rationale": "Payer is hedgers and short sellers who sold into a persistent uptrend, spread evenly through the window. Their average entry is the window mean, and their loss is the distance above it, so they are forced to buy back once price sits well above that mean (z \u2265 k) and signs are net-",
+"note": "{\"name\": \"sold_trend_relief_follow\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.0930625}"
+},
+{
 "ts": "2026-11-17T08:33",
 "name": "grind_persistence_hold",
 "status": "accepted",
@@ -2446,13 +2453,6 @@
 "status": "rejected",
 "rationale": "Payer: breakout chasers who buy or sell at the close of an outsized expansion bar and place stops inside that bar. When the next bar closes back through the expansion bar's fraction `f`, their stops and covering flow push price further back, so we fade the failure.\nRATIONALE: Thi",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-17T02:47",
-"name": "spike_fail_fade",
-"status": "rejected",
-"rationale": "The payer is breakout and stop-order traders whose entries fire on intrabar spikes. When bar ranges are wide relative to close-to-close noise, spikes keep failing to close, so the follow-through they pay for doesn't come.\nThis is a fade of an n-bar z-move, gated on the Parkinson-",
-"note": "sandbox: AssertionError: zu speicherhungrig: 65 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
@@ -4168,6 +4168,17 @@
 "cpu": 92.4,
 "gpu": 1,
 "free_gb": 210.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794906770.627008,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 85.8,
+"gpu": 1,
+"free_gb": 206.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
