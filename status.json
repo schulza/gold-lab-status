@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-17 07:53:31 UTC",
+"generated_at": "2026-11-17 08:09:18 UTC",
 "host": {
-"cpu_pct": 83.3,
-"gpu_pct": 0,
-"free_gb": 205.7,
-"uptime": "up 17 days, 18:13, 2 users, load averages: 40.37 37.64 37.84",
-"load": "{ 40.37 37.64 37.84 }"
+"cpu_pct": 91.5,
+"gpu_pct": 1,
+"free_gb": 204.3,
+"uptime": "up 17 days, 18:29, 2 users, load averages: 34.98 34.77 35.92",
+"load": "{ 34.98 34.77 35.92 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-17T08:02",
+"name": "hedge_seller_underwater_cover",
+"status": "accepted",
+"rationale": "Payer is hedge-sellers who short into fresh highs: miners and forward sellers, plus stop-scale-in shorts. Their average entry is the mean of closes at new n-bar highs. When price runs persistently above that average (measured in n-bar sigma units), their margin calls force a buy-",
+"note": "{\"name\": \"hedge_seller_underwater_cover\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.2302125}"
+},
+{
 "ts": "2026-11-17T07:32",
 "name": "underwater_fade_short_cover",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "This stays clear of the moratorium payers (risk-limit, vol-target, close rebalancer) and uses the real-yield data. The payer is gold holders and ETF/retail flow that reprice slowly to moves in the 10-year real yield, so gold keeps drifting toward the level the yield move implies.",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-17T01:45",
-"name": "range_retention_fade",
-"status": "accepted",
-"rationale": "The payer is liquidity-demanding market-order flow chasing a displacement that took a lot of round-trip travel to build. Dealers and passive limit providers earn the reversion on those moves, and the chasers pay it.\nRetention is the net n-bar displacement divided by the summed hi",
-"note": "{\"name\": \"range_retention_fade\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.02276875}"
 }
 ],
 "history": [
-{
-"t": 1794729955.6415842,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 6,
-"free_gb": 189.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794731356.608649,
 "total": 31310831,
@@ -4157,6 +4146,17 @@
 "cpu": 83.3,
 "gpu": 0,
 "free_gb": 205.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794902958.060735,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 91.5,
+"gpu": 1,
+"free_gb": 204.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
