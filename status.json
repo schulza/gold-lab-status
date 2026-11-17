@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-17 15:19:03 UTC",
+"generated_at": "2026-11-17 15:34:56 UTC",
 "host": {
-"cpu_pct": 82.5,
-"gpu_pct": 1,
-"free_gb": 205.6,
-"uptime": "up 18 days,  1:39, 2 users, load averages: 38.25 37.48 39.27",
-"load": "{ 38.25 37.48 39.27 }"
+"cpu_pct": 84.2,
+"gpu_pct": 16,
+"free_gb": 202.9,
+"uptime": "up 18 days,  1:55, 2 users, load averages: 32.81 34.55 36.59",
+"load": "{ 32.81 34.55 36.59 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-17T15:33",
+"name": "short_squeeze_persistence",
+"status": "accepted",
+"rationale": "The payer is hedgers and counter-trend shorts who sold into a persistent gold uptrend (producer forward-sellers and discretionary shorts with fixed loss budgets). Each of their day-over-day losses forces buy-backs. The signal needs an uptrend that is persistent, not just large: m",
+"note": "{\"name\": \"short_squeeze_persistence\", \"grid\": 81, \"sec_per_param\": 0.001, \"active_frac\": 0.49698125}"
+},
+{
 "ts": "2026-11-17T15:02",
 "name": "twap_seller_underwater_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the slow-repricing gold holder who anchors on price while real yields move. After the DFII10 falls, gold reprices with a lag as allocators and ETF holders rebalance. The strategy follows that catch-up and exits once the gold-vs-yield gap closes (hysteresis exit), so it i",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-17T09:04",
-"name": "sold_trend_relief_follow",
-"status": "accepted",
-"rationale": "Payer is hedgers and short sellers who sold into a persistent uptrend, spread evenly through the window. Their average entry is the window mean, and their loss is the distance above it, so they are forced to buy back once price sits well above that mean (z \u2265 k) and signs are net-",
-"note": "{\"name\": \"sold_trend_relief_follow\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.0930625}"
 }
 ],
 "history": [
-{
-"t": 1794756429.2783082,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 4,
-"free_gb": 180.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794757828.5194108,
 "total": 31310831,
@@ -4168,6 +4157,17 @@
 "cpu": 82.5,
 "gpu": 1,
 "free_gb": 205.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794929696.896389,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 84.2,
+"gpu": 16,
+"free_gb": 202.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
