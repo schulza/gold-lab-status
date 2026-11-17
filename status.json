@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-17 14:47:14 UTC",
+"generated_at": "2026-11-17 15:03:08 UTC",
 "host": {
-"cpu_pct": 96.4,
-"gpu_pct": 20,
-"free_gb": 205.3,
-"uptime": "up 18 days,  1:07, 2 users, load averages: 35.25 40.10 54.69",
-"load": "{ 35.25 40.10 54.69 }"
+"cpu_pct": 88.0,
+"gpu_pct": 1,
+"free_gb": 206.1,
+"uptime": "up 18 days,  1:23, 2 users, load averages: 41.32 39.23 43.50",
+"load": "{ 41.32 39.23 43.50 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-17T15:02",
+"name": "twap_seller_underwater_hold",
+"status": "accepted",
+"rationale": "Payer: scheduled hedgers and short sellers who sold equal clips into a persistent uptrend. The average of their sale prices is roughly the trailing mean, so once price sits k daily sigmas above it they are underwater and must cover or get margin-called.\nRATIONALE: Direction is fo",
+"note": "{\"name\": \"twap_seller_underwater_hold\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.0058}"
+},
+{
 "ts": "2026-11-17T14:31",
 "name": null,
 "status": "rejected",
@@ -2446,13 +2453,6 @@
 "status": "accepted",
 "rationale": "Payer is hedgers and short sellers who sold into a persistent uptrend, spread evenly through the window. Their average entry is the window mean, and their loss is the distance above it, so they are forced to buy back once price sits well above that mean (z \u2265 k) and signs are net-",
 "note": "{\"name\": \"sold_trend_relief_follow\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.0930625}"
-},
-{
-"ts": "2026-11-17T08:33",
-"name": "grind_persistence_hold",
-"status": "accepted",
-"rationale": "Payer is the fixed-stop mean-reversion and hedge desk that keeps selling into a gold grind. The signal is persistence, meaning the share of up blocks. It is not magnitude, which cost_clearing_drift and the ATR and Donchian families already use. Those sellers get stopped repeatedl",
-"note": "{\"name\": \"grind_persistence_hold\", \"grid\": 81, \"sec_per_param\": 0.0, \"active_frac\": 0.507}"
 }
 ],
 "history": [
@@ -4157,6 +4157,17 @@
 "cpu": 96.4,
 "gpu": 20,
 "free_gb": 205.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794927788.521547,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 88.0,
+"gpu": 1,
+"free_gb": 206.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
