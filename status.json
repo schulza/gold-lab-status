@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-17 13:41:05 UTC",
+"generated_at": "2026-11-17 14:04:47 UTC",
 "host": {
 "cpu_pct": null,
-"gpu_pct": 1,
-"free_gb": 155.6,
-"uptime": "up 17 days, 23:57, 2 users, load averages: 87.99 84.98 84.59",
-"load": "{ 87.99 84.98 84.59 }"
+"gpu_pct": 14,
+"free_gb": 152.2,
+"uptime": "up 18 days, 17 mins, 2 users, load averages: 90.28 82.93 82.",
+"load": "{ 88.82 82.75 82.19 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-17T13:57",
+"name": "stranded_dip_seller_ledger",
+"status": "rejected",
+"rationale": "The payer is dip and rally sellers who shorted gold on up-day closes during a persistent uptrend. Their aggregate mark-to-market loss, measured in daily sigma, forces stop-outs and margin cover, and the buying lands after the loss has built, not at a single level.\nRATIONALE: This",
+"note": "sandbox: AssertionError: zu speicherhungrig: 42 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-17T13:24",
 "name": "shallow_pullback_short_trap_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is hedge-sellers who short into fresh highs: miners and forward sellers, plus stop-scale-in shorts. Their average entry is the mean of closes at new n-bar highs. When price runs persistently above that average (measured in n-bar sigma units), their margin calls force a buy-",
 "note": "{\"name\": \"hedge_seller_underwater_cover\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.2302125}"
-},
-{
-"ts": "2026-11-17T07:32",
-"name": "underwater_fade_short_cover",
-"status": "accepted",
-"rationale": "Payer is fade-shorts who sell each new rolling high into a persistent uptrend. Their layered average entry sits below price, so they are forced to buy back as the margin and stop pain grows. The signal is long-only follow. It enters once the average entry of at least `m` fade-sol",
-"note": "{\"name\": \"underwater_fade_short_cover\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.0976875}"
 }
 ],
 "history": [
-{
-"t": 1794751076.37891,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 4,
-"free_gb": 184.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794752391.045086,
 "total": 31310831,
@@ -4157,6 +4146,17 @@
 "cpu": null,
 "gpu": 1,
 "free_gb": 155.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794924287.155484,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": null,
+"gpu": 14,
+"free_gb": 152.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
