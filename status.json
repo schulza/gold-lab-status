@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-18 19:00:09 UTC",
+"generated_at": "2026-11-18 19:15:58 UTC",
 "host": {
-"cpu_pct": 92.7,
+"cpu_pct": 91.2,
 "gpu_pct": 1,
-"free_gb": 208.9,
-"uptime": "up 19 days,  5:20, 2 users, load averages: 31.59 44.92 60.66",
-"load": "{ 31.59 44.92 60.66 }"
+"free_gb": 208.8,
+"uptime": "up 19 days,  5:36, 2 users, load averages: 36.66 36.27 44.01",
+"load": "{ 36.66 36.27 44.01 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-18T19:05",
+"name": "prerelease_clock_immediacy",
+"status": "accepted",
+"rationale": "Payer is the hedger or corporate flow that pays up for immediacy into scheduled USD macro releases (12:30/13:30/14:00/15:00 UTC data, 18:00/19:00 FOMC slots, both DST variants). That flow pushes price away from fair value just before the print. Direction is the `sign` parameter, ",
+"note": "{\"name\": \"prerelease_clock_immediacy\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.017275}"
+},
+{
 "ts": "2026-11-18T18:34",
 "name": "release_spread_drift_follow",
 "status": "accepted",
@@ -2446,13 +2453,6 @@
 "status": "accepted",
 "rationale": "The payer is the discretionary and hedging flow that faded the day's largest hourly shock. They keep paying for it while price holds beyond the shock-hour close, and the position runs to a fixed clock exit.\nRATIONALE: It is two-sided and triggered by an event, not a long-only tre",
 "note": "{\"name\": \"shock_hour_hold\", \"grid\": 192, \"sec_per_param\": 0.008, \"active_frac\": 0.0553375}"
-},
-{
-"ts": "2026-11-18T12:30",
-"name": "semivar_imbalance_follow",
-"status": "accepted",
-"rationale": "Payer is the short-gamma liquidity provider and option hedger. A run of squared returns concentrated on one side (semivariance imbalance) means their hedging flow is one-directional, and it keeps pushing price after bar-level direction is already visible.\nRATIONALE: This is a fol",
-"note": "{\"name\": \"semivar_imbalance_follow\", \"grid\": 64, \"sec_per_param\": 0.017, \"active_frac\": 0.8223125}"
 }
 ],
 "history": [
@@ -4003,6 +4003,17 @@
 "cpu": 92.7,
 "gpu": 1,
 "free_gb": 208.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795029358.6736698,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 91.2,
+"gpu": 1,
+"free_gb": 208.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
