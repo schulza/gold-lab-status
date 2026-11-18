@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-18 01:38:29 UTC",
+"generated_at": "2026-11-18 01:54:21 UTC",
 "host": {
-"cpu_pct": 86.5,
-"gpu_pct": 17,
-"free_gb": 206.1,
-"uptime": "up 18 days, 11:58, 2 users, load averages: 37.05 46.25 61.25",
-"load": "{ 37.05 46.25 61.25 }"
+"cpu_pct": 88.7,
+"gpu_pct": 0,
+"free_gb": 203.5,
+"uptime": "up 18 days, 12:14, 2 users, load averages: 29.12 33.68 43.23",
+"load": "{ 29.12 33.68 43.23 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-18T01:53",
+"name": "margin_ladder_cover_follow",
+"status": "accepted",
+"rationale": "The payer is the leveraged short seller who shorted into a gold rise at an older swing high and runs a fixed-percent loss limit (1%, 2%, 3% of entry price). Those limits sit in a ladder above that high, independent of ATR, so the forced buyback arrives in steps as each level is c",
+"note": "{\"name\": \"margin_ladder_cover_follow\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.13734375}"
+},
+{
 "ts": "2026-11-18T01:22",
 "name": "no_relief_uptrend_hold",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the dip-selling short, who scales into a persistent gold uptrend on down bars (producer hedgers and trend-fighting CTAs). Their average entry sits below price, so their margin pain is the distance to a down-bar-weighted cost basis, scaled by the window's own noise. When ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-17T19:25",
-"name": "fade_seller_basis_cover",
-"status": "accepted",
-"rationale": "The payer is the fade-the-high seller. Each fresh n-bar high attracts counter-trend shorts, and their average cost basis is the mean close of those events inside a window W. Once price sits at least k ATR above that basis, the shorts are underwater and forced to buy back (margin ",
-"note": "{\"name\": \"fade_seller_basis_cover\", \"grid\": 108, \"sec_per_param\": 0.001, \"active_frac\": 0.42365}"
 }
 ],
 "history": [
-{
-"t": 1794793852.3418481,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 85.5,
-"gpu": 24,
-"free_gb": 210.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794794794.25878,
 "total": 31310831,
@@ -4146,6 +4135,17 @@
 "cpu": 86.5,
 "gpu": 17,
 "free_gb": 206.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794966861.901752,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 88.7,
+"gpu": 0,
+"free_gb": 203.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
