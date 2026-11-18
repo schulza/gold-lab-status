@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-18 17:56:51 UTC",
+"generated_at": "2026-11-18 18:20:44 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 17,
-"free_gb": 125.5,
-"uptime": "up 19 days,  4:07, 2 users, load averages: 83.59 80.06 78.58",
-"load": "{ 83.59 80.06 78.58 }"
+"gpu_pct": 1,
+"free_gb": 125.1,
+"uptime": "up 19 days,  4:33, 2 users, load averages: 89.12 85.13 83.41",
+"load": "{ 88.87 85.14 83.42 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-18T18:01",
+"name": "prerelease_immediacy_nfp",
+"status": "rejected",
+"rationale": "Payer is the hedger or macro desk that must buy or sell immediacy into the first-Friday NFP print. Their pre-release flow drifts the price, and the move that follows pays the side that took the other side. Position is set once at the release slot and held to a fixed clock exit.\nT",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-18T17:28",
 "name": "prerelease_immediacy_clock",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer: hedgers and benchmark-bound desks that pay for immediacy in the run-up to the scheduled US releases (08:30, 10:00 and 14:00 ET). Their one-sided flow displaces price beyond fair value, and the price is fixed once the release prints.\nThe signal is the vol-normalised run-up ",
 "note": "{\"name\": \"pre_release_immediacy_follow\", \"grid\": 144, \"sec_per_param\": 0.003, \"active_frac\": 0.023625}"
-},
-{
-"ts": "2026-11-18T11:23",
-"name": "graded_drift_follow",
-"status": "rejected",
-"rationale": "Payer is slow-reacting allocators and benchmark-lagged hedgers, whose rebalancing under-reacts to drift and spreads the move over days. Gradual information diffusion pays a graded, vol-scaled, multi-horizon follower. Exposure scales with how far the z-score of the move exceeds a ",
-"note": "sandbox: AssertionError: zu speicherhungrig: 48 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1794852716.6060202,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 80.8,
-"gpu": 1,
-"free_gb": 207.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794853665.325866,
 "total": 31310831,
@@ -4014,6 +4003,17 @@
 "cpu": 100.0,
 "gpu": 17,
 "free_gb": 125.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795026044.6606069,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 125.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
