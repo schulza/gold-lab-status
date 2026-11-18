@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-18 05:34:26 UTC",
+"generated_at": "2026-11-18 06:00:35 UTC",
 "host": {
-"cpu_pct": 100.0,
-"gpu_pct": 1,
-"free_gb": 126.7,
-"uptime": "up 18 days, 15:52, 2 users, load averages: 83.86 87.13 89.12",
-"load": "{ 83.86 87.13 89.12 }"
+"cpu_pct": null,
+"gpu_pct": 9,
+"free_gb": 138.5,
+"uptime": "up 18 days, 16:10, 2 users, load averages: 87.03 85.54 85.17",
+"load": "{ 87.03 85.54 85.17 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-18T05:48",
+"name": null,
+"status": "rejected",
+"rationale": "The payer is the hedger or desk that must be positioned before a scheduled NFP or FOMC release. It buys or sells for immediacy in the run-up, which pushes price past fair value, and it pays that premium to whoever takes the other side. The strategy takes the opposite side of an u",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-18T05:13",
 "name": "pre_release_immediacy_window",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the discretionary and systematic short seller who sold into weakness (down bars). Tick-weighted, their average entry is the tick-weighted mean close over down bars in the window. Once price runs well above that entry, they are underwater and forced to cover.\nShape: follo",
 "note": "ast: name not allowed: getattr"
-},
-{
-"ts": "2026-11-17T23:14",
-"name": "underwater_seller_cover_follow",
-"status": "rejected",
-"rationale": "Payer: hedgers and fade-sellers who sold each local high of a rising gold market. Their average entry sits below price, so rising mark-to-market pain forces stop and cover buying, and the strategy is long that cover flow.\nRATIONALE: It measures pain as the distance of the close a",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794807901.047434,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 26,
-"free_gb": 146.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794809143.9979,
 "total": 31310831,
@@ -4113,6 +4102,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 126.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794981635.097476,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": null,
+"gpu": 9,
+"free_gb": 138.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
