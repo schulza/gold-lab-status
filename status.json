@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-18 14:29:31 UTC",
+"generated_at": "2026-11-18 14:52:00 UTC",
 "host": {
-"cpu_pct": 100.0,
-"gpu_pct": 1,
-"free_gb": 140.7,
-"uptime": "up 19 days, 40 mins, 2 users, load averages: 79.56 77.37 79.",
-"load": "{ 79.56 77.37 79.10 }"
+"cpu_pct": null,
+"gpu_pct": 7,
+"free_gb": 137.5,
+"uptime": "up 19 days,  1:05, 2 users, load averages: 80.68 82.66 83.68",
+"load": "{ 80.68 82.66 83.68 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-18T14:44",
+"name": "tight_spread_break_follow",
+"status": "accepted",
+"rationale": "Payer = breakout-fading resting-limit providers (and stop-less fade traders). When the quoted spread is tight, makers quote confidently and fade, so a channel break through a tight-spread book squeezes them. They cover into the move and the follow-through is paid by their forced ",
+"note": "{\"name\": \"tight_spread_break_follow\", \"grid\": 96, \"sec_per_param\": 0.038, \"active_frac\": 0.5611375}"
+},
+{
 "ts": "2026-11-18T14:11",
 "name": "spread_cleared_shock_follow",
 "status": "accepted",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the slow-updating gold holder or seller, such as ETF and retail flow anchored on a stale price. When real yields move sharply and gold has not yet repriced, the gap closes over following days, so this is a follow trade into the catch-up. The gap is measured against gold'",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-18T08:05",
-"name": "bigsmall_divergence_follow",
-"status": "accepted",
-"rationale": "The payer is the retail and small-lot flow that trades the small bars against a move the large bars are making. The institutional block flow shows up in the large bars and keeps working while the small bars lean the other way.\nRATIONALE: The strategy follows the large-bar drift o",
-"note": "{\"name\": \"bigsmall_divergence_follow\", \"grid\": 144, \"sec_per_param\": 0.002, \"active_frac\": 0.618325}"
 }
 ],
 "history": [
-{
-"t": 1794839403.5023339,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 84.2,
-"gpu": 1,
-"free_gb": 206.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1794840355.239157,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 86.3,
-"gpu": 18,
-"free_gb": 204.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794841310.799804,
 "total": 31310831,
@@ -4058,6 +4036,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 140.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795013520.5350552,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": null,
+"gpu": 7,
+"free_gb": 137.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
