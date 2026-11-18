@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-18 09:21:06 UTC",
+"generated_at": "2026-11-18 09:46:47 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 1,
-"free_gb": 157.5,
-"uptime": "up 18 days, 19:34, 2 users, load averages: 128.07 91.67 86.2",
-"load": "{ 128.07 91.67 86.23 }"
+"free_gb": 151.9,
+"uptime": "up 18 days, 19:57, 2 users, load averages: 77.00 75.98 78.10",
+"load": "{ 77.00 75.98 78.10 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-18T09:46",
+"name": "spread_normalisation_release",
+"status": "rejected",
+"rationale": "Payer is the liquidity provider who widened quotes during a stress move. Their displaced quotes were held against the move, and the takers who crossed the wide spread paid for the immediacy. Once the spread normalises, the withdrawn liquidity returns and the price move that was h",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-18T09:11",
 "name": "spread_gap_catchup_follow",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer = the \"sell the rip\" fader. They short each fresh N-day high and are forced to cover once several such cohorts are underwater by more than k daily sigmas. This is a follow shape, not a fade of chasers.\nRATIONALE: It differs from the cover-follow siblings: it counts distinct",
 "note": "{\"name\": \"fade_attempt_cohort_cover\", \"grid\": 162, \"sec_per_param\": 0.009, \"active_frac\": 0.2553125}"
-},
-{
-"ts": "2026-11-18T03:00",
-"name": "short_inventory_ratchet_hold",
-"status": "accepted",
-"rationale": "Payer is dealers and hedgers who sold into a persistent gold uptrend and never got a pullback deep enough to exit. Their stop-and-cover bids arrive later, so the strategy stays long while this inventory is trapped.\nThe entry is a trailing return t-stat above a threshold plus a pu",
-"note": "{\"name\": \"short_inventory_ratchet_hold\", \"grid\": 72, \"sec_per_param\": 0.001, \"active_frac\": 0.415425}"
 }
 ],
 "history": [
-{
-"t": 1794821499.468676,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 3,
-"free_gb": 197.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794822470.2236679,
 "total": 31310831,
@@ -4102,6 +4091,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 157.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794995207.671179,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 151.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
