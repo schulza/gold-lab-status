@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-18 16:17:23 UTC",
+"generated_at": "2026-11-18 16:33:15 UTC",
 "host": {
-"cpu_pct": null,
-"gpu_pct": 1,
-"free_gb": 126.4,
-"uptime": "up 19 days,  2:26, 2 users, load averages: 81.66 82.24 75.89",
-"load": "{ 81.66 82.24 75.89 }"
+"cpu_pct": 75.4,
+"gpu_pct": 19,
+"free_gb": 127.7,
+"uptime": "up 19 days,  2:53, 2 users, load averages: 31.55 56.69 74.18",
+"load": "{ 31.55 56.69 74.18 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-18T16:23",
+"name": "forced_cover_timing_matched",
+"status": "rejected",
+"rationale": "The payer is the hedger or short seller who sold a gold rise and has to cover. A grinding, efficient up-leg (high path efficiency, large range-scaled move) is the footprint of stepwise forced cover, so the signal only fires then.\nRATIONALE: Following the director's exposure-match",
+"note": "sandbox: AssertionError: zu speicherhungrig: 42 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-18T15:49",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the passive liquidity provider (a dealer or limit-order quoter) who keeps leaning against intrabar excursions. When upside excursions persistently outweigh downside ones, those quoters are adversely selected, and the strategy follows the skew until it decays.\nRATIONALE: ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-18T09:46",
-"name": "spread_normalisation_release",
-"status": "rejected",
-"rationale": "Payer is the liquidity provider who widened quotes during a stress move. Their displaced quotes were held against the move, and the takers who crossed the wide spread paid for the immediacy. Once the spread normalises, the withdrawn liquidity returns and the price move that was h",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794846054.690424,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 76.5,
-"gpu": 1,
-"free_gb": 208.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794847006.5212212,
 "total": 31310831,
@@ -4036,6 +4025,17 @@
 "cpu": null,
 "gpu": 1,
 "free_gb": 126.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795019595.488082,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 75.4,
+"gpu": 19,
+"free_gb": 127.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
