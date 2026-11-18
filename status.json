@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-18 19:47:38 UTC",
+"generated_at": "2026-11-18 20:12:35 UTC",
 "host": {
-"cpu_pct": 91.8,
-"gpu_pct": 1,
-"free_gb": 202.5,
-"uptime": "up 19 days,  6:07, 2 users, load averages: 37.56 36.60 36.52",
-"load": "{ 37.56 36.60 36.52 }"
+"cpu_pct": 100.0,
+"gpu_pct": 11,
+"free_gb": 145.7,
+"uptime": "up 19 days,  6:23, 1 user, load averages: 107.15 98.29 73.96",
+"load": "{ 107.15 98.29 73.96 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-18T20:10",
+"name": "release_confirmed_follow",
+"status": "accepted",
+"rationale": "Payer is the hedger who pays for immediacy ahead of the scheduled US data slot (12:30 or 13:30 UTC, depending on DST). It follows only when the post-release move confirms the pre-release run in the same direction, and it exits on a fixed clock.\nUnlike the two accepted release fam",
+"note": "{\"name\": \"release_confirmed_follow\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.0139875}"
+},
+{
 "ts": "2026-11-18T19:36",
 "name": "slot_normalised_move",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the dealer or resting-order liquidity provider who re-quotes late after a statistically large, spread-clearing move, plus the fader who leans against it. We follow only on a fresh crossing of the sigma threshold and hold for a fixed number of bars.\nIt is symmetric (long ",
 "note": "{\"name\": \"spread_cleared_shock_follow\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.5669625}"
-},
-{
-"ts": "2026-11-18T13:40",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is the crowded non-commercial position. Speculators with extreme CFTC net positioning (z52) hold the one-sided risk into a scheduled NFP/FOMC release, and they pay for unwinding or squaring ahead of it. This is not an underwater-short or cover-follow shape. It is a two-side",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1794858654.289938,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 1,
-"free_gb": 138.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794860339.899659,
 "total": 31310831,
@@ -4025,6 +4014,17 @@
 "cpu": 91.8,
 "gpu": 1,
 "free_gb": 202.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795032755.527858,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 11,
+"free_gb": 145.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
