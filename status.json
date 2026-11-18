@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-18 08:00:49 UTC",
+"generated_at": "2026-11-18 08:26:27 UTC",
 "host": {
-"cpu_pct": 100.0,
-"gpu_pct": 19,
-"free_gb": 149.2,
-"uptime": "up 18 days, 18:13, 2 users, load averages: 79.63 75.92 75.01",
-"load": "{ 79.63 75.92 75.01 }"
+"cpu_pct": 99.9,
+"gpu_pct": 1,
+"free_gb": 138.6,
+"uptime": "up 18 days, 18:37, 2 users, load averages: 63.64 83.96 84.53",
+"load": "{ 63.64 83.96 84.53 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-18T08:05",
+"name": "bigsmall_divergence_follow",
+"status": "accepted",
+"rationale": "The payer is the retail and small-lot flow that trades the small bars against a move the large bars are making. The institutional block flow shows up in the large bars and keeps working while the small bars lean the other way.\nRATIONALE: The strategy follows the large-bar drift o",
+"note": "{\"name\": \"bigsmall_divergence_follow\", \"grid\": 144, \"sec_per_param\": 0.002, \"active_frac\": 0.618325}"
+},
+{
 "ts": "2026-11-18T07:31",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the leveraged short seller who shorted into a gold rise at an older swing high and runs a fixed-percent loss limit (1%, 2%, 3% of entry price). Those limits sit in a ladder above that high, independent of ATR, so the forced buyback arrives in steps as each level is c",
 "note": "{\"name\": \"margin_ladder_cover_follow\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.13734375}"
-},
-{
-"ts": "2026-11-18T01:22",
-"name": "no_relief_uptrend_hold",
-"status": "accepted",
-"rationale": "The payer is the short seller or forward hedger who sold into a persistent gold rise and has had no relief rally to exit at breakeven. The longer the rise runs without a pullback, the more of that stock has to be bought back at higher prices.\nRATIONALE: Entry needs a sigma-scaled",
-"note": "{\"name\": \"no_relief_uptrend_hold\", \"grid\": 180, \"sec_per_param\": 0.0, \"active_frac\": 0.3197625}"
 }
 ],
 "history": [
-{
-"t": 1794816273.2443788,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 4,
-"free_gb": 195.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794817618.161765,
 "total": 31310831,
@@ -4113,6 +4102,17 @@
 "cpu": 100.0,
 "gpu": 19,
 "free_gb": 149.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794990387.708426,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 99.9,
+"gpu": 1,
+"free_gb": 138.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
