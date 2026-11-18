@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-18 10:11:07 UTC",
+"generated_at": "2026-11-18 10:27:07 UTC",
 "host": {
-"cpu_pct": 100.0,
-"gpu_pct": 11,
-"free_gb": 180.7,
-"uptime": "up 18 days, 20:23, 2 users, load averages: 79.33 82.43 84.42",
-"load": "{ 79.33 82.43 84.42 }"
+"cpu_pct": 90.2,
+"gpu_pct": 1,
+"free_gb": 209.1,
+"uptime": "up 18 days, 20:47, 2 users, load averages: 37.96 47.30 67.35",
+"load": "{ 37.96 47.30 67.35 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-18T10:18",
+"name": "excursion_skew_follow",
+"status": "rejected",
+"rationale": "Payer is the passive liquidity provider (a dealer or limit-order quoter) who keeps leaning against intrabar excursions. When upside excursions persistently outweigh downside ones, those quoters are adversely selected, and the strategy follows the skew until it decays.\nRATIONALE: ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-18T09:46",
 "name": "spread_normalisation_release",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the unhedged short seller or forward hedger who sold into a persistent gold rise with a loose stop. A rise with a high share of up-bars means few relief rallies, so their exit points are being run over in sequence.\nRATIONALE: This is a follow shape with an explicit e",
 "note": "{\"name\": \"sigma_trail_uptrend_hold\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.13804375}"
-},
-{
-"ts": "2026-11-18T03:33",
-"name": "fade_attempt_cohort_cover",
-"status": "accepted",
-"rationale": "Payer = the \"sell the rip\" fader. They short each fresh N-day high and are forced to cover once several such cohorts are underwater by more than k daily sigmas. This is a follow shape, not a fade of chasers.\nRATIONALE: It differs from the cover-follow siblings: it counts distinct",
-"note": "{\"name\": \"fade_attempt_cohort_cover\", \"grid\": 162, \"sec_per_param\": 0.009, \"active_frac\": 0.2553125}"
 }
 ],
 "history": [
-{
-"t": 1794824008.3108969,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": null,
-"gpu": 1,
-"free_gb": 186.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794825195.60988,
 "total": 31310831,
@@ -4102,6 +4091,17 @@
 "cpu": 100.0,
 "gpu": 11,
 "free_gb": 180.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794997627.885199,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 90.2,
+"gpu": 1,
+"free_gb": 209.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
