@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-18 14:03:39 UTC",
+"generated_at": "2026-11-18 14:29:31 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 11,
-"free_gb": 180.3,
-"uptime": "up 19 days, 16 mins, 2 users, load averages: 105.16 92.05 89",
-"load": "{ 105.16 92.05 89.16 }"
+"gpu_pct": 1,
+"free_gb": 140.7,
+"uptime": "up 19 days, 40 mins, 2 users, load averages: 79.56 77.37 79.",
+"load": "{ 79.56 77.37 79.10 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-18T14:11",
+"name": "spread_cleared_shock_follow",
+"status": "accepted",
+"rationale": "Payer is the dealer or resting-order liquidity provider who re-quotes late after a statistically large, spread-clearing move, plus the fader who leans against it. We follow only on a fresh crossing of the sigma threshold and hold for a fixed number of bars.\nIt is symmetric (long ",
+"note": "{\"name\": \"spread_cleared_shock_follow\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.5669625}"
+},
+{
 "ts": "2026-11-18T13:40",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the retail and small-lot flow that trades the small bars against a move the large bars are making. The institutional block flow shows up in the large bars and keeps working while the small bars lean the other way.\nRATIONALE: The strategy follows the large-bar drift o",
 "note": "{\"name\": \"bigsmall_divergence_follow\", \"grid\": 144, \"sec_per_param\": 0.002, \"active_frac\": 0.618325}"
-},
-{
-"ts": "2026-11-18T07:31",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is the slow allocator or discretionary gold holder who reprices gold only with a lag after a real-yield move; the signal goes with the rate-implied direction (two-sided, follow, not a long-only hold) only while gold has not yet moved that way.\nRATIONALE: This is a residual-",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1794838449.334105,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 90.2,
-"gpu": 1,
-"free_gb": 205.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794839403.5023339,
 "total": 31310831,
@@ -4058,6 +4047,17 @@
 "cpu": 100.0,
 "gpu": 11,
 "free_gb": 180.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795012171.7837682,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 140.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
