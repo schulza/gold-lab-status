@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-18 17:05:00 UTC",
+"generated_at": "2026-11-18 17:30:56 UTC",
 "host": {
-"cpu_pct": 94.5,
+"cpu_pct": 100.0,
 "gpu_pct": 1,
-"free_gb": 203.4,
-"uptime": "up 19 days,  3:25, 2 users, load averages: 36.10 36.08 40.28",
-"load": "{ 36.10 36.08 40.28 }"
+"free_gb": 148.0,
+"uptime": "up 19 days,  3:41, 2 users, load averages: 83.46 80.57 67.53",
+"load": "{ 83.46 80.57 67.53 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-18T17:28",
+"name": "prerelease_immediacy_clock",
+"status": "rejected",
+"rationale": "Payer is the hedger or flow desk that must buy or sell immediacy into the first-Friday NFP release. The pre-release run is that forced flow, and it is held to a fixed UTC clock exit. Event days come from the calendar (the `ts` field, no external import, since `goldlab.external` w",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-18T16:54",
 "name": null,
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is slow-reacting allocators and benchmark-lagged hedgers, whose rebalancing under-reacts to drift and spreads the move over days. Gradual information diffusion pays a graded, vol-scaled, multi-horizon follower. Exposure scales with how far the z-score of the move exceeds a ",
 "note": "sandbox: AssertionError: zu speicherhungrig: 48 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-11-18T10:52",
-"name": "spread_widen_move_follow",
-"status": "rejected",
-"rationale": "Payer is the liquidity provider and passive contrarian. They widen quotes after informed flow has already moved the price, then keep absorbing the move. The strategy follows moves that arrive together with abnormal spread widening, and holds for a fixed number of bars.\nRATIONALE:",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794848920.766569,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 98.3,
-"gpu": 12,
-"free_gb": 205.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1794849865.225568,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 75.8,
-"gpu": 17,
-"free_gb": 209.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794850817.8803341,
 "total": 31310831,
@@ -4036,6 +4014,17 @@
 "cpu": 94.5,
 "gpu": 1,
 "free_gb": 203.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795023056.362554,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 148.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
