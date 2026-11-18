@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-18 19:31:46 UTC",
+"generated_at": "2026-11-18 19:47:38 UTC",
 "host": {
-"cpu_pct": 91.9,
-"gpu_pct": 18,
-"free_gb": 205.9,
-"uptime": "up 19 days,  5:52, 2 users, load averages: 34.08 34.65 37.82",
-"load": "{ 34.08 34.65 37.82 }"
+"cpu_pct": 91.8,
+"gpu_pct": 1,
+"free_gb": 202.5,
+"uptime": "up 19 days,  6:07, 2 users, load averages: 37.56 36.60 36.52",
+"load": "{ 37.56 36.60 36.52 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-18T19:36",
+"name": "slot_normalised_move",
+"status": "accepted",
+"rationale": "Payer is the slot-naive chaser (and, with sign=-1, the slow flow that lags the move). A move that is large only relative to that clock slot's own history (thin Asia vs. liquid NY) is treated as news by trend-followers, and liquidity providers get paid when it reverts. A slot-norm",
+"note": "{\"name\": \"slot_normalised_move\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.5293875}"
+},
+{
 "ts": "2026-11-18T19:05",
 "name": "prerelease_clock_immediacy",
 "status": "accepted",
@@ -2446,13 +2453,6 @@
 "status": "rejected",
 "rationale": "Payer is the crowded non-commercial position. Speculators with extreme CFTC net positioning (z52) hold the one-sided risk into a scheduled NFP/FOMC release, and they pay for unwinding or squaring ahead of it. This is not an underwater-short or cover-follow shape. It is a two-side",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-18T13:05",
-"name": "shock_hour_hold",
-"status": "accepted",
-"rationale": "The payer is the discretionary and hedging flow that faded the day's largest hourly shock. They keep paying for it while price holds beyond the shock-hour close, and the position runs to a fixed clock exit.\nRATIONALE: It is two-sided and triggered by an event, not a long-only tre",
-"note": "{\"name\": \"shock_hour_hold\", \"grid\": 192, \"sec_per_param\": 0.008, \"active_frac\": 0.0553375}"
 }
 ],
 "history": [
@@ -4014,6 +4014,17 @@
 "cpu": 91.9,
 "gpu": 18,
 "free_gb": 205.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795031258.310327,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 91.8,
+"gpu": 1,
+"free_gb": 202.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
