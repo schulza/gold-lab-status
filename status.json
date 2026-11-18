@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-18 12:46:04 UTC",
+"generated_at": "2026-11-18 13:10:45 UTC",
 "host": {
-"cpu_pct": null,
-"gpu_pct": 1,
-"free_gb": 127.1,
-"uptime": "up 18 days, 22:55, 2 users, load averages: 100.20 90.08 89.2",
-"load": "{ 100.20 90.08 89.20 }"
+"cpu_pct": 100.0,
+"gpu_pct": 7,
+"free_gb": 156.5,
+"uptime": "up 18 days, 23:22, 2 users, load averages: 82.20 82.32 83.88",
+"load": "{ 82.20 82.32 83.88 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-18T13:05",
+"name": "shock_hour_hold",
+"status": "accepted",
+"rationale": "The payer is the discretionary and hedging flow that faded the day's largest hourly shock. They keep paying for it while price holds beyond the shock-hour close, and the position runs to a fixed clock exit.\nRATIONALE: It is two-sided and triggered by an event, not a long-only tre",
+"note": "{\"name\": \"shock_hour_hold\", \"grid\": 192, \"sec_per_param\": 0.008, \"active_frac\": 0.0553375}"
+},
+{
 "ts": "2026-11-18T12:30",
 "name": "semivar_imbalance_follow",
 "status": "accepted",
@@ -2446,38 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the short seller or hedger who sold a gold rise and is forced to cover when price clears a multi-day high by more than bar noise. Cover bids arrive in a cluster, then fade after a giveback.\nExposure-matched, as the director asked: position = cover indicator minus its own",
 "note": "{\"name\": \"cover_timing_matched\", \"grid\": 72, \"sec_per_param\": 0.021, \"active_frac\": 0.0515}"
-},
-{
-"ts": "2026-11-18T06:23",
-"name": "pre_release_immediacy_clock",
-"status": "accepted",
-"rationale": "The payer is the macro hedger or flow desk that must buy immediacy before 08:30 ET US releases. The pre-release drift is their inventory pressure, so the strategy takes the drift's sign and exits on a fixed UTC clock after the release. It uses no external feed, which sidesteps th",
-"note": "{\"name\": \"pre_release_immediacy_clock\", \"grid\": 192, \"sec_per_param\": 0.001, \"active_frac\": 0.021975}"
 }
 ],
 "history": [
-{
-"t": 1794833673.290226,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 83.0,
-"gpu": 1,
-"free_gb": 223.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1794834628.5549881,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 93.0,
-"gpu": 1,
-"free_gb": 210.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794835580.591199,
 "total": 31310831,
@@ -4080,6 +4058,17 @@
 "cpu": null,
 "gpu": 1,
 "free_gb": 127.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795007445.095556,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 7,
+"free_gb": 156.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
