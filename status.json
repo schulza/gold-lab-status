@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-18 08:58:32 UTC",
+"generated_at": "2026-11-18 09:21:06 UTC",
 "host": {
-"cpu_pct": null,
-"gpu_pct": 10,
-"free_gb": 124.5,
-"uptime": "up 18 days, 19:02, 2 users, load averages: 97.24 92.19 89.14",
-"load": "{ 97.24 92.19 89.14 }"
+"cpu_pct": 100.0,
+"gpu_pct": 1,
+"free_gb": 157.5,
+"uptime": "up 18 days, 19:34, 2 users, load averages: 128.07 91.67 86.2",
+"load": "{ 128.07 91.67 86.23 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-18T09:11",
+"name": "spread_gap_catchup_follow",
+"status": "rejected",
+"rationale": "Payer is the participant who could not trade while quotes were wide. Spread widening means liquidity providers withdrew, and the move made inside the wide window is not yet in the price. The strategy follows that move once spread normalises, which is a follow shape and not a refu",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-18T08:38",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is dealers and hedgers who sold into a persistent gold uptrend and never got a pullback deep enough to exit. Their stop-and-cover bids arrive later, so the strategy stays long while this inventory is trapped.\nThe entry is a trailing return t-stat above a threshold plus a pu",
 "note": "{\"name\": \"short_inventory_ratchet_hold\", \"grid\": 72, \"sec_per_param\": 0.001, \"active_frac\": 0.415425}"
-},
-{
-"ts": "2026-11-18T02:26",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is the speculative short, the CFTC non-commercial net-short crowd. When their net position is extreme-short (cot_net_z52 low) and price makes a new n-day high after a k-sigma rise, they are underwater and forced to cover by margin or risk limits. Long gold, with an explicit",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1794820286.452656,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 4,
-"free_gb": 119.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794821499.468676,
 "total": 31310831,
@@ -4102,6 +4091,17 @@
 "cpu": null,
 "gpu": 10,
 "free_gb": 124.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794993666.412765,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 157.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
