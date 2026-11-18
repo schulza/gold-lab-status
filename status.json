@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-18 21:06:59 UTC",
+"generated_at": "2026-11-18 21:23:40 UTC",
 "host": {
-"cpu_pct": 100.0,
-"gpu_pct": 11,
-"free_gb": 124.0,
-"uptime": "up 19 days,  7:15, 1 user, load averages: 95.84 93.52 89.87",
-"load": "{ 95.84 93.52 89.87 }"
+"cpu_pct": null,
+"gpu_pct": 6,
+"free_gb": 192.2,
+"uptime": "up 19 days,  7:43, 1 user, load averages: 87.18 77.57 80.09",
+"load": "{ 89.73 78.26 80.32 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-18T21:14",
+"name": "stop_cover_exposure_matched",
+"status": "rejected",
+"rationale": "The payer is the short seller or hedger who sold a gold rise and is stopped out when price takes out the prior multi-day high. Their cover buying is forced and clustered in the hours after the break.\nThe signal is long only for a fixed time window after a clean break. It subtract",
+"note": "sandbox: AssertionError: zu speicherhungrig: 50 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-18T20:43",
 "name": "stop_cover_exposure_matched",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the short seller or hedger who built a position during a persistent decline into the bottom of the multi-day range. When price lifts through the recent short-term high, their stops and margin calls force them to buy back at any price.\nMatching: the long-cover exposure is",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-18T14:44",
-"name": "tight_spread_break_follow",
-"status": "accepted",
-"rationale": "Payer = breakout-fading resting-limit providers (and stop-less fade traders). When the quoted spread is tight, makers quote confidently and fade, so a channel break through a tight-spread book squeezes them. They cover into the move and the follow-through is paid by their forced ",
-"note": "{\"name\": \"tight_spread_break_follow\", \"grid\": 96, \"sec_per_param\": 0.038, \"active_frac\": 0.5611375}"
 }
 ],
 "history": [
-{
-"t": 1794864151.069887,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 97.1,
-"gpu": 1,
-"free_gb": 208.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794865103.3303611,
 "total": 31310831,
@@ -4003,6 +3992,17 @@
 "cpu": 100.0,
 "gpu": 11,
 "free_gb": 124.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795037020.007935,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": null,
+"gpu": 6,
+"free_gb": 192.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
