@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-18 04:45:23 UTC",
+"generated_at": "2026-11-18 05:16:25 UTC",
 "host": {
-"cpu_pct": 91.1,
-"gpu_pct": 12,
-"free_gb": 145.2,
-"uptime": "up 18 days, 15:05, 2 users, load averages: 77.16 82.23 79.14",
-"load": "{ 77.16 82.23 79.14 }"
+"cpu_pct": null,
+"gpu_pct": 26,
+"free_gb": 125.8,
+"uptime": "up 18 days, 15:21, 2 users, load averages: 93.44 90.91 86.36",
+"load": "{ 93.44 90.91 86.36 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-18T05:13",
+"name": "pre_release_immediacy_window",
+"status": "rejected",
+"rationale": "Payer = the scheduled-release hedger/desk who pays for immediacy in the hours before NFP and Thursday claims. Positions are built into the release and exit at a fixed clock before it, so only pre-release flow earns and no event outcome is held.\nRATIONALE: Release times come from ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-18T04:37",
 "name": "daily_mark_stop_chain_hold",
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer: hedgers and fade-sellers who sold each local high of a rising gold market. Their average entry sits below price, so rising mark-to-market pain forces stop and cover buying, and the strategy is long that cover flow.\nRATIONALE: It measures pain as the distance of the close a",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-17T22:39",
-"name": "stop_budget_cohort_squeeze",
-"status": "accepted",
-"rationale": "Payer is short sellers who sell gold in daily cohorts and keep a stop of k daily sigmas above their own entry. Once price runs through enough cohorts' stops, forced buy-backs continue until fewer cohorts remain beyond their stop budget. Long only, with an explicit exit when bread",
-"note": "{\"name\": \"stop_budget_cohort_squeeze\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.22163125}"
 }
 ],
 "history": [
-{
-"t": 1794804530.183198,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 76.2,
-"gpu": 22,
-"free_gb": 217.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1794805483.5562382,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 78.2,
-"gpu": 4,
-"free_gb": 213.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794806432.711703,
 "total": 31310831,
@@ -4124,6 +4102,17 @@
 "cpu": 91.1,
 "gpu": 12,
 "free_gb": 145.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1794978985.69905,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": null,
+"gpu": 26,
+"free_gb": 125.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
