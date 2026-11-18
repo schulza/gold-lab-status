@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-18 23:10:08 UTC",
+"generated_at": "2026-11-18 23:26:04 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 84.8,
 "gpu_pct": 1,
-"free_gb": 177.7,
-"uptime": "up 19 days,  9:19, 1 user, load averages: 83.29 68.04 51.02",
-"load": "{ 83.98 68.43 51.26 }"
+"free_gb": 208.6,
+"uptime": "up 19 days,  9:46, 1 user, load averages: 38.47 40.04 51.41",
+"load": "{ 38.47 40.04 51.41 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-18T23:18",
+"name": null,
+"status": "rejected",
+"rationale": "Payer is the liquidity demander who chases price in the thin book before a scheduled NFP/FOMC release. The hedger or momentum desk pays an impact premium that is refunded when the book refills. Entry is gated on a pre-release run and exit is a fixed clock (flat at the release), s",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-18T22:47",
 "name": "thin_prerelease_drift",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the hedger or flow desk that must buy or sell immediacy into the first-Friday NFP release. The pre-release run is that forced flow, and it is held to a fixed UTC clock exit. Event days come from the calendar (the `ts` field, no external import, since `goldlab.external` w",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-18T16:54",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is the hedger or macro desk that buys immediacy in the thin pre-release hours of NFP/FOMC. They push price and pay widened spreads to do it, so the move is a concession that tends to unwind by the release clock. The module scores only that window, with a fixed-clock exit, a",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1794871388.350646,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 1,
-"free_gb": 180.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794872336.27689,
 "total": 31310831,
@@ -4025,6 +4014,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 177.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795044364.939003,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 84.8,
+"gpu": 1,
+"free_gb": 208.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
