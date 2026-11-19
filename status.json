@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 18:31:49 UTC",
+"generated_at": "2026-11-19 18:47:42 UTC",
 "host": {
-"cpu_pct": 89.2,
-"gpu_pct": 16,
-"free_gb": 208.8,
-"uptime": "up 20 days,  4:52, 1 user, load averages: 35.35 43.96 63.40",
-"load": "{ 35.35 43.96 63.40 }"
+"cpu_pct": 86.2,
+"gpu_pct": 1,
+"free_gb": 207.0,
+"uptime": "up 20 days,  5:07, 1 user, load averages: 35.21 36.75 45.09",
+"load": "{ 35.21 36.75 45.09 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-19T18:40",
+"name": "pre_release_chaser_retrace",
+"status": "accepted",
+"rationale": "The payer is the desk that chased a scheduled release (NFP 13:30, FOMC 19:00 UTC) with a late urgent run. When the release window retraces a large share of that run, the chasers are underwater and their forced exits pay whoever enters after the release, with a fixed-clock exit.\nR",
+"note": "{\"name\": \"pre_release_chaser_retrace\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.00625}"
+},
+{
 "ts": "2026-11-19T18:09",
 "name": "compressed_release_leg",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer: the hedger or desk that must be positioned before a scheduled macro release. They pay for immediacy in the pre-release window, and the move either carries through (informed anticipation) or is refunded (impact). Both signs are in the grid, so the data decides.\nRATIONALE: T",
 "note": "{\"name\": \"pre_release_clock_move\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.028875}"
-},
-{
-"ts": "2026-11-19T12:10",
-"name": "oneway_range_follow",
-"status": "accepted",
-"rationale": "Payer is the intrabar liquidity provider and range-fader. They quote against a bar's extremes, expecting a reversal, and get run over when close-to-close variance far exceeds the Parkinson (high-low) variance, because that means the bar's move had no give-back.\nRATIONALE: This is",
-"note": "{\"name\": \"oneway_range_follow\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.57510625}"
 }
 ],
 "history": [
-{
-"t": 1794941201.2523022,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 5,
-"free_gb": 176.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794942282.4900658,
 "total": 31310831,
@@ -4014,6 +4003,17 @@
 "cpu": 89.2,
 "gpu": 16,
 "free_gb": 208.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795114062.0031848,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 86.2,
+"gpu": 1,
+"free_gb": 207.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
