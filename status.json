@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 23:20:39 UTC",
+"generated_at": "2026-11-19 23:36:34 UTC",
 "host": {
-"cpu_pct": null,
-"gpu_pct": 1,
-"free_gb": 177.0,
-"uptime": "up 20 days,  9:37, 1 user, load averages: 89.85 86.12 83.09",
-"load": "{ 89.85 86.12 83.09 }"
+"cpu_pct": 92.5,
+"gpu_pct": 15,
+"free_gb": 207.9,
+"uptime": "up 20 days,  9:56, 1 user, load averages: 38.08 45.13 60.25",
+"load": "{ 38.08 45.13 60.25 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-19T23:33",
+"name": "nfp_pre_run_window",
+"status": "rejected",
+"rationale": "Payer is the hedger or chaser who pays for immediacy in the run-up to the scheduled NFP print. A pre-release run larger than k sigma is price paid for immediacy, so it earns back (sign=-1) or carries through (sign=+1) the release window.\nEdge case: this follows the pre-release im",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-19T23:02",
 "name": "nfp_release_chaser_unwind",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the hedger or desk that waited out a scheduled release (NFP 13:30, FOMC 19:00 UTC) with a pre-window so quiet that its inventory is unhedged, then has to trade immediately after the print. Because the book is thin, impact beyond the pre-window norm is paid in size. T",
 "note": "sandbox: AssertionError: grid size 384"
-},
-{
-"ts": "2026-11-19T16:59",
-"name": "pre_release_acceleration_move",
-"status": "accepted",
-"rationale": "The payer is the hedger or desk that has to be positioned before a scheduled release (NFP at 13:30 UTC, FOMC at 19:00 UTC) and chases it at the last minute. An accelerating final leg into the slot (late move large, early move small relative to it) marks urgency over patient accum",
-"note": "{\"name\": \"pre_release_acceleration_move\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.0225}"
 }
 ],
 "history": [
-{
-"t": 1794957795.822059,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": null,
-"gpu": 1,
-"free_gb": 123.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794959130.932065,
 "total": 31310831,
@@ -4014,6 +4003,17 @@
 "cpu": null,
 "gpu": 1,
 "free_gb": 177.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795131394.477226,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 92.5,
+"gpu": 15,
+"free_gb": 207.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
