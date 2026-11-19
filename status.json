@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 15:49:13 UTC",
+"generated_at": "2026-11-19 16:05:06 UTC",
 "host": {
-"cpu_pct": 69.6,
-"gpu_pct": 0,
-"free_gb": 209.2,
-"uptime": "up 20 days,  2:09, 1 user, load averages: 33.07 34.10 34.80",
-"load": "{ 33.07 34.10 34.80 }"
+"cpu_pct": 95.5,
+"gpu_pct": 1,
+"free_gb": 207.2,
+"uptime": "up 20 days,  2:25, 1 user, load averages: 35.30 35.97 35.08",
+"load": "{ 35.30 35.97 35.08 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-19T15:57",
+"name": "cover_timing_netted",
+"status": "rejected",
+"rationale": "Payer is the short seller or hedger who sold a rally after a pullback and is forced to cover when the prior N-day high breaks. This is the director's \"exposure-matched cover\": the position is netted against its own trailing duty cycle, so only the timing of forced cover earns, no",
+"note": "sandbox: AssertionError: zu speicherhungrig: 55 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-19T15:27",
 "name": "pre_release_spread_move",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the fade trader and quote-provider who sized for a noisy tape and gets run over when a parent order starts executing. Path efficiency in a fast window jumps above the slower baseline, so efficiency acceleration marks the move from noise to one-sided execution. The net mo",
 "note": "{\"name\": \"efficiency_accel_follow\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.56728125}"
-},
-{
-"ts": "2026-11-19T09:27",
-"name": "slot_residual_follow",
-"status": "rejected",
-"rationale": "Payer: dealers and passive quoters who price a clock slot from its usual seasonal drift. A move that is abnormal for that slot is mostly a parent order still being sliced, and it keeps running after quotes were set from the seasonal norm.\nRATIONALE: Shape: follow, long and short,",
-"note": "sandbox: NameError: name 'FAMILIES' is not defined"
 }
 ],
 "history": [
-{
-"t": 1794931349.1945012,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": null,
-"gpu": 1,
-"free_gb": 146.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794932900.954541,
 "total": 31310831,
@@ -4003,6 +3992,17 @@
 "cpu": 69.6,
 "gpu": 0,
 "free_gb": 209.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795104306.398303,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 95.5,
+"gpu": 1,
+"free_gb": 207.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
