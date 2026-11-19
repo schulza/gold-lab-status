@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 20:53:18 UTC",
+"generated_at": "2026-11-19 21:09:07 UTC",
 "host": {
-"cpu_pct": 100.0,
+"cpu_pct": 85.2,
 "gpu_pct": 1,
-"free_gb": 178.0,
-"uptime": "up 20 days,  7:08, 1 user, load averages: 78.23 81.53 83.44",
-"load": "{ 78.23 81.53 83.44 }"
+"free_gb": 208.1,
+"uptime": "up 20 days,  7:29, 1 user, load averages: 33.50 42.64 59.29",
+"load": "{ 33.50 42.64 59.29 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-19T20:53",
+"name": "pre_release_clock_demeaned",
+"status": "accepted",
+"rationale": "The payer is the desk or hedger that has to be positioned before a scheduled release (NFP at 12:30/13:30 UTC, FOMC at 18:00/19:00) and buys immediacy into it. Raw pre-release moves mix that urgency with the normal drift at the same clock minute, which is plain exposure.\nThis modu",
+"note": "{\"name\": \"pre_release_clock_demeaned\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.00525}"
+},
+{
 "ts": "2026-11-19T20:19",
 "name": "release_spread_concession_fade",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the liquidity taker who must be positioned before a scheduled US release. Dealers widen quotes into the window, so a pre-release run that comes with spread above its own trailing norm is paid-for immediacy. The grid holds both signs and a fixed-clock exit, and the data d",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-19T14:25",
-"name": "withdrawn_dealer_pre_release",
-"status": "rejected",
-"rationale": "Payer is the liquidity taker who trades into a scheduled-release window while dealers have withdrawn. Spread is wide, immediacy is expensive, and the pre-release move is either impact that gets refunded or informed flow that carries through. The grid holds both signs.\nRATIONALE: ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794949060.731296,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": null,
-"gpu": 10,
-"free_gb": 161.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794950246.678705,
 "total": 31310831,
@@ -4025,6 +4014,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 178.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795122547.476651,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 85.2,
+"gpu": 1,
+"free_gb": 208.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
