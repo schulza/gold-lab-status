@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 09:22:37 UTC",
+"generated_at": "2026-11-19 09:38:29 UTC",
 "host": {
-"cpu_pct": 86.3,
-"gpu_pct": 1,
-"free_gb": 202.5,
-"uptime": "up 19 days, 19:42, 1 user, load averages: 30.13 34.65 35.97",
-"load": "{ 30.13 34.65 35.97 }"
+"cpu_pct": 72.8,
+"gpu_pct": 12,
+"free_gb": 202.7,
+"uptime": "up 19 days, 19:58, 1 user, load averages: 32.69 36.14 36.05",
+"load": "{ 32.69 36.14 36.05 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-19T09:27",
+"name": "slot_residual_follow",
+"status": "rejected",
+"rationale": "Payer: dealers and passive quoters who price a clock slot from its usual seasonal drift. A move that is abnormal for that slot is mostly a parent order still being sliced, and it keeps running after quotes were set from the seasonal norm.\nRATIONALE: Shape: follow, long and short,",
+"note": "sandbox: NameError: name 'FAMILIES' is not defined"
+},
+{
 "ts": "2026-11-19T08:56",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the hedger or fund that has to trade ahead of a scheduled 08:30/10:00/14:00 ET macro release and pays for immediacy with a one-sided run-up. The signal is that run-up, measured in sigma and required to be steady (efficiency ratio), then held to a fixed clock exit aft",
 "note": "{\"name\": \"release_immediacy_clock\", \"grid\": 144, \"sec_per_param\": 0.007, \"active_frac\": 0.0031}"
-},
-{
-"ts": "2026-11-19T02:59",
-"name": "quiet_drift_follow",
-"status": "accepted",
-"rationale": "The payer is the dealer who quotes against a patient parent order. Quiet but efficient drift (high net/gross return ratio, per-bar movement below its long-run average) is slow accumulation or distribution that leaks information, and dealers who lean against it get run over.\nIt is",
-"note": "{\"name\": \"quiet_drift_follow\", \"grid\": 72, \"sec_per_param\": 0.003, \"active_frac\": 0.08435}"
 }
 ],
 "history": [
-{
-"t": 1794907723.995622,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 86.0,
-"gpu": 19,
-"free_gb": 205.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794908669.2404091,
 "total": 31310831,
@@ -4003,6 +3992,17 @@
 "cpu": 86.3,
 "gpu": 1,
 "free_gb": 202.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795081109.3667352,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 72.8,
+"gpu": 12,
+"free_gb": 202.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
