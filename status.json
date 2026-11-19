@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 05:01:54 UTC",
+"generated_at": "2026-11-19 05:17:46 UTC",
 "host": {
-"cpu_pct": 85.1,
+"cpu_pct": 90.9,
 "gpu_pct": 1,
-"free_gb": 208.6,
-"uptime": "up 19 days, 15:22, 1 user, load averages: 38.09 49.91 63.87",
-"load": "{ 38.09 49.91 63.87 }"
+"free_gb": 208.2,
+"uptime": "up 19 days, 15:37, 1 user, load averages: 29.12 35.07 44.51",
+"load": "{ 29.12 35.07 44.51 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-19T05:11",
+"name": "activity_sign_split",
+"status": "accepted",
+"rationale": "The payer is the liquidity-demanding trader in a high-activity burst, such as a stop cascade or panic order, whose move gets refunded to the dealers who absorbed it. The same direction on thin activity is informed or slow flow that has not been fully priced, so the family fades h",
+"note": "{\"name\": \"activity_sign_split\", \"grid\": 162, \"sec_per_param\": 0.001, \"active_frac\": 0.2343}"
+},
+{
 "ts": "2026-11-19T04:40",
 "name": "spread_onset_run_follow",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the liquidity demander who chases price in the thin book before a scheduled NFP/FOMC release. The hedger or momentum desk pays an impact premium that is refunded when the book refills. Entry is gated on a pre-release run and exit is a fixed clock (flat at the release), s",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-18T22:47",
-"name": "thin_prerelease_drift",
-"status": "rejected",
-"rationale": "The payer is the participant who trades the thin tape before a scheduled USD release, when quote providers have pulled depth. Their drift comes from low depth, not information, and it pays whoever takes the other side once the book refills at the print. This is a thin-book drift ",
-"note": "sandbox: AssertionError: zu speicherhungrig: 55 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1794892498.646556,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 83.1,
-"gpu": 0,
-"free_gb": 206.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794893443.212121,
 "total": 31310831,
@@ -4025,6 +4014,17 @@
 "cpu": 85.1,
 "gpu": 1,
 "free_gb": 208.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795065466.7187672,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 90.9,
+"gpu": 1,
+"free_gb": 208.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
