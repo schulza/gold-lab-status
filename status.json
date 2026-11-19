@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 08:18:52 UTC",
+"generated_at": "2026-11-19 08:34:54 UTC",
 "host": {
-"cpu_pct": 96.6,
-"gpu_pct": 1,
-"free_gb": 203.7,
-"uptime": "up 19 days, 18:39, 1 user, load averages: 32.66 36.73 37.83",
-"load": "{ 32.66 36.73 37.83 }"
+"cpu_pct": 87.9,
+"gpu_pct": 19,
+"free_gb": 200.6,
+"uptime": "up 19 days, 18:54, 1 user, load averages: 40.69 38.11 37.36",
+"load": "{ 40.69 38.11 37.36 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-19T08:26",
+"name": "slot_persistence_follow",
+"status": "rejected",
+"rationale": "Payer is the clock-blind fader, meaning desks and bots that fade a move at every hour. At clock slots with persistent scheduled flow (opens, fixes, handovers), moves continue. At slots dominated by liquidity-provider inventory turnover, they revert. The family estimates each slot",
+"note": "sandbox: AssertionError: zu speicherhungrig: 46 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-19T07:55",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the market-order taker who crossed a widened spread during thin liquidity. Their size moved the mid on almost no real volume, and quotes re-centre once the spread normalises. Entry fades a z-scored move while the current spread is still stretched against its trailing",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-19T01:58",
-"name": null,
-"status": "rejected",
-"rationale": "Payer: the hedger or fund that front-runs a scheduled NFP/FOMC release. They pay immediacy and push price into the print, and a liquidity provider who fades that run and is flat at the release collects the concession without taking the event jump.\nRATIONALE: This is the \"pre-rele",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1794903908.6532,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 96.5,
-"gpu": 1,
-"free_gb": 205.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794904862.850423,
 "total": 31310831,
@@ -4003,6 +3992,17 @@
 "cpu": 96.6,
 "gpu": 1,
 "free_gb": 203.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795077294.054754,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 87.9,
+"gpu": 19,
+"free_gb": 200.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
