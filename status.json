@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 17:56:09 UTC",
+"generated_at": "2026-11-19 18:16:00 UTC",
 "host": {
 "cpu_pct": null,
-"gpu_pct": 9,
-"free_gb": 145.7,
-"uptime": "up 20 days,  4:12, 1 user, load averages: 87.91 89.54 82.14",
-"load": "{ 87.91 89.54 82.14 }"
+"gpu_pct": 14,
+"free_gb": 175.3,
+"uptime": "up 20 days,  4:32, 1 user, load averages: 90.62 95.73 89.28",
+"load": "{ 90.62 95.73 89.28 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-19T18:09",
+"name": "compressed_release_leg",
+"status": "rejected",
+"rationale": "The payer is the market maker or hedger who pulled quotes and stayed small into a scheduled release (the window before the slot is compressed relative to normal volatility). They re-quote late, so the first minutes after the print carry the repricing, and the move away from the p",
+"note": "sandbox: AssertionError: zu speicherhungrig: 52 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-19T17:34",
 "name": "quiet_prelude_release_leg",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the intrabar liquidity provider and range-fader. They quote against a bar's extremes, expecting a reversal, and get run over when close-to-close variance far exceeds the Parkinson (high-low) variance, because that means the bar's move had no give-back.\nRATIONALE: This is",
 "note": "{\"name\": \"oneway_range_follow\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.57510625}"
-},
-{
-"ts": "2026-11-19T11:39",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is the trend-following spec in a crowded CFTC position (z52 extreme) who is positioned against the real-yield move. When 5/20-day real-yield change contradicts the crowd, margin and risk-limit unwinds force them out at the worst price.\nTwo-sided (crowded short plus falling ",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1794938220.79867,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 1,
-"free_gb": 169.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794939854.181848,
 "total": 31310831,
@@ -4014,6 +4003,17 @@
 "cpu": null,
 "gpu": 9,
 "free_gb": 145.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795112160.376249,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": null,
+"gpu": 14,
+"free_gb": 175.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
