@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 04:20:24 UTC",
+"generated_at": "2026-11-19 04:46:05 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 10,
-"free_gb": 125.3,
-"uptime": "up 19 days, 14:32, 1 user, load averages: 80.83 81.14 81.99",
-"load": "{ 80.83 81.14 81.99 }"
+"gpu_pct": 1,
+"free_gb": 178.0,
+"uptime": "up 19 days, 14:56, 1 user, load averages: 81.45 79.33 80.89",
+"load": "{ 81.45 79.33 80.89 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-19T04:40",
+"name": "spread_onset_run_follow",
+"status": "rejected",
+"rationale": "Payer is the hedger or real-money desk that buys or sells at market into a scheduled release, accepting a widened spread for immediacy. The spread onset marks the release on its own, so DST and calendar data are not needed, and the position is taken only after the pre-onset run e",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-19T04:06",
 "name": null,
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the participant who trades the thin tape before a scheduled USD release, when quote providers have pulled depth. Their drift comes from low depth, not information, and it pays whoever takes the other side once the book refills at the print. This is a thin-book drift ",
 "note": "sandbox: AssertionError: zu speicherhungrig: 55 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-11-18T22:16",
-"name": null,
-"status": "rejected",
-"rationale": "The payer is the crowded non-commercial position holder (CFTC net z-score extreme) who gets stopped out when a scheduled NFP/FOMC release forces a repricing. Crowded longs sell into thin pre-release books, and crowded shorts cover. This is a position-conditioned event-window trad",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1794889642.303605,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": null,
-"gpu": 1,
-"free_gb": 176.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1794890600.0920131,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 98.6,
-"gpu": 20,
-"free_gb": 206.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794891552.197432,
 "total": 31310831,
@@ -4036,6 +4014,17 @@
 "cpu": 100.0,
 "gpu": 10,
 "free_gb": 125.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795063565.1996238,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 178.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
