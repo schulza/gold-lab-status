@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 09:54:25 UTC",
+"generated_at": "2026-11-19 10:10:19 UTC",
 "host": {
-"cpu_pct": 87.5,
+"cpu_pct": 87.2,
 "gpu_pct": 1,
-"free_gb": 206.0,
-"uptime": "up 19 days, 20:14, 1 user, load averages: 32.32 34.97 35.16",
-"load": "{ 32.32 34.97 35.16 }"
+"free_gb": 201.4,
+"uptime": "up 19 days, 20:30, 1 user, load averages: 34.94 35.84 35.80",
+"load": "{ 34.94 35.84 35.80 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-19T09:58",
+"name": "efficiency_accel_follow",
+"status": "accepted",
+"rationale": "Payer is the fade trader and quote-provider who sized for a noisy tape and gets run over when a parent order starts executing. Path efficiency in a fast window jumps above the slower baseline, so efficiency acceleration marks the move from noise to one-sided execution. The net mo",
+"note": "{\"name\": \"efficiency_accel_follow\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.56728125}"
+},
+{
 "ts": "2026-11-19T09:27",
 "name": "slot_residual_follow",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is gold holders (ETF and macro books) who reprice slowly after a real-yield move. A rolling, no-intercept beta of gold's return on the DFII10 change gives the yield-implied gold move. When realised gold lags it (gap in realised-vol units) and the trailing correlation is cur",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-19T03:33",
-"name": "release_immediacy_clock",
-"status": "accepted",
-"rationale": "The payer is the hedger or fund that has to trade ahead of a scheduled 08:30/10:00/14:00 ET macro release and pays for immediacy with a one-sided run-up. The signal is that run-up, measured in sigma and required to be steady (efficiency ratio), then held to a fixed clock exit aft",
-"note": "{\"name\": \"release_immediacy_clock\", \"grid\": 144, \"sec_per_param\": 0.007, \"active_frac\": 0.0031}"
 }
 ],
 "history": [
-{
-"t": 1794909622.191493,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 85.2,
-"gpu": 1,
-"free_gb": 204.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794910575.466145,
 "total": 31310831,
@@ -4003,6 +3992,17 @@
 "cpu": 87.5,
 "gpu": 1,
 "free_gb": 206.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795083019.4282198,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 87.2,
+"gpu": 1,
+"free_gb": 201.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
