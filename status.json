@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 11:56:53 UTC",
+"generated_at": "2026-11-19 12:12:47 UTC",
 "host": {
-"cpu_pct": 100.0,
-"gpu_pct": 18,
-"free_gb": 177.6,
-"uptime": "up 19 days, 22:13, 1 user, load averages: 92.21 85.89 84.73",
-"load": "{ 92.21 85.89 84.73 }"
+"cpu_pct": 87.2,
+"gpu_pct": 1,
+"free_gb": 207.1,
+"uptime": "up 19 days, 22:32, 1 user, load averages: 40.57 45.06 59.59",
+"load": "{ 40.57 45.06 59.59 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-19T12:10",
+"name": "oneway_range_follow",
+"status": "accepted",
+"rationale": "Payer is the intrabar liquidity provider and range-fader. They quote against a bar's extremes, expecting a reversal, and get run over when close-to-close variance far exceeds the Parkinson (high-low) variance, because that means the bar's move had no give-back.\nRATIONALE: This is",
+"note": "{\"name\": \"oneway_range_follow\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.57510625}"
+},
+{
 "ts": "2026-11-19T11:39",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the quoting dealer who reprices slowly after information. Bars whose move exceeds the quoted spread are net-informative, because noise inside the spread cannot move the mid by more than the cost. When most of the last n bars show such a move in the same direction, th",
 "note": "{\"name\": \"spread_step_persistence\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.7544375}"
-},
-{
-"ts": "2026-11-19T05:44",
-"name": "sliced_sign_agreement_follow",
-"status": "accepted",
-"rationale": "Payer is the slicing executor (VWAP/TWAP or hedge programs) whose child orders are same-signed bar after bar. While the net move stays small against volatility, the parent order has not finished and is still paying. Follow until the sign agreement decays. This is a different paye",
-"note": "{\"name\": \"sliced_sign_agreement_follow\", \"grid\": 54, \"sec_per_param\": 0.006, \"active_frac\": 0.5498125}"
 }
 ],
 "history": [
-{
-"t": 1794917248.3553321,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": null,
-"gpu": 25,
-"free_gb": 128.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794918600.1992168,
 "total": 31310831,
@@ -3981,6 +3970,17 @@
 "cpu": 100.0,
 "gpu": 18,
 "free_gb": 177.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795090367.323264,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 87.2,
+"gpu": 1,
+"free_gb": 207.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
