@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 16:52:49 UTC",
+"generated_at": "2026-11-19 17:08:40 UTC",
 "host": {
-"cpu_pct": 94.7,
-"gpu_pct": 0,
-"free_gb": 207.0,
-"uptime": "up 20 days,  3:12, 1 user, load averages: 36.33 36.28 36.15",
-"load": "{ 36.33 36.28 36.15 }"
+"cpu_pct": 84.5,
+"gpu_pct": 1,
+"free_gb": 204.3,
+"uptime": "up 20 days,  3:28, 1 user, load averages: 36.37 36.53 36.59",
+"load": "{ 36.37 36.53 36.59 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-19T16:59",
+"name": "pre_release_acceleration_move",
+"status": "accepted",
+"rationale": "The payer is the hedger or desk that has to be positioned before a scheduled release (NFP at 13:30 UTC, FOMC at 19:00 UTC) and chases it at the last minute. An accelerating final leg into the slot (late move large, early move small relative to it) marks urgency over patient accum",
+"note": "{\"name\": \"pre_release_acceleration_move\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.0225}"
+},
+{
 "ts": "2026-11-19T16:28",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the desk or hedger that must get exposure done before a scheduled US release (NFP on the first Friday, CPI-type mid-month Tue\u2013Thu). Its run-up is a payment for immediacy, and the strategy provides liquidity by fading it (`sign=-1`), or follows it as the control (`sig",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-19T10:33",
-"name": "extreme_recency_dominance",
-"status": "accepted",
-"rationale": "Payer is the trader who fades a fresh N-bar extreme and still holds against the move. They are on the wrong side whenever the latest extreme is on one side and the opposite extreme is much older. The signal is the age difference between the last new-high and the last new-low. Thi",
-"note": "{\"name\": \"extreme_recency_dominance\", \"grid\": 72, \"sec_per_param\": 0.021, \"active_frac\": 0.643575}"
 }
 ],
 "history": [
-{
-"t": 1794934806.063252,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 79.9,
-"gpu": 1,
-"free_gb": 205.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794935756.615189,
 "total": 31310831,
@@ -4014,6 +4003,17 @@
 "cpu": 94.7,
 "gpu": 0,
 "free_gb": 207.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795108120.43451,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 84.5,
+"gpu": 1,
+"free_gb": 204.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
