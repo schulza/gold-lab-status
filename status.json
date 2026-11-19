@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 12:28:42 UTC",
+"generated_at": "2026-11-19 12:53:57 UTC",
 "host": {
-"cpu_pct": 92.8,
-"gpu_pct": 0,
-"free_gb": 204.2,
-"uptime": "up 19 days, 22:48, 1 user, load averages: 33.68 35.94 43.49",
-"load": "{ 33.68 35.94 43.49 }"
+"cpu_pct": 100.0,
+"gpu_pct": 3,
+"free_gb": 147.4,
+"uptime": "up 19 days, 23:04, 1 user, load averages: 83.30 71.27 56.59",
+"load": "{ 83.30 71.27 56.59 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-19T12:43",
+"name": "pre_release_clock_move",
+"status": "accepted",
+"rationale": "Payer: the hedger or desk that must be positioned before a scheduled macro release. They pay for immediacy in the pre-release window, and the move either carries through (informed anticipation) or is refunded (impact). Both signs are in the grid, so the data decides.\nRATIONALE: T",
+"note": "{\"name\": \"pre_release_clock_move\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.028875}"
+},
+{
 "ts": "2026-11-19T12:10",
 "name": "oneway_range_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the liquidity-demanding seller or hedger who offloads event risk into the window just before a scheduled NFP/FOMC release and pays a concession for immediacy while dealers widen. The strategy holds a fixed clock window ending before the release, so it earns only the pre-",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-19T06:18",
-"name": "spread_step_persistence",
-"status": "accepted",
-"rationale": "The payer is the quoting dealer who reprices slowly after information. Bars whose move exceeds the quoted spread are net-informative, because noise inside the spread cannot move the mid by more than the cost. When most of the last n bars show such a move in the same direction, th",
-"note": "{\"name\": \"spread_step_persistence\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.7544375}"
 }
 ],
 "history": [
-{
-"t": 1794918600.1992168,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 1,
-"free_gb": 128.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794920196.273134,
 "total": 31310831,
@@ -3992,6 +3981,17 @@
 "cpu": 92.8,
 "gpu": 0,
 "free_gb": 204.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795092837.5667121,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 3,
+"free_gb": 147.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
