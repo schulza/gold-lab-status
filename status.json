@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 20:09:25 UTC",
+"generated_at": "2026-11-19 20:32:21 UTC",
 "host": {
 "cpu_pct": 100.0,
 "gpu_pct": 1,
-"free_gb": 125.7,
-"uptime": "up 20 days,  6:22, 1 user, load averages: 84.40 83.31 81.22",
-"load": "{ 84.40 83.31 81.22 }"
+"free_gb": 124.9,
+"uptime": "up 20 days,  6:45, 1 user, load averages: 82.02 85.41 85.29",
+"load": "{ 82.02 85.41 85.29 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-19T20:19",
+"name": "release_spread_concession_fade",
+"status": "rejected",
+"rationale": "Payer is the dealer or liquidity provider who quotes into a scheduled US data release (12:30 or 13:30 UTC, depending on DST). They widen spreads for that bar, so a large release-bar move on a wide spread is partly a liquidity concession paid to whoever is on the other side. The s",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-19T19:45",
 "name": "tight_book_drift_follow",
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the liquidity taker who trades into a scheduled-release window while dealers have withdrawn. Spread is wide, immediacy is expensive, and the pre-release move is either impact that gets refunded or informed flow that carries through. The grid holds both signs.\nRATIONALE: ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-19T13:54",
-"name": "release_day_immediacy",
-"status": "rejected",
-"rationale": "Payer is the hedger or desk that must be positioned before a scheduled US data release (first-Friday NFP, weekly Thursday claims), and pays for immediacy in the pre-release window. I enter on the bar clock at the release minute, in the direction of the pre-release move or against",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794946357.159809,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 1,
-"free_gb": 161.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1794947517.320149,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 1,
-"free_gb": 177.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794949060.731296,
 "total": 31310831,
@@ -4025,6 +4003,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 125.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795120341.989164,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 124.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
