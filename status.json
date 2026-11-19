@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 14:45:46 UTC",
+"generated_at": "2026-11-19 15:01:39 UTC",
 "host": {
-"cpu_pct": 84.6,
-"gpu_pct": 16,
-"free_gb": 208.3,
-"uptime": "up 20 days,  1:06, 1 user, load averages: 33.42 33.78 39.34",
-"load": "{ 33.42 33.78 39.34 }"
+"cpu_pct": 94.3,
+"gpu_pct": 1,
+"free_gb": 208.6,
+"uptime": "up 20 days,  1:21, 1 user, load averages: 40.08 36.09 36.79",
+"load": "{ 40.08 36.09 36.79 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-19T14:56",
+"name": "pre_release_spread_immediacy",
+"status": "rejected",
+"rationale": "Payer is the liquidity taker who must be positioned before a scheduled US release. Dealers widen quotes into the window, so a pre-release run that comes with spread above its own trailing norm is paid-for immediacy. The grid holds both signs and a fixed-clock exit, and the data d",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-19T14:25",
 "name": "withdrawn_dealer_pre_release",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the crowded non-commercial speculator, for example a CFTC net-long fund while 10y real yields rise. Rising real yields raise gold's carry cost, so the position is forced to shrink through margin and risk limits, and the crowd sells to price-insensitive exits. The mirror ",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-19T08:26",
-"name": "slot_persistence_follow",
-"status": "rejected",
-"rationale": "Payer is the clock-blind fader, meaning desks and bots that fade a move at every hour. At clock slots with persistent scheduled flow (opens, fixes, handovers), moves continue. At slots dominated by liquidity-provider inventory turnover, they revert. The family estimates each slot",
-"note": "sandbox: AssertionError: zu speicherhungrig: 46 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1794926834.137474,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 96.4,
-"gpu": 20,
-"free_gb": 205.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794927788.521547,
 "total": 31310831,
@@ -4003,6 +3992,17 @@
 "cpu": 84.6,
 "gpu": 16,
 "free_gb": 208.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795100499.706954,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 94.3,
+"gpu": 1,
+"free_gb": 208.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
