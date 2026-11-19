@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 14:14:05 UTC",
+"generated_at": "2026-11-19 14:29:58 UTC",
 "host": {
-"cpu_pct": 84.8,
-"gpu_pct": 1,
+"cpu_pct": 84.2,
+"gpu_pct": 0,
 "free_gb": 209.1,
-"uptime": "up 20 days, 34 mins, 1 user, load averages: 32.63 49.63 65.0",
-"load": "{ 32.63 49.63 65.05 }"
+"uptime": "up 20 days, 50 mins, 1 user, load averages: 60.42 48.37 50.5",
+"load": "{ 60.42 48.37 50.51 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-19T14:25",
+"name": "withdrawn_dealer_pre_release",
+"status": "rejected",
+"rationale": "Payer is the liquidity taker who trades into a scheduled-release window while dealers have withdrawn. Spread is wide, immediacy is expensive, and the pre-release move is either impact that gets refunded or informed flow that carries through. The grid holds both signs.\nRATIONALE: ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-19T13:54",
 "name": "release_day_immediacy",
 "status": "rejected",
@@ -2446,13 +2453,6 @@
 "status": "rejected",
 "rationale": "Payer is the clock-blind fader, meaning desks and bots that fade a move at every hour. At clock slots with persistent scheduled flow (opens, fixes, handovers), moves continue. At slots dominated by liquidity-provider inventory turnover, they revert. The family estimates each slot",
 "note": "sandbox: AssertionError: zu speicherhungrig: 46 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-11-19T07:55",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is the market maker or slow liquidity provider who quotes off a stale same-clock-slot depth baseline. When activity surges against that baseline together with a statistically large n-bar move, the quoted depth is run over by informed flow. The `sign` grid also covers the fa",
-"note": "ast: name not allowed: getattr"
 }
 ],
 "history": [
@@ -3991,6 +3991,17 @@
 "per_min": 0.0,
 "cpu": 84.8,
 "gpu": 1,
+"free_gb": 209.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795098598.427422,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 84.2,
+"gpu": 0,
 "free_gb": 209.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
