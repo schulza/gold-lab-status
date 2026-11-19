@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 05:33:42 UTC",
+"generated_at": "2026-11-19 05:56:57 UTC",
 "host": {
-"cpu_pct": 89.6,
-"gpu_pct": 19,
-"free_gb": 203.6,
-"uptime": "up 19 days, 15:53, 1 user, load averages: 34.25 36.22 39.27",
-"load": "{ 34.25 36.22 39.27 }"
+"cpu_pct": 100.0,
+"gpu_pct": 1,
+"free_gb": 146.8,
+"uptime": "up 19 days, 16:10, 1 user, load averages: 86.81 80.61 64.79",
+"load": "{ 86.81 80.61 64.79 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-19T05:44",
+"name": "sliced_sign_agreement_follow",
+"status": "accepted",
+"rationale": "Payer is the slicing executor (VWAP/TWAP or hedge programs) whose child orders are same-signed bar after bar. While the net move stays small against volatility, the parent order has not finished and is still paying. Follow until the sign agreement decays. This is a different paye",
+"note": "{\"name\": \"sliced_sign_agreement_follow\", \"grid\": 54, \"sec_per_param\": 0.006, \"active_frac\": 0.5498125}"
+},
+{
 "ts": "2026-11-19T05:11",
 "name": "activity_sign_split",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the liquidity taker who trades the pre-NFP run for immediacy (hedgers and macro funds sizing up ahead of a known release). If they overpay, a fixed-clock fade after the release collects the refund. If they are informed, `sign=+1` follows them to the same exit.\nRATIONALE:",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-18T23:18",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is the liquidity demander who chases price in the thin book before a scheduled NFP/FOMC release. The hedger or momentum desk pays an impact premium that is refunded when the book refills. Entry is gated on a pre-release run and exit is a fixed clock (flat at the release), s",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1794894399.07289,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 87.7,
-"gpu": 1,
-"free_gb": 201.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794895342.407739,
 "total": 31310831,
@@ -4025,6 +4014,17 @@
 "cpu": 89.6,
 "gpu": 19,
 "free_gb": 203.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795067817.39115,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 146.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
