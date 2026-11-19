@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 17:08:40 UTC",
+"generated_at": "2026-11-19 17:36:13 UTC",
 "host": {
-"cpu_pct": 84.5,
+"cpu_pct": 100.0,
 "gpu_pct": 1,
-"free_gb": 204.3,
-"uptime": "up 20 days,  3:28, 1 user, load averages: 36.37 36.53 36.59",
-"load": "{ 36.37 36.53 36.59 }"
+"free_gb": 145.8,
+"uptime": "up 20 days,  3:44, 1 user, load averages: 71.90 49.64 41.48",
+"load": "{ 77.27 51.13 42.05 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-19T17:34",
+"name": "quiet_prelude_release_leg",
+"status": "rejected",
+"rationale": "The payer is the hedger or desk that waited out a scheduled release (NFP 13:30, FOMC 19:00 UTC) with a pre-window so quiet that its inventory is unhedged, then has to trade immediately after the print. Because the book is thin, impact beyond the pre-window norm is paid in size. T",
+"note": "sandbox: AssertionError: grid size 384"
+},
+{
 "ts": "2026-11-19T16:59",
 "name": "pre_release_acceleration_move",
 "status": "accepted",
@@ -2446,38 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the trend-following spec in a crowded CFTC position (z52 extreme) who is positioned against the real-yield move. When 5/20-day real-yield change contradicts the crowd, margin and risk-limit unwinds force them out at the worst price.\nTwo-sided (crowded short plus falling ",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-19T11:08",
-"name": "release_immediacy_fade",
-"status": "rejected",
-"rationale": "The payer is the desk or hedger that must get exposure done before a scheduled US release (NFP on the first Friday, CPI-type mid-month Tue\u2013Thu). Its run-up is a payment for immediacy, and the strategy provides liquidity by fading it (`sign=-1`), or follows it as the control (`sig",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794935756.615189,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 92.8,
-"gpu": 0,
-"free_gb": 204.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1794936713.678902,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 92.1,
-"gpu": 14,
-"free_gb": 201.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794938220.79867,
 "total": 31310831,
@@ -4014,6 +3992,17 @@
 "cpu": 84.5,
 "gpu": 1,
 "free_gb": 204.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795109773.5493052,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 145.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
