@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 13:40:10 UTC",
+"generated_at": "2026-11-19 13:58:10 UTC",
 "host": {
 "cpu_pct": null,
-"gpu_pct": 1,
-"free_gb": 125.1,
-"uptime": "up 19 days, 23:47, 1 user, load averages: 86.02 88.83 85.49",
-"load": "{ 86.02 88.83 85.49 }"
+"gpu_pct": 11,
+"free_gb": 125.7,
+"uptime": "up 20 days, 16 mins, 1 user, load averages: 89.44 91.06 89.6",
+"load": "{ 85.80 90.28 89.42 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-19T13:54",
+"name": "release_day_immediacy",
+"status": "rejected",
+"rationale": "Payer is the hedger or desk that must be positioned before a scheduled US data release (first-Friday NFP, weekly Thursday claims), and pays for immediacy in the pre-release window. I enter on the bar clock at the release minute, in the direction of the pre-release move or against",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-19T13:17",
 "name": "nfp_prerelease_refund",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the market maker or slow liquidity provider who quotes off a stale same-clock-slot depth baseline. When activity surges against that baseline together with a statistically large n-bar move, the quoted depth is run over by informed flow. The `sign` grid also covers the fa",
 "note": "ast: name not allowed: getattr"
-},
-{
-"ts": "2026-11-19T07:24",
-"name": "extreme_count_persist_follow",
-"status": "accepted",
-"rationale": "Payer is the range-seller or fader who keeps leaning against a market printing repeated fresh extremes. Quoted levels are stale and the inventory is lopsided, so they cover late and in size, and the persistent one-sided stream of new highs or lows pays the follower.\nRATIONALE: It",
-"note": "{\"name\": \"extreme_count_persist_follow\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.56565625}"
 }
 ],
 "history": [
-{
-"t": 1794922865.12598,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": null,
-"gpu": 1,
-"free_gb": 155.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794924287.155484,
 "total": 31310831,
@@ -3992,6 +3981,17 @@
 "cpu": null,
 "gpu": 1,
 "free_gb": 125.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795096690.652888,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": null,
+"gpu": 11,
+"free_gb": 125.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
