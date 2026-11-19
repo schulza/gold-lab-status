@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 11:05:40 UTC",
+"generated_at": "2026-11-19 11:37:12 UTC",
 "host": {
 "cpu_pct": 100.0,
-"gpu_pct": 12,
-"free_gb": 125.4,
-"uptime": "up 19 days, 21:14, 1 user, load averages: 83.83 81.73 80.87",
-"load": "{ 83.83 81.73 80.87 }"
+"gpu_pct": 1,
+"free_gb": 125.3,
+"uptime": "up 19 days, 21:42, 1 user, load averages: 84.32 87.79 88.57",
+"load": "{ 84.32 87.79 88.57 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-19T11:08",
+"name": "release_immediacy_fade",
+"status": "rejected",
+"rationale": "The payer is the desk or hedger that must get exposure done before a scheduled US release (NFP on the first Friday, CPI-type mid-month Tue\u2013Thu). Its run-up is a payment for immediacy, and the strategy provides liquidity by fading it (`sign=-1`), or follows it as the control (`sig",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-19T10:33",
 "name": "extreme_recency_dominance",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the liquidity-demanding trader in a high-activity burst, such as a stop cascade or panic order, whose move gets refunded to the dealers who absorbed it. The same direction on thin activity is informed or slow flow that has not been fully priced, so the family fades h",
 "note": "{\"name\": \"activity_sign_split\", \"grid\": 162, \"sec_per_param\": 0.001, \"active_frac\": 0.2343}"
-},
-{
-"ts": "2026-11-19T04:40",
-"name": "spread_onset_run_follow",
-"status": "rejected",
-"rationale": "Payer is the hedger or real-money desk that buys or sells at market into a scheduled release, accepting a widened spread for immediacy. The spread onset marks the release on its own, so DST and calendar data are not needed, and the position is taken only after the pre-onset run e",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794914911.260007,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": null,
-"gpu": 19,
-"free_gb": 150.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794915891.07644,
 "total": 31310831,
@@ -3981,6 +3970,17 @@
 "cpu": 100.0,
 "gpu": 12,
 "free_gb": 125.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795088232.154159,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 125.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
