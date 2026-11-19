@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 19:28:00 UTC",
+"generated_at": "2026-11-19 19:46:19 UTC",
 "host": {
-"cpu_pct": 100.0,
-"gpu_pct": 1,
-"free_gb": 147.2,
-"uptime": "up 20 days,  5:39, 1 user, load averages: 86.39 72.16 54.60",
-"load": "{ 86.39 72.16 54.60 }"
+"cpu_pct": null,
+"gpu_pct": 7,
+"free_gb": 145.2,
+"uptime": "up 20 days,  6:04, 1 user, load averages: 85.94 85.88 80.05",
+"load": "{ 85.94 85.88 80.05 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-19T19:45",
+"name": "tight_book_drift_follow",
+"status": "rejected",
+"rationale": "Payer is the market maker who widens quotes around an informed move. Mid moves printed on wide-spread bars are partly quote withdrawal, not discovery. Moves on tight-book bars carry the information, and a window where tight-bar drift is strong and wide-bar drift disagrees is a wi",
+"note": "sandbox: NameError: name 'math' is not defined. Did you forget to import 'math'?"
+},
+{
 "ts": "2026-11-19T19:11",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the hedger or desk that must be positioned before a scheduled US data release (first-Friday NFP, weekly Thursday claims), and pays for immediacy in the pre-release window. I enter on the bar clock at the release minute, in the direction of the pre-release move or against",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-19T13:17",
-"name": "nfp_prerelease_refund",
-"status": "rejected",
-"rationale": "Payer is the front-running or hedging flow that pays for immediacy in the thin book before the first-Friday NFP release. It pushes price an abnormal distance (measured in sigma per elapsed bar) and gets refunded after the release.\nThe position is latched on the first extension be",
-"note": "sandbox: AssertionError: zu speicherhungrig: 43 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1794943790.4475222,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": null,
-"gpu": 1,
-"free_gb": 160.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794944874.6864471,
 "total": 31310831,
@@ -4025,6 +4014,17 @@
 "cpu": 100.0,
 "gpu": 1,
 "free_gb": 147.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795117579.212606,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": null,
+"gpu": 7,
+"free_gb": 145.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
