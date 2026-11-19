@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 00:13:42 UTC",
+"generated_at": "2026-11-19 00:41:12 UTC",
 "host": {
-"cpu_pct": 90.7,
-"gpu_pct": 1,
-"free_gb": 202.8,
-"uptime": "up 19 days, 10:33, 1 user, load averages: 34.32 35.31 35.87",
-"load": "{ 34.32 35.31 35.87 }"
+"cpu_pct": 100.0,
+"gpu_pct": 10,
+"free_gb": 148.4,
+"uptime": "up 19 days, 10:50, 1 user, load averages: 75.42 58.12 47.25",
+"load": "{ 75.42 58.12 47.25 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-19T00:20",
+"name": "pre_release_run_clock",
+"status": "accepted",
+"rationale": "The payer is the hedger or flow desk that must buy or sell ahead of a scheduled macro release and pays for immediacy. A pre-release run larger than its own noise (z-scored) is repaid when the print clears the inventory; the `sign` param also covers continuation. The exit is a fix",
+"note": "{\"name\": \"pre_release_run_clock\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.0135}"
+},
+{
 "ts": "2026-11-18T23:49",
 "name": "prerelease_run_clock_exit",
 "status": "rejected",
@@ -2446,38 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the hedger or flow desk that must trade into a scheduled US data release (12:30/13:30/14:00 UTC clocks) and pays up for immediacy while dealers widen quotes. The signal fades into the release only as a follow: it takes the pre-release drift when it is large against clock",
 "note": "{\"name\": \"release_spread_drift_follow\", \"grid\": 162, \"sec_per_param\": 0.005, \"active_frac\": 0.007475}"
-},
-{
-"ts": "2026-11-18T18:01",
-"name": "prerelease_immediacy_nfp",
-"status": "rejected",
-"rationale": "Payer is the hedger or macro desk that must buy or sell immediacy into the first-Friday NFP print. Their pre-release flow drifts the price, and the move that follows pays the side that took the other side. Position is set once at the release slot and held to a fixed clock exit.\nT",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794874838.932173,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 1,
-"free_gb": 152.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
-{
-"t": 1794875900.208972,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": null,
-"gpu": 1,
-"free_gb": 151.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794877385.574642,
 "total": 31310831,
@@ -4036,6 +4014,17 @@
 "cpu": 90.7,
 "gpu": 1,
 "free_gb": 202.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795048872.654985,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 10,
+"free_gb": 148.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
