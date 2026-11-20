@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-20 01:03:59 UTC",
+"generated_at": "2026-11-20 01:29:22 UTC",
 "host": {
-"cpu_pct": null,
+"cpu_pct": 100.0,
 "gpu_pct": 1,
-"free_gb": 148.2,
-"uptime": "up 20 days, 11:16, 1 user, load averages: 86.56 80.47 65.43",
-"load": "{ 86.56 80.47 65.43 }"
+"free_gb": 127.0,
+"uptime": "up 20 days, 11:40, 1 user, load averages: 74.40 75.30 76.09",
+"load": "{ 74.40 75.30 76.09 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-20T01:08",
+"name": "sliced_block_uniform_follow",
+"status": "accepted",
+"rationale": "Payer is the fade quoter and liquidity provider who leans against a sliced parent order (a hedger or fund working size in equal time slices). That quoter reprices only after the parent completes, so equal-sized, same-sign blocks mean the parent is still working.\nRATIONALE: This i",
+"note": "{\"name\": \"sliced_block_uniform_follow\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.6282}"
+},
+{
 "ts": "2026-11-20T00:35",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the slow-marking gold holder (ETF and discretionary books anchored to price). After a real-yield shock of at least k bp, gold has not moved in the implied direction. These holders re-mark late, and the catch-up leg pays whoever positioned in the direction of the rate mov",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-19T18:40",
-"name": "pre_release_chaser_retrace",
-"status": "accepted",
-"rationale": "The payer is the desk that chased a scheduled release (NFP 13:30, FOMC 19:00 UTC) with a late urgent run. When the release window retraces a large share of that run, the chasers are underwater and their forced exits pay whoever enters after the release, with a fixed-clock exit.\nR",
-"note": "{\"name\": \"pre_release_chaser_retrace\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.00625}"
 }
 ],
 "history": [
-{
-"t": 1794964953.3949811,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": null,
-"gpu": 1,
-"free_gb": 176.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794965909.151793,
 "total": 31310831,
@@ -4014,6 +4003,17 @@
 "cpu": null,
 "gpu": 1,
 "free_gb": 148.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795138162.48795,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 100.0,
+"gpu": 1,
+"free_gb": 127.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
