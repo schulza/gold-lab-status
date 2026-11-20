@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-20 11:31:07 UTC",
+"generated_at": "2026-11-20 11:46:31 UTC",
 "host": {
 "cpu_pct": 1.0,
 "gpu_pct": 0,
-"free_gb": 232.9,
-"uptime": "up 20 days, 21:51, 1 user, load averages: 1.02 1.14 1.15",
-"load": "{ 1.02 1.14 1.15 }"
+"free_gb": 233.3,
+"uptime": "up 20 days, 22:07, 1 user, load averages: 1.13 1.18 1.16",
+"load": "{ 1.13 1.18 1.16 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-20T11:44",
+"name": "pre_release_immediacy_refund",
+"status": "accepted",
+"rationale": "The payer is the macro hedger or flow desk that must trade into a scheduled release (US data and FOMC clock slots) and pays for immediacy. They push price and widen the quoted spread in the minutes before the slot, and the overpayment tends to be refunded after it.\nRATIONALE: Thi",
+"note": "{\"name\": \"pre_release_immediacy_refund\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.009}"
+},
+{
 "ts": "2026-11-20T11:14",
 "name": null,
 "status": "rejected",
@@ -2445,13 +2452,6 @@
 "name": "release_run_immediacy",
 "status": "rejected",
 "rationale": "Payer is the hedger or benchmark desk that must be positioned before a scheduled US 08:30 ET release and pays spread plus impact for immediacy by chasing the pre-release run. The sign param tests both continuation and reversion at a fixed-clock exit. It follows the director's pre",
-"note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-20T05:21",
-"name": "pre_release_slot_run",
-"status": "rejected",
-"rationale": "Payer is the hedger or flow desk that pays for immediacy by chasing price into scheduled macro prints. The release slot is learned causally from each half-hour's trailing cross-day abs-move profile, so there is no calendar or DST table. The trade fades or follows the run-in (sign",
 "note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
@@ -4080,6 +4080,17 @@
 "cpu": 1.0,
 "gpu": 0,
 "free_gb": 232.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795175191.241388,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.0,
+"gpu": 0,
+"free_gb": 233.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
