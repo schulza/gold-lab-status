@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-20 09:58:41 UTC",
+"generated_at": "2026-11-20 10:14:05 UTC",
 "host": {
 "cpu_pct": 1.2,
 "gpu_pct": 0,
 "free_gb": 233.2,
-"uptime": "up 20 days, 20:19, 1 user, load averages: 1.77 1.39 1.64",
-"load": "{ 1.77 1.39 1.64 }"
+"uptime": "up 20 days, 20:34, 1 user, load averages: 1.24 1.12 1.27",
+"load": "{ 1.24 1.12 1.27 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-20T10:12",
+"name": "asia_efficient_inherit_follow",
+"status": "rejected",
+"rationale": "Payer is the Asia-session market maker and late-arriving London allocator. Dealers who quoted a one-way Asia move at stale levels, and London desks who have to catch up to it, pay for the move's continuation. It earns only when Asia travelled efficiently (net move divided by path",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-20T09:42",
 "name": "release_slot_clock_run",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer: dealers and liquidity providers who lean against a move that has already cleared the spread by k times. The move has to pay for the adverse selection they absorb, so I treat it as informed flow, not noise. They fade into the range extreme and get run over as it keeps going",
 "note": "{\"name\": \"spread_cleared_ratchet\", \"grid\": 120, \"sec_per_param\": 0.001, \"active_frac\": 0.732125}"
-},
-{
-"ts": "2026-11-20T03:45",
-"name": "sweep_cluster_follow",
-"status": "rejected",
-"rationale": "Payer is the passive quoter or limit-order provider who gets picked off by a sweep of marketable orders in a bar that is wide, body-dominated and has a normal spread. That marks an informed or forced aggressor, not a thin-book gap. It is the opposite of the dead thin-book fades, ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1794996667.8325279,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 11,
-"free_gb": 180.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794997627.885199,
 "total": 31310831,
@@ -4064,6 +4053,17 @@
 },
 {
 "t": 1795168721.312832,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.2,
+"gpu": 0,
+"free_gb": 233.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795169645.334522,
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 1.2,
