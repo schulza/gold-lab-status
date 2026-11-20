@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-20 02:43:22 UTC",
+"generated_at": "2026-11-20 02:59:15 UTC",
 "host": {
-"cpu_pct": 91.2,
-"gpu_pct": 17,
-"free_gb": 208.0,
-"uptime": "up 20 days, 13:03, 1 user, load averages: 38.33 37.05 40.30",
-"load": "{ 38.33 37.05 40.30 }"
+"cpu_pct": 82.3,
+"gpu_pct": 1,
+"free_gb": 208.2,
+"uptime": "up 20 days, 13:19, 1 user, load averages: 36.22 34.90 36.35",
+"load": "{ 36.22 34.90 36.35 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-20T02:43",
+"name": "quote_pressure_lean",
+"status": "rejected",
+"rationale": "Payer is the dealer or LP quoting tight into informed one-sided flow. Spread excess that grows on the same-sign bars shows the inventory hit before the mid fully reprices, so we follow it and earn the lag. Uses only bar spread and returns, symmetric long/short, with hysteresis pl",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-20T02:12",
 "name": null,
 "status": "rejected",
@@ -2446,13 +2453,6 @@
 "status": "accepted",
 "rationale": "The payer is the desk or hedger that has to be positioned before a scheduled release (NFP at 12:30/13:30 UTC, FOMC at 18:00/19:00) and buys immediacy into it. Raw pre-release moves mix that urgency with the normal drift at the same clock minute, which is plain exposure.\nThis modu",
 "note": "{\"name\": \"pre_release_clock_demeaned\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.00525}"
-},
-{
-"ts": "2026-11-19T20:19",
-"name": "release_spread_concession_fade",
-"status": "rejected",
-"rationale": "Payer is the dealer or liquidity provider who quotes into a scheduled US data release (12:30 or 13:30 UTC, depending on DST). They widen spreads for that bar, so a large release-bar move on a wide spread is partly a liquidity concession paid to whoever is on the other side. The s",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
@@ -4014,6 +4014,17 @@
 "cpu": 91.2,
 "gpu": 17,
 "free_gb": 208.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795143555.966725,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 82.3,
+"gpu": 1,
+"free_gb": 208.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
