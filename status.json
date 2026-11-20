@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-20 12:32:43 UTC",
+"generated_at": "2026-11-20 12:48:08 UTC",
 "host": {
-"cpu_pct": 8.6,
-"gpu_pct": 35,
-"free_gb": 230.7,
-"uptime": "up 20 days, 22:53, 1 user, load averages: 4.04 3.12 2.14",
-"load": "{ 4.04 3.12 2.14 }"
+"cpu_pct": 0.5,
+"gpu_pct": 0,
+"free_gb": 230.3,
+"uptime": "up 20 days, 23:08, 1 user, load averages: 1.15 1.54 1.98",
+"load": "{ 1.15 1.54 1.98 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-20T12:46",
+"name": "release_pressure_clock",
+"status": "accepted",
+"rationale": "Payer is the hedger or macro desk that must have exposure before a scheduled release. They cross a widened spread and push price in the pre-release window, so inventory-constrained makers pay for the move and the adverse-selection risk. I follow or fade only when the push is larg",
+"note": "{\"name\": \"release_pressure_clock\", \"grid\": 160, \"sec_per_param\": 0.001, \"active_frac\": 0.014625}"
+},
+{
 "ts": "2026-11-20T12:15",
 "name": "body_persistence_follow",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer: hedgers and macro-position builders who must be positioned before the scheduled NFP/FOMC release and buy immediacy. They push the price one-way (high efficiency, large run in vol units) in the hours before it. The family latches the run direction once, holds it to a fixed ",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-20T06:28",
-"name": "cheap_spread_displacement_follow",
-"status": "accepted",
-"rationale": "Payer: dealers and slow liquidity providers who keep quotes tight (spread at or below its norm) while an informed, directional flow takes the other side. They get picked off, and the move keeps running for a few bars as they re-quote and others hedge. It is a follow, two-sided, n",
-"note": "{\"name\": \"cheap_spread_displacement_follow\", \"grid\": 192, \"sec_per_param\": 0.012, \"active_frac\": 0.26154375}"
 }
 ],
 "history": [
-{
-"t": 1795005964.6129222,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": null,
-"gpu": 1,
-"free_gb": 127.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795007445.095556,
 "total": 31310831,
@@ -4102,6 +4091,17 @@
 "cpu": 8.6,
 "gpu": 35,
 "free_gb": 230.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795178888.523807,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.5,
+"gpu": 0,
+"free_gb": 230.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
