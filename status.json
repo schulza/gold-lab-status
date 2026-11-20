@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-20 07:23:09 UTC",
+"generated_at": "2026-11-20 07:49:23 UTC",
 "host": {
 "cpu_pct": null,
 "gpu_pct": 1,
-"free_gb": 175.4,
-"uptime": "up 20 days, 17:41, 1 user, load averages: 88.85 85.68 84.68",
-"load": "{ 88.85 85.68 84.68 }"
+"free_gb": 161.1,
+"uptime": "up 20 days, 17:59, 1 user, load averages: 89.12 84.13 83.18",
+"load": "{ 89.12 84.13 83.18 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-20T07:36",
+"name": "mean_side_dwell_follow",
+"status": "accepted",
+"rationale": "Payer is the slow mandate money (trend-trailing allocators and benchmark-lagging funds) that builds a position in steps over many bars. Its footprint is that closes sit persistently on one side of the local mean, even in bars with no single large move. I follow that dwell and exi",
+"note": "{\"name\": \"mean_side_dwell_follow\", \"grid\": 192, \"sec_per_param\": 0.01, \"active_frac\": 0.730225}"
+},
+{
 "ts": "2026-11-20T07:02",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the passive limit-order defender at an N-bar extreme, such as a resting seller at the prior high. A burst of triggered stop and breakout market orders, shown by an activity surge and a close at the bar's extreme, runs over that defender, and the move continues while they",
 "note": "{\"name\": \"stop_run_extreme_follow\", \"grid\": 108, \"sec_per_param\": 0.003, \"active_frac\": 0.0215875}"
-},
-{
-"ts": "2026-11-20T01:08",
-"name": "sliced_block_uniform_follow",
-"status": "accepted",
-"rationale": "Payer is the fade quoter and liquidity provider who leans against a sliced parent order (a hedger or fund working size in equal time slices). That quoter reprices only after the parent completes, so equal-sized, same-sign blocks mean the parent is still working.\nRATIONALE: This i",
-"note": "{\"name\": \"sliced_block_uniform_follow\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.6282}"
 }
 ],
 "history": [
-{
-"t": 1794987451.062798,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": null,
-"gpu": 1,
-"free_gb": 177.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794988849.734102,
 "total": 31310831,
@@ -4036,6 +4025,17 @@
 "cpu": null,
 "gpu": 1,
 "free_gb": 175.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795160963.630528,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": null,
+"gpu": 1,
+"free_gb": 161.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
