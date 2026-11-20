@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-20 22:18:07 UTC",
+"generated_at": "2026-11-20 22:33:31 UTC",
 "host": {
-"cpu_pct": 1.1,
+"cpu_pct": 1.6,
 "gpu_pct": 0,
-"free_gb": 233.1,
-"uptime": "up 21 days,  8:38, 1 user, load averages: 1.22 1.09 1.08",
-"load": "{ 1.22 1.09 1.08 }"
+"free_gb": 233.0,
+"uptime": "up 21 days,  8:54, 1 user, load averages: 1.13 1.12 1.09",
+"load": "{ 1.13 1.12 1.09 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-20T22:30",
+"name": null,
+"status": "rejected",
+"rationale": "The payer is the slow-rebalancing macro allocator, such as an ETF or benchmark-anchored holder. They reprice gold only after a real-yield move has been in the quote for days. When gold has under-reacted to a standardised DFII10 move, the lagged repricing flow pays the trade.\nRATI",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-20T21:59",
 "name": "block_run_persist_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the passive fader (limit-order resters and band-fade systems) who keeps leaning against a move whose bars repeatedly close near their extremes. Persistent one-sided bar bodies mean the opposing book is being consumed, and the fader pays until their inventory or stops giv",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-20T16:21",
-"name": "hour_pin_expansion_follow",
-"status": "accepted",
-"rationale": "PAYER: liquidity providers and fade-sellers who leaked inventory into an expanded hour and are left offside when it closes pinned at its extreme. Hour-end benchmarked sellers are in the same position. The long and short legs are symmetric, there is no trend or vol gate, and the e",
-"note": "{\"name\": \"hour_pin_expansion_follow\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.152875}"
 }
 ],
 "history": [
-{
-"t": 1795040834.9750268,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 86.2,
-"gpu": 21,
-"free_gb": 207.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795041787.988393,
 "total": 31310831,
@@ -4212,6 +4201,17 @@
 "cpu": 1.1,
 "gpu": 0,
 "free_gb": 233.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795214011.443785,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.6,
+"gpu": 0,
+"free_gb": 233.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
