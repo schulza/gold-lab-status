@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-20 22:48:56 UTC",
+"generated_at": "2026-11-20 23:04:20 UTC",
 "host": {
-"cpu_pct": 1.5,
+"cpu_pct": 0.5,
 "gpu_pct": 0,
 "free_gb": 233.1,
-"uptime": "up 21 days,  9:09, 1 user, load averages: 1.08 1.07 1.07",
-"load": "{ 1.08 1.07 1.07 }"
+"uptime": "up 21 days,  9:24, 1 user, load averages: 1.18 1.16 1.14",
+"load": "{ 1.18 1.16 1.14 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-20T23:01",
+"name": "session_trend_stopflow",
+"status": "accepted",
+"rationale": "The payer is the intraday range-fader: scalpers and limit-order desks who size counter-trend inventory against a time-scaled expected range (sigma\u00b7\u221aelapsed) measured from their session open. When the displacement from that open exceeds the range and the path has been clean (displ",
+"note": "{\"name\": \"session_trend_stopflow\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.12184375}"
+},
+{
 "ts": "2026-11-20T22:30",
 "name": null,
 "status": "rejected",
@@ -2446,13 +2453,6 @@
 "status": "accepted",
 "rationale": "The payer is noise traders who hit the market order into a tape dominated by bid-ask bounce. Where the Roll-implied spread, `2*sqrt(-cov1)`, runs well above the quoted spread, a large recent move is mostly bounce and liquidity providers keep the reversion; where it runs well belo",
 "note": "{\"name\": \"roll_noise_regime\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.2991375}"
-},
-{
-"ts": "2026-11-20T16:52",
-"name": "body_efficiency_follow",
-"status": "rejected",
-"rationale": "Payer is the passive fader (limit-order resters and band-fade systems) who keeps leaning against a move whose bars repeatedly close near their extremes. Persistent one-sided bar bodies mean the opposing book is being consumed, and the fader pays until their inventory or stops giv",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
@@ -4210,6 +4210,17 @@
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 1.5,
+"gpu": 0,
+"free_gb": 233.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795215860.176394,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.5,
 "gpu": 0,
 "free_gb": 233.1,
 "dsr_bar": 6.4,
