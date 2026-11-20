@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-20 17:10:01 UTC",
+"generated_at": "2026-11-20 17:25:26 UTC",
 "host": {
-"cpu_pct": 0.4,
+"cpu_pct": 1.3,
 "gpu_pct": 0,
-"free_gb": 231.4,
-"uptime": "up 21 days,  3:30, 1 user, load averages: 1.29 1.13 1.10",
-"load": "{ 1.29 1.13 1.10 }"
+"free_gb": 231.2,
+"uptime": "up 21 days,  3:46, 1 user, load averages: 0.99 1.24 1.34",
+"load": "{ 0.99 1.24 1.34 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-20T17:23",
+"name": "roll_noise_regime",
+"status": "accepted",
+"rationale": "The payer is noise traders who hit the market order into a tape dominated by bid-ask bounce. Where the Roll-implied spread, `2*sqrt(-cov1)`, runs well above the quoted spread, a large recent move is mostly bounce and liquidity providers keep the reversion; where it runs well belo",
+"note": "{\"name\": \"roll_noise_regime\", \"grid\": 96, \"sec_per_param\": 0.001, \"active_frac\": 0.2991375}"
+},
+{
 "ts": "2026-11-20T16:52",
 "name": "body_efficiency_follow",
 "status": "rejected",
@@ -2446,13 +2453,6 @@
 "status": "accepted",
 "rationale": "The payer is the macro hedger or flow desk that must trade into a scheduled release (US data and FOMC clock slots) and pays for immediacy. They push price and widen the quoted spread in the minutes before the slot, and the overpayment tends to be refunded after it.\nRATIONALE: Thi",
 "note": "{\"name\": \"pre_release_immediacy_refund\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.009}"
-},
-{
-"ts": "2026-11-20T11:14",
-"name": null,
-"status": "rejected",
-"rationale": "Payer: flow-driven gold chasers (retail and ETF momentum buyers) whose multi-day move runs against the real-yield move over the same window. Rates-anchored macro and relative-value desks lean against that move, so the chasers pay when the gap closes.\nRATIONALE: This is a conditio",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
@@ -4157,6 +4157,17 @@
 "cpu": 0.4,
 "gpu": 0,
 "free_gb": 231.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795195526.716522,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.3,
+"gpu": 0,
+"free_gb": 231.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
