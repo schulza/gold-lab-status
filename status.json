@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-20 19:44:05 UTC",
+"generated_at": "2026-11-20 19:59:29 UTC",
 "host": {
-"cpu_pct": 1.5,
+"cpu_pct": 0.5,
 "gpu_pct": 0,
-"free_gb": 233.3,
-"uptime": "up 21 days,  6:04, 1 user, load averages: 1.15 1.46 1.36",
-"load": "{ 1.15 1.46 1.36 }"
+"free_gb": 233.2,
+"uptime": "up 21 days,  6:20, 1 user, load averages: 0.87 1.15 1.29",
+"load": "{ 0.87 1.15 1.29 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-20T19:57",
+"name": "slot_surprise_follow",
+"status": "accepted",
+"rationale": "Payer is the slow participant (benchmark-anchored desks, resting-order algos) who prices each clock slot off its usual drift, so they are late on flow that departs from that drift. After the per-slot expected return is removed, a large cumulative surprise keeps being worked into ",
+"note": "{\"name\": \"slot_surprise_follow\", \"grid\": 160, \"sec_per_param\": 0.001, \"active_frac\": 0.0811125}"
+},
+{
 "ts": "2026-11-20T19:26",
 "name": "pre_slot_chase_clock",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the late-session liquidity taker (retail and desk flow) who pushes price through the thin 19\u201324 UTC post-NY window. That flow is filled at wide spreads, then the next hours either finish the repricing or refund it, so the family trades the signed window move with a fixed",
 "note": "sandbox: NameError: name 'FAMILIES' is not defined"
-},
-{
-"ts": "2026-11-20T13:47",
-"name": "exposure_matched_cover",
-"status": "accepted",
-"rationale": "Payer is the short seller or hedger forced to cover when a gold rise breaks a prior high with outsized speed. The director's \"exposure-matched cover\" item applies; I read the moratorium as aimed at long-only holds, and this one is not.\nPosition = event-hold indicator minus its ow",
-"note": "{\"name\": \"exposure_matched_cover\", \"grid\": 64, \"sec_per_param\": 0.0, \"active_frac\": 0.98238125}"
 }
 ],
 "history": [
-{
-"t": 1795031258.310327,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 91.8,
-"gpu": 1,
-"free_gb": 202.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795032755.527858,
 "total": 31310831,
@@ -4190,6 +4179,17 @@
 "cpu": 1.5,
 "gpu": 0,
 "free_gb": 233.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795204769.3772109,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.5,
+"gpu": 0,
+"free_gb": 233.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
