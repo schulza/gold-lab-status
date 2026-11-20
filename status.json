@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-20 14:05:10 UTC",
+"generated_at": "2026-11-20 14:20:34 UTC",
 "host": {
-"cpu_pct": 0.6,
+"cpu_pct": 0.8,
 "gpu_pct": 0,
 "free_gb": 231.7,
-"uptime": "up 21 days, 25 mins, 1 user, load averages: 1.32 1.21 1.15",
-"load": "{ 1.32 1.21 1.15 }"
+"uptime": "up 21 days, 41 mins, 1 user, load averages: 1.26 1.08 1.08",
+"load": "{ 1.26 1.08 1.08 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-20T14:18",
+"name": "thin_window_handoff",
+"status": "rejected",
+"rationale": "Payer is the late-session liquidity taker (retail and desk flow) who pushes price through the thin 19\u201324 UTC post-NY window. That flow is filled at wide spreads, then the next hours either finish the repricing or refund it, so the family trades the signed window move with a fixed",
+"note": "sandbox: NameError: name 'FAMILIES' is not defined"
+},
+{
 "ts": "2026-11-20T13:47",
 "name": "exposure_matched_cover",
 "status": "accepted",
@@ -2446,13 +2453,6 @@
 "status": "rejected",
 "rationale": "Payer is the hedger or chaser who must be filled before a scheduled NFP/FOMC release and pays up for immediacy in the window before it. The pre-release run measured against bar noise predicts a continued move into a fixed-clock exit after the release.\nThe family is event-clocked ",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-20T08:09",
-"name": "trend_day_extreme_follow",
-"status": "accepted",
-"rationale": "Payer is the intraday fade trader and the day-range stop cohort. They sell strength and buy weakness on days that have already used up more than a typical prior-day range, and they are forced out when price keeps pressing the day's extreme late.\nRATIONALE: This is not a neighbour",
-"note": "{\"name\": \"trend_day_extreme_follow\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.40235}"
 }
 ],
 "history": [
@@ -4122,6 +4122,17 @@
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 0.6,
+"gpu": 0,
+"free_gb": 231.7,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795184434.486899,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.8,
 "gpu": 0,
 "free_gb": 231.7,
 "dsr_bar": 6.4,
