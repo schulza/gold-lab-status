@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-20 15:06:47 UTC",
+"generated_at": "2026-11-20 15:22:11 UTC",
 "host": {
-"cpu_pct": 0.8,
+"cpu_pct": 0.5,
 "gpu_pct": 0,
 "free_gb": 231.4,
-"uptime": "up 21 days,  1:27, 1 user, load averages: 1.08 1.19 1.18",
-"load": "{ 1.08 1.19 1.18 }"
+"uptime": "up 21 days,  1:42, 1 user, load averages: 1.16 1.22 1.18",
+"load": "{ 1.16 1.22 1.18 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-20T15:20",
+"name": "impact_slope_follow",
+"status": "accepted",
+"rationale": "Payer is passive liquidity providers, such as market makers and resting limit orders, who get picked off by informed or parent orders that are being sliced. When the price move per quote tick rises well above its own trailing norm, the book is thin on one side and the parent orde",
+"note": "{\"name\": \"impact_slope_follow\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.186075}"
+},
+{
 "ts": "2026-11-20T14:49",
 "name": "stale_quote_vol_jump_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the macro-release hedger who pays for immediacy by buying or selling into the 12:30/13:30 UTC data slot. After the release, the thin book either refunds that run (sign=-1) or the flow keeps coming (sign=+1). The exit is a fixed clock time, and the signal is two-sided",
 "note": "{\"name\": \"release_slot_clock_run\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.0135}"
-},
-{
-"ts": "2026-11-20T09:11",
-"name": "exposure_matched_cover_decay",
-"status": "rejected",
-"rationale": "Payer is the short seller or hedger whose buy-stops sit just above the prior N-bar high. A close through the high by more than k sigma starts forced cover, and the cover buying fades over a fixed clock window. This is the director's exposure-matched cover: the position is the dec",
-"note": "sandbox: NameError: name 'FAMILIES' is not defined"
 }
 ],
 "history": [
-{
-"t": 1795014474.310858,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 90.8,
-"gpu": 1,
-"free_gb": 208.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795015427.169861,
 "total": 31310831,
@@ -4144,6 +4133,17 @@
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 0.8,
+"gpu": 0,
+"free_gb": 231.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795188131.934771,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.5,
 "gpu": 0,
 "free_gb": 231.4,
 "dsr_bar": 6.4,
