@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-20 20:45:42 UTC",
+"generated_at": "2026-11-20 21:01:06 UTC",
 "host": {
-"cpu_pct": 0.4,
+"cpu_pct": 1.5,
 "gpu_pct": 0,
-"free_gb": 233.2,
-"uptime": "up 21 days,  7:06, 1 user, load averages: 1.40 1.20 1.14",
-"load": "{ 1.40 1.20 1.14 }"
+"free_gb": 233.1,
+"uptime": "up 21 days,  7:21, 1 user, load averages: 0.96 1.05 1.07",
+"load": "{ 0.96 1.05 1.07 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-20T20:58",
+"name": "decisive_cheap_break_follow",
+"status": "accepted",
+"rationale": "Payer is the liquidity provider who fades breakouts on a quiet, cheap-spread book. When a bar closes near its extreme on an outsized range, they cannot re-quote in time, and they get run over by the stop-order flow that follows.\nRATIONALE: It is a two-sided follow trade with a ti",
+"note": "{\"name\": \"decisive_cheap_break_follow\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.07496875}"
+},
+{
 "ts": "2026-11-20T20:27",
 "name": null,
 "status": "rejected",
@@ -2446,13 +2453,6 @@
 "status": "accepted",
 "rationale": "Payer is passive liquidity providers, such as market makers and resting limit orders, who get picked off by informed or parent orders that are being sliced. When the price move per quote tick rises well above its own trailing norm, the book is thin on one side and the parent orde",
 "note": "{\"name\": \"impact_slope_follow\", \"grid\": 144, \"sec_per_param\": 0.001, \"active_frac\": 0.186075}"
-},
-{
-"ts": "2026-11-20T14:49",
-"name": "stale_quote_vol_jump_follow",
-"status": "accepted",
-"rationale": "Payer is the market maker who quotes off a stale, slow volatility estimate. When short-horizon realized vol jumps well above its long-horizon baseline and the move is directionally efficient, quotes get run over for a few bars, so we follow that direction and size by the vol rati",
-"note": "{\"name\": \"stale_quote_vol_jump_follow\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.04335}"
 }
 ],
 "history": [
@@ -4201,6 +4201,17 @@
 "cpu": 0.4,
 "gpu": 0,
 "free_gb": 233.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795208466.604336,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.5,
+"gpu": 0,
+"free_gb": 233.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
