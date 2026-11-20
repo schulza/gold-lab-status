@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-20 09:27:52 UTC",
+"generated_at": "2026-11-20 09:43:16 UTC",
 "host": {
-"cpu_pct": 0.6,
+"cpu_pct": 0.1,
 "gpu_pct": 0,
-"free_gb": 232.8,
-"uptime": "up 20 days, 19:48, 1 user, load averages: 0.98 1.11 4.39",
-"load": "{ 0.98 1.11 4.39 }"
+"free_gb": 233.2,
+"uptime": "up 20 days, 20:03, 1 user, load averages: 1.17 1.19 2.27",
+"load": "{ 1.17 1.19 2.27 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-20T09:42",
+"name": "release_slot_clock_run",
+"status": "accepted",
+"rationale": "The payer is the macro-release hedger who pays for immediacy by buying or selling into the 12:30/13:30 UTC data slot. After the release, the thin book either refunds that run (sign=-1) or the flow keeps coming (sign=+1). The exit is a fixed clock time, and the signal is two-sided",
+"note": "{\"name\": \"release_slot_clock_run\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.0135}"
+},
+{
 "ts": "2026-11-20T09:11",
 "name": "exposure_matched_cover_decay",
 "status": "rejected",
@@ -2446,13 +2453,6 @@
 "status": "rejected",
 "rationale": "Payer is the passive quoter or limit-order provider who gets picked off by a sweep of marketable orders in a bar that is wide, body-dominated and has a normal spread. That marks an informed or forced aggressor, not a thin-book gap. It is the opposite of the dead thin-book fades, ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-20T03:14",
-"name": "clock_pre_run_immediacy",
-"status": "accepted",
-"rationale": "Payer is the scheduled-release hedger or desk that must be positioned before a known data slot. It pays for immediacy, so in the pre-window it pushes price one-way and efficiently (net move large vs. path length, in trailing-sigma units). Position is held through the release and ",
-"note": "{\"name\": \"clock_pre_run_immediacy\", \"grid\": 160, \"sec_per_param\": 0.0, \"active_frac\": 0.0075}"
 }
 ],
 "history": [
@@ -4058,6 +4058,17 @@
 "cpu": 0.6,
 "gpu": 0,
 "free_gb": 232.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795167796.8123589,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.1,
+"gpu": 0,
+"free_gb": 233.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
