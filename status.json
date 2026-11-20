@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-19 23:52:27 UTC",
+"generated_at": "2026-11-20 00:08:22 UTC",
 "host": {
-"cpu_pct": 91.7,
+"cpu_pct": 85.5,
 "gpu_pct": 1,
-"free_gb": 207.8,
-"uptime": "up 20 days, 10:12, 1 user, load averages: 31.89 36.21 43.94",
-"load": "{ 31.89 36.21 43.94 }"
+"free_gb": 207.5,
+"uptime": "up 20 days, 10:28, 1 user, load averages: 39.80 36.85 38.96",
+"load": "{ 39.80 36.85 38.96 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-20T00:04",
+"name": null,
+"status": "rejected",
+"rationale": "Payer is the participant who faded the first post-NFP/FOMC spike and is stopped when the post-release window's range resolves. This is not a short-cover or hedger-immediacy family, so it respects the moratorium. It enters only on a close beyond the formation range plus a buffer, ",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-19T23:33",
 "name": "nfp_pre_run_window",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the market maker or hedger who pulled quotes and stayed small into a scheduled release (the window before the slot is compressed relative to normal volatility). They re-quote late, so the first minutes after the print carry the repricing, and the move away from the p",
 "note": "sandbox: AssertionError: zu speicherhungrig: 52 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-11-19T17:34",
-"name": "quiet_prelude_release_leg",
-"status": "rejected",
-"rationale": "The payer is the hedger or desk that waited out a scheduled release (NFP 13:30, FOMC 19:00 UTC) with a pre-window so quiet that its inventory is unhedged, then has to trade immediately after the print. Because the book is thin, impact beyond the pre-window norm is paid in size. T",
-"note": "sandbox: AssertionError: grid size 384"
 }
 ],
 "history": [
-{
-"t": 1794960085.1401322,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 85.6,
-"gpu": 18,
-"free_gb": 206.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794961037.3330188,
 "total": 31310831,
@@ -4014,6 +4003,17 @@
 "cpu": 91.7,
 "gpu": 1,
 "free_gb": 207.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795133302.543941,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 85.5,
+"gpu": 1,
+"free_gb": 207.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
