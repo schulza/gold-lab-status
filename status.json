@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-20 17:40:51 UTC",
+"generated_at": "2026-11-20 17:56:15 UTC",
 "host": {
-"cpu_pct": 1.1,
+"cpu_pct": 0.8,
 "gpu_pct": 0,
-"free_gb": 231.6,
-"uptime": "up 21 days,  4:01, 1 user, load averages: 1.10 1.13 1.18",
-"load": "{ 1.10 1.13 1.18 }"
+"free_gb": 231.5,
+"uptime": "up 21 days,  4:16, 1 user, load averages: 1.20 1.19 1.17",
+"load": "{ 1.20 1.19 1.17 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-20T17:53",
+"name": null,
+"status": "rejected",
+"rationale": "The payer is crowded non-commercial speculators. When positioning is extreme (cot_net_z52) and a scheduled NFP/FOMC release is near, they can't cut size before the binary gap. Risk limits and margin then force a one-sided trim around the release, which pays liquidity providers wh",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-20T17:23",
 "name": "roll_noise_regime",
 "status": "accepted",
@@ -2446,13 +2453,6 @@
 "status": "rejected",
 "rationale": "This is a two-sided follow of bar-body persistence, with no external data, so the `goldlab.external` import that was rejected twice doesn't apply. The payer is passive liquidity providers and fade limit-order holders, who get picked off while consecutive bars close near their ext",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-20T11:44",
-"name": "pre_release_immediacy_refund",
-"status": "accepted",
-"rationale": "The payer is the macro hedger or flow desk that must trade into a scheduled release (US data and FOMC clock slots) and pays for immediacy. They push price and widen the quoted spread in the minutes before the slot, and the overpayment tends to be refunded after it.\nRATIONALE: Thi",
-"note": "{\"name\": \"pre_release_immediacy_refund\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.009}"
 }
 ],
 "history": [
@@ -4168,6 +4168,17 @@
 "cpu": 1.1,
 "gpu": 0,
 "free_gb": 231.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795197375.242912,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.8,
+"gpu": 0,
+"free_gb": 231.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
