@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-20 04:02:38 UTC",
+"generated_at": "2026-11-20 04:18:32 UTC",
 "host": {
-"cpu_pct": 83.4,
+"cpu_pct": 93.5,
 "gpu_pct": 1,
-"free_gb": 208.5,
-"uptime": "up 20 days, 14:22, 1 user, load averages: 33.12 36.23 35.74",
-"load": "{ 33.12 36.23 35.74 }"
+"free_gb": 208.2,
+"uptime": "up 20 days, 14:38, 1 user, load averages: 37.59 35.56 35.49",
+"load": "{ 37.59 35.56 35.49 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-20T04:15",
+"name": "spread_cleared_ratchet",
+"status": "accepted",
+"rationale": "Payer: dealers and liquidity providers who lean against a move that has already cleared the spread by k times. The move has to pay for the adverse selection they absorb, so I treat it as informed flow, not noise. They fade into the range extreme and get run over as it keeps going",
+"note": "{\"name\": \"spread_cleared_ratchet\", \"grid\": 120, \"sec_per_param\": 0.001, \"active_frac\": 0.732125}"
+},
+{
 "ts": "2026-11-20T03:45",
 "name": "sweep_cluster_follow",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer: the hedger who has to buy immediacy into a scheduled US release (12:30/13:30/14:00 UTC), and so pushes the price in the pre-release run. sign=+1 (follow) says the push is only partly priced in and carries on to a fixed clock exit. sign=-1 (fade) says the push overshoots an",
 "note": "{\"name\": \"pre_release_immediacy_window\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.0645}"
-},
-{
-"ts": "2026-11-19T21:57",
-"name": "squeeze_timing_demeaned",
-"status": "rejected",
-"rationale": "Payer is the leveraged seller or hedger who sold a sharp decline and is forced to cover on a fast rebound, with stops and margin calls pushing price through their entry. They pay the immediacy premium.\nThe long-gold beta of the cover-hold cluster is removed by subtracting the tra",
-"note": "sandbox: AssertionError: grid size 216"
 }
 ],
 "history": [
-{
-"t": 1794974692.823508,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 95.1,
-"gpu": 1,
-"free_gb": 206.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1794976159.659963,
 "total": 31310831,
@@ -4036,6 +4025,17 @@
 "cpu": 83.4,
 "gpu": 1,
 "free_gb": 208.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795148312.804103,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 93.5,
+"gpu": 1,
+"free_gb": 208.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
