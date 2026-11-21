@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-21 06:00:14 UTC",
+"generated_at": "2026-11-21 06:15:38 UTC",
 "host": {
-"cpu_pct": 0.5,
+"cpu_pct": 0.9,
 "gpu_pct": 0,
 "free_gb": 232.4,
-"uptime": "up 21 days, 16:20, 1 user, load averages: 1.19 1.28 1.23",
-"load": "{ 1.19 1.28 1.23 }"
+"uptime": "up 21 days, 16:36, 1 user, load averages: 1.50 1.36 1.26",
+"load": "{ 1.50 1.36 1.26 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-21T06:12",
+"name": null,
+"status": "rejected",
+"rationale": "Payer is the slow-mandate holder (discretionary and ETF-style gold holders who reprice off DFII10 with a lag). After a real-yield move of at least `thr` bp, gold has not yet moved the implied way, so the catch-up flow still has to be paid for by whoever is on the other side.\nRATI",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-21T05:41",
 "name": "wickless_run_hold",
 "status": "rejected",
@@ -2446,13 +2453,6 @@
 "status": "rejected",
 "rationale": "Payer is the macro-release hedger or fast-money desk that buys immediacy into the NFP print (first Friday, 13:30 UTC, or 12:30 UTC during US DST). That flow pushes price a few sigma away from where liquidity providers want to hold inventory, and the pre-release leg is filled at t",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-21T00:03",
-"name": "accel_ladder_follow",
-"status": "accepted",
-"rationale": "Payer is the systematic fader (band and range mean-reversion desks plus resting limit-fade liquidity). It leans against each leg of a move and has to stop out when successive equal-length blocks are each larger than the last, in the same direction. That is stop-out flow arriving ",
-"note": "{\"name\": \"accel_ladder_follow\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.51394375}"
 }
 ],
 "history": [
@@ -4276,6 +4276,17 @@
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 0.5,
+"gpu": 0,
+"free_gb": 232.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795241738.820699,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.9,
 "gpu": 0,
 "free_gb": 232.4,
 "dsr_bar": 6.4,
