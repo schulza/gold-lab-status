@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-21 12:40:44 UTC",
+"generated_at": "2026-11-21 12:56:08 UTC",
 "host": {
-"cpu_pct": 1.2,
+"cpu_pct": 1.1,
 "gpu_pct": 0,
-"free_gb": 232.1,
-"uptime": "up 21 days, 23:01, 1 user, load averages: 0.92 1.05 1.09",
-"load": "{ 0.92 1.05 1.09 }"
+"free_gb": 231.9,
+"uptime": "up 21 days, 23:16, 1 user, load averages: 1.14 1.16 1.15",
+"load": "{ 1.14 1.16 1.15 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-21T12:52",
+"name": null,
+"status": "rejected",
+"rationale": "Payer: the hedger or macro desk that builds a position into a scheduled NFP/FOMC print and pays for immediacy, so the run-up is paid-for flow rather than information. We take the other side (or confirm) from the window opening and exit on a fixed clock after the release, which di",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-21T12:21",
 "name": "pre_slot_run_clock_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the Asia-session liquidity provider or option hedger who faded a thin overnight displacement and is run over when London depth arrives. The overnight move must be large against its own trailing 10-to-40-day average and must also be extended by London itself. The stra",
 "note": "{\"name\": \"asia_displacement_london_follow\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.06055625}"
-},
-{
-"ts": "2026-11-21T06:43",
-"name": "nfp_proxy_pre_run",
-"status": "rejected",
-"rationale": "Payer is the hedger or flow desk that chases the first-Friday (NFP-proxy) release by buying or selling immediacy in the minutes before it, then gets paid back or run over at the release. It's a calendar-only slot with fixed-clock exits, so it needs no `goldlab.external` import (t",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1795092837.5667121,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 3,
-"free_gb": 147.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795093835.7093692,
 "total": 31310831,
@@ -4344,6 +4333,17 @@
 "cpu": 1.2,
 "gpu": 0,
 "free_gb": 232.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795265768.15952,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.1,
+"gpu": 0,
+"free_gb": 231.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
