@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-21 05:29:26 UTC",
+"generated_at": "2026-11-21 05:44:50 UTC",
 "host": {
-"cpu_pct": 0.8,
+"cpu_pct": 1.1,
 "gpu_pct": 0,
-"free_gb": 231.9,
-"uptime": "up 21 days, 15:50, 1 user, load averages: 1.35 1.27 1.15",
-"load": "{ 1.35 1.27 1.15 }"
+"free_gb": 232.4,
+"uptime": "up 21 days, 16:05, 1 user, load averages: 1.06 1.24 1.19",
+"load": "{ 1.06 1.24 1.19 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-21T05:41",
+"name": "wickless_run_hold",
+"status": "rejected",
+"rationale": "Payer is the passive liquidity provider (a market maker or a resting-limit fader). In a wick-free, one-sided tape they never get two-way flow, so they are forced to re-hedge into the move.\nRATIONALE: The edge is the body/range structure of the bars plus a wick-triggered exit. It ",
+"note": "sandbox: NameError: name 'math' is not defined. Did you forget to import 'math'?"
+},
+{
 "ts": "2026-11-21T05:11",
 "name": "stalled_stretch_fade",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the systematic fader (band and range mean-reversion desks plus resting limit-fade liquidity). It leans against each leg of a move and has to stop out when successive equal-length blocks are each larger than the last, in the same direction. That is stop-out flow arriving ",
 "note": "{\"name\": \"accel_ladder_follow\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.51394375}"
-},
-{
-"ts": "2026-11-20T23:32",
-"name": "week_range_hold",
-"status": "accepted",
-"rationale": "Payer is the counter-trend range seller who treats the week-to-date high or low as resistance or support. They sell the top decile of a wide, already-trending week and are forced out on stops and margin as price holds there. The signal is week-to-date range position with hysteres",
-"note": "{\"name\": \"week_range_hold\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.318575}"
 }
 ],
 "history": [
-{
-"t": 1795066422.750598,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 89.6,
-"gpu": 19,
-"free_gb": 203.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795067817.39115,
 "total": 31310831,
@@ -4278,6 +4267,17 @@
 "cpu": 0.8,
 "gpu": 0,
 "free_gb": 231.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795239890.576394,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.1,
+"gpu": 0,
+"free_gb": 232.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
