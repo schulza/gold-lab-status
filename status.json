@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-21 12:09:56 UTC",
+"generated_at": "2026-11-21 12:25:19 UTC",
 "host": {
-"cpu_pct": 1.0,
+"cpu_pct": 1.1,
 "gpu_pct": 0,
-"free_gb": 231.8,
-"uptime": "up 21 days, 22:30, 1 user, load averages: 0.92 1.03 1.09",
-"load": "{ 0.92 1.03 1.09 }"
+"free_gb": 232.1,
+"uptime": "up 21 days, 22:45, 1 user, load averages: 1.08 1.17 1.16",
+"load": "{ 1.08 1.17 1.16 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-21T12:21",
+"name": "pre_slot_run_clock_follow",
+"status": "accepted",
+"rationale": "Payer is the hedger or desk that chases a scheduled release and pays for immediacy (see the direction file). The strategy follows a spread-unit-normalised run into a fixed UTC slot and exits on a fixed clock, with no external data.\nIt is not an underwater-short or cover-follow sh",
+"note": "{\"name\": \"pre_slot_run_clock_follow\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.01425}"
+},
+{
 "ts": "2026-11-21T11:50",
 "name": "sign_run_persistence_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the hedger or flow desk that chases the first-Friday (NFP-proxy) release by buying or selling immediacy in the minutes before it, then gets paid back or run over at the release. It's a calendar-only slot with fixed-clock exits, so it needs no `goldlab.external` import (t",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-21T06:12",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is the slow-mandate holder (discretionary and ETF-style gold holders who reprice off DFII10 with a lag). After a real-yield move of at least `thr` bp, gold has not yet moved the implied way, so the catch-up flow still has to be paid for by whoever is on the other side.\nRATI",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1795090367.323264,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 87.2,
-"gpu": 1,
-"free_gb": 207.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795091322.117884,
 "total": 31310831,
@@ -4344,6 +4333,17 @@
 "cpu": 1.0,
 "gpu": 0,
 "free_gb": 231.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795263919.893016,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.1,
+"gpu": 0,
+"free_gb": 232.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
