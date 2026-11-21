@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-21 15:15:10 UTC",
+"generated_at": "2026-11-21 15:30:34 UTC",
 "host": {
-"cpu_pct": 2.0,
+"cpu_pct": 1.3,
 "gpu_pct": 0,
-"free_gb": 231.3,
-"uptime": "up 22 days,  1:35, 1 user, load averages: 0.83 1.05 2.07",
-"load": "{ 0.83 1.05 2.07 }"
+"free_gb": 231.5,
+"uptime": "up 22 days,  1:51, 1 user, load averages: 1.20 1.28 1.52",
+"load": "{ 1.20 1.28 1.52 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-21T15:26",
+"name": "quiet_hour_displacement_follow",
+"status": "rejected",
+"rationale": "Payer is the informed or institutional parent order that has to be sliced through a normally quiet clock-hour. It moves price gradually, and liquidity providers and fade traders who treat that hour's move as noise keep taking the other side.\nIt follows, not fades, a trailing disp",
+"note": "sandbox: AssertionError: zu speicherhungrig: 83 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-21T14:55",
 "name": "matched_cover_timing",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer: takers who cross a quote-withdrawal burst, when spread is more than m times its baseline, and pay the widened spread plus impact. Once liquidity providers return and the spread normalises, price gives back part of the burst displacement. `sign` also lets the same event be ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-21T09:17",
-"name": "extreme_close_streak_follow",
-"status": "accepted",
-"rationale": "Payer is the passive quoter and fade trader who leans against a run of bars that keep closing at their extremes. Each bar has real range, so the aggressor is paying through the book and not just drifting. The streak of directional closes is a persistence signal that exits on the ",
-"note": "{\"name\": \"extreme_close_streak_follow\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.22988125}"
 }
 ],
 "history": [
-{
-"t": 1795101453.144619,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 92.4,
-"gpu": 1,
-"free_gb": 206.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795102407.311501,
 "total": 31310831,
@@ -4366,6 +4355,17 @@
 "cpu": 2.0,
 "gpu": 0,
 "free_gb": 231.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795275034.79267,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.3,
+"gpu": 0,
+"free_gb": 231.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
