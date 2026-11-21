@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-21 13:11:32 UTC",
+"generated_at": "2026-11-21 13:26:56 UTC",
 "host": {
-"cpu_pct": 0.8,
+"cpu_pct": 2.3,
 "gpu_pct": 0,
-"free_gb": 231.9,
-"uptime": "up 21 days, 23:32, 1 user, load averages: 1.27 1.12 1.11",
-"load": "{ 1.27 1.12 1.11 }"
+"free_gb": 231.6,
+"uptime": "up 21 days, 23:47, 1 user, load averages: 1.28 1.17 1.14",
+"load": "{ 1.28 1.17 1.14 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-21T13:23",
+"name": "scheduled_slot_runup_hold",
+"status": "accepted",
+"rationale": "Payer is the macro hedger or chaser who buys immediacy in the minutes before fixed US data slots (12:30, 13:30, 14:00 UTC). A run-up that is large against trailing volatility is a forced, price-insensitive flow. `sign=-1` fades it (liquidity providers collect the refund); `sign=+",
+"note": "{\"name\": \"scheduled_slot_runup_hold\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.00615}"
+},
+{
 "ts": "2026-11-21T12:52",
 "name": null,
 "status": "rejected",
@@ -2446,13 +2453,6 @@
 "status": "accepted",
 "rationale": "Payer is the liquidity provider (dealer or limit-order fader) who quotes against a slot, such as 15-minute time-of-day, whose range they expect to be quiet. When bars close at one extreme on a range far above that slot's own history, they are over their inventory limit and must c",
 "note": "{\"name\": \"slot_range_clv_follow\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.7988125}"
-},
-{
-"ts": "2026-11-21T07:14",
-"name": "asia_displacement_london_follow",
-"status": "accepted",
-"rationale": "The payer is the Asia-session liquidity provider or option hedger who faded a thin overnight displacement and is run over when London depth arrives. The overnight move must be large against its own trailing 10-to-40-day average and must also be extended by London itself. The stra",
-"note": "{\"name\": \"asia_displacement_london_follow\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.06055625}"
 }
 ],
 "history": [
@@ -4344,6 +4344,17 @@
 "cpu": 0.8,
 "gpu": 0,
 "free_gb": 231.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795267616.383241,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 2.3,
+"gpu": 0,
+"free_gb": 231.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
