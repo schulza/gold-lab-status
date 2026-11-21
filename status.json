@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-21 02:24:35 UTC",
+"generated_at": "2026-11-21 02:40:00 UTC",
 "host": {
-"cpu_pct": 0.5,
+"cpu_pct": 0.6,
 "gpu_pct": 0,
-"free_gb": 232.5,
-"uptime": "up 21 days, 12:45, 1 user, load averages: 0.96 1.13 1.15",
-"load": "{ 0.96 1.13 1.15 }"
+"free_gb": 232.4,
+"uptime": "up 21 days, 13 hrs, 1 user, load averages: 1.02 1.21 1.20",
+"load": "{ 1.02 1.21 1.20 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-21T02:37",
+"name": "release_run_clock_hold",
+"status": "accepted",
+"rationale": "Payer is the scheduled-release hedger or chaser who buys or sells immediacy in the minutes before a fixed UTC release slot (12:30 and 13:30 UTC data, 19:00 FOMC). I trade symmetric long/short and hold through the release to a fixed-clock exit, so no long beta and no cover payer.\n",
+"note": "{\"name\": \"release_run_clock_hold\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.01625}"
+},
+{
 "ts": "2026-11-21T02:07",
 "name": "pre_slot_pushed_efficiency_unwind",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the liquidity provider who fades breakouts on a quiet, cheap-spread book. When a bar closes near its extreme on an outsized range, they cannot re-quote in time, and they get run over by the stop-order flow that follows.\nRATIONALE: It is a two-sided follow trade with a ti",
 "note": "{\"name\": \"decisive_cheap_break_follow\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.07496875}"
-},
-{
-"ts": "2026-11-20T20:27",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is the participant who buys immediacy into a scheduled NFP/FOMC print, either hedging the event or chasing the run-up. Dealers charge for that, so the pre-event move overshoots and is refunded after the print.\nRATIONALE: Direction is latched once, at the first bar inside `l",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1795055680.676162,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 83.3,
-"gpu": 12,
-"free_gb": 208.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795056635.211361,
 "total": 31310831,
@@ -4245,6 +4234,17 @@
 "cpu": 0.5,
 "gpu": 0,
 "free_gb": 232.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795228800.014949,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.6,
+"gpu": 0,
+"free_gb": 232.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
