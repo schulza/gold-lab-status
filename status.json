@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-21 14:44:21 UTC",
+"generated_at": "2026-11-21 14:59:46 UTC",
 "host": {
 "cpu_pct": 1.6,
 "gpu_pct": 0,
-"free_gb": 230.2,
-"uptime": "up 22 days,  1:05, 1 user, load averages: 1.10 3.43 9.49",
-"load": "{ 1.10 3.43 9.49 }"
+"free_gb": 231.3,
+"uptime": "up 22 days,  1:20, 1 user, load averages: 1.24 1.25 3.95",
+"load": "{ 1.24 1.25 3.95 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-21T14:55",
+"name": "matched_cover_timing",
+"status": "accepted",
+"rationale": "Payer: shorts and hedgers who sold a down-leg and are forced to cover into a sharp rebound. The signal is exposure-matched: the cover window is long and the rest of the time is short by the trailing active fraction, so mean exposure is about zero and only the timing of cover earn",
+"note": "{\"name\": \"matched_cover_timing\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.90221875}"
+},
+{
 "ts": "2026-11-21T14:24",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the passive quoter and fade trader who leans against a run of bars that keep closing at their extremes. Each bar has real range, so the aggressor is paying through the book and not just drifting. The streak of directional closes is a persistence signal that exits on the ",
 "note": "{\"name\": \"extreme_close_streak_follow\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.22988125}"
-},
-{
-"ts": "2026-11-21T08:46",
-"name": "release_clock_run_efficiency",
-"status": "rejected",
-"rationale": "Payer is the participant who crosses the spread to position or hedge in the last minutes before a daily 08:30 ET US data slot. They pay for immediacy, so an efficient (one-sided, low-retracement) run of at least k sigma into the slot has more impact than information. The strategy",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1795099546.9602518,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 84.6,
-"gpu": 16,
-"free_gb": 208.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795100499.706954,
 "total": 31310831,
@@ -4366,6 +4355,17 @@
 "cpu": 1.6,
 "gpu": 0,
 "free_gb": 230.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795273186.290519,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.6,
+"gpu": 0,
+"free_gb": 231.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
