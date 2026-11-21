@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-21 04:27:49 UTC",
+"generated_at": "2026-11-21 04:43:13 UTC",
 "host": {
-"cpu_pct": 0.5,
+"cpu_pct": 0.8,
 "gpu_pct": 0,
-"free_gb": 232.2,
-"uptime": "up 21 days, 14:48, 1 user, load averages: 1.22 1.16 1.12",
-"load": "{ 1.22 1.16 1.12 }"
+"free_gb": 232.4,
+"uptime": "up 21 days, 15:03, 1 user, load averages: 1.32 1.17 1.10",
+"load": "{ 1.32 1.17 1.10 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-21T04:40",
+"name": "burst_spread_fade",
+"status": "accepted",
+"rationale": "Payer is the liquidity taker who crosses a widened spread during a tick-rate burst, usually a stop or forced-exit order. Market makers widen quotes and take the other side, then mean-revert once their inventory resets. This is fade-only, so it does not touch the cover or long-onl",
+"note": "{\"name\": \"burst_spread_fade\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.011625}"
+},
+{
 "ts": "2026-11-21T04:09",
 "name": "pre_release_scaled_refund",
 "status": "accepted",
@@ -2446,13 +2453,6 @@
 "status": "accepted",
 "rationale": "The payer is the intraday range-fader: scalpers and limit-order desks who size counter-trend inventory against a time-scaled expected range (sigma\u00b7\u221aelapsed) measured from their session open. When the displacement from that open exceeds the range and the path has been clean (displ",
 "note": "{\"name\": \"session_trend_stopflow\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.12184375}"
-},
-{
-"ts": "2026-11-20T22:30",
-"name": null,
-"status": "rejected",
-"rationale": "The payer is the slow-rebalancing macro allocator, such as an ETF or benchmark-anchored holder. They reprice gold only after a real-yield move has been in the quote for days. When gold has under-reacted to a standardised DFII10 move, the lagged repricing flow pays the trade.\nRATI",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
@@ -4267,6 +4267,17 @@
 "cpu": 0.5,
 "gpu": 0,
 "free_gb": 232.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795236193.280426,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.8,
+"gpu": 0,
+"free_gb": 232.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
