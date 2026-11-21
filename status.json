@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-21 09:35:54 UTC",
+"generated_at": "2026-11-21 09:51:18 UTC",
 "host": {
-"cpu_pct": 0.6,
+"cpu_pct": 1.5,
 "gpu_pct": 0,
 "free_gb": 232.1,
-"uptime": "up 21 days, 19:56, 1 user, load averages: 1.25 1.23 1.17",
-"load": "{ 1.25 1.23 1.17 }"
+"uptime": "up 21 days, 20:11, 1 user, load averages: 1.01 1.14 1.15",
+"load": "{ 1.01 1.14 1.15 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-21T09:47",
+"name": "spread_burst_normalised_refund",
+"status": "rejected",
+"rationale": "Payer: takers who cross a quote-withdrawal burst, when spread is more than m times its baseline, and pay the widened spread plus impact. Once liquidity providers return and the spread normalises, price gives back part of the burst displacement. `sign` also lets the same event be ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-21T09:17",
 "name": "extreme_close_streak_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the hedger who bought immediately into a scheduled release (13:30 data or 15:00 slots) with a one-way, efficient run that was unusually large against that slot's own history. That run was paid for as a liquidity premium. After the release it refunds, and the strategy exi",
 "note": "{\"name\": \"pre_release_scaled_refund\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.007875}"
-},
-{
-"ts": "2026-11-21T03:39",
-"name": "sign_flip_trend",
-"status": "accepted",
-"rationale": "Payer is the fade trader and liquidity provider who leans against a one-sided tape. Their quotes get run over when signs of consecutive bars rarely flip, so a low sign-flip rate means the move is being worked as parent flow, not noise-traded.\nRATIONALE: It is a two-sided follow t",
-"note": "{\"name\": \"sign_flip_trend\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.02430625}"
 }
 ],
 "history": [
-{
-"t": 1795081109.3667352,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 72.8,
-"gpu": 12,
-"free_gb": 202.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795082065.195062,
 "total": 31310831,
@@ -4309,6 +4298,17 @@
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 0.6,
+"gpu": 0,
+"free_gb": 232.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795254678.9877608,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.5,
 "gpu": 0,
 "free_gb": 232.1,
 "dsr_bar": 6.4,
