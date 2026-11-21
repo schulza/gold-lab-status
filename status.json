@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-21 13:42:20 UTC",
+"generated_at": "2026-11-21 13:58:01 UTC",
 "host": {
-"cpu_pct": 0.6,
-"gpu_pct": 0,
-"free_gb": 231.6,
-"uptime": "up 22 days, 2 mins, 1 user, load averages: 1.16 1.17 1.16",
-"load": "{ 1.16 1.17 1.16 }"
+"cpu_pct": 8.1,
+"gpu_pct": 83,
+"free_gb": 207.8,
+"uptime": "up 22 days, 18 mins, 1 user, load averages: 14.71 8.75 4.44",
+"load": "{ 14.71 8.75 4.44 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-21T13:53",
+"name": "slot_spread_immediacy",
+"status": "rejected",
+"rationale": "Payer is the hedger or chaser who pays for immediacy in the minutes before a scheduled US macro release (12:30, 13:30, 15:00 or 19:00 UTC slots). They lift a spread that is wider than the same slot's usual spread, and they push price further than the same slot usually moves. A fi",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-21T13:23",
 "name": "scheduled_slot_runup_hold",
 "status": "accepted",
@@ -2446,13 +2453,6 @@
 "status": "rejected",
 "rationale": "Payer is the participant who crosses the spread in the hours before a scheduled NFP/FOMC release because they must be positioned or hedged by the print (immediacy demand). Their push is a liquidity concession that refunds once the release clears the book. It runs on the real even",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-21T07:45",
-"name": "slot_range_clv_follow",
-"status": "accepted",
-"rationale": "Payer is the liquidity provider (dealer or limit-order fader) who quotes against a slot, such as 15-minute time-of-day, whose range they expect to be quiet. When bars close at one extreme on a range far above that slot's own history, they are over their inventory limit and must c",
-"note": "{\"name\": \"slot_range_clv_follow\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.7988125}"
 }
 ],
 "history": [
@@ -4355,6 +4355,17 @@
 "cpu": 0.6,
 "gpu": 0,
 "free_gb": 231.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795269481.792586,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 8.1,
+"gpu": 83,
+"free_gb": 207.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
