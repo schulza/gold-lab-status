@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-21 20:23:12 UTC",
+"generated_at": "2026-11-21 20:38:36 UTC",
 "host": {
-"cpu_pct": 0.4,
+"cpu_pct": 1.8,
 "gpu_pct": 0,
-"free_gb": 231.3,
-"uptime": "up 22 days,  6:43, 1 user, load averages: 1.15 1.14 1.12",
-"load": "{ 1.15 1.14 1.12 }"
+"free_gb": 230.6,
+"uptime": "up 22 days,  6:59, 1 user, load averages: 1.48 1.25 1.14",
+"load": "{ 1.48 1.25 1.14 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-21T20:34",
+"name": "wide_spread_displacement",
+"status": "rejected",
+"rationale": "The payer is the market-order taker who crosses a quoted spread widened by liquidity providers during a displacement. They pay the premium for immediacy, and the move made against thin quotes partly refunds once quotes normalise. The `sign` parameter lets the data pick refund (fa",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-21T20:03",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer: shorts and hedgers who sold a down-leg and are forced to cover into a sharp rebound. The signal is exposure-matched: the cover window is long and the rest of the time is short by the trailing active fraction, so mean exposure is about zero and only the timing of cover earn",
 "note": "{\"name\": \"matched_cover_timing\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.90221875}"
-},
-{
-"ts": "2026-11-21T14:24",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is the hedger or flow desk that must buy or sell before a scheduled NFP/FOMC release and pays for immediacy. The pre-release leg is pushed past normal noise, and the fixed-clock exit is the release itself, so no release-bar gamble is held. Follow and fade are both in the gr",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1795120341.989164,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 100.0,
-"gpu": 1,
-"free_gb": 124.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795121598.4748359,
 "total": 31310831,
@@ -4399,6 +4388,17 @@
 "cpu": 0.4,
 "gpu": 0,
 "free_gb": 231.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795293516.21059,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.8,
+"gpu": 0,
+"free_gb": 230.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
