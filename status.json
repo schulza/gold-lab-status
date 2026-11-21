@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-21 15:45:59 UTC",
+"generated_at": "2026-11-21 16:01:23 UTC",
 "host": {
-"cpu_pct": 0.5,
+"cpu_pct": 0.6,
 "gpu_pct": 0,
-"free_gb": 231.5,
-"uptime": "up 22 days,  2:06, 1 user, load averages: 1.46 1.29 1.37",
-"load": "{ 1.46 1.29 1.37 }"
+"free_gb": 230.7,
+"uptime": "up 22 days,  2:22, 1 user, load averages: 1.37 1.12 1.17",
+"load": "{ 1.37 1.12 1.17 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-21T15:56",
+"name": "surprise_burst_clock_follow",
+"status": "accepted",
+"rationale": "Payer is the slow parent-order executor (session-benchmarked VWAP/TWAP and rebalance programs). It keeps working in the direction of an unusually fast, efficient burst until its session deadline, so a follower is paid for the remaining schedule.\nRATIONALE: It differs from the cov",
+"note": "{\"name\": \"surprise_burst_clock_follow\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.1616}"
+},
+{
 "ts": "2026-11-21T15:26",
 "name": "quiet_hour_displacement_follow",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the hedger or desk that must be filled at a scheduled macro or fix slot (NFP/CPI 12:30, 13:30, 14:00, 15:00 and 18:00 UTC). They run the market in the minutes before the slot. When that run is one-sided and efficient (|net| / path length is high), the immediacy cost is p",
 "note": "{\"name\": \"slot_immediacy_run\", \"grid\": 160, \"sec_per_param\": 0.0, \"active_frac\": 0.012}"
-},
-{
-"ts": "2026-11-21T09:47",
-"name": "spread_burst_normalised_refund",
-"status": "rejected",
-"rationale": "Payer: takers who cross a quote-withdrawal burst, when spread is more than m times its baseline, and pay the widened spread plus impact. Once liquidity providers return and the spread normalises, price gives back part of the burst displacement. `sign` also lets the same event be ",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1795103353.3599539,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 69.6,
-"gpu": 0,
-"free_gb": 209.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795104306.398303,
 "total": 31310831,
@@ -4366,6 +4355,17 @@
 "cpu": 0.5,
 "gpu": 0,
 "free_gb": 231.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795276883.747584,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.6,
+"gpu": 0,
+"free_gb": 230.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
