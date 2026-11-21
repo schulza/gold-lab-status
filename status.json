@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-21 10:37:31 UTC",
+"generated_at": "2026-11-21 10:52:55 UTC",
 "host": {
-"cpu_pct": 0.7,
+"cpu_pct": 0.4,
 "gpu_pct": 0,
-"free_gb": 232.0,
-"uptime": "up 21 days, 20:58, 1 user, load averages: 1.16 1.15 1.12",
-"load": "{ 1.16 1.15 1.12 }"
+"free_gb": 231.9,
+"uptime": "up 21 days, 21:13, 1 user, load averages: 1.54 1.50 1.28",
+"load": "{ 1.54 1.50 1.28 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-21T10:49",
+"name": "nfp_pre_release_immediacy",
+"status": "rejected",
+"rationale": "Payer is the hedger or fast money who must be positioned before the first-Friday NFP release. They push price over the pre-release window to get filled and pay for immediacy. After the release they unwind, so a fade entered before the release and held on a fixed clock exit earns ",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-21T10:18",
 "name": "slot_immediacy_run",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the late chaser who bought or sold into an intraday stretch away from the UTC-day mean. The stretch is more than k day-ranges, and the day's extreme has not been renewed for m bars, so the push is stalled and the chaser is offside.\nThe exit is a fixed clock hour and the ",
 "note": "{\"name\": \"stalled_stretch_fade\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.352225}"
-},
-{
-"ts": "2026-11-21T04:40",
-"name": "burst_spread_fade",
-"status": "accepted",
-"rationale": "Payer is the liquidity taker who crosses a widened spread during a tick-rate burst, usually a stop or forced-exit order. Market makers widen quotes and take the other side, then mean-revert once their inventory resets. This is fade-only, so it does not touch the cover or long-onl",
-"note": "{\"name\": \"burst_spread_fade\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.011625}"
 }
 ],
 "history": [
-{
-"t": 1795084680.5929642,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": null,
-"gpu": 1,
-"free_gb": 146.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795086340.839703,
 "total": 31310831,
@@ -4322,6 +4311,17 @@
 "cpu": 0.7,
 "gpu": 0,
 "free_gb": 232.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795258375.3459158,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.4,
+"gpu": 0,
+"free_gb": 231.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
