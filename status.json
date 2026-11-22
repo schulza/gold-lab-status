@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-22 13:19:38 UTC",
+"generated_at": "2026-11-22 13:35:02 UTC",
 "host": {
-"cpu_pct": 1.5,
+"cpu_pct": 0.8,
 "gpu_pct": 0,
 "free_gb": 230.4,
-"uptime": "up 22 days, 23:40, 1 user, load averages: 1.03 1.17 1.16",
-"load": "{ 1.03 1.17 1.16 }"
+"uptime": "up 22 days, 23:55, 1 user, load averages: 1.12 1.12 1.14",
+"load": "{ 1.12 1.12 1.14 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-22T13:27",
+"name": "handover_chain_follow",
+"status": "accepted",
+"rationale": "Payer is the benchmark-constrained desk or fund that inherits a book at a session handover (Asia\u2192London\u2192NY). When several consecutive blocks each move strongly one way, that desk is still working the parent order and later blocks pay for the immediacy. This is a block-chain follo",
+"note": "{\"name\": \"handover_chain_follow\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.10375}"
+},
+{
 "ts": "2026-11-22T12:57",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the clock-bound hedger. Fix, handover and benchmark-linked flows must transact at a fixed time of day regardless of price, and they respond to the move just before that slot with a stable sign (continue or retrace). Those participants pay anyone who has measured that",
 "note": "{\"name\": \"slot_learned_sign\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.00825}"
-},
-{
-"ts": "2026-11-22T07:18",
-"name": "slot_abnormal_drift",
-"status": "accepted",
-"rationale": "Payer is the slow parent-order executor (TWAP/VWAP-scheduled hedgers and funds). Their child orders follow a fixed slot schedule, so the part of a move beyond the slot's usual drift marks an unscheduled parent still being worked, and it keeps paying.\nRATIONALE: Each slot's normal",
-"note": "{\"name\": \"slot_abnormal_drift\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.56810625}"
 }
 ],
 "history": [
-{
-"t": 1795181661.475225,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 2.5,
-"gpu": 0,
-"free_gb": 230.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795182585.7002518,
 "total": 31310831,
@@ -4507,6 +4496,17 @@
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 1.5,
+"gpu": 0,
+"free_gb": 230.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795354502.9714181,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.8,
 "gpu": 0,
 "free_gb": 230.4,
 "dsr_bar": 6.4,
