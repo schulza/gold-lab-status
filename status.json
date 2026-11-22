@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-22 00:29:36 UTC",
+"generated_at": "2026-11-22 00:45:00 UTC",
 "host": {
-"cpu_pct": 1.3,
+"cpu_pct": 0.5,
 "gpu_pct": 0,
 "free_gb": 230.4,
-"uptime": "up 22 days, 10:50, 1 user, load averages: 1.12 1.21 1.19",
-"load": "{ 1.12 1.21 1.19 }"
+"uptime": "up 22 days, 11:05, 1 user, load averages: 1.23 1.18 1.13",
+"load": "{ 1.23 1.18 1.13 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-22T00:39",
+"name": "stop_ratchet_follow",
+"status": "accepted",
+"rationale": "The payer is the fader who sells each new N-bar high or buys each new N-bar low and is stopped out. A run of repeated fresh extremes in a short window shows that fader flow is being absorbed and stops are still triggering. Ratchet count in a window is a different trigger from a s",
+"note": "{\"name\": \"stop_ratchet_follow\", \"grid\": 72, \"sec_per_param\": 0.001, \"active_frac\": 0.54964375}"
+},
+{
 "ts": "2026-11-22T00:09",
 "name": "preprint_immediacy_fade",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the fixed-clock, time-bar-sampling participant: CTA/stop-and-reverse systems and discretionary traders who read price only at bar close. When news-driven flow arrives as a dense tick burst, their reaction lags the information. This family measures the move over a fixed t",
 "note": "{\"name\": \"tick_budget_burst\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.2148}"
-},
-{
-"ts": "2026-11-21T18:30",
-"name": "compression_release_clock",
-"status": "rejected",
-"rationale": "Payer: liquidity providers and stop-sitters sized for a quiet regime. After range compression, the first bar that expands well beyond the longer-window average range runs through resting stops and stale quotes. The breakout itself doesn't pay; the clocked hold after a clean, dire",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1795135212.766859,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 95.8,
-"gpu": 15,
-"free_gb": 205.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795136639.399838,
 "total": 31310831,
@@ -4430,6 +4419,17 @@
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 1.3,
+"gpu": 0,
+"free_gb": 230.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795308300.0203562,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.5,
 "gpu": 0,
 "free_gb": 230.4,
 "dsr_bar": 6.4,
