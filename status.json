@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-22 19:29:16 UTC",
+"generated_at": "2026-11-22 19:44:41 UTC",
 "host": {
-"cpu_pct": 1.6,
+"cpu_pct": 0.6,
 "gpu_pct": 0,
 "free_gb": 230.3,
-"uptime": "up 23 days,  5:49, 1 user, load averages: 1.46 1.25 1.21",
-"load": "{ 1.46 1.25 1.21 }"
+"uptime": "up 23 days,  6:05, 1 user, load averages: 1.22 1.21 1.18",
+"load": "{ 1.22 1.21 1.18 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-22T19:35",
+"name": "spread_burst_end_refund",
+"status": "rejected",
+"rationale": "Payer is the liquidity taker who trades through a spread burst, when quote providers have pulled back. They pay the widened spread and push price through thin quotes, and once the spread normalises, part of that displacement refunds.\nRATIONALE: The entry fires on the burst-end ev",
+"note": "sandbox: NameError: name 'FAMILIES' is not defined"
+},
+{
 "ts": "2026-11-22T19:04",
 "name": "range_spread_ignition",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the macro hedger or momentum chaser who pays for immediacy (wide spread, thin book) in the minutes before a fixed-clock US release slot (12:30/13:30 UTC data, 18:00/19:00 UTC FOMC/Fed). When the pre-slot run is a z-score outlier, the strategy takes the opposite side of t",
 "note": "{\"name\": \"release_slot_run_fade\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.00421875}"
-},
-{
-"ts": "2026-11-22T13:27",
-"name": "handover_chain_follow",
-"status": "accepted",
-"rationale": "Payer is the benchmark-constrained desk or fund that inherits a book at a session handover (Asia\u2192London\u2192NY). When several consecutive blocks each move strongly one way, that desk is still working the parent order and later blocks pay for the immediacy. This is a block-chain follo",
-"note": "{\"name\": \"handover_chain_follow\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.10375}"
 }
 ],
 "history": [
-{
-"t": 1795203845.194106,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.5,
-"gpu": 0,
-"free_gb": 233.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795204769.3772109,
 "total": 31310831,
@@ -4507,6 +4496,17 @@
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 1.6,
+"gpu": 0,
+"free_gb": 230.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795376681.24752,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.6,
 "gpu": 0,
 "free_gb": 230.3,
 "dsr_bar": 6.4,
