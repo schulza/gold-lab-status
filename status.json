@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-22 07:10:01 UTC",
+"generated_at": "2026-11-22 07:25:25 UTC",
 "host": {
-"cpu_pct": 1.5,
+"cpu_pct": 0.5,
 "gpu_pct": 0,
-"free_gb": 230.4,
-"uptime": "up 22 days, 17:30, 1 user, load averages: 1.35 1.26 1.19",
-"load": "{ 1.35 1.26 1.19 }"
+"free_gb": 229.9,
+"uptime": "up 22 days, 17:46, 1 user, load averages: 1.07 1.09 1.13",
+"load": "{ 1.07 1.09 1.13 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-22T07:18",
+"name": "slot_abnormal_drift",
+"status": "accepted",
+"rationale": "Payer is the slow parent-order executor (TWAP/VWAP-scheduled hedgers and funds). Their child orders follow a fixed slot schedule, so the part of a move beyond the slot's usual drift marks an unscheduled parent still being worked, and it keeps paying.\nRATIONALE: Each slot's normal",
+"note": "{\"name\": \"slot_abnormal_drift\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.56810625}"
+},
+{
 "ts": "2026-11-22T06:47",
 "name": "slot_range_expansion_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the fader who averages into a move that is already running. Several consecutive wide-range bars closing at the extreme show their stops being hit, so I follow the run and exit when price loses the trailing mean (a state exit, not a clock).\nThis is symmetric, with lon",
 "note": "{\"name\": \"decisive_stack_follow\", \"grid\": 64, \"sec_per_param\": 0.0, \"active_frac\": 0.0655375}"
-},
-{
-"ts": "2026-11-22T01:10",
-"name": null,
-"status": "rejected",
-"rationale": "The payer is the hedger or flow desk that buys immediacy into a scheduled NFP/FOMC release. A run into the print that is large against recent noise is that urgency, and `sign` selects follow or fade.\nThe position is latched at the last qualifying pre-window bar and held until `po",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1795159389.182644,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": null,
-"gpu": 1,
-"free_gb": 175.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795160963.630528,
 "total": 31310831,
@@ -4498,6 +4487,17 @@
 "cpu": 1.5,
 "gpu": 0,
 "free_gb": 230.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795332325.56287,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.5,
+"gpu": 0,
+"free_gb": 229.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
