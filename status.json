@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-22 12:18:02 UTC",
+"generated_at": "2026-11-22 12:33:26 UTC",
 "host": {
-"cpu_pct": 0.5,
+"cpu_pct": 1.5,
 "gpu_pct": 0,
-"free_gb": 230.1,
-"uptime": "up 22 days, 22:38, 1 user, load averages: 1.28 1.24 1.16",
-"load": "{ 1.28 1.24 1.16 }"
+"free_gb": 230.0,
+"uptime": "up 22 days, 22:54, 1 user, load averages: 1.12 1.23 1.24",
+"load": "{ 1.12 1.23 1.24 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-22T12:26",
+"name": "london_range_ny_break",
+"status": "accepted",
+"rationale": "The payer is the London-session range fader, plus the breakout-stop sellers placed at the London high or low. When NY brings fresh flow through that range, their stops and re-entries chase the break. The edge is the forced flow, not a trend filter or a breakout lookback.\nRATIONAL",
+"note": "{\"name\": \"london_range_ny_break\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.20745}"
+},
+{
 "ts": "2026-11-22T11:55",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the passive liquidity provider (resting limit orders and market makers) whose quotes are run over by an unfinished parent order. A bar whose range is m\u00d7 its own same-clock baseline and which closes in the outer q of that range is an order still being worked, not a finish",
 "note": "{\"name\": \"slot_range_expansion_follow\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.37140625}"
-},
-{
-"ts": "2026-11-22T06:16",
-"name": "prerelease_paid_run_clock",
-"status": "accepted",
-"rationale": "The payer is the macro hedger or fast-money desk that lifts or hits the offer in the run-up to a scheduled US release (12:30/13:30 UTC, the two DST variants). It buys immediacy and pays spread to do so. The run is one-sided (high path efficiency) and large relative to the bar's o",
-"note": "{\"name\": \"prerelease_paid_run_clock\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.010875}"
 }
 ],
 "history": [
-{
-"t": 1795177963.975033,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 8.6,
-"gpu": 35,
-"free_gb": 230.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795178888.523807,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 0.5,
 "gpu": 0,
 "free_gb": 230.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795350806.5634828,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.5,
+"gpu": 0,
+"free_gb": 230.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
