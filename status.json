@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-22 11:16:26 UTC",
+"generated_at": "2026-11-22 11:31:50 UTC",
 "host": {
-"cpu_pct": 1.8,
+"cpu_pct": 1.2,
 "gpu_pct": 0,
-"free_gb": 230.0,
-"uptime": "up 22 days, 21:37, 1 user, load averages: 1.06 1.22 1.19",
-"load": "{ 1.06 1.22 1.19 }"
+"free_gb": 230.1,
+"uptime": "up 22 days, 21:52, 1 user, load averages: 1.17 1.22 1.19",
+"load": "{ 1.17 1.22 1.19 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-22T11:25",
+"name": "pre_slot_pressure_refund",
+"status": "accepted",
+"rationale": "Payer is the hedger or flow desk that pays for immediacy into a scheduled US macro print (12:30 or 13:30 UTC fixed slots). It buys or sells hard in the pre-release window, then the print and the thin book refund part of that pressure.\nUnlike the event_drift neighbours, it needs n",
+"note": "{\"name\": \"pre_slot_pressure_refund\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.0165}"
+},
+{
 "ts": "2026-11-22T10:54",
 "name": "paid_immediacy_imbalance",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the macro fund or hedger that must be positioned before a scheduled NFP or FOMC release and pays up for immediacy in the final run-up. Its pushed price is a temporary concession that reverts after the print (`sign=-1`), or continues (`sign=+1`), so both sides are measure",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-22T05:15",
-"name": "pre_slot_immediacy_clock",
-"status": "rejected",
-"rationale": "Payer is the hedger or chaser who pays for immediacy in the run-up to a scheduled US release (weekly Thursday claims, first-Friday NFP), where the print window is thin. The family follows or fades that run-up over a fixed-clock hold, so the exit is time-based and not tied to pric",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1795174267.083305,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.0,
-"gpu": 0,
-"free_gb": 232.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795175191.241388,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 1.8,
 "gpu": 0,
 "free_gb": 230.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795347110.8227122,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.2,
+"gpu": 0,
+"free_gb": 230.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
