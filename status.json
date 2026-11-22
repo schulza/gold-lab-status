@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-22 17:56:52 UTC",
+"generated_at": "2026-11-22 18:12:16 UTC",
 "host": {
-"cpu_pct": 4.8,
+"cpu_pct": 1.2,
 "gpu_pct": 0,
-"free_gb": 227.8,
-"uptime": "up 23 days,  4:17, 1 user, load averages: 1.70 1.47 1.27",
-"load": "{ 1.70 1.47 1.27 }"
+"free_gb": 230.2,
+"uptime": "up 23 days,  4:32, 1 user, load averages: 1.19 1.68 1.60",
+"load": "{ 1.19 1.68 1.60 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-22T18:03",
+"name": "prerelease_paid_urgency_hold",
+"status": "accepted",
+"rationale": "Payer: a hedger who must trade into a scheduled release and pays spread to get immediacy. A pre-release run that comes with widened spread is paid-for urgency, and the position is held to a fixed clock exit. It is clock-based with no external imports, which sidesteps the earlier ",
+"note": "{\"name\": \"prerelease_paid_urgency_hold\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.009375}"
+},
+{
 "ts": "2026-11-22T17:32",
 "name": "quote_repricing_staircase",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the London-session range fader, plus the breakout-stop sellers placed at the London high or low. When NY brings fresh flow through that range, their stops and re-entries chase the break. The edge is the forced flow, not a trend filter or a breakout lookback.\nRATIONAL",
 "note": "{\"name\": \"london_range_ny_break\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.20745}"
-},
-{
-"ts": "2026-11-22T11:55",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is the hedger or macro desk that buys immediacy in the hours before a scheduled NFP/FOMC release. The module marks the pre-window run in units of per-bar sigma. After the release it takes the other side of that run (sign param flips to follow) until a fixed clock exit, hour",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1795198299.437674,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.5,
-"gpu": 0,
-"free_gb": 231.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795199223.696458,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 4.8,
 "gpu": 0,
 "free_gb": 227.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795371136.6332748,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.2,
+"gpu": 0,
+"free_gb": 230.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
