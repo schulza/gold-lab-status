@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-22 05:06:49 UTC",
+"generated_at": "2026-11-22 05:22:13 UTC",
 "host": {
-"cpu_pct": 0.5,
+"cpu_pct": 0.8,
 "gpu_pct": 0,
 "free_gb": 230.2,
-"uptime": "up 22 days, 15:27, 1 user, load averages: 1.45 1.21 1.17",
-"load": "{ 1.45 1.21 1.17 }"
+"uptime": "up 22 days, 15:42, 1 user, load averages: 1.38 1.28 1.20",
+"load": "{ 1.38 1.28 1.20 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-22T05:15",
+"name": "pre_slot_immediacy_clock",
+"status": "rejected",
+"rationale": "Payer is the hedger or chaser who pays for immediacy in the run-up to a scheduled US release (weekly Thursday claims, first-Friday NFP), where the print window is thin. The family follows or fades that run-up over a fixed-clock hold, so the exit is time-based and not tied to pric",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-22T04:44",
 "name": "slot_heavy_displacement_follow",
 "status": "accepted",
@@ -2446,13 +2453,6 @@
 "status": "rejected",
 "rationale": "The payer is the hedger or allocator who must be in before a scheduled NFP/FOMC release and pays for immediacy in the last hours. That makes them the counterparty to whoever provides liquidity into the run.\nRATIONALE: This uses the publication-time event schedule (`ev_hours_to_ne",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-21T23:07",
-"name": "asia_stop_cascade_clock",
-"status": "accepted",
-"rationale": "Payer is the counter-trend participant whose stop orders rest just beyond the Asian-session range edge. When London liquidity arrives, the stops fire as market orders. A tick-count surge on the break bar, relative to its trailing baseline, separates triggered stops from a quote f",
-"note": "{\"name\": \"asia_stop_cascade_clock\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.12400625}"
 }
 ],
 "history": [
@@ -4463,6 +4463,17 @@
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 0.5,
+"gpu": 0,
+"free_gb": 230.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795324933.1567092,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.8,
 "gpu": 0,
 "free_gb": 230.2,
 "dsr_bar": 6.4,
