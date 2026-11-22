@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-22 14:52:03 UTC",
+"generated_at": "2026-11-22 15:07:27 UTC",
 "host": {
-"cpu_pct": 1.6,
+"cpu_pct": 1.0,
 "gpu_pct": 0,
-"free_gb": 230.1,
-"uptime": "up 23 days,  1:12, 1 user, load averages: 1.12 1.15 1.15",
-"load": "{ 1.12 1.15 1.15 }"
+"free_gb": 229.7,
+"uptime": "up 23 days,  1:28, 1 user, load averages: 1.13 1.22 1.17",
+"load": "{ 1.13 1.22 1.17 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-22T14:59",
+"name": "spread_paid_displacement",
+"status": "accepted",
+"rationale": "The payer is the immediacy-taker who pushes price a long way relative to the spread. The displacement over n bars, in units of the current mean spread, measures how much that taker has paid to move it. I follow or fade it depending on sign, with hysteresis exit and a hard time ca",
+"note": "{\"name\": \"spread_paid_displacement\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.7906}"
+},
+{
 "ts": "2026-11-22T14:29",
 "name": "slot_spread_move_fade",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the urgent taker (hedger or stop-out flow) who pays a widened spread to push a run of n bars. Liquidity providers charge for that immediacy, and the price impact tends to be refunded or carried by a fixed clock handover, not by a price target.\nRATIONALE: Entry needs a la",
 "note": "{\"name\": \"paid_run_clock_exit\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.2095}"
-},
-{
-"ts": "2026-11-22T08:51",
-"name": "stop_pool_turn_bid",
-"status": "rejected",
-"rationale": "Payer is the leveraged long holder whose protective sell stop sits just under the N-bar low. When the range low is hit, those stops fire as market orders at the same moment. Whoever buys the first bar that turns back up is paid a liquidity premium, and the position is held until ",
-"note": "sandbox: NameError: name 'FAMILIES' is not defined"
 }
 ],
 "history": [
-{
-"t": 1795187207.370715,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.8,
-"gpu": 0,
-"free_gb": 231.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795188131.934771,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 1.6,
 "gpu": 0,
 "free_gb": 230.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795360047.3853598,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.0,
+"gpu": 0,
+"free_gb": 229.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
