@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-22 22:34:05 UTC",
+"generated_at": "2026-11-22 22:49:29 UTC",
 "host": {
-"cpu_pct": 0.4,
+"cpu_pct": 0.9,
 "gpu_pct": 0,
-"free_gb": 230.3,
-"uptime": "up 23 days,  8:54, 1 user, load averages: 1.15 1.15 1.11",
-"load": "{ 1.15 1.15 1.11 }"
+"free_gb": 230.0,
+"uptime": "up 23 days,  9:10, 1 user, load averages: 1.12 1.12 1.13",
+"load": "{ 1.12 1.12 1.13 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-22T22:39",
+"name": "vol_compression_ignition",
+"status": "accepted",
+"rationale": "Payer is the short-gamma vol seller (range and strangle writers, mean-reversion bots). They sit in a compressed fast/slow variance regime and are forced to re-hedge or stop out in the direction of the first expansion burst.\nRATIONALE: It is bar-level variance-ratio ignition with ",
+"note": "{\"name\": \"vol_compression_ignition\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.0105}"
+},
+{
 "ts": "2026-11-22T22:08",
 "name": "nfp_preprint_run_clock",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is the liquidity taker who crosses a quote that has widened on one side only. When the spread widens on down-bars and not on up-bars, makers are pulling bids, and the seller pays a stress premium that is refunded once makers return. The family uses `sign` to either fade",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-22T16:31",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is the crowded non-commercial spec (CFTC extreme net position) who must cut gross before a scheduled NFP/FOMC release under risk limits, so they pay for immediacy ahead of the print. Entry is at a fixed lead before the known event and the position is flat once the event pas",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1795214936.130365,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.5,
-"gpu": 0,
-"free_gb": 233.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795215860.176394,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 0.4,
 "gpu": 0,
 "free_gb": 230.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795387769.88681,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.9,
+"gpu": 0,
+"free_gb": 230.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
