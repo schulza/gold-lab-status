@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-22 04:05:13 UTC",
+"generated_at": "2026-11-22 04:20:37 UTC",
 "host": {
-"cpu_pct": 0.4,
+"cpu_pct": 1.5,
 "gpu_pct": 0,
 "free_gb": 230.4,
-"uptime": "up 22 days, 14:25, 1 user, load averages: 1.07 1.08 1.13",
-"load": "{ 1.07 1.08 1.13 }"
+"uptime": "up 22 days, 14:41, 1 user, load averages: 1.29 1.12 1.10",
+"load": "{ 1.29 1.12 1.10 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-22T04:14",
+"name": "hour_benchmark_residual",
+"status": "accepted",
+"rationale": "Payer is the executor working an hourly-benchmark (hourly TWAP or VWAP) mandate. When price runs away from the hour's running mean late in the hour, they either chase it or must catch up. Whoever takes the other side of that residual flow is paid, and the exit is a fixed clock mi",
+"note": "{\"name\": \"hour_benchmark_residual\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.3010875}"
+},
+{
 "ts": "2026-11-22T03:43",
 "name": "paid_spread_stretch_revert",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the range-fade liquidity provider (quoting or leaning against both edges of a tight intraday box). When a compressed box breaks, their inventory limits and stops sit just outside the edge, so they cover into the move. The strategy is two-sided, follows rather than fades,",
 "note": "{\"name\": \"box_break_failed_exit\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.1730125}"
-},
-{
-"ts": "2026-11-21T22:06",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is the slow gold holder (physical or ETF allocator, discretionary PM) who reprices to a real-yield move only after a delay. Positioning is built on the next-day DFII10 print, so the gold-vs-yield gap is the lag we collect.\nRATIONALE: We go with the real-yield shock only whi",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1795148312.804103,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 93.5,
-"gpu": 1,
-"free_gb": 208.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795149266.470218,
 "total": 31310831,
@@ -4452,6 +4441,17 @@
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 0.4,
+"gpu": 0,
+"free_gb": 230.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795321237.020437,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.5,
 "gpu": 0,
 "free_gb": 230.4,
 "dsr_bar": 6.4,
