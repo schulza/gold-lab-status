@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-22 18:58:28 UTC",
+"generated_at": "2026-11-22 19:13:52 UTC",
 "host": {
 "cpu_pct": 0.5,
 "gpu_pct": 0,
-"free_gb": 230.0,
-"uptime": "up 23 days,  5:19, 1 user, load averages: 1.00 1.11 1.15",
-"load": "{ 1.00 1.11 1.15 }"
+"free_gb": 230.3,
+"uptime": "up 23 days,  5:34, 1 user, load averages: 1.36 1.32 1.26",
+"load": "{ 1.36 1.32 1.26 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-22T19:04",
+"name": "range_spread_ignition",
+"status": "rejected",
+"rationale": "Payer is the liquidity provider whose spread is sized to the recent range. When a bar's range-to-spread ratio jumps to a multiple of its trailing mean and the bar closes with a decisive body, the quote is stale and keeps getting picked off in that direction. That makes it a follo",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-22T18:34",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the benchmark-constrained desk or fund that inherits a book at a session handover (Asia\u2192London\u2192NY). When several consecutive blocks each move strongly one way, that desk is still working the parent order and later blocks pay for the immediacy. This is a block-chain follo",
 "note": "{\"name\": \"handover_chain_follow\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.10375}"
-},
-{
-"ts": "2026-11-22T12:57",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is the crowded CFTC non-commercial speculator. At a |z52| extreme they hold the most gap risk. Risk limits force them to cut gross exposure in the hours before a scheduled NFP/FOMC, paying immediacy on a known date.\nThis is a different payer from the short-cover cluster the",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1795201996.646343,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.5,
-"gpu": 0,
-"free_gb": 233.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795202920.829749,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 0.5,
 "gpu": 0,
 "free_gb": 230.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795374832.865479,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.5,
+"gpu": 0,
+"free_gb": 230.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
