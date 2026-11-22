@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-22 11:47:14 UTC",
+"generated_at": "2026-11-22 12:02:38 UTC",
 "host": {
-"cpu_pct": 1.7,
+"cpu_pct": 0.5,
 "gpu_pct": 0,
 "free_gb": 230.1,
-"uptime": "up 22 days, 22:07, 1 user, load averages: 1.05 1.18 1.20",
-"load": "{ 1.05 1.18 1.20 }"
+"uptime": "up 22 days, 22:23, 1 user, load averages: 0.96 1.11 1.13",
+"load": "{ 0.96 1.11 1.13 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-22T11:55",
+"name": null,
+"status": "rejected",
+"rationale": "Payer is the hedger or macro desk that buys immediacy in the hours before a scheduled NFP/FOMC release. The module marks the pre-window run in units of per-bar sigma. After the release it takes the other side of that run (sign param flips to follow) until a fixed clock exit, hour",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-22T11:25",
 "name": "pre_slot_pressure_refund",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the macro hedger or fast-money desk that lifts or hits the offer in the run-up to a scheduled US release (12:30/13:30 UTC, the two DST variants). It buys immediacy and pays spread to do so. The run is one-sided (high path efficiency) and large relative to the bar's o",
 "note": "{\"name\": \"prerelease_paid_run_clock\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.010875}"
-},
-{
-"ts": "2026-11-22T05:46",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is the macro fund or hedger that must be positioned before a scheduled NFP or FOMC release and pays up for immediacy in the final run-up. Its pushed price is a temporary concession that reverts after the print (`sign=-1`), or continues (`sign=+1`), so both sides are measure",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1795176115.414722,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.7,
-"gpu": 0,
-"free_gb": 233.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795177039.546664,
 "total": 31310831,
@@ -4507,6 +4496,17 @@
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 1.7,
+"gpu": 0,
+"free_gb": 230.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795348958.3841548,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.5,
 "gpu": 0,
 "free_gb": 230.1,
 "dsr_bar": 6.4,
