@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-23 20:08:02 UTC",
+"generated_at": "2026-11-23 20:23:27 UTC",
 "host": {
-"cpu_pct": 0.5,
+"cpu_pct": 1.6,
 "gpu_pct": 0,
-"free_gb": 230.2,
-"uptime": "up 24 days,  6:28, 1 user, load averages: 1.22 1.22 1.17",
-"load": "{ 1.22 1.22 1.17 }"
+"free_gb": 229.8,
+"uptime": "up 24 days,  6:44, 1 user, load averages: 1.28 1.18 1.16",
+"load": "{ 1.28 1.18 1.16 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-23T20:11",
+"name": "intrabar_flow_gap_fade_follow",
+"status": "accepted",
+"rationale": "Payer: liquidity providers and stop-based quote-refreshers. Their re-quotes show up as inter-bar gaps (prior close to next open), which mean-revert. Directional flow shows up inside bars (open to close), and it persists while the book is still being worked.\nRATIONALE: The signal ",
+"note": "{\"name\": \"intrabar_flow_gap_fade_follow\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.49798125}"
+},
+{
 "ts": "2026-11-23T19:40",
 "name": "diffusive_drift_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the slow inventory-shading intermediary: dealers and agency desks who mark a large displacement as a one-off and lean against it, then get proven wrong while the price keeps repricing. This is not the hedger or fader families already in the table.\nRATIONALE: It is two-si",
 "note": "{\"name\": \"skip_bar_displacement_follow\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.33873125}"
-},
-{
-"ts": "2026-11-23T14:03",
-"name": null,
-"status": "rejected",
-"rationale": "The payer is crowded CFTC non-commercial positioning, meaning speculators at a 52-week extreme. Risk limits force them to cut gross exposure ahead of scheduled NFP/FOMC prints, so they sell into the event if crowded long and cover if crowded short.\nRATIONALE: The family is two-si",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1795292592.397162,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.4,
-"gpu": 0,
-"free_gb": 231.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795293516.21059,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 0.5,
 "gpu": 0,
 "free_gb": 230.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795465407.034815,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.6,
+"gpu": 0,
+"free_gb": 229.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
