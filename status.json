@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-23 11:54:57 UTC",
+"generated_at": "2026-11-23 12:10:21 UTC",
 "host": {
 "cpu_pct": 1.3,
 "gpu_pct": 0,
-"free_gb": 230.1,
-"uptime": "up 23 days, 22:15, 1 user, load averages: 1.76 1.34 1.24",
-"load": "{ 1.76 1.34 1.24 }"
+"free_gb": 229.0,
+"uptime": "up 23 days, 22:31, 1 user, load averages: 1.18 1.21 1.18",
+"load": "{ 1.18 1.21 1.18 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-23T11:59",
+"name": "overnight_gap_acceptance_follow",
+"status": "accepted",
+"rationale": "Payer: gap-fade day traders who sell the overnight displacement at the London/NY handover and get stopped when price holds beyond the prior-session reference. The signal needs a gap beyond k sigma and a retrace of at most f of the excursion.\nTwo-sided and exposure-symmetric: the ",
+"note": "{\"name\": \"overnight_gap_acceptance_follow\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.04499375}"
+},
+{
 "ts": "2026-11-23T11:28",
 "name": "steady_flow_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the market makers and slow-quote liquidity providers, who adjust partially to medium-sized one-way flow. Informed parents sliced into medium child orders lift them on adverse selection until the quote catches up. Extreme moves (above `hi` sigma) are excluded as forced-li",
 "note": "{\"name\": \"bounded_displacement_follow\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.88476875}"
-},
-{
-"ts": "2026-11-23T05:50",
-"name": null,
-"status": "rejected",
-"rationale": "The payer is slow institutional hedgers and allocators. After an NFP or FOMC print they work the position in tranches over the next day. So the direction of the first `lag_h` hours after the print predicts the flow still to come, which I trade for `hold_h` after a frozen decision",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1795262996.09485,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.0,
-"gpu": 0,
-"free_gb": 231.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795263919.893016,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 1.3,
 "gpu": 0,
 "free_gb": 230.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795435821.6966689,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.3,
+"gpu": 0,
+"free_gb": 229.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
