@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-23 22:11:15 UTC",
+"generated_at": "2026-11-23 22:26:40 UTC",
 "host": {
-"cpu_pct": 0.8,
+"cpu_pct": 2.1,
 "gpu_pct": 0,
-"free_gb": 230.2,
-"uptime": "up 24 days,  8:31, 1 user, load averages: 1.14 1.21 1.17",
-"load": "{ 1.14 1.21 1.17 }"
+"free_gb": 230.3,
+"uptime": "up 24 days,  8:47, 1 user, load averages: 1.02 1.07 1.10",
+"load": "{ 1.02 1.07 1.10 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-23T22:14",
+"name": "breadth_confirmed_drift",
+"status": "accepted",
+"rationale": "The payer is the discretionary fader who anchors on a few large bars. A trend with breadth, meaning a t-stat above threshold and a majority of bars agreeing, is not a jump, so it keeps drifting while faders keep selling or buying into it.\nIt is two-sided (long and short symmetric",
+"note": "{\"name\": \"breadth_confirmed_drift\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.3187625}"
+},
+{
 "ts": "2026-11-23T21:44",
 "name": "unretraced_trend_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is retail CFD and spot accounts that set stops and margin buffers in fixed dollar distances from their entry, not in volatility units. When price has moved k dollars over n bars and is still pushing, their forced exits arrive together and extend the move. Existing famil",
 "note": "{\"name\": \"dollar_displacement_follow\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.504075}"
-},
-{
-"ts": "2026-11-23T16:06",
-"name": "range_overlap_displacement_follow",
-"status": "accepted",
-"rationale": "The payer is passive limit-order providers and range-fading dealers, who get run over when an urgent parent order or a stop cascade moves price. Consecutive bars then stop overlapping in range, which leaves their quotes stale. Gold keeps repricing in the same direction until the ",
-"note": "{\"name\": \"range_overlap_displacement_follow\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.8510625}"
 }
 ],
 "history": [
-{
-"t": 1795299985.079775,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.8,
-"gpu": 0,
-"free_gb": 230.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795300908.7750962,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 0.8,
 "gpu": 0,
 "free_gb": 230.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795472800.141477,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 2.1,
+"gpu": 0,
+"free_gb": 230.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
