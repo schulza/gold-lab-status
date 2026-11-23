@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-23 23:12:52 UTC",
+"generated_at": "2026-11-23 23:28:17 UTC",
 "host": {
-"cpu_pct": 0.8,
+"cpu_pct": 1.2,
 "gpu_pct": 0,
-"free_gb": 230.0,
-"uptime": "up 24 days,  9:33, 1 user, load averages: 1.38 1.23 1.18",
-"load": "{ 1.38 1.23 1.18 }"
+"free_gb": 229.8,
+"uptime": "up 24 days,  9:48, 1 user, load averages: 1.34 1.31 1.23",
+"load": "{ 1.34 1.31 1.23 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-23T23:16",
+"name": "range_implied_drift_follow",
+"status": "accepted",
+"rationale": "Payer is range-sized fade traders and inventory-averse quoters. They size entries and stops from bar high-low ranges, so a net move well beyond what the ranges imply means their fades are underwater, and their forced covering or stop-outs extend it.\nRATIONALE: Signal is net log r",
+"note": "{\"name\": \"range_implied_drift_follow\", \"grid\": 60, \"sec_per_param\": 0.0, \"active_frac\": 0.4205375}"
+},
+{
 "ts": "2026-11-23T22:45",
 "name": "wide_bar_net_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the limit-order liquidity providers (fader quotes at the bar extremes) who get run over by bars that close near their extreme and then have to re-hedge inventory in the same direction. A full-body bar means they were filled against the move and didn't get a refund. The s",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-23T17:07",
-"name": "fresh_extreme_run_follow",
-"status": "rejected",
-"rationale": "Payer is the counter-trend limit sellers (and buyers) resting at the old swing extreme. When a fresh extreme forms far from an old opposite extreme, they are being run through. They add inventory into the move and cover late, so the stale opposite extreme shows their anchor is fa",
-"note": "sandbox: AssertionError: zu speicherhungrig: 48 B je Bar und Parameter (max 40)"
 }
 ],
 "history": [
-{
-"t": 1795303680.5833569,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.6,
-"gpu": 0,
-"free_gb": 230.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795304604.754594,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 0.8,
 "gpu": 0,
 "free_gb": 230.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795476497.569463,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.2,
+"gpu": 0,
+"free_gb": 229.8,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
