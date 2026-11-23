@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-23 12:56:34 UTC",
+"generated_at": "2026-11-23 13:11:58 UTC",
 "host": {
-"cpu_pct": 0.5,
+"cpu_pct": 2.3,
 "gpu_pct": 0,
-"free_gb": 230.3,
-"uptime": "up 23 days, 23:17, 1 user, load averages: 1.09 1.12 1.14",
-"load": "{ 1.09 1.12 1.14 }"
+"free_gb": 230.2,
+"uptime": "up 23 days, 23:32, 1 user, load averages: 1.10 1.08 1.09",
+"load": "{ 1.10 1.08 1.09 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-23T13:01",
+"name": null,
+"status": "rejected",
+"rationale": "Payer is commercial hedgers who sell into the market against managed-money flow. Spec positioning adjusts over weeks to a trend signal, so a 4-week COT net change that agrees with the price displacement marks a leg that has not finished. Hedgers keep taking the other side until t",
+"note": "ast: import not allowed: from goldlab.external"
+},
+{
 "ts": "2026-11-23T12:30",
 "name": "day_range_dwell_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is counter-trend day-range fade desks and limit sellers who size to the average daily range. Once the move passes their budget, they are forced to cover or stop out. That covering is paid to the side that is still pressing.\nRATIONALE: It is two-sided and size-graded by budg",
 "note": "{\"name\": \"fader_budget_exhaustion_follow\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.0027125}"
-},
-{
-"ts": "2026-11-23T06:51",
-"name": "drift_demeaned_trend_hold",
-"status": "accepted",
-"rationale": "Payer is slow-mandate allocators (monthly or quarterly committees, trend-follower sleeves with capped turnover). They scale into a multi-day move only after it has outrun their review lag, so the move keeps paying after it is visible.\nThe signal is the n-day log return minus its ",
-"note": "{\"name\": \"drift_demeaned_trend_hold\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.475125}"
 }
 ],
 "history": [
-{
-"t": 1795266692.3318179,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.8,
-"gpu": 0,
-"free_gb": 231.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795267616.383241,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 0.5,
 "gpu": 0,
 "free_gb": 230.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795439518.9782882,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 2.3,
+"gpu": 0,
+"free_gb": 230.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
