@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-23 12:25:45 UTC",
+"generated_at": "2026-11-23 12:41:10 UTC",
 "host": {
-"cpu_pct": 0.4,
+"cpu_pct": 0.9,
 "gpu_pct": 0,
 "free_gb": 230.3,
-"uptime": "up 23 days, 22:46, 1 user, load averages: 1.53 1.33 1.26",
-"load": "{ 1.53 1.33 1.26 }"
+"uptime": "up 23 days, 23:01, 1 user, load averages: 1.19 1.19 1.21",
+"load": "{ 1.19 1.19 1.21 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-23T12:30",
+"name": "day_range_dwell_follow",
+"status": "accepted",
+"rationale": "Payer is range-fading limit sellers and buyers who stack orders against the day's extreme. When price dwells in the top or bottom of the day-to-date range instead of tagging it and reverting, their stops and covering flow keep pushing price the same way. Fader dwell is measured i",
+"note": "{\"name\": \"day_range_dwell_follow\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.8714}"
+},
+{
 "ts": "2026-11-23T11:59",
 "name": "overnight_gap_acceptance_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is slow-mandate allocators (monthly or quarterly committees, trend-follower sleeves with capped turnover). They scale into a multi-day move only after it has outrun their review lag, so the move keeps paying after it is visible.\nThe signal is the n-day log return minus its ",
 "note": "{\"name\": \"drift_demeaned_trend_hold\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.475125}"
-},
-{
-"ts": "2026-11-23T06:20",
-"name": "bounded_displacement_follow",
-"status": "accepted",
-"rationale": "Payer is the market makers and slow-quote liquidity providers, who adjust partially to medium-sized one-way flow. Informed parents sliced into medium child orders lift them on adverse selection until the quote catches up. Extreme moves (above `hi` sigma) are excluded as forced-li",
-"note": "{\"name\": \"bounded_displacement_follow\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.88476875}"
 }
 ],
 "history": [
-{
-"t": 1795264844.019307,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.2,
-"gpu": 0,
-"free_gb": 232.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795265768.15952,
 "total": 31310831,
@@ -4507,6 +4496,17 @@
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 0.4,
+"gpu": 0,
+"free_gb": 230.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795437670.251915,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.9,
 "gpu": 0,
 "free_gb": 230.3,
 "dsr_bar": 6.4,
