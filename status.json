@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-23 22:42:04 UTC",
+"generated_at": "2026-11-23 22:57:28 UTC",
 "host": {
 "cpu_pct": 0.5,
 "gpu_pct": 0,
-"free_gb": 230.2,
-"uptime": "up 24 days,  9:02, 1 user, load averages: 1.26 1.14 1.10",
-"load": "{ 1.26 1.14 1.10 }"
+"free_gb": 230.0,
+"uptime": "up 24 days,  9:18, 1 user, load averages: 1.05 1.22 1.18",
+"load": "{ 1.05 1.22 1.18 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-23T22:45",
+"name": "wide_bar_net_follow",
+"status": "accepted",
+"rationale": "Payer is the inventory-fading liquidity provider (passive dip-buyers and rally-sellers). Information arrives in wide-range bars, so when wide bars accumulate in one direction these providers keep fading and get run over. Small bars are noise, so the signal sums only signed return",
+"note": "{\"name\": \"wide_bar_net_follow\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.56683125}"
+},
+{
 "ts": "2026-11-23T22:14",
 "name": "breadth_confirmed_drift",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the counter-trend limit sellers (and buyers) resting at the old swing extreme. When a fresh extreme forms far from an old opposite extreme, they are being run through. They add inventory into the move and cover late, so the stale opposite extreme shows their anchor is fa",
 "note": "sandbox: AssertionError: zu speicherhungrig: 48 B je Bar und Parameter (max 40)"
-},
-{
-"ts": "2026-11-23T16:37",
-"name": "dollar_displacement_follow",
-"status": "accepted",
-"rationale": "The payer is retail CFD and spot accounts that set stops and margin buffers in fixed dollar distances from their entry, not in volatility units. When price has moved k dollars over n bars and is still pushing, their forced exits arrive together and extend the move. Existing famil",
-"note": "{\"name\": \"dollar_displacement_follow\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.504075}"
 }
 ],
 "history": [
-{
-"t": 1795301832.63794,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.3,
-"gpu": 0,
-"free_gb": 230.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795302756.763338,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 0.5,
 "gpu": 0,
 "free_gb": 230.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795474648.7636218,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.5,
+"gpu": 0,
+"free_gb": 230.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
