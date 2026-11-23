@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-23 04:12:54 UTC",
+"generated_at": "2026-11-23 04:28:18 UTC",
 "host": {
-"cpu_pct": 1.5,
+"cpu_pct": 2.5,
 "gpu_pct": 0,
-"free_gb": 230.1,
-"uptime": "up 23 days, 14:33, 1 user, load averages: 0.99 1.00 1.04",
-"load": "{ 0.99 1.00 1.04 }"
+"free_gb": 230.0,
+"uptime": "up 23 days, 14:48, 1 user, load averages: 1.14 1.19 1.14",
+"load": "{ 1.14 1.19 1.14 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-23T04:18",
+"name": "quote_restore_refund",
+"status": "rejected",
+"rationale": "Payer is the liquidity taker who sold or bought into a quote-withdrawn book. Spread z-score was above theta, the price moved k sigma, and they paid the widened spread. Once quotes are restored, makers re-centre and the displacement tends to refund.\nRATIONALE: This is not another ",
+"note": "sandbox: NameError: name 'math' is not defined. Did you forget to import 'math'?"
+},
+{
 "ts": "2026-11-23T03:47",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the short-gamma vol seller (range and strangle writers, mean-reversion bots). They sit in a compressed fast/slow variance regime and are forced to re-hedge or stop out in the direction of the first expansion burst.\nRATIONALE: It is bar-level variance-ratio ignition with ",
 "note": "{\"name\": \"vol_compression_ignition\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.0105}"
-},
-{
-"ts": "2026-11-22T22:08",
-"name": "nfp_preprint_run_clock",
-"status": "rejected",
-"rationale": "Payer: macro hedgers and chasers who pre-position into the first-Friday NFP print with market orders and pay for immediacy. They leave a pre-release run that overshoots a volatility-scaled expectation. The strategy takes the other side of that run, or follows it with `sign=+1`, a",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1795235269.1985369,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.5,
-"gpu": 0,
-"free_gb": 232.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795236193.280426,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 1.5,
 "gpu": 0,
 "free_gb": 230.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795408098.928742,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 2.5,
+"gpu": 0,
+"free_gb": 230.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
