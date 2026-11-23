@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-23 09:20:55 UTC",
+"generated_at": "2026-11-23 09:36:19 UTC",
 "host": {
-"cpu_pct": 0.9,
+"cpu_pct": 0.6,
 "gpu_pct": 0,
-"free_gb": 230.3,
-"uptime": "up 23 days, 19:41, 1 user, load averages: 1.16 1.18 1.16",
-"load": "{ 1.16 1.18 1.16 }"
+"free_gb": 230.1,
+"uptime": "up 23 days, 19:56, 1 user, load averages: 1.27 1.29 1.21",
+"load": "{ 1.27 1.29 1.21 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-23T09:25",
+"name": "dwell_balance_follow",
+"status": "accepted",
+"rationale": "Payer is calendar and band-rebalancing mean-reversion mandates, which fade a persistent one-sided dwell around their reference level and are run over when lagging trend capital arrives. This is a follow family, two-sided, and de-meaned against its own trailing average exposure, s",
+"note": "{\"name\": \"dwell_balance_follow\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.14305}"
+},
+{
 "ts": "2026-11-23T08:54",
 "name": "trend_efficacy_scaled",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the rates-linked allocator (gold ETF and macro funds) who rebalances on a lag after a real-yield move. When DFII10 moves sharply, gold's own move over the same window is measured against it. When gold has under-reacted, the strategy holds the catch-up and exits once the ",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-23T03:16",
-"name": "chop_fader_stopout_follow",
-"status": "accepted",
-"rationale": "Payer is the range-fading mean-reversion algo and discretionary band-fader. They size and place stops for a choppy regime, short above the upper band and long below the lower band, and a fresh band breach out of low-efficiency chop forces them to stop out and cover into the move.",
-"note": "{\"name\": \"chop_fader_stopout_follow\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.19909375}"
 }
 ],
 "history": [
-{
-"t": 1795253754.54573,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.6,
-"gpu": 0,
-"free_gb": 232.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795254678.9877608,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 0.9,
 "gpu": 0,
 "free_gb": 230.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795426579.8813381,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.6,
+"gpu": 0,
+"free_gb": 230.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
