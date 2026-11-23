@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-23 23:43:41 UTC",
+"generated_at": "2026-11-23 23:59:05 UTC",
 "host": {
-"cpu_pct": 0.5,
+"cpu_pct": 0.4,
 "gpu_pct": 0,
 "free_gb": 229.8,
-"uptime": "up 24 days, 10:04, 1 user, load averages: 1.45 1.51 1.38",
-"load": "{ 1.45 1.51 1.38 }"
+"uptime": "up 24 days, 10:19, 1 user, load averages: 1.44 1.15 1.18",
+"load": "{ 1.44 1.15 1.18 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-23T23:46",
+"name": "liquid_anchor_displacement_follow",
+"status": "accepted",
+"rationale": "Payer is participants who anchor on prices printed through wide or stale quotes. Liquid-quote VWAP lags those prints, so displacement from the spread-weighted anchor marks flow that is still being absorbed.\nRATIONALE: It is two-sided and follow-only: it goes long or short with th",
+"note": "{\"name\": \"liquid_anchor_displacement_follow\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.8445625}"
+},
+{
 "ts": "2026-11-23T23:16",
 "name": "range_implied_drift_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is vol-targeting CTAs and risk-parity funds. Their target exposure is a deterministic function of trailing return divided by vol. When it moves by more than a threshold, they must trade within the rebalance window and pay for immediacy.\nRATIONALE: The signal is the change i",
 "note": "{\"name\": \"cta_target_change_follow\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.7146125}"
-},
-{
-"ts": "2026-11-23T17:38",
-"name": "marubozu_persistence_follow",
-"status": "rejected",
-"rationale": "Payer is the limit-order liquidity providers (fader quotes at the bar extremes) who get run over by bars that close near their extreme and then have to re-hedge inventory in the same direction. A full-body bar means they were filled against the move and didn't get a refund. The s",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1795305528.6146932,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.6,
-"gpu": 0,
-"free_gb": 230.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795306452.5517492,
 "total": 31310831,
@@ -4507,6 +4496,17 @@
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 0.5,
+"gpu": 0,
+"free_gb": 229.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795478345.913145,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.4,
 "gpu": 0,
 "free_gb": 229.8,
 "dsr_bar": 6.4,
