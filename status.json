@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-23 16:01:36 UTC",
+"generated_at": "2026-11-23 16:17:00 UTC",
 "host": {
-"cpu_pct": 0.4,
+"cpu_pct": 1.8,
 "gpu_pct": 0,
 "free_gb": 230.3,
-"uptime": "up 24 days,  2:22, 1 user, load averages: 1.94 8.13 11.11",
-"load": "{ 1.94 8.13 11.11 }"
+"uptime": "up 24 days,  2:37, 1 user, load averages: 1.29 1.46 4.53",
+"load": "{ 1.29 1.46 4.53 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-23T16:06",
+"name": "range_overlap_displacement_follow",
+"status": "accepted",
+"rationale": "The payer is passive limit-order providers and range-fading dealers, who get run over when an urgent parent order or a stop cascade moves price. Consecutive bars then stop overlapping in range, which leaves their quotes stale. Gold keeps repricing in the same direction until the ",
+"note": "{\"name\": \"range_overlap_displacement_follow\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.8510625}"
+},
+{
 "ts": "2026-11-23T15:35",
 "name": "large_bar_sign_ledger",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is the range-fading discretionary trader who sells the upper part of a multi-day range, or buys the lower part, and holds that position against a persistent rank. Their stops and capitulation keep the move going, and the strategy pays for that flow on both sides, so it does",
 "note": "{\"name\": \"rank_hysteresis_follow\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.4691375}"
-},
-{
-"ts": "2026-11-23T09:55",
-"name": "excursion_asymmetry_follow",
-"status": "accepted",
-"rationale": "Payer is passive liquidity providers and stop-sellers who fade intrabar probes. When the high-minus-open versus open-minus-low excursion asymmetry stays one-sided over n bars, they are being run over repeatedly, and they cover or re-quote in the same direction afterwards.\nRATIONA",
-"note": "{\"name\": \"excursion_asymmetry_follow\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.72739375}"
 }
 ],
 "history": [
-{
-"t": 1795277807.79251,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.8,
-"gpu": 0,
-"free_gb": 231.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795278731.632472,
 "total": 31310831,
@@ -4507,6 +4496,17 @@
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 0.4,
+"gpu": 0,
+"free_gb": 230.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795450620.344661,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.8,
 "gpu": 0,
 "free_gb": 230.3,
 "dsr_bar": 6.4,
