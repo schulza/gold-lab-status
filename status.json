@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-23 11:24:09 UTC",
+"generated_at": "2026-11-23 11:39:33 UTC",
 "host": {
-"cpu_pct": 0.5,
+"cpu_pct": 1.3,
 "gpu_pct": 0,
-"free_gb": 230.1,
-"uptime": "up 23 days, 21:44, 1 user, load averages: 1.44 1.27 1.24",
-"load": "{ 1.44 1.27 1.24 }"
+"free_gb": 230.0,
+"uptime": "up 23 days, 22 hrs, 1 user, load averages: 1.04 1.23 1.23",
+"load": "{ 1.04 1.23 1.23 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-23T11:28",
+"name": "steady_flow_follow",
+"status": "accepted",
+"rationale": "The director's direction was \"none this cycle\", so this is a deliberately narrow, two-sided follow family and not a new lead. The payer is liquidity providers and fade traders who quote against a multi-hour parent order, assume it is one block, and are run over because it is slic",
+"note": "{\"name\": \"steady_flow_follow\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.30471875}"
+},
+{
 "ts": "2026-11-23T10:57",
 "name": "robust_drift_hysteresis",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "The payer is slow institutional hedgers and allocators. After an NFP or FOMC print they work the position in tranches over the next day. So the direction of the first `lag_h` hours after the print predicts the flow still to come, which I trade for `hold_h` after a frozen decision",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-23T05:19",
-"name": "sliced_block_persistence",
-"status": "accepted",
-"rationale": "Payer: allocators and discretionary desks that scale into a repriced level in slices over several hours. They keep buying or selling after the first block, so persistent, evenly spread block returns predict continuation. A single jump bar does not.\nTwo-sided follow. Each block re",
-"note": "{\"name\": \"sliced_block_persistence\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.74715}"
 }
 ],
 "history": [
-{
-"t": 1795261147.682592,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.5,
-"gpu": 0,
-"free_gb": 231.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795262071.962798,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 0.5,
 "gpu": 0,
 "free_gb": 230.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795433973.632587,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.3,
+"gpu": 0,
+"free_gb": 230.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
