@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-23 18:35:37 UTC",
+"generated_at": "2026-11-23 18:51:01 UTC",
 "host": {
 "cpu_pct": 0.5,
 "gpu_pct": 0,
 "free_gb": 230.2,
-"uptime": "up 24 days,  4:56, 1 user, load averages: 1.20 1.23 1.15",
-"load": "{ 1.20 1.23 1.15 }"
+"uptime": "up 24 days,  5:11, 1 user, load averages: 1.22 1.19 1.17",
+"load": "{ 1.22 1.19 1.17 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-23T18:39",
+"name": "band_walk_follow",
+"status": "accepted",
+"rationale": "Band-walk follow. The payer is the Bollinger-style band fader, whose resting limit orders and fixed stops are repeatedly run over when price walks the band instead of reverting. This is the follow side of mean_reversion_band, which sits at 29% positive. It is two-sided and symmet",
+"note": "{\"name\": \"band_walk_follow\", \"grid\": 81, \"sec_per_param\": 0.0, \"active_frac\": 0.442825}"
+},
+{
 "ts": "2026-11-23T18:08",
 "name": "cta_target_change_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is commercial hedgers who sell into the market against managed-money flow. Spec positioning adjusts over weeks to a trend signal, so a 4-week COT net change that agrees with the price displacement marks a leg that has not finished. Hedgers keep taking the other side until t",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-23T12:30",
-"name": "day_range_dwell_follow",
-"status": "accepted",
-"rationale": "Payer is range-fading limit sellers and buyers who stack orders against the day's extreme. When price dwells in the top or bottom of the day-to-date range instead of tagging it and reverting, their stops and covering flow keep pushing price the same way. Fader dwell is measured i",
-"note": "{\"name\": \"day_range_dwell_follow\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.8714}"
 }
 ],
 "history": [
-{
-"t": 1795287048.363005,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.5,
-"gpu": 0,
-"free_gb": 231.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795287972.5558982,
 "total": 31310831,
@@ -4504,6 +4493,17 @@
 },
 {
 "t": 1795458937.830992,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.5,
+"gpu": 0,
+"free_gb": 230.2,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795459861.751461,
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 0.5,
