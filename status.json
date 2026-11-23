@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-23 13:27:23 UTC",
+"generated_at": "2026-11-23 13:42:47 UTC",
 "host": {
-"cpu_pct": 1.7,
+"cpu_pct": 0.8,
 "gpu_pct": 0,
-"free_gb": 229.0,
-"uptime": "up 23 days, 23:48, 1 user, load averages: 1.21 1.17 1.12",
-"load": "{ 1.21 1.17 1.12 }"
+"free_gb": 230.3,
+"uptime": "up 24 days, 3 mins, 1 user, load averages: 1.16 1.11 1.09",
+"load": "{ 1.16 1.11 1.09 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-23T13:32",
+"name": "run_length_asymmetry_follow",
+"status": "accepted",
+"rationale": "Payer is fade-side liquidity providers and counter-trend scalpers. They size against a run assuming geometric run lengths, but a parent order sliced by an execution algo makes one side's completed same-sign runs systematically longer than the other's. They lose by leaning against",
+"note": "{\"name\": \"run_length_asymmetry_follow\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.2492375}"
+},
+{
 "ts": "2026-11-23T13:01",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is slow-rebalancing allocators and hedgers whose repricing diffuses over days, not minutes. Their lag keeps paying a vol-normalised skip-period trend, which excludes the last f\u00b7L bars so the short-term reversal is left out.\nRATIONALE: The family is two-sided and exposure-de",
 "note": "{\"name\": \"diffusion_lag_follow\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.7200625}"
-},
-{
-"ts": "2026-11-23T07:22",
-"name": "fader_budget_exhaustion_follow",
-"status": "accepted",
-"rationale": "Payer is counter-trend day-range fade desks and limit sellers who size to the average daily range. Once the move passes their budget, they are forced to cover or stop out. That covering is paid to the side that is still pressing.\nRATIONALE: It is two-sided and size-graded by budg",
-"note": "{\"name\": \"fader_budget_exhaustion_follow\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.0027125}"
 }
 ],
 "history": [
-{
-"t": 1795268540.532623,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.6,
-"gpu": 0,
-"free_gb": 231.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795269481.792586,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 1.7,
 "gpu": 0,
 "free_gb": 229.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795441367.688353,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.8,
+"gpu": 0,
+"free_gb": 230.3,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
