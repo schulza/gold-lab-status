@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-23 21:40:27 UTC",
+"generated_at": "2026-11-23 21:55:51 UTC",
 "host": {
-"cpu_pct": 1.4,
+"cpu_pct": 0.6,
 "gpu_pct": 0,
-"free_gb": 229.9,
-"uptime": "up 24 days,  8:01, 1 user, load averages: 1.16 1.14 1.17",
-"load": "{ 1.16 1.14 1.17 }"
+"free_gb": 230.2,
+"uptime": "up 24 days,  8:16, 1 user, load averages: 1.18 1.18 1.16",
+"load": "{ 1.18 1.18 1.16 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-23T21:44",
+"name": "unretraced_trend_follow",
+"status": "accepted",
+"rationale": "The payer is the counter-trend fader, who sells into strength with resting limits and fixed stops. In a trend that never retraced past a small fraction of its own net move, their entries never get a fill at a better price. Their stops sit just beyond the start of the leg, and tho",
+"note": "{\"name\": \"unretraced_trend_follow\", \"grid\": 81, \"sec_per_param\": 0.0, \"active_frac\": 0.41691875}"
+},
+{
 "ts": "2026-11-23T21:13",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is passive limit-order providers and range-fading dealers, who get run over when an urgent parent order or a stop cascade moves price. Consecutive bars then stop overlapping in range, which leaves their quotes stale. Gold keeps repricing in the same direction until the ",
 "note": "{\"name\": \"range_overlap_displacement_follow\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.8510625}"
-},
-{
-"ts": "2026-11-23T15:35",
-"name": "large_bar_sign_ledger",
-"status": "rejected",
-"rationale": "Payer is the quote-setting liquidity provider, who sizes quotes off average bar range. When big-range bars repeat in one direction, their quotes are picked off by herded stop and chase flow. They only re-centre once the ledger of large bars stops being one-sided.\nRATIONALE: The s",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1795298137.0238771,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.4,
-"gpu": 0,
-"free_gb": 230.6,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795299061.033818,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 1.4,
 "gpu": 0,
 "free_gb": 229.9,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795470951.6840231,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.6,
+"gpu": 0,
+"free_gb": 230.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
