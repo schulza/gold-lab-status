@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-23 01:08:06 UTC",
+"generated_at": "2026-11-23 01:23:30 UTC",
 "host": {
-"cpu_pct": 1.8,
+"cpu_pct": 1.1,
 "gpu_pct": 0,
-"free_gb": 230.3,
-"uptime": "up 23 days, 11:28, 1 user, load averages: 1.16 1.16 1.16",
-"load": "{ 1.23 1.17 1.16 }"
+"free_gb": 230.1,
+"uptime": "up 23 days, 11:44, 1 user, load averages: 1.53 1.48 1.30",
+"load": "{ 1.53 1.48 1.30 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-23T01:13",
+"name": "prior_close_displacement_clock",
+"status": "accepted",
+"rationale": "Payer is the contrarian liquidity provider and mean-reversion trader who fades a day's displacement from the prior close before the deadline-driven flow (CTA stop-outs, dealer delta-hedging, levered-product rebalancing) has finished arriving. A sigma-normalised move since the pri",
+"note": "{\"name\": \"prior_close_displacement_clock\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.066}"
+},
+{
 "ts": "2026-11-23T00:42",
 "name": "release_paid_push_clock",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the liquidity taker who trades through a spread burst, when quote providers have pulled back. They pay the widened spread and push price through thin quotes, and once the spread normalises, part of that displacement refunds.\nRATIONALE: The entry fires on the burst-end ev",
 "note": "sandbox: NameError: name 'FAMILIES' is not defined"
-},
-{
-"ts": "2026-11-22T19:04",
-"name": "range_spread_ignition",
-"status": "rejected",
-"rationale": "Payer is the liquidity provider whose spread is sized to the recent range. When a bar's range-to-spread ratio jumps to a multiple of its trailing mean and the bar closes with a decisive body, the quote is stale and keeps getting picked off in that direction. That makes it a follo",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1795224178.6669319,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.2,
-"gpu": 0,
-"free_gb": 232.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795225103.1297631,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 1.8,
 "gpu": 0,
 "free_gb": 230.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795397010.3073301,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.1,
+"gpu": 0,
+"free_gb": 230.1,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
