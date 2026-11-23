@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-23 10:22:32 UTC",
+"generated_at": "2026-11-23 10:37:56 UTC",
 "host": {
-"cpu_pct": 1.5,
+"cpu_pct": 0.8,
 "gpu_pct": 0,
 "free_gb": 230.1,
-"uptime": "up 23 days, 20:43, 1 user, load averages: 1.40 1.24 1.19",
-"load": "{ 1.40 1.24 1.19 }"
+"uptime": "up 23 days, 20:58, 1 user, load averages: 1.14 1.15 1.16",
+"load": "{ 1.14 1.15 1.16 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-23T10:26",
+"name": "rank_hysteresis_follow",
+"status": "accepted",
+"rationale": "Payer is the range-fading discretionary trader who sells the upper part of a multi-day range, or buys the lower part, and holds that position against a persistent rank. Their stops and capitulation keep the move going, and the strategy pays for that flow on both sides, so it does",
+"note": "{\"name\": \"rank_hysteresis_follow\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.4691375}"
+},
+{
 "ts": "2026-11-23T09:55",
 "name": "excursion_asymmetry_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the breakout chaser who pays an elevated spread to buy a fresh n-bar high (or sell a low) as the stop cluster is hit, then finds the bar rejected, closing in the bottom (or top) of its range. We take the other side of that stop-run, long or short.\nIt scores the spread-pa",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-23T04:18",
-"name": "quote_restore_refund",
-"status": "rejected",
-"rationale": "Payer is the liquidity taker who sold or bought into a quote-withdrawn book. Spread z-score was above theta, the price moved k sigma, and they paid the widened spread. Once quotes are restored, makers re-centre and the displacement tends to refund.\nRATIONALE: This is not another ",
-"note": "sandbox: NameError: name 'math' is not defined. Did you forget to import 'math'?"
 }
 ],
 "history": [
-{
-"t": 1795257451.308915,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.7,
-"gpu": 0,
-"free_gb": 232.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795258375.3459158,
 "total": 31310831,
@@ -4507,6 +4496,17 @@
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 1.5,
+"gpu": 0,
+"free_gb": 230.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795430276.360394,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.8,
 "gpu": 0,
 "free_gb": 230.1,
 "dsr_bar": 6.4,
