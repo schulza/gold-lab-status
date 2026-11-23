@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-23 04:43:43 UTC",
+"generated_at": "2026-11-23 04:59:06 UTC",
 "host": {
-"cpu_pct": 0.5,
+"cpu_pct": 1.9,
 "gpu_pct": 0,
 "free_gb": 230.4,
-"uptime": "up 23 days, 15:04, 1 user, load averages: 1.11 1.12 1.13",
-"load": "{ 1.11 1.12 1.13 }"
+"uptime": "up 23 days, 15:19, 1 user, load averages: 1.27 1.34 1.22",
+"load": "{ 1.27 1.34 1.22 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-23T04:48",
+"name": "spread_paid_failed_break",
+"status": "rejected",
+"rationale": "Payer is the breakout chaser who pays an elevated spread to buy a fresh n-bar high (or sell a low) as the stop cluster is hit, then finds the bar rejected, closing in the bottom (or top) of its range. We take the other side of that stop-run, long or short.\nIt scores the spread-pa",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-23T04:18",
 "name": "quote_restore_refund",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the short seller or hedger who sold a gold decline and sits on stop-buys just above the recent range. A close through that range after a deep pullback forces the cover.\nRATIONALE: Direction asks for exposure-matched cover. Each bar's exposure is the long cover indica",
 "note": "{\"name\": \"cover_timing_matched_squeeze\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.499475}"
-},
-{
-"ts": "2026-11-22T22:39",
-"name": "vol_compression_ignition",
-"status": "accepted",
-"rationale": "Payer is the short-gamma vol seller (range and strangle writers, mean-reversion bots). They sit in a compressed fast/slow variance regime and are forced to re-hedge or stop out in the direction of the first expansion burst.\nRATIONALE: It is bar-level variance-ratio ignition with ",
-"note": "{\"name\": \"vol_compression_ignition\", \"grid\": 192, \"sec_per_param\": 0.0, \"active_frac\": 0.0105}"
 }
 ],
 "history": [
-{
-"t": 1795237117.387118,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 2.5,
-"gpu": 0,
-"free_gb": 232.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795238041.895484,
 "total": 31310831,
@@ -4507,6 +4496,17 @@
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 0.5,
+"gpu": 0,
+"free_gb": 230.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795409946.978527,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.9,
 "gpu": 0,
 "free_gb": 230.4,
 "dsr_bar": 6.4,
