@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-24 01:16:06 UTC",
+"generated_at": "2026-11-24 01:31:30 UTC",
 "host": {
-"cpu_pct": 1.4,
+"cpu_pct": 0.5,
 "gpu_pct": 0,
-"free_gb": 229.8,
-"uptime": "up 24 days, 11:36, 1 user, load averages: 1.29 1.23 1.19",
-"load": "{ 1.29 1.23 1.19 }"
+"free_gb": 229.7,
+"uptime": "up 24 days, 11:52, 1 user, load averages: 1.40 1.28 1.20",
+"load": "{ 1.40 1.28 1.20 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-24T01:18",
+"name": "vol_scaled_drift_graded",
+"status": "accepted",
+"rationale": "Payer: discretionary counter-trend traders and hedgers who size by price level, not by realised-volatility units. They under-adjust to a move that is large relative to current vol, so they keep fading it while trend allocators keep adding. The position is two-sided and graded by ",
+"note": "{\"name\": \"vol_scaled_drift_graded\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 0.410125}"
+},
+{
 "ts": "2026-11-24T00:48",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer: the counterparties of slow, diffusive parent-order executors (benchmark and pension rebalancers, vol-target funds). They are paid by the market for immediacy only when the drift is smooth. Lumpy, jump-driven moves are news, and news is already priced.\nRATIONALE: The family",
 "note": "{\"name\": \"diffusive_drift_follow\", \"grid\": 162, \"sec_per_param\": 0.0, \"active_frac\": 0.41209375}"
-},
-{
-"ts": "2026-11-23T19:10",
-"name": "chop_regime_exit_follow",
-"status": "accepted",
-"rationale": "Payer is range-fade traders (grid and mean-reversion desks) who built inventory while the slow efficiency ratio was low. A sudden high fast efficiency ratio is their stop trigger, and their forced covering extends the move in its own direction.\nIt is two-sided and follows the mov",
-"note": "{\"name\": \"chop_regime_exit_follow\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.2509}"
 }
 ],
 "history": [
-{
-"t": 1795311071.666411,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 2.6,
-"gpu": 0,
-"free_gb": 230.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795311995.811701,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 1.4,
 "gpu": 0,
 "free_gb": 229.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795483890.932369,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.5,
+"gpu": 0,
+"free_gb": 229.7,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
