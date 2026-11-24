@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-24 20:03:21 UTC",
+"generated_at": "2026-11-24 20:18:44 UTC",
 "host": {
-"cpu_pct": 1.7,
+"cpu_pct": 1.1,
 "gpu_pct": 0,
-"free_gb": 217.5,
-"uptime": "up 25 days,  6:24, 2 users, load averages: 1.09 1.30 2.13",
-"load": "{ 1.09 1.30 2.13 }"
+"free_gb": 218.4,
+"uptime": "up 25 days,  6:39, 2 users, load averages: 1.27 1.39 1.64",
+"load": "{ 1.27 1.39 1.64 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-24T20:13",
+"name": "gold_last_trade_matched_window",
+"status": "accepted",
+"rationale": "Payer is holders of the expiring COMEX gold contract who didn't roll by the third-last business day of the delivery month, which is the hard last-trade date. They must close in a thin expiring book and pay for immediacy at that fixed deadline. The direction of the squaring flow i",
+"note": "{\"name\": \"gold_last_trade_matched_window\", \"grid\": 144, \"sec_per_param\": 0.0, \"active_frac\": 0.00225}"
+},
+{
 "ts": "2026-11-24T19:42",
 "name": "month_end_allocator_rebalance",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "This is a stopgap, not a new idea. Your direction says to write nothing until the 15 pending families have rows, but this slot still needs a module. I used a dated obligation that no row in the table covers: the COMEX gold futures last-trade date, which is the third-last business",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-24T14:04",
-"name": null,
-"status": "rejected",
-"rationale": "Payer is the pre-release chaser. Desks with event-risk limits, and stops sized for normal volatility, have to cut or hedge before a scheduled NFP/FOMC print. That is a dated obligation and is not a fader trade. Exposure is two-sided (the sign follows the pre-event run), flat outs",
-"note": "ast: import not allowed: from goldlab.external"
 }
 ],
 "history": [
-{
-"t": 1795378529.02109,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.5,
-"gpu": 0,
-"free_gb": 230.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795379453.014936,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 1.7,
 "gpu": 0,
 "free_gb": 217.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795551524.171006,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.1,
+"gpu": 0,
+"free_gb": 218.4,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
