@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-24 03:50:07 UTC",
+"generated_at": "2026-11-24 04:05:31 UTC",
 "host": {
-"cpu_pct": 0.6,
+"cpu_pct": 1.6,
 "gpu_pct": 0,
-"free_gb": 229.6,
-"uptime": "up 24 days, 14:10, 1 user, load averages: 1.00 1.14 1.16",
-"load": "{ 1.00 1.14 1.16 }"
+"free_gb": 229.5,
+"uptime": "up 24 days, 14:26, 1 user, load averages: 1.03 1.10 1.13",
+"load": "{ 1.03 1.10 1.13 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-24T03:52",
+"name": "one_sided_acceptance_follow",
+"status": "accepted",
+"rationale": "Payer is the dip-buyer and rally-seller who fades a stretch from the rolling mean. Their stops are hit when price stays on one side of the anchor with at most m crossings in the window. That one-sided acceptance is the signal, not a volatility gate or a fade.\nIt is two-sided and ",
+"note": "{\"name\": \"one_sided_acceptance_follow\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.273275}"
+},
+{
 "ts": "2026-11-24T03:21",
 "name": "bounce_failure_continuation",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is the discretionary fader who anchors on a few large bars. A trend with breadth, meaning a t-stat above threshold and a majority of bars agreeing, is not a jump, so it keeps drifting while faders keep selling or buying into it.\nIt is two-sided (long and short symmetric",
 "note": "{\"name\": \"breadth_confirmed_drift\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.3187625}"
-},
-{
-"ts": "2026-11-23T21:44",
-"name": "unretraced_trend_follow",
-"status": "accepted",
-"rationale": "The payer is the counter-trend fader, who sells into strength with resting limits and fixed stops. In a trend that never retraced past a small fraction of its own net move, their entries never get a fill at a better price. Their stops sit just beyond the start of the leg, and tho",
-"note": "{\"name\": \"unretraced_trend_follow\", \"grid\": 81, \"sec_per_param\": 0.0, \"active_frac\": 0.41691875}"
 }
 ],
 "history": [
-{
-"t": 1795320313.110498,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.4,
-"gpu": 0,
-"free_gb": 230.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795321237.020437,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 0.6,
 "gpu": 0,
 "free_gb": 229.6,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795493131.837836,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.6,
+"gpu": 0,
+"free_gb": 229.5,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
