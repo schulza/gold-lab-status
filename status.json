@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-24 04:51:43 UTC",
+"generated_at": "2026-11-24 05:07:07 UTC",
 "host": {
-"cpu_pct": 0.6,
+"cpu_pct": 0.5,
 "gpu_pct": 0,
-"free_gb": 229.5,
-"uptime": "up 24 days, 15:12, 1 user, load averages: 1.35 1.22 1.18",
-"load": "{ 1.35 1.22 1.18 }"
+"free_gb": 229.6,
+"uptime": "up 24 days, 15:27, 1 user, load averages: 1.33 1.26 1.21",
+"load": "{ 1.33 1.26 1.21 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-24T04:54",
+"name": "sliced_breadth_follow",
+"status": "accepted",
+"rationale": "Payer is the passive limit-order rester. A parent order sliced evenly over many bars fills against these resters bar after bar. The slicing shows up as a one-sided bar-sign streak with no dominant jump bar.\nRATIONALE: It is two-sided (long and short) follow, so there is no beta t",
+"note": "{\"name\": \"sliced_breadth_follow\", \"grid\": 54, \"sec_per_param\": 0.0, \"active_frac\": 0.33923125}"
+},
+{
 "ts": "2026-11-24T04:23",
 "name": "semirange_imbalance_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Payer is range-sized fade traders and inventory-averse quoters. They size entries and stops from bar high-low ranges, so a net move well beyond what the ranges imply means their fades are underwater, and their forced covering or stop-outs extend it.\nRATIONALE: Signal is net log r",
 "note": "{\"name\": \"range_implied_drift_follow\", \"grid\": 60, \"sec_per_param\": 0.0, \"active_frac\": 0.4205375}"
-},
-{
-"ts": "2026-11-23T22:45",
-"name": "wide_bar_net_follow",
-"status": "accepted",
-"rationale": "Payer is the inventory-fading liquidity provider (passive dip-buyers and rally-sellers). Information arrives in wide-range bars, so when wide bars accumulate in one direction these providers keep fading and get run over. Small bars are noise, so the signal sums only signed return",
-"note": "{\"name\": \"wide_bar_net_follow\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.56683125}"
 }
 ],
 "history": [
-{
-"t": 1795324009.26929,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.5,
-"gpu": 0,
-"free_gb": 230.2,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795324933.1567092,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 0.6,
 "gpu": 0,
 "free_gb": 229.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795496827.590994,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 0.5,
+"gpu": 0,
+"free_gb": 229.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
