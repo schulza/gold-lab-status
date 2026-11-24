@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-24 14:53:37 UTC",
+"generated_at": "2026-11-24 15:09:01 UTC",
 "host": {
-"cpu_pct": 1.2,
+"cpu_pct": 1.1,
 "gpu_pct": 0,
 "free_gb": 217.0,
-"uptime": "up 25 days,  1:14, 2 users, load averages: 1.32 1.55 1.47",
-"load": "{ 1.32 1.55 1.47 }"
+"uptime": "up 25 days,  1:29, 2 users, load averages: 1.51 1.42 1.42",
+"load": "{ 1.51 1.42 1.42 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-24T15:06",
+"name": "quarter_end_rebalance_fade",
+"status": "rejected",
+"rationale": "Payer is the trend-follower or momentum holder who is long the quarter's winner (or short its loser) into the final days of a calendar quarter. Balanced funds and pensions must rebalance back to target weights on the quarter-end date. That is a dated, mechanical obligation, and i",
+"note": "sandbox: AssertionError: signal is identically zero"
+},
+{
 "ts": "2026-11-24T14:35",
 "name": "delivery_clock_window",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "This proposal is a monthly COMEX gold option expiry pin, a dated mechanical obligation. It uses the 4th-last-business-day rule, which I think is absent from the table. It is not a follow, drift or fader trade. That matches the director's rule for new families, except that the 15 ",
 "note": "sandbox: AssertionError: signal is identically zero"
-},
-{
-"ts": "2026-11-24T08:59",
-"name": "friday_strike_pull",
-"status": "accepted",
-"rationale": "The director's note says to write nothing new until the 15 pending families have stats rows. This format needs a module, so this one is narrow and two-sided, and it has no fader as payer.\nRATIONALE: Payer: holders of short-dated Friday weekly gold options. Dealers who are long ga",
-"note": "{\"name\": \"friday_strike_pull\", \"grid\": 36, \"sec_per_param\": 0.0, \"active_frac\": 0.02131875}"
 }
 ],
 "history": [
-{
-"t": 1795360047.3853598,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.0,
-"gpu": 0,
-"free_gb": 229.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795360971.895019,
 "total": 31310831,
@@ -4507,6 +4496,17 @@
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 1.2,
+"gpu": 0,
+"free_gb": 217.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795532941.702291,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.1,
 "gpu": 0,
 "free_gb": 217.0,
 "dsr_bar": 6.4,
