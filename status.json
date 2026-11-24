@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-24 02:48:31 UTC",
+"generated_at": "2026-11-24 03:03:55 UTC",
 "host": {
-"cpu_pct": 0.5,
+"cpu_pct": 1.2,
 "gpu_pct": 0,
-"free_gb": 229.5,
-"uptime": "up 24 days, 13:09, 1 user, load averages: 1.18 1.27 1.21",
-"load": "{ 1.18 1.27 1.21 }"
+"free_gb": 229.6,
+"uptime": "up 24 days, 13:24, 1 user, load averages: 1.11 1.07 1.12",
+"load": "{ 1.11 1.07 1.12 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-24T02:50",
+"name": "jump_clipped_drift_follow",
+"status": "accepted",
+"rationale": "Payer: slow-rebalancing allocators and benchmarked funds. They underreact to diffusive information (many small same-sign steps) and trade the jumps. Jump-clipped drift isolates the slow component, and the strategy is two-sided, so it does not harvest beta.\nRATIONALE: This is not ",
+"note": "{\"name\": \"jump_clipped_drift_follow\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.23154375}"
+},
+{
 "ts": "2026-11-24T02:20",
 "name": "benchmark_lag_displacement_follow",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "Payer is the late-arriving mandate-bound money. When non-commercial positioning is still being built (4-week COT change or 52-week level) and price has already been moving the same way, trend-following funds and CTAs are forced by risk and rebalance rules to keep adding in follow",
 "note": "ast: import not allowed: from goldlab.external"
-},
-{
-"ts": "2026-11-23T20:42",
-"name": "lag_sign_drift_follow",
-"status": "accepted",
-"rationale": "Payer is the parent-order executor whose child fills alternate bid and ask. One-bar signs read that drift as noise, so the order's remaining size gets filled late. The signal uses lag-L sign persistence, which is immune to bid-ask bounce. It is demeaned by a trailing base rate, s",
-"note": "{\"name\": \"lag_sign_drift_follow\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.354975}"
 }
 ],
 "history": [
-{
-"t": 1795316616.61359,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.5,
-"gpu": 0,
-"free_gb": 230.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795317540.832573,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 0.5,
 "gpu": 0,
 "free_gb": 229.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795489435.4527092,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.2,
+"gpu": 0,
+"free_gb": 229.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
