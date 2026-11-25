@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-25 06:49:06 UTC",
+"generated_at": "2026-11-25 07:04:28 UTC",
 "host": {
-"cpu_pct": 1.2,
+"cpu_pct": 1.4,
 "gpu_pct": 0,
-"free_gb": 217.3,
-"uptime": "up 25 days, 17:09, 2 users, load averages: 1.18 1.33 1.31",
-"load": "{ 1.18 1.33 1.31 }"
+"free_gb": 217.2,
+"uptime": "up 25 days, 17:25, 2 users, load averages: 1.36 1.33 1.32",
+"load": "{ 1.36 1.33 1.32 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-25T06:57",
+"name": null,
+"status": "rejected",
+"rationale": "",
+"note": "no python block in reply"
+},
+{
 "ts": "2026-11-25T06:27",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "This breaks the director's \"write nothing\" hold, so only measure it after the 15 pending families have rows. I think it's distinct, but I haven't checked it against `goldlab/strategies.py` or run the sandbox tests.\nRATIONALE: The payer is whoever sells into dated, calendar-driven",
 "note": "{\"name\": \"month_start_dca_spread\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.048}"
-},
-{
-"ts": "2026-11-25T00:51",
-"name": "month_end_mtd_rebalance",
-"status": "rejected",
-"rationale": "Payer: month-end rebalancers (balanced funds, pension and reserve managers) who must trade back to target weights in the last days of the month. They size the trade by the month-to-date move, not by price, so the move to be reversed is known.\nTwo-sided by construction: long after",
-"note": "sandbox: AssertionError: signal is identically zero"
 }
 ],
 "history": [
-{
-"t": 1795417339.489054,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 0.4,
-"gpu": 0,
-"free_gb": 230.4,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795418263.432238,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 1.2,
 "gpu": 0,
 "free_gb": 217.3,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795590268.813628,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.4,
+"gpu": 0,
+"free_gb": 217.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
