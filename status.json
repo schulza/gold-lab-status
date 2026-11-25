@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-25 21:31:06 UTC",
+"generated_at": "2026-11-25 21:46:28 UTC",
 "host": {
 "cpu_pct": 2.1,
 "gpu_pct": 0,
-"free_gb": 217.8,
-"uptime": "up 26 days,  7:51, 2 users, load averages: 1.94 2.90 3.05",
-"load": "{ 1.94 2.90 3.05 }"
+"free_gb": 217.0,
+"uptime": "up 26 days,  8:07, 2 users, load averages: 4.62 3.46 3.27",
+"load": "{ 4.62 3.46 3.27 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-25T21:37",
+"name": "constant_long_baseline",
+"status": "accepted",
+"rationale": "Hold. I have no new payer, and the direction says to stop proposing them.\nRATIONALE: The format forces a module, and an all-zero signal is rejected by the sandbox, so this is a one-trial constant-long beta control. It has no payer and makes no edge claim.\nRATIONALE: Its row gives",
+"note": "{\"name\": \"constant_long_baseline\", \"grid\": 1, \"sec_per_param\": 0.0, \"active_frac\": 1.0}"
+},
+{
 "ts": "2026-11-25T21:07",
 "name": "hour_block_sign_control",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "Hold on new payers, per the director. A bare \"hold\" has already been rejected twice, as an all-zero signal and as a reply with no code block.\nRATIONALE: This is a null control, not a payer. It is a two-sided, zero-expected-mean exposure with a pseudo-random sign per UTC day, so t",
 "note": "{\"name\": \"hashed_day_sign_control\", \"grid\": 8, \"sec_per_param\": 0.0, \"active_frac\": 0.252}"
-},
-{
-"ts": "2026-11-25T15:33",
-"name": "daily_target_exhaustion",
-"status": "accepted",
-"rationale": "Payer is the discretionary day trader with a fixed take-profit at about one trailing daily range from the day open. Once that fill clusters, the stretched price has lost its marginal buyer or seller, and the late chaser pays the reversion.\nThis is two-sided and symmetric by const",
-"note": "{\"name\": \"daily_target_exhaustion\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.08153125}"
 }
 ],
 "history": [
-{
-"t": 1795470027.576331,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.4,
-"gpu": 0,
-"free_gb": 229.9,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795470951.6840231,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 2.1,
 "gpu": 0,
 "free_gb": 217.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795643188.88072,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 2.1,
+"gpu": 0,
+"free_gb": 217.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
