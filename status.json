@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-27 20:55:57 UTC",
+"generated_at": "2026-11-27 21:11:22 UTC",
 "host": {
-"cpu_pct": 3.6,
+"cpu_pct": 4.1,
 "gpu_pct": 1,
-"free_gb": 214.0,
-"uptime": "up 10:34, 22 users, load averages: 0.89 0.89 0.94",
-"load": "{ 0.89 0.89 0.94 }"
+"free_gb": 213.6,
+"uptime": "up 10:49, 22 users, load averages: 0.82 0.83 0.87",
+"load": "{ 0.82 0.83 0.87 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-27T21:01",
+"name": "skew_scaled_long_control",
+"status": "accepted",
+"rationale": "This is a control, not a new fade. The payer is lottery-seeking longs, who overpay for positively skewed exposure. Holding gold long only while trailing return skew is negative collects that premium. The `pos` mode is the placebo.\nRATIONALE: It is long-biased with a graded floor,",
+"note": "{\"name\": \"skew_scaled_long_control\", \"grid\": 32, \"sec_per_param\": 0.0, \"active_frac\": 0.7464375}"
+},
+{
 "ts": "2026-11-27T20:30",
 "name": "vov_scaled_long_control",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "",
 "note": "no python block in reply"
-},
-{
-"ts": "2026-11-27T14:57",
-"name": "rebalance_cost_control",
-"status": "accepted",
-"rationale": "The director's direction is \"worth new families: none\", so I'm not proposing a new payer. A reply with no code block is rejected, so this is the smallest module that fits the \"favour controls\" instruction.\nRATIONALE: It is a rebalance-cost control. Exposure is a constant long lev",
-"note": "{\"name\": \"rebalance_cost_control\", \"grid\": 60, \"sec_per_param\": 0.0, \"active_frac\": 0.89575}"
 }
 ],
 "history": [
-{
-"t": 1795640420.779852,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 4.8,
-"gpu": 0,
-"free_gb": 217.1,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795641343.519576,
 "total": 31310831,
@@ -4520,6 +4509,17 @@
 "cpu": 3.6,
 "gpu": 1,
 "free_gb": 214.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795813882.257931,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 4.1,
+"gpu": 1,
+"free_gb": 213.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
