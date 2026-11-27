@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-27 19:54:20 UTC",
+"generated_at": "2026-11-27 20:09:45 UTC",
 "host": {
 "cpu_pct": 3.5,
 "gpu_pct": 1,
 "free_gb": 216.0,
-"uptime": "up  9:32, 22 users, load averages: 0.78 0.85 0.83",
-"load": "{ 0.78 0.85 0.83 }"
+"uptime": "up  9:47, 22 users, load averages: 1.09 0.91 0.85",
+"load": "{ 1.09 0.91 0.85 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-27T20:00",
+"name": "downside_vol_target_long_control",
+"status": "accepted",
+"rationale": "Control only, per the direction (\"favour the three controls so the beta baseline is measured first\"). It is a long-only gold exposure sized by a downside-semideviation volatility target, the only variant not already covered by `vol_scaled_long_control` or `cushion_scaled_long_con",
+"note": "{\"name\": \"downside_vol_target_long_control\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 1.0}"
+},
+{
 "ts": "2026-11-27T19:30",
 "name": "drift_tstat_scaled_control",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "This is a cost/turnover control, not an edge claim. It names no payer, and the direction asks for controls first. It alternates a fixed exposure by bar-count clock, so its Sharpe shows what pure turnover costs at each period, and that makes the constant-long beta baseline compara",
 "note": "{\"name\": \"cost_floor_flip_control\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.75}"
-},
-{
-"ts": "2026-11-27T13:56",
-"name": "boundary_gap_pressure",
-"status": "accepted",
-"rationale": "The payer is session-boundary quote providers. They widen and re-centre quotes at bar boundaries, so open-vs-prior-close gaps carry inventory pressure that has not been refunded yet. Intrabar moves are not used, so this is not a neighbour of the spread, jump, wick or range-edge f",
-"note": "{\"name\": \"boundary_gap_pressure\", \"grid\": 64, \"sec_per_param\": 0.0, \"active_frac\": 0.66455}"
 }
 ],
 "history": [
-{
-"t": 1795636728.9483252,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.5,
-"gpu": 0,
-"free_gb": 218.5,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795637651.755295,
 "total": 31310831,
@@ -4515,6 +4504,17 @@
 },
 {
 "t": 1795809260.687299,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.5,
+"gpu": 1,
+"free_gb": 216.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795810185.0256698,
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 3.5,
