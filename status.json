@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-27 09:13:33 UTC",
+"generated_at": "2026-11-27 09:28:58 UTC",
 "host": {
-"cpu_pct": 4.2,
+"cpu_pct": 1.3,
 "gpu_pct": 1,
-"free_gb": 215.8,
-"uptime": "up 1 day, 46 mins, 18 users, load averages: 1.50 1.32 2.15",
-"load": "{ 1.50 1.32 2.15 }"
+"free_gb": 216.2,
+"uptime": "up 1 day,  1:01, 18 users, load averages: 0.63 0.88 1.31",
+"load": "{ 0.63 0.88 1.31 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-27T09:15",
+"name": "duty_cycle_long_control",
+"status": "accepted",
+"rationale": "This is a control, not an edge hunt, so it has no payer. It measures how much of constant-long's Sharpe survives when exposure is cut to a fixed duty cycle, and how much toggling cost that adds.\nRATIONALE: The direction says to measure the beta baseline first and to propose no mo",
+"note": "{\"name\": \"duty_cycle_long_control\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.4}"
+},
+{
 "ts": "2026-11-27T08:45",
 "name": "lagged_sign_placebo_control",
 "status": "accepted",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is market-order takers who buy at the top of a stable rolling range and sell at the bottom. They pay the full spread to cross, and no breakout follows when the range isn't expanding.\nIt is two-sided by construction (long at the bottom, short at the top), so it can't col",
 "note": "{\"name\": \"stable_range_edge_fade\", \"grid\": 108, \"sec_per_param\": 0.0, \"active_frac\": 0.41400625}"
-},
-{
-"ts": "2026-11-27T03:11",
-"name": null,
-"status": "rejected",
-"rationale": "",
-"note": "no python block in reply"
 }
 ],
 "history": [
-{
-"t": 1795598665.765833,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 1.7,
-"gpu": 0,
-"free_gb": 218.7,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795599588.306767,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 4.2,
 "gpu": 1,
 "free_gb": 215.8,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795771738.500916,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.3,
+"gpu": 1,
+"free_gb": 216.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
