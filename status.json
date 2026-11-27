@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-27 13:44:38 UTC",
+"generated_at": "2026-11-27 14:00:02 UTC",
 "host": {
-"cpu_pct": 1.5,
+"cpu_pct": 3.7,
 "gpu_pct": 1,
-"free_gb": 216.1,
-"uptime": "up  3:22, 22 users, load averages: 12.05 5.49 3.25",
-"load": "{ 12.05 5.49 3.25 }"
+"free_gb": 216.0,
+"uptime": "up  3:38, 22 users, load averages: 0.99 1.80 2.43",
+"load": "{ 0.99 1.80 2.43 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-27T13:56",
+"name": "boundary_gap_pressure",
+"status": "accepted",
+"rationale": "The payer is session-boundary quote providers. They widen and re-centre quotes at bar boundaries, so open-vs-prior-close gaps carry inventory pressure that has not been refunded yet. Intrabar moves are not used, so this is not a neighbour of the spread, jump, wick or range-edge f",
+"note": "{\"name\": \"boundary_gap_pressure\", \"grid\": 64, \"sec_per_param\": 0.0, \"active_frac\": 0.66455}"
+},
+{
 "ts": "2026-11-27T13:25",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "This is a control, not a new payer. It matches the director's \"controls first\" line and has no payer, by design.\nRATIONALE: The position is the sign of a return window that ended `lag` bars ago, so it is stale by construction. If it clears the constant-long Sharpe, the gain is be",
 "note": "{\"name\": \"lagged_sign_placebo_control\", \"grid\": 32, \"sec_per_param\": 0.0, \"active_frac\": 0.9666}"
-},
-{
-"ts": "2026-11-27T08:14",
-"name": "lagged_sign_placebo_control",
-"status": "rejected",
-"rationale": "This is a control, not a new payer, in line with the director's push to measure beta first. It holds a constant long level plus an overlay on the sign of a return window that ended `lag` bars ago.\nRATIONALE: The overlay is a stale placebo: any positive-Sharpe result relative to `",
-"note": "sandbox: NameError: name 'FAMILIES' is not defined"
 }
 ],
 "history": [
-{
-"t": 1795614367.482601,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 2.5,
-"gpu": 0,
-"free_gb": 215.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795615290.015873,
 "total": 31310831,
@@ -4520,6 +4509,17 @@
 "cpu": 1.5,
 "gpu": 1,
 "free_gb": 216.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795788002.291266,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.7,
+"gpu": 1,
+"free_gb": 216.0,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
