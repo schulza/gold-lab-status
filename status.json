@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-27 08:42:44 UTC",
+"generated_at": "2026-11-27 08:58:08 UTC",
 "host": {
-"cpu_pct": 20.3,
-"gpu_pct": 8,
-"free_gb": 216.0,
-"uptime": "up 1 day, 15 mins, 18 users, load averages: 8.78 6.49 8.21",
-"load": "{ 8.78 6.49 8.21 }"
+"cpu_pct": 4.2,
+"gpu_pct": 4,
+"free_gb": 217.2,
+"uptime": "up 1 day, 30 mins, 18 users, load averages: 1.16 1.95 4.05",
+"load": "{ 1.16 1.95 4.05 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-27T08:45",
+"name": "lagged_sign_placebo_control",
+"status": "accepted",
+"rationale": "This is a control, not a new payer. It matches the director's \"controls first\" line and has no payer, by design.\nRATIONALE: The position is the sign of a return window that ended `lag` bars ago, so it is stale by construction. If it clears the constant-long Sharpe, the gain is be",
+"note": "{\"name\": \"lagged_sign_placebo_control\", \"grid\": 32, \"sec_per_param\": 0.0, \"active_frac\": 0.9666}"
+},
+{
 "ts": "2026-11-27T08:14",
 "name": "lagged_sign_placebo_control",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "rejected",
 "rationale": "",
 "note": "no python block in reply"
-},
-{
-"ts": "2026-11-27T02:41",
-"name": "wick_edge_fade",
-"status": "accepted",
-"rationale": "The payer is breakout and stop-chasing participants who enter at the edge of a wick-heavy range. In that regime, bar ranges are large compared with net close-to-close progress, so the edge touch is liquidity-provider inventory being absorbed, not information.\nRATIONALE: The posit",
-"note": "{\"name\": \"wick_edge_fade\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.2710625}"
 }
 ],
 "history": [
-{
-"t": 1795596819.7221708,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 2.7,
-"gpu": 0,
-"free_gb": 217.0,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795597743.042046,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 20.3,
 "gpu": 8,
 "free_gb": 216.0,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795769888.607826,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 4.2,
+"gpu": 4,
+"free_gb": 217.2,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
