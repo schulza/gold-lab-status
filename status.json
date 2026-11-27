@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-27 08:11:52 UTC",
+"generated_at": "2026-11-27 08:27:18 UTC",
 "host": {
-"cpu_pct": 12.4,
+"cpu_pct": 15.2,
 "gpu_pct": 1,
-"free_gb": 222.5,
-"uptime": "up 23:42, 18 users, load averages: 5.19 4.13 3.29",
-"load": "{ 5.19 4.13 3.29 }"
+"free_gb": 217.6,
+"uptime": "up 23:59, 18 users, load averages: 24.82 20.14 12.47",
+"load": "{ 24.82 20.14 12.47 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-27T08:14",
+"name": "lagged_sign_placebo_control",
+"status": "rejected",
+"rationale": "This is a control, not a new payer, in line with the director's push to measure beta first. It holds a constant long level plus an overlay on the sign of a return window that ended `lag` bars ago.\nRATIONALE: The overlay is a stale placebo: any positive-Sharpe result relative to `",
+"note": "sandbox: NameError: name 'FAMILIES' is not defined"
+},
+{
 "ts": "2026-11-27T07:44",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The payer is breakout and stop-chasing participants who enter at the edge of a wick-heavy range. In that regime, bar ranges are large compared with net close-to-close progress, so the edge touch is liquidity-provider inventory being absorbed, not information.\nRATIONALE: The posit",
 "note": "{\"name\": \"wick_edge_fade\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.2710625}"
-},
-{
-"ts": "2026-11-27T02:11",
-"name": "jump_share_regime_displacement",
-"status": "accepted",
-"rationale": "The payer is stop-run chasers and momentum entrants. They buy displacement that one jump bar produced, which is thin-book liquidity and not information, so the strategy fades it. When the same displacement was built evenly over many bars, it is accumulated flow, so the strategy f",
-"note": "{\"name\": \"jump_share_regime_displacement\", \"grid\": 72, \"sec_per_param\": 0.0, \"active_frac\": 0.15090625}"
 }
 ],
 "history": [
-{
-"t": 1795594971.50703,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 77.9,
-"gpu": 0,
-"free_gb": 217.8,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795595895.321515,
 "total": 31310831,
@@ -4509,6 +4498,17 @@
 "cpu": 12.4,
 "gpu": 1,
 "free_gb": 222.5,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795768038.288818,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 15.2,
+"gpu": 1,
+"free_gb": 217.6,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
