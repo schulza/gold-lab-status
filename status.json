@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-28 02:04:01 UTC",
+"generated_at": "2026-11-28 02:19:25 UTC",
 "host": {
-"cpu_pct": 3.5,
+"cpu_pct": 3.6,
 "gpu_pct": 1,
-"free_gb": 214.4,
-"uptime": "up 15:42, 22 users, load averages: 0.70 0.80 0.81",
-"load": "{ 0.70 0.80 0.81 }"
+"free_gb": 213.9,
+"uptime": "up 15:57, 22 users, load averages: 0.86 0.82 0.82",
+"load": "{ 0.86 0.82 0.82 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-28T02:04",
+"name": "high_age_scaled_long_control",
+"status": "rejected",
+"rationale": "Beta-baseline control with no payer. It is long-only, scaled by how old the trailing high is (`fresh` or `stale` mode), so any edge beyond constant-long can be attributed to high-age timing.\nIt is not a neighbour of the existing volatility, range, efficiency, autocorr, kurtosis, ",
+"note": "sandbox: AssertionError: zu speicherhungrig: 60 B je Bar und Parameter (max 40)"
+},
+{
 "ts": "2026-11-28T01:34",
 "name": null,
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "The director's bar is a new payer, two-sided or demeaned, under 500 combinations. I can't name an unmeasured payer without relabelling an exhausted family, so this is a beta-baseline control, as the direction asks for.\nRATIONALE: `vov_scaled_long_control` is long-only and de-risk",
 "note": "{\"name\": \"vov_scaled_long_control\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 1.0}"
-},
-{
-"ts": "2026-11-27T20:00",
-"name": "downside_vol_target_long_control",
-"status": "accepted",
-"rationale": "Control only, per the direction (\"favour the three controls so the beta baseline is measured first\"). It is a long-only gold exposure sized by a downside-semideviation volatility target, the only variant not already covered by `vol_scaled_long_control` or `cushion_scaled_long_con",
-"note": "{\"name\": \"downside_vol_target_long_control\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 1.0}"
 }
 ],
 "history": [
-{
-"t": 1795659098.510776,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 4.0,
-"gpu": 0,
-"free_gb": 217.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795660026.282182,
 "total": 31310831,
@@ -4520,6 +4509,17 @@
 "cpu": 3.5,
 "gpu": 1,
 "free_gb": 214.4,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795832365.6595972,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 3.6,
+"gpu": 1,
+"free_gb": 213.9,
 "dsr_bar": 6.4,
 "best_pm_1h": null,
 "distinct": 27822806
