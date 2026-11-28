@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-11-28 02:34:53 UTC",
+"generated_at": "2026-11-28 02:50:17 UTC",
 "host": {
-"cpu_pct": 3.6,
+"cpu_pct": 1.2,
 "gpu_pct": 1,
 "free_gb": 214.1,
-"uptime": "up 16:12, 22 users, load averages: 0.85 0.79 0.80",
-"load": "{ 0.85 0.79 0.80 }"
+"uptime": "up 16:28, 22 users, load averages: 1.00 0.92 0.86",
+"load": "{ 1.00 0.92 0.86 }"
 },
 "instances": [
 {
@@ -2371,6 +2371,13 @@
 },
 "generated": [
 {
+"ts": "2026-11-28T02:35",
+"name": "high_age_scaled_long_control",
+"status": "accepted",
+"rationale": "This is a control with no payer, as the direction asks. It scales a long by the age of the trailing high: full exposure just after a new w-bar high, decaying linearly or cut off as the high gets stale.\nRATIONALE: It differs from `cushion_scaled_long_control` (drawdown depth) and ",
+"note": "{\"name\": \"high_age_scaled_long_control\", \"grid\": 48, \"sec_per_param\": 0.0, \"active_frac\": 0.7779375}"
+},
+{
 "ts": "2026-11-28T02:04",
 "name": "high_age_scaled_long_control",
 "status": "rejected",
@@ -2446,27 +2453,9 @@
 "status": "accepted",
 "rationale": "This is a control, not a new fade. The payer is lottery-seeking longs, who overpay for positively skewed exposure. Holding gold long only while trailing return skew is negative collects that premium. The `pos` mode is the placebo.\nRATIONALE: It is long-biased with a graded floor,",
 "note": "{\"name\": \"skew_scaled_long_control\", \"grid\": 32, \"sec_per_param\": 0.0, \"active_frac\": 0.7464375}"
-},
-{
-"ts": "2026-11-27T20:30",
-"name": "vov_scaled_long_control",
-"status": "accepted",
-"rationale": "The director's bar is a new payer, two-sided or demeaned, under 500 combinations. I can't name an unmeasured payer without relabelling an exhausted family, so this is a beta-baseline control, as the direction asks for.\nRATIONALE: `vov_scaled_long_control` is long-only and de-risk",
-"note": "{\"name\": \"vov_scaled_long_control\", \"grid\": 96, \"sec_per_param\": 0.0, \"active_frac\": 1.0}"
 }
 ],
 "history": [
-{
-"t": 1795660949.839412,
-"total": 31310831,
-"per_min": 0.0,
-"cpu": 3.9,
-"gpu": 0,
-"free_gb": 217.3,
-"dsr_bar": 6.4,
-"best_pm_1h": null,
-"distinct": 27822806
-},
 {
 "t": 1795661872.76498,
 "total": 31310831,
@@ -4518,6 +4507,17 @@
 "total": 31310831,
 "per_min": 0.0,
 "cpu": 3.6,
+"gpu": 1,
+"free_gb": 214.1,
+"dsr_bar": 6.4,
+"best_pm_1h": null,
+"distinct": 27822806
+},
+{
+"t": 1795834217.726531,
+"total": 31310831,
+"per_min": 0.0,
+"cpu": 1.2,
 "gpu": 1,
 "free_gb": 214.1,
 "dsr_bar": 6.4,
